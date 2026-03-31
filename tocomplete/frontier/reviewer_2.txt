@@ -1,0 +1,166 @@
+Review script titled "Triune-Intelligence Smart Engineering-VALORIZE Framework for Digital Engineering Education " submitted to Frontiers in Education (Section: Digital Learning Innovations).
+
+Reviewer's Overall Assessment
+Decision: Major Revision
+Script This offer framework ambitious and relevant conceptual with trend education digital height, namely integration intelligence human, artificial, and natural in cycle learning. Merging theory Cognitive Load Theory (CLT) and Self-Determination Theory (SDT) to in The TISE-VALORIZE framework is an interesting and potentially promising approach give contribution significant theoretical implications. However, there are a number of weakness Serious in aspect methodology, clarity operationalization and validity necessary claims repaired before script This worthy accepted for published.
+
+1. Title
+Note:
+Title Enough informative However rather long and dense.
+Improvement Suggestions:
+. No There is
+
+2. Abstract
+Advantages:
+Abstract has covers background background, framework, methods, results, and implications.
+Weakness:
+1. The claims of "significant rise in academic scores" and "reduction in score range by as much as 84%" are not supported by the statistics mentioned in a way explicit in abstract.
+2. No mentioned in a way clear amount sample, design research, and the type of statistical test used.
+3. The term "fair and useful to learn" is too normative and not explained in a way operational.
+Improvement Suggestions for writers:
+Write repeat abstract with structure: Background → Objective → Method (design, samples, instruments) → Key Results (with statistics) → Conclusion. Example:
+"A quasi-experimental study involving 138 undergraduate engineering students compared the TISE-VALORIZE framework (n=53) with two control groups (n=42, n=43). Results showed significantly higher mean scores (M=94.98, SD=7.21) and 84% lower variance (p <.05) compared to controls, indicating more equitable learning outcomes."
+
+3. Introduction
+Advantages:
+Introduction Enough strong in describe gap between education and practice professional, as well as relevance of AI.
+Weakness:
+1. Unfortunately, Hypothesis No stated in a way explicit even though on page 5 it says "secondary hypothesis". It should be hypothesis primary and secondary stated with clear at the end introduction.
+2. Besides that, logical flow between problems and framework Not yet sharp. Why CLT, SDT, and professional identity chosen as runway main? Relationship This need explained more systematic.
+3. Likewise, References too a lot in the introduction (eg pp. 4-5) so that bother channel narrative.
+Suggestions for writers, directions Repair:
+. Declare hypothesis in bullet point format or paragraph separated at the end introduction.
+. Use conceptual diagrams For show connection between problems, theories, and frameworks proposed.
+. Reduce amount citations and focus on 3-5 references key per paragraph.
+
+4. Theoretical Framework (Materials and Methods)
+Advantages:
+Framework theoretical very rich, combining CLT, SDT, Communities of Practice, and Value Co-Creation. Tables 1 and 2 help clarify operationalization.
+Weakness:
+1. Over -theorization. Script This too Lots introduce draft new without explain How everything integrated in a way empirical.
+2. No there is a conceptual model that maps connection between variable. Reader difficulty see how PUDAL, PSKVE, and Knowledge Marketplace interact with each other related.
+3. Operationalization variables No clear. For example, how is "cognitive load" measured? No. mentioned instrument standard like NASA-TLX.
+Improvement Suggestions:
+. Simplify with remove lack of concept essential or combine in One table integration.
+. Add image (can in the form of a flow diagram) which shows connection between input (strategy), process (PUDAL + PSKVE), and output (results) learning, motivation, identity professional).
+. Mention in a way explicit the instrument used (if there is) or admit that study This Not yet measure it in a way directly (as mentioned on page 17).
+
+5. Methods
+Advantages:
+Design three group (two control, one experiment) shows effort compare in a way adequate.
+Weakness:
+1. No design random. Use different semester groups result in potential cohort effect that is not controlled.
+2. No there is a pretest. Without initial data, it is difficult ensure that difference results solely caused by intervention.
+3. No there is a reliability test or validity instrument evaluation. Rubric based Bloom's Taxonomy is mentioned, but No There is proof that rubric the has tested.
+4. Participants No explained in a way demographics. Age, background behind education, ability beginning, and access technology No mentioned.
+Improvement Suggestions:
+. Use term quasi-experimental posttest-only design with non-equivalent groups.
+. Add analysis covariance (ANCOVA) if allows For control variables beginning.
+. Include demographic data and reliability tests (e.g., Cohen's Kappa for rubric).
+. Admit limitations This in a way explicit in the section Limitations.
+
+6. Results
+Advantages:
+Data is presented with Good through tables and figures. ANOVA and Tukey post-hoc tests were performed with appropriate.
+Weakness:
+1. Effect small (η² =.061) indicates that although significant in a way statistics, contribution framework This to variation mark only 6.1%. This is need discussed with more Honest.
+2. No There is analysis addition such as normality test, homogeneity variance, or larger effect size comprehensive (e.g. Cohen's d already There is).
+3. Claim about motivation, burden cognitive, and identity professional No supported by live data. This is weakness main.
+My advice to the authors:
+. Don't only depend on mark academic as the only one indicator success.
+. If secondary data like quality artifacts or level participation in the marketplace is available, please include as complement.
+. Use visualization like violin plot For show richer data distribution.
+
+7. Discussion
+Advantages:
+Discussion try connect findings with CLT and SDT theories. There is reflection critical about AI's role and challenges implementation.
+Weakness:
+1. Interpretation excessive. Claim like "meeting all three needs at the same time boosts intrinsic motivation" no supported by live data.
+2. No There is discussion about findings that are not in accordance hope. Whether all hypothesis supported? No explained in a way systematic.
+3. Discussion about limitations Already good (p. 17), but should be in the section alone before conclusion.
+Improvement Suggestions:
+. Separate part Discussion to be:
+a. Interpretation of Findings (connect with theory)
+b. Comparison with Prior Work
+c. Limitations
+d. Future Directions
+. Reduce claim causality that is not data supported. Use more languages caution, such as "may suggest", "is consistent with", or "provides preliminary evidence for".
+
+8. Conclusion
+Advantages:
+Conclusion summarizes contribution main and relevance with the AI era.
+Weakness:
+Too much long and repetitive. Many sentences should be be in the section discussion or implications.
+Improvement Suggestion:
+The conclusion should be 3-4 sentences that answer:
+1. What contribution main study This?
+2. What findings key?
+3. What implications practical?
+4. What is the research agenda? to front?
+
+9. References
+Advantages:
+References Enough up-to-date and relevant with topic.
+Weakness:
+1. There are some reference with no format consistent (eg. use letter capitalize the title, please check repeat).
+2. A number of reference No called in text (e.g. Ryan & Deci, 2000 is mentioned in the bibliography) but No appear in script).
+3. Too Lots reference from proceeding or insufficient resources reputable tall.
+Improvement Suggestions:
+. Do cross-check between in-text citations and bibliography.
+. Use reference manager (Zotero/Mendeley) for format consistency.
+. Prioritize reference from journal reputable (Q1/Q2) and reduce source secondary.
+
+10. Ethics, Data Availability, and Generative AI Disclosure
+Advantages:
+Statement ethics and data available included.
+Weakness:
+1. The claim "ethical approval was not required" is necessary verified. Whether This in accordance with policy institutions and journals? Should included letter information from institutions.
+2. Generative AI disclosure only mention Canva and Grammarly. If AI is used in data analysis or writing substantive, must explained.
+Improvement Suggestions:
+. Consult with institutions for ensure that studies with subject man truly No need ethics.
+. If There is use of AI for analysis or synthesis, state in a way transparent.
+
+11. Figures and Tables
+Advantages:
+Table informative, especially Tables 1 and 2 explain PUDAL and PSKVE.
+Weakness:
+1. Figure 2 (box plot) is already OK, consider it For own information Y axis in explicit.
+2. Tables 3 and 4 Already good, but should united or given explanatory footnotes abbreviation.
+Improvement Suggestions:
+. Make sure all picture quality high and legible.
+. Use vector graphics (SVG/EMF) for maintain resolution.
+. Give information complete axes and legends on all graph.
+
+12. General Conclusion for Writer
+Script This own potential big for give contribution important in development education technique AI- based and value together. However, before accepted, author must do revision big with focus on:
+1. Strengthen methodology with more design strict and valid instruments.
+2. Reduce ambition conceptual and simplify framework to be more easy tested.
+3. Adding live data For variables motivation, burden cognitive, and identity professional.
+4. Compile repeat structure script to be more in accordance with standard journal (IMRaD + explicit limitations).
+5. Improved reference format and completeness picture.
+
+Recommendation:
+Major Revision
+I suggest the editor to give chance to writer do revision substantial, with notes that revision must reflect repair methodological and careful in interpretation findings. If revision done with okay, script This potential become significant contribution for field Digital Learning Innovations.
+
+
+Q2:
+a. Is the quality of the figures and tables satisfactory?
+- Yes
+
+b. Does the reference list cover the relevant literature adequately and in an unbiased manner?
+- Yes
+
+c. Are the statistical methods valid and correctly applied? (e.g. sample size, choice of test)
+- Yes
+
+d. Is a statistician required to evaluate this study?
+- No
+
+e. Are the methods sufficiently documented to allow replication studies?
+- Yes
+
+Q3 Rigor : 4/5
+Q4 Quality of the writing: 4/5
+Q5 Overall quality of the content: 5/5
+Q6 Interest to a general audience: 4/5

@@ -1,0 +1,25 @@
+Q1: Please list your revision requests for the authors and provide your detailed comments, including highlighting limitations and strengths of the study and evaluating the validity of the methods, results, and data interpretation. If you have additional comments based on Q2 and Q3 you can add them as well.
+
+Q2: Check List
+a. Is the quality of the figures and tables satisfactory?
+- Yes/No
+
+b. Does the reference list cover the relevant literature adequately and in an unbiased manner?
+- Yes/No
+
+c. Are the statistical methods valid and correctly applied? (e.g. sample size, choice of test)
+- Yes/No
+
+d. Is a statistician required to evaluate this study?
+- Yes/No
+
+e. Are the methods sufficiently documented to allow replication studies?
+- Yes/No
+ 
+ QUALITY ASSESSMENT (score 1to 5)
+Q3: Rigor
+Q4: Quality of the writing
+Q5: Overall quality of the content
+Q6: Interest to a general audience
+
+Overall
