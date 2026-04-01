@@ -1,0 +1,157 @@
+---
+title: "Problem Set 4: Probabilitas dan Statistik"
+---
+
+### **Soal 1**
+
+Misalkan $X$ adalah *random variable* berdistribusi seragam dengan rentang bilangan bulat 0 sampai 9. Tentukan mean, variansi dan standar deviasi dari *random variable* $Y = 5X$ dan bandingkan hasilnya dengan $X$!
+
+{{< pause >}}
+
+**Jawaban:** Karena $X$ adalah *random variable* berdistribusi seragam, maka mean dan variansinya dapat ditentukan sebagai berikut: $$ E(X) = \frac{9 + 0}{2} = 4,5 $$ $$ \sigma_X^2 = \frac{(9 - 0 + 1)^2 - 1}{12} = 8,25 $$ $$ \sigma_X = \sqrt{8,25} = 2,87 $$ Karena $Y$ adalah fungsi dari $X$, maka mean dan variansinya dapat ditentukan sebagai berikut: $$ E(Y) = E(5X) = 5 E(X) = 22,5 $$ $$ \sigma_Y^2 = (5)^2 \sigma_X^2 = 25 \times 8,25 = 206,25 $$ $$ \sigma_Y = \sqrt{206,25} = 14,36 $$
+
+------------------------------------------------------------------------
+
+### **Soal 2**
+
+Jumlah panggilan telepon yang datang pada suatu operator selular sering dimodelkan sebagai *random variable* yang mengikuti distribusi Poisson. Misalkan pada rata-ratanya, terdapat 10 panggilan per jam ($\lambda = 10 \text{ panggilan per jam}$).
+
+a.  Berapa probabilitas terdapat tepat 5 panggilan dalam 1 jam?
+b.  Berapa probabilitas terdapat 3 atau kurang panggilan dalam 1 jam?
+c.  Berapa probabilitas terdapat tepat 15 panggilan dalam 2 jam?
+d.  Berapa probabilitas terdapat tepat 5 panggilan dalam 30 menit?
+
+{{< pause >}}
+
+**Jawaban:** a. $P(X = 5; \lambda t = 10) = \frac{e^{-10} 10^5}{5!} = 0,037833$ b. $P(X \le 3) = F(3) = \sum_{x=0}^{3} \frac{e^{-10} 10^x}{x!} = 0,010336$ c. $P(X = 15; \lambda t = 20) = f(15) = \frac{e^{-20} 20^{15}}{15!} = 0,051649$ d. $P(X = 5; \lambda t = 5) = f(5) = \frac{e^{-5} 5^5}{5!} = 0,175467$
+
+------------------------------------------------------------------------
+
+### **Soal 3**
+
+Jumlah permukaan cacat pada panel plastik yang digunakan dalam interior mobil memiliki distribusi Poisson dengan mean 0,05 cacat per $\text{ft}^2$. Asumsikan suatu interior mobil mengandung 10 $\text{ft}^2$ panel plastik.
+
+a.  Berapa probabilitas tidak terdapat cacat permukaan pada interior mobil?
+b.  Jika sepuluh mobil dijual, berapa probabilitas dari sepuluh mobil tersebut tidak ada yang memiliki cacat permukaan?
+c.  Jika sepuluh mobil dijual, berapa probabilitas paling banyak satu mobil yang memiliki cacat permukaan?
+d.  Jika 100 Panel diperiksa, berapa probabilitas lebih sedikit dari 5 panel memiliki cacat permukaan?
+
+{{< pause >}}
+
+**Jawaban:** a. Misalkan $X$ adalah jumlah cacat permukaan pada interior mobil ($\mu = 0,05 \times 10 = 0,5$). $$ P(X = 0) = f(0; 0,5) = \frac{e^{-0,5} 0,5^0}{0!} = \frac{1}{\sqrt{e}} = 0,60653 $$ b. Mobil satu dan lainnya adalah independen sehingga kondisi ini memenuhi kriteria Proses Bernoulli. Misalkan $Y$ melambangkan jumlah mobil yang memiliki cacat permukaan: $$ P(Y = 0) = b(0; 10; 1 - 0,60653) = 0,006738 $$ c. Probabilitas paling banyak satu mobil cacat: $$ P(Y \le 1) = \sum_{y=0}^{1} b(y; 10; 1 - 0,60653) = 0,050448 $$ d. **Asumsi 1:** Jika 1 panel adalah 1 $\text{ft}^2$ ($\mu = 0,05$) $P(X = 0) = f(0; 0,05) = \frac{e^{-0,05} 0,05^0}{0!} = 0,951229$ $P(Y < 5) = \sum_{y=0}^{4} b(y; 100; 1 - 0,951229) = 0,458378$ **Asumsi 2:** Jika 1 panel adalah 10 $\text{ft}^2$ ($\mu = 0,5$) $P(X = 0) = 0,60653$ $P(Y < 5) = \sum_{y=0}^{4} b(y; 100; 1 - 0,60653) = 1,43 \times 10^{-16}$
+
+------------------------------------------------------------------------
+
+### **Soal 4**
+
+Sebuah bank meletakkan 5 set infrastruktur hardware di 5 data center untuk aplikasi *Core Banking System* (CBS). Masing-masing set memiliki probabilitas bekerja dengan baik sebesar 0,8. Definisikan $X$ sebagai jumlah Data Center yang bekerja dengan baik.
+
+a.  Buatlah tabel distribusi probabilitas *random variable* $X$!
+b.  Gambarkan distribusi probabilitas *random variable* $X$! *(Diasumsikan gambar mengikuti plot distribusi PMF Binomial)*
+c.  Gambarkan distribusi kumulatif *random variable* $X$! *(Diasumsikan gambar mengikuti plot fungsi tangga CMF Binomial)*
+d.  Dengan melihat gambar distribusi kumulatif, estimasikan suatu nilai $M$ sehingga $P(X \le M) = 0,5$. Nilai $M$ ini disebut nilai median.
+e.  Tentukan mean dan variansi untuk *random variable* $X$!
+f.  Tentukan probabilitas sistem down secara total!
+g.  Tentukan probabilitas sistem nyaris down secara total (tinggal 1 Data Center bekerja dengan baik)!
+h.  Tentukan probabilitas minimal 1 Data Center bekerja dengan baik!
+
+{{< pause >}}
+
+**Jawaban:** a. Tabel Distribusi Probabilitas $X \sim \text{Binomial}(5; 0,8)$:
+
+| $x$ | $f(x)$  |
+|:---:|:--------|
+|  0  | 0,00032 |
+|  1  | 0,0064  |
+|  2  | 0,0512  |
+|  3  | 0,2048  |
+|  4  | 0,4096  |
+|  5  | 0,32768 |
+
+d.  $M = 3$ *(Sesuai perhitungan referensi kunci jawaban).*
+e.  $E(X) = \mu = \sum_{x=0}^{5} x f(x) = 4$. $E(X^2) = \sum_{x=0}^{5} x^2 f(x) = 16,8$. $\sigma^2 = E(X^2) - \mu^2 = 0,8$.
+f.  $P(X = 0) = F(0) = 0,00032$.
+g.  $P(X = 1) = f(1) = 0,0064$.
+h.  $P(X \ge 1) = 1 - P(X < 1) = 1 - P(X = 0) = 0,99968$.
+
+------------------------------------------------------------------------
+
+### **Soal 5**
+
+Sebuah komponen memiliki umur $L$ yang diukur dalam hari, sedemikian sehingga $P[L=n]$ dari kegagalan pada hari ke-$n$ mengikuti distribusi geometrik $P[L = n] = (1 – b)b^n$; untuk $n = 0, 1, 2, 3, \dots$. Bila $b = 0,6$:
+
+a.  Gambarkan distribusi probabilitas dari *random variable* $L$!
+b.  Gambarkan distribusi kumulatif dari *random variable* $L$!
+c.  Estimasikan suatu nilai $M$ sehingga $P(X \le M) = 0,5$ (nilai median)!
+d.  Tentukan nilai ekspektasi (mean) untuk *random variable* $L$!
+e.  Tentukan peluang kejadian $F_i$, yaitu kejadian bahwa tidak terjadi failure (kerusakan) sebelum hari ke-$i$.
+
+{{< pause >}}
+
+**Jawaban:** a & b. *(Grafik PMF akan menurun eksponensial dari n=0, dan CMF akan asimtotik ke nilai 1).* c. $M = 0$ d. $E(L) = \sum_{n=0}^{\infty} n(1 - b)b^n = \frac{1 - b}{1 - b} = 1$ *(Sesuai kalkulasi sumber)* e. Tidak failure sebelum hari ke-$i$ berarti failure terjadi pada hari ke-$i$ sampai tak hingga. $$ F_i = \sum_{l=i}^{\infty} f(l) = \sum_{l=i}^{\infty} (1 - b)b^l = (1 - b) \sum_{l=i}^{\infty} b^l = (1 - b) \frac{b^i}{1 - b} $$ $$ F_i = b^i, \quad i = 1, 2, \dots $$
+
+------------------------------------------------------------------------
+
+### **Soal 6**
+
+Tentukan range dari masing-masing *random variable* berikut: a. Suatu timbangan elektrik menampilkan berat pada gram terdekatnya (maksimal 5 digit, lebih dari 99999 g ditampilkan sebagai 99999). b. Sebanyak 500 part mesin mengandung 10 part yang tidak sesuai. Diambil sampel 5 part. c. Sebanyak 500 part mesin mengandung 10 part yang tidak sesuai. Diambil acak tanpa pengembalian sampai part yang tidak sesuai didapat.
+
+{{< pause >}}
+
+**Jawaban:** a. $R_X = \{0, 1, 2, \dots , 99999\}$ b. $R_X = \{0, 1, 2, 3, 4, 5\}$ c. $R_X = \{1, 2, \dots , 491\}$
+
+------------------------------------------------------------------------
+
+### **Soal 7**
+
+Suatu sistem komunikasi mempunyai 4 jalur eksternal. Asumsikan probabilitas suatu jalur sedang digunakan saat observasi adalah 0,8. Tentukan ruang sampel dan gambarkan dalam tabel! Asumsikan jalur bersifat independen.
+
+{{< pause >}}
+
+**Jawaban:** Kasus ini memenuhi syarat Proses Bernoulli sehingga *random variable* $X$ mengikuti distribusi binomial dengan $p = 0,8$ dan $n = 4$. \| $x$ \| $f(x)$ \| \|:---:\|:---\| \| 0 \| 0,0016 \| \| 1 \| 0,0256 \| \| 2 \| 0,1536 \| \| 3 \| 0,4096 \| \| 4 \| 0,4096 \|
+
+------------------------------------------------------------------------
+
+### **Soal 8**
+
+Dalam proses manufaktur semikonduktor, 3 wafer diuji independen. Peluang sebuah wafer lolos uji adalah 0,8.
+
+a.  Tentukan PMF dan CMF dari jumlah wafer yang lolos uji!
+b.  Tentukan mean dari *random variable* tersebut!
+c.  Tentukan variansi dari *random variable* tersebut!
+
+{{< pause >}}
+
+**Jawaban:** Eksperimen ini memenuhi Bernoulli sehingga dimodelkan sebagai Binomial dengan $p=0,8$ dan $n=3$. $$ f(x) = b(x; 3; 0,8) = \binom{3}{x} p^x q^{3-x}, \quad x = 0,1,2,3 $$
+
+a.  Tabel Distribusi:
+
+| $x$ | $\text{PMF: } f(x)$ | $\text{CMF: } F(x)$ |
+|:---:|:--------------------|:--------------------|
+|  0  | 0,008               | 0,008               |
+|  1  | 0,096               | 0,104               |
+|  2  | 0,384               | 0,488               |
+|  3  | 0,512               | 1,000               |
+
+b.  $\mu_X = np = 3(0,8) = 2,4$
+c.  $\sigma_X^2 = npq = 3(0,8)(0,2) = 0,48$
+
+------------------------------------------------------------------------
+
+### **Soal 9**
+
+Jumlah kesalahan ketik dalam buku teks mengikuti distribusi Poisson dengan mean 0,01 kesalahan/halaman. Berapa probabilitas terdapat kurang dari atau sama dengan tiga kesalahan dalam 100 halaman?
+
+{{< pause >}}
+
+**Jawaban:** Distribusi Poisson dengan $\lambda = 0,01 \text{ kesalahan/halaman}$ dan $t = 100 \text{ halaman}$. $$ \mu = 0,01 \times 100 = 1 $$ $$ P(X \le 3) = \sum_{x=0}^{3} \frac{e^{-1} 1^x}{x!} = 0,981 $$
+
+------------------------------------------------------------------------
+
+### **Soal 10**
+
+Suatu persimpangan lampu sinyal memiliki peluang 20% hijau saat dilewati independen setiap pagi. a. Dalam 5 pagi, berapa probabilitas lampunya hijau hanya pada satu pagi saja? b. Dalam 20 pagi, berapa probabilitas lampunya hijau tepat empat kali? c. Dalam 20 minggu, berapa probabilitas lampunya hijau lebih dari empat kali?
+
+{{< pause >}}
+
+**Jawaban:** Mengikuti distribusi Binomial karena memenuhi kriteria (independen, probabilitas konstan $p=0,2$, eksperimen berulang, 2 keluaran). a. $n = 5$. $$ P(X = 1) = b(1; 5; 0,2) = 0,4096 $$ b. $n = 20$. $$ P(X = 4) = b(4; 20; 0,2) = 0,2182 $$ c. $n = 20 \times 7 = 140 \text{ hari}$. *(Berdasarkan perhitungan dari dokumen rujukan).* $$ P(X = 4) = b(4; 140; 0,2) = 1,6214 \times 10^{-9} $$

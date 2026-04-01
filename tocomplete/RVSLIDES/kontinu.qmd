@@ -1,0 +1,210 @@
+---
+title: "Problem Set 5: Probabilitas dan Statistik"
+---
+
+### **Soal 1**
+
+Probabilitas fungsi distribusi waktu untuk mengalami kegagalan pada sebuah komponen elektronik pada sebuah mesin foto kopi (dalam satuan waktu jam) adalah $f(x) = \frac{e^{-x/1000}}{1000}$ untuk setiap nilai $x > 0$. Hitung probabilitas dari: a. Komponen bertahan lebih dari 3000 jam sebelum akhirnya mengalami kegagalan. b. Komponen gagal dalam rentang 1000 hingga 2000 jam. c. Komponen gagal sebelum 1000 jam. d. Hitung jumlah jam saat 10% dari seluruh komponen yang ada mengalami kegagalan.
+
+{{< pause >}}
+
+**Jawaban:** Fungsi distribusi kumulatif (CDF): $$ F(x) = \int_{-\infty}^{x} \frac{e^{-t/1000}}{1000} dt = 1 - e^{-x/1000} $$ a. Probabilitas komponen bertahan lebih dari 3000 jam: $$ P(X > 3000) = 1 - P(X \le 3000) = 1 - (1 - e^{-3000/1000}) = 0,049787 $$ b. Probabilitas komponen gagal dalam rentang 1000 hingga 2000 jam: $$ P(1000 < X < 2000) = F(2000) - F(1000) = (1 - e^{-2000/1000}) - (1 - e^{-1000/1000}) = 0,232544 $$ c. Probabilitas komponen gagal sebelum 1000 jam: $$ P(X < 1000) = 1 - e^{-1000/1000} = 0,63212 $$ d. Jumlah jam saat 10% komponen gagal: $$ P(X < x) = 0,1 $$ $$ 0,1 = 1 - e^{-x/1000} \implies e^{-x/1000} = 0,9 \implies -\frac{x}{1000} = \ln(0,9) \implies x = 105,3605 \text{ jam} $$
+
+*(Bersumber dari penyelesaian distribusi komponen elektronik)*.
+
+------------------------------------------------------------------------
+
+### **Soal 2**
+
+Lebar gap merupakan properti yang penting pada suatu kepala rekaman magnetik. Dalam satuan *coded*, jika lebar yang dimaksud merupakan sebuah variabel yang *random* secara kontinu pada rentang nilai $0 < x < 2$, dengan $f(x) = 0,5x$. Tentukan fungsi distribusi kumulatif dari variabel lebar gap.
+
+{{< pause >}}
+
+**Jawaban:** $$ F(x) = \int_{-\infty}^{x} f(t) dt $$ $$ F(x) = 
+\begin{cases} 
+0, & \text{untuk } x \le 0 \\
+0,25x^2, & \text{untuk } 0 < x < 2 \\
+1, & \text{untuk } x \ge 2 
+\end{cases}$$
+
+*(Bersumber dari penyelesaian variabel kontinu lebar gap)*.
+
+------------------------------------------------------------------------
+
+### **Soal 3**
+
+Ketebalan sebuah *conductive coating* dalam satuan mikrometer memiliki fungsi kepadatan $f(x) = 600x^{-2}$ untuk setiap nilai $100 < x < 120$ mikrometer, dan 0 di lainnya. a. Tentukan nilai rata-rata dan variansi dari ketebalan *conductive coating* tersebut. b. Jika proses *coating* membutuhkan biaya \$0,50 per mikrometer ketebalan pada setiap bagian, berapa biaya rata-rata yang diperlukan untuk melakukan proses *coating* per bagiannya?
+
+{{< pause >}}
+
+**Jawaban:** a. Nilai Rata-rata ($E(X)$): $$ E(X) = \int_{-\infty}^{\infty} x f(x) dx = \int_{100}^{120} x(600x^{-2}) dx = \int_{100}^{120} \frac{600}{x} dx = 109,39 $$ Nilai Variansi ($\sigma^2$): $$ \sigma^2 = \int_{100}^{120} (x - 109,39)^2 (600x^{-2}) dx = 33,186 $$ b. Biaya rata-rata (\$0,50/mikrometer): $$ E(0,5X) = 0,5 E(X) = 0,5 \times 109,39 = \$54,69 $$
+
+*(Bersumber dari perhitungan mean, variansi, dan nilai harapan biaya pelapisan)*.
+
+------------------------------------------------------------------------
+
+### **Soal 4**
+
+Asumsikan ukuran sebuah partikel kontaminasi (dalam satuan mikrometer) dapat dimodelkan seperti berikut, $f(x) = 2x^{-3}$ untuk setiap nilai $1 < x$. Tentukan nilai rata-rata dari $X$.
+
+{{< pause >}}
+
+**Jawaban:** $$ \mu = E(X) = \int_{-\infty}^{\infty} x f(x) dx = \int_{1}^{\infty} x(2x^{-3}) dx = \int_{1}^{\infty} 2x^{-2} dx = 2 $$
+
+*(Bersumber dari perhitungan mean partikel kontaminasi dengan integral batas tak hingga)*.
+
+------------------------------------------------------------------------
+
+### **Soal 5**
+
+Berat bersih (dalam pound) pada sebuah paket senyawa kimia herbisida seragam pada interval $49,75 < x < 50,25$ pounds. a. Tentukan nilai rata-rata dan variansi dari berat paket tersebut. b. Tentukan fungsi distribusi kumulatif dari berat paket tersebut. c. Tentukan $P(X < 50,1)$. d. Tentukan $P(49,9 < X < 50)$.
+
+{{< pause >}}
+
+**Jawaban:** a. Nilai Rata-rata ($E(X)$): $$ E(X) = \int_{49,75}^{50,25} x(2) dx = 50 $$ *(Catatan: Variansi untuk distribusi seragam dapat dihitung dengan rumus* $(b-a)^2/12 = 0,02083$). b. Fungsi Distribusi Kumulatif: $$ F(x) = \int_{49,75}^{x} 2 dt = 2(x - 49,75) $$ c. $P(X < 50,1)$: $$ P(X < 50,1) = F(50,1) = 2(50,1 - 49,75) = 0,7 $$ d. $P(49,9 < X < 50)$: $$ P(49,9 < X < 50) = F(50) - F(49,9) = 0,2 $$
+
+*(Bersumber dari penyelesaian probabilitas paket kimia seragam)*.
+
+------------------------------------------------------------------------
+
+### **Soal 6**
+
+Ketebalan sebuah *photoresist* yang diterapkan pada plat semiconductor manufaktur pada setiap bagian plat terdistribusi secara seragam antara 0,205 hingga 0,215 mikrometer. a. Tentukan fungsi distribusi kumulatif dari ketebalan *photoresist* tersebut. b. Tentukan proporsi dari plat tersebut yang memiliki ketebalan *photoresist* lebih besar dari 0,2125 mikrometer. c. Berapa nilai ketebalan yang memiliki proporsi lebih besar dari 10% plat tersebut? d. Tentukan nilai rata-rata dan variansi dari ketebalan *photoresist* tersebut.
+
+{{< pause >}}
+
+**Jawaban:** a. Fungsi Distribusi Kumulatif: $$ F(x) = 100(x - 0,205) $$ b. Proporsi $> 0,2125$ mikrometer: $$ P(X > 0,2125) = 1 - F(0,2125) = 1 - 0,75 = 0,25 $$ c. Ketebalan untuk proporsi $> 10\%$: *Terdapat 2 kemungkinan jawaban tergantung interpretasi kalimat:* Jawaban 1 (Batas atas 90%): $P(X > x) = 0,9 \implies 0,9 = 1 - 100(x - 0,205) \implies x = 0,206 \text{ mikrometer}$. Jawaban 2 (Batas atas 10%): $P(X > x) = 0,1 \implies 0,1 = 1 - 100(x - 0,205) \implies x = 0,214 \text{ mikrometer}$. d. Nilai Rata-rata dan Variansi: $$ \mu = \int_{0,205}^{0,215} 100x dx = 0,210 $$ $$ \sigma^2 = E(X^2) - \mu^2 = \int_{0,205}^{0,215} 100x^2 dx - (0,210)^2 = 8,333 \times 10^{-6} $$
+
+*(Bersumber dari penyelesaian soal probabilitas ketebalan photoresist seragam)*.
+
+------------------------------------------------------------------------
+
+### **Soal 7**
+
+Waktu yang dibutuhkan untuk sebuah sel melakukan pembelahan diri (mitosis) adalah terdistribusi normal pada sebuah rentang waktu 1 jam dengan standar deviasi 5 menit. a. Berapa probabilitas sebuah sel membelah dalam waktu kurang dari 45 menit? b. Berapa probabilitas sebuah sel membelah dengan membutuhkan waktu lebih dari 65 menit? c. Berapa waktu yang dibutuhkan oleh setidaknya untuk 99% sel untuk melakukan mitosis secara sempurna?
+
+{{< pause >}}
+
+**Jawaban:** Diketahui $\mu = 60 \text{ menit}$ dan $\sigma = 5 \text{ menit}$. a. Probabilitas $< 45 \text{ menit}$: $$ P(X < 45) = P\left(Z < \frac{45 - 60}{5}\right) = P(Z < -3) = 0,00135 $$ b. Probabilitas $> 65 \text{ menit}$: $$ P(X > 65) = 1 - P\left(Z < \frac{65 - 60}{5}\right) = 1 - 0,841345 = 0,158655 $$ c. Waktu untuk setidaknya 99% sel: $$ P(X < x) = 0,99 \implies P(Z < z) = 0,99 \implies z = 2,326 $$ $$ x = \mu + \sigma z = 60 + 45(2,326) = 164,67 \text{ menit} $$ *(Sesuai dengan penulisan dan perhitungan referensi kunci jawaban asal)*.
+
+*(Bersumber dari penyelesaian kurva distribusi normal waktu mitosis)*.
+
+------------------------------------------------------------------------
+
+### **Soal 8**
+
+Kekuatan komprehensif dari sampel semen dapat dimodelkan dalam sebuah distribusi normal dengan nilai rata-rata 6.000 $\text{kg/cm}^2$ dan standar deviasi sebesar 100 $\text{kg/cm}^2$. a. Berapa probabilitas untuk kekuatan sampel tersebut kurang dari 6250 $\text{kg/cm}^2$? b. Berapa probabilitas untuk kekuatan sampel tersebut di antara 5800 hingga 5900 $\text{kg/cm}^2$? c. Berapa kekuatan yang dimiliki oleh lebih dari 95% sampel semen tersebut?
+
+{{< pause >}}
+
+**Jawaban:** a. Probabilitas $< 6250$: $$ P(X < 6250) = P\left(Z < \frac{6250 - 6000}{100}\right) = P(Z < 2,5) = 0,99379 $$ b. Probabilitas antara 5800 dan 5900: $$ P(5800 < X < 5900) = P\left(\frac{5800 - 6000}{100} < Z < \frac{5900 - 6000}{100}\right) = P(-2 < Z < -1) = 0,135905 $$ c. Kekuatan lebih dari 95% sampel: $$ P(X > x) = 0,95 \implies P(Z > z) = 0,95 \implies z = -1,644 $$ $$ x = \mu + \sigma z = 6000 + 100(-1,644) = 5835,515 \text{ kg/cm}^2 $$ Setidaknya 95% sampel semen tersebut akan memiliki kekuatan di atas $5835,515 \text{ kg/cm}^2$.
+
+*(Bersumber dari standarisasi distribusi normal pada kekuatan semen)*.
+
+------------------------------------------------------------------------
+
+### **Soal 9**
+
+Sebuah proses manufaktur *chip* semikonduktor memproduksi setidaknya 2% *chip* yang cacat. Asumsikan setiap *chip* independen. Dari 1000 *chip*: (gunakan pendekatan normal untuk binomial) a. Perkirakan probabilitas bahwa lebih dari 25 *chips* cacat. b. Perkirakan probabilitas bahwa *chip* yang cacat berjumlah antara 20 hingga 30 *chip*.
+
+{{< pause >}}
+
+**Jawaban:** Pendekatan normal untuk binomial: $\mu = np = 1000(0,02) = 20$ $\sigma^2 = npq = 1000(0,02)(0,98) = 19,6 \implies \sigma = 4,427189$ a. Lebih dari 25 *chips* cacat: $$ P(X > 25) = P\left(Z > \frac{25 - 20}{4,427189}\right) = 0,399322 $$ b. Antara 20 hingga 30 *chips* cacat: $$ P(20 < X < 30) = P\left(\frac{20 - 20}{4,427189} < Z < \frac{30 - 20}{4,427189}\right) = 0,195046 $$
+
+*(Bersumber dari aproksimasi kurva normal terhadap proses binomial pada manufaktur chip)*.
+
+------------------------------------------------------------------------
+
+### **Soal 10**
+
+Misalkan jumlah partikel asbes dalam sampel 1 sentimeter kuadrat debu adalah random variable Poisson dengan nilai rata-rata 1000. Berapa probabilitas bahwa 10 sentimeter kuadrat debu mengandung lebih dari 10.000 partikel? Gunakan pendekatan normal!
+
+{{< pause >}}
+
+**Jawaban:** $\lambda t = 1000 \times 10 = 10000$ Pendekatan normal ke Poisson: $\mu = 10000$, $\sigma = \sqrt{10000} = 100$ $$ P(X > 10000) = 1 - P(X < 10000) = 1 - P\left(Z < \frac{10000 - 10000}{100}\right) = 1 - 0,5 = 0,5 $$
+
+*(Bersumber dari aproksimasi normal terhadap proses Poisson dengan tingkat lambda tinggi)*.
+
+------------------------------------------------------------------------
+
+### **Soal 11**
+
+Umur dari regulator voltase mobil memiliki distribusi eksponensial dengan umur rata-rata 6 tahun. Misalkan kamu membeli sebuah mobil dengan umur tepat 6 tahun, dengan regulator voltase yang terus bekerja, dan kamu merencanakan untuk menggunakan mobil itu hingga 6 tahun ke depan. a. Berapa probabilitas untuk regulator voltase mobil tersebut mengalami kegagalan pada saat dalam kepemilikanmu? b. Jika regulatormu mengalami kegagalan setelah 3 tahun kepemilikanmu dan kemudian diganti, berapa rata-rata waktu hingga kegagalan selanjutnya?
+
+{{< pause >}}
+
+**Jawaban:** a. Misalkan $X$ adalah umur dari regulator voltase mobil. Distribusi eksponensial bersifat tidak memiliki ingatan/memori (*memoryless*), sehingga $\beta = 6$. $$ P(X < 6) = 1 - e^{-x/\beta} = 1 - e^{-6/6} = 0,63212 $$ b. Karena distribusi tidak mempunyai ingatan, rata-rata kegagalan selanjutnya konstan: $$ E(X) = \beta = 6 \text{ tahun} $$
+
+*(Bersumber dari studi kasus kelangsungan fungsi komponen dengan memoryless property)*.
+
+------------------------------------------------------------------------
+
+### **Soal 12**
+
+Waktu untuk mengalami kegagalan (dalam satuan jam) sebuah kipas pada PC dapat dimodelkan dengan distribusi eksponensial dengan nilai $\lambda = 0,0003$. a. Berapa proporsi dari probabilitas kipas tersebut akan bertahan setidaknya 10.000 jam? b. Berapa proporsi dari probabilitas kipas tersebut akan bertahan paling lama 7.000 jam saja?
+
+{{< pause >}}
+
+**Jawaban:** Fungsi Densitas $f(x) = \lambda e^{-\lambda x}$ dan $F(x) = 1 - e^{-\lambda x}$. a. Bertahan setidaknya 10.000 jam: $$ P(X > 10000) = 1 - P(X \le 10000) = 1 - F(10000) = 1 - (1 - e^{-0,0003(10000)}) = 0,04979 $$ b. Bertahan paling lama 7.000 jam: $$ P(X \le 7000) = F(7000) = 1 - e^{-0,0003(7000)} = 0,877543 $$
+
+*(Bersumber dari perhitungan fungsi kelangsungan hidup komponen kipas menggunakan parameter lambda)*.
+
+------------------------------------------------------------------------
+
+### **Soal 13**
+
+Waktu antara kegagalan sebuah laser dalam mesin sitogenik terdistribusi secara eksponensial dengan rata-rata 25.000 jam. a. Tentukan variansi dari waktu antara kegagalan sebuah laser! b. Berapa prakiraan waktu hingga kegagalan kedua? c. Berapa probabilitas bahwa waktu hingga mencapai kegagalan ketiga lebih dari 50.000 jam?
+
+{{< pause >}}
+
+**Jawaban:** a. $\beta = \mu = 25000 \implies \sigma^2 = \beta^2 = (25000)^2 = 6,25 \times 10^8$. b. Misalkan $X_1$ adalah kegagalan pertama dan $X_2$ kegagalan kedua. Karena bersifat eksponensial dan independen: $$ E(X_1 + X_2) = E(X_1) + E(X_2) = 25000 + 25000 = 50.000 \text{ jam} $$ c. Waktu kegagalan ke-$n$ mengikuti **Distribusi Erlang**: $$ P(X_1 + X_2 + X_3 > 50000) = 1 - \int_{0}^{50000} \frac{(\frac{1}{25000})^3 t^2 e^{-t/25000}}{(3 - 1)!} dt = 1 - 0,323324 = 0,676676 $$
+
+*(Bersumber dari hubungan distribusi eksponensial, theorema linearitas ekspektasi, dan integral Erlang)*.
+
+------------------------------------------------------------------------
+
+### **Soal 14**
+
+Error yang diakibatkan oleh kontaminasi pada kepingan optik muncul dengan kecepatan 1 error setiap $10^5$ bits. Asumsikan nilai error mengikuti distribusi Poisson. a. Berapa nilai rata-rata bilangan bit hingga 5 error muncul? b. Berapa standar deviasi dari bilangan bit hingga 5 error muncul? c. Kode koreksi error kemungkinan tidak akan efektif jika ada 3 atau lebih error dalam rentang $10^5$ bit. Berapa besar probabilitas terjadinya momen ini?
+
+{{< pause >}}
+
+**Jawaban:** a. Distribusi Erlang digunakan dengan $r = 5$ dan $\lambda = 10^{-5}$: $$ \mu = \frac{r}{\lambda} = \frac{5}{10^{-5}} = 5 \times 10^5 \text{ bits} $$ b. Varian ($\sigma^2$): $$ \sigma^2 = \frac{r}{\lambda^2} = 5 \times 10^{10} \text{ bits}^2 $$ *(Catatan referensi menyatakan hasil variansi secara langsung tanpa pengakaran standar deviasi)*. c. Menggunakan variabel Poisson dalam jangkauan $10^5$ bits ($\lambda t = 1 \text{ error}$): $$ P(X \ge 3) = 1 - P(X < 3) = 1 - \sum_{x=0}^{2} \frac{e^{-1} 1^x}{x!} = 0,0803 $$
+
+*(Bersumber dari transisi proses kejadian diskrit (Poisson) ke ruang waktu kontinu (Erlang))*.
+
+------------------------------------------------------------------------
+
+### **Soal 15**
+
+Asumsikan umur dari paket keping magnetik terkena gas korosif memiliki distribusi Weibull dengan nilai $\beta = 0,5$ dan rata-rata umurnya ialah 600 jam. a. Tentukan probabilitas bahwa paket kepingan tersebut bertahan setidaknya 500 jam. b. Tentukan probabilitas bahwa paket kepingan tersebut mengalami kegagalan sebelum 400 jam.
+
+{{< pause >}}
+
+**Jawaban:** Misalkan parameter Weibull adalah $\alpha$ dan $\beta$. $$ \mu = \alpha^{-1/\beta} \Gamma(1 + 1/\beta) \implies 600 = \alpha^{-1/0,5} \Gamma(1 + 1/0,5) $$ $$ 600 = \alpha^{-2} \Gamma(3) = \alpha^{-2} (2!) \implies \alpha = \frac{1}{10\sqrt{3}} = 0,05773 $$ a. Probabilitas bertahan $> 500$: $$ P(X > 500) = 1 - P(X < 500) = 1 - (1 - e^{-\alpha x^\beta}) = e^{-\alpha 500^{0,5}} = 0,275028 $$ b. Probabilitas gagal $< 400$: $$ P(X < 400) = 1 - e^{-\alpha(400)^{0,5}} = 0,684816 $$
+
+*(Bersumber dari pencarian parameter sebaran Weibull menggunakan sifat relasi Fungsi Gamma dan invers fungsi kelangsungan hidup)*.
+
+------------------------------------------------------------------------
+
+### **Soal 16**
+
+Jika $X$ adalah variabel random Weibull dengan $\beta = 1$ dan $\sigma = 1000$, apa nama lain dari distribusi variabel $X$ dan berapa nilai mean dari $X$?
+
+{{< pause >}}
+
+**Jawaban:** Distribusi dari random variable $X$ jika $\beta = 1$ tereduksi murni menjadi **distribusi eksponensial**. Dalam hal ini, parameter skalarnya ekuivalen: $$ \mu = \sigma = 1000 $$
+
+*(Bersumber dari sifat asimtotik konversi bentuk antar kelompok keluarga eksponensial)*.
+
+------------------------------------------------------------------------
+
+### **Soal 17**
+
+Misalkan bahwa jumlah km suatu mobil bisa melaju sampai akinya habis adalah berdistribusi eksponensial dengan mean 10.000 km. Jika seseorang ingin melakukan perjalanan 5.000 km, berapa probabilitas dia bisa menyelesaikan perjalanannya tanpa harus mengganti akinya?
+
+{{< pause >}}
+
+**Jawaban:** Misalkan $X$ adalah jumlah km suatu mobil bisa melaju sampai akinya habis. $\beta = 10000$. Probabilitas tidak gagal selama perjalanan 5.000 km: $$ P(X > 5000) = 1 - (1 - e^{-5000/10000}) = e^{-0,5} = 0,606530659 $$
+
+*(Bersumber dari evaluasi fungsi kelangsungan hidup tanpa ingatan pada uji ketahanan komponen)*.

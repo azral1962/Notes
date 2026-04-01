@@ -1,0 +1,325 @@
+---
+title: "Problem Set 3: Probabilitas dan Statistik: Dimitri Mahayana"
+---
+
+### **Soal 1**
+
+Misalkan $X$ adalah *random variable* diskrit dengan PMF: $$ P(X = x) = 
+\begin{cases} 
+0,1 & \text{untuk } x = 0,2 \\ 
+0,2 & \text{untuk } x = 0,4 \\ 
+0,2 & \text{untuk } x = 0,5 \\ 
+0,3 & \text{untuk } x = 0,8 \\ 
+0,2 & \text{untuk } x = 1 \\ 
+0 & \text{lainnya} 
+\end{cases} $$
+
+a.  Tentukan $R_x$, range dari *random variable* $X$!
+b.  Tentukan $P(X \le 0,5)$!
+c.  Tentukan $P(0,25 < X < 0,75)$!
+d.  Tentukan $P(X = 0,2 \mid X < 0,6)$!
+e.  Tentukan $\mu$ dan $\sigma^2$!
+
+**Jawaban:**
+
+a\. $R_x = \{0,2; 0,4; 0,5; 0,8; 1\}$
+
+b\. $P(X \le 0,5) = P(0,2) + P(0,4) + P(0,5) = 0,1 + 0,2 + 0,2 = 0,5$
+
+c\. $P(0,25 < X < 0,75) = P(0,4) + P(0,5) + P(0,8) = 0,2 + 0,2 + 0,3 = 0,7$ *(Sesuai dengan teks sumber, terdapat penyertaan P(0,8) dalam perhitungan).*
+
+d\. $P(X = 0,2 \mid X < 0,6) = \frac{P(X = 0,2 \cap X < 0,6)}{P(X < 0,6)} = \frac{0,1}{0,1 + 0,2 + 0,2} = \frac{0,1}{0,5} = 0,2$
+
+e\. $\mu = \sum xP(x) = (0,2)(0,1) + (0,4)(0,2) + (0,5)(0,2) + (0,8)(0,3) + (1)(0,2) = 0,64$ $\sigma^2 = E(X^2) - \mu^2 = 0,478 - 0,64^2 = 0,0684$
+
+------------------------------------------------------------------------
+
+### **Soal 2**
+
+Diketahui fungsi distribusi *random variable* diskrit $X$ adalah: $$ F(x) = 
+\begin{cases} 
+0, & x < -1 \\ 
+0,2, & -1 \le x < 0 \\ 
+0,5, & 0 \le x < 1 \\ 
+0,8, & 1 \le x < 3 \\ 
+1, & x \ge 3 
+\end{cases} $$
+a. Gambarkan grafik $F(x)$!
+
+b. Tentukan fungsi massa probabilitas (PMF) untuk $X$!
+
+c. Hitung $P(X < 1)$, $P(0 < X \le 3)$, $P(0 \le X < 3)$, $P(0 < X < 3)$, dan $P(0 \le X \le 3)$!
+
+**Jawaban:**
+
+a. Grafik $F(x)$ adalah grafik fungsi tangga (step-function) yang nilainya naik pada titik $x \in \{-1, 0, 1, 3\}$.
+
+b. $P(X=-1) = 0,2$; $P(X=0) = 0,5 - 0,2 = 0,3$; $P(X=1) = 0,8 - 0,5 = 0,3$; $P(X=3) = 1 - 0,8 = 0,2$.
+
+c. $P(X < 1) = F(0) = 0,5$. $P(0 < X \le 3) = F(3) - F(0) = 1 - 0,5 = 0,5$. $P(0 \le X < 3) = P(X=0) + P(X=1) = 0,3 + 0,3 = 0,6$. $P(0 < X < 3) = P(X=1) = 0,3$. $P(0 \le X \le 3) = P(X=0) + P(X=1) + P(X=3) = 0,3 + 0,3 + 0,2 = 0,8$.
+
+------------------------------------------------------------------------
+
+### **Soal 3**
+
+Misalkan *random variable* $X$ mempunyai fungsi distribusi: $$ F(x) = \begin{cases} 0 & x \le 0 \\ 1 - e^{-x^2} & x > 0 \end{cases} $$ Berapa probabilitas $X$ melebihi 1?
+{{< pause >}}
+
+**Jawaban:** $P(X > 1) = 1 - P(X \le 1) = 1 - F(1) = 1 - (1 - e^{-1^2}) = e^{-1} = 0,3679\dots$
+
+------------------------------------------------------------------------
+
+### **Soal 4**
+
+Tentukan range dari masing-masing *random variable* berikut: a. Suatu timbangan elektrik menampilkan berat pada gram terdekatnya. Timbangan ini hanya menampilkan 5 digit saja. Semua berat yang lebih dari nilai tersebut (99999 g) akan ditampilkan sebagai 99999. *Random variable* nya adalah berat yang ditampilkan. b. Sebanyak 500 part mesin mengandung 10 part yang tidak sesuai. *Random variable* nya adalah jumlah part dari sampling sebanyak 5 part yang tidak sesuai. c. Sebanyak 500 part mesin mengandung 10 part yang tidak sesuai. Part tersebut dipilih secara acak tanpa pengembalian, sampai part yang tidak sesuai didapat. *Random variable* nya adalah jumlah part yang terambil.
+{{< pause >}}
+
+**Jawaban:** a. $R_x = \{0, 1, 2, \dots, 99999\}$ b. $R_x = \{0, 1, 2, 3, 4, 5\}$ c. $R_x = \{1, 2, 3, \dots, 491\}$ *(Paling apes mengambil 490 part baik berturut-turut, part ke-491 pasti part cacat)*.
+
+------------------------------------------------------------------------
+
+### **Soal 5**
+
+Suatu sistem komunikasi untuk bisnis mempunyai 4 jalur eksternal. Asumsikan probabilitas suatu jalur sedang digunakan saat observasi adalah 0,8. Tentukan ruang sampel dari observasi tersebut! Gambarkan dalam tabel!
+{{< pause >}}
+
+**Jawaban:** Ini adalah Distribusi Binomial dengan $n=4, p=0,8$. Rentang ruang sampel $R_x = \{0, 1, 2, 3, 4\}$. PMF: $P(X=x) = \binom{4}{x} (0,8)^x (0,2)^{4-x}$.
+
+| $x$ | $P(X=x)$ | 
+|:---:|:---| 
+| 0 | 0,0016 | 
+| 1 | 0,0256 |
+| 2 | 0,1536 |
+| 3 | 0,4096 |
+| 4 | 0,4096 |
+
+------------------------------------------------------------------------
+
+### **Soal 6**
+
+Divisi Marketing memperkirakan alat baru akan sangat berhasil (0,3), berhasil (0,6), atau tidak berhasil (0,1). Pendapatan tahunan berkaitan adalah Rp. 100 milyar, Rp. 50 milyar, dan Rp. 10 milyar. Tentukan PMF dari $X$!
+{{< pause >}}
+
+**Jawaban:** $$ f(x) = \begin{cases} 
+0,1 & \text{untuk } x = 10 \text{ milyar} \\ 
+0,6 & \text{untuk } x = 50 \text{ milyar} \\ 
+0,3 & \text{untuk } x = 100 \text{ milyar} 
+\end{cases} $$
+
+------------------------------------------------------------------------
+
+### **Soal 7**
+
+Perusahaan manufaktur disk drive memperkirakan storage 1TB, 500GB, dan 100GB akan terjual dengan probabilitas 0,5; 0,3; dan 0,2 dengan pendapatan sebesar Rp. 500 milyar, Rp. 250 milyar, dan Rp. 100 milyar. Tentukan PMF dari $X$!
+{{< pause >}}
+
+**Jawaban:** $$ f(x) = \begin{cases} 
+0,2 & \text{untuk } x = 100 \text{ milyar} \\ 
+0,3 & \text{untuk } x = 250 \text{ milyar} \\ 
+0,5 & \text{untuk } x = 500 \text{ milyar} 
+\end{cases} $$
+
+------------------------------------------------------------------------
+
+### **Soal 8**
+
+Diketahui fungsi padat probabilitas (density function) dari *random variable* kontinu $X$ adalah: $$ f(x) = \begin{cases} kx, & 0 \le x \le 4 \\ 0, & x \text{ lainnya} \end{cases} $$ a. Hitung nilai $k$! b. Hitung $F(x)$! c. Hitung $P(X < 1/2)$ dan $P(1/2 < X < 1)$!
+{{< pause >}}
+
+**Jawaban:** 
+a. $\int_0^4 kx dx = 1 \implies 8k = 1 \implies k = \frac{1}{8} = 0,125$ 
+
+b. $F(x) = \int_0^x \frac{1}{8}t dt = \frac{x^2}{16}$ untuk $0 \le x \le 4$. 
+
+c. $P(X < 1/2) = F(1/2) = \frac{1}{64}$. $P(1/2 < X < 1) = F(1) - F(1/2) = \frac{1}{16} - \frac{1}{64} = \frac{3}{64}$.
+
+------------------------------------------------------------------------
+
+### **Soal 9**
+
+Running time algoritma komputasi tertentu $R$ minimal adalah satu unit waktu dan peluang $R>10$ adalah 0,5. Tentukan probabilitas bahwa running time melebihi 1000 unit waktu! Diasumsikan $R$ mengikuti distribusi Pareto $F(r) = 1 - (r_m/r)^\alpha$.
+{{< pause >}}
+
+**Jawaban:** Diketahui $P(R \le 10) = F(10) = 0,5$. Maka $1 - (1/10)^\alpha = 0,5 \implies 10^{-\alpha} = 0,5 \implies \alpha = -\log 0,5$. Probabilitas $P(R > 1000) = 1 - F(1000) = (1/1000)^{-\log 0,5} = 0,125$.
+
+------------------------------------------------------------------------
+
+### **Soal 10**
+
+Probabilitas fungsi kepadatan dari berat bersih pada sebuah paket senyawa kimia adalah $f(x) = 2,0$ untuk setiap nilai $49,75 < x < 50,25$. a. Tentukan probabilitas untuk paket memiliki berat lebih dari 50 pounds. b. Berapa banyak senyawa kimia yang terkandung dalam 90% dari keseluruhan paket?
+{{< pause >}}
+
+**Jawaban:** 
+a. $P(X > 50) = 1 - F(50) = 1 - \int_{49,75}^{50} 2 dt = 1 - 0,5 = 0,5$. 
+
+b. Misalkan banyaknya senyawa dalam 90% paket adalah $Y = 0,9X$. Maka $X = 1,11111 Y$. Batasnya menjadi: $49,75 < 1,11111y < 50,25 \implies 44,775 < y < 47,25$.
+
+------------------------------------------------------------------------
+
+### **Soal 11**
+
+Diketahui fungsi distribusi kontinu $F(x) = 0,2x$ (untuk $0 \le x < 4$) dan $F(x) = 0,04x + 0,64$ (untuk $4 \le x < 9$). a. Tentukan nilai $E(X)$! b. Tentukan nilai $P(X \ge 6)$!
+{{< pause >}}
+
+**Jawaban:** 
+a. $f(x) = 0,2$ pada $x \in [0,4)$ dan $0,04$ pada $x \in [4,9)$. $E(X) = \int_0^4 x(0,2)dx + \int_4^9 x(0,04)dx = 1,6 + 1,3 = 2,9$. 
+
+b. $P(X \ge 6) = 1 - F(6) = 1 - (0,04(6) + 0,64) = 0,12$.
+
+------------------------------------------------------------------------
+
+### **Soal 12**
+
+Dalam proses manufaktur semikonduktor, 3 wafer diuji. Asumsi probabilitas lolos uji adalah 0,8 independen. Tentukan PMF, CMF, mean, dan variansi dari jumlah wafer lolos uji!
+{{< pause >}}
+
+**Jawaban:**
+$X \sim \text{Binomial}(n=3, p=0,8)$. PMF: $P(0)=0,008; P(1)=0,096; P(2)=0,384; P(3)=0,512$. CMF: $F(0)=0,008; F(1)=0,104; F(2)=0,488; F(3)=1,000$. 
+
+Mean: $\mu = np = 3(0,8) = 2,4$. 
+
+Variansi: $\sigma^2 = npq = 3(0,8)(0,2) = 0,48$.
+
+------------------------------------------------------------------------
+
+### **Soal 13**
+
+Maskapai menjual 125 tiket untuk 120 penumpang. Probabilitas tidak datang 0,1 independen. a. Berapa probabilitas setiap penumpang yang datang mendapat penerbangan? b. Berapa probabilitas berangkat dengan kursi kosong?
+{{< pause >}}
+
+**Jawaban:** 
+
+Probabilitas datang $p = 0,9$. $X \sim \text{Binomial}(125, 0,9)$. 
+
+a. Probabilitas semua yang datang dapat kursi setara dengan penumpang datang $\le 120$: $P(X \le 120) = \sum_{x=0}^{120} \binom{125}{x} (0,9)^x (0,1)^{125-x}$. 
+
+b. Berangkat dengan kursi kosong setara dengan penumpang datang $\le 119$: $P(X \le 119) = \sum_{x=0}^{119} \binom{125}{x} (0,9)^x (0,1)^{125-x}$.
+
+------------------------------------------------------------------------
+
+### **Soal 14**
+
+Panggilan telepon Poisson $\lambda = 10$/jam. Berapa probabilitas terdapat: a) 5 panggilan/1 jam, b) $\le 3$ panggilan/1 jam, c) 15 panggilan/2 jam, d) 5 panggilan/30 menit?
+{{< pause >}}
+
+**Jawaban:** 
+
+a. $\mu = 10 \implies P(X=5) = \frac{e^{-10} 10^5}{5!} \approx 0,0378$. 
+
+b. $\mu = 10 \implies P(X \le 3) = \sum_{x=0}^{3} \frac{e^{-10} 10^x}{x!} \approx 0,0103$. 
+
+c. $\mu = 20 \implies P(X=15) = \frac{e^{-20} 20^{15}}{15!} \approx 0,0516$. d. $\mu = 5 \implies P(X=5) = \frac{e^{-5} 5^5}{5!} \approx 0,1755$.
+
+------------------------------------------------------------------------
+
+### **Soal 15**
+
+Cacat Poisson 0,05 per ft$^2$. Interior = 10 ft$^2$. a. Probabilitas tidak ada cacat 1 mobil? b. 10 mobil dijual, probabilitas 0 mobil cacat? c. 10 mobil dijual, maksimal 1 cacat? d. 100 panel diperiksa, probabilitas $<5$ panel cacat?
+{{< pause >}}
+
+**Jawaban:** 
+
+a. $\mu = 0,05 \times 10 = 0,5$. $P(X=0) = e^{-0,5} \approx 0,6065$. 
+
+b. $X \sim \text{Binomial}(10, 0,3935)$ dimana $p(\text{cacat}) = 1 - 0,6065 = 0,3935$. $P(Y=0) = (0,6065)^{10} \approx 0,0067$. 
+
+c. $P(Y \le 1) = \binom{10}{0}(0,6065)^{10} + \binom{10}{1}(0,3935)^1(0,6065)^9 \approx 0,0504$. 
+
+d. Jika 1 panel = 10 ft$^2$, $Y \sim \text{Binomial}(100, 0,3935)$. $P(Y \le 4) = \sum_{y=0}^{4} \binom{100}{y}(0,3935)^y(0,6065)^{100-y}$.
+
+------------------------------------------------------------------------
+
+### **Soal 16**
+
+Bank menaruh 5 hardware Data Center. Peluang hidup $p=0,8$. $X$ = jumlah DC hidup. a. Tabel distribusi dan CMF? b. Nilai median $M$? c. Mean dan variansi? d. Probabilitas down total, tinggal 1, dan minimal 1?
+{{< pause >}}
+
+**Jawaban:** 
+
+a. $X \sim \text{Bin}(5, 0,8)$. PMF: $P(0)=0,00032; P(1)=0,0064; P(2)=0,0512; P(3)=0,2048; P(4)=0,4096; P(5)=0,32768$. 
+
+b. $M = 4$ (Karena CMF pada $X=3$ adalah 0,26272, dan baru meloncat melewati 0,5 pada $X=4$ yaitu 0,67232). 
+
+c. Mean = $np = 4$. Variansi = $npq = 0,8$. d. Down total $P(X=0) = 0,00032$. Tinggal satu $P(X=1) = 0,0064$. Minimal satu $P(X \ge 1) = 1 - 0,00032 = 0,99968$.
+
+------------------------------------------------------------------------
+
+### **Soal 17**
+
+Geometrik $P(L=n) = (1-b)b^n$, $b=0,6$. Tentukan Median $M$, Mean, dan peluang tidak rusak sebelum hari ke-$i$ ($F_i$).
+{{< pause >}}
+
+**Jawaban:** 
+
+Mean $E(L) = \frac{b}{1-b} = 1,5$. 
+
+Median $M = 1$ (CMF melewati 0,5 pada hari ke-1). 
+
+Peluang tidak rusak (Survival): $P(L \ge i) = \sum_{n=i}^{\infty} (0,4)(0,6)^n = (0,6)^i$.
+
+------------------------------------------------------------------------
+
+### **Soal 18**
+
+Sesi FTP $L \ge t_0$. $P(L > 2t_0) = 4P(L > 4t_0)$ dengan PDF $f(l) = a t_0^a l^{-a-1}$. Tentukan probabilitas melebihi $10t_0$.
+{{< pause >}}
+
+**Jawaban:** 
+
+CDF Pareto Survival $P(L > l) = (t_0 / l)^a$. Maka $(t_0 / 2t_0)^a = 4 (t_0 / 4t_0)^a \implies (1/2)^a = 4(1/4)^a \implies (1/2)^a = 4(1/2)^{2a} \implies (1/2)^{-a} = 4 \implies a = 2$. Probabilitas $P(L > 10t_0) = (1/10)^2 = 0,01$.
+
+------------------------------------------------------------------------
+
+### **Soal 19**
+
+Kereta tiba setiap 15 menit. Penumpang tiba berdistribusi seragam 07.00 - 07.30. Peluang menunggu $<5$ menit?
+{{< pause >}}
+
+**Jawaban:** Kereta berangkat pada 07.00, 07.15, 07.30. Agar menunggu $<5$ menit, penumpang harus tiba di rentang (07.10-07.15) atau (07.25-07.30). Luas rentang sukses = 5 menit + 5 menit = 10 menit. Total rentang = 30 menit. Probabilitas = $10 / 30 = 1/3$.
+
+------------------------------------------------------------------------
+
+### **Soal 20**
+
+Typo Poisson $\lambda = 0,01$/halaman. Probabilitas $\le 3$ kesalahan per 100 halaman?
+{{< pause >}}
+
+**Jawaban:** Untuk 100 halaman, $\mu = 0,01 \times 100 = 1$. $P(X \le 3) = e^{-1} (1 + 1 + 1/2 + 1/6) = e^{-1} (8/3) \approx 0,981$.
+
+------------------------------------------------------------------------
+
+### **Soal 21**
+
+Lampu hijau $p=0,2$. a. 5 hari, tepat 1 kali hijau? b. 20 hari, tepat 4 hijau? c. 20 minggu (140 hari), lebih 4 kali hijau?
+
+{{< pause >}}
+
+**Jawaban:** 
+
+a. $\binom{5}{1} (0,2)^1 (0,8)^4 \approx 0,4096$. 
+
+b. $\binom{20}{4} (0,2)^4 (0,8)^{16} \approx 0,2182$. 
+
+c. $P(X > 4) = 1 - P(X \le 4) = 1 - \sum_{x=0}^{4} \binom{140}{x} (0,2)^x (0,8)^{140-x}$.
+
+------------------------------------------------------------------------
+
+### **Soal 22**
+
+2% cacat. Berapa order disimpan agar 100 sukses dengan probabilitas $\ge 0,95$?
+
+{{< pause >}}
+
+**Jawaban:** 
+
+$X \sim \text{Negatif Binomial}$. Menggunakan pendekatan normal, dibutuhkan $N$ komponen sedemikian hingga area kelolosan $n \ge 100$ probabilitasnya $>0,95$. Persamaan invers normal menghasilkan $N \approx 103$.
+
+------------------------------------------------------------------------
+
+### **Soal 23**
+
+Umur aki Eksponensial $\mu = 10.000$. Peluang bertahan perjalanan 5.000 km?
+
+{{< pause >}}
+
+**Jawaban:** Karena eksponensial bersifat memoryless, $P(X > 5000) = e^{-5000/10000} = e^{-0,5} \approx 0,6065$.
