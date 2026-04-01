@@ -1,0 +1,37 @@
+subtitle: Soal Jawab Lengkap
+date: today
+date-format: long
+image: static/img/logo_ITB.png
+author:
+  - name: Armein Z. R. Langi
+    orcid: 0000-0001-9516-1461
+    email: armein@itb.ac.id
+    affiliations: Institut Teknologi Bandung
+format:
+  clean-typst:
+    bibliographystyle: "chicago-author-date"
+    include-in-header: "custom.typ"
+    commands: [small-cite]
+execute: 
+  echo: false
+  warning: false
+
+brand:
+  typography: 
+    fonts: 
+      - family: Roboto
+        weight: [100, 200, 300, 400, 500, 600, 700]
+        style: [normal, italic]
+        source: google
+      - family: Fira Code
+        weight: [100, 200, 300, 400, 500, 600, 700]
+        source: google
+    base: Roboto
+    headings: Roboto
+    monospace:
+      family: Fira Code
+      size: 0.9em
+knitr:
+  opts_chunk: 
+    fig.align: center
+    dev: svg
