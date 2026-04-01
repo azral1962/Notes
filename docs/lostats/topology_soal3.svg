@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="720" viewBox="0 0 980 720">
+<style>
+.line{stroke:#3f6fd9;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lbl{font: 26px Georgia, serif; fill:#111}
+.link{font: 24px Georgia, serif; fill:#f07b21}
+.sw{stroke:#f07b21;stroke-width:3.6}
+</style>
+
+<!-- nodes -->
+<text x="365" y="220" class="lbl">B</text>
+<text x="560" y="220" class="lbl">C</text>
+<text x="160" y="390" class="lbl">D</text>
+<text x="370" y="390" class="lbl">E</text>
+<text x="565" y="390" class="lbl">F</text>
+<text x="180" y="610" class="lbl">G</text>
+<text x="380" y="610" class="lbl">H</text>
+<text x="585" y="610" class="lbl">I</text>
+<text x="820" y="165" class="lbl">J</text>
+
+<!-- blue network -->
+<line x1="170" y1="360" x2="330" y2="210" class="line"/>   <!-- D-B -->
+<line x1="330" y1="210" x2="520" y2="210" class="line"/>   <!-- B-C -->
+<line x1="330" y1="210" x2="330" y2="520" class="line"/>   <!-- B-E-H vertical -->
+<line x1="520" y1="210" x2="520" y2="520" class="line"/>   <!-- C-F-I vertical -->
+<line x1="170" y1="360" x2="430" y2="360" class="line"/>   <!-- D-E -->
+<line x1="430" y1="360" x2="620" y2="360" class="line"/>   <!-- E-F -->
+<line x1="170" y1="360" x2="170" y2="520" class="line"/>   <!-- D-G -->
+<line x1="170" y1="520" x2="430" y2="520" class="line"/>   <!-- G-H -->
+<line x1="430" y1="520" x2="620" y2="520" class="line"/>   <!-- H-I -->
+<line x1="520" y1="210" x2="720" y2="210" class="line"/>
+<line x1="720" y1="210" x2="720" y2="80" class="line"/>
+<line x1="720" y1="80" x2="860" y2="80" class="line"/>     <!-- to J top -->
+<line x1="520" y1="270" x2="860" y2="270" class="line"/>   <!-- lower J path -->
+<line x1="860" y1="80" x2="860" y2="270" class="line"/>
+
+<!-- switch markers -->
+<line x1="280" y1="275" x2="303" y2="300" class="sw"/><line x1="298" y1="255" x2="321" y2="280" class="sw"/>
+<line x1="418" y1="190" x2="418" y2="230" class="sw"/><line x1="438" y1="190" x2="438" y2="230" class="sw"/>
+<line x1="285" y1="293" x2="340" y2="293" class="sw"/><line x1="285" y1="313" x2="340" y2="313" class="sw"/>
+<line x1="540" y1="293" x2="595" y2="293" class="sw"/><line x1="540" y1="313" x2="595" y2="313" class="sw"/>
+<line x1="250" y1="340" x2="250" y2="382" class="sw"/><line x1="270" y1="340" x2="270" y2="382" class="sw"/>
+<line x1="438" y1="340" x2="438" y2="382" class="sw"/><line x1="458" y1="340" x2="458" y2="382" class="sw"/>
+<line x1="88" y1="435" x2="142" y2="435" class="sw"/><line x1="88" y1="455" x2="142" y2="455" class="sw"/>
+<line x1="270" y1="500" x2="270" y2="542" class="sw"/><line x1="290" y1="500" x2="290" y2="542" class="sw"/>
+<line x1="510" y1="500" x2="510" y2="542" class="sw"/><line x1="530" y1="500" x2="530" y2="542" class="sw"/>
+<line x1="760" y1="60" x2="760" y2="102" class="sw"/><line x1="780" y1="60" x2="780" y2="102" class="sw"/>
+<line x1="816" y1="160" x2="874" y2="160" class="sw"/><line x1="816" y1="180" x2="874" y2="180" class="sw"/>
+
+<!-- link labels -->
+<text x="312" y="300" class="link">i</text>
+<text x="446" y="245" class="link">ii</text>
+<text x="348" y="318" class="link">iii</text>
+<text x="604" y="318" class="link">iv</text>
+<text x="280" y="392" class="link">v</text>
+<text x="468" y="392" class="link">vi</text>
+<text x="147" y="470" class="link">vii</text>
+<text x="736" y="46" class="link">viii</text>
+<text x="300" y="560" class="link">ix</text>
+<text x="540" y="560" class="link">x</text>
+<text x="880" y="187" class="link">xi</text>
+</svg>
