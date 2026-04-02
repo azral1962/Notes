@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<style>
+.line{stroke:#222;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lbl{font: 32px 'Arial'; fill:#111}
+.link{font: 30px 'Arial'; fill:#0b5cad}
+.sw{stroke:#0b5cad;stroke-width:4}
+</style>
+<text x="430" y="300" class="lbl">A</text>
+<text x="760" y="300" class="lbl">B</text>
+<!-- geometry -->
+<line x1="170" y1="90" x2="170" y2="430" class="line"/>
+<line x1="170" y1="90" x2="580" y2="90" class="line"/>
+<line x1="170" y1="430" x2="580" y2="430" class="line"/>
+<line x1="450" y1="290" x2="720" y2="290" class="line"/>
+<line x1="450" y1="290" x2="580" y2="130" class="line"/>
+<line x1="450" y1="290" x2="580" y2="390" class="line"/>
+<line x1="580" y1="90" x2="580" y2="430" class="line"/>
+<line x1="580" y1="90" x2="720" y2="290" class="line"/>
+<line x1="580" y1="430" x2="720" y2="290" class="line"/>
+
+<!-- router marks -->
+<line x1="154" y1="250" x2="186" y2="250" class="sw"/><line x1="154" y1="270" x2="186" y2="270" class="sw"/>
+<line x1="482" y1="177" x2="501" y2="199" class="sw"/><line x1="500" y1="156" x2="519" y2="178" class="sw"/>
+<line x1="518" y1="262" x2="518" y2="318" class="sw"/><line x1="537" y1="262" x2="537" y2="318" class="sw"/>
+<line x1="506" y1="345" x2="526" y2="322" class="sw"/><line x1="527" y1="368" x2="547" y2="345" class="sw"/>
+<line x1="560" y1="184" x2="600" y2="184" class="sw"/><line x1="560" y1="204" x2="600" y2="204" class="sw"/>
+<line x1="560" y1="348" x2="600" y2="348" class="sw"/><line x1="560" y1="368" x2="600" y2="368" class="sw"/>
+<line x1="642" y1="176" x2="661" y2="199" class="sw"/><line x1="661" y1="156" x2="680" y2="179" class="sw"/>
+<line x1="650" y1="262" x2="650" y2="318" class="sw"/><line x1="669" y1="262" x2="669" y2="318" class="sw"/>
+
+<!-- labels -->
+<text x="126" y="245" class="link">a</text>
+<text x="492" y="144" class="link">b</text>
+<text x="545" y="318" class="link">c</text>
+<text x="500" y="404" class="link">d</text>
+<text x="606" y="194" class="link">e</text>
+<text x="606" y="378" class="link">f</text>
+<text x="688" y="195" class="link">g</text>
+<text x="682" y="318" class="link">h</text>
+</svg>
