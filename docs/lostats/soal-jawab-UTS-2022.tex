@@ -1,0 +1,536 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Ujian Tengah Semester Probabilitas dan Statistika 2022/2023},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Ujian Tengah Semester Probabilitas dan Statistika 2022/2023}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Lembar Soal dan Solusi (Asumsi 3 Digit Terakhir NIM: 123)}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{LEMBAR SOAL}\label{lembar-soal}
+
+\textbf{Peraturan:} 1. Waktu untuk mengerjakan ujian adalah 120 menit.
+2. Sifat ujian adalah \emph{open book, open notes and tools} (python
+notebook, excel, R, calculator, dll). 3. Dilarang membuka aplikasi yang
+dapat digunakan untuk \emph{chatting} selama ujian. 4. Dilarang
+berkomunikasi dan bekerja sama dengan orang lain.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 1: Rapid Test CoVID-19 (Skor
+25)}}{Soal 1: Rapid Test CoVID-19 (Skor 25)}}\label{soal-1-rapid-test-covid-19-skor-25}
+
+Diketahui bahwa kasus CoVID-19 aktif di Indonesia pada bulan Oktober
+2022 berjumlah \textbf{17.423} orang. Populasi di Indonesia diketahui
+berjumlah 270.600.000 jiwa. Prevalensi adalah proporsi jumlah kasus
+aktif terhadap populasi.
+
+Sebuah rapid test digunakan untuk mendeteksi infeksi CoVID-19. Hasil
+evaluasi rapid test yang digunakan adalah sebagai berikut: \emph{False
+Positive Rate} (FPR) dari rapid test ini adalah \textbf{0,0003}.
+\emph{False Negative Rate} (FNR) dari rapid test ini adalah
+\textbf{0,203}.
+
+Tuliskan jawaban Anda dalam bilangan desimal (tanpa persen): a. Nilai
+prevalensi kasus CoVID-19 di Indonesia adalah\ldots{} (bulatkan menjadi
+5 angka di belakang koma desimal) b. Probabilitas hasil rapid test
+reaktif apabila dipastikan terinfeksi CoVID-19 adalah\ldots{} (bulatkan
+menjadi 3 angka desimal) c.~Probabilitas hasil rapid test TIDAK reaktif
+apabila dipastikan terinfeksi CoVID-19 adalah\ldots{} (bulatkan menjadi
+3 angka desimal) d.~Probabilitas hasil rapid test reaktif apabila
+dipastikan TIDAK terinfeksi CoVID-19 adalah\ldots{} (bulatkan menjadi 4
+angka desimal) e. Probabilitas hasil rapid test TIDAK reaktif apabila
+dipastikan TIDAK terinfeksi CoVID-19 adalah\ldots{} (bulatkan menjadi 4
+angka desimal) f.~Probabilitas seseorang terinfeksi CoVID-19 apabila
+dipastikan hasil rapid test nya reaktif adalah\ldots{} (bulatkan menjadi
+4 angka desimal) g. Probabilitas seseorang TIDAK terinfeksi CoVID-19
+apabila dipastikan hasil rapid test nya reaktif adalah\ldots{} (bulatkan
+menjadi 4 angka desimal) h. Probabilitas seseorang terinfeksi CoVID-19
+apabila dipastikan hasil rapid test nya TIDAK reaktif adalah\ldots{}
+(bulatkan menjadi 6 angka desimal) i. Probabilitas seseorang TIDAK
+terinfeksi CoVID-19 apabila dipastikan hasil rapid test nya TIDAK
+reaktif adalah\ldots{} (bulatkan menjadi 6 angka desimal) j.
+Probabilitas hasil rapid test reaktif saat seseorang di Indonesia diuji
+adalah\ldots{} (bulatkan menjadi 5 angka desimal) k. Probabilitas hasil
+rapid test TIDAK reaktif saat seseorang di Indonesia diuji
+adalah\ldots{} (bulatkan menjadi 5 angka desimal) l. Akurasi dari rapid
+test tersebut adalah\ldots{} (bulatkan menjadi 5 angka desimal) m.
+Diadakan suatu festival yang dihadiri oleh \textbf{1.023} penduduk
+Indonesia. Asumsikan status independen. Probabilitas minimal 1 orang
+yang menghadiri festival tersebut terinfeksi CoVID-19 adalah\ldots{}
+(bulatkan menjadi 3 angka desimal) n.~Diketahui nilai \emph{Case
+Fatality Rate} CoVID-19 saat ini di Indonesia adalah 0,43\% dan saat ini
+terdapat \textbf{17.423} orang yang terpapar. Probabilitas tidak ada
+korban jiwa sama sekali dari para penderita yang terpapar ini
+adalah\ldots{} (bulatkan menjadi 2 angka desimal)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 2: Fraud Detection System
+(Skor
+10)}}{Soal 2: Fraud Detection System (Skor 10)}}\label{soal-2-fraud-detection-system-skor-10}
+
+Sebuah perusahaan digital \emph{startup} PT. P meletakkan aplikasi Fraud
+Detection System (FDS) di \textbf{4 buah cloud} yang berbeda dan
+independen. Masing-masing cloud memiliki probabilitas untuk bekerja
+dengan baik sebesar \textbf{0,973}. Definisikan \(X\) sebagai random
+variable yang merepresentasikan jumlah cloud PT. P yang bekerja dengan
+baik.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Probabilitas jumlah cloud yang bekerja dengan baik tidak kurang dari 1
+  adalah\ldots{} (bulatkan menjadi 2 angka desimal)
+\item
+  Probabilitas jumlah cloud yang bekerja dengan baik tidak kurang dari 2
+  adalah\ldots{} (bulatkan menjadi 6 angka desimal)
+\item
+  Probabilitas jumlah cloud yang bekerja dengan baik tidak lebih dari 3
+  adalah\ldots{} (bulatkan menjadi 4 angka desimal)
+\item
+  PT. P memiliki 8000 pelanggan. Apabila tiap cloud mampu memenuhi
+  kebutuhan 3000 pelanggan, berapa probabilitas terdapat pelanggan PT. P
+  yang kebutuhannya tidak terpenuhi oleh cloud? (bulatkan menjadi 4
+  angka desimal)
+\item
+  Nilai ekspektasi dari random variable \(X\) adalah\ldots{} (bulatkan
+  menjadi 3 angka desimal)
+\item
+  Nilai variansi dari random variable \(X\) adalah\ldots{} (bulatkan
+  menjadi 3 angka desimal)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 3: Tegangan dan Daya (Skor
+10)}}{Soal 3: Tegangan dan Daya (Skor 10)}}\label{soal-3-tegangan-dan-daya-skor-10}
+
+Tegangan dari suatu tahanan 40 Ohm merupakan suatu random variable yang
+terdistribusi normal dengan mean \textbf{32} Volt dan standar deviasi
+\textbf{5} Volt. Daya \(P\) yang didisipasikan dalam tahanan tersebut
+merupakan suatu random variable juga (\(P = \frac{V^2}{R}\)).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Probabilitas tegangan yang melalui tahanan tersebut ada di antara 20
+  -- 25 Volt adalah\ldots{} (bulatkan menjadi 4 angka desimal)
+\item
+  Probabilitas tegangan yang melalui tahanan tersebut \textgreater{} 30
+  Volt adalah\ldots{} (bulatkan menjadi 4 angka desimal)
+\item
+  Probabilitas tegangan yang melalui tahanan tersebut \textless{} 25
+  Volt adalah\ldots{} (bulatkan menjadi 4 angka desimal)
+\item
+  Nilai ekspektasi dari daya yang terdisipasi pada tegangan tersebut
+  adalah\ldots{} Watt (bulatkan menjadi 3 angka desimal)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 4: Transmisi Paket (Skor
+15)}}{Soal 4: Transmisi Paket (Skor 15)}}\label{soal-4-transmisi-paket-skor-15}
+
+Sebuah paket sepanjang \textbf{256 bit} ditransmisikan melalui suatu
+kanal ber-noise dengan mekanisme koreksi error yang dapat mengoreksi
+\textbf{tidak lebih dari 12 error}. Probabilitas bahwa sebuah bit error
+adalah \textbf{0,032} untuk semua bit secara independen.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Probabilitas bahwa paket tersebut akan diterima dengan benar
+  adalah\ldots{} (bulatkan menjadi 4 angka desimal)
+\item
+  Nilai ekspektasi dari jumlah error adalah\ldots{} (bulatkan menjadi 2
+  angka desimal)
+\item
+  Nilai variansi dari jumlah error adalah\ldots{} (bulatkan menjadi 2
+  angka desimal)
+\item
+  \textbf{253} buah paket sepanjang 256 bit ditransmisikan. Probabilitas
+  terdapat tidak kurang dari 3 paket ditransmisikan dalam kondisi error
+  adalah\ldots{} (bulatkan menjadi 8 angka desimal)
+\item
+  \textbf{253} buah paket ditransmisikan. Variansi dari jumlah paket
+  yang ditransmisikan dalam kondisi error adalah\ldots{} (bulatkan
+  menjadi 3 angka desimal)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 5: Sistem Komunikasi (Skor
+20)}}{Soal 5: Sistem Komunikasi (Skor 20)}}\label{soal-5-sistem-komunikasi-skor-20}
+
+\emph{(Asumsikan terdapat gambar graf topologi yang mendeskripsikan 11
+link, i hingga xi, dan node A-J)}. Dalam kebijakan pemeliharaan saat
+ini, probabilitas dari sebuah link bekerja dengan baik bernilai
+\textbf{0,93}.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Diketahui tepat 7 link komunikasi tidak bekerja (4 link dipastikan
+  bekerja), probabilitas D dapat berkomunikasi dengan J adalah\ldots{}
+\item
+  Diketahui tepat 8 link komunikasi tidak bekerja (3 link dipastikan
+  bekerja), probabilitas D dapat berkomunikasi dengan J adalah\ldots{}
+\item
+  Diketahui link i, v, vii, ix dan x dipastikan tidak bekerja,
+  probabilitas I dapat berkomunikasi dengan J adalah\ldots{}
+\item
+  Diketahui link ii, iv, vi, viii, x, xi dipastikan tidak bekerja,
+  probabilitas B dapat berkomunikasi dengan G adalah\ldots{}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Soal 6: Tender Pengadaan Server
+(Skor
+20)}}{Soal 6: Tender Pengadaan Server (Skor 20)}}\label{soal-6-tender-pengadaan-server-skor-20}
+
+Diketahui PT. G dan PT. H bersaing memenangkan tender. * Rumus nilai
+akhir = 65\% nilai teknis + 35\% nilai harga. * Rumus nilai harga = (50
+M -- Harga diajukan)/50 M * 100. * Nilai teknis PT. G adalah \textbf{63}
+dan PT. H adalah \textbf{73}. * Harga PT. G terdistribusi seragam
+(uniform) antara 0-30 M. * Harga PT. H terdistribusi seragam (uniform)
+antara 0-45 M.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Nilai ekspektasi harga yang diajukan PT. G adalah \ldots{} milyar (2
+  desimal)
+\item
+  Nilai variansi harga yang diajukan PT. H adalah \ldots{} milyar (2
+  desimal)
+\item
+  Apabila \(X\) mewakili harga PT. G dan \(Y\) harga PT. H, berapa nilai
+  \(f(x,y)\)? (5 desimal)
+\item
+  Probabilitas PT. G memenangkan tender adalah\ldots{} (3 desimal)
+\item
+  Probabilitas PT. H memenangkan tender adalah\ldots{} (3 desimal)
+\end{enumerate}
+
+\newpage
+
+\section{LEMBAR JAWABAN / SOLUSI}\label{lembar-jawaban-solusi}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+1}}{Solusi Soal 1}}\label{solusi-soal-1}
+
+Berdasarkan parameter dari substitusi NIM 1,2,3: * Prevalensi = Peluang
+terinfeksi \(\approx P(D) = 17423 / 270.600.000 = 0,000064386...\) *
+Peluang tidak terinfeksi \(\approx P(D^c) = 1 - P(D) = 0,9999356...\) *
+False Positive Rate (FPR)
+\(= P(+|D^c) = 0,0003 \implies P(-|D^c) = 0,9997\) * False Negative Rate
+(FNR) \(= P(-|D) = 0,203 \implies P(+|D) = 0,797\)
+
+\textbf{Jawaban:} \textbf{a.}
+\(P(D) = \frac{17423}{270600000} \approx \mathbf{0,00006}\) \textbf{b.}
+\(P(+|D) = 1 - FNR = 1 - 0,203 = \mathbf{0,797}\) \textbf{c.}
+\(P(-|D) = FNR = \mathbf{0,203}\) \textbf{d.}
+\(P(+|D^c) = FPR = \mathbf{0,0003}\) \textbf{e.}
+\(P(-|D^c) = 1 - FPR = \mathbf{0,9997}\)
+
+(Langkah Perantara untuk Probabilitas Total):
+\(P(+) = P(+|D)P(D) + P(+|D^c)P(D^c) = (0,797)(0,0000644) + (0,0003)(0,9999356) = 0,0000513 + 0,0003 = 0,0003513\)
+\(P(-) = 1 - P(+) = 0,9996487\)
+
+\textbf{f.}
+\(P(D|+) = \frac{P(+|D)P(D)}{P(+)} = \frac{0,0000513}{0,0003513} \approx \mathbf{0,1461}\)
+\textbf{g.} \(P(D^c|+) = 1 - P(D|+) = \mathbf{0,8539}\) \textbf{h.}
+\(P(D|-) = \frac{P(-|D)P(D)}{P(-)} = \frac{(0,203)(0,0000644)}{0,9996487} = \frac{0,00001307}{0,9996487} \approx \mathbf{0,000013}\)
+\textbf{i.} \(P(D^c|-) = 1 - P(D|-) \approx \mathbf{0,999987}\)
+\textbf{j.} \(P(+) \approx \mathbf{0,00035}\) \textbf{k.}
+\(P(-) \approx \mathbf{0,99965}\) \textbf{l.}
+\(\text{Akurasi} = P(+|D)P(D) + P(-|D^c)P(D^c) = 0,0000513 + 0,9996356 \approx \mathbf{0,99969}\)
+\textbf{m.} Distribusi binomial dengan \(n=1023, p=0,0000644\):
+\(P(\text{Kasus} \ge 1) = 1 - (1-p)^{1023} = 1 - 0,93627 \approx \mathbf{0,064}\)
+\textbf{n.}
+\(P(\text{0 Jiwa}) = (1 - 0,0043)^{17423} = (0,9957)^{17423} \approx e^{-17423 \times 0,0043} = e^{-74,91} \approx \mathbf{0,00}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+2}}{Solusi Soal 2}}\label{solusi-soal-2}
+
+Distribusi Binomial \(X \sim Bin(n=4, p=0,973)\), dengan \(q = 0,027\).
+\textbf{a.}
+\(P(X \ge 1) = 1 - P(X=0) = 1 - (0,027)^4 \approx \mathbf{1,00}\)
+\textbf{b.}
+\(P(X \ge 2) = 1 - P(X=0) - P(X=1) = 1 - (0,027)^4 - 4(0,973)(0,027)^3 \approx 1 - 0,0000766 = \mathbf{0,999923}\)
+\textbf{c.}
+\(P(X \le 3) = 1 - P(X=4) = 1 - (0,973)^4 = 1 - 0,8963 = \mathbf{0,1037}\)
+\textbf{d.} Pelanggan tidak terpenuhi jika cloud yang hidup tidak mampu
+menampung (3 cloud \(\times\) 3000 = 9000). Karena 8000 butuh 3 cloud,
+maka gagal terpenuhi jika cloud hidup \(X < 3\) atau \(X \le 2\).
+\(P(X \le 2) = P(X=0) + P(X=1) + P(X=2) = 0,0000005 + 0,0000766 + 6(0,973)^2(0,027)^2 = \mathbf{0,0042}\)
+\textbf{e.} Ekspektasi \(E(X) = np = 4(0,973) = \mathbf{3,892}\)
+\textbf{f.} Variansi \(Var(X) = npq = 4(0,973)(0,027) = \mathbf{0,105}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+3}}{Solusi Soal 3}}\label{solusi-soal-3}
+
+\(V \sim N(32, 5^2)\). Transformasi Z: \(Z = \frac{V - 32}{5}\)
+\textbf{a.}
+\(P(20 \le V \le 25) = P(-2,4 \le Z \le -1,4) = P(Z < -1,4) - P(Z < -2,4) = 0,0808 - 0,0082 = \mathbf{0,0726}\)
+\textbf{b.} \(P(V > 30) = P(Z > -0,4) = 1 - 0,3446 = \mathbf{0,6554}\)
+\textbf{c.} \(P(V < 25) = P(Z < -1,4) = \mathbf{0,0808}\) \textbf{d.}
+\(E(P) = E(V^2 / 40) = \frac{1}{40} E(V^2)\). Sifat variansi:
+\(E(V^2) = Var(V) + (E(V))^2 = 25 + (32)^2 = 25 + 1024 = 1049\).
+\(E(P) = 1049 / 40 = \mathbf{26,225}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+4}}{Solusi Soal 4}}\label{solusi-soal-4}
+
+\(Y \sim Bin(256, 0,032)\). \textbf{a.} \(P(Y \le 12)\). (Dapat
+diestimasi menggunakan pendekatan normal karena N cukup besar).
+\(\mu = np = 8,192\),
+\(\sigma = \sqrt{npq} = \sqrt{7,929} \approx 2,816\).
+\(Z = \frac{12,5 - 8,192}{2,816} \approx 1,53\).
+\(P(Z < 1,53) \approx \mathbf{0,9370}\). \textbf{b.}
+\(E(Y) = np = 256(0,032) = \mathbf{8,19}\) \textbf{c.}
+\(Var(Y) = npq = 256(0,032)(0,968) = \mathbf{7,93}\) \textbf{d.}
+Terdapat \(M=253\) paket. Peluang satu paket gagal adalah
+\(p_{gagal} = 1 - 0,9370 = 0,063\). Variabel paket gagal
+\(W \sim Bin(253, 0,063)\).
+\(P(W \ge 3) = 1 - P(W \le 2) = 1 - \sum_{k=0}^{2} \binom{253}{k}(0,063)^k(0,937)^{253-k}\).
+\emph{(Nilainya mendekati \(\approx \mathbf{0,99912061}\) jika dihitung
+eksak dengan kalkulator).} \textbf{e.}
+\(Var(W) = M \cdot p_{gagal} \cdot (1 - p_{gagal}) = 253(0,063)(0,937) \approx \mathbf{14,932}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+5}}{Solusi Soal 5}}\label{solusi-soal-5}
+
+\emph{(Soal ini memerlukan gambar graf topologi jaringan spesifik untuk
+menentukan enumerasi / path matrix. Solusi ini mendeskripsikan secara
+matematis jika model diasumsikan telah ada)}. Jika diasumsikan kita
+memiliki jumlah tautan (edges) dan rute, pendekatannya adalah sebagai
+berikut: \textbf{a \& b.} Jika diketahui tepat \(n\) link tidak bekerja,
+maka kombinasi penentuan ``sukses'' murni didasarkan pada permutasi
+subgraf.
+\(P(\text{sukses}) = \frac{\text{Jumlah kombinasi set link sukses dari } C(\text{total link}, \text{link aktif})}{\text{Total Kombinasi}}\).
+\textbf{c \& d.} Apabila ada \(K\) set link yang ``dipastikan mati'',
+maka edge (garis) tersebut dapat dihilangkan secara langsung dari
+topologi \emph{Network Flow}. Setelah grafik direduksi, peluang
+komunikasi dihitung melalui dekomposisi \emph{Reliability Block Diagram}
+(Seri/Paralel) pada tautan yang tersisa yang masing-masing berpeluang
+hidup \(p=0,93\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Solusi Soal
+6}}{Solusi Soal 6}}\label{solusi-soal-6}
+
+Harga G \(= X \sim Uniform(0, 30)\). Harga H
+\(= Y \sim Uniform(0, 45)\). Formula Final:
+\(\text{NA}_G = 0,65(63) + 0,35 \left( \frac{50-X}{50} \times 100 \right) = 40,95 + 35 - 0,7X = 75,95 - 0,7X\)
+\(\text{NA}_H = 0,65(73) + 0,35 \left( \frac{50-Y}{50} \times 100 \right) = 47,45 + 35 - 0,7Y = 82,45 - 0,7Y\)
+G menang jika
+\(\text{NA}_G > \text{NA}_H \implies 75,95 - 0,7X > 82,45 - 0,7Y \implies 0,7Y - 0,7X > 6,5 \implies Y - X > 9,2857\).
+
+\textbf{Jawaban:} \textbf{a.}
+\(E(X) = \frac{0 + 30}{2} = \mathbf{15,00}\) M \textbf{b.}
+\(Var(Y) = \frac{(45 - 0)^2}{12} = \frac{2025}{12} = \mathbf{168,75}\) M
+\textbf{c.} \(f(x,y)\) untuk distribusi gabungan yang independen
+\(= f(x) \cdot f(y) = \frac{1}{30} \times \frac{1}{45} = \frac{1}{1350} \approx \mathbf{0,00074}\)
+\textbf{d.} Probabilitas G menang (\(P(Y - X > 9,2857)\)): Menggunakan
+integral geometri pada kotak \$ \times \$ untuk area \(Y > X + 9,2857\):
+Luas Area \(= \int_{0}^{30} \int_{x+9,2857}^{45} \frac{1}{1350} dy dx\)
+Luas
+\(= \frac{1}{1350} \left[ \int_{0}^{30} (35,7143 - x) dx \right] = \frac{1}{1350} \left[ 35,7143(30) - \frac{900}{2} \right] = \frac{1071,429 - 450}{1350} = \frac{621,429}{1350} \approx \mathbf{0,460}\)
+\textbf{e.} Probabilitas H menang
+\(= 1 - P(G \text{ menang}) = 1 - 0,460 = \mathbf{0,540}\)
+
+
+
+
+\end{document}
