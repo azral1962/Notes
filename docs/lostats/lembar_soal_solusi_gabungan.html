@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Disusun dari percakapan dan file terlampir">
 
 <title>Lembar Soal dan Solusi Gabungan</title>
 <style>
@@ -37,8 +36,37 @@ ul.task-list li input[type="checkbox"] {
 <link href="lembar_soal_solusi_gabungan_files/libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="lembar_soal_solusi_gabungan_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="lembar_soal_solusi_gabungan_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="lembar_soal_solusi_gabungan_files/libs/bootstrap/bootstrap-67270d1595a62d14f123c043d4fb2f18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="lembar_soal_solusi_gabungan_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -46,42 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Daftar Isi</h2>
-   
-  <ul>
-  <li><a href="#keterangan" id="toc-keterangan" class="nav-link active" data-scroll-target="#keterangan"><span class="header-section-number">1</span> Keterangan</a></li>
-  <li><a href="#soal-1-jaringan-8-link-antara-a-dan-b" id="toc-soal-1-jaringan-8-link-antara-a-dan-b" class="nav-link" data-scroll-target="#soal-1-jaringan-8-link-antara-a-dan-b"><span class="header-section-number">2</span> Soal 1 — Jaringan 8 Link antara A dan B</a>
-  <ul class="collapse">
-  <li><a href="#topologi-hasil-ekstraksi-dan-gambar-ulang" id="toc-topologi-hasil-ekstraksi-dan-gambar-ulang" class="nav-link" data-scroll-target="#topologi-hasil-ekstraksi-dan-gambar-ulang"><span class="header-section-number">2.1</span> Topologi hasil ekstraksi dan gambar ulang</a></li>
-  <li><a href="#pernyataan-soal" id="toc-pernyataan-soal" class="nav-link" data-scroll-target="#pernyataan-soal"><span class="header-section-number">2.2</span> Pernyataan soal</a></li>
-  <li><a href="#solusi" id="toc-solusi" class="nav-link" data-scroll-target="#solusi"><span class="header-section-number">2.3</span> Solusi</a></li>
-  <li><a href="#ringkasan-jawaban-soal-1" id="toc-ringkasan-jawaban-soal-1" class="nav-link" data-scroll-target="#ringkasan-jawaban-soal-1"><span class="header-section-number">2.4</span> Ringkasan jawaban Soal 1</a></li>
-  </ul></li>
-  <li><a href="#soal-2-jaringan-3-client-dan-1-server" id="toc-soal-2-jaringan-3-client-dan-1-server" class="nav-link" data-scroll-target="#soal-2-jaringan-3-client-dan-1-server"><span class="header-section-number">3</span> Soal 2 — Jaringan 3 Client dan 1 Server</a>
-  <ul class="collapse">
-  <li><a href="#topologi-hasil-ekstraksi-dan-gambar-ulang-1" id="toc-topologi-hasil-ekstraksi-dan-gambar-ulang-1" class="nav-link" data-scroll-target="#topologi-hasil-ekstraksi-dan-gambar-ulang-1"><span class="header-section-number">3.1</span> Topologi hasil ekstraksi dan gambar ulang</a></li>
-  <li><a href="#pernyataan-soal-1" id="toc-pernyataan-soal-1" class="nav-link" data-scroll-target="#pernyataan-soal-1"><span class="header-section-number">3.2</span> Pernyataan soal</a></li>
-  <li><a href="#solusi-1" id="toc-solusi-1" class="nav-link" data-scroll-target="#solusi-1"><span class="header-section-number">3.3</span> Solusi</a></li>
-  <li><a href="#ringkasan-jawaban-soal-2" id="toc-ringkasan-jawaban-soal-2" class="nav-link" data-scroll-target="#ringkasan-jawaban-soal-2"><span class="header-section-number">3.4</span> Ringkasan jawaban Soal 2</a></li>
-  </ul></li>
-  <li><a href="#soal-3-uts-2022-soal-5-sistem-komunikasi" id="toc-soal-3-uts-2022-soal-5-sistem-komunikasi" class="nav-link" data-scroll-target="#soal-3-uts-2022-soal-5-sistem-komunikasi"><span class="header-section-number">4</span> Soal 3 — UTS 2022 Soal 5 Sistem Komunikasi</a>
-  <ul class="collapse">
-  <li><a href="#topologi-hasil-ekstraksi-dan-gambar-ulang-2" id="toc-topologi-hasil-ekstraksi-dan-gambar-ulang-2" class="nav-link" data-scroll-target="#topologi-hasil-ekstraksi-dan-gambar-ulang-2"><span class="header-section-number">4.1</span> Topologi hasil ekstraksi dan gambar ulang</a></li>
-  <li><a href="#pernyataan-soal-2" id="toc-pernyataan-soal-2" class="nav-link" data-scroll-target="#pernyataan-soal-2"><span class="header-section-number">4.2</span> Pernyataan soal</a></li>
-  <li><a href="#solusi-dan-jawaban-akhir" id="toc-solusi-dan-jawaban-akhir" class="nav-link" data-scroll-target="#solusi-dan-jawaban-akhir"><span class="header-section-number">4.3</span> Solusi dan jawaban akhir</a></li>
-  <li><a href="#ringkasan-jawaban-soal-3" id="toc-ringkasan-jawaban-soal-3" class="nav-link" data-scroll-target="#ringkasan-jawaban-soal-3"><span class="header-section-number">4.4</span> Ringkasan jawaban Soal 3</a></li>
-  </ul></li>
-  <li><a href="#ringkasan-seluruh-hasil" id="toc-ringkasan-seluruh-hasil" class="nav-link" data-scroll-target="#ringkasan-seluruh-hasil"><span class="header-section-number">5</span> Ringkasan seluruh hasil</a>
-  <ul class="collapse">
-  <li><a href="#soal-1" id="toc-soal-1" class="nav-link" data-scroll-target="#soal-1"><span class="header-section-number">5.1</span> Soal 1</a></li>
-  <li><a href="#soal-2" id="toc-soal-2" class="nav-link" data-scroll-target="#soal-2"><span class="header-section-number">5.2</span> Soal 2</a></li>
-  <li><a href="#soal-3" id="toc-soal-3" class="nav-link" data-scroll-target="#soal-3"><span class="header-section-number">5.3</span> Soal 3</a></li>
-  </ul></li>
-  <li><a href="#berkas-pendukung" id="toc-berkas-pendukung" class="nav-link" data-scroll-target="#berkas-pendukung"><span class="header-section-number">6</span> Berkas pendukung</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Format Lain</h2><ul><li><a href="lembar_soal_solusi_gabungan.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
-</div>
+<div class="quarto-alternate-formats"><h2>Format Lain</h2><ul><li><a href="lembar_soal_solusi_gabungan.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -94,12 +87,6 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Penulis</div>
-    <div class="quarto-title-meta-contents">
-             <p>Disusun dari percakapan dan file terlampir </p>
-          </div>
-  </div>
     
   
     
@@ -110,8 +97,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="keterangan" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="keterangan"><span class="header-section-number">1</span> Keterangan</h2>
+<section id="keterangan" class="level2">
+<h2 class="anchored" data-anchor-id="keterangan">Keterangan</h2>
 <p>Dokumen ini menggabungkan seluruh soal dan jawaban yang muncul pada thread ini ke dalam satu berkas Quarto.<br>
 Topologi jaringan digambar ulang dalam format vektor (<code>.svg</code>) agar tetap tajam saat dirender.</p>
 <blockquote class="blockquote">
@@ -120,277 +107,407 @@ Solusi numerik mengikuti hasil diskusi pada thread.</p>
 </blockquote>
 <hr>
 </section>
-<section id="soal-1-jaringan-8-link-antara-a-dan-b" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="soal-1-jaringan-8-link-antara-a-dan-b"><span class="header-section-number">2</span> Soal 1 — Jaringan 8 Link antara A dan B</h2>
-<section id="topologi-hasil-ekstraksi-dan-gambar-ulang" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang"><span class="header-section-number">2.1</span> Topologi hasil ekstraksi dan gambar ulang</h3>
+<section id="soal-1-jaringan-8-link-antara-a-dan-b" class="level2">
+<h2 class="anchored" data-anchor-id="soal-1-jaringan-8-link-antara-a-dan-b">Soal 1 — Jaringan 8 Link antara A dan B</h2>
+<section id="topologi-hasil-ekstraksi-dan-gambar-ulang" class="level3">
+<h3 class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang">Topologi hasil ekstraksi dan gambar ulang</h3>
 <p><img src="figures/topology_soal1.svg" class="img-fluid" style="width:80.0%" alt="Topologi 8 link antara A dan B"></p>
 </section>
-<section id="pernyataan-soal" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="pernyataan-soal"><span class="header-section-number">2.2</span> Pernyataan soal</h3>
-<p>Probabilitas sebuah link bekerja dengan baik adalah (0.6).</p>
+<section id="pernyataan-soal" class="level3">
+<h3 class="anchored" data-anchor-id="pernyataan-soal">Pernyataan soal</h3>
+<p>Probabilitas sebuah link bekerja dengan baik adalah <span class="math inline">\(0.6\)</span>.</p>
 <ol type="1">
 <li>Jika sistem diamati pada waktu acak, berapa kemungkinan:
 <ul>
 <li>tepat dua link bekerja dengan baik?</li>
-<li>link (g) dan tepat satu link lagi bekerja dengan baik?</li>
+<li>link <span class="math inline">\(g\)</span> dan tepat satu link lagi bekerja dengan baik?</li>
 </ul></li>
-<li>Jika secara bersamaan tepat enam link tidak bekerja dengan baik, berapa kemungkinan (A) dapat berkomunikasi dengan (B)?</li>
+<li>Jika secara bersamaan tepat enam link tidak bekerja dengan baik, berapa kemungkinan <span class="math inline">\(A\)</span> dapat berkomunikasi dengan <span class="math inline">\(B\)</span>?</li>
 </ol>
 </section>
-<section id="solusi" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="solusi"><span class="header-section-number">2.3</span> Solusi</h3>
-<p>Misalkan (X) = banyaknya link yang bekerja baik. Karena ada 8 link independen dan tiap link ON dengan peluang (0.6), maka:</p>
-<p>[ X (8,0.6) ]</p>
-<section id="ai-tepat-dua-link-bekerja-baik" class="level4" data-number="2.3.1">
-<h4 data-number="2.3.1" class="anchored" data-anchor-id="ai-tepat-dua-link-bekerja-baik"><span class="header-section-number">2.3.1</span> (a)(i) Tepat dua link bekerja baik</h4>
-<p>[ P(X=2)=(0.6)<sup>2(0.4)</sup>6 ]</p>
-<p>[ =28(0.36)(0.004096)=0.04128768 ]</p>
+<section id="solusi" class="level3">
+<h3 class="anchored" data-anchor-id="solusi">Solusi</h3>
+<p>Misalkan <span class="math inline">\(X\)</span> = banyaknya link yang bekerja baik. Karena ada 8 link independen dan tiap link ON dengan peluang <span class="math inline">\(0.6\)</span>, maka:</p>
+<p><span class="math display">\[
+X \sim \mathrm{Binomial}(8,0.6)
+\]</span></p>
+<section id="ai-tepat-dua-link-bekerja-baik" class="level4">
+<h4 class="anchored" data-anchor-id="ai-tepat-dua-link-bekerja-baik">(a)(i) Tepat dua link bekerja baik</h4>
+<p><span class="math display">\[
+P(X=2)=\binom{8}{2}(0.6)^2(0.4)^6
+\]</span></p>
+<p><span class="math display">\[
+=28(0.36)(0.004096)=0.04128768
+\]</span></p>
 <p><strong>Jawaban:</strong></p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{P(\text{tepat 2 link baik}) \approx 0.0413}
+\]</span></p>
 </section>
-<section id="aii-link-g-on-dan-tepat-satu-link-lain-on" class="level4" data-number="2.3.2">
-<h4 data-number="2.3.2" class="anchored" data-anchor-id="aii-link-g-on-dan-tepat-satu-link-lain-on"><span class="header-section-number">2.3.2</span> (a)(ii) Link (g) ON dan tepat satu link lain ON</h4>
+<section id="aii-link-g-on-dan-tepat-satu-link-lain-on" class="level4">
+<h4 class="anchored" data-anchor-id="aii-link-g-on-dan-tepat-satu-link-lain-on">(a)(ii) Link <span class="math inline">\(g\)</span> ON dan tepat satu link lain ON</h4>
 <p>Ada dua cara menuliskannya, dan keduanya ekuivalen:</p>
-<p>[ P(g) = (0.6)<sup>2(0.4)</sup>6 ]</p>
+<p><span class="math display">\[
+P(g\text{ ON dan tepat 1 link lain ON})
+=
+\binom{7}{1}(0.6)^2(0.4)^6
+\]</span></p>
 <p>atau</p>
-<p>[ P(g)P() = 0.6(0.6)<sup>1(0.4)</sup>6 ]</p>
+<p><span class="math display">\[
+P(g\text{ ON})\cdot P(\text{tepat 1 dari 7 link lain ON})
+=
+0.6\cdot \binom{7}{1}(0.6)^1(0.4)^6
+\]</span></p>
 <p>Keduanya memberi hasil yang sama:</p>
-<p>[ 7(0.6)<sup>2(0.4)</sup>6 = 0.01032192 ]</p>
+<p><span class="math display">\[
+7(0.6)^2(0.4)^6
+=
+0.01032192
+\]</span></p>
 <p><strong>Jawaban:</strong></p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{P(g\text{ ON dan tepat 1 link lain ON}) \approx 0.01032}
+\]</span></p>
 </section>
-<section id="b-diketahui-tepat-6-link-off" class="level4" data-number="2.3.3">
-<h4 data-number="2.3.3" class="anchored" data-anchor-id="b-diketahui-tepat-6-link-off"><span class="header-section-number">2.3.3</span> (b) Diketahui tepat 6 link OFF</h4>
+<section id="b-diketahui-tepat-6-link-off" class="level4">
+<h4 class="anchored" data-anchor-id="b-diketahui-tepat-6-link-off">(b) Diketahui tepat 6 link OFF</h4>
 <p>Berarti tepat 2 link ON. Semua pasangan 2-link-ON dianggap sama mungkin.</p>
 <p>Total pasangan link ON:</p>
-<p>[ =28 ]</p>
-<p>Dari topologi, agar (A) dapat berkomunikasi dengan (B) ketika hanya ada 2 link ON, pasangan ON yang efektif adalah dua jalur dua-link langsung: - ({b,g}) - ({c,h})</p>
+<p><span class="math display">\[
+\binom{8}{2}=28
+\]</span></p>
+<p>Dari topologi, agar <span class="math inline">\(A\)</span> dapat berkomunikasi dengan <span class="math inline">\(B\)</span> ketika hanya ada 2 link ON, pasangan ON yang efektif adalah dua jalur dua-link langsung: - <span class="math inline">\(\{b,g\}\)</span> - <span class="math inline">\(\{c,h\}\)</span></p>
 <p>Jadi banyak pasangan yang menguntungkan ada 2.</p>
-<p>[ P(AB ) = = ]</p>
+<p><span class="math display">\[
+P(A\leftrightarrow B \mid \text{tepat 6 OFF})
+=
+\frac{2}{28}=\frac{1}{14}
+\]</span></p>
 <p><strong>Jawaban:</strong></p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{\frac{1}{14}\approx 0.0714}
+\]</span></p>
 </section>
 </section>
-<section id="ringkasan-jawaban-soal-1" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="ringkasan-jawaban-soal-1"><span class="header-section-number">2.4</span> Ringkasan jawaban Soal 1</h3>
-<p>[ ]</p>
+<section id="ringkasan-jawaban-soal-1" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-jawaban-soal-1">Ringkasan jawaban Soal 1</h3>
+<p><span class="math display">\[
+\boxed{(a)(i)=0.0413}
+\qquad
+\boxed{(a)(ii)=0.01032}
+\qquad
+\boxed{(b)=\frac{1}{14}\approx 0.0714}
+\]</span></p>
 <hr>
 </section>
 </section>
-<section id="soal-2-jaringan-3-client-dan-1-server" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="soal-2-jaringan-3-client-dan-1-server"><span class="header-section-number">3</span> Soal 2 — Jaringan 3 Client dan 1 Server</h2>
-<section id="topologi-hasil-ekstraksi-dan-gambar-ulang-1" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang-1"><span class="header-section-number">3.1</span> Topologi hasil ekstraksi dan gambar ulang</h3>
+<section id="soal-2-jaringan-3-client-dan-1-server" class="level2">
+<h2 class="anchored" data-anchor-id="soal-2-jaringan-3-client-dan-1-server">Soal 2 — Jaringan 3 Client dan 1 Server</h2>
+<section id="topologi-hasil-ekstraksi-dan-gambar-ulang-1" class="level3">
+<h3 class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang-1">Topologi hasil ekstraksi dan gambar ulang</h3>
 <p><img src="figures/topology_soal2.svg" class="img-fluid" style="width:88.0%" alt="Topologi router untuk 3 client dan 1 server"></p>
 </section>
-<section id="pernyataan-soal-1" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="pernyataan-soal-1"><span class="header-section-number">3.2</span> Pernyataan soal</h3>
+<section id="pernyataan-soal-1" class="level3">
+<h3 class="anchored" data-anchor-id="pernyataan-soal-1">Pernyataan soal</h3>
 <p>Setiap simbol <code>||</code> melambangkan sebuah router yang menghubungkan koneksi antara 3 client dan 1 server.<br>
 Satu-satunya hal yang memutus rute adalah router yang OFF.<br>
-Status router hanya ada dua: ({ON, OFF}).<br>
+Status router hanya ada dua: <span class="math inline">\(\{ON, OFF\}\)</span>.<br>
 Semua router independen dan:</p>
-<p>[ P(ON)=0.8 ]</p>
-<p>Dengan label router (A,B,C,D,E,F,G,H,I), tentukan:</p>
+<p><span class="math display">\[
+P(ON)=0.8
+\]</span></p>
+<p>Dengan label router <span class="math inline">\(A,B,C,D,E,F,G,H,I\)</span>, tentukan:</p>
 <ol type="1">
-<li>(P())</li>
-<li>(P())</li>
-<li>(P())</li>
-<li>Diketahui tepat 4 router OFF, sisanya ON. Berapa (P())?</li>
-<li>Diketahui tepat 3 router OFF, sisanya ON. Berapa (P())?</li>
+<li><span class="math inline">\(P(\text{Client 1 terhubung dengan Client 2})\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1, Client 2, dan Client 3 terhubung satu sama lain})\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1 terhubung dengan Client 3 dan keduanya terhubung dengan server})\)</span></li>
+<li>Diketahui tepat 4 router OFF, sisanya ON. Berapa <span class="math inline">\(P(\text{Client 1 terhubung dengan server})\)</span>?</li>
+<li>Diketahui tepat 3 router OFF, sisanya ON. Berapa <span class="math inline">\(P(\text{Client 1 terhubung dengan server})\)</span>?</li>
 </ol>
 </section>
-<section id="solusi-1" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="solusi-1"><span class="header-section-number">3.3</span> Solusi</h3>
-<section id="a-client-1-terhubung-dengan-client-2" class="level4" data-number="3.3.1">
-<h4 data-number="3.3.1" class="anchored" data-anchor-id="a-client-1-terhubung-dengan-client-2"><span class="header-section-number">3.3.1</span> (a) Client 1 terhubung dengan Client 2</h4>
+<section id="solusi-1" class="level3">
+<h3 class="anchored" data-anchor-id="solusi-1">Solusi</h3>
+<section id="a-client-1-terhubung-dengan-client-2" class="level4">
+<h4 class="anchored" data-anchor-id="a-client-1-terhubung-dengan-client-2">(a) Client 1 terhubung dengan Client 2</h4>
 <p>Agar Client 1 terhubung dengan Client 2, cukup:</p>
 <ul>
-<li>(A) ON</li>
-<li>(B) ON</li>
+<li><span class="math inline">\(A\)</span> ON</li>
+<li><span class="math inline">\(B\)</span> ON</li>
 </ul>
 <p>Maka:</p>
-<p>[ P = 0.8^2 = 0.64 ]</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+P = 0.8^2 = 0.64
+\]</span></p>
+<p><span class="math display">\[
+\boxed{0.64}
+\]</span></p>
 </section>
-<section id="b-client-1-client-2-dan-client-3-saling-terhubung" class="level4" data-number="3.3.2">
-<h4 data-number="3.3.2" class="anchored" data-anchor-id="b-client-1-client-2-dan-client-3-saling-terhubung"><span class="header-section-number">3.3.2</span> (b) Client 1, Client 2, dan Client 3 saling terhubung</h4>
+<section id="b-client-1-client-2-dan-client-3-saling-terhubung" class="level4">
+<h4 class="anchored" data-anchor-id="b-client-1-client-2-dan-client-3-saling-terhubung">(b) Client 1, Client 2, dan Client 3 saling terhubung</h4>
 <p>Agar ketiganya saling terhubung:</p>
 <ul>
-<li>(A) ON</li>
-<li>(B) ON</li>
-<li>(C) ON</li>
-<li>(D) ON</li>
+<li><span class="math inline">\(A\)</span> ON</li>
+<li><span class="math inline">\(B\)</span> ON</li>
+<li><span class="math inline">\(C\)</span> ON</li>
+<li><span class="math inline">\(D\)</span> ON</li>
 </ul>
 <p>Maka:</p>
-<p>[ P = 0.8^4 = 0.4096 ]</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+P = 0.8^4 = 0.4096
+\]</span></p>
+<p><span class="math display">\[
+\boxed{0.4096}
+\]</span></p>
 </section>
-<section id="c-client-1-terhubung-dengan-client-3-dan-keduanya-terhubung-dengan-server" class="level4" data-number="3.3.3">
-<h4 data-number="3.3.3" class="anchored" data-anchor-id="c-client-1-terhubung-dengan-client-3-dan-keduanya-terhubung-dengan-server"><span class="header-section-number">3.3.3</span> (c) Client 1 terhubung dengan Client 3 dan keduanya terhubung dengan server</h4>
+<section id="c-client-1-terhubung-dengan-client-3-dan-keduanya-terhubung-dengan-server" class="level4">
+<h4 class="anchored" data-anchor-id="c-client-1-terhubung-dengan-client-3-dan-keduanya-terhubung-dengan-server">(c) Client 1 terhubung dengan Client 3 dan keduanya terhubung dengan server</h4>
 <p>Syaratnya:</p>
 <ul>
-<li>(A,C,D,I) ON</li>
-<li>minimal satu dari (E,F,G,H) ON</li>
+<li><span class="math inline">\(A,C,D,I\)</span> ON</li>
+<li>minimal satu dari <span class="math inline">\(E,F,G,H\)</span> ON</li>
 </ul>
 <p>Maka:</p>
-<p>[ P = 0.8<sup>4(1-0.2</sup>4) ]</p>
-<p>[ =0.4096(0.9984)=0.40894464 ]</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+P = 0.8^4\left(1-0.2^4\right)
+\]</span></p>
+<p><span class="math display">\[
+=0.4096(0.9984)=0.40894464
+\]</span></p>
+<p><span class="math display">\[
+\boxed{0.40894464}
+\]</span></p>
 </section>
-<section id="d-tepat-4-router-off" class="level4" data-number="3.3.4">
-<h4 data-number="3.3.4" class="anchored" data-anchor-id="d-tepat-4-router-off"><span class="header-section-number">3.3.4</span> (d) Tepat 4 router OFF</h4>
+<section id="d-tepat-4-router-off" class="level4">
+<h4 class="anchored" data-anchor-id="d-tepat-4-router-off">(d) Tepat 4 router OFF</h4>
 <p>Berarti tepat 5 router ON.<br>
 Kita hitung secara kombinatorial bersyarat.</p>
 <p>Total konfigurasi 5 router ON:</p>
-<p>[ =126 ]</p>
+<p><span class="math display">\[
+\binom{9}{5}=126
+\]</span></p>
 <p>Agar Client 1 terhubung ke server, router yang wajib ON:</p>
 <ul>
-<li>(A,C,I)</li>
-<li>minimal satu dari ({E,F,G,H})</li>
+<li><span class="math inline">\(A,C,I\)</span></li>
+<li>minimal satu dari <span class="math inline">\(\{E,F,G,H\}\)</span></li>
 </ul>
-<p>Karena (A,C,I) wajib ON, kita memilih 2 router tambahan dari ({B,D,E,F,G,H}), tetapi tidak boleh hanya ({B,D}).</p>
-<p>[ =15 ]</p>
-<p>Konfigurasi gagal hanya 1, yaitu ({B,D}).<br>
+<p>Karena <span class="math inline">\(A,C,I\)</span> wajib ON, kita memilih 2 router tambahan dari <span class="math inline">\(\{B,D,E,F,G,H\}\)</span>, tetapi tidak boleh hanya <span class="math inline">\(\{B,D\}\)</span>.</p>
+<p><span class="math display">\[
+\binom{6}{2}=15
+\]</span></p>
+<p>Konfigurasi gagal hanya 1, yaitu <span class="math inline">\(\{B,D\}\)</span>.<br>
 Jadi konfigurasi menguntungkan:</p>
-<p>[ 15-1=14 ]</p>
+<p><span class="math display">\[
+15-1=14
+\]</span></p>
 <p>Maka:</p>
-<p>[ P== ]</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+P=\frac{14}{126}=\frac{1}{9}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\frac{1}{9}\approx 0.1111}
+\]</span></p>
 </section>
-<section id="e-tepat-3-router-off" class="level4" data-number="3.3.5">
-<h4 data-number="3.3.5" class="anchored" data-anchor-id="e-tepat-3-router-off"><span class="header-section-number">3.3.5</span> (e) Tepat 3 router OFF</h4>
+<section id="e-tepat-3-router-off" class="level4">
+<h4 class="anchored" data-anchor-id="e-tepat-3-router-off">(e) Tepat 3 router OFF</h4>
 <p>Berarti tepat 6 router ON.</p>
 <p>Total konfigurasi:</p>
-<p>[ =84 ]</p>
-<p>Tetap perlu (A,C,I) ON dan minimal satu dari ({E,F,G,H}) ON.<br>
-Sekarang kita memilih 3 router tambahan dari ({B,D,E,F,G,H}).</p>
-<p>[ =20 ]</p>
-<p>Tidak mungkin semua 3 dipilih hanya dari ({B,D}), jadi semua 20 pilihan valid.</p>
-<p>[ P== ]</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\binom{9}{6}=84
+\]</span></p>
+<p>Tetap perlu <span class="math inline">\(A,C,I\)</span> ON dan minimal satu dari <span class="math inline">\(\{E,F,G,H\}\)</span> ON.<br>
+Sekarang kita memilih 3 router tambahan dari <span class="math inline">\(\{B,D,E,F,G,H\}\)</span>.</p>
+<p><span class="math display">\[
+\binom{6}{3}=20
+\]</span></p>
+<p>Tidak mungkin semua 3 dipilih hanya dari <span class="math inline">\(\{B,D\}\)</span>, jadi semua 20 pilihan valid.</p>
+<p><span class="math display">\[
+P=\frac{20}{84}=\frac{5}{21}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\frac{5}{21}\approx 0.2381}
+\]</span></p>
 </section>
 </section>
-<section id="ringkasan-jawaban-soal-2" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="ringkasan-jawaban-soal-2"><span class="header-section-number">3.4</span> Ringkasan jawaban Soal 2</h3>
-<p>[ ]</p>
-<p>[ ]</p>
+<section id="ringkasan-jawaban-soal-2" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-jawaban-soal-2">Ringkasan jawaban Soal 2</h3>
+<p><span class="math display">\[
+\boxed{a=0.64}
+\qquad
+\boxed{b=0.4096}
+\qquad
+\boxed{c=0.40894464}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{d=\frac{1}{9}\approx 0.1111}
+\qquad
+\boxed{e=\frac{5}{21}\approx 0.2381}
+\]</span></p>
 <hr>
 </section>
 </section>
-<section id="soal-3-uts-2022-soal-5-sistem-komunikasi" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="soal-3-uts-2022-soal-5-sistem-komunikasi"><span class="header-section-number">4</span> Soal 3 — UTS 2022 Soal 5 Sistem Komunikasi</h2>
-<section id="topologi-hasil-ekstraksi-dan-gambar-ulang-2" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang-2"><span class="header-section-number">4.1</span> Topologi hasil ekstraksi dan gambar ulang</h3>
+<section id="soal-3-uts-2022-soal-5-sistem-komunikasi" class="level2">
+<h2 class="anchored" data-anchor-id="soal-3-uts-2022-soal-5-sistem-komunikasi">Soal 3 — UTS 2022 Soal 5 Sistem Komunikasi</h2>
+<section id="topologi-hasil-ekstraksi-dan-gambar-ulang-2" class="level3">
+<h3 class="anchored" data-anchor-id="topologi-hasil-ekstraksi-dan-gambar-ulang-2">Topologi hasil ekstraksi dan gambar ulang</h3>
 <p><img src="figures/topology_soal3.svg" class="img-fluid" style="width:82.0%" alt="Topologi link komunikasi UTS 2022"></p>
 </section>
-<section id="pernyataan-soal-2" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="pernyataan-soal-2"><span class="header-section-number">4.2</span> Pernyataan soal</h3>
+<section id="pernyataan-soal-2" class="level3">
+<h3 class="anchored" data-anchor-id="pernyataan-soal-2">Pernyataan soal</h3>
 <p>Setiap elemen <code>||</code> melambangkan sebuah link komunikasi.<br>
 Failure antar-link saling independen.<br>
 Peluang sebuah link bekerja baik adalah:</p>
-<p>[ p = 0.9_3 = 0.9 + 0.01_3 ]</p>
+<p><span class="math display">\[
+p = 0.9\delta_3 = 0.9 + 0.01\delta_3
+\]</span></p>
 <p>Dengan 3 digit terakhir NIM mahasiswa = <strong>1, 2, 3</strong>, maka:</p>
-<p>[ _1=1,_2=2,_3=3 ]</p>
+<p><span class="math display">\[
+\delta_1=1,\quad \delta_2=2,\quad \delta_3=3
+\]</span></p>
 <p>sehingga:</p>
-<p>[ p=0.9+0.01(3)=0.93 ]</p>
+<p><span class="math display">\[
+p=0.9+0.01(3)=0.93
+\]</span></p>
 <p>Soal:</p>
 <ol type="1">
-<li>Diketahui tepat 7 link tidak bekerja (4 link ON), probabilitas (D) dapat berkomunikasi dengan (J).</li>
-<li>Diketahui tepat 8 link tidak bekerja (3 link ON), probabilitas (D) dapat berkomunikasi dengan (J).</li>
-<li>Diketahui link (i,v,vii,ix,x) pasti tidak bekerja, probabilitas (I) dapat berkomunikasi dengan (J).</li>
-<li>Diketahui link (ii,iv,vi,viii,x,xi) pasti tidak bekerja, probabilitas (B) dapat berkomunikasi dengan (G).</li>
+<li>Diketahui tepat 7 link tidak bekerja (4 link ON), probabilitas <span class="math inline">\(D\)</span> dapat berkomunikasi dengan <span class="math inline">\(J\)</span>.</li>
+<li>Diketahui tepat 8 link tidak bekerja (3 link ON), probabilitas <span class="math inline">\(D\)</span> dapat berkomunikasi dengan <span class="math inline">\(J\)</span>.</li>
+<li>Diketahui link <span class="math inline">\(i,v,vii,ix,x\)</span> pasti tidak bekerja, probabilitas <span class="math inline">\(I\)</span> dapat berkomunikasi dengan <span class="math inline">\(J\)</span>.</li>
+<li>Diketahui link <span class="math inline">\(ii,iv,vi,viii,x,xi\)</span> pasti tidak bekerja, probabilitas <span class="math inline">\(B\)</span> dapat berkomunikasi dengan <span class="math inline">\(G\)</span>.</li>
 </ol>
 </section>
-<section id="solusi-dan-jawaban-akhir" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="solusi-dan-jawaban-akhir"><span class="header-section-number">4.3</span> Solusi dan jawaban akhir</h3>
-<section id="a-tepat-7-link-off" class="level4" data-number="4.3.1">
-<h4 data-number="4.3.1" class="anchored" data-anchor-id="a-tepat-7-link-off"><span class="header-section-number">4.3.1</span> (a) Tepat 7 link OFF</h4>
+<section id="solusi-dan-jawaban-akhir" class="level3">
+<h3 class="anchored" data-anchor-id="solusi-dan-jawaban-akhir">Solusi dan jawaban akhir</h3>
+<section id="a-tepat-7-link-off" class="level4">
+<h4 class="anchored" data-anchor-id="a-tepat-7-link-off">(a) Tepat 7 link OFF</h4>
 <p>Dengan pendekatan kombinatorial pada 11 link, diperoleh:</p>
 <ul>
 <li>total konfigurasi 4-link-ON:</li>
 </ul>
-<p>[ =330 ]</p>
+<p><span class="math display">\[
+\binom{11}{4}=330
+\]</span></p>
 <ul>
-<li>konfigurasi yang membuat (D) terhubung ke (J): 31</li>
+<li>konfigurasi yang membuat <span class="math inline">\(D\)</span> terhubung ke <span class="math inline">\(J\)</span>: 31</li>
 </ul>
 <p>Maka:</p>
-<p>[ P(DJ ) = = 0.093939 ]</p>
+<p><span class="math display">\[
+P(D\leftrightarrow J \mid \text{tepat 4 ON})
+=
+\frac{31}{330}
+=
+0.093939\ldots
+\]</span></p>
 <p>Dibulatkan 3 angka di belakang desimal:</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{0.094}
+\]</span></p>
 </section>
-<section id="b-tepat-8-link-off" class="level4" data-number="4.3.2">
-<h4 data-number="4.3.2" class="anchored" data-anchor-id="b-tepat-8-link-off"><span class="header-section-number">4.3.2</span> (b) Tepat 8 link OFF</h4>
+<section id="b-tepat-8-link-off" class="level4">
+<h4 class="anchored" data-anchor-id="b-tepat-8-link-off">(b) Tepat 8 link OFF</h4>
 <ul>
 <li>total konfigurasi 3-link-ON:</li>
 </ul>
-<p>[ =165 ]</p>
+<p><span class="math display">\[
+\binom{11}{3}=165
+\]</span></p>
 <ul>
-<li>konfigurasi yang membuat (D) terhubung ke (J): 3</li>
+<li>konfigurasi yang membuat <span class="math inline">\(D\)</span> terhubung ke <span class="math inline">\(J\)</span>: 3</li>
 </ul>
 <p>Maka:</p>
-<p>[ P(DJ ) = = = 0.0181818 ]</p>
+<p><span class="math display">\[
+P(D\leftrightarrow J \mid \text{tepat 3 ON})
+=
+\frac{3}{165}
+=
+\frac{1}{55}
+=
+0.0181818\ldots
+\]</span></p>
 <p>Dibulatkan 3 angka di belakang desimal:</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{0.018}
+\]</span></p>
 </section>
-<section id="c-link-ivviiixx-pasti-off" class="level4" data-number="4.3.3">
-<h4 data-number="4.3.3" class="anchored" data-anchor-id="c-link-ivviiixx-pasti-off"><span class="header-section-number">4.3.3</span> (c) Link (i,v,vii,ix,x) pasti OFF</h4>
-<p>Dari hasil diskusi thread, peluang (I) terhubung ke (J) ditulis:</p>
-<p>[ P = p + (1-p),p,(p+p<sup>3-p</sup>4) ]</p>
-<p>Dengan (p=0.93):</p>
-<p>[ P = 0.93 + 0.07 (0.93+0.93<sup>3-0.93</sup>4) =0.994208454849 ]</p>
+<section id="c-link-ivviiixx-pasti-off" class="level4">
+<h4 class="anchored" data-anchor-id="c-link-ivviiixx-pasti-off">(c) Link <span class="math inline">\(i,v,vii,ix,x\)</span> pasti OFF</h4>
+<p>Dari hasil diskusi thread, peluang <span class="math inline">\(I\)</span> terhubung ke <span class="math inline">\(J\)</span> ditulis:</p>
+<p><span class="math display">\[
+P = p + (1-p)\,p\,(p+p^3-p^4)
+\]</span></p>
+<p>Dengan <span class="math inline">\(p=0.93\)</span>:</p>
+<p><span class="math display">\[
+P = 0.93 + 0.07 \cdot 0.93 \cdot (0.93+0.93^3-0.93^4)
+=0.994208454849
+\]</span></p>
 <p>Dibulatkan 4 angka di belakang desimal:</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{0.9942}
+\]</span></p>
 </section>
-<section id="d-link-iiivviviiixxi-pasti-off" class="level4" data-number="4.3.4">
-<h4 data-number="4.3.4" class="anchored" data-anchor-id="d-link-iiivviviiixxi-pasti-off"><span class="header-section-number">4.3.4</span> (d) Link (ii,iv,vi,viii,x,xi) pasti OFF</h4>
-<p>Dari hasil diskusi thread, peluang (B) terhubung ke (G) adalah:</p>
-<p>[ P=(1-p)(2p<sup>2-p</sup>4)+p(2p-p<sup>2)</sup>2 ]</p>
-<p>Dengan (p=0.93):</p>
-<p>[ P=(0.07)(2<sup>2-0.93</sup>4)+0.93(2-0.93<sup>2)</sup>2 =0.9896306886 ]</p>
+<section id="d-link-iiivviviiixxi-pasti-off" class="level4">
+<h4 class="anchored" data-anchor-id="d-link-iiivviviiixxi-pasti-off">(d) Link <span class="math inline">\(ii,iv,vi,viii,x,xi\)</span> pasti OFF</h4>
+<p>Dari hasil diskusi thread, peluang <span class="math inline">\(B\)</span> terhubung ke <span class="math inline">\(G\)</span> adalah:</p>
+<p><span class="math display">\[
+P=(1-p)(2p^2-p^4)+p(2p-p^2)^2
+\]</span></p>
+<p>Dengan <span class="math inline">\(p=0.93\)</span>:</p>
+<p><span class="math display">\[
+P=(0.07)(2\cdot0.93^2-0.93^4)+0.93(2\cdot0.93-0.93^2)^2
+=0.9896306886
+\]</span></p>
 <p>Dibulatkan 4 angka di belakang desimal:</p>
-<p>[ ]</p>
+<p><span class="math display">\[
+\boxed{0.9896}
+\]</span></p>
 </section>
 </section>
-<section id="ringkasan-jawaban-soal-3" class="level3" data-number="4.4">
-<h3 data-number="4.4" class="anchored" data-anchor-id="ringkasan-jawaban-soal-3"><span class="header-section-number">4.4</span> Ringkasan jawaban Soal 3</h3>
-<p>[ ]</p>
+<section id="ringkasan-jawaban-soal-3" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-jawaban-soal-3">Ringkasan jawaban Soal 3</h3>
+<p><span class="math display">\[
+\boxed{a=0.094}
+\qquad
+\boxed{b=0.018}
+\qquad
+\boxed{c=0.9942}
+\qquad
+\boxed{d=0.9896}
+\]</span></p>
 <hr>
 </section>
 </section>
-<section id="ringkasan-seluruh-hasil" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="ringkasan-seluruh-hasil"><span class="header-section-number">5</span> Ringkasan seluruh hasil</h2>
-<section id="soal-1" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="soal-1"><span class="header-section-number">5.1</span> Soal 1</h3>
+<section id="ringkasan-seluruh-hasil" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-seluruh-hasil">Ringkasan seluruh hasil</h2>
+<section id="soal-1" class="level3">
+<h3 class="anchored" data-anchor-id="soal-1">Soal 1</h3>
 <ul>
-<li>(P() = )</li>
-<li>(P(g ) = )</li>
-<li>(P(AB ) = )</li>
+<li><span class="math inline">\(P(\text{tepat 2 link baik}) = \boxed{0.0413}\)</span></li>
+<li><span class="math inline">\(P(g \text{ ON dan tepat 1 link lain ON}) = \boxed{0.01032}\)</span></li>
+<li><span class="math inline">\(P(A\leftrightarrow B \mid \text{tepat 6 OFF}) = \boxed{\frac{1}{14}\approx 0.0714}\)</span></li>
 </ul>
 </section>
-<section id="soal-2" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="soal-2"><span class="header-section-number">5.2</span> Soal 2</h3>
+<section id="soal-2" class="level3">
+<h3 class="anchored" data-anchor-id="soal-2">Soal 2</h3>
 <ul>
-<li>(P() = )</li>
-<li>(P() = )</li>
-<li>(P() = )</li>
-<li>(P( ) = )</li>
-<li>(P( ) = )</li>
+<li><span class="math inline">\(P(\text{Client 1 terhubung Client 2}) = \boxed{0.64}\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1,2,3 saling terhubung}) = \boxed{0.4096}\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1 dan Client 3 terhubung ke server}) = \boxed{0.40894464}\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1 ke server} \mid 4\text{ OFF}) = \boxed{\frac{1}{9}\approx 0.1111}\)</span></li>
+<li><span class="math inline">\(P(\text{Client 1 ke server} \mid 3\text{ OFF}) = \boxed{\frac{5}{21}\approx 0.2381}\)</span></li>
 </ul>
 </section>
-<section id="soal-3" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="soal-3"><span class="header-section-number">5.3</span> Soal 3</h3>
+<section id="soal-3" class="level3">
+<h3 class="anchored" data-anchor-id="soal-3">Soal 3</h3>
 <ul>
-<li>()</li>
-<li>()</li>
-<li>()</li>
-<li>()</li>
+<li><span class="math inline">\(\boxed{0.094}\)</span></li>
+<li><span class="math inline">\(\boxed{0.018}\)</span></li>
+<li><span class="math inline">\(\boxed{0.9942}\)</span></li>
+<li><span class="math inline">\(\boxed{0.9896}\)</span></li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="berkas-pendukung" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="berkas-pendukung"><span class="header-section-number">6</span> Berkas pendukung</h2>
+<section id="berkas-pendukung" class="level2">
+<h2 class="anchored" data-anchor-id="berkas-pendukung">Berkas pendukung</h2>
 <ul>
 <li><code>figures/topology_soal1.svg</code></li>
 <li><code>figures/topology_soal2.svg</code></li>

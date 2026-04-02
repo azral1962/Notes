@@ -1,14 +1,6 @@
-
 ---
 title: "Lembar Jawaban: Persiapan UTS Probabilitas dan Statistika 2021"
-format: 
-  pdf:
-    toc: false
-    number-sections: false
-    colorlinks: true
-  html:
-    theme: cosmo
-    mathjax: true
+
 ---
 
 **Nama Dosen:** Dimitri Mahayana (Asumsi)  

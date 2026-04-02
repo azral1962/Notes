@@ -87,13 +87,26 @@ e. Variansi dari jumlah paket yang ditransmisikan dalam kondisi error pada pengi
 ### **Soal 5: Sistem Komunikasi**
 Sebuah topologi router menghubungkan koneksi antara 3 client dan 1 server. Satu-satunya hal yang bisa memutus rute koneksi adalah router yang OFF. Status router independen satu sama lain dengan probabilitas P(ON) untuk setiap router adalah **0,83**. 
 
-*(Asumsikan diagram topologi memiliki node A & B yang menghubungkan Klien 1 dan 2, lalu terhubung paralel melalui matriks router sentral)*. Hitunglah:
-a. Probabilitas Client 1 terhubung dengan Client 2 adalah… 
-b. Probabilitas Client 1, Client 2 dan Client 3 terhubung satu sama lain adalah… 
-c. Probabilitas Client 1 terhubung dengan Client 3 dan kedua client ini terhubung dengan server adalah… 
-d. Jika dipastikan 4 router ada dalam kondisi OFF dan sisanya ON, probabilitas Client 1 terhubung dengan server adalah… 
-e. Jika dipastikan 3 router ada dalam kondisi OFF dan sisanya ON, probabilitas Client 1 terhubung dengan server adalah…
 
+![](figures/topology_soal2.svg){fig-alt="Topologi router untuk 3 client dan 1 server" width=88%}
+
+
+Setiap simbol `||` melambangkan sebuah router yang menghubungkan koneksi antara 3 client dan 1 server.  
+Satu-satunya hal yang memutus rute adalah router yang OFF.  
+Status router hanya ada dua: $\{ON, OFF\}$.  
+Semua router independen dan:
+
+$$
+P(ON)=0.83
+$$
+
+Dengan label router $A,B,C,D,E,F,G,H,I$, tentukan:
+
+1. $P(\text{Client 1 terhubung dengan Client 2})$
+2. $P(\text{Client 1, Client 2, dan Client 3 terhubung satu sama lain})$
+3. $P(\text{Client 1 terhubung dengan Client 3 dan keduanya terhubung dengan server})$
+4. Diketahui tepat 4 router OFF, sisanya ON. Berapa $P(\text{Client 1 terhubung dengan server})$?
+5. Diketahui tepat 3 router OFF, sisanya ON. Berapa $P(\text{Client 1 terhubung dengan server})$?
 ---
 
 ### **Soal 6: Tender Pengadaan Server**
@@ -174,9 +187,72 @@ Diketahui $p = 0.83$.
 **b.** Rute ketiga klien terhubung secara simultan (A, B, C, D). $P = p^4 =$ **0.4746**
 **c.** Rute klien 1 & 3 ke server membutuhkan A, C, D, I (4 router pilar) dan setidaknya 1 dari router by-pass paralel (E, F, G, H).
    $P = P(A,C,D,I) \times [1 - P(\text{semua E,F,G,H OFF})] = p^4 \times (1 - (1-p)^4) = 0.4746 \times (1 - 0.17^4) =$ **0.4742**
-**d.** Probabilitas jika tepat 4 router OFF. Terdapat 14 kombinasi *favorable* dari total 126 kombinasi permutasi:
-   $P = \frac{14}{126} = \frac{1}{9} =$ **0.1111**
-**e.** Jika hanya 3 router OFF, semua rute memiliki cadangan yang cukup untuk mencapai server (*fully favorable*). $P =$ **1**
+
+
+
+**d.** Probabilitas jika tepat 4 router OFF. Berarti tepat 5 router ON.  
+Kita hitung secara kombinatorial bersyarat.
+
+Total konfigurasi 5 router ON:
+
+$$
+\binom{9}{5}=126
+$$
+
+Agar Client 1 terhubung ke server, router yang wajib ON:
+
+- $A,C,I$
+- minimal satu dari $\{E,F,G,H\}$
+
+Karena $A,C,I$ wajib ON, kita memilih 2 router tambahan dari $\{B,D,E,F,G,H\}$, tetapi tidak boleh hanya $\{B,D\}$.
+
+$$
+\binom{6}{2}=15
+$$
+
+Konfigurasi gagal hanya 1, yaitu $\{B,D\}$.  
+Jadi konfigurasi menguntungkan:
+
+$$
+15-1=14
+$$
+
+Maka:
+
+$$
+P=\frac{14}{126}=\frac{1}{9}
+$$
+
+$$
+\boxed{\frac{1}{9}\approx 0.1111}
+$$
+
+**e.** Jika hanya 3 router OFF, semua rute memiliki cadangan yang cukup untuk mencapai server (*fully favorable*)
+
+Berarti tepat 6 router ON.
+
+Total konfigurasi:
+
+$$
+\binom{9}{6}=84
+$$
+
+Tetap perlu $A,C,I$ ON dan minimal satu dari $\{E,F,G,H\}$ ON.  
+Sekarang kita memilih 3 router tambahan dari $\{B,D,E,F,G,H\}$.
+
+$$
+\binom{6}{3}=20
+$$
+
+Tidak mungkin semua 3 dipilih hanya dari $\{B,D\}$, jadi semua 20 pilihan valid.
+
+$$
+P=\frac{20}{84}=\frac{5}{21}
+$$
+
+$$
+\boxed{\frac{5}{21}\approx 0.2381}
+$$
 
 ---
 

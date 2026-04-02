@@ -1,15 +1,7 @@
-
 ---
 title: "Ujian Tengah Semester Probabilitas dan Statistika 2022/2023"
 subtitle: "Lembar Soal dan Solusi (Asumsi 3 Digit Terakhir NIM: 123)"
-format: 
-  pdf:
-    toc: true
-    number-sections: false
-    colorlinks: true
-  html:
-    theme: cosmo
-    mathjax: true
+
 ---
 
 # LEMBAR SOAL
