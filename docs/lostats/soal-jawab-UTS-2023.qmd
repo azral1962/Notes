@@ -4,20 +4,6 @@ subtitle: "Lembar Soal dan Jawaban Lengkap (Asumsi NIM: ...123)"
 
 ---
 
-# LEMBAR SOAL
-
-**Peraturan:**
-1. Waktu untuk mengerjakan ujian adalah 100 menit.
-2. Sifat ujian adalah *open book, open notes and tools* (python, excel, R, calculator, dll).
-3. Diperkenankan menggunakan lebih dari 1 device dalam mengerjakan ujian.
-4. Dilarang membuka aplikasi yang dapat digunakan untuk komunikasi (whatsapp, line, gmail dll.) selama ujian.
-5. Dilarang menggunakan ChatGPT.
-6. Dilarang berkomunikasi kepada sesama peserta kelas maupun kepada orang lain.
-7. Dilarang bekerja sama dengan orang lain.
-
-*Tuliskan jawaban Anda berupa bilangan real dengan menggunakan titik "." sebagai separator desimal. Bulatkan semua jawaban Anda menjadi bilangan real dengan maksimum 4 angka di belakang separator desimal.*
-
----
 
 ### **Soal 1: Loan Application Process Funnel**
 Suatu Bank swasta memiliki produk pinjaman berupa *cash loan*. Proses pengajuan pinjaman untuk produk ini berupa *funnel*. Secara berurutan prosesnya adalah: (1) pengajuan pinjaman (aplikasi), (2) lolos screening OJK, (3) melengkapi data diri, (4) lolos credit score, (5) finalisasi pinjaman. Semua tahap pada proses ini harus dilalui secara berurutan oleh calon peminjam. 
@@ -30,32 +16,57 @@ Jumlah aplikasi calon peminjam yang sampai di setiap tahap adalah sebagai beriku
 *   Finalisasi pinjaman: **51.000**
 
 Calon peminjam didefinisikan sebagai orang yang sudah melakukan pengajuan pinjaman. Dengan menggunakan konsep probabilitas bersyarat, hitung probabilitas berikut:
-a. Probabilitas calon peminjam melengkapi data diri adalah…
-b. Probabilitas calon peminjam tidak melengkapi data diri adalah… 
-c. Probabilitas calon peminjam tidak lolos credit score adalah… 
-d. Probabilitas calon peminjam melakukan finalisasi pinjaman adalah…
-e. Probabilitas calon peminjam tidak melakukan finalisasi pinjaman adalah…
+1. Probabilitas calon peminjam melengkapi data diri adalah…
+2. Probabilitas calon peminjam tidak melengkapi data diri adalah… 
+3. Probabilitas calon peminjam tidak lolos credit score adalah… 
+4. Probabilitas calon peminjam melakukan finalisasi pinjaman adalah…
+5. Probabilitas calon peminjam tidak melakukan finalisasi pinjaman adalah…
+
+
+### **Solusi Soal 1: Loan Application Process Funnel**
+Berdasarkan data tahapan aplikasi (APP = 1.100.000, SCR = 210.000, BIO = 151.000, CS = 101.000, FIN = 51.000):
+1. P(BIO) = $\frac{\text{Jumlah BIO}}{\text{Jumlah APP}} = \frac{151.000}{1.100.000} =$ **0.1373**
+2. P(tidak BIO) = $1 - \text{P(BIO)} = 1 - 0.13727 =$ **0.8627**
+3. P(tidak lolos CS) = $1 - \frac{\text{Jumlah CS}}{\text{Jumlah APP}} = 1 - \frac{101.000}{1.100.000} = 1 - 0.09181 =$ **0.9082**
+4. P(FIN) = $\frac{\text{Jumlah FIN}}{\text{Jumlah APP}} = \frac{51.000}{1.100.000} =$ **0.0464**
+5. P(tidak FIN) = $1 - \text{P(FIN)} = 1 - 0.04636 =$ **0.9536**
 
 ---
 
 ### **Soal 2: Credit Scoring Model Performance**
-Model *credit scoring* yang dipakai oleh Bank Swasta digunakan untuk memprediksi tiap aplikasi pinjaman dengan label ‘tidak gagal bayar’ (non-default) atau ‘gagal bayar’ (default). Model dievaluasi dengan menggunakan 100 ribu sampel aplikasi pinjaman. Label *default* dipakai sebagai label positif, dan *non-default* dipakai sebagai label negatif. 
+Model *credit scoring* yang dipakai oleh Bank Swasta digunakan untuk memprediksi tiap aplikasi pinjaman dengan label ‘tidak gagal bayar’ (non-default) atau ‘gagal bayar’ (default). Model dievaluasi dengan menggunakan 100 ribu sampel aplikasi pinjaman. Label *default* dipakai sebagai label positif, dan *non-default* dipakai sebagai label negatif.
 
 Diketahui probabilitas prediksi default (positive rate) adalah **0,3**. Diketahui pula bahwa performance untuk model ini adalah **0,42** untuk PPV (*Positive Predictive Value*) dan **0,92** untuk NPV (*Negative Predictive Value*).
 
 Hitung probabilitas berikut:
-a. Probabilitas PREDIKSI default (+) apabila dipastikan default (+) (TPR) adalah…
-b. Probabilitas PREDIKSI non-default (-) apabila dipastikan default (+) (FNR) adalah…
-c. Probabilitas PREDIKSI default (+) apabila dipastikan non-default (-) (FPR) adalah…
-d. Probabilitas PREDIKSI non-default (-) apabila dipastikan non-default (-) (TNR) adalah…
-e. Probabilitas default (+) apabila dipastikan PREDIKSI default (+) (PPV) adalah…
-f. Probabilitas non-default (-) apabila dipastikan PREDIKSI default (+) (FDR) adalah…
-g. Probabilitas default (+) apabila dipastikan PREDIKSI non-default (-) (FOR) adalah…
-h. Probabilitas non-default (-) apabila dipastikan PREDIKSI non-default (-) (NPV) adalah…
-i. Probabilitas default (prevalensi) dari populasi adalah…
-j. Akurasi dari model tersebut adalah…
-k. Terdapat 1000 aplikasi pinjaman baru yang independen. Probabilitas tidak ada aplikasi yang berujung default/gagal bayar pada 1000 aplikasi ini adalah…
-l. Nilai ekspektasi/mean dari jumlah aplikasi pinjaman yang berujung default/gagal bayar pada 1000 aplikasi tersebut adalah…
+1. Probabilitas PREDIKSI default (+) apabila dipastikan default (+) (TPR) adalah…
+2. Probabilitas PREDIKSI non-default (-) apabila dipastikan default (+) (FNR) adalah…
+3. Probabilitas PREDIKSI default (+) apabila dipastikan non-default (-) (FPR) adalah…
+4. Probabilitas PREDIKSI non-default (-) apabila dipastikan non-default (-) (TNR) adalah…
+5. Probabilitas default (+) apabila dipastikan PREDIKSI default (+) (PPV) adalah…
+6. Probabilitas non-default (-) apabila dipastikan PREDIKSI default (+) (FDR) adalah…
+7. Probabilitas default (+) apabila dipastikan PREDIKSI non-default (-) (FOR) adalah…
+8. Probabilitas non-default (-) apabila dipastikan PREDIKSI non-default (-) (NPV) adalah…
+9. Probabilitas default (prevalensi) dari populasi adalah…
+10. Akurasi dari model tersebut adalah…
+11. Terdapat 1000 aplikasi pinjaman baru yang independen. Probabilitas tidak ada aplikasi yang berujung default/gagal bayar pada 1000 aplikasi ini adalah…
+12. Nilai ekspektasi/mean dari jumlah aplikasi pinjaman yang berujung default/gagal bayar pada 1000 aplikasi tersebut adalah…
+
+
+### **Solusi Soal 2: Credit Scoring Model Performance**
+Diketahui: $P(E) = 0.3$, $P(E^c) = 0.7$, PPV $= 0.42$, NPV $= 0.92$.
+1. TPR (True Positive Rate) = $\frac{\text{PPV} \times P(E)}{\text{PPV} \times P(E) + (1-\text{NPV}) \times P(E^c)} = \frac{0.42 \times 0.3}{0.42 \times 0.3 + 0.08 \times 0.7} = \frac{0.126}{0.182} =$ **0.6923**
+2. FNR (False Negative Rate) = $1 - \text{TPR} = 1 - 0.6923 =$ **0.3077**
+3. FPR (False Positive Rate) = $\frac{(1-\text{PPV}) \times P(E)}{(1-\text{PPV}) \times P(E) + \text{NPV} \times P(E^c)} = \frac{0.58 \times 0.3}{0.58 \times 0.3 + 0.92 \times 0.7} = \frac{0.174}{0.818} =$ **0.2127**
+4. TNR (True Negative Rate) = $1 - \text{FPR} = 1 - 0.2127 =$ **0.7873**
+5. PPV = **0.42**
+6. FDR (False Discovery Rate) = $1 - \text{PPV} =$ **0.58**
+7. FOR (False Omission Rate) = $1 - \text{NPV} = 1 - 0.92 =$ **0.08**
+8. NPV = **0.92**
+9. Prevalensi $P(H) = \text{PPV} \times P(E) + (1-\text{NPV}) \times P(E^c) = 0.126 + 0.056 =$ **0.1820**
+10. Akurasi = $\text{TPR} \times P(H) + \text{TNR} \times P(H^c) = 0.6923(0.182) + 0.7873(0.818) =$ **0.77**
+11. P(0 default dari 1000) = $(1 - 0.182)^{1000} =$ **0** *(karena nilainya mendekati 0 atau sekitar $5.6 \times 10^{-88}$)*
+12. Ekspektasi $E(X) = n \times P(H) = 1000 \times 0.182 =$ **182**
 
 ---
 
@@ -66,21 +77,47 @@ Suatu rumah sakit sedang memilih 1 dari 3 brand mesin MRI: ABC, DEF dan XYZ.
 *   MRI brand XYZ memiliki umur yang terdistribusi Weibull dengan mean **21.300** jam dan parameter beta 1,4.
 
 Hitunglah:
-a. Probabilitas MRI brand ABC rusak antara 15.000 - 20.000 jam adalah…
-b. Probabilitas MRI brand DEF rusak antara 20.000 - 25.000 jam adalah…
-c. Probabilitas MRI brand XYZ rusak antara 20.000 - 22.000 jam adalah…
-d. Apabila rumah sakit memilih brand dengan pertimbangan: *‘dipilih Brand mesin MRI dengan probabilitas rusak sebelum 20.000 jam paling rendah’*, maka rumah sakit akan memilih brand… (jawab 1 apabila ABC, 2 apabila DEF, 3 apabila XYZ)
+1. Probabilitas MRI brand ABC rusak antara 15.000 - 20.000 jam adalah…
+2. Probabilitas MRI brand DEF rusak antara 20.000 - 25.000 jam adalah…
+3. Probabilitas MRI brand XYZ rusak antara 20.000 - 22.000 jam adalah…
+4. Apabila rumah sakit memilih brand dengan pertimbangan: *‘dipilih Brand mesin MRI dengan probabilitas rusak sebelum 20.000 jam paling rendah’*, maka rumah sakit akan memilih brand… (jawab 1 apabila ABC, 2 apabila DEF, 3 apabila XYZ)
+
+
+### **Solusi Soal 3: Umur Mesin MRI**
+1. ABC $\sim \text{Normal}(\mu=20300, \sigma=2000)$.
+   $P(15000 < X < 20000) = F(20000) - F(15000) =$ **0.4364**
+2. DEF $\sim \text{Eksponensial}(\beta=22300)$. 
+   $P(20000 < X < 25000) = e^{-20000/22300} - e^{-25000/22300} = 0.4077 - 0.3258 =$ **0.0819**
+3. XYZ $\sim \text{Weibull}(\mu=21300, \beta=1.4)$. 
+   Cari $\alpha$ terlebih dahulu: $\alpha = (\mu / \Gamma(1 + 1/\beta))^{-\beta} \approx 7.6538 \times 10^{-7}$.
+   $P(20000 < X < 22000) = F(22000) - F(20000) =$ **0.0485**
+4. Pilihan brand:
+   $F_{ABC}(20000) = 0.4404$
+   $F_{DEF}(20000) = 0.5922$
+   $F_{XYZ}(20000) = 0.5525$
+   Karena probabilitas kerusakan ABC paling kecil, maka dipilih brand AB3. Jawaban: **1**
 
 ---
 
 ### **Soal 4: Transmisi Paket**
 Sebuah paket sepanjang 512 bit ditransmisikan melalui suatu kanal yang ber-noise dengan mekanisme koreksi error yang dapat mengoreksi tidak lebih dari 20 error. Probabilitas bahwa sebuah bit error adalah **0,0041** untuk semua bit. Asumsikan status error masing-masing bit independen.
 
-a. Probabilitas bahwa 1 paket tersebut akan diterima dengan benar adalah…
-b. Nilai ekspektasi dari jumlah error dalam 1 paket adalah…
-c. Nilai variansi dari jumlah error dalam 1 paket adalah…
-d. **41** buah paket sepanjang 512 bit ditransmisikan. Probabilitas semua paket tersebut ditransmisikan dalam kondisi tidak error adalah…
-e. Variansi dari jumlah paket yang ditransmisikan dalam kondisi error pada pengiriman **41** paket tersebut adalah…
+1. Probabilitas bahwa 1 paket tersebut akan diterima dengan benar adalah…
+2. Nilai ekspektasi dari jumlah error dalam 1 paket adalah…
+3. Nilai variansi dari jumlah error dalam 1 paket adalah…
+4. **41** buah paket sepanjang 512 bit ditransmisikan. Probabilitas semua paket tersebut ditransmisikan dalam kondisi tidak error adalah…
+5. Variansi dari jumlah paket yang ditransmisikan dalam kondisi error pada pengiriman **41** paket tersebut adalah…
+
+
+### **Solusi Soal 4: Transmisi Paket**
+X = jumlah bit error dalam 1 paket $\sim \text{Binomial}(n=512, p=0.0041)$.
+1. $P(\text{paket benar}) = P(X \le 20) = F(20) =$ **0.9798**
+2. $E(X) = n \times p = 512 \times 0.0041 =$ **2.0992**
+3. $Var(X) = n \times p \times (1-p) = 512 \times 0.0041 \times 0.9959 =$ **2.0906**
+4. Y = jumlah paket benar $\sim \text{Binomial}(n=41, p=0.9798)$.
+   $P(Y = 41) = (0.9798)^{41} =$ **0.4337**
+5. Variabel acak paket error mematuhi properti variansi binomial komplementer.
+   $Var(Y) = n \times P_{\text{error}} \times P_{\text{benar}} = 41 \times (1 - 0.9798) \times 0.9798 =$ **0.8102**
 
 ---
 
@@ -107,90 +144,18 @@ Dengan label router $A,B,C,D,E,F,G,H,I$, tentukan:
 3. $P(\text{Client 1 terhubung dengan Client 3 dan keduanya terhubung dengan server})$
 4. Diketahui tepat 4 router OFF, sisanya ON. Berapa $P(\text{Client 1 terhubung dengan server})$?
 5. Diketahui tepat 3 router OFF, sisanya ON. Berapa $P(\text{Client 1 terhubung dengan server})$?
----
 
-### **Soal 6: Tender Pengadaan Server**
-Diketahui PT. K dan PT. L sedang bersaing memenangkan tender.
-*   Rumus nilai akhir = 70% nilai teknis + 30% nilai harga.
-*   Rumus nilai harga = (40 M – Harga yang diajukan)/40 M * 100.
-*   Diketahui nilai teknis PT. K adalah **72** dan PT. L adalah **82**. 
-*   Harga yang diajukan PT. K terdistribusi seragam (uniform) antara 15 - 35 M. 
-*   Harga yang diajukan PT. L terdistribusi seragam (uniform) antara 20 - 40 M. 
-
-a. Nilai ekspektasi harga yang diajukan oleh PT. K adalah… milyar
-b. Nilai median harga yang diajukan oleh PT. L adalah… milyar
-c. Apabila $X$ mewakili harga PT. K dan $Y$ harga PT. L, berapa nilai fungsi gabungan $f(x,y)$?
-d. Probabilitas PT. K memenangkan tender adalah… 
-
-\newpage
-
-# LEMBAR JAWABAN & SOLUSI
-
-### **Solusi Soal 1: Loan Application Process Funnel**
-Berdasarkan data tahapan aplikasi (APP = 1.100.000, SCR = 210.000, BIO = 151.000, CS = 101.000, FIN = 51.000):
-**a.** P(BIO) = $\frac{\text{Jumlah BIO}}{\text{Jumlah APP}} = \frac{151.000}{1.100.000} =$ **0.1373**
-**b.** P(tidak BIO) = $1 - \text{P(BIO)} = 1 - 0.13727 =$ **0.8627**
-**c.** P(tidak lolos CS) = $1 - \frac{\text{Jumlah CS}}{\text{Jumlah APP}} = 1 - \frac{101.000}{1.100.000} = 1 - 0.09181 =$ **0.9082**
-**d.** P(FIN) = $\frac{\text{Jumlah FIN}}{\text{Jumlah APP}} = \frac{51.000}{1.100.000} =$ **0.0464**
-**e.** P(tidak FIN) = $1 - \text{P(FIN)} = 1 - 0.04636 =$ **0.9536**
-
----
-
-### **Solusi Soal 2: Credit Scoring Model Performance**
-Diketahui: $P(E) = 0.3$, $P(E^c) = 0.7$, PPV $= 0.42$, NPV $= 0.92$.
-**a.** TPR (True Positive Rate) = $\frac{\text{PPV} \times P(E)}{\text{PPV} \times P(E) + (1-\text{NPV}) \times P(E^c)} = \frac{0.42 \times 0.3}{0.42 \times 0.3 + 0.08 \times 0.7} = \frac{0.126}{0.182} =$ **0.6923**
-**b.** FNR (False Negative Rate) = $1 - \text{TPR} = 1 - 0.6923 =$ **0.3077**
-**c.** FPR (False Positive Rate) = $\frac{(1-\text{PPV}) \times P(E)}{(1-\text{PPV}) \times P(E) + \text{NPV} \times P(E^c)} = \frac{0.58 \times 0.3}{0.58 \times 0.3 + 0.92 \times 0.7} = \frac{0.174}{0.818} =$ **0.2127**
-**d.** TNR (True Negative Rate) = $1 - \text{FPR} = 1 - 0.2127 =$ **0.7873**
-**e.** PPV = **0.42**
-**f.** FDR (False Discovery Rate) = $1 - \text{PPV} =$ **0.58**
-**g.** FOR (False Omission Rate) = $1 - \text{NPV} = 1 - 0.92 =$ **0.08**
-**h.** NPV = **0.92**
-**i.** Prevalensi $P(H) = \text{PPV} \times P(E) + (1-\text{NPV}) \times P(E^c) = 0.126 + 0.056 =$ **0.1820**
-**j.** Akurasi = $\text{TPR} \times P(H) + \text{TNR} \times P(H^c) = 0.6923(0.182) + 0.7873(0.818) =$ **0.77**
-**k.** P(0 default dari 1000) = $(1 - 0.182)^{1000} =$ **0** *(karena nilainya mendekati 0 atau sekitar $5.6 \times 10^{-88}$)*
-**l.** Ekspektasi $E(X) = n \times P(H) = 1000 \times 0.182 =$ **182**
-
----
-
-### **Solusi Soal 3: Umur Mesin MRI**
-**a.** ABC $\sim \text{Normal}(\mu=20300, \sigma=2000)$.
-   $P(15000 < X < 20000) = F(20000) - F(15000) =$ **0.4364**
-**b.** DEF $\sim \text{Eksponensial}(\beta=22300)$. 
-   $P(20000 < X < 25000) = e^{-20000/22300} - e^{-25000/22300} = 0.4077 - 0.3258 =$ **0.0819**
-**c.** XYZ $\sim \text{Weibull}(\mu=21300, \beta=1.4)$. 
-   Cari $\alpha$ terlebih dahulu: $\alpha = (\mu / \Gamma(1 + 1/\beta))^{-\beta} \approx 7.6538 \times 10^{-7}$.
-   $P(20000 < X < 22000) = F(22000) - F(20000) =$ **0.0485**
-**d.** Pilihan brand:
-   $F_{ABC}(20000) = 0.4404$
-   $F_{DEF}(20000) = 0.5922$
-   $F_{XYZ}(20000) = 0.5525$
-   Karena probabilitas kerusakan ABC paling kecil, maka dipilih brand ABC. Jawaban: **1**
-
----
-
-### **Solusi Soal 4: Transmisi Paket**
-X = jumlah bit error dalam 1 paket $\sim \text{Binomial}(n=512, p=0.0041)$.
-**a.** $P(\text{paket benar}) = P(X \le 20) = F(20) =$ **0.9798**
-**b.** $E(X) = n \times p = 512 \times 0.0041 =$ **2.0992**
-**c.** $Var(X) = n \times p \times (1-p) = 512 \times 0.0041 \times 0.9959 =$ **2.0906**
-**d.** Y = jumlah paket benar $\sim \text{Binomial}(n=41, p=0.9798)$.
-   $P(Y = 41) = (0.9798)^{41} =$ **0.4337**
-**e.** Variabel acak paket error mematuhi properti variansi binomial komplementer.
-   $Var(Y) = n \times P_{\text{error}} \times P_{\text{benar}} = 41 \times (1 - 0.9798) \times 0.9798 =$ **0.8102**
-
----
 
 ### **Solusi Soal 5: Sistem Komunikasi**
 Diketahui $p = 0.83$.
-**a.** Rute Klien 1 ke Klien 2 membutuhkan 2 router ON (A dan B). $P = p^2 = (0.83)^2 =$ **0.6889**
-**b.** Rute ketiga klien terhubung secara simultan (A, B, C, D). $P = p^4 =$ **0.4746**
-**c.** Rute klien 1 & 3 ke server membutuhkan A, C, D, I (4 router pilar) dan setidaknya 1 dari router by-pass paralel (E, F, G, H).
+1. Rute Klien 1 ke Klien 2 membutuhkan 2 router ON (A dan B). $P = p^2 = (0.83)^2 =$ **0.6889**
+2. Rute ketiga klien terhubung secara simultan (A, B, C, D). $P = p^4 =$ **0.4746**
+3. Rute klien 1 & 3 ke server membutuhkan A, C, D, I (4 router pilar) dan setidaknya 1 dari router by-pass paralel (E, F, G, H).
    $P = P(A,C,D,I) \times [1 - P(\text{semua E,F,G,H OFF})] = p^4 \times (1 - (1-p)^4) = 0.4746 \times (1 - 0.17^4) =$ **0.4742**
 
 
 
-**d.** Probabilitas jika tepat 4 router OFF. Berarti tepat 5 router ON.  
+4. Probabilitas jika tepat 4 router OFF. Berarti tepat 5 router ON.  
 Kita hitung secara kombinatorial bersyarat.
 
 Total konfigurasi 5 router ON:
@@ -227,7 +192,7 @@ $$
 \boxed{\frac{1}{9}\approx 0.1111}
 $$
 
-**e.** Jika hanya 3 router OFF, semua rute memiliki cadangan yang cukup untuk mencapai server (*fully favorable*)
+5. Jika hanya 3 router OFF, semua rute memiliki cadangan yang cukup untuk mencapai server (*fully favorable*)
 
 Berarti tepat 6 router ON.
 
@@ -256,17 +221,32 @@ $$
 
 ---
 
+### **Soal 6: Tender Pengadaan Server**
+Diketahui PT. K dan PT. L sedang bersaing memenangkan tender.
+*   Rumus nilai akhir = 70% nilai teknis + 30% nilai harga.
+*   Rumus nilai harga = (40 M – Harga yang diajukan)/40 M * 100.
+*   Diketahui nilai teknis PT. K adalah **72** dan PT. L adalah **82**. 
+*   Harga yang diajukan PT. K terdistribusi seragam (uniform) antara 15 - 35 M. 
+*   Harga yang diajukan PT. L terdistribusi seragam (uniform) antara 20 - 40 M. 
+
+1. Nilai ekspektasi harga yang diajukan oleh PT. K adalah… milyar
+2. Nilai median harga yang diajukan oleh PT. L adalah… milyar
+3. Apabila $X$ mewakili harga PT. K dan $Y$ harga PT. L, berapa nilai fungsi gabungan $f(x,y)$?
+4. Probabilitas PT. K memenangkan tender adalah… 
+
+
+
 ### **Solusi Soal 6: Tender Pengadaan Server**
 Rumus persaingan akhir (NA): 
 $NA_K = 0.70(72) + 0.30 \times \left(\frac{40 - X}{40} \times 100\right) = 50.4 + 30 - 0.75X = 80.4 - 0.75X$
 $NA_L = 0.70(82) + 0.30 \times \left(\frac{40 - Y}{40} \times 100\right) = 57.4 + 30 - 0.75Y = 87.4 - 0.75Y$
 K menang apabila $NA_K > NA_L \implies 80.4 - 0.75X > 87.4 - 0.75Y \implies 0.75Y > 0.75X + 7 \implies Y > X + \frac{28}{3}$
 
-**a.** $E(K) = E(X) = \frac{15 + 35}{2} =$ **25** Milyar
-**b.** Median(L) $= \frac{20 + 40}{2} =$ **30** Milyar
-**c.** Distribusi gabungan dua variabel seragam saling independen: 
+1. $E(K) = E(X) = \frac{15 + 35}{2} =$ **25** Milyar
+2. Median(L) $= \frac{20 + 40}{2} =$ **30** Milyar
+3. Distribusi gabungan dua variabel seragam saling independen: 
    $f(x,y) = f(x) \times f(y) = \frac{1}{(35-15)} \times \frac{1}{(40-20)} = \frac{1}{20} \times \frac{1}{20} =$ **0.0025**
-**d.** Probabilitas K menang: 
+4. Probabilitas K menang: 
    Adalah luas area bidang di dalam batas $X \in, Y \in$ yang memenuhi $Y > X + \frac{28}{3}$. Area tersebut membentuk sebuah segitiga di bagian kiri atas.
    Titik sudut segitiga: $(15, \frac{73}{3}), (15, 40), (\frac{92}{3}, 40)$.
    Alas $= \frac{92}{3} - 15 = \frac{47}{3}$. Tinggi $= 40 - \frac{73}{3} = \frac{47}{3}$.
