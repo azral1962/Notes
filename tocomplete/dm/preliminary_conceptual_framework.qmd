@@ -1,22 +1,19 @@
 ---
-title: "Preliminary Conceptual Framework"
-subtitle: "AI Decision Support for University Ranking and Accreditation"
-author: "Prepared with ChatGPT"
-date: "2026-03-31"
-format:
-  docx:
-    toc: true
-    number-sections: true
-  html:
-    toc: true
-    number-sections: true
-execute:
-  echo: false
+title: "AI Decision Support for University Ranking and Accreditation"
+subtitle: "Preliminary Conceptual Framework"
+abstract: |
+  This paper presents a preliminary conceptual framework for an AI-based decision support system designed to assist universities in navigating the strategic challenges of ranking and accreditation. Often perceived as externally imposed burdens, these evaluations require collective internal alignment, careful resource allocation, and maintaining academic legitimacy. The proposed framework conceptualizes university decision-making as a multi-dimensional process that must align institutional reality and external evaluation criteria with insider stakeholder interests. To achieve this, we proposed AIDAS-HE, a system that integrates institutional modeling, probabilistic consequence analysis, and the AI-based generation of alternative strategic plans. By leveraging artificial intelligence to explore multiple strategic routes under uncertainty, this framework aims to help university leaders identify actionable plans that improve external metrics while preserving mission-driven value for faculty, students, and staff. Finally, the framework emphasizes the role of AI in translating analytic insights into formal academic communication to ensure institutional legitimacy and consensus.
+keywords: ["Decision Support Systems", "Artificial Intelligence", "Higher Education", "University Rankings", "Academic Accreditation", "Institutional Strategy"]
+bibliography: references.bib
+custom-keywords:
+  - name: JEL Codes
+    values: ["I23", "C88", "D81"]  
+
 ---
 
 # Background
 
-University ranking and accreditation are often experienced by academic insiders as externally imposed pressures. At first, they may be seen as outsider-defined burdens that consume time, funds, and organizational energy without creating clearly visible rewards for scholars, students, and supporting staff. However, once these mechanisms begin to affect enrollment, reputation, public trust, partnerships, and access to resources, they become unavoidable strategic issues for the university itself.
+University ranking and accreditation are often experienced by academic insiders as externally imposed pressures. At first, they may be seen as outsider-defined burdens that consume time, funds, and organizational energy without creating clearly visible rewards for scholars, students, and supporting staff [@hazelkorn2015rankings]. However, once these mechanisms begin to affect enrollment, reputation, public trust, partnerships, and access to resources, they become unavoidable strategic issues for the university itself.
 
 The challenge is therefore not simply to comply, but to decide well. Universities must mobilize insiders, allocate limited resources, preserve academic legitimacy, and choose action plans that can improve ranking and accreditation outcomes without undermining mission, morale, and long-term capability.
 
@@ -32,7 +29,7 @@ This problem is difficult because universities are not single-actor organization
 
 ## Decision making as designing the exam
 
-Decision making is not only choosing an answer. It is also formulating the right questions. In a university setting, the institution must ask:
+Decision making is not only choosing an answer. It is also formulating the right questions, aligning with value-focused thinking where defining what matters precedes the evaluation of alternatives [@keeney1992value]. In a university setting, the institution must ask:
 
 - Which external criteria matter most?
 - Where are our strongest and weakest positions?
@@ -65,7 +62,7 @@ Consensus becomes possible when the university can generate alternatives that di
 
 ## Models for academic legitimacy
 
-A useful model should be:
+Institutional decisions require formal legitimacy to be accepted by the academic community [@suchman1995managing]. A useful model should be:
 
 1. **Grounded in reality**
 2. **Tractable in complexity**
@@ -82,6 +79,8 @@ Mathematical, probabilistic, and computational models are especially useful beca
 
 ## Main constructs
 
+The framework is built upon several main constructs, as defined and contextualized in @tbl-constructs.
+
 | Construct | Meaning in this framework | Example in university context |
 |---|---|---|
 | Institutional reality | Current internal condition of the university | Faculty profile, student outcomes, research output, governance quality |
@@ -92,6 +91,7 @@ Mathematical, probabilistic, and computational models are especially useful beca
 | Uncertainty | Unknowns affecting outcomes | Methodology changes, weak participation, delayed outputs, policy shifts |
 | Institutional legitimacy | Formal acceptability of decisions | Written reports, senate approval, policy alignment, evidence-based justification |
 | Decision quality | Degree to which the selected plan serves institutional objectives | Better rank, stronger accreditation, manageable burden, mission alignment |
+: Main constructs of the preliminary framework {#tbl-constructs}
 
 ## Logical relationships
 
@@ -126,6 +126,8 @@ The framework assumes the following causal logic:
 
 ## Framework table
 
+The relationships between these components and their respective phases are summarized in @tbl-framework, detailing the specific modeling needs and expected AI support roles.
+
 | Layer | Key question | Modeling need | AI support role | Expected output |
 |---|---|---|---|---|
 | Diagnosis | Where are we now? | Institutional baseline model | Data integration, gap detection | Reality profile and weakness map |
@@ -134,12 +136,13 @@ The framework assumes the following causal logic:
 | Evaluation | What may happen? | Probability and simulation model | Forecasting, scenario analysis | Consequence and trade-off estimates |
 | Legitimization | How do we persuade and align insiders? | Academic report and rhetoric model | Draft reports, briefs, justifications | Formally acceptable proposals |
 | Execution learning | Are we progressing? | Monitoring and adaptation model | Tracking, alerts, recommendation updates | Adaptive implementation guidance |
+: Framework layers and corresponding AI support roles {#tbl-framework}
 
 # Proposed AI Decision Support System
 
 ## System purpose
 
-The proposed system, **AIDAS-HE**, is an AI-based decision support system for helping universities generate, compare, justify, and communicate alternative strategic plans for ranking and accreditation improvement.
+While AI has seen increasing application in higher education, much of it revolves around student learning rather than institutional decision-making [@zawacki2019systematic]. The proposed system, **AIDAS-HE**, is an AI-based decision support system specifically tailored for helping universities generate, compare, justify, and communicate alternative strategic plans for ranking and accreditation improvement.
 
 ## Major modules
 

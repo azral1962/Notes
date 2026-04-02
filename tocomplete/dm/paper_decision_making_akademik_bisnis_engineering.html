@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="OpenAI">
+
+<title>Pengambilan Keputusan sebagai Perancangan Jawaban atas Masalah: Perbandingan antara Setting Akademik, Bisnis, dan Engineering</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/clipboard/clipboard.min.js"></script>
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/popper.min.js"></script>
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/anchor.min.js"></script>
+<link href="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="paper_decision_making_akademik_bisnis_engineering_files/libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="paper_decision_making_akademik_bisnis_engineering_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="paper_decision_making_akademik_bisnis_engineering_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="paper_decision_making_akademik_bisnis_engineering_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#abstrak" id="toc-abstrak" class="nav-link active" data-scroll-target="#abstrak"><span class="header-section-number">1</span> Abstrak</a></li>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link" data-scroll-target="#pendahuluan"><span class="header-section-number">2</span> Pendahuluan</a></li>
+  <li><a href="#konsep-dasar-pengambilan-keputusan" id="toc-konsep-dasar-pengambilan-keputusan" class="nav-link" data-scroll-target="#konsep-dasar-pengambilan-keputusan"><span class="header-section-number">3</span> Konsep Dasar Pengambilan Keputusan</a>
+  <ul class="collapse">
+  <li><a href="#keputusan-sebagai-jawaban-terhadap-pertanyaan" id="toc-keputusan-sebagai-jawaban-terhadap-pertanyaan" class="nav-link" data-scroll-target="#keputusan-sebagai-jawaban-terhadap-pertanyaan"><span class="header-section-number">3.1</span> Keputusan sebagai jawaban terhadap pertanyaan</a></li>
+  <li><a href="#pengambilan-keputusan-sebagai-perancangan-ujian" id="toc-pengambilan-keputusan-sebagai-perancangan-ujian" class="nav-link" data-scroll-target="#pengambilan-keputusan-sebagai-perancangan-ujian"><span class="header-section-number">3.2</span> Pengambilan keputusan sebagai perancangan ujian</a></li>
+  <li><a href="#peran-model" id="toc-peran-model" class="nav-link" data-scroll-target="#peran-model"><span class="header-section-number">3.3</span> Peran model</a></li>
+  </ul></li>
+  <li><a href="#pengambilan-keputusan-dalam-setting-bisnis" id="toc-pengambilan-keputusan-dalam-setting-bisnis" class="nav-link" data-scroll-target="#pengambilan-keputusan-dalam-setting-bisnis"><span class="header-section-number">4</span> Pengambilan Keputusan dalam Setting Bisnis</a>
+  <ul class="collapse">
+  <li><a href="#karakter-utama" id="toc-karakter-utama" class="nav-link" data-scroll-target="#karakter-utama"><span class="header-section-number">4.1</span> Karakter utama</a></li>
+  <li><a href="#multi-stakeholder-dan-model-pertukaran-nilai" id="toc-multi-stakeholder-dan-model-pertukaran-nilai" class="nav-link" data-scroll-target="#multi-stakeholder-dan-model-pertukaran-nilai"><span class="header-section-number">4.2</span> Multi-stakeholder dan model pertukaran nilai</a></li>
+  <li><a href="#tolok-ukur-keberhasilan" id="toc-tolok-ukur-keberhasilan" class="nav-link" data-scroll-target="#tolok-ukur-keberhasilan"><span class="header-section-number">4.3</span> Tolok ukur keberhasilan</a></li>
+  </ul></li>
+  <li><a href="#pengambilan-keputusan-dalam-setting-engineering" id="toc-pengambilan-keputusan-dalam-setting-engineering" class="nav-link" data-scroll-target="#pengambilan-keputusan-dalam-setting-engineering"><span class="header-section-number">5</span> Pengambilan Keputusan dalam Setting Engineering</a>
+  <ul class="collapse">
+  <li><a href="#pertanyaan-inti-engineering" id="toc-pertanyaan-inti-engineering" class="nav-link" data-scroll-target="#pertanyaan-inti-engineering"><span class="header-section-number">5.1</span> Pertanyaan inti engineering</a></li>
+  <li><a href="#ciri-utama-keputusan-engineering" id="toc-ciri-utama-keputusan-engineering" class="nav-link" data-scroll-target="#ciri-utama-keputusan-engineering"><span class="header-section-number">5.2</span> Ciri utama keputusan engineering</a></li>
+  <li><a href="#tolok-ukur-keberhasilan-1" id="toc-tolok-ukur-keberhasilan-1" class="nav-link" data-scroll-target="#tolok-ukur-keberhasilan-1"><span class="header-section-number">5.3</span> Tolok ukur keberhasilan</a></li>
+  </ul></li>
+  <li><a href="#pengambilan-keputusan-dalam-setting-akademik" id="toc-pengambilan-keputusan-dalam-setting-akademik" class="nav-link" data-scroll-target="#pengambilan-keputusan-dalam-setting-akademik"><span class="header-section-number">6</span> Pengambilan Keputusan dalam Setting Akademik</a>
+  <ul class="collapse">
+  <li><a href="#struktur-kekuasaan-dan-legitimasi" id="toc-struktur-kekuasaan-dan-legitimasi" class="nav-link" data-scroll-target="#struktur-kekuasaan-dan-legitimasi"><span class="header-section-number">6.1</span> Struktur kekuasaan dan legitimasi</a></li>
+  <li><a href="#retorika-ilmiah-dan-bukti" id="toc-retorika-ilmiah-dan-bukti" class="nav-link" data-scroll-target="#retorika-ilmiah-dan-bukti"><span class="header-section-number">6.2</span> Retorika ilmiah dan bukti</a></li>
+  <li><a href="#sifat-kolektif" id="toc-sifat-kolektif" class="nav-link" data-scroll-target="#sifat-kolektif"><span class="header-section-number">6.3</span> Sifat kolektif</a></li>
+  </ul></li>
+  <li><a href="#kasus-akademik-peringkat-universitas-dan-akreditasi" id="toc-kasus-akademik-peringkat-universitas-dan-akreditasi" class="nav-link" data-scroll-target="#kasus-akademik-peringkat-universitas-dan-akreditasi"><span class="header-section-number">7</span> Kasus Akademik: Peringkat Universitas dan Akreditasi</a>
+  <ul class="collapse">
+  <li><a href="#problem-inti" id="toc-problem-inti" class="nav-link" data-scroll-target="#problem-inti"><span class="header-section-number">7.1</span> Problem inti</a></li>
+  <li><a href="#kebutuhan-sistem-pendukung-keputusan" id="toc-kebutuhan-sistem-pendukung-keputusan" class="nav-link" data-scroll-target="#kebutuhan-sistem-pendukung-keputusan"><span class="header-section-number">7.2</span> Kebutuhan sistem pendukung keputusan</a></li>
+  </ul></li>
+  <li><a href="#perbandingan-akademik-bisnis-dan-engineering" id="toc-perbandingan-akademik-bisnis-dan-engineering" class="nav-link" data-scroll-target="#perbandingan-akademik-bisnis-dan-engineering"><span class="header-section-number">8</span> Perbandingan Akademik, Bisnis, dan Engineering</a>
+  <ul class="collapse">
+  <li><a href="#fokus-utama" id="toc-fokus-utama" class="nav-link" data-scroll-target="#fokus-utama"><span class="header-section-number">8.1</span> Fokus utama</a></li>
+  <li><a href="#bentuk-masalah" id="toc-bentuk-masalah" class="nav-link" data-scroll-target="#bentuk-masalah"><span class="header-section-number">8.2</span> Bentuk masalah</a></li>
+  <li><a href="#bentuk-evaluasi" id="toc-bentuk-evaluasi" class="nav-link" data-scroll-target="#bentuk-evaluasi"><span class="header-section-number">8.3</span> Bentuk evaluasi</a></li>
+  <li><a href="#bentuk-keluaran-keputusan" id="toc-bentuk-keluaran-keputusan" class="nav-link" data-scroll-target="#bentuk-keluaran-keputusan"><span class="header-section-number">8.4</span> Bentuk keluaran keputusan</a></li>
+  <li><a href="#pola-legitimasi" id="toc-pola-legitimasi" class="nav-link" data-scroll-target="#pola-legitimasi"><span class="header-section-number">8.5</span> Pola legitimasi</a></li>
+  </ul></li>
+  <li><a href="#peran-probabilitas-komputasi-dan-ai" id="toc-peran-probabilitas-komputasi-dan-ai" class="nav-link" data-scroll-target="#peran-probabilitas-komputasi-dan-ai"><span class="header-section-number">9</span> Peran Probabilitas, Komputasi, dan AI</a></li>
+  <li><a href="#kerangka-konseptual" id="toc-kerangka-konseptual" class="nav-link" data-scroll-target="#kerangka-konseptual"><span class="header-section-number">10</span> Kerangka Konseptual</a></li>
+  <li><a href="#kesimpulan" id="toc-kesimpulan" class="nav-link" data-scroll-target="#kesimpulan"><span class="header-section-number">11</span> Kesimpulan</a></li>
+  <li><a href="#daftar-pustaka-sementara" id="toc-daftar-pustaka-sementara" class="nav-link" data-scroll-target="#daftar-pustaka-sementara"><span class="header-section-number">12</span> Daftar Pustaka Sementara</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Format Lain</h2><ul><li><a href="paper_decision_making_akademik_bisnis_engineering.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="paper_decision_making_akademik_bisnis_engineering.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pengambilan Keputusan sebagai Perancangan Jawaban atas Masalah: Perbandingan antara Setting Akademik, Bisnis, dan Engineering</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Penulis</div>
+    <div class="quarto-title-meta-contents">
+             <p>OpenAI </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstrak" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Abstrak</h1>
+<p>Pengambilan keputusan merupakan inti dari tindakan manusia, organisasi, dan sistem sosial. Secara konseptual, pengambilan keputusan dapat dipahami sebagai proses merumuskan masalah dalam bentuk pertanyaan, menghasilkan alternatif jawaban, lalu memilih jawaban yang paling layak untuk dijalankan dengan mempertimbangkan konsekuensinya. Makalah ini membahas konsep dasar pengambilan keputusan dan membandingkan karakteristiknya dalam tiga konteks utama, yaitu akademik, bisnis, dan <em>engineering</em>. Dalam setting akademik, keputusan cenderung berorientasi pada legitimasi formal, aturan tertulis, bukti, dan retorika ilmiah. Dalam setting bisnis, keputusan lebih diarahkan pada penciptaan nilai, keunggulan bersaing, dan hasil pasar. Dalam <em>engineering</em>, keputusan berpusat pada konfigurasi energi, mekanisme, dan sistem adaptif agar tugas-tugas sulit dapat diselesaikan secara efektif. Paper ini menegaskan bahwa model matematika, komputasi, probabilitas, dan kecerdasan buatan berperan penting dalam mendukung keputusan yang <em>grounded</em> pada realitas, <em>tractable</em> dalam kompleksitas, efektif dalam fungsi, dan jelas dalam komunikasi. Sebagai ilustrasi, paper ini menyoroti kasus pengambilan keputusan di perguruan tinggi terkait peringkat universitas dan akreditasi.</p>
+<p><strong>Kata kunci:</strong> pengambilan keputusan, akademik, bisnis, engineering, model probabilitas, kecerdasan buatan</p>
+</section>
+<section id="pendahuluan" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Pendahuluan</h1>
+<p>Setiap manusia, organisasi, dan institusi harus mengambil keputusan. Keputusan muncul ketika ada masalah, tujuan, keterbatasan, dan kebutuhan untuk bertindak. Pada dasarnya, keputusan adalah jawaban terhadap masalah yang telah dibingkai sebagai pertanyaan. Dalam kehidupan sehari-hari, pertanyaan itu bisa sesederhana “apakah saya lanjut atau tidak?”, namun dalam organisasi dan institusi, pertanyaan tersebut bisa berkembang menjadi analisis yang kompleks, laporan panjang, dan perdebatan yang melibatkan banyak pihak.</p>
+<p>Secara intuitif, proses pengambilan keputusan dapat dianalogikan dengan ujian. Dalam ujian, kita menjawab pertanyaan dalam berbagai bentuk: benar-salah, pilihan ganda, isian singkat, uraian, atau laporan akhir. Dalam pengambilan keputusan, kita juga menjawab pertanyaan, tetapi tidak ada kunci jawaban tunggal. Yang ada adalah konsekuensi. Jawaban yang dipilih dinilai bukan dari “benar” atau “salah” secara mutlak, melainkan dari apakah keputusan tersebut membawa kita lebih dekat pada tujuan yang diinginkan, dengan risiko dan biaya yang masih dapat diterima.</p>
+<p>Makalah ini bertujuan membangun kerangka konseptual pengambilan keputusan dan membandingkan perwujudannya dalam tiga konteks: akademik, bisnis, dan <em>engineering</em>. Ketiga konteks ini dipilih karena masing-masing memiliki logika legitimasi, struktur tujuan, dan bentuk evaluasi yang berbeda.</p>
+</section>
+<section id="konsep-dasar-pengambilan-keputusan" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Konsep Dasar Pengambilan Keputusan</h1>
+<section id="keputusan-sebagai-jawaban-terhadap-pertanyaan" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="keputusan-sebagai-jawaban-terhadap-pertanyaan"><span class="header-section-number">3.1</span> Keputusan sebagai jawaban terhadap pertanyaan</h2>
+<p>Pengambilan keputusan dapat didefinisikan sebagai proses memilih jawaban atas pertanyaan mengenai tindakan di bawah kondisi ketidakpastian. Di sini, kualitas keputusan ditentukan oleh akibat dari pelaksanaannya terhadap pencapaian tujuan.</p>
+<p>Dengan definisi tersebut, pengambilan keputusan melibatkan sedikitnya lima unsur:</p>
+<ol type="1">
+<li><strong>Masalah</strong> yang perlu dipecahkan.</li>
+<li><strong>Tujuan</strong> yang ingin dicapai.</li>
+<li><strong>Alternatif tindakan</strong> yang mungkin dilakukan.</li>
+<li><strong>Konsekuensi</strong> dari setiap alternatif.</li>
+<li><strong>Kriteria penilaian</strong> untuk memilih alternatif terbaik.</li>
+</ol>
+</section>
+<section id="pengambilan-keputusan-sebagai-perancangan-ujian" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="pengambilan-keputusan-sebagai-perancangan-ujian"><span class="header-section-number">3.2</span> Pengambilan keputusan sebagai perancangan ujian</h2>
+<p>Pengambilan keputusan bukan hanya memilih jawaban, tetapi juga merancang pertanyaannya. Masalah yang sama dapat dibingkai dengan cara berbeda, dan perbedaan <em>framing</em> menghasilkan alternatif keputusan yang berbeda pula. Maka, inti dari seni dan ilmu pengambilan keputusan adalah menyusun “ujian” yang tepat:</p>
+<ul>
+<li>pertanyaan apa yang sebenarnya harus dijawab,</li>
+<li>alternatif apa yang layak dipertimbangkan,</li>
+<li>indikator apa yang dipakai untuk menilai,</li>
+<li>dan konsekuensi apa yang paling relevan.</li>
+</ul>
+</section>
+<section id="peran-model" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="peran-model"><span class="header-section-number">3.3</span> Peran model</h2>
+<p>Karena realitas terlalu kompleks untuk ditangkap secara utuh, pengambilan keputusan memerlukan model. Model yang baik harus:</p>
+<ul>
+<li><em>grounded</em> pada realitas,</li>
+<li><em>tractable</em> atau cukup sederhana untuk dianalisis,</li>
+<li>efektif dalam membantu fungsi pengambilan keputusan,</li>
+<li>jelas dalam mengkomunikasikan gagasan kepada para pihak.</li>
+</ul>
+<p>Model matematika dan komputasi sangat cocok untuk tujuan tersebut. Model probabilitas secara khusus penting karena sebagian besar keputusan nyata diambil di bawah ketidakpastian.</p>
+</section>
+</section>
+<section id="pengambilan-keputusan-dalam-setting-bisnis" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Pengambilan Keputusan dalam Setting Bisnis</h1>
+<p>Dalam dunia bisnis, pengambilan keputusan berfokus pada penciptaan nilai, keunggulan bersaing, pertumbuhan, efisiensi, dan keberlanjutan usaha. Bisnis beroperasi dalam lanskap pasar yang dinamis, sehingga keputusan yang baik adalah keputusan yang mampu menghubungkan kompetensi organisasi dengan peluang pasar dan kebutuhan pelanggan.</p>
+<section id="karakter-utama" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="karakter-utama"><span class="header-section-number">4.1</span> Karakter utama</h2>
+<p>Keputusan bisnis biasanya memiliki ciri:</p>
+<ul>
+<li>berorientasi hasil,</li>
+<li>sensitif terhadap waktu,</li>
+<li>memperhatikan biaya dan manfaat,</li>
+<li>menuntut adaptasi cepat,</li>
+<li>dan dievaluasi oleh pasar.</li>
+</ul>
+<p>Bisnis sering memandang organisasi sebagai pelaku perjalanan:</p>
+<ul>
+<li><strong>misi</strong> sebagai mesin penggerak,</li>
+<li><strong>visi</strong> sebagai horizon,</li>
+<li><strong>target</strong> sebagai titik-titik tujuan di peta,</li>
+<li><strong>strategi</strong> sebagai rute perjalanan,</li>
+<li><strong>kompetensi</strong> sebagai kendaraan dan kemampuan mengemudi.</li>
+</ul>
+</section>
+<section id="multi-stakeholder-dan-model-pertukaran-nilai" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="multi-stakeholder-dan-model-pertukaran-nilai"><span class="header-section-number">4.2</span> Multi-stakeholder dan model pertukaran nilai</h2>
+<p>Dalam bisnis modern, banyak keputusan tidak hanya menyangkut satu pihak. Misalnya, model <em>ride-hailing</em> seperti Uber menjawab persoalan transportasi kota sambil menghubungkan tujuan pelanggan, pengemudi, pemilik mobil, dan operator aplikasi. Di sini keputusan bukan sekadar memilih alternatif, tetapi mendesain <strong>model pertukaran nilai</strong> yang cukup memuaskan banyak pihak.</p>
+</section>
+<section id="tolok-ukur-keberhasilan" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="tolok-ukur-keberhasilan"><span class="header-section-number">4.3</span> Tolok ukur keberhasilan</h2>
+<p>Keberhasilan keputusan bisnis umumnya dinilai dari:</p>
+<ul>
+<li>pertumbuhan pendapatan,</li>
+<li>profitabilitas,</li>
+<li>pangsa pasar,</li>
+<li>kepuasan pelanggan,</li>
+<li>efisiensi operasi,</li>
+<li>dan daya tahan kompetitif.</li>
+</ul>
+<p>Dengan demikian, logika keputusan bisnis bersifat pragmatis: yang penting adalah apakah keputusan tersebut menciptakan nilai dan memperkuat posisi organisasi.</p>
+</section>
+</section>
+<section id="pengambilan-keputusan-dalam-setting-engineering" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Pengambilan Keputusan dalam Setting Engineering</h1>
+<p>Dalam <em>engineering</em>, keputusan lebih bersifat teknis dan sistemik. Persoalan dasarnya adalah bagaimana mengonfigurasi sumber energi, instrumen konversi energi, struktur fisik, dan mekanisme adaptasi agar sistem mampu melakukan tugas yang penting namun sulit.</p>
+<section id="pertanyaan-inti-engineering" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="pertanyaan-inti-engineering"><span class="header-section-number">5.1</span> Pertanyaan inti engineering</h2>
+<p>Pertanyaan <em>engineering</em> dapat diringkas sebagai berikut:</p>
+<blockquote class="blockquote">
+<p>Bagaimana menggunakan energi yang tersedia agar sistem dapat melakukan kerja yang kita nilai penting?</p>
+</blockquote>
+<p>Sebagai contoh, bila ada beban berat yang harus ditarik, pertanyaannya bukan hanya “siapa yang menarik”, tetapi:</p>
+<ul>
+<li>sumber energi apa yang tersedia,</li>
+<li>instrumen apa yang dapat mengubah energi menjadi gaya tarik,</li>
+<li>konfigurasi apa yang memberikan gaya cukup,</li>
+<li>mekanisme kontrol apa yang dibutuhkan agar sistem adaptif dan aman.</li>
+</ul>
+</section>
+<section id="ciri-utama-keputusan-engineering" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="ciri-utama-keputusan-engineering"><span class="header-section-number">5.2</span> Ciri utama keputusan engineering</h2>
+<p>Keputusan <em>engineering</em> cenderung:</p>
+<ul>
+<li>berbasis hukum fisika dan matematika,</li>
+<li>mengutamakan performa,</li>
+<li>menuntut reliabilitas dan keselamatan,</li>
+<li>memperhitungkan efisiensi energi dan biaya,</li>
+<li>dan diwujudkan dalam konfigurasi sistem.</li>
+</ul>
+<p>Di sini, alternatif keputusan dapat berupa pilihan material, desain struktur, mekanisme transmisi, algoritma kontrol, atau arsitektur sistem.</p>
+</section>
+<section id="tolok-ukur-keberhasilan-1" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="tolok-ukur-keberhasilan-1"><span class="header-section-number">5.3</span> Tolok ukur keberhasilan</h2>
+<p>Keberhasilan keputusan <em>engineering</em> biasanya diukur dari:</p>
+<ul>
+<li>tercapainya fungsi sistem,</li>
+<li>keandalan,</li>
+<li>efisiensi,</li>
+<li>keselamatan,</li>
+<li><em>maintainability</em>,</li>
+<li>dan <em>cost-effectiveness</em>.</li>
+</ul>
+<p>Jadi, jika bisnis bertanya “strategi apa yang menciptakan nilai terbaik?”, <em>engineering</em> bertanya “konfigurasi sistem apa yang paling mampu menyelesaikan tugas?”</p>
+</section>
+</section>
+<section id="pengambilan-keputusan-dalam-setting-akademik" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Pengambilan Keputusan dalam Setting Akademik</h1>
+<p>Setting akademik memiliki karakter yang berbeda. Perguruan tinggi adalah institusi yang ditopang oleh legitimasi formal, aturan tertulis, prosedur, bukti, dan retorika ilmiah. Aktor utama di dalamnya adalah dosen/peneliti, mahasiswa, dan tenaga kependidikan. Pihak luar seperti industri, regulator, badan akreditasi, dan pemeringkat sering dipandang sebagai <em>outsider</em>, walaupun pengaruh mereka makin besar.</p>
+<section id="struktur-kekuasaan-dan-legitimasi" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="struktur-kekuasaan-dan-legitimasi"><span class="header-section-number">6.1</span> Struktur kekuasaan dan legitimasi</h2>
+<p>Dalam setting akademik, kekuasaan sering berkaitan dengan:</p>
+<ul>
+<li>kredensial akademik,</li>
+<li>jabatan formal,</li>
+<li>reputasi ilmiah,</li>
+<li>kemampuan menyusun argumen,</li>
+<li>dan kepatuhan pada aturan tertulis.</li>
+</ul>
+<p>Karena itu, keputusan yang efektif di lingkungan akademik harus diterjemahkan ke dalam bentuk yang diakui sah, seperti:</p>
+<ul>
+<li>laporan,</li>
+<li>proposal,</li>
+<li>kebijakan,</li>
+<li>notulen resmi,</li>
+<li>dokumen akreditasi,</li>
+<li>dan argumentasi tertulis.</li>
+</ul>
+</section>
+<section id="retorika-ilmiah-dan-bukti" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="retorika-ilmiah-dan-bukti"><span class="header-section-number">6.2</span> Retorika ilmiah dan bukti</h2>
+<p>Berbeda dengan bisnis yang cepat merespons hasil pasar, akademik menuntut justifikasi yang eksplisit. Pengalaman praktis saja sering belum cukup; pengalaman harus diterjemahkan menjadi argumen, konsep, data, dan bukti yang dapat diperdebatkan secara formal.</p>
+<p>Dengan demikian, keputusan akademik bukan hanya memilih tindakan terbaik, tetapi juga menyusun bentuk argumentasi yang dapat diterima oleh komunitas akademik.</p>
+</section>
+<section id="sifat-kolektif" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sifat-kolektif"><span class="header-section-number">6.3</span> Sifat kolektif</h2>
+<p>Banyak keputusan akademik harus dicapai melalui musyawarah, senat, rapat pimpinan, komite, atau unit penjaminan mutu. Karena itu, diperlukan model bersama tentang:</p>
+<ul>
+<li>realitas masalah,</li>
+<li>konteks institusional,</li>
+<li>kepentingan para pihak,</li>
+<li>dan bentuk pertukaran nilai yang dapat diterima.</li>
+</ul>
+</section>
+</section>
+<section id="kasus-akademik-peringkat-universitas-dan-akreditasi" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Kasus Akademik: Peringkat Universitas dan Akreditasi</h1>
+<p>Kasus peringkat universitas dan akreditasi menunjukkan dengan jelas tantangan pengambilan keputusan di setting akademik. Pada awalnya, pemeringkatan dan akreditasi sering dipandang sebagai masalah luar: tuntutan badan akreditasi atau pemeringkat yang membebani orang dalam tanpa keuntungan langsung yang jelas. Untuk naik peringkat, universitas harus bersaing dengan universitas lain. Untuk memperoleh akreditasi unggul, universitas harus memenuhi kriteria, mengeluarkan biaya, dan menambah beban dokumentasi, sementara badan akreditasi sendiri tidak “memberi hadiah” selain pengumuman hasil.</p>
+<p>Namun kini, pemeringkatan dan akreditasi telah menjadi isu nyata karena memengaruhi reputasi, penerimaan mahasiswa baru, peluang kerja sama, kepercayaan publik, dan daya saing institusi. Akibatnya, universitas harus memobilisasi orang dalam, mengalokasikan sumber daya, dan mengambil keputusan strategis.</p>
+<section id="problem-inti" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="problem-inti"><span class="header-section-number">7.1</span> Problem inti</h2>
+<p>Problem inti universitas adalah:</p>
+<blockquote class="blockquote">
+<p>Bagaimana menghasilkan rencana tindakan alternatif yang mampu meningkatkan peringkat dan hasil akreditasi, tetapi tetap dapat diterima oleh dosen, mahasiswa, dan tenaga kependidikan?</p>
+</blockquote>
+</section>
+<section id="kebutuhan-sistem-pendukung-keputusan" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="kebutuhan-sistem-pendukung-keputusan"><span class="header-section-number">7.2</span> Kebutuhan sistem pendukung keputusan</h2>
+<p>Dalam kasus ini, sistem pendukung keputusan berbasis AI sangat relevan karena dapat:</p>
+<ul>
+<li>memodelkan kondisi nyata universitas,</li>
+<li>memetakan kriteria pemeringkatan dan akreditasi,</li>
+<li>mengidentifikasi <em>gap</em>,</li>
+<li>memodelkan beban dan kepentingan para <em>stakeholder</em>,</li>
+<li>menghasilkan alternatif rencana,</li>
+<li>mensimulasikan konsekuensi,</li>
+<li>dan menyusun laporan formal untuk proses pengambilan keputusan.</li>
+</ul>
+<p>Dengan kata lain, AI dapat membantu mengubah tekanan <em>outsider</em> menjadi strategi <em>insider</em> yang lebih rasional dan terkomunikasikan.</p>
+</section>
+</section>
+<section id="perbandingan-akademik-bisnis-dan-engineering" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Perbandingan Akademik, Bisnis, dan Engineering</h1>
+<p>Perbandingan ketiga konteks tersebut dapat diringkas sebagai berikut.</p>
+<section id="fokus-utama" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="fokus-utama"><span class="header-section-number">8.1</span> Fokus utama</h2>
+<ul>
+<li><strong>Bisnis:</strong> penciptaan nilai dan keunggulan bersaing.</li>
+<li><strong>Engineering:</strong> performa sistem dalam menyelesaikan tugas.</li>
+<li><strong>Akademik:</strong> legitimasi institusional, kualitas, dan penerimaan formal.</li>
+</ul>
+</section>
+<section id="bentuk-masalah" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="bentuk-masalah"><span class="header-section-number">8.2</span> Bentuk masalah</h2>
+<ul>
+<li><strong>Bisnis:</strong> bagaimana menangkap peluang dan menciptakan nilai.</li>
+<li><strong>Engineering:</strong> bagaimana mengonfigurasi sistem agar tugas dapat dilakukan.</li>
+<li><strong>Akademik:</strong> bagaimana menghasilkan keputusan yang sah, berbasis bukti, dan diterima komunitas institusi.</li>
+</ul>
+</section>
+<section id="bentuk-evaluasi" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="bentuk-evaluasi"><span class="header-section-number">8.3</span> Bentuk evaluasi</h2>
+<ul>
+<li><strong>Bisnis:</strong> dinilai oleh pasar.</li>
+<li><strong>Engineering:</strong> dinilai oleh performa dan reliabilitas.</li>
+<li><strong>Akademik:</strong> dinilai oleh aturan, prosedur, bukti, dan argumentasi formal.</li>
+</ul>
+</section>
+<section id="bentuk-keluaran-keputusan" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="bentuk-keluaran-keputusan"><span class="header-section-number">8.4</span> Bentuk keluaran keputusan</h2>
+<ul>
+<li><strong>Bisnis:</strong> strategi, model bisnis, produk, dan operasi.</li>
+<li><strong>Engineering:</strong> desain, konfigurasi, prototipe, dan sistem.</li>
+<li><strong>Akademik:</strong> laporan, kebijakan, dokumen mutu, proposal, dan keputusan formal.</li>
+</ul>
+</section>
+<section id="pola-legitimasi" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="pola-legitimasi"><span class="header-section-number">8.5</span> Pola legitimasi</h2>
+<ul>
+<li><strong>Bisnis:</strong> hasil dan pertumbuhan.</li>
+<li><strong>Engineering:</strong> fungsi dan keselamatan.</li>
+<li><strong>Akademik:</strong> bukti, retorika ilmiah, aturan, dan proses.</li>
+</ul>
+</section>
+</section>
+<section id="peran-probabilitas-komputasi-dan-ai" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Peran Probabilitas, Komputasi, dan AI</h1>
+<p>Dalam ketiga konteks, model probabilitas dan komputasi berperan penting. Probabilitas memungkinkan ketidakpastian diperlakukan secara eksplisit, misalnya:</p>
+<ul>
+<li>ketidakpastian pasar dalam bisnis,</li>
+<li>ketidakpastian kegagalan komponen dalam <em>engineering</em>,</li>
+<li>ketidakpastian hasil strategi peringkat dan akreditasi dalam akademik.</li>
+</ul>
+<p>Sementara itu, AI memungkinkan integrasi berbagai prinsip pengambilan keputusan:</p>
+<ul>
+<li>representasi realitas,</li>
+<li>perumusan alternatif,</li>
+<li>simulasi konsekuensi,</li>
+<li>penanganan multi-objektif,</li>
+<li>komunikasi hasil,</li>
+<li>dan penyusunan argumen dalam bentuk yang sesuai konteks.</li>
+</ul>
+<p>Dalam setting akademik secara khusus, AI dapat membantu menghasilkan:</p>
+<ul>
+<li>alternatif rencana strategis,</li>
+<li>analisis <em>gap</em>,</li>
+<li>simulasi dampak,</li>
+<li><em>policy brief</em>,</li>
+<li>laporan akreditasi,</li>
+<li>dan narasi argumentatif untuk memperoleh dukungan internal.</li>
+</ul>
+<p>Namun, AI sebaiknya dipahami sebagai <strong>mitra pendukung keputusan</strong>, bukan pengganti penentu keputusan. Keputusan akhir tetap harus berada pada manusia yang memahami konteks, nilai, dan tanggung jawab institusional.</p>
+</section>
+<section id="kerangka-konseptual" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Kerangka Konseptual</h1>
+<p>Berdasarkan pembahasan di atas, pengambilan keputusan dapat dirumuskan dalam kerangka berikut:</p>
+<ol type="1">
+<li><strong>Realitas menghadirkan masalah.</strong></li>
+<li><strong>Manusia atau organisasi membingkai masalah sebagai pertanyaan.</strong></li>
+<li><strong>Model dipakai untuk merepresentasikan aspek penting realitas.</strong></li>
+<li><strong>Probabilitas digunakan untuk mengelola ketidakpastian.</strong></li>
+<li><strong>Komputasi digunakan untuk membandingkan alternatif.</strong></li>
+<li><strong>AI digunakan untuk mengintegrasikan analisis, simulasi, dan komunikasi.</strong></li>
+<li><strong>Keputusan dipilih sebagai jawaban yang paling layak dijalankan.</strong></li>
+<li><strong>Konsekuensi menjadi penilai akhir kualitas keputusan.</strong></li>
+</ol>
+<p>Dalam kerangka ini:</p>
+<ul>
+<li>bisnis menekankan nilai,</li>
+<li><em>engineering</em> menekankan performa,</li>
+<li>akademik menekankan legitimasi.</li>
+</ul>
+<p>Tetapi ketiganya tetap berbagi inti yang sama: memilih jawaban terbaik atas masalah yang telah diformulasikan.</p>
+</section>
+<section id="kesimpulan" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Kesimpulan</h1>
+<p>Pengambilan keputusan adalah proses memilih jawaban atas pertanyaan tentang tindakan di bawah ketidakpastian. Ia bukan sekadar memilih alternatif, tetapi juga merancang pertanyaan yang tepat, membangun model yang memadai, dan mengantisipasi konsekuensi dari pelaksanaan keputusan.</p>
+<p>Dalam setting bisnis, keputusan terutama ditujukan untuk menciptakan nilai dan memenangkan persaingan. Dalam setting <em>engineering</em>, keputusan ditujukan untuk menemukan konfigurasi sistem yang mampu mengubah energi dan sumber daya menjadi kerja yang efektif. Dalam setting akademik, keputusan harus diterjemahkan menjadi bentuk yang sah secara institusional, berbasis bukti, tertulis, dan dapat diterima melalui retorika ilmiah serta prosedur formal.</p>
+<p>Kasus peringkat universitas dan akreditasi menunjukkan bahwa lingkungan akademik memerlukan sistem pendukung keputusan yang tidak hanya menghitung skor, tetapi juga memodelkan realitas institusi, kepentingan orang dalam, kriteria eksternal, dan bentuk legitimasi formal. Dalam konteks ini, model probabilitas, komputasi, dan kecerdasan buatan berpotensi besar untuk membantu universitas menghasilkan alternatif rencana, mensimulasikan konsekuensinya, dan mengkomunikasikannya dalam bentuk laporan yang sah dan meyakinkan.</p>
+<p>Dengan demikian, pengambilan keputusan yang baik pada akhirnya adalah perpaduan antara seni merumuskan pertanyaan, ilmu membangun model, dan kebijaksanaan memilih jawaban yang konsekuensinya paling layak diterima.</p>
+</section>
+<section id="daftar-pustaka-sementara" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Daftar Pustaka Sementara</h1>
+<p>Bagian ini dapat dilengkapi kemudian dengan sumber-sumber tentang:</p>
+<ul>
+<li><em>decision analysis</em>,</li>
+<li><em>strategic management</em>,</li>
+<li><em>systems engineering</em>,</li>
+<li><em>organizational theory</em>,</li>
+<li>AI untuk <em>decision support systems</em>,</li>
+<li>dan tata kelola pendidikan tinggi.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Disalin!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Disalin!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

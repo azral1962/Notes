@@ -1,0 +1,47 @@
+
+header: Triune Intelligence Smart Engineering
+author:
+  - name: Armein Z. R. Langi
+    email: armein@itb.ac.id
+    orcid: 0000-0001-9516-1461
+    affiliations:
+      - name: Institut Teknologi Bandung
+thanks: |
+  This work was supported by the Indonesian Ministry of Education, Culture, Research, and Technology under Grant No. 2026.
+abstract: |
+  {{< lipsum 1 >}}
+
+  
+date: today
+date-format: full
+bibliography: references.bib
+format:
+  academic-typst:
+    section-numbering: "1.1.1"
+    bibliographystyle: "chicago-author-date"
+    include-in-header:
+      - text: '#import "@preview/mitex:0.2.4": *'
+brand: 
+  typography:
+    fonts:
+      - family: Jost
+        source: google
+        weight: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      - family: Libertinus Serif
+        source: file
+        files:
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusSerif-Regular.otf
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusSerif-Italic.otf
+            style: italic
+      - family: Libertinus Math
+        source: file
+        files:
+          - path: static/fonts/Libertinus-7.051/static/OTF/LibertinusMath-Regular.otf
+    base: Libertinus Serif
+    headings: Jost
+  defaults:
+    academic-typst:
+      mathfont: Libertinus Math
+execute: 
+  echo: false
+  warning: false
