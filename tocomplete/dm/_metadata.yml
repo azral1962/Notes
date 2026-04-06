@@ -8,8 +8,7 @@ author:
       - name: Institut Teknologi Bandung
 thanks: |
   This work was supported by the Indonesian Ministry of Education, Culture, Research, and Technology under Grant No. 2026.
-abstract: |
-  {{< lipsum 1 >}}
+
 
   
 date: today

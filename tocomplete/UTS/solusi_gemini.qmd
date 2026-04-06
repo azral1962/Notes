@@ -1,0 +1,177 @@
+---
+title: "Solusi Lengkap UTS Probabilitas dan Statistika 2026"
+author: "gemini"
+format: typst
+lang: id
+---
+
+
+Berikut adalah solusi lengkap untuk draf soal **Ujian Tengah Semester (UTS) Probabilitas dan Statistika 2026**. Solusi ini disusun berdasarkan urutan bagian dalam dokumen, lengkap dengan langkah-langkah pengerjaannya.
+
+---
+
+## 1. Survei Adiksi Internet & Program Detoks Digital
+Bagian ini menggunakan data tetap (tidak bergantung pada NIM).
+
+### A. Hasil Survei IAT (N = 5.000)
+**a. Probabilitas kategori Sedang ($S$) atau Berat ($B$):**
+$$P(S \cup B) = P(S) + P(B) = 0.20 + 0.05 = 0.25$$
+**Jawaban: 25.0%**
+
+**b. Probabilitas terpilih kategori Ringan ($R$) dari mereka yang Kecanduan:**
+Kategori "Kecanduan" mencakup $R, S,$ dan $B$.
+$$P(\text{Kecanduan}) = P(R) + P(S) + P(B) = 0.40 + 0.20 + 0.05 = 0.65$$
+$$P(R | \text{Kecanduan}) = \frac{P(R)}{P(\text{Kecanduan})} = \frac{0.40}{0.65} \approx 0.61538$$
+**Jawaban: 61.5%**
+
+**c. Hitung Odds (Kecanduan vs Normal):**
+$$\text{Odds} = \frac{P(\text{Kecanduan})}{P(\text{Normal})} = \frac{0.65}{0.35} \approx 1.8571$$
+**Jawaban: 1.86**
+
+### B. Program Detoks Digital 30 Hari
+**d. Probabilitas keberhasilan program ($P(\text{Berhasil})$):**
+Gunakan hukum probabilitas total berdasarkan jumlah peserta per kategori:
+* Berhasil $R = 1.600$
+* Berhasil $S = 600$
+* Berhasil $B = 50$
+* Total Berhasil $= 1.600 + 600 + 50 = 2.250$
+* Total Peserta $= 2.000 + 1.000 + 250 = 3.250$
+$$P(\text{Berhasil}) = \frac{2.250}{3.250} \approx 0.6923$$
+**Jawaban: 69.2%**
+
+**e. Banyak susunan tim mentor (5 orang dari 4R, 2S, 1B; minimal 1 tiap kategori):**
+Karena hanya ada 1 orang kategori Berat ($B$), maka 1 posisi sudah pasti terisi $B$. Sisa 4 posisi harus diisi oleh $R$ dan $S$ dengan syarat minimal ada satu $R$ dan satu $S$.
+Kemungkinan kombinasi $(n_R, n_S, n_B)$:
+1.  **3R, 1S, 1B:** $\binom{4}{3} \times \binom{2}{1} \times \binom{1}{1} = 4 \times 2 \times 1 = 8$ cara.
+2.  **2R, 2S, 1B:** $\binom{4}{2} \times \binom{2}{2} \times \binom{1}{1} = 6 \times 1 \times 1 = 6$ cara.
+**Total = 14 cara**
+
+### C. Data Perilaku Digital & Teorema Bayes
+**f. Apakah $M$ dan $G$ independen?**
+$$P(M) \times P(G) = 0.62 \times 0.48 = 0.2976$$
+Karena $P(M \cap G) = 0.20 \neq 0.2976$, maka status $M$ dan $G$ **tidak independen**.
+
+**g. Probabilitas Kecanduan jika sering medsos ($P(\text{Kecanduan} | M)$):**
+Diketahui: $P(M|\text{Kec}) = 0.85$, $P(M|\text{Nor}) = 0.20$, $P(\text{Kec}) = 0.65$, $P(\text{Nor}) = 0.35$.
+$$P(M) = (0.85 \times 0.65) + (0.20 \times 0.35) = 0.5525 + 0.07 = 0.6225$$
+$$P(\text{Kec} | M) = \frac{0.5525}{0.6225} \approx 0.88755$$
+**Jawaban: 88.8%**
+
+---
+
+## 2. Satelit LEO NUSANTARA-SAT
+Variabel: $p = 0.85 + 0.01\delta_3$ dan $p_r = 0.30 + 0.05\delta_3$.
+*(Contoh di bawah menggunakan $\delta_3 = 6 \Rightarrow p = 0.91, p_r = 0.60$)*
+
+**a. Modus jumlah antena yang berfungsi ($X \sim \text{Binomial}(16, p)$):**
+Modus $= \lfloor(n+1)p\rfloor = \lfloor 17p \rfloor$.
+Jika $17 \times 0.91 = 15.47$, maka **Modus = 15**.
+
+**b. Probabilitas beroperasi penuh ($P(X \ge 12)$):**
+$$P(X \ge 12) = \sum_{k=12}^{16} \binom{16}{k} p^k (1-p)^{16-k}$$
+*(Hitung menggunakan tabel Binomial atau kalkulator sesuai nilai $p$)*
+
+**c. Rata-rata percobaan reboot hingga berhasil ($Y \sim \text{Geometric}(p_r)$):**
+$$E(Y) = \frac{1}{p_r}$$
+*(Jika $p_r = 0.60$, maka $E(Y) = 1/0.6 \approx 1.67$ kali)*
+
+**d. Probabilitas reboot berhasil dalam 5 percobaan atau kurang:**
+$$P(Y \le 5) = 1 - (1 - p_r)^5$$
+
+**e. Probabilitas paling sedikit satu dari dua antena pulih (masing-masing 4 kali coba):**
+Probabilitas satu antena gagal pulih: $q_{fail} = (1 - p_r)^4$.
+Probabilitas kedua antena gagal pulih: $Q_{total} = q_{fail} \times q_{fail} = (1 - p_r)^8$.
+$P(\text{minimal 1 pulih}) = 1 - (1 - p_r)^8$.
+
+**f. Jumlah minimum percobaan $k$ agar $P(\text{berhasil}) > 95\%$:**
+$$1 - (1 - p_r)^k > 0.95 \Rightarrow (1 - p_r)^k < 0.05$$
+$$k > \frac{\ln(0.05)}{\ln(1 - p_r)}$$
+
+---
+
+## 3. Pelabuhan Internasional Nusapura
+Variabel: $\lambda = 7 + \delta_3$ kapal/hari.
+*(Contoh menggunakan $\delta_3 = 6 \Rightarrow \lambda = 13$)*
+
+**a. Probabilitas $\le 2$ kapal tiba ($P(X \le 2)$):**
+$$P(X \le 2) = e^{-\lambda} \left( \frac{\lambda^0}{0!} + \frac{\lambda^1}{1!} + \frac{\lambda^2}{2!} \right)$$
+
+**b. Probabilitas kedatangan melebihi rata-rata sebanyak 3 atau lebih:**
+$$P(X \ge \lambda + 3)$$
+
+**c. Probabilitas tidak ada kapal dalam 8 jam ($\lambda_{8h} = \lambda/3$):**
+$$P(X=0) = e^{-\lambda/3}$$
+
+**d. Probabilitas tiba tepat 2 kapal Jumbo ($\lambda_J = 0.15\lambda$):**
+$$P(X_J = 2) = \frac{e^{-0.15\lambda} (0.15\lambda)^2}{2!}$$
+
+**e. Probabilitas tidak ada kapal Kecil maupun Jumbo:**
+Karena independen: $P(X_K=0) \times P(X_J=0) = e^{-0.10\lambda} \times e^{-0.15\lambda} = e^{-0.25\lambda}$.
+
+**f. Jumlah dermaga minimum $k$ agar $P(X > k) < 0.05$:**
+Cari nilai $k$ terkecil pada tabel Poisson $\lambda_{8h}$ sehingga $P(X \le k) \ge 0.95$.
+
+---
+
+## 4. AI Monitoring Kabel Optik
+Variabel: $P(\text{Gangguan}) = 0.001\delta_3$. *(Jika $\delta_3=6, P(H)=0.006$)*. $TPR=0.95, FPR=0.05$.
+
+**a. Akurasi:**
+$$\text{Akurasi} = P(TP) + P(TN) = (0.95 \times P(H)) + (0.95 \times (1-P(H)))$$
+Karena $TPR = 0.95$ dan $1-FPR = 0.95$, maka akurasi di sini adalah **0.9500**.
+
+**b. Positive Predictive Value (PPV):**
+$$PPV = \frac{0.95 \times P(H)}{(0.95 \times P(H)) + (0.05 \times (1-P(H)))}$$
+
+**c. Negative Predictive Value (NPV):**
+$$NPV = \frac{0.95 \times (1-P(H))}{(0.95 \times (1-P(H))) + (0.05 \times P(H))}$$
+
+**d. Confusion Matrix (10.000 segmen):**
+* **Total Gangguan (H)** $= 10.000 \times 0.001\delta_3 = 10\delta_3$
+* **TP** $= 0.95 \times 10\delta_3 = 9.5\delta_3$
+* **FN** $= 0.05 \times 10\delta_3 = 0.5\delta_3$
+* **Total Aman ($H^c$)** $= 10.000 - 10\delta_3$
+* **FP** $= 0.05 \times (10.000 - 10\delta_3) = 500 - 0.5\delta_3$
+* **TN** $= 0.95 \times (10.000 - 10\delta_3) = 9.500 - 9.5\delta_3$
+
+---
+
+## 5. FIFA World Cup 2026
+Data selisih gol ($X$): -3, -2, -2, -1, -1, -1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3.
+
+**a. Ekspektasi $E(X)$:**
+$$E(X) = \frac{\sum X}{20} = \frac{-3-4-3+0+5+6+6}{20} = \frac{7}{20} = \mathbf{0.35}$$
+
+**b. Varians $Var(X)$:**
+$E(X^2) = \frac{9+8+3+0+5+12+18}{20} = \frac{55}{20} = 2.75$.
+$$Var(X) = 2.75 - (0.35)^2 = \mathbf{2.6275}$$
+
+**c. Ekspektasi Bonus:**
+* $P(X \le -2) = 3/20 = 0.15 \rightarrow 0$ Miliar
+* $P(X = -1) = 3/20 = 0.15 \rightarrow 2$ Miliar
+* $P(X = 0) = 4/20 = 0.20 \rightarrow 5$ Miliar
+* $P(X = 1) = 5/20 = 0.25 \rightarrow 10$ Miliar
+* $P(X \ge 2) = 5/20 = 0.25 \rightarrow 20$ Miliar
+$$E(\text{Bonus}) = (0.15 \cdot 0) + (0.15 \cdot 2) + (0.20 \cdot 5) + (0.25 \cdot 10) + (0.25 \cdot 20) = \mathbf{8.8 \text{ Miliar}}$$
+
+**e. Probabilitas tim menang jika dipastikan tidak seri:**
+$$P(X > 0 | X \neq 0) = \frac{P(X > 0)}{P(X \neq 0)} = \frac{10/20}{16/20} = \frac{10}{16} = \mathbf{0.6250}$$
+
+---
+
+## 6. Data Center Network Topology
+Variabel: $p = 0.9 + 0.01\delta_3$.
+Struktur: Jaringan jembatan (bridge network).
+
+**a. $P(A \leftrightarrow X)$:**
+Menggunakan partisi pada link $vi$ ($P-Q$):
+$$P(A \leftrightarrow X) = p[1 - (1-p)^2]^2 + (1-p)[1 - (1-p^2)^2]$$
+$$P(A \leftrightarrow X) = p(2p-p^2)^2 + (1-p)(2p^2-p^4)$$
+
+**b. $P(B \leftrightarrow X)$:**
+Agar $B$ ke $X$, link $ii$ ($B-Q$) harus ON, lalu $Q$ harus terhubung ke $X$.
+$$P(B \leftrightarrow X) = p \times [1 - (1-p)(1-p^2)] = p^2 + p^3 - p^4$$
+
+**d. Jika $iv$ dan $v$ OFF:**
+Satu-satunya jalur tersisa bagi $A$: $A \xrightarrow{i} P \xrightarrow{vi} Q \xrightarrow{vii} X$.
+$$P(A \leftrightarrow X) = p \times p \times p = \mathbf{p^3}$$

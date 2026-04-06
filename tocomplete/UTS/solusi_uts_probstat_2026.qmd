@@ -1,0 +1,869 @@
+---
+title: "Solusi Lengkap UTS Probabilitas dan Statistika 2026"
+author: "GPT"
+format: typst
+lang: id
+---
+
+# Pendahuluan
+
+Dokumen ini berisi solusi lengkap untuk naskah **UTS Probabilitas dan Statistika 2026**.  
+Untuk soal yang bergantung pada NIM, digunakan tiga digit terakhir:
+
+- $\delta_1 = 1$
+- $\delta_2 = 2$
+- $\delta_3 = 3$
+
+Sehingga:
+
+- Soal 2: $p = 0.85 + 0.01(3) = 0.88$, $p_r = 0.30 + 0.05(3) = 0.45$
+- Soal 3: $\lambda = 7 + 3 = 10$
+- Soal 4: $P(H)=0.001(3)=0.003$
+- Soal 6: $p = 0.9 + 0.01(3)=0.93$
+
+# Soal 1 — Survei Adiksi Internet & Program Detoks Digital
+
+Dari tabel:
+
+- $P(N)=0.35$
+- $P(R)=0.40$
+- $P(S)=0.20$
+- $P(B)=0.05$
+- $P(\text{Kecanduan})=P(R\cup S\cup B)=0.65$
+
+## a. Probabilitas kategori Sedang atau Berat
+
+Karena kategori saling lepas:
+
+$$
+P(S\cup B)=P(S)+P(B)=0.20+0.05=0.25
+$$
+
+**Jawab:** $25.0\%$
+
+## b. Probabilitas Ringan jika diketahui Kecanduan
+
+$$
+P(R\mid \text{Kecanduan})
+=\frac{P(R)}{P(\text{Kecanduan})}
+=\frac{0.40}{0.65}
+=0.6153846
+$$
+
+**Jawab:** $61.5\%$
+
+## c. Odds Kecanduan dibandingkan Normal
+
+$$
+\text{Odds}=\frac{P(\text{Kecanduan})}{P(\text{Normal})}
+=\frac{0.65}{0.35}=1.8571429
+$$
+
+**Jawab:** $1.86$
+
+## d. Probabilitas berhasil menyelesaikan program detoks
+
+Total peserta program:
+
+$$
+2000+1000+250=3250
+$$
+
+Total peserta yang berhasil:
+
+$$
+1600+600+50=2250
+$$
+
+Maka:
+
+$$
+P(\text{Berhasil})=\frac{2250}{3250}=0.6923077
+$$
+
+**Jawab:** $69.2\%$
+
+## e. Banyak susunan tim mentor
+
+Komposisi kandidat:
+
+- 4 Ringan
+- 2 Sedang
+- 1 Berat
+
+Tim berisi 5 orang dan harus memuat minimal 1 dari setiap kategori.
+
+Karena hanya ada 1 orang kategori Berat, maka orang itu **harus** masuk tim.
+
+Sisa 4 anggota dipilih dari 4 Ringan dan 2 Sedang, dengan syarat minimal 1 Ringan dan 1 Sedang.
+
+Kemungkinan komposisi:
+
+1. $3R,1S,1B$
+
+$$
+\binom{4}{3}\binom{2}{1}\binom{1}{1}=4\cdot2\cdot1=8
+$$
+
+2. $2R,2S,1B$
+
+$$
+\binom{4}{2}\binom{2}{2}\binom{1}{1}=6\cdot1\cdot1=6
+$$
+
+Total:
+
+$$
+8+6=14
+$$
+
+**Jawab:** $14$ cara
+
+## f. Apakah $M$ dan $G$ independen?
+
+Diketahui:
+
+- $P(M)=0.62$
+- $P(G)=0.48$
+- $P(M\cap G)=0.20$
+
+Cek syarat independen:
+
+$$
+P(M)P(G)=0.62\times0.48=0.2976
+$$
+
+Karena:
+
+$$
+P(M\cap G)=0.20 \neq 0.2976
+$$
+
+maka **$M$ dan $G$ tidak independen**.
+
+## g. Probabilitas Kecanduan jika diketahui aktif medsos berat
+
+Gunakan Teorema Bayes:
+
+$$
+P(K\mid M)=
+\frac{P(M\mid K)P(K)}
+{P(M\mid K)P(K)+P(M\mid N)P(N)}
+$$
+
+Substitusi:
+
+$$
+P(K\mid M)=
+\frac{0.85(0.65)}
+{0.85(0.65)+0.20(0.35)}
+=
+\frac{0.5525}{0.6225}
+=0.8875502
+$$
+
+**Jawab:** $88.8\%$
+
+# Soal 2 — Satelit LEO NUSANTARA-SAT
+
+Diketahui:
+
+$$
+p=0.88,\qquad p_r=0.45
+$$
+
+$$
+X\sim \text{Binomial}(16,0.88),\qquad Y\sim \text{Geometric}(0.45)
+$$
+
+## a. Modus distribusi jumlah antena aktif
+
+Rumus modus binomial:
+
+$$
+\text{modus}=\lfloor (n+1)p\rfloor
+$$
+
+$$
+\text{modus}=\lfloor 17(0.88)\rfloor=\lfloor 14.96\rfloor=14
+$$
+
+**Jawab:** $14$
+
+## b. Probabilitas satelit beroperasi penuh
+
+Satelit beroperasi penuh jika minimal 12 antena aktif:
+
+$$
+P(X\ge 12)=\sum_{x=12}^{16}\binom{16}{x}(0.88)^x(0.12)^{16-x}
+$$
+
+Lebih praktis dengan komplemen:
+
+$$
+P(X\ge 12)=1-P(X\le 11)\approx 0.955257
+$$
+
+**Jawab:** $95.53\%$
+
+## c. Rata-rata jumlah percobaan reboot hingga sukses pertama
+
+Untuk distribusi geometrik:
+
+$$
+E(Y)=\frac{1}{p_r}
+$$
+
+$$
+E(Y)=\frac{1}{0.45}=2.2222
+$$
+
+**Jawab:** $2.2222$ percobaan
+
+## d. Probabilitas berhasil dalam 5 percobaan atau kurang
+
+$$
+P(Y\le 5)=1-(1-p_r)^5
+$$
+
+$$
+P(Y\le 5)=1-(0.55)^5
+=1-0.0503284375
+=0.9496715625
+$$
+
+**Jawab:** $94.97\%$
+
+## e. Dua antena gagal bersamaan, masing-masing dicoba reboot 4 kali
+
+Probabilitas satu antena **gagal terus** selama 4 percobaan:
+
+$$
+(1-p_r)^4=(0.55)^4=0.09150625
+$$
+
+Karena dua antena independen, probabilitas keduanya gagal terus:
+
+$$
+(0.55)^8=0.0083733938
+$$
+
+Maka probabilitas **minimal satu** antena pulih:
+
+$$
+1-(0.55)^8=0.9916266062
+$$
+
+**Jawab:** $99.16\%$
+
+## f. Jumlah minimum percobaan agar peluang sukses lebih dari 95%
+
+Cari $k$ minimum sehingga:
+
+$$
+1-(0.55)^k>0.95
+$$
+
+setara dengan:
+
+$$
+(0.55)^k<0.05
+$$
+
+$$
+k>\frac{\ln(0.05)}{\ln(0.55)}\approx 5.0053
+$$
+
+Maka:
+
+$$
+k_{\min}=6
+$$
+
+**Jawab:** $6$ percobaan
+
+# Soal 3 — Pelabuhan Internasional Nusapura
+
+Dengan $\lambda=10$:
+
+$$
+X\sim \text{Poisson}(10)
+$$
+
+Untuk shift 8 jam:
+
+$$
+\lambda_{8h}=10\times \frac{8}{24}=\frac{10}{3}\approx 3.3333
+$$
+
+## a. Probabilitas hanya 2 kapal atau kurang
+
+$$
+P(X\le 2)=e^{-10}\left(1+10+\frac{10^2}{2}\right)
+$$
+
+$$
+=e^{-10}(61)\approx 0.0027694
+$$
+
+**Jawab:** $0.28\%$
+
+## b. Probabilitas kedatangan melebihi rata-rata sebanyak 3 kapal atau lebih
+
+Karena $\lambda=10$, yang diminta adalah:
+
+$$
+P(X\ge 13)=1-P(X\le 12)
+$$
+
+Hasil perhitungan:
+
+$$
+P(X\ge 13)\approx 0.208444
+$$
+
+**Jawab:** $20.84\%$
+
+## c. Probabilitas tidak ada kapal datang selama shift 8 jam
+
+$$
+P(X=0)=e^{-10/3}\approx 0.035674
+$$
+
+**Jawab:** $3.57\%$
+
+## d. Probabilitas tepat 2 kapal Jumbo
+
+Laju kapal Jumbo:
+
+$$
+\lambda_J=0.15(10)=1.5
+$$
+
+Maka:
+
+$$
+P(X_J=2)=e^{-1.5}\frac{1.5^2}{2!}
+$$
+
+$$
+=0.223130\times 1.125=0.251021
+$$
+
+**Jawab:** $25.10\%$
+
+## e. Probabilitas tidak ada kapal Kecil maupun Jumbo
+
+$$
+\lambda_K=0.10(10)=1,\qquad \lambda_J=1.5
+$$
+
+Karena independen:
+
+$$
+P(X_K=0, X_J=0)=e^{-1}e^{-1.5}=e^{-2.5}\approx 0.082085
+$$
+
+**Jawab:** $8.21\%$
+
+## f. Jumlah dermaga minimum
+
+Cari $k$ terkecil sehingga:
+
+$$
+P(X>k)<0.05,\qquad X\sim \text{Poisson}(10/3)
+$$
+
+atau:
+
+$$
+P(X\le k)>0.95
+$$
+
+Dari evaluasi kumulatif Poisson:
+
+- $P(X\le 6)\approx 0.9344$
+- $P(X\le 7)\approx 0.9712$
+
+Maka nilai minimum yang memenuhi adalah:
+
+$$
+k=7
+$$
+
+**Jawab:** $7$ dermaga
+
+# Soal 4 — AI Monitoring Kabel Optik Bawah Laut
+
+Diketahui:
+
+$$
+P(H)=0.003,\qquad P(H^c)=0.997
+$$
+
+- TPR $=0.95$
+- FPR $=0.05$
+- FNR $=0.05$
+- TNR $=0.95$
+
+## a. Akurasi sistem
+
+$$
+P(\text{TP} \cup \text{TN})=P(\text{TP})+P(\text{TN})
+$$
+
+$$
+=0.95(0.003)+0.95(0.997)=0.95
+$$
+
+**Jawab:** $0.9500$
+
+## b. Positive Predictive Value (PPV)
+
+$$
+PPV=P(H\mid Alarm)=
+\frac{0.95(0.003)}
+{0.95(0.003)+0.05(0.997)}
+$$
+
+$$
+=
+\frac{0.00285}{0.05270}
+\approx 0.0541
+$$
+
+**Jawab:** $0.0541$
+
+## c. Negative Predictive Value (NPV)
+
+$$
+NPV=P(H^c\mid \text{Tidak Alarm})
+=
+\frac{0.95(0.997)}
+{0.05(0.003)+0.95(0.997)}
+$$
+
+$$
+=
+\frac{0.94715}{0.94730}
+\approx 0.9998
+$$
+
+**Jawab:** $0.9998$
+
+## d. Confusion matrix untuk 10.000 segmen
+
+Jumlah segmen gangguan nyata:
+
+$$
+0.003(10000)=30
+$$
+
+Jumlah segmen aman:
+
+$$
+10000-30=9970
+$$
+
+Maka:
+
+- TP $=0.95(30)=28.5$
+- FN $=0.05(30)=1.5$
+- FP $=0.05(9970)=498.5$
+- TN $=0.95(9970)=9471.5$
+
+| Kondisi nyata | Sistem: Alarm | Sistem: Tidak Alarm | Total |
+|---|---:|---:|---:|
+| Gangguan nyata $H$ | TP = 28.5 | FN = 1.5 | 30 |
+| Segmen aman $H^c$ | FP = 498.5 | TN = 9471.5 | 9970 |
+
+## e. Total kerugian Opsi A
+
+Opsi A:
+
+- TPR = 0.99 $\Rightarrow$ FNR = 0.01
+- FPR = 0.10
+
+Maka:
+
+$$
+FN_A=0.01(30)=0.3
+$$
+
+$$
+FP_A=0.10(9970)=997
+$$
+
+Total biaya (juta rupiah):
+
+$$
+500(FN_A)+20(FP_A)=500(0.3)+20(997)
+$$
+
+$$
+=150+19940=20090
+$$
+
+**Jawab:** $20090$ juta rupiah
+
+## f. Total kerugian Opsi B
+
+Opsi B:
+
+- TPR = 0.90 $\Rightarrow$ FNR = 0.10
+- FPR = 0.02
+
+$$
+FN_B=0.10(30)=3
+$$
+
+$$
+FP_B=0.02(9970)=199.4
+$$
+
+Total biaya:
+
+$$
+500(3)+20(199.4)=1500+3988=5488
+$$
+
+**Jawab:** $5488$ juta rupiah
+
+## g. Opsi terbaik secara bisnis
+
+Bandingkan:
+
+- Opsi A: $20090$ juta
+- Opsi B: $5488$ juta
+
+Karena $5488 < 20090$, maka pilihan terbaik adalah **Opsi B**.
+
+# Soal 5 — FIFA World Cup 2026
+
+Dari data 20 pertandingan, selisih gol empiris:
+
+$$
+-3,-2,-2,-1,-1,-1,0,0,0,0,1,1,1,1,1,2,2,2,3,3
+$$
+
+Frekuensi:
+
+- $-3$: 1
+- $-2$: 2
+- $-1$: 3
+- $0$: 4
+- $1$: 5
+- $2$: 3
+- $3$: 2
+
+## a. Ekspektasi rata-rata selisih gol
+
+$$
+E(X)=\frac{-3(1)-2(2)-1(3)+0(4)+1(5)+2(3)+3(2)}{20}
+$$
+
+$$
+=\frac{7}{20}=0.35
+$$
+
+**Jawab:** $0.35$
+
+## b. Varians selisih gol
+
+$$
+E(X^2)=\frac{9(1)+4(2)+1(3)+0(4)+1(5)+4(3)+9(2)}{20}
+$$
+
+$$
+=\frac{55}{20}=2.75
+$$
+
+$$
+Var(X)=E(X^2)-[E(X)]^2
+=2.75-(0.35)^2
+=2.75-0.1225
+=2.6275
+$$
+
+**Jawab:** $2.6275$
+
+## c. Ekspektasi bonus per pertandingan
+
+Skema bonus:
+
+- Kalah telak ($X\le -2$): 0
+- Kalah tipis ($X=-1$): 2
+- Seri ($X=0$): 5
+- Menang tipis ($X=1$): 10
+- Menang telak ($X\ge 2$): 20
+
+Maka:
+
+$$
+E(B)=0\cdot \frac{3}{20}
++2\cdot \frac{3}{20}
++5\cdot \frac{4}{20}
++10\cdot \frac{5}{20}
++20\cdot \frac{5}{20}
+$$
+
+$$
+=0+0.3+1+2.5+5=8.8
+$$
+
+**Jawab:** $8.8$ miliar rupiah
+
+## d. Varians bonus
+
+$$
+E(B^2)=0^2\cdot \frac{3}{20}
++2^2\cdot \frac{3}{20}
++5^2\cdot \frac{4}{20}
++10^2\cdot \frac{5}{20}
++20^2\cdot \frac{5}{20}
+$$
+
+$$
+=0+0.6+5+25+100=130.6
+$$
+
+$$
+Var(B)=130.6-(8.8)^2=130.6-77.44=53.16
+$$
+
+**Jawab:** $53.16$
+
+## e. Probabilitas menang jika diketahui pertandingan bukan seri
+
+Jumlah pertandingan menang: $10$
+
+Jumlah pertandingan tidak seri: $20-4=16$
+
+$$
+P(X>0\mid X\ne 0)=\frac{10}{16}=0.6250
+$$
+
+**Jawab:** $0.6250$
+
+# Soal 6 — Data Center Servers Architecture
+
+Dengan $p=0.93$.
+
+Untuk konektivitas $A \leftrightarrow X$, link relevan adalah:
+
+- $i : A-P$
+- $iv : A-Q$
+- $v : P-X$
+- $vi : P-Q$
+- $vii : Q-X$
+
+## a. Probabilitas $A \leftrightarrow X$
+
+Rumus hasil dekomposisi keadaan:
+
+$$
+P(A\leftrightarrow X)=2p^2+2p^3-5p^4+2p^5
+$$
+
+Dengan:
+
+$$
+p^2=0.8649,\quad
+p^3=0.804357,\quad
+p^4=0.74805201,\quad
+p^5=0.6956883693
+$$
+
+Maka:
+
+$$
+P(A\leftrightarrow X)
+=2(0.8649)+2(0.804357)-5(0.74805201)+2(0.6956883693)
+$$
+
+$$
+=0.9896306886
+$$
+
+**Jawab:** $0.9896$
+
+## b. Probabilitas $B \leftrightarrow X$
+
+Rumus:
+
+$$
+P(B\leftrightarrow X)=p^2+p^3-p^4
+$$
+
+$$
+=0.8649+0.804357-0.74805201=0.92120499
+$$
+
+**Jawab:** $0.9212$
+
+## c. Probabilitas $C \leftrightarrow X$
+
+Sama dengan kasus B:
+
+$$
+P(C\leftrightarrow X)=0.92120499
+$$
+
+**Jawab:** $0.9212$
+
+## d. Jika link $iv$ dan $v$ OFF
+
+Jalur yang tersisa hanya:
+
+$$
+A \to P \to Q \to X
+$$
+
+Sehingga:
+
+$$
+P(A\leftrightarrow X\mid iv,v\ \text{OFF})=p^3=(0.93)^3=0.804357
+$$
+
+**Jawab:** $0.8044$
+
+## e. Tepat 4 link ON, peluang $A,B,X$ saling terhubung
+
+Total konfigurasi seragam:
+
+$$
+\binom{7}{4}=35
+$$
+
+Jumlah konfigurasi yang membuat $A,B,X$ saling terhubung adalah 9.
+
+Maka:
+
+$$
+P=\frac{9}{35}=0.2571428571
+$$
+
+**Jawab:** $0.2571$
+
+## f. Tepat 4 link ON, peluang $A,B,C,X$ semua dalam satu komponen
+
+Jumlah konfigurasi valid hanya 1 dari 35.
+
+$$
+P=\frac{1}{35}=0.0285714286
+$$
+
+**Jawab:** $0.0286$
+
+## g. Upgrade link $v$ menjadi 0.99
+
+Hasil evaluasi reliabilitas:
+
+$$
+P_1(A\leftrightarrow X)=0.9942402133
+$$
+
+**Jawab:** $0.9942$
+
+## h. Upgrade link $vi$ menjadi 0.99
+
+$$
+P_2(A\leftrightarrow X)=(1-0.99)(2p^2-p^4)+0.99(2p-p^2)^2
+$$
+
+Dengan $p=0.93$:
+
+$$
+2p^2-p^4=2(0.8649)-0.74805201=0.98174799
+$$
+
+$$
+(2p-p^2)^2=(1.86-0.8649)^2=(0.9951)^2=0.99022401
+$$
+
+$$
+P_2=0.01(0.98174799)+0.99(0.99022401)=0.9901392508
+$$
+
+**Jawab:** $0.9901$
+
+## i. Upgrade link $vii$ menjadi 0.99
+
+Karena simetri topologi dengan link $v$:
+
+$$
+P_3(A\leftrightarrow X)=0.9942402133
+$$
+
+**Jawab:** $0.9942$
+
+## j. Opsi dengan reliabilitas paling rendah
+
+Bandingkan:
+
+- Opsi 1: $0.9942$
+- Opsi 2: $0.9901$
+- Opsi 3: $0.9942$
+
+Maka yang paling rendah adalah **Opsi 2**.
+
+# Ringkasan Jawaban Singkat
+
+## Soal 1
+
+a. $25.0\%$  
+b. $61.5\%$  
+c. $1.86$  
+d. $69.2\%$  
+e. $14$ cara  
+f. Tidak independen  
+g. $88.8\%$
+
+## Soal 2
+
+a. $14$  
+b. $95.53\%$  
+c. $2.2222$  
+d. $94.97\%$  
+e. $99.16\%$  
+f. $6$ percobaan
+
+## Soal 3
+
+a. $0.28\%$  
+b. $20.84\%$  
+c. $3.57\%$  
+d. $25.10\%$  
+e. $8.21\%$  
+f. $7$ dermaga
+
+## Soal 4
+
+a. $0.9500$  
+b. $0.0541$  
+c. $0.9998$  
+d. TP = 28.5, FN = 1.5, FP = 498.5, TN = 9471.5  
+e. $20090$ juta rupiah  
+f. $5488$ juta rupiah  
+g. **B**
+
+## Soal 5
+
+a. $0.35$  
+b. $2.6275$  
+c. $8.8$ miliar rupiah  
+d. $53.16$  
+e. $0.6250$
+
+## Soal 6
+
+a. $0.9896$  
+b. $0.9212$  
+c. $0.9212$  
+d. $0.8044$  
+e. $0.2571$  
+f. $0.0286$  
+g. $0.9942$  
+h. $0.9901$  
+i. $0.9942$  
+j. **2**
