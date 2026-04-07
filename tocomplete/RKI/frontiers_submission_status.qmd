@@ -1,0 +1,42 @@
+---
+title: "Submission Status: Frontiers in Education"
+format:
+  typst:
+    geometry:
+      - top=3cm
+      - bottom=3cm
+      - left=3cm
+      - right=3cm
+    fontsize: 12pt
+    mainfont: "Times New Roman"
+---
+
+# Review Forum
+
+**Status:**
+✓ 1. Initial Validation  
+✓ 2. Editorial Assignment  
+✓ 3. Independent Review  
+✓ 4. Interactive Review  
+**➔ 5. Review Finalized**  
+&nbsp;&nbsp;&nbsp;&nbsp;6. Final Validation  
+&nbsp;&nbsp;&nbsp;&nbsp;7. Final Decision  
+
+---
+
+### [Orchestrating Value Co-Creation in Digital Education Using the TISE-VALORIZE Framework: From Knowing to Becoming](#)
+
+*Meliana Christianti Johan*, *Armein Z. R. Langi*, *I Gusti Bagus Baskara Nugraha*, *Radiant Victor Imbar* and *Parlindungan Sinaga*
+
+**Original Research, Front. Educ. - Digital Learning Innovations**  
+**Received on:** 10 Mar 2026  |  **Edited by:** Ana María Pinto-Llorente  
+**Manuscript ID:** 1827542  
+**Research Topic:** Human-Centered Generative AI in Education: Assessment, Agency, and Equity  
+**Scope Statement:** This paper presents the Triune-Intelligence... *more*  
+**Keywords:** artificial intelligence, Cognitive Load Theory, Engineering Education, Professional identity formation, self-determination theory, TISE-VALORIZE framework, value co-creation
+
+---
+
+> 🕒 **NO ACTION IS REQUIRED FROM YOU**
+> 
+> The Associate Editor Ana María Pinto-Llorente is evaluating any revisions made to the manuscript to take a final decision.

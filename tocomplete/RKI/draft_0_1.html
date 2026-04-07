@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>draft_0_1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="draft_0_1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="draft_0_1_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="draft_0_1_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="draft_0_1_files/libs/quarto-html/popper.min.js"></script>
+<script src="draft_0_1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="draft_0_1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="draft_0_1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="draft_0_1_files/libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="draft_0_1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="draft_0_1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="draft_0_1_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<hr>
+<p>format: typst: number-sections: false geometry: - top=3cm - bottom=3cm - left=4cm - right=3cm fontsize: 12pt mainfont: “Times New Roman” linestretch: 1.5 include-in-header: cover.typ —</p>
+<section id="ringkasan-eksekutif" class="level1">
+<h1>RINGKASAN EKSEKUTIF</h1>
+<p>Profesi rekayasawan (insinyur) saat ini menghadapi krisis eksistensial akibat otomatisasi dari Kecerdasan Buatan (AI), di mana diperkirakan 47% dari tugas teknik rutin akan diotomatisasi dalam lima tahun ke depan. Kondisi ini mengungkap kesenjangan pedagogis inti dalam pendidikan tinggi, yakni fokus yang berlebihan pada penguasaan konten (<em>knowing</em>) sambil mengabaikan kompetensi khas manusia, seperti penalaran etis dan pemecahan masalah kompleks (<em>becoming</em>).</p>
+<p>Riset ini bertujuan mengembangkan dan memvalidasi kerangka kerja pedagogis yang tangguh terhadap otomasi melalui sistem <em>Collaborative Knowledge Management System-Smart Engineering</em> (CKMS-SE) sebagai perwujudan operasional prinsip TISE (<em>Triune-Intelligence Smart Engineering</em>) dan <em>Valorize</em>. Dalam paruh waktu pelaksanaan, riset telah merumuskan landasan teori berdasarkan <em>Cognitive Load Theory</em> (CLT) dan <em>Dual Coding Theory</em> (DCT), serta berhasil melakukan uji kuasi-eksperimental pada 142 mahasiswa. Hasil menunjukkan lonjakan signifikan pada motivasi intrinsik (Cohen’s <span class="math inline">\(d = 0.97\)</span>), identitas profesional (<span class="math inline">\(d = 0.84\)</span>), dan pembelajaran transfer (<span class="math inline">\(d = 0.95\)</span>). Platform ini juga mendokumentasikan penciptaan 427 artefak berharga dengan 16% tingkat penggunaan ulang oleh kohort berikutnya. Capaian luaran sejauh ini meliputi sebuah draf artikel jurnal internasional yang kini berada pada status <em>Under Review</em> di penerbit Frontiers (Jurnal Q2 Scopus).</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="bab-1-pendahuluan" class="level1">
+<h1>BAB 1 PENDAHULUAN</h1>
+<section id="latar-belakang-masalah" class="level2">
+<h2 class="anchored" data-anchor-id="latar-belakang-masalah">1.1 LATAR BELAKANG MASALAH</h2>
+<p>Pendidikan teknik selama ini bertumpu pada pendekatan berbasis konten, di mana mahasiswa menghabiskan sebagian besar waktunya mempelajari rumus matematika, algoritma, dan desain perangkat lunak rutin. Namun, Laporan Forum Ekonomi Dunia 2023 memperkirakan bahwa 47% tugas teknik saat ini akan menghadapi otomatisasi dari mesin dalam waktu lima tahun ke depan.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_02.png" class="img-fluid figure-img"></p>
+<figcaption>Krisis Eksistensial Saat AI Mengautomasi ‘Pengetahuan’ Insinyur</figcaption>
+</figure>
+</div>
+<p>Otomatisasi ini mengungkap kesenjangan kritis: pendidikan kita terlalu memprioritaskan “mengetahui” (<em>knowing</em>), sebuah kemampuan yang kian mudah direplikasi oleh AI, namun mengabaikan pembentukan “menjadi” (<em>becoming</em>), yakni kemampuan yang berakar pada nilai-nilai manusia yang unik seperti etika, kolaborasi, dan empati (prinsip <em>Homocordium</em>).</p>
+<p>Lebih jauh, dari perspektif psikologi kognitif, pendekatan tradisional menimbulkan beban kognitif yang masif. Domain sistem dan sinyal yang sarat konsep dan matematika sering kali membebani memori kerja mahasiswa, yang secara alamiah hanya mampu menyimpan 3 hingga 7 potong informasi dalam waktu 15 hingga 30 detik. Jika lingkungan pembelajaran hanya menambah <em>extraneous load</em> (beban kognitif eksternal yang tidak relevan), proses pembentukan skema mental atau keahlian sejati akan sangat terhambat.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_03.png" class="img-fluid figure-img"></p>
+<figcaption>Respon Filosofis: Dari ‘Sekadar Tahu’ Menjadi ‘Ahli Seutuhnya’</figcaption>
+</figure>
+</div>
+<p>Terdapat perbandingan antara Paradigma Lama dan Paradigma Baru.</p>
+<ul>
+<li><p><strong>Paradigma Lama (Knowing / Sekadar Tahu):</strong> Fokus pada penguasaan konten. Sistem ini menilai apa yang mahasiswa <em>tahu</em>, yang mana keahlian ini sangat rentan terhadap automasi.</p></li>
+<li><p><strong>Paradigma Baru (Becoming / Ahli Seutuhnya):</strong> Fokus pada pembentukan karakter, pola pikir, dan penilaian profesional. Sistem ini menilai siapa mahasiswa tersebut akan <em>menjadi</em>. Karakteristik ini tangguh dan tahan terhadap ancaman automasi. Pergeseran fundamental ini berlabuh pada prinsip <strong>Homocordium (TISE)</strong>: yaitu sebuah sintesis dari nilai-nilai, etika, kreativitas, dan tujuan yang mendefinisikan kemanusiaan. Ini adalah proposisi nilai yang bertahan lama untuk pendidikan tinggi di era Kecerdasan Buatan (AI).</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_04.png" class="img-fluid figure-img"></p>
+<figcaption>Memperkenalkan CKMS-SE: Cetak Biru untuk Filosofi yang Dapat Dieksekusi</figcaption>
+</figure>
+</div>
+<p>Untuk menjawab tantangan tersebut, riset ini mengembangkan <strong>CKMS-SE</strong> (<em>Collaborative Knowledge Management System for Smart Engineering</em>). Sistem ini bukan sekadar alat, melainkan validasi empiris dan perwujudan operasional pertama dari filosofi TISE-Valorize. Riset ini mengajukan pertanyaan utama: “Apakah sistem manajemen pengetahuan kolaboratif yang dirancang melalui prinsip TISE-Valorize, yang menggabungkan pemodelan kognitif formal dan alur kerja profesional, dapat meningkatkan pembentukan identitas profesional dan penciptaan nilai yang terukur dalam pendidikan teknik?” Langkah operasionalisasinya dibagi menjadi tiga tahap:]</p>
+<ol type="1">
+<li><p><strong>Mengoperasionalkan TISE:</strong> Menghubungkan prinsip abstrak (Homocordium) dengan praktik terukur melalui mesin PUDAL &amp; PSKVE.</p></li>
+<li><p><strong>Meningkatkan Fidelitas Kognitif:</strong> Menggunakan <em>Multi-Graph Taxonomy</em> untuk memodelkan proses berpikir ahli secara eksplisit.</p></li>
+<li><p><strong>Menanamkan Alur Kerja Profesional:</strong> Mengintegrasikan <em>Agile/Scrum</em> dan Git/GitHub untuk menciptakan simulasi profesi yang otentik.</p></li>
+</ol>
+</section>
+<section id="tujuan-penelitian" class="level2">
+<h2 class="anchored" data-anchor-id="tujuan-penelitian">1.2 TUJUAN PENELITIAN</h2>
+<p>Tujuan dari penelitian ini adalah:</p>
+<ol type="1">
+<li><p>Merumuskan pergeseran fundamental tujuan pendidikan dari penguasaan konten teknis yang rentan otomatisasi menuju pembentukan karakter, pola pikir, dan penilaian profesional (<em>becoming</em>) melalui kerangka <em>Triune-Intelligence Smart Engineering</em> (TISE) dan VALORIZE.</p></li>
+<li><p>Mengembangkan dan memvalidasi sebuah purwarupa operasional bernama <em>Collaborative Knowledge Management System-Smart Engineering</em> (CKMS-SE) yang mengintegrasikan <em>Cognitive Load Theory</em> (CLT) dan <em>Self-Determination Theory</em> (SDT) ke dalam praktik kelas harian.</p></li>
+<li><p>Mengukur efektivitas CKMS-SE terhadap tingkat motivasi intrinsik, identitas profesional, kapabilitas pembelajaran transfer, dan penciptaan nilai holistik (melalui pengukuran <em>PSKVE Value Portfolio</em>) jika dibandingkan dengan metode pengajaran konvensional.</p></li>
+</ol>
+</section>
+</section>
+<section id="bab-2-metodologi" class="level1">
+<h1>BAB 2 METODOLOGI</h1>
+<section id="umum" class="level2">
+<h2 class="anchored" data-anchor-id="umum">2.1 Umum</h2>
+<p>Riset ini mengadopsi desain studi kuasi-eksperimental dengan grup kontrol (<span class="math inline">\(n=71\)</span>) dan grup intervensi (<span class="math inline">\(n=71\)</span>), yang dilakukan selama 12 minggu masa perkuliahan. Populasi terdiri dari 142 mahasiswa sarjana tingkat tiga di Institut Teknologi Bandung yang terdaftar dalam dua mata kuliah inti paralel, yakni Probabilitas &amp; Statistik serta Sistem Teknik.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_05.png" class="img-fluid figure-img"></p>
+<figcaption>Dibangun di Atas Fondasi Pedagogis yang Teruji</figcaption>
+</figure>
+</div>
+<p>Sistem CKMS-SE diimplementasikan berdasarkan tiga landasan teoritis utama:</p>
+<ol type="1">
+<li><p><strong>Self-Determination Theory (SDT):</strong> Motivasi intrinsik tumbuh dari pemenuhan kebutuhan dasar akan otonomi, kompetensi, dan keterhubungan. Implementasinya di CKMS-SE adalah melalui <em>Knowledge Marketplace</em> (memberikan otonomi memilih masalah), <em>Knowledge Maps</em> (membangun kompetensi visualisasi), dan <em>Peer Review</em> (mendorong keterhubungan kolaboratif).</p></li>
+<li><p><strong>Cognitive Load Theory (CLT):</strong> Pembelajaran dioptimalkan dengan meminimalkan beban kognitif yang tidak relevan (ekstrinsik). Implementasinya menggunakan <em>Knowledge Maps</em> yang bertindak sebagai alat visualisasi untuk mengeksternalkan skema berpikir ahli, sehingga secara signifikan mengurangi beban asing dan mendukung konstruksi skema yang relevan di memori kerja.</p></li>
+<li><p><strong>Communities of Practice (CoP):</strong> Pengetahuan sejati muncul melalui partisipasi dan kontribusi bermakna di dalam komunitas. Implementasinya adalah melalui penciptaan “Aset Artefak”, yang memposisikan mahasiswa sebagai praktisi junior yang artefaknya dikelola menjadi aset komunitas, demi memperkuat identitas profesional mereka.</p></li>
+</ol>
+<p>Instrumen pengukuran yang digunakan meliputi pengujian praktek untuk <em>Transfer Learning</em> (kemampuan penalaran pada konteks baru) serta kuesioner tervalidasi: <em>Intrinsic Motivation Inventory</em> (<span class="math inline">\(\alpha = 0.89\)</span>) dan <em>Learning &amp; Professional Identity in Practice Scale</em> (LPIPS, <span class="math inline">\(\alpha = 0.84\)</span>).</p>
+<p>Grup intervensi mendapatkan perlakuan pengajaran berbasis arsitektur <strong>CKMS-SE</strong>, sebuah <em>Simulasi Profesi</em> berfidelitas tinggi yang bertumpu pada pendekatan kolaboratif berbasis Agile/Scrum dan kontrol versi menggunakan Git/GitHub.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_06.png" class="img-fluid figure-img"></p>
+<figcaption>Arsitektur Sistem CKMS-SE: Ekosistem Terpadu</figcaption>
+</figure>
+</div>
+<p>Secara teknis, ekosistem CKMS-SE digerakkan oleh dua mesin utama:</p>
+<ol type="1">
+<li><p><strong>Mesin PUDAL (Perceive, Understand, Decision-making, Act, Learning)</strong>: Sebuah siklus kognitif iteratif berbasis <em>Multi-Graph Taxonomy</em> untuk menuntun mahasiswa melatih penalaran kepakaran mereka di bawah pengawasan asisten kecerdasan buatan (<em>Socratic AI</em>).</p></li>
+<li><p><strong>Mesin Portofolio Nilai (PSKVE)</strong>: Sebuah <em>Knowledge Marketplace</em> di mana tugas mahasiswa bertransformasi dari sekadar kewajiban ujian menjadi aset pengetahuan (Produk, Layanan, Pengetahuan, Nilai Berkelanjutan, dan Lingkungan) yang diberi <em>reward</em> simulasi ekonomi riil.</p></li>
+</ol>
+</section>
+<section id="mesin-kognitif-pudal" class="level2">
+<h2 class="anchored" data-anchor-id="mesin-kognitif-pudal">2.2 Mesin Kognitif PUDAL</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_07.png" class="img-fluid figure-img"></p>
+<figcaption>Mesin Kognitif: Siklus PUDAL untuk Penilaian Ahli</figcaption>
+</figure>
+</div>
+<p>Riset ini menjelaskan bahwa inti kognitif dari sistem ini adalah siklus <strong>PUDAL</strong> yang berulang secara kontinu: <strong>Perceive - Understand - Decision-making - Act - Learning</strong>. Siklus ini berfungsi sebagai “mesin mikro-evolusioner” untuk penyempurnaan pengetahuan secara berkelanjutan. Pada setiap fasenya, mahasiswa diharuskan menganalisis masalah melalui tiga lensa <strong>Triune Intelligence (TI) TISE</strong>, yang divisualisasikan dengan tiga simbol di tengah lingkaran PUDAL:</p>
+<ul>
+<li><p><strong>Homocordium</strong> (simbol hati/otak): Nilai-nilai kemanusiaan &amp; etika.</p></li>
+<li><p><strong>Homodeus</strong> (simbol <em>chip</em> cerdas): Logika komputasi &amp; Kecerdasan Buatan (AI).</p></li>
+<li><p><strong>Natural Intelligence</strong> (simbol daun): Hukum fisika dan batasan alam. Sistem ini secara formal menanamkan pemikiran holistik, yang memaksa sintesis antara nilai-nilai manusia, logika mesin, dan batasan ekologis alam.</p></li>
+</ul>
+</section>
+<section id="penerapan-artefak-kognitif" class="level2">
+<h2 class="anchored" data-anchor-id="penerapan-artefak-kognitif">2.3 Penerapan Artefak Kognitif</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_08.png" class="img-fluid figure-img"></p>
+<figcaption>Dari Proses ke Produk: Artefak Kognitif Tingkat Tinggi</figcaption>
+</figure>
+</div>
+<p>Siklus PUDAL bukan sekadar latihan teoritis; siklus ini menuntut mahasiswa memproduksi artefak kognitif spesifik yang sesuai dengan pemikiran Taksonomi Bloom tingkat tinggi, yang dimodelkan menggunakan kerangka <em>Multi-Graph Taxonomy</em> formal. Pemetaan fase dan artefaknya adalah sebagai berikut:</p>
+<ul>
+<li><p><strong>Perceive:</strong> Menghasilkan <em>Factual Association Map</em>.</p></li>
+<li><p><strong>Understand:</strong> Menghasilkan <em>Directed Acyclic Graph (DAG)</em> dan <em>Decomposition Tree</em>.</p></li>
+<li><p><strong>Decision-making:</strong> Menghasilkan <em>Trade-Off Analysis Graph (Weighted Graph)</em>.</p></li>
+<li><p><strong>Act:</strong> Menghasilkan <em>Process Application Map (Flowchart)</em>.</p></li>
+<li><p><strong>Learning:</strong> Menghasilkan <em>Synthesized Design Map (Network Graph)</em>. Tujuannya adalah agar mahasiswa tidak hanya sekadar menyelesaikan masalah, melainkan secara eksplisit memodelkan dan mendokumentasikan proses berpikir ahli mereka.</p></li>
+</ul>
+</section>
+<section id="portofolio-nilai-pskve" class="level2">
+<h2 class="anchored" data-anchor-id="portofolio-nilai-pskve">2.4 Portofolio Nilai PSKVE</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_09.png" class="img-fluid figure-img"></p>
+<figcaption>Mesin Nilai: Portofolio PSKVE untuk Penciptaan Nilai Holistik</figcaption>
+</figure>
+</div>
+<p>Untuk menyelaraskan insentif dengan filosofi “Menjadi”, sistem merekayasa ulang sistem penilaian di dalam <em>marketplace</em>. Mata uang yang sebelumnya berbasis pada Taksonomi Bloom digantikan dengan <strong>Portofolio Nilai Multi-Aset PSKVE</strong>. Sistem ini memberikan penghargaan kepada mahasiswa karena telah menghasilkan artefak yang menciptakan “nilai holistik”, yang secara langsung menyimulasikan tiga pilar nilai rekayasa modern: Ekonomi, Perlindungan, dan Sosial. Dimensi portofolio tersebut terdiri dari:</p>
+<ul>
+<li><p><strong>P: Product</strong> (Produk)</p></li>
+<li><p><strong>S: Service</strong> (Layanan)</p></li>
+<li><p><strong>K: Knowledge</strong> (Pengetahuan)</p></li>
+<li><p><strong>V: Value</strong> (Nilai/Pertukaran)</p></li>
+<li><p><strong>E: Environment</strong> (Lingkungan/Keberlanjutan)</p></li>
+</ul>
+</section>
+<section id="dimensi-nilai-pskve" class="level2">
+<h2 class="anchored" data-anchor-id="dimensi-nilai-pskve">2.5 Dimensi Nilai PSKVE</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_10.png" class="img-fluid figure-img"></p>
+<figcaption>Dimensi Nilai PSKVE dalam Praktik</figcaption>
+</figure>
+</div>
+<p>Tabel yang merincikan aset yang diberikan dalam sistem dan contoh konkret penciptaan nilainya oleh mahasiswa:</p>
+<ul>
+<li><p><strong>(K) Knowledge:</strong> Aset berupa <em>Knowledge Credits (KC)</em>. Menghargai Kedalaman Kognitif. Contoh: Menghasilkan DAG formal yang memetakan hubungan konseptual yang kompleks.</p></li>
+<li><p><strong>(P) Product:</strong> Aset berupa <em>Productivity Units (PU)</em>. Menghargai Nilai Ekonomi / Efisiensi. Contoh: Menulis skrip Python untuk mengotomatisasi perhitungan.</p></li>
+<li><p><strong>(S) Service:</strong> Aset berupa <em>Service Vouchers (SV)</em>. Menghargai Desain yang Berpusat pada Manusia. Contoh: Membuat analisis pemangku kepentingan yang memprioritaskan aksesibilitas.</p></li>
+<li><p><strong>(V) Value:</strong> Aset berupa <em>Economic Shares (ES)</em>. Menghargai Pertukaran Berkelanjutan. Contoh: Mengusulkan model bisnis yang layak untuk distribusi nilai yang adil.</p></li>
+<li><p><strong>(E) Environment:</strong> Aset berupa <em>Sustainability Bonds (SB)</em>. Menghargai Nilai Perlindungan / Etika. Contoh: Melakukan Penilaian Siklus Hidup (LCA) untuk mitigasi dampak lingkungan.</p></li>
+</ul>
+</section>
+<section id="implementasi-alur-kerja" class="level2">
+<h2 class="anchored" data-anchor-id="implementasi-alur-kerja">2.6 Implementasi Alur Kerja</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_11.png" class="img-fluid figure-img"></p>
+<figcaption>Otentisitas Alur Kerja: Mengintegrasikan Agile/Scrum &amp; Git</figcaption>
+</figure>
+</div>
+<p>Untuk meningkatkan simulasi profesi dari sekadar cerita menjadi metodologi terstruktur, CKMS-SE menanamkan standar alur kerja industri perangkat lunak. * <strong>Manajemen Proyek Agile/Scrum:</strong> Semester perkuliahan dibagi menjadi <em>“sprint”</em> dengan batasan waktu tertentu. Tujuan <em>Sprint</em> mingguan akan diposting oleh instruktur (yang bertindak sebagai “Lead Stakeholder”). Mahasiswa melakukan praktik profesional yang disimulasikan seperti <em>daily stand-ups</em>, <em>sprint reviews</em> (berupa tinjauan sejawat), dan <em>retrospectives</em>.</p>
+<ul>
+<li><strong>Manajemen Versi dengan Git/GitHub:</strong> Semua “dokumen hidup” seperti peta pengetahuan dan baris kode dikelola menggunakan Git. Ini menciptakan riwayat <em>commit</em> (perubahan) yang dapat diverifikasi, memberikan bukti kepenulisan yang tak terbantahkan, serta mendemonstrasikan praktik kolaboratif yang nyata melalui percabangan fitur (<em>feature branch</em>). Hasil akhirnya: Mahasiswa tidak hanya belajar <em>tentang</em> rekayasa perangkat lunak, mereka <em>mempraktikkan</em> rekayasa perangkat lunak secara langsung dalam lingkungan yang transparan.</li>
+</ul>
+</section>
+<section id="metodologi-penelitian" class="level2">
+<h2 class="anchored" data-anchor-id="metodologi-penelitian">2.7 Metodologi Penelitian</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_12.png" class="img-fluid figure-img"></p>
+<figcaption>Validasi Kerangka Kerja: Desain Studi Eksperimental Kuasi</figcaption>
+</figure>
+</div>
+<p>Gambar ini menguraikan desain studi untuk mengevaluasi dampak CKMS-SE selama satu semester (12 minggu).</p>
+<ul>
+<li><p><strong>Pembagian Kelompok / Populasi:</strong> Melibatkan total <strong>142 mahasiswa</strong> teknik tahun ketiga di ITB. Dibagi menjadi Kelompok Intervensi (n=71) yang menggunakan sistem CKMS-SE dalam simulasi profesi (dosen bertindak sebagai <em>System Architect</em>), dan Kelompok Kontrol (n=71) yang mengikuti kurikulum standar konvensional.</p></li>
+<li><p><strong>Konteks Kursus:</strong> Dilakukan di dua mata kuliah inti paralel, yakni Probabilitas &amp; Statistik dan Sistem Teknik (dipilih karena penekanannya pada pemodelan sistem dan data yang merupakan pusat paradigma TISE).</p></li>
+<li><p><strong>Instrumen Pengukuran:</strong> Meliputi domain Homocordium/Afektif (menggunakan <em>Intrinsic Motivation Inventory</em>, <span class="math inline">\(\alpha = 0.89\)</span>, dan LPIPS, <span class="math inline">\(\alpha = 0.84\)</span>), domain Homodeus/Kognitif (Penilaian pembelajaran transfer, kesepakatan penilai <span class="math inline">\(\kappa = 0.84\)</span>), dan Penciptaan Nilai PSKVE (berdasarkan metrik analitik <em>platform</em>).</p></li>
+</ul>
+</section>
+</section>
+<section id="bab-3-hasil-dan-luaran-yang-dicapai" class="level1">
+<h1>BAB 3 HASIL DAN LUARAN YANG DICAPAI</h1>
+<section id="hasil-penelitian" class="level2">
+<h2 class="anchored" data-anchor-id="hasil-penelitian">3.1 HASIL PENELITIAN</h2>
+<p>Berdasarkan analisis performa terstruktur, studi membuktikan efikasi luar biasa dari kerangka kerja TISE-Valorize. Kelompok intervensi mencatat skor rata-rata sangat baik (M = 94.98, SD = 7.21) dibanding grup kontrol (M = 88.70 dan 86.54) dengan tingkat dispersi/variasi nilai yang jauh lebih kecil (Varians grup eksperimen = 52.01 berbanding &gt;290 pada grup kontrol). Ini membuktikan kerangka pembelajaran berhasil menciptakan kesetaraan pembelajaran dengan menekan <em>extraneous cognitive load</em>.</p>
+<p>Lebih jauh, analisis instrumen pada kompetensi inti profesional memperlihatkan dampak transformatif.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_13.png" class="img-fluid figure-img"></p>
+<figcaption>Hasil: Dampak Transformatif pada Pembentukan Profesional</figcaption>
+</figure>
+</div>
+<p>Secara spesifik, diukur menggunakan pengkategorian ukuran efek (Cohen’s <span class="math inline">\(d\)</span>): * <strong>Motivasi Intrinsik:</strong> Peningkatan sangat luar biasa (<span class="math inline">\(d = 0.97\)</span>, <span class="math inline">\(p &lt; .001\)</span>). * <strong>Identitas Profesional:</strong> Peningkatan yang signifikan ke arah pola pikir rekayasawan berintegritas (<span class="math inline">\(d = 0.84\)</span>). * <strong>Pembelajaran Transfer:</strong> Lonjakan tajam dalam menyelesaikan kendala yang sama sekali belum pernah diajarkan di kelas (<span class="math inline">\(d = 0.95\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_14.png" class="img-fluid figure-img"></p>
+<figcaption>Membangun Aset Pengetahuan Komunitas yang Berkelanjutan</figcaption>
+</figure>
+</div>
+<p>Dalam aspek validasi <em>Value Co-Creation</em>, inisiatif <em>Knowledge Marketplace</em> telah membuahkan 427 artefak bernilai yang secara aktif diciptakan mahasiswa hanya dalam satu semester. Tingkat kolaborasi ditunjukkan dengan tingginya <em>Peer Review</em> (rata-rata 9.2 tinjauan per artefak), di mana 16% dari pengetahuan dan aset komputasional yang diproduksi telah digunakan ulang secara nyata oleh angkatan (<em>cohort</em>) mahasiswa setelahnya.</p>
+</section>
+<section id="luaran-yang-dicapai" class="level2">
+<h2 class="anchored" data-anchor-id="luaran-yang-dicapai">3.2 LUARAN YANG DICAPAI</h2>
+<p>Sesuai dengan target, kemajuan riset (per April 2026) telah menghasilkan luaran-luaran konkret sebagai berikut:</p>
+<ol type="1">
+<li><strong>Konsep Teori (“Teori.doc”)</strong>: Dokumen teori yang mengelaborasi desain <em>Knowledge Maps</em> mahasiswa dengan mensintesis <em>Cognitive Load Theory</em> (CLT) dan <em>Dual Coding Theory</em> (DCT), menunjukkan bahwa konversi bahasa sistem dan sinyal ke visual multidimensi bisa membebaskan kapasitas memori kerja (<em>working memory</em>).</li>
+<li><strong>Artikel Jurnal Internasional (Status: <em>Under Review</em>)</strong>: Draf jurnal berjudul <em>“Value Co-Creation Through Collaborative Knowledge Management in Smart Engineering Education: An Empirical Validation of the TISE-Valorize Framework”</em> (atau dengan variasi <em>“Orchestrating Value Co-Creation…”</em>) telah dikirimkan ke jurnal <strong>Frontiers in Education</strong> yang merupakan jurnal internasional terkemuka (Quartile 2 Scopus). <em>Acknowledgment submission</em> dan draf terlampir pada bagian Lampiran.</li>
+</ol>
+</section>
+</section>
+<section id="bab-4-kesimpulan-dan-saran" class="level1">
+<h1>BAB 4 KESIMPULAN DAN SARAN</h1>
+<section id="kesimpulan" class="level2">
+<h2 class="anchored" data-anchor-id="kesimpulan">4.1 KESIMPULAN</h2>
+<p>Pelaksanaan sistem CKMS-SE membuktikan secara empiris bahwa filosofi TISE-Valorize dapat dieksekusi sebagai alat transformatif. Riset ini berhasil memvalidasi bahwa melalui pengelolaan manajemen beban kognitif (CLT) dengan visualisasi skema <em>Multi-Graph</em> serta stimulasi kebutuhan dasar otonomi (SDT), tujuan pendidikan teknik dapat digeser dari yang tadinya rentan diotomatisasi AI (hanya menguasai algoritma/rumus) menjadi kompetensi yang bertumpu pada pembangunan karakter etis, kreatif, dan kepakaran (<em>Homocordium</em>) yang mustahil ditiru oleh mesin. Lonjakan yang signifikan pada nilai motivasi intrinsik dan keseragaman capaian belajar mengkonfirmasi bahwa mahasiswa tidak hanya belajar teknik, tetapi belajar untuk <em>menjadi</em> insinyur sejati.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="slide_15.png" class="img-fluid figure-img"></p>
+<figcaption>Paradigma Baru: Membentuk Insinyur yang Tangguh di Era AI</figcaption>
+</figure>
+</div>
+<p>Sebagai penutup, gambar ini merangkum perbandingan paradigma “Pendidikan Teknik Kemarin” yang berfokus pada apa yang mahasiswa “Ketahui”, rentan diautomasi, dan sekadar mencetak kompetensi teknis dasar. Ini dibandingkan dengan “Pendidikan Teknik Besok (TISE-Valorize)” yang menggeser fokus pada “Menjadi” seorang insinyur profesional. Model ini membina pembentukan profesional holistik yang nilainya berlabuh pada <strong>Homocordium</strong>: kapabilitas manusia yang unik. Kesimpulannya: CKMS-SE membuktikan bahwa kita dapat merancang ekosistem pembelajaran yang secara sistematis menumbuhkan penilaian ahli, penalaran etis, dan identitas profesional. Hal ini bukan tentang bersaing melawan AI, melainkan tentang <strong>mengembangkan kualitas-kualitas manusia yang tidak dapat ditiru oleh AI</strong>. Inilah masa depan pendidikan teknik yang berkelanjutan dan bernilai di era masa depan.</p>
+</section>
+<section id="saran" class="level2">
+<h2 class="anchored" data-anchor-id="saran">4.2 SARAN</h2>
+<p>Meski menghasilkan luaran yang impresif, riset saat ini dilakukan secara spesifik pada populasi terbatas (dua mata kuliah di satu institusi) dengan sampel <span class="math inline">\(N=142\)</span>. Ke depannya, disarankan agar riset diperluas pada skala multi-institusi dengan besar sampel yang disarankan minimum <span class="math inline">\(N \ge 200-250\)</span> per grup untuk mencapai kekuatan statistik ideal (<em>statistical power</em> <span class="math inline">\(\ge 0.80\)</span>). Pengukuran yang lebih langsung terhadap beban kognitif (misalnya menggunakan NASA-TLX) juga patut disematkan pada fase riset mendatang.</p>
+</section>
+</section>
+<section id="daftar-pustaka" class="level1">
+<h1>DAFTAR PUSTAKA</h1>
+<ol type="1">
+<li>Alsaffar, R.D., Alfayly, A. and Ali, N. (2022). <em>Extended Technology Acceptance Model for Multimedia-Based Learning in Higher Education</em>, International Journal of Information and Education Technology, 12(12), 1300–1310.</li>
+<li>Annamalai, N. and Nasor, M. (2025). <em>Exploring ChatGPT in education: unveiling learners’ experiences through the lens of self-determination theory</em>, Smart Learning Environments, 12(59), 1–17.</li>
+<li>Duran, R., Zavgorodniaia, A. and Sorva, J. (2022). <em>Cognitive Load Theory in Computing Education Research: A Review</em>, ACM Transactions on Computing Education, 22(4), 1–27.</li>
+<li>Imbar, R.V. et al.&nbsp;(2025). <em>Smart Campus Framework: Definition, Model, Measurement from Anthropocentric, Systemic and Technological Perspectives</em>, Journal of ICT Research and Applications, 18(3), 258–269.</li>
+<li>Johan, M.C., Langi, A.Z.R. and Imbar, R.V. (2025). <em>Digital Transformation in Education, Research and Community Service for Smart Campus</em>, Proceedings of the 1st International Conference on Lifespan Innovation, 364–370. Atlantis Press.</li>
+<li>Miller, G.A. (1956). <em>The magical number seven, plus or minus two: some limits on our capacity for processing information</em>, Psychological Review, 63(2), 81–97.</li>
+<li>Sweller, J., Van Merrienboer, J.J.G. and Paas, F.G.W.C. (1998). <em>Cognitive Architecture and Instructional Design</em>, Educational Psychology Review, 10(3), 251–296.</li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="lampiran-1" class="level1">
+<h1>Lampiran 1</h1>
+<p><strong>FORMULIR EVALUASI ATAS CAPAIAN LUARAN KEGIATAN</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 2%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Peneliti Utama:</strong></th>
+<th>:</th>
+<th>Prof.&nbsp;Ir. Armein Z.R. Langi, M.Sc., Ph.D.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Perguruan Tinggi:</strong></td>
+<td>:</td>
+<td>Institut Teknologi Bandung</td>
+</tr>
+<tr class="even">
+<td><strong>Judul:</strong></td>
+<td>:</td>
+<td>Pengembangan dan Validasi Model Pembelajaran VALORIZE: Kerangka Pedagogis Berbasis AI untuk Membentuk Identitas Profesional Rekayasawan di Era Digital</td>
+</tr>
+<tr class="odd">
+<td><strong>Tahun Kegiatan:</strong></td>
+<td>:</td>
+<td>2025 - 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TARGET PUBLIKASI INTERNASIONAL (JOINT PUBLICATION):</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Nama Jurnal Internasional</th>
+<th style="text-align: left;">Jumlah Artikel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Frontiers in Education (Terindeks Scopus Q2)</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CAPAIAN SELURUH PUBLIKASI DARI PENELITI UTAMA DAN MITRA:</strong></p>
+<p><strong>1. PUBLIKASI JURNAL ILMIAH INTERNASIONAL TERINDEKS SCOPUS</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 4%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ARTIKEL JURNAL KE-1</th>
+<th></th>
+<th style="text-align: left;">Detail Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nama jurnal yang dituju</td>
+<td>:</td>
+<td style="text-align: left;">Frontiers in Education</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Klasifikasi jurnal</td>
+<td>:</td>
+<td style="text-align: left;">Jurnal Internasional Terindeks SCOPUS Q1/Q2 (Q2)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Judul artikel</td>
+<td>:</td>
+<td style="text-align: left;">Value Co-Creation Through Collaborative Knowledge Management in Smart Engineering Education: An Empirical Validation of the TISE-Valorize Framework</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Status naskah</td>
+<td>:</td>
+<td style="text-align: left;">- Under Review</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. KETERLIBATAN PENELITI UTAMA DAN MITRA PT PADA PUBLIKASI ARTIKEL ILMIAH 1:</strong></p>
+<ul>
+<li><p><strong>Meliana Christianti Johan</strong>: Penulis Pertama (First Author/Corresponding Author), berperan mengelola pengumpulan data eksperimen di lapangan serta menyusun manuskrip utama.</p></li>
+<li><p><strong>Armein Z. R. Langi &amp; I Gusti Bagus Baskara Nugraha (ITB)</strong>: Mengawal pondasi desain Sistem Cerdas, konsep kerangka TISE, dan analisis metodologis berbasis teknologi informasi.</p></li>
+<li><p><strong>Radiant Victor Imbar &amp; Parlindungan Sinaga</strong>: Mendukung tinjauan edukasi teknologi komprehensif serta penyelarasan pedagogi dengan aspek TISE Homocordium.</p></li>
+</ul>
+<p>Bandung, 7 April 2026<br>
+Peneliti Utama,</p>
+<p><img src="ttd.png" class="img-fluid" style="width:40.0%"></p>
+<p><strong>Prof.&nbsp;Ir. Armein Z.R. Langi, M.Sc., Ph.D.</strong></p>
+<p>NIP. 196208171990031002</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="lampiran-2." class="level1">
+<h1>Lampiran 2.</h1>
+<p><strong>Ringkasan Laporan Kemajuan Program Riset Kolaborasi Indonesia-EQUITY</strong><br>
+<strong>World Class University (WCU) 2025-2026</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Komponen</th>
+<th style="text-align: left;">Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Judul Riset</strong></td>
+<td style="text-align: left;">Pengembangan dan Validasi Model Pembelajaran VALORIZE: Kerangka Pedagogis Berbasis AI untuk Membentuk Identitas Profesional Rekayasawan di Era Digital</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Peneliti Utama</strong></td>
+<td style="text-align: left;">Prof.&nbsp;Ir. Armein Z.R. Langi, M.Sc., Ph.D.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Peneliti Mitra</strong></td>
+<td style="text-align: left;">Prof.&nbsp;Dr.&nbsp;Dr.&nbsp;Parlindungan Sinaga, M.Si</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Perguruan Tinggi</strong></td>
+<td style="text-align: left;">Institut Teknologi Bandung &amp; Universitas Pendidikan Indonesia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Target Capaian</strong></td>
+<td style="text-align: left;">Pertengahan riset: Memformulasikan landasan teoritis konseptual TISE-Valorize dalam mengelola memori kerja. Akhir riset: Publikasi luaran <em>framework</em> di jurnal bereputasi tinggi yang memvalidasi pergeseran performa mahasiswa secara empiris.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Hasil yang sudah diperoleh</strong></td>
+<td style="text-align: left;">- Tersusunnya laporan kajian pustaka psikologis kognitif (Teori.doc).<br>- Terukurnya performa uji 142 mahasiswa yang membuktikan efektivitas sistem CKMS-SE pada 3 domain indikator.<br>- Tersusunnya naskah manuskrip Frontiers.pdf yang sudah dikirim (<em>submitted</em> / <em>under review</em>).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Persentase</strong></td>
+<td style="text-align: left;">Diperkirakan kemajuan hingga tahap laporan ini sudah mencapai kisaran 80-85% (data sudah disintesis seluruhnya).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Manajemen Riset Kolaborasi</strong></td>
+<td style="text-align: left;">Koordinasi integratif melalui repositori Git dan sinkronisasi berkala antara pembina teknologi di ITB dan unit pendidikan.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pendanaan</strong></td>
+<td style="text-align: left;">Tidak ada hambatan spesifik, dana berjalan lancar dalam pengelolaan kegiatan penelitian dan penyusunan jurnal.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Kelanjutan riset</strong></td>
+<td style="text-align: left;">Pemantauan progres jurnal <em>Under Review</em> ke fase perbaikan (<em>revision</em>) lalu tahapan penerbitan (<em>published</em>). Serta merekomendasikan pelebaran purwarupa dengan besar sampel ke institusi lain.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Hambatan dan kesulitan</strong></td>
+<td style="text-align: left;">Diperlukan persiapan <em>platform</em> dengan daya analisis <em>Socratic AI</em> berskala lebih besar yang menuntut kolaborasi komputasional. Evaluasi jangka panjang (kestabilan retensi ingatan per tahun) belum dapat dicakup di batas waktu semester ini.</td>
+</tr>
+</tbody>
+</table>
+<p>Bandung, 7 April 2026<br>
+Peneliti Utama,</p>
+<p><img src="ttd.png" class="img-fluid" style="width:40.0%"></p>
+<p><strong>Prof.&nbsp;Ir. Armein Z.R. Langi, M.Sc., Ph.D.</strong></p>
+<p>NIP. 196208171990031002</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
