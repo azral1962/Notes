@@ -1,0 +1,34 @@
+project:
+  type: book
+
+book:
+  title: "Rekayasa Sistem Cerdas"
+  subtitle: "Arsitektur dan Representasi Pengetahuan"
+  
+  author: "Armein Z. R. Langi"
+  date: "4/10/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+    
+bibliography: references.bib
+lang: id
+theme: fancy
+tufte: false
+buka-kanan: false
+margin-alternatif: false
+
+seri: "buku serial"
+institusi: "Institut Teknologi Bandung"
+
+format:
+  bookly-typst:
+    keep-typ: true
+    papersize: "iso-b5"
+    include-in-header: "in_header.typ"
+    include-before-body: "in_before.typ"
+    include-after-body: "in_after.typ"
+

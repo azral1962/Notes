@@ -1,0 +1,16 @@
+title: bookly
+author: First Last
+version: 1.0.0
+quarto-required: ">=1.9.0"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - src/bookly-components.typ
+        - src/bookly-defaults.typ
+        - src/bookly-environments.typ
+        - src/bookly-helper.typ
+        - src/bookly-outlines.typ
+        - src/bookly-themes.typ
+        - src/bookly-tufte.typ
+        - src/bookly.typ
