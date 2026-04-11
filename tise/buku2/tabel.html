@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="AI Assistant">
+<meta name="dcterms.date" content="2024-04-11">
+
+<title>Usulan Pengayaan Draft Buku: Rekayasa Sistem Cerdas</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="tabel_files/libs/clipboard/clipboard.min.js"></script>
+<script src="tabel_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="tabel_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="tabel_files/libs/quarto-html/popper.min.js"></script>
+<script src="tabel_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="tabel_files/libs/quarto-html/anchor.min.js"></script>
+<link href="tabel_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="tabel_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="tabel_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="tabel_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="tabel_files/libs/bootstrap/bootstrap-b6355b1472165c7ff7c103b005f02d85.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan"><span class="header-section-number">1</span> Pendahuluan</a></li>
+  <li><a href="#bagian-1-konsep-inti-ontologi" id="toc-bagian-1-konsep-inti-ontologi" class="nav-link" data-scroll-target="#bagian-1-konsep-inti-ontologi"><span class="header-section-number">2</span> Bagian 1: Konsep Inti Ontologi</a>
+  <ul class="collapse">
+  <li><a href="#bab-1-sistem-cerdas-siklus-pudal" id="toc-bab-1-sistem-cerdas-siklus-pudal" class="nav-link" data-scroll-target="#bab-1-sistem-cerdas-siklus-pudal"><span class="header-section-number">2.1</span> Bab 1: Sistem Cerdas &amp; Siklus PUDAL</a>
+  <ul class="collapse">
+  <li><a href="#seksi-1.1-perceive-persepsi" id="toc-seksi-1.1-perceive-persepsi" class="nav-link" data-scroll-target="#seksi-1.1-perceive-persepsi"><span class="header-section-number">2.1.1</span> Seksi 1.1: Perceive (Persepsi)</a></li>
+  <li><a href="#seksi-1.2-understand-memahami" id="toc-seksi-1.2-understand-memahami" class="nav-link" data-scroll-target="#seksi-1.2-understand-memahami"><span class="header-section-number">2.1.2</span> Seksi 1.2: Understand (Memahami)</a></li>
+  <li><a href="#seksi-1.3-decision-keputusan" id="toc-seksi-1.3-decision-keputusan" class="nav-link" data-scroll-target="#seksi-1.3-decision-keputusan"><span class="header-section-number">2.1.3</span> Seksi 1.3: Decision (Keputusan)</a></li>
+  <li><a href="#seksi-1.4-act-tindakan" id="toc-seksi-1.4-act-tindakan" class="nav-link" data-scroll-target="#seksi-1.4-act-tindakan"><span class="header-section-number">2.1.4</span> Seksi 1.4: Act (Tindakan)</a></li>
+  <li><a href="#seksi-1.5-learning-belajar" id="toc-seksi-1.5-learning-belajar" class="nav-link" data-scroll-target="#seksi-1.5-learning-belajar"><span class="header-section-number">2.1.5</span> Seksi 1.5: Learning (Belajar)</a></li>
+  </ul></li>
+  <li><a href="#bab-2-artefak-pskve" id="toc-bab-2-artefak-pskve" class="nav-link" data-scroll-target="#bab-2-artefak-pskve"><span class="header-section-number">2.2</span> Bab 2: Artefak PSKVE</a>
+  <ul class="collapse">
+  <li><a href="#seksi-2.1-product-produk" id="toc-seksi-2.1-product-produk" class="nav-link" data-scroll-target="#seksi-2.1-product-produk"><span class="header-section-number">2.2.1</span> Seksi 2.1: Product (Produk)</a></li>
+  <li><a href="#seksi-2.2-service-layanan" id="toc-seksi-2.2-service-layanan" class="nav-link" data-scroll-target="#seksi-2.2-service-layanan"><span class="header-section-number">2.2.2</span> Seksi 2.2: Service (Layanan)</a></li>
+  <li><a href="#seksi-2.3-knowledge-pengetahuan" id="toc-seksi-2.3-knowledge-pengetahuan" class="nav-link" data-scroll-target="#seksi-2.3-knowledge-pengetahuan"><span class="header-section-number">2.2.3</span> Seksi 2.3: Knowledge (Pengetahuan)</a></li>
+  <li><a href="#seksi-2.4-value-nilai" id="toc-seksi-2.4-value-nilai" class="nav-link" data-scroll-target="#seksi-2.4-value-nilai"><span class="header-section-number">2.2.4</span> Seksi 2.4: Value (Nilai)</a></li>
+  <li><a href="#seksi-2.5-environment-lingkungan" id="toc-seksi-2.5-environment-lingkungan" class="nav-link" data-scroll-target="#seksi-2.5-environment-lingkungan"><span class="header-section-number">2.2.5</span> Seksi 2.5: Environment (Lingkungan)</a></li>
+  </ul></li>
+  <li><a href="#bab-3-energi-multi-dimensi" id="toc-bab-3-energi-multi-dimensi" class="nav-link" data-scroll-target="#bab-3-energi-multi-dimensi"><span class="header-section-number">2.3</span> Bab 3: Energi Multi-Dimensi</a>
+  <ul class="collapse">
+  <li><a href="#seksi-3.6-konversi-transaksional" id="toc-seksi-3.6-konversi-transaksional" class="nav-link" data-scroll-target="#seksi-3.6-konversi-transaksional"><span class="header-section-number">2.3.1</span> Seksi 3.6: Konversi Transaksional</a></li>
+  </ul></li>
+  <li><a href="#bab-4-smart-engine-abstraction-sea" id="toc-bab-4-smart-engine-abstraction-sea" class="nav-link" data-scroll-target="#bab-4-smart-engine-abstraction-sea"><span class="header-section-number">2.4</span> Bab 4: Smart Engine Abstraction (SEA)</a></li>
+  </ul></li>
+  <li><a href="#bagian-2-metodologi-multi-domain-picoc" id="toc-bagian-2-metodologi-multi-domain-picoc" class="nav-link" data-scroll-target="#bagian-2-metodologi-multi-domain-picoc"><span class="header-section-number">3</span> Bagian 2: Metodologi Multi-Domain (PICOC)</a>
+  <ul class="collapse">
+  <li><a href="#bab-5-domain-aplikasi-a" id="toc-bab-5-domain-aplikasi-a" class="nav-link" data-scroll-target="#bab-5-domain-aplikasi-a"><span class="header-section-number">3.1</span> Bab 5: Domain Aplikasi (A)</a>
+  <ul class="collapse">
+  <li><a href="#seksi-5.1-p-stakeholder" id="toc-seksi-5.1-p-stakeholder" class="nav-link" data-scroll-target="#seksi-5.1-p-stakeholder"><span class="header-section-number">3.1.1</span> Seksi 5.1: P: Stakeholder</a></li>
+  </ul></li>
+  <li><a href="#bab-6-domain-sistem-s" id="toc-bab-6-domain-sistem-s" class="nav-link" data-scroll-target="#bab-6-domain-sistem-s"><span class="header-section-number">3.2</span> Bab 6: Domain Sistem (S)</a>
+  <ul class="collapse">
+  <li><a href="#seksi-6.2-i-arsitektur-sistem-cerdas" id="toc-seksi-6.2-i-arsitektur-sistem-cerdas" class="nav-link" data-scroll-target="#seksi-6.2-i-arsitektur-sistem-cerdas"><span class="header-section-number">3.2.1</span> Seksi 6.2: I: Arsitektur Sistem Cerdas</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bagian-3-integrasi-teknologi" id="toc-bagian-3-integrasi-teknologi" class="nav-link" data-scroll-target="#bagian-3-integrasi-teknologi"><span class="header-section-number">4</span> Bagian 3: Integrasi Teknologi</a>
+  <ul class="collapse">
+  <li><a href="#bab-9-prolog-penalaran-simbolik" id="toc-bab-9-prolog-penalaran-simbolik" class="nav-link" data-scroll-target="#bab-9-prolog-penalaran-simbolik"><span class="header-section-number">4.1</span> Bab 9: Prolog (Penalaran Simbolik)</a>
+  <ul class="collapse">
+  <li><a href="#seksi-9.1-representasi-fakta-aturan" id="toc-seksi-9.1-representasi-fakta-aturan" class="nav-link" data-scroll-target="#seksi-9.1-representasi-fakta-aturan"><span class="header-section-number">4.1.1</span> Seksi 9.1: Representasi Fakta &amp; Aturan</a></li>
+  </ul></li>
+  <li><a href="#bab-10-python-algoritma-aplikasi" id="toc-bab-10-python-algoritma-aplikasi" class="nav-link" data-scroll-target="#bab-10-python-algoritma-aplikasi"><span class="header-section-number">4.2</span> Bab 10: Python (Algoritma &amp; Aplikasi)</a>
+  <ul class="collapse">
+  <li><a href="#seksi-10.2-antarmuka-pengguna" id="toc-seksi-10.2-antarmuka-pengguna" class="nav-link" data-scroll-target="#seksi-10.2-antarmuka-pengguna"><span class="header-section-number">4.2.1</span> Seksi 10.2: Antarmuka Pengguna</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bagian-4-studi-kasus" id="toc-bagian-4-studi-kasus" class="nav-link" data-scroll-target="#bagian-4-studi-kasus"><span class="header-section-number">5</span> Bagian 4: Studi Kasus</a>
+  <ul class="collapse">
+  <li><a href="#bab-12-studi-kasus-transportasi-2030" id="toc-bab-12-studi-kasus-transportasi-2030" class="nav-link" data-scroll-target="#bab-12-studi-kasus-transportasi-2030"><span class="header-section-number">5.1</span> Bab 12: Studi Kasus: Transportasi 2030</a>
+  <ul class="collapse">
+  <li><a href="#seksi-12.3-metrik-waktu-biaya-emisi-co2" id="toc-seksi-12.3-metrik-waktu-biaya-emisi-co2" class="nav-link" data-scroll-target="#seksi-12.3-metrik-waktu-biaya-emisi-co2"><span class="header-section-number">5.1.1</span> Seksi 12.3: Metrik: Waktu, Biaya, Emisi CO2</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Usulan Pengayaan Draft Buku: Rekayasa Sistem Cerdas</h1>
+<p class="subtitle lead">Daftar Tabel dan Gambar per Seksi (Gaya Nano Banana Pro)</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>AI Assistant </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 11, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="pendahuluan" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Pendahuluan</h1>
+<p>Dokumen ini berisi usulan penambahan elemen visual untuk draft buku “Rekayasa Sistem Cerdas”. Setiap seksi dalam 12 bab yang ada diberikan usulan minimal satu tabel dan satu gambar. Gambar dirancang untuk dihasilkan menggunakan prompt <strong>Nano Banana Pro</strong>, dengan karakteristik: latar belakang putih, pena hitam, sangat sederhana, dan bergaya skematis/diagramatik.</p>
+<hr>
+</section>
+<section id="bagian-1-konsep-inti-ontologi" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Bagian 1: Konsep Inti Ontologi</h1>
+<section id="bab-1-sistem-cerdas-siklus-pudal" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="bab-1-sistem-cerdas-siklus-pudal"><span class="header-section-number">2.1</span> Bab 1: Sistem Cerdas &amp; Siklus PUDAL</h2>
+<section id="seksi-1.1-perceive-persepsi" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="seksi-1.1-perceive-persepsi"><span class="header-section-number">2.1.1</span> Seksi 1.1: Perceive (Persepsi)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 12, Baris 20 (setelah penjelasan stimulus). | | <strong>Caption</strong> | Tabel 1.1. Perbandingan Jenis Stimulus dan Sensor pada Sistem Cerdas. | | <strong>Teks Tabel</strong> | Kolom 1: Jenis Stimulus (Fisik, Digital, Status Internal). Kolom 2: Contoh Mekanisme (Sensor Lidar, API Data, Log Performa). | | <strong>Penjelasan</strong> | Tabel ini mengategorikan berbagai cara sistem cerdas “melihat” dunianya. Hal ini membantu pembaca memahami bahwa persepsi tidak hanya terbatas pada sensor fisik[cite: 5334, 5337]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: DIAGRAM PERSEPSI SEDERHANA]</code> * <strong>Caption:</strong> Gambar 1.1. Skema Sensor Menangkap Stimulus dari Lingkungan. * <strong>Deskripsi:</strong> Sebuah kotak mewakili sistem cerdas dengan garis panah dari luar masuk ke dalam kotak tersebut. * <strong>Prompt Nano Banana Pro:</strong> A very simple line art on a white background. A single square labeled ‘SYSTEM’. A jagged arrow labeled ‘STIMULUS’ points from a cloud labeled ‘ENVIRONMENT’ into the square. Minimal black lines only.</p>
+</section>
+<section id="seksi-1.2-understand-memahami" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="seksi-1.2-understand-memahami"><span class="header-section-number">2.1.2</span> Seksi 1.2: Understand (Memahami)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 13, Baris 15 (setelah definisi interpretasi data). | | <strong>Caption</strong> | Tabel 1.2. Pemetaan Data Mentah ke Model Konseptual. | | <strong>Teks Tabel</strong> | Kolom 1: Data Mentah (Sinyal 0/1, Angka Suhu). Kolom 2: Model Konseptual (Objek ‘Kendaraan’, Status ‘Overheat’). | | <strong>Penjelasan</strong> | Tabel ini mengilustrasikan proses “pemberian makna” yang merupakan inti dari tahap <em>Understand</em>[cite: 5340, 5343]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: PROSES PEMODELAN]</code> * <strong>Caption:</strong> Gambar 1.2. Transformasi Data Menjadi Representasi Mental. * <strong>Deskripsi:</strong> Ikon tumpukan data kecil yang berubah menjadi ikon otak atau grafik garis sederhana di dalam kotak sistem. * <strong>Prompt Nano Banana Pro:</strong> Simple line art. A group of dots (representing data) on the left. A thick black arrow points to a simple wireframe cube (representing a model) on the right. Pure white background, black ink.</p>
+</section>
+<section id="seksi-1.3-decision-keputusan" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="seksi-1.3-decision-keputusan"><span class="header-section-number">2.1.3</span> Seksi 1.3: Decision (Keputusan)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 14, Baris 18 (setelah penjelasan evaluasi batasan). | | <strong>Caption</strong> | Tabel 1.3. Matriks Keputusan Berbasis Logika. | | <strong>Teks Tabel</strong> | Kolom 1: Kondisi (Jalan Kosong, Baterai Rendah). Kolom 2: Tindakan yang Dipilih (Akselerasi, Cari Pengisi Daya). | | <strong>Penjelasan</strong> | Tabel ini menunjukkan bagaimana mesin inferensi memilih tindakan berdasarkan pemahaman situasi[cite: 5354, 5356]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: PERCABANGAN LOGIKA]</code> * <strong>Caption:</strong> Gambar 1.3. Diagram Percabangan Jalur Keputusan. * <strong>Deskripsi:</strong> Garis tunggal yang bercabang menjadi dua, dengan label “Pilihan A” dan “Pilihan B”. * <strong>Prompt Nano Banana Pro:</strong> Minimalist black line drawing. A single horizontal line branching into two separate lines. A small circle marks the branch point labeled ‘DECISION’. White background.</p>
+</section>
+<section id="seksi-1.4-act-tindakan" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="seksi-1.4-act-tindakan"><span class="header-section-number">2.1.4</span> Seksi 1.4: Act (Tindakan)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 15, Baris 22 (setelah penjelasan eksekusi fisik). | | <strong>Caption</strong> | Tabel 1.4. Jenis Intervensi Sistem Cerdas terhadap Lingkungan. | | <strong>Teks Tabel</strong> | Kolom 1: Domain (Fisik, Informasi). Kolom 2: Aksi (Pergerakan Aktuator, Pembaruan Database). | | <strong>Penjelasan</strong> | Tabel ini merinci wujud nyata dari “respons” sistem cerdas terhadap dunianya[cite: 5361, 5365]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: AKSI SISTEM]</code> * <strong>Caption:</strong> Gambar 1.4. Representasi Sistem Melakukan Intervensi Fisik. * <strong>Deskripsi:</strong> Sebuah tangan robotik sederhana atau roda yang bergerak keluar dari kotak sistem. * <strong>Prompt Nano Banana Pro:</strong> Simple line art. A square box with a simple stick-figure mechanical arm extending from it, touching a small circle. High contrast black ink on white.</p>
+</section>
+<section id="seksi-1.5-learning-belajar" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="seksi-1.5-learning-belajar"><span class="header-section-number">2.1.5</span> Seksi 1.5: Learning (Belajar)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 16, Baris 25 (di akhir siklus PUDAL). | | <strong>Caption</strong> | Tabel 1.5. Mekanisme Pembaruan Pengetahuan (Learning). | | <strong>Teks Tabel</strong> | Kolom 1: Hasil Aksi (Berhasil, Gagal). Kolom 2: Efek pada Ontologi (Perkuat Aturan, Revisi Fakta). | | <strong>Penjelasan</strong> | Tabel ini menjelaskan bagaimana evaluasi aksi digunakan untuk meningkatkan performa masa depan[cite: 5373, 5379]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: SIKLUS BELAJAR]</code> * <strong>Caption:</strong> Gambar 1.5. Loop Umpan Balik untuk Peningkatan Performa. * <strong>Deskripsi:</strong> Panah melingkar yang menghubungkan “Hasil” kembali ke “Basis Pengetahuan”. * <strong>Prompt Nano Banana Pro:</strong> A circular arrow drawn with a black pen. Inside the circle text says ‘LEARNING’. Simple, clean lines, no fills. White background.</p>
+<hr>
+</section>
+</section>
+<section id="bab-2-artefak-pskve" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="bab-2-artefak-pskve"><span class="header-section-number">2.2</span> Bab 2: Artefak PSKVE</h2>
+<section id="seksi-2.1-product-produk" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="seksi-2.1-product-produk"><span class="header-section-number">2.2.1</span> Seksi 2.1: Product (Produk)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 20, Baris 10. | | <strong>Caption</strong> | Tabel 2.1. Parameter Properti untuk Dimensi Produk. | | <strong>Teks Tabel</strong> | Kolom 1: Properti Fisik (Kapasitas, Bahan Bakar). Kolom 2: Satuan/Ukuran (Penumpang, Liter/kWh). | | <strong>Penjelasan</strong> | Tabel ini memberikan parameter konkret yang digunakan ontologi untuk memodelkan fisik produk[cite: 5391, 5401]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: PRODUK FISIK]</code> * <strong>Caption:</strong> Gambar 2.1. Representasi Energi Produk dalam Objek Fisik. * <strong>Deskripsi:</strong> Ikon baterai atau motor sederhana dengan simbol kilat di dalamnya. * <strong>Prompt Nano Banana Pro:</strong> Line drawing of a simple battery icon. A bolt symbol inside. Minimalist black ink, no shading, white background.</p>
+</section>
+<section id="seksi-2.2-service-layanan" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="seksi-2.2-service-layanan"><span class="header-section-number">2.2.2</span> Seksi 2.2: Service (Layanan)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 22, Baris 5. | | <strong>Caption</strong> | Tabel 2.2. Metrik Kualitas Layanan dalam Smart Engineering. | | <strong>Teks Tabel</strong> | Kolom 1: Dimensi Layanan (Waktu, Kenyamanan, Akses). Kolom 2: Metrik (Menit, Skala Kepuasan, Indeks Akses). | | <strong>Penjelasan</strong> | Mengukur elemen non-fisik (energi layanan) agar dapat dinalar oleh mesin[cite: 5417, 5426]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: IKON WAKTU/LAYANAN]</code> * <strong>Caption:</strong> Gambar 2.2. Ikonografi Waktu dan Atensi sebagai Bentuk Layanan. * <strong>Deskripsi:</strong> Gambar jam pasir sederhana berdampingan dengan ikon mata (atensi). * <strong>Prompt Nano Banana Pro:</strong> A simple line drawing of an hourglass next to a simplified human eye. Black ink, clean lines, white background.</p>
+</section>
+<section id="seksi-2.3-knowledge-pengetahuan" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="seksi-2.3-knowledge-pengetahuan"><span class="header-section-number">2.2.3</span> Seksi 2.3: Knowledge (Pengetahuan)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 23, Baris 12. | | <strong>Caption</strong> | Tabel 2.3. Hierarki Kematangan Pengetahuan (TRL). | | <strong>Teks Tabel</strong> | Kolom 1: Level TRL (1-9). Kolom 2: Deskripsi (Prinsip Dasar - Sistem Teruji). | | <strong>Penjelasan</strong> | Menjelaskan bagaimana energi pengetahuan diukur tingkat kesiapannya[cite: 5430, 5441]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: ALGORITMA]</code> * <strong>Caption:</strong> Gambar 2.3. Diagram Alir Algoritma sebagai Wujud Energi Pengetahuan. * <strong>Deskripsi:</strong> Tiga kotak berurutan yang dihubungkan panah (Input -&gt; Proses Cerdas -&gt; Output). * <strong>Prompt Nano Banana Pro:</strong> Three square boxes in a row. Arrows connect them from left to right. The middle box has a small brain icon inside. Simple black pen, white background.</p>
+</section>
+<section id="seksi-2.4-value-nilai" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="seksi-2.4-value-nilai"><span class="header-section-number">2.2.4</span> Seksi 2.4: Value (Nilai)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 24, Baris 15. | | <strong>Caption</strong> | Tabel 2.4. Spektrum Energi Nilai: Dari Finansial ke Sosial. | | <strong>Teks Tabel</strong> | Kolom 1: Jenis Nilai (Finansial, Reputasi, Budaya). Kolom 2: Indikator (ROI, Skor Kepercayaan, Warisan). | | <strong>Penjelasan</strong> | Memperluas definisi “Value” dari sekadar uang menjadi manfaat yang lebih luas[cite: 5448, 5457]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: SIMBOL NILAI]</code> * <strong>Caption:</strong> Gambar 2.4. Simbol Pertukaran Nilai dan Kelayakan. * <strong>Deskripsi:</strong> Gambar timbangan sederhana dengan koin di satu sisi dan bintang di sisi lain. * <strong>Prompt Nano Banana Pro:</strong> Simple line art of a balance scale. One side has a dollar sign ‘$’, the other side has a star. Black lines, no gray, white background.</p>
+</section>
+<section id="seksi-2.5-environment-lingkungan" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="seksi-2.5-environment-lingkungan"><span class="header-section-number">2.2.5</span> Seksi 2.5: Environment (Lingkungan)</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 26, Baris 20. | | <strong>Caption</strong> | Tabel 2.5. Parameter Dampak dan Inspirasi Ruang. | | <strong>Teks Tabel</strong> | Kolom 1: Faktor Lingkungan (Emisi CO2, Polusi Suara, Estetika). Kolom 2: Cara Ukur (Gram/Pax, Desibel, Skor Inspirasi). | | <strong>Penjelasan</strong> | Menjelaskan bagaimana ruang dan lingkungan memberikan “energi” bagi pengguna[cite: 5461, 5472]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: EKOLOGI]</code> * <strong>Caption:</strong> Gambar 2.5. Diagram Jejak Ekologis dan Inspirasi Ruang. * <strong>Deskripsi:</strong> Ikon pohon kecil dengan garis melingkar yang mewakili atmosfer di atasnya. * <strong>Prompt Nano Banana Pro:</strong> Minimalist line drawing. A small stylized tree. A dotted arc above it. Clean black ink, pure white background.</p>
+<hr>
+</section>
+</section>
+<section id="bab-3-energi-multi-dimensi" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="bab-3-energi-multi-dimensi"><span class="header-section-number">2.3</span> Bab 3: Energi Multi-Dimensi</h2>
+<section id="seksi-3.6-konversi-transaksional" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="seksi-3.6-konversi-transaksional"><span class="header-section-number">2.3.1</span> Seksi 3.6: Konversi Transaksional</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 38, Baris 5. | | <strong>Caption</strong> | Tabel 3.6. Matriks Transaksi Antar Dimensi PSKVE. | | <strong>Teks Tabel</strong> | Kolom 1: Input (Uang, Waktu, Data). Kolom 2: Output (Layanan, Pengetahuan, Lingkungan Bersih). | | <strong>Penjelasan</strong> | Tabel ini adalah inti dari ekonomi energi Smart Engineering: bagaimana satu jenis energi ditukar dengan jenis lain[cite: 5561, 5565]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: DIAGRAM TRANSAKSI]</code> * <strong>Caption:</strong> Gambar 3.6. Aliran Konversi Energi Lintas Dimensi. * <strong>Deskripsi:</strong> Lima lingkaran (P, S, K, V, E) yang saling dihubungkan oleh panah dua arah. * <strong>Prompt Nano Banana Pro:</strong> Five circles arranged in a pentagon shape. Each circle has one letter inside: P, S, K, V, E. Multiple arrows connect all circles to each other. Simple black lines, white background.</p>
+<hr>
+</section>
+</section>
+<section id="bab-4-smart-engine-abstraction-sea" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="bab-4-smart-engine-abstraction-sea"><span class="header-section-number">2.4</span> Bab 4: Smart Engine Abstraction (SEA)</h2>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 41, Baris 15. | | <strong>Caption</strong> | Tabel 4.1. Komponen Utama Arsitektur SEA. | | <strong>Teks Tabel</strong> | Kolom 1: Komponen (Intake, Encoder, Flywheel, dll). Kolom 2: Fungsi (Pengambilan Input, Transformasi, Penyimpan Momentum). | | <strong>Penjelasan</strong> | Menjelaskan anatomi “mesin cerdas” yang menjadi model universal bagi perangkat keras maupun lunak[cite: 5574, 5575]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: MODEL SEA]</code> * <strong>Caption:</strong> Gambar 4.1. Arsitektur Blok Smart Engine Abstraction. * <strong>Deskripsi:</strong> Rangkaian kotak berlabel Intake -&gt; Encoder -&gt; Internal Power -&gt; Decoder -&gt; Value, dengan Control di atasnya. * <strong>Prompt Nano Banana Pro:</strong> A horizontal block diagram. Five boxes in a sequence labeled ‘Intake’, ‘Encoder’, ‘Power’, ‘Decoder’, ‘Value’. One box above ‘Power’ labeled ‘Control’. Black ink, clean schematic, white background.</p>
+<hr>
+</section>
+</section>
+<section id="bagian-2-metodologi-multi-domain-picoc" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Bagian 2: Metodologi Multi-Domain (PICOC)</h1>
+<p><em>(Bab 5-8 akan mengikuti pola yang sama, membedakan Application, System, Technology, dan Fundamental)</em></p>
+<section id="bab-5-domain-aplikasi-a" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="bab-5-domain-aplikasi-a"><span class="header-section-number">3.1</span> Bab 5: Domain Aplikasi (A)</h2>
+<section id="seksi-5.1-p-stakeholder" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="seksi-5.1-p-stakeholder"><span class="header-section-number">3.1.1</span> Seksi 5.1: P: Stakeholder</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 46, Baris 8. | | <strong>Caption</strong> | Tabel 5.1. Tipologi Pemangku Kepentingan dalam Proyek Rekayasa. | | <strong>Teks Tabel</strong> | Kolom 1: Peran (End-user, Insinyur, Regulator). Kolom 2: Kepentingan Utama (Kemudahan, Otomasi, Kepatuhan). | | <strong>Penjelasan</strong> | Mendefinisikan siapa yang akan merasakan dampak dari solusi yang dibuat[cite: 5618, 5621]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: IKON ORANG]</code> * <strong>Caption:</strong> Gambar 5.1. Kelompok Stakeholder sebagai Fokus Utama Aplikasi. * <strong>Deskripsi:</strong> Tiga figur manusia tongkat (stick figures) yang berdiri berdampingan. * <strong>Prompt Nano Banana Pro:</strong> Three very simple stick figures standing side-by-side. Thick black lines, white background, no faces or details.</p>
+<hr>
+</section>
+</section>
+<section id="bab-6-domain-sistem-s" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bab-6-domain-sistem-s"><span class="header-section-number">3.2</span> Bab 6: Domain Sistem (S)</h2>
+<section id="seksi-6.2-i-arsitektur-sistem-cerdas" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="seksi-6.2-i-arsitektur-sistem-cerdas"><span class="header-section-number">3.2.1</span> Seksi 6.2: I: Arsitektur Sistem Cerdas</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 54, Baris 12. | | <strong>Caption</strong> | Tabel 6.2. Komposisi Integrasi Platform Prolog-Python. | | <strong>Teks Tabel</strong> | Kolom 1: Lapisan (Logika, Aplikasi, Jembatan). Kolom 2: Peran (Fakta/Aturan, UI/Algoritma, PySWIP/Janus). | | <strong>Penjelasan</strong> | Merinci bagaimana sistem cerdas dibangun dengan menggabungkan dua lingkungan yang berbeda[cite: 5642, 5643]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: INTEGRASI SISTEM]</code> * <strong>Caption:</strong> Gambar 6.2. Jembatan Komunikasi antar Komponen Sistem. * <strong>Deskripsi:</strong> Dua kotak besar (Prolog dan Python) yang dihubungkan oleh sebuah pipa horizontal kecil. * <strong>Prompt Nano Banana Pro:</strong> Two rectangles side-by-side. Left rectangle labeled ‘PROLOG’. Right rectangle labeled ‘PYTHON’. A thick double-headed arrow connects them labeled ‘BRIDGE’. Simple black ink, white background.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="bagian-3-integrasi-teknologi" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Bagian 3: Integrasi Teknologi</h1>
+<section id="bab-9-prolog-penalaran-simbolik" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="bab-9-prolog-penalaran-simbolik"><span class="header-section-number">4.1</span> Bab 9: Prolog (Penalaran Simbolik)</h2>
+<section id="seksi-9.1-representasi-fakta-aturan" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="seksi-9.1-representasi-fakta-aturan"><span class="header-section-number">4.1.1</span> Seksi 9.1: Representasi Fakta &amp; Aturan</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 72, Baris 20. | | <strong>Caption</strong> | Tabel 9.1. Contoh Sintaksis Fakta dan Aturan Prolog. | | <strong>Teks Tabel</strong> | Kolom 1: Tipe (Fakta, Aturan). Kolom 2: Sintaksis (<code>student(alice).</code>, <code>mammal(X) :- cat(X).</code>). | | <strong>Penjelasan</strong> | Memperlihatkan cara menyatakan kebenaran absolut dan kondisional di Prolog[cite: 5811, 5816]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: POHON LOGIKA]</code> * <strong>Caption:</strong> Gambar 9.1. Visualisasi Deduksi Logika dari Aturan. * <strong>Deskripsi:</strong> Diagram pohon sederhana yang menunjukkan jalur dari kondisi menuju kesimpulan. * <strong>Prompt Nano Banana Pro:</strong> A tree diagram branching from bottom to top. One node at the bottom points to two nodes above it. Text ‘FACTS’ at the bottom, ‘CONCLUSION’ at the top. Simple black lines, white background.</p>
+<hr>
+</section>
+</section>
+<section id="bab-10-python-algoritma-aplikasi" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="bab-10-python-algoritma-aplikasi"><span class="header-section-number">4.2</span> Bab 10: Python (Algoritma &amp; Aplikasi)</h2>
+<section id="seksi-10.2-antarmuka-pengguna" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="seksi-10.2-antarmuka-pengguna"><span class="header-section-number">4.2.1</span> Seksi 10.2: Antarmuka Pengguna</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 82, Baris 15. | | <strong>Caption</strong> | Tabel 10.2. Library Python untuk Pengembangan Antarmuka Cerdas. | | <strong>Teks Tabel</strong> | Kolom 1: Library (Dash, Plotly, Streamlit). Kolom 2: Kegunaan (Dashboard Web, Visualisasi Data, Prototyping Cepat). | | <strong>Penjelasan</strong> | Menyarankan alat bantu Python untuk membuat wajah sistem yang ramah pengguna[cite: 5900, 5901]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: UI DASHBOARD]</code> * <strong>Caption:</strong> Gambar 10.2. Layout Dasar Antarmuka Dashboard Simulasi. * <strong>Deskripsi:</strong> Persegi panjang besar (layar) dengan beberapa kotak kecil di dalamnya (grafik/tombol). * <strong>Prompt Nano Banana Pro:</strong> A rectangle representing a computer screen. Inside it are simple boxes and lines representing a menu sidebar and a main chart. Minimalist black line drawing, white background.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="bagian-4-studi-kasus" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Bagian 4: Studi Kasus</h1>
+<section id="bab-12-studi-kasus-transportasi-2030" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="bab-12-studi-kasus-transportasi-2030"><span class="header-section-number">5.1</span> Bab 12: Studi Kasus: Transportasi 2030</h2>
+<section id="seksi-12.3-metrik-waktu-biaya-emisi-co2" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="seksi-12.3-metrik-waktu-biaya-emisi-co2"><span class="header-section-number">5.1.1</span> Seksi 12.3: Metrik: Waktu, Biaya, Emisi CO2</h3>
+<p><strong>Usulan Tabel:</strong> | Fitur | Deskripsi | | :— | :— | | <strong>Halaman/Baris</strong> | Hal 98, Baris 10. | | <strong>Caption</strong> | Tabel 12.3. Perbandingan Performa Multi-Moda (Simulasi). | | <strong>Teks Tabel</strong> | Kolom 1: Moda (Fleet EV, Bus Diesel, Kereta Cepat). Kolom 2: Metrik (Waktu, Biaya, CO2). | | <strong>Penjelasan</strong> | Menampilkan hasil akhir simulasi yang membuktikan efektivitas kerangka kerja ontologi[cite: 5986, 5994]. |</p>
+<p><strong>Usulan Gambar:</strong> * <strong>Placeholder:</strong> <code>[GAMBAR: GRAFIK BAR]</code> * <strong>Caption:</strong> Gambar 12.3. Grafik Perbandingan Dampak CO2 antar Moda. * <strong>Deskripsi:</strong> Tiga batang (bar chart) dengan ketinggian yang berbeda, sangat skematis. * <strong>Prompt Nano Banana Pro:</strong> A simple bar chart with three bars of different heights. Labeled ‘EV’, ‘BUS’, ‘TRAIN’ on the x-axis. No numbers, just clean black lines on a white background.</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

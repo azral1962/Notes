@@ -1,0 +1,1128 @@
+---
+title: "Daftar Gambar yang Harus Dibuat untuk Buku Rekayasa Sistem Cerdas"
+author: "Armein Z. R. Langi"
+format:
+  docx: default
+  typst: default
+toc: true
+number-sections: true
+---
+
+Dokumen ini berisi daftar seluruh gambar yang dirujuk di dalam `draft3.qmd`, lengkap dengan nama file, label gambar, section asal, caption, deskripsi, dan prompt produksi yang diperluas. Dokumen ini dapat dipakai sebagai *shot list* untuk pembuatan ilustrasi final.
+
+Jumlah gambar yang teridentifikasi: **38**.
+
+## Pedoman visual umum
+
+- Latar putih polos.
+- Garis pena hitam tipis hingga sedang.
+- Tanpa warna dan tanpa shading berat.
+- Komposisi sederhana, bersih, dan akademik.
+- Fokus pada kejelasan konsep, bukan kemeriahan visual.
+
+## Ringkasan nama file
+
+| No | Section | Nama file | Label gambar |
+|---:|---|---|---|
+| 1 | Perceive (Persepsi) | `figures/1-1-perceive-persepsi.png` | `fig-1-1-perceive-persepsi` |
+| 2 | Understand (Memahami) | `figures/1-2-understand-memahami.png` | `fig-1-2-understand-memahami` |
+| 3 | Decision (Keputusan) | `figures/1-3-decision-keputusan.png` | `fig-1-3-decision-keputusan` |
+| 4 | Act (Tindakan) | `figures/1-4-act-tindakan.png` | `fig-1-4-act-tindakan` |
+| 5 | Learning (Belajar) | `figures/1-5-learning-belajar.png` | `fig-1-5-learning-belajar` |
+| 6 | Product (Produk) | `figures/2-1-product-produk.png` | `fig-2-1-product-produk` |
+| 7 | Service (Layanan) | `figures/2-2-service-layanan.png` | `fig-2-2-service-layanan` |
+| 8 | Knowledge (Pengetahuan) | `figures/2-3-knowledge-pengetahuan.png` | `fig-2-3-knowledge-pengetahuan` |
+| 9 | Value (Nilai) | `figures/2-4-value-nilai.png` | `fig-2-4-value-nilai` |
+| 10 | Environment (Lingkungan) | `figures/2-5-environment-lingkungan.png` | `fig-2-5-environment-lingkungan` |
+| 11 | Energi Produk (Fisik) | `figures/3-1-energi-produk-fisik.png` | `fig-3-1-energi-produk-fisik` |
+| 12 | Energi Layanan (Atensi) | `figures/3-2-energi-layanan-atensi.png` | `fig-3-2-energi-layanan-atensi` |
+| 13 | Energi Pengetahuan (Algoritma) | `figures/3-3-energi-pengetahuan-algoritma.png` | `fig-3-3-energi-pengetahuan-algoritma` |
+| 14 | Energi Nilai (Finansial/Sosial) | `figures/3-4-energi-nilai-finansial-sosial.png` | `fig-3-4-energi-nilai-finansial-sosial` |
+| 15 | Energi Ruang Lingkungan (Inspirasi) | `figures/3-5-energi-ruang-lingkungan-inspirasi.png` | `fig-3-5-energi-ruang-lingkungan-inspirasi` |
+| 16 | Konversi Transaksional | `figures/3-6-konversi-transaksional.png` | `fig-3-6-konversi-transaksional` |
+| 17 | Smart Engine Abstraction (SEA) | `figures/4-0-smart-engine-abstraction-sea.png` | `fig-4-0-smart-engine-abstraction-sea` |
+| 18 | P: Stakeholder | `figures/5-1-p-stakeholder.png` | `fig-5-1-p-stakeholder` |
+| 19 | I: Solusi Baru | `figures/5-2-i-solusi-baru.png` | `fig-5-2-i-solusi-baru` |
+| 20 | Cx: Masalah Spesifik | `figures/5-3-cx-masalah-spesifik.png` | `fig-5-3-cx-masalah-spesifik` |
+| 21 | P: Testbeds/Dataset | `figures/6-1-p-testbeds-dataset.png` | `fig-6-1-p-testbeds-dataset` |
+| 22 | I: Arsitektur Sistem Cerdas | `figures/6-2-i-arsitektur-sistem-cerdas.png` | `fig-6-2-i-arsitektur-sistem-cerdas` |
+| 23 | P: Energi Sumber/Data Mentah | `figures/7-1-p-energi-sumber-data-mentah.png` | `fig-7-1-p-energi-sumber-data-mentah` |
+| 24 | I: Engine/Modul Teknologi | `figures/7-2-i-engine-modul-teknologi.png` | `fig-7-2-i-engine-modul-teknologi` |
+| 25 | P: Fenomena/Prinsip Sains | `figures/8-1-p-fenomena-prinsip-sains.png` | `fig-8-1-p-fenomena-prinsip-sains` |
+| 26 | I: Teori/Model Baru | `figures/8-2-i-teori-model-baru.png` | `fig-8-2-i-teori-model-baru` |
+| 27 | Representasi Fakta & Aturan | `figures/9-1-representasi-fakta-aturan.png` | `fig-9-1-representasi-fakta-aturan` |
+| 28 | Mesin Inferensi Logika | `figures/9-2-mesin-inferensi-logika.png` | `fig-9-2-mesin-inferensi-logika` |
+| 29 | Pemetaan Komponen Ontologi | `figures/9-3-pemetaan-komponen-ontologi.png` | `fig-9-3-pemetaan-komponen-ontologi` |
+| 30 | Pemrosesan Data | `figures/10-1-pemrosesan-data.png` | `fig-10-1-pemrosesan-data` |
+| 31 | Antarmuka Pengguna | `figures/10-2-antarmuka-pengguna.png` | `fig-10-2-antarmuka-pengguna` |
+| 32 | Orkestrasi Simulasi | `figures/10-3-orkestrasi-simulasi.png` | `fig-10-3-orkestrasi-simulasi` |
+| 33 | PySWIP | `figures/11-1-pyswip.png` | `fig-11-1-pyswip` |
+| 34 | Janus (SWI-Prolog) | `figures/11-2-janus-swi-prolog.png` | `fig-11-2-janus-swi-prolog` |
+| 35 | PrologMQI | `figures/11-3-prologmqi.png` | `fig-11-3-prologmqi` |
+| 36 | Skenario Bandung-Jakarta | `figures/12-1-skenario-bandung-jakarta.png` | `fig-12-1-skenario-bandung-jakarta` |
+| 37 | Evaluasi Fleet EV vs Bus vs Kereta Cepat | `figures/12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat.png` | `fig-12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat` |
+| 38 | Metrik: Waktu, Biaya, Emisi CO2 | `figures/12-3-metrik-waktu-biaya-emisi-co2.png` | `fig-12-3-metrik-waktu-biaya-emisi-co2` |
+
+## Gambar 1: Perceive (Persepsi)
+
+**Bab:** Sistem Cerdas & Siklus PUDAL
+
+**Section:** Perceive (Persepsi)
+
+**Nama file:** `figures/1-1-perceive-persepsi.png`
+
+**Label rujukan dalam teks:** `fig-1-1-perceive-persepsi`
+
+**Baris rujukan di draft3.qmd:** 79
+
+**Caption:** Gambar usulan untuk 1.1 Perceive (Persepsi): Diagram alur persepsi dari stimulus ke data terstruktur.
+
+**Deskripsi singkat:** Gambar berupa diagram alur persepsi dari stimulus ke data terstruktur. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram alur persepsi dari stimulus ke data terstruktur. Konteks bab: 'Sistem Cerdas & Siklus PUDAL'. Konteks section: 'Perceive (Persepsi)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 2: Understand (Memahami)
+
+**Bab:** Sistem Cerdas & Siklus PUDAL
+
+**Section:** Understand (Memahami)
+
+**Nama file:** `figures/1-2-understand-memahami.png`
+
+**Label rujukan dalam teks:** `fig-1-2-understand-memahami`
+
+**Baris rujukan di draft3.qmd:** 113
+
+**Caption:** Gambar usulan untuk 1.2 Understand (Memahami): Sketsa transformasi data mentah menjadi model konseptual.
+
+**Deskripsi singkat:** Gambar berupa sketsa transformasi data mentah menjadi model konseptual. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa transformasi data mentah menjadi model konseptual. Konteks bab: 'Sistem Cerdas & Siklus PUDAL'. Konteks section: 'Understand (Memahami)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 3: Decision (Keputusan)
+
+**Bab:** Sistem Cerdas & Siklus PUDAL
+
+**Section:** Decision (Keputusan)
+
+**Nama file:** `figures/1-3-decision-keputusan.png`
+
+**Label rujukan dalam teks:** `fig-1-3-decision-keputusan`
+
+**Baris rujukan di draft3.qmd:** 146
+
+**Caption:** Gambar usulan untuk 1.3 Decision (Keputusan): Diagram pohon keputusan sederhana dalam konteks sistem cerdas.
+
+**Deskripsi singkat:** Gambar berupa diagram pohon keputusan sederhana dalam konteks sistem cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram pohon keputusan sederhana dalam konteks sistem cerdas. Konteks bab: 'Sistem Cerdas & Siklus PUDAL'. Konteks section: 'Decision (Keputusan)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 4: Act (Tindakan)
+
+**Bab:** Sistem Cerdas & Siklus PUDAL
+
+**Section:** Act (Tindakan)
+
+**Nama file:** `figures/1-4-act-tindakan.png`
+
+**Label rujukan dalam teks:** `fig-1-4-act-tindakan`
+
+**Baris rujukan di draft3.qmd:** 179
+
+**Caption:** Gambar usulan untuk 1.4 Act (Tindakan): Sketsa alur aksi dari rencana ke perubahan lingkungan.
+
+**Deskripsi singkat:** Gambar berupa sketsa alur aksi dari rencana ke perubahan lingkungan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa alur aksi dari rencana ke perubahan lingkungan. Konteks bab: 'Sistem Cerdas & Siklus PUDAL'. Konteks section: 'Act (Tindakan)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 5: Learning (Belajar)
+
+**Bab:** Sistem Cerdas & Siklus PUDAL
+
+**Section:** Learning (Belajar)
+
+**Nama file:** `figures/1-5-learning-belajar.png`
+
+**Label rujukan dalam teks:** `fig-1-5-learning-belajar`
+
+**Baris rujukan di draft3.qmd:** 212
+
+**Caption:** Gambar usulan untuk 1.5 Learning (Belajar): Diagram loop pembelajaran tertutup pada PUDAL.
+
+**Deskripsi singkat:** Gambar berupa diagram loop pembelajaran tertutup pada pudal. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram loop pembelajaran tertutup pada PUDAL. Konteks bab: 'Sistem Cerdas & Siklus PUDAL'. Konteks section: 'Learning (Belajar)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 6: Product (Produk)
+
+**Bab:** Artefak PSKVE
+
+**Section:** Product (Produk)
+
+**Nama file:** `figures/2-1-product-produk.png`
+
+**Label rujukan dalam teks:** `fig-2-1-product-produk`
+
+**Baris rujukan di draft3.qmd:** 274
+
+**Caption:** Gambar usulan untuk 2.1 Product (Produk): Sketsa produk cerdas dengan label komponen utama.
+
+**Deskripsi singkat:** Gambar berupa sketsa produk cerdas dengan label komponen utama. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa produk cerdas dengan label komponen utama. Konteks bab: 'Artefak PSKVE'. Konteks section: 'Product (Produk)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 7: Service (Layanan)
+
+**Bab:** Artefak PSKVE
+
+**Section:** Service (Layanan)
+
+**Nama file:** `figures/2-2-service-layanan.png`
+
+**Label rujukan dalam teks:** `fig-2-2-service-layanan`
+
+**Baris rujukan di draft3.qmd:** 314
+
+**Caption:** Gambar usulan untuk 2.2 Service (Layanan): Diagram interaksi pengguna dengan layanan cerdas.
+
+**Deskripsi singkat:** Gambar berupa diagram interaksi pengguna dengan layanan cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram interaksi pengguna dengan layanan cerdas. Konteks bab: 'Artefak PSKVE'. Konteks section: 'Service (Layanan)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 8: Knowledge (Pengetahuan)
+
+**Bab:** Artefak PSKVE
+
+**Section:** Knowledge (Pengetahuan)
+
+**Nama file:** `figures/2-3-knowledge-pengetahuan.png`
+
+**Label rujukan dalam teks:** `fig-2-3-knowledge-pengetahuan`
+
+**Baris rujukan di draft3.qmd:** 356
+
+**Caption:** Gambar usulan untuk 2.3 Knowledge (Pengetahuan): Sketsa lapisan pengetahuan di dalam artefak cerdas.
+
+**Deskripsi singkat:** Gambar berupa sketsa lapisan pengetahuan di dalam artefak cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa lapisan pengetahuan di dalam artefak cerdas. Konteks bab: 'Artefak PSKVE'. Konteks section: 'Knowledge (Pengetahuan)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 9: Value (Nilai)
+
+**Bab:** Artefak PSKVE
+
+**Section:** Value (Nilai)
+
+**Nama file:** `figures/2-4-value-nilai.png`
+
+**Label rujukan dalam teks:** `fig-2-4-value-nilai`
+
+**Baris rujukan di draft3.qmd:** 394
+
+**Caption:** Gambar usulan untuk 2.4 Value (Nilai): Diagram panah konversi dari produk-layanan-pengetahuan menuju nilai.
+
+**Deskripsi singkat:** Gambar berupa diagram panah konversi dari produk-layanan-pengetahuan menuju nilai. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram panah konversi dari produk-layanan-pengetahuan menuju nilai. Konteks bab: 'Artefak PSKVE'. Konteks section: 'Value (Nilai)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 10: Environment (Lingkungan)
+
+**Bab:** Artefak PSKVE
+
+**Section:** Environment (Lingkungan)
+
+**Nama file:** `figures/2-5-environment-lingkungan.png`
+
+**Label rujukan dalam teks:** `fig-2-5-environment-lingkungan`
+
+**Baris rujukan di draft3.qmd:** 431
+
+**Caption:** Gambar usulan untuk 2.5 Environment (Lingkungan): Sketsa artefak di dalam ruang lingkungan dengan jejak dampak.
+
+**Deskripsi singkat:** Gambar berupa sketsa artefak di dalam ruang lingkungan dengan jejak dampak. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa artefak di dalam ruang lingkungan dengan jejak dampak. Konteks bab: 'Artefak PSKVE'. Konteks section: 'Environment (Lingkungan)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 11: Energi Produk (Fisik)
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Energi Produk (Fisik)
+
+**Nama file:** `figures/3-1-energi-produk-fisik.png`
+
+**Label rujukan dalam teks:** `fig-3-1-energi-produk-fisik`
+
+**Baris rujukan di draft3.qmd:** 490
+
+**Caption:** Gambar usulan untuk 3.1 Energi Produk (Fisik): Diagram alir energi fisik masuk-keluar.
+
+**Deskripsi singkat:** Gambar berupa diagram alir energi fisik masuk-keluar. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram alir energi fisik masuk-keluar. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Energi Produk (Fisik)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 12: Energi Layanan (Atensi)
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Energi Layanan (Atensi)
+
+**Nama file:** `figures/3-2-energi-layanan-atensi.png`
+
+**Label rujukan dalam teks:** `fig-3-2-energi-layanan-atensi`
+
+**Baris rujukan di draft3.qmd:** 529
+
+**Caption:** Gambar usulan untuk 3.2 Energi Layanan (Atensi): Sketsa jam-atensi-interaksi pada layanan digital/fisik.
+
+**Deskripsi singkat:** Gambar berupa sketsa jam-atensi-interaksi pada layanan digital/fisik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa jam-atensi-interaksi pada layanan digital/fisik. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Energi Layanan (Atensi)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 13: Energi Pengetahuan (Algoritma)
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Energi Pengetahuan (Algoritma)
+
+**Nama file:** `figures/3-3-energi-pengetahuan-algoritma.png`
+
+**Label rujukan dalam teks:** `fig-3-3-energi-pengetahuan-algoritma`
+
+**Baris rujukan di draft3.qmd:** 569
+
+**Caption:** Gambar usulan untuk 3.3 Energi Pengetahuan (Algoritma): Diagram alur data ke algoritma ke keputusan.
+
+**Deskripsi singkat:** Gambar berupa diagram alur data ke algoritma ke keputusan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram alur data ke algoritma ke keputusan. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Energi Pengetahuan (Algoritma)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 14: Energi Nilai (Finansial/Sosial)
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Energi Nilai (Finansial/Sosial)
+
+**Nama file:** `figures/3-4-energi-nilai-finansial-sosial.png`
+
+**Label rujukan dalam teks:** `fig-3-4-energi-nilai-finansial-sosial`
+
+**Baris rujukan di draft3.qmd:** 619
+
+**Caption:** Gambar usulan untuk 3.4 Energi Nilai (Finansial/Sosial): Sketsa pertukaran nilai antar pemangku kepentingan.
+
+**Deskripsi singkat:** Gambar berupa sketsa pertukaran nilai antar pemangku kepentingan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa pertukaran nilai antar pemangku kepentingan. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Energi Nilai (Finansial/Sosial)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 15: Energi Ruang Lingkungan (Inspirasi)
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Energi Ruang Lingkungan (Inspirasi)
+
+**Nama file:** `figures/3-5-energi-ruang-lingkungan-inspirasi.png`
+
+**Label rujukan dalam teks:** `fig-3-5-energi-ruang-lingkungan-inspirasi`
+
+**Baris rujukan di draft3.qmd:** 657
+
+**Caption:** Gambar usulan untuk 3.5 Energi Ruang Lingkungan (Inspirasi): Sketsa ruang kerja/layanan yang menginspirasi.
+
+**Deskripsi singkat:** Gambar berupa sketsa ruang kerja/layanan yang menginspirasi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa ruang kerja/layanan yang menginspirasi. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Energi Ruang Lingkungan (Inspirasi)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 16: Konversi Transaksional
+
+**Bab:** Energi Multi-Dimensi
+
+**Section:** Konversi Transaksional
+
+**Nama file:** `figures/3-6-konversi-transaksional.png`
+
+**Label rujukan dalam teks:** `fig-3-6-konversi-transaksional`
+
+**Baris rujukan di draft3.qmd:** 695
+
+**Caption:** Gambar usulan untuk 3.6 Konversi Transaksional: Diagram jaringan konversi antar dimensi energi.
+
+**Deskripsi singkat:** Gambar berupa diagram jaringan konversi antar dimensi energi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram jaringan konversi antar dimensi energi. Konteks bab: 'Energi Multi-Dimensi'. Konteks section: 'Konversi Transaksional'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 17: Smart Engine Abstraction (SEA)
+
+**Bab:** Smart Engine Abstraction (SEA)
+
+**Section:** Smart Engine Abstraction (SEA)
+
+**Nama file:** `figures/4-0-smart-engine-abstraction-sea.png`
+
+**Label rujukan dalam teks:** `fig-4-0-smart-engine-abstraction-sea`
+
+**Baris rujukan di draft3.qmd:** 730
+
+**Caption:** Gambar usulan untuk 4.0 Smart Engine Abstraction (SEA): Diagram blok Smart Engine Abstraction sederhana.
+
+**Deskripsi singkat:** Gambar berupa diagram blok smart engine abstraction sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram blok Smart Engine Abstraction sederhana. Konteks bab: 'Smart Engine Abstraction (SEA)'. Konteks section: 'Smart Engine Abstraction (SEA)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 18: P: Stakeholder
+
+**Bab:** Domain Aplikasi (A)
+
+**Section:** P: Stakeholder
+
+**Nama file:** `figures/5-1-p-stakeholder.png`
+
+**Label rujukan dalam teks:** `fig-5-1-p-stakeholder`
+
+**Baris rujukan di draft3.qmd:** 814
+
+**Caption:** Gambar usulan untuk 5.1 P: Stakeholder: Peta aktor sederhana untuk domain aplikasi.
+
+**Deskripsi singkat:** Gambar berupa peta aktor sederhana untuk domain aplikasi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Stakeholder: Peta aktor sederhana untuk domain aplikasi. Konteks bab: 'Domain Aplikasi (A)'. Konteks section: 'P: Stakeholder'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 19: I: Solusi Baru
+
+**Bab:** Domain Aplikasi (A)
+
+**Section:** I: Solusi Baru
+
+**Nama file:** `figures/5-2-i-solusi-baru.png`
+
+**Label rujukan dalam teks:** `fig-5-2-i-solusi-baru`
+
+**Baris rujukan di draft3.qmd:** 849
+
+**Caption:** Gambar usulan untuk 5.2 I: Solusi Baru: Sketsa perbandingan dua atau tiga konsep solusi.
+
+**Deskripsi singkat:** Gambar berupa sketsa perbandingan dua atau tiga konsep solusi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Solusi Baru: Sketsa perbandingan dua atau tiga konsep solusi. Konteks bab: 'Domain Aplikasi (A)'. Konteks section: 'I: Solusi Baru'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 20: Cx: Masalah Spesifik
+
+**Bab:** Domain Aplikasi (A)
+
+**Section:** Cx: Masalah Spesifik
+
+**Nama file:** `figures/5-3-cx-masalah-spesifik.png`
+
+**Label rujukan dalam teks:** `fig-5-3-cx-masalah-spesifik`
+
+**Baris rujukan di draft3.qmd:** 884
+
+**Caption:** Gambar usulan untuk 5.3 Cx: Masalah Spesifik: Diagram sebab-akibat masalah spesifik.
+
+**Deskripsi singkat:** Gambar berupa diagram sebab-akibat masalah spesifik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Masalah Spesifik: Diagram sebab-akibat masalah spesifik. Konteks bab: 'Domain Aplikasi (A)'. Konteks section: 'Cx: Masalah Spesifik'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 21: P: Testbeds/Dataset
+
+**Bab:** Domain Sistem (S)
+
+**Section:** P: Testbeds/Dataset
+
+**Nama file:** `figures/6-1-p-testbeds-dataset.png`
+
+**Label rujukan dalam teks:** `fig-6-1-p-testbeds-dataset`
+
+**Baris rujukan di draft3.qmd:** 942
+
+**Caption:** Gambar usulan untuk 6.1 P: Testbeds/Dataset: Sketsa lingkungan uji atau alur dataset ke eksperimen.
+
+**Deskripsi singkat:** Gambar berupa sketsa lingkungan uji atau alur dataset ke eksperimen. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Testbeds/Dataset: Sketsa lingkungan uji atau alur dataset ke eksperimen. Konteks bab: 'Domain Sistem (S)'. Konteks section: 'P: Testbeds/Dataset'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 22: I: Arsitektur Sistem Cerdas
+
+**Bab:** Domain Sistem (S)
+
+**Section:** I: Arsitektur Sistem Cerdas
+
+**Nama file:** `figures/6-2-i-arsitektur-sistem-cerdas.png`
+
+**Label rujukan dalam teks:** `fig-6-2-i-arsitektur-sistem-cerdas`
+
+**Baris rujukan di draft3.qmd:** 981
+
+**Caption:** Gambar usulan untuk 6.2 I: Arsitektur Sistem Cerdas: Diagram arsitektur sistem cerdas modular.
+
+**Deskripsi singkat:** Gambar berupa diagram arsitektur sistem cerdas modular. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Arsitektur Sistem Cerdas: Diagram arsitektur sistem cerdas modular. Konteks bab: 'Domain Sistem (S)'. Konteks section: 'I: Arsitektur Sistem Cerdas'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 23: P: Energi Sumber/Data Mentah
+
+**Bab:** Domain Teknologi (T)
+
+**Section:** P: Energi Sumber/Data Mentah
+
+**Nama file:** `figures/7-1-p-energi-sumber-data-mentah.png`
+
+**Label rujukan dalam teks:** `fig-7-1-p-energi-sumber-data-mentah`
+
+**Baris rujukan di draft3.qmd:** 1047
+
+**Caption:** Gambar usulan untuk 7.1 P: Energi Sumber/Data Mentah: Sketsa sumber data mentah yang masuk ke engine.
+
+**Deskripsi singkat:** Gambar berupa sketsa sumber data mentah yang masuk ke engine. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Energi Sumber/Data Mentah: Sketsa sumber data mentah yang masuk ke engine. Konteks bab: 'Domain Teknologi (T)'. Konteks section: 'P: Energi Sumber/Data Mentah'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 24: I: Engine/Modul Teknologi
+
+**Bab:** Domain Teknologi (T)
+
+**Section:** I: Engine/Modul Teknologi
+
+**Nama file:** `figures/7-2-i-engine-modul-teknologi.png`
+
+**Label rujukan dalam teks:** `fig-7-2-i-engine-modul-teknologi`
+
+**Baris rujukan di draft3.qmd:** 1081
+
+**Caption:** Gambar usulan untuk 7.2 I: Engine/Modul Teknologi: Diagram modul teknologi yang saling terhubung.
+
+**Deskripsi singkat:** Gambar berupa diagram modul teknologi yang saling terhubung. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Engine/Modul Teknologi: Diagram modul teknologi yang saling terhubung. Konteks bab: 'Domain Teknologi (T)'. Konteks section: 'I: Engine/Modul Teknologi'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 25: P: Fenomena/Prinsip Sains
+
+**Bab:** Domain Riset Fundamental (F)
+
+**Section:** P: Fenomena/Prinsip Sains
+
+**Nama file:** `figures/8-1-p-fenomena-prinsip-sains.png`
+
+**Label rujukan dalam teks:** `fig-8-1-p-fenomena-prinsip-sains`
+
+**Baris rujukan di draft3.qmd:** 1140
+
+**Caption:** Gambar usulan untuk 8.1 P: Fenomena/Prinsip Sains: Sketsa fenomena ilmiah yang mendasari sistem.
+
+**Deskripsi singkat:** Gambar berupa sketsa fenomena ilmiah yang mendasari sistem. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Fenomena/Prinsip Sains: Sketsa fenomena ilmiah yang mendasari sistem. Konteks bab: 'Domain Riset Fundamental (F)'. Konteks section: 'P: Fenomena/Prinsip Sains'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 26: I: Teori/Model Baru
+
+**Bab:** Domain Riset Fundamental (F)
+
+**Section:** I: Teori/Model Baru
+
+**Nama file:** `figures/8-2-i-teori-model-baru.png`
+
+**Label rujukan dalam teks:** `fig-8-2-i-teori-model-baru`
+
+**Baris rujukan di draft3.qmd:** 1180
+
+**Caption:** Gambar usulan untuk 8.2 I: Teori/Model Baru: Diagram model konseptual baru berbasis teori.
+
+**Deskripsi singkat:** Gambar berupa diagram model konseptual baru berbasis teori. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Teori/Model Baru: Diagram model konseptual baru berbasis teori. Konteks bab: 'Domain Riset Fundamental (F)'. Konteks section: 'I: Teori/Model Baru'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 27: Representasi Fakta & Aturan
+
+**Bab:** Prolog (Penalaran Simbolik)
+
+**Section:** Representasi Fakta & Aturan
+
+**Nama file:** `figures/9-1-representasi-fakta-aturan.png`
+
+**Label rujukan dalam teks:** `fig-9-1-representasi-fakta-aturan`
+
+**Baris rujukan di draft3.qmd:** 1263
+
+**Caption:** Gambar usulan untuk 9.1 Representasi Fakta & Aturan: Sketsa basis pengetahuan Prolog yang sederhana.
+
+**Deskripsi singkat:** Gambar berupa sketsa basis pengetahuan prolog yang sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa basis pengetahuan Prolog yang sederhana. Konteks bab: 'Prolog (Penalaran Simbolik)'. Konteks section: 'Representasi Fakta & Aturan'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 28: Mesin Inferensi Logika
+
+**Bab:** Prolog (Penalaran Simbolik)
+
+**Section:** Mesin Inferensi Logika
+
+**Nama file:** `figures/9-2-mesin-inferensi-logika.png`
+
+**Label rujukan dalam teks:** `fig-9-2-mesin-inferensi-logika`
+
+**Baris rujukan di draft3.qmd:** 1303
+
+**Caption:** Gambar usulan untuk 9.2 Mesin Inferensi Logika: Diagram query-inferensi-jawaban dalam Prolog.
+
+**Deskripsi singkat:** Gambar berupa diagram query-inferensi-jawaban dalam prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram query-inferensi-jawaban dalam Prolog. Konteks bab: 'Prolog (Penalaran Simbolik)'. Konteks section: 'Mesin Inferensi Logika'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 29: Pemetaan Komponen Ontologi
+
+**Bab:** Prolog (Penalaran Simbolik)
+
+**Section:** Pemetaan Komponen Ontologi
+
+**Nama file:** `figures/9-3-pemetaan-komponen-ontologi.png`
+
+**Label rujukan dalam teks:** `fig-9-3-pemetaan-komponen-ontologi`
+
+**Baris rujukan di draft3.qmd:** 1341
+
+**Caption:** Gambar usulan untuk 9.3 Pemetaan Komponen Ontologi: Sketsa jembatan ontologi ke basis pengetahuan simbolik.
+
+**Deskripsi singkat:** Gambar berupa sketsa jembatan ontologi ke basis pengetahuan simbolik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa jembatan ontologi ke basis pengetahuan simbolik. Konteks bab: 'Prolog (Penalaran Simbolik)'. Konteks section: 'Pemetaan Komponen Ontologi'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 30: Pemrosesan Data
+
+**Bab:** Python (Algoritma & Aplikasi)
+
+**Section:** Pemrosesan Data
+
+**Nama file:** `figures/10-1-pemrosesan-data.png`
+
+**Label rujukan dalam teks:** `fig-10-1-pemrosesan-data`
+
+**Baris rujukan di draft3.qmd:** 1398
+
+**Caption:** Gambar usulan untuk 10.1 Pemrosesan Data: Diagram pipeline data Python.
+
+**Deskripsi singkat:** Gambar berupa diagram pipeline data python. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram pipeline data Python. Konteks bab: 'Python (Algoritma & Aplikasi)'. Konteks section: 'Pemrosesan Data'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 31: Antarmuka Pengguna
+
+**Bab:** Python (Algoritma & Aplikasi)
+
+**Section:** Antarmuka Pengguna
+
+**Nama file:** `figures/10-2-antarmuka-pengguna.png`
+
+**Label rujukan dalam teks:** `fig-10-2-antarmuka-pengguna`
+
+**Baris rujukan di draft3.qmd:** 1434
+
+**Caption:** Gambar usulan untuk 10.2 Antarmuka Pengguna: Sketsa layar antarmuka pengguna sederhana.
+
+**Deskripsi singkat:** Gambar berupa sketsa layar antarmuka pengguna sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa layar antarmuka pengguna sederhana. Konteks bab: 'Python (Algoritma & Aplikasi)'. Konteks section: 'Antarmuka Pengguna'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 32: Orkestrasi Simulasi
+
+**Bab:** Python (Algoritma & Aplikasi)
+
+**Section:** Orkestrasi Simulasi
+
+**Nama file:** `figures/10-3-orkestrasi-simulasi.png`
+
+**Label rujukan dalam teks:** `fig-10-3-orkestrasi-simulasi`
+
+**Baris rujukan di draft3.qmd:** 1469
+
+**Caption:** Gambar usulan untuk 10.3 Orkestrasi Simulasi: Diagram orkestrasi simulasi multi-modul.
+
+**Deskripsi singkat:** Gambar berupa diagram orkestrasi simulasi multi-modul. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram orkestrasi simulasi multi-modul. Konteks bab: 'Python (Algoritma & Aplikasi)'. Konteks section: 'Orkestrasi Simulasi'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 33: PySWIP
+
+**Bab:** Bridge Libraries
+
+**Section:** PySWIP
+
+**Nama file:** `figures/11-1-pyswip.png`
+
+**Label rujukan dalam teks:** `fig-11-1-pyswip`
+
+**Baris rujukan di draft3.qmd:** 1532
+
+**Caption:** Gambar usulan untuk 11.1 PySWIP: Sketsa arsitektur Python-PySWIP-Prolog.
+
+**Deskripsi singkat:** Gambar berupa sketsa arsitektur python-pyswip-prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa arsitektur Python-PySWIP-Prolog. Konteks bab: 'Bridge Libraries'. Konteks section: 'PySWIP'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 34: Janus (SWI-Prolog)
+
+**Bab:** Bridge Libraries
+
+**Section:** Janus (SWI-Prolog)
+
+**Nama file:** `figures/11-2-janus-swi-prolog.png`
+
+**Label rujukan dalam teks:** `fig-11-2-janus-swi-prolog`
+
+**Baris rujukan di draft3.qmd:** 1574
+
+**Caption:** Gambar usulan untuk 11.2 Janus (SWI-Prolog): Sketsa pertukaran data dua arah Python-Janus-Prolog.
+
+**Deskripsi singkat:** Gambar berupa sketsa pertukaran data dua arah python-janus-prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa pertukaran data dua arah Python-Janus-Prolog. Konteks bab: 'Bridge Libraries'. Konteks section: 'Janus (SWI-Prolog)'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 35: PrologMQI
+
+**Bab:** Bridge Libraries
+
+**Section:** PrologMQI
+
+**Nama file:** `figures/11-3-prologmqi.png`
+
+**Label rujukan dalam teks:** `fig-11-3-prologmqi`
+
+**Baris rujukan di draft3.qmd:** 1607
+
+**Caption:** Gambar usulan untuk 11.3 PrologMQI: Diagram koneksi klien ke server Prolog melalui MQI.
+
+**Deskripsi singkat:** Gambar berupa diagram koneksi klien ke server prolog melalui mqi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Diagram koneksi klien ke server Prolog melalui MQI. Konteks bab: 'Bridge Libraries'. Konteks section: 'PrologMQI'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 36: Skenario Bandung-Jakarta
+
+**Bab:** Studi Kasus: Transportasi 2030
+
+**Section:** Skenario Bandung-Jakarta
+
+**Nama file:** `figures/12-1-skenario-bandung-jakarta.png`
+
+**Label rujukan dalam teks:** `fig-12-1-skenario-bandung-jakarta`
+
+**Baris rujukan di draft3.qmd:** 1690
+
+**Caption:** Gambar usulan untuk 12.1 Skenario Bandung-Jakarta: Peta garis sederhana koridor Bandung-Jakarta.
+
+**Deskripsi singkat:** Gambar berupa peta garis sederhana koridor bandung-jakarta. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Peta garis sederhana koridor Bandung-Jakarta. Konteks bab: 'Studi Kasus: Transportasi 2030'. Konteks section: 'Skenario Bandung-Jakarta'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 37: Evaluasi Fleet EV vs Bus vs Kereta Cepat
+
+**Bab:** Studi Kasus: Transportasi 2030
+
+**Section:** Evaluasi Fleet EV vs Bus vs Kereta Cepat
+
+**Nama file:** `figures/12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat.png`
+
+**Label rujukan dalam teks:** `fig-12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat`
+
+**Baris rujukan di draft3.qmd:** 1743
+
+**Caption:** Gambar usulan untuk 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat: Sketsa tiga moda transportasi berdampingan.
+
+**Deskripsi singkat:** Gambar berupa sketsa tiga moda transportasi berdampingan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Sketsa tiga moda transportasi berdampingan. Konteks bab: 'Studi Kasus: Transportasi 2030'. Konteks section: 'Evaluasi Fleet EV vs Bus vs Kereta Cepat'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
+
+## Gambar 38: Metrik: Waktu, Biaya, Emisi CO2
+
+**Bab:** Studi Kasus: Transportasi 2030
+
+**Section:** Metrik: Waktu, Biaya, Emisi CO2
+
+**Nama file:** `figures/12-3-metrik-waktu-biaya-emisi-co2.png`
+
+**Label rujukan dalam teks:** `fig-12-3-metrik-waktu-biaya-emisi-co2`
+
+**Baris rujukan di draft3.qmd:** 1792
+
+**Caption:** Gambar usulan untuk 12.3 Metrik: Waktu, Biaya, Emisi CO2: Sketsa tiga sumbu evaluasi: waktu, biaya, emisi.
+
+**Deskripsi singkat:** Gambar berupa sketsa tiga sumbu evaluasi: waktu, biaya, emisi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt lengkap untuk Nano Banana Pro:**
+
+
+```text
+Buat satu ilustrasi untuk buku akademik teknik. Subjek utama: Waktu, Biaya, Emisi CO2: Sketsa tiga sumbu evaluasi: waktu, biaya, emisi. Konteks bab: 'Studi Kasus: Transportasi 2030'. Konteks section: 'Metrik: Waktu, Biaya, Emisi CO2'. Susun gambar sebagai diagram konsep atau skema penjelas, bukan ilustrasi artistik bebas. Pastikan inti gagasan pada section tersebut langsung terbaca hanya dari bentuk, alur panah, pengelompokan blok, dan ikon-ikon sederhana. Berikan ruang kosong yang cukup di sekeliling elemen utama agar nyaman ditempatkan di halaman buku. Gaya visual wajib: ilustrasi line-art akademik, latar putih polos, tinta/pena hitam saja, tanpa warna, tanpa gradasi, tanpa bayangan berat, tanpa tekstur kertas, tanpa latar dekoratif. Komposisi bersih, seimbang, minimalis, mudah dibaca pada ukuran cetak buku. Gunakan bentuk geometris sederhana, ikon teknik, panah, node, blok, kotak, lingkaran, dan label singkat bila perlu. Semua teks di dalam gambar harus sangat sedikit, cukup 1–5 label pendek yang jelas dan dapat dibaca. Hindari wajah realistis, detail anatomi rumit, perspektif dramatis, ornamen berlebihan, dan elemen fotorealistik. Utamakan fungsi edukatif, kejelasan konsep, dan keterbacaan hitam-putih. Boleh gunakan orientasi lanskap bila diagram alur lebih jelas, atau potret bila struktur bertingkat lebih sesuai. Gunakan ketebalan garis konsisten, dengan hirarki visual ringan antara elemen utama dan elemen pendukung. Bila ada panah, buat panah sederhana dan tegas. Bila ada ikon, gunakan ikon universal yang sangat sederhana. Hasil akhir harus tampak seperti gambar pena hitam yang rapi untuk buku kuliah atau monograf teknik. Jangan gunakan warna, jangan gunakan latar abu-abu, jangan gunakan efek 3D, jangan gunakan shading tebal, jangan gunakan tekstur kompleks, jangan gunakan elemen dekoratif yang tidak relevan, dan jangan memenuhi gambar dengan detail kecil.
+```
+
+**Catatan produksi:**
+- Pastikan rasio aspek menyesuaikan kebutuhan layout buku.
+- Simpan hasil akhir dengan nama file persis seperti yang dirujuk di atas.
+- Jaga konsistensi gaya dengan gambar lain dalam buku.
