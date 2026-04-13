@@ -1,40 +1,25 @@
-// Chapter-based numbering for books with appendix support
-#let equation-numbering = it => {
-  let pattern = if state("appendix-state", none).get() != none { "(A.1)" } else { "(1.1)" }
-  numbering(pattern, counter(heading).get().first(), it)
-}
-#let callout-numbering = it => {
-  let pattern = if state("appendix-state", none).get() != none { "A.1" } else { "1.1" }
-  numbering(pattern, counter(heading).get().first(), it)
-}
+// Simple numbering for non-book documents
+#let equation-numbering = "(1)"
+#let callout-numbering = "1"
 #let subfloat-numbering(n-super, subfloat-idx) = {
-  let chapter = counter(heading).get().first()
-  let pattern = if state("appendix-state", none).get() != none { "A.1a" } else { "1.1a" }
-  numbering(pattern, chapter, n-super, subfloat-idx)
+  numbering("1a", n-super, subfloat-idx)
 }
+
 // Theorem configuration for theorion
-// Chapter-based numbering (H1 = chapters)
-#let theorem-inherited-levels = 1
+// Simple numbering for non-book documents (no heading inheritance)
+#let theorem-inherited-levels = 0
 
-// Appendix-aware theorem numbering
-#let theorem-numbering(loc) = {
-  if state("appendix-state", none).at(loc) != none { "A.1" } else { "1.1" }
-}
+// Theorem numbering format (can be overridden by extensions for appendix support)
+// This function returns the numbering pattern to use
+#let theorem-numbering(loc) = "1.1"
 
-// Theorem render function
-// Note: brand-color is not available at this point in template processing
+// Default theorem render function
 #let theorem-render(prefix: none, title: "", full-title: auto, body) = {
-  block(
-    width: 100%,
-    inset: (left: 1em),
-    stroke: (left: 2pt + black),
-  )[
-    #if full-title != "" and full-title != auto and full-title != none {
-      strong[#full-title]
-      linebreak()
-    }
-    #body
-  ]
+  if full-title != "" and full-title != auto and full-title != none {
+    strong[#full-title.]
+    h(0.5em)
+  }
+  body
 }
 // Some definitions presupposed by pandoc's typst output.
 #let content-to-string(content) = {
@@ -223,148 +208,10 @@
 
 
 
-
-#let article(
-  title: none,
-  subtitle: none,
-  authors: none,
-  keywords: (),
-  date: none,
-  abstract-title: none,
-  abstract: none,
-  thanks: none,
-  cols: 1,
-  lang: "en",
-  region: "US",
-  font: none,
-  fontsize: 11pt,
-  title-size: 1.5em,
-  subtitle-size: 1.25em,
-  heading-family: none,
-  heading-weight: "bold",
-  heading-style: "normal",
-  heading-color: black,
-  heading-line-height: 0.65em,
-  mathfont: none,
-  codefont: none,
-  linestretch: 1,
-  sectionnumbering: none,
-  linkcolor: none,
-  citecolor: none,
-  filecolor: none,
-  toc: false,
-  toc_title: none,
-  toc_depth: none,
-  toc_indent: 1.5em,
-  doc,
-) = {
-  // Set document metadata for PDF accessibility
-  set document(title: title, keywords: keywords)
-  set document(
-    author: authors.map(author => content-to-string(author.name)).join(", ", last: " & "),
-  ) if authors != none and authors != ()
-  set par(
-    justify: true,
-    leading: linestretch * 0.65em
-  )
-  set text(lang: lang,
-           region: region,
-           size: fontsize)
-  set text(font: font) if font != none
-  show math.equation: set text(font: mathfont) if mathfont != none
-  show raw: set text(font: codefont) if codefont != none
-
-  set heading(numbering: sectionnumbering)
-
-  show link: set text(fill: rgb(content-to-string(linkcolor))) if linkcolor != none
-  show ref: set text(fill: rgb(content-to-string(citecolor))) if citecolor != none
-  show link: this => {
-    if filecolor != none and type(this.dest) == label {
-      text(this, fill: rgb(content-to-string(filecolor)))
-    } else {
-      text(this)
-    }
-   }
-
-  place(
-    top,
-    float: true,
-    scope: "parent",
-    clearance: 4mm,
-    block(below: 1em, width: 100%)[
-
-      #if title != none {
-        align(center, block(inset: 2em)[
-          #set par(leading: heading-line-height) if heading-line-height != none
-          #set text(font: heading-family) if heading-family != none
-          #set text(weight: heading-weight)
-          #set text(style: heading-style) if heading-style != "normal"
-          #set text(fill: heading-color) if heading-color != black
-
-          #text(size: title-size)[#title #if thanks != none {
-            footnote(thanks, numbering: "*")
-            counter(footnote).update(n => n - 1)
-          }]
-          #(if subtitle != none {
-            parbreak()
-            text(size: subtitle-size)[#subtitle]
-          })
-        ])
-      }
-
-      #if authors != none and authors != () {
-        let count = authors.len()
-        let ncols = calc.min(count, 3)
-        grid(
-          columns: (1fr,) * ncols,
-          row-gutter: 1.5em,
-          ..authors.map(author =>
-              align(center)[
-                #author.name \
-                #author.affiliation \
-                #author.email
-              ]
-          )
-        )
-      }
-
-      #if date != none {
-        align(center)[#block(inset: 1em)[
-          #date
-        ]]
-      }
-
-      #if abstract != none {
-        block(inset: 2em)[
-        #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
-        ]
-      }
-    ]
-  )
-
-  if toc {
-    let title = if toc_title == none {
-      auto
-    } else {
-      toc_title
-    }
-    block(above: 0em, below: 2em)[
-    #outline(
-      title: toc_title,
-      depth: toc_depth,
-      indent: toc_indent
-    );
-    ]
-  }
-
-  doc
-}
-
-#set table(
-  inset: 6pt,
-  stroke: none
-)
-// include in HEADER
+// Import the book template from the wonderous-book package on Typst Universe
+// https://typst.app/universe/package/wonderous-book
+#import "@preview/bookly:2.1.2": *
+// include in HEADER
 #let brand-color = (:)
 #let brand-color-background = (:)
 #let brand-logo = (:)
@@ -375,31 +222,17 @@
   numbering: "1",
   columns: 1,
 )
-// Logo is handled by orange-book's cover page, not as a page background
-// NOTE: marginalia.setup is called in typst-show.typ AFTER book.with()
-// to ensure marginalia's margins override the book format's default margins
-#import "@preview/orange-book:0.7.1": book, part, chapter, appendices
+#set page(background: align(left+top, box(inset: 0.75in, image("logo.png", width: 1.5in))))
 
 #show: book.with(
-  title: [Judul],
-  subtitle: [Subjudul],
+  title: "Judul",
   author: "Armein Z. R. Langi",
-  date: "2026-09-04",
-  lang: "id",
-  main-color: brand-color.at("primary", default: blue),
-  logo: {
-    let logo-info = brand-logo.at("medium", default: none)
-    if logo-info != none { image(logo-info.path, alt: logo-info.at("alt", default: none)) }
-  },
-  outline-depth: 3,
 )
-
-
-// inlude BEFORE body
-#set text(
-  font: "Palatino Linotype", // Font family name
-  size: 12pt, // Font size in points
-)
+// inlude BEFORE body
+#set text(
+  font: "Palatino Linotype", // Font family name
+  size: 12pt, // Font size in points
+)
 // Reset Quarto's custom figure counters at each chapter (level-1 heading).
 // Orange-book only resets kind:image and kind:table, but Quarto uses custom kinds.
 // This list is generated dynamically from crossref.categories.
@@ -441,4 +274,4 @@ In summary, this book has no content whatsoever.
 
 #bibliography(("references.bib"))
 
-// include AFTER body
+// include AFTER body

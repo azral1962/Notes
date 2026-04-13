@@ -1,0 +1,27 @@
+```{=typst}
+#show: main-matter
+#tableofcontents
+#listoffigures
+#listoftables
+#part("Main body")
+
+```
+
+
+# Introduction
+
+This is a book created from markdown and executable code.
+
+See @knuth84 for additional discussion of literate programming.
+
+Dengan 
+
+```{python}
+print("Hello World")
+```
+
+$x=MA$ DAN
+
+$$
+A = b C
+$$

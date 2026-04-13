@@ -1,0 +1,12 @@
+title: Bookly
+author: J.J. Allaire
+version: 2.1.2
+quarto-required: ">=1.9.18"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+
+

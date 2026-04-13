@@ -1,0 +1,31 @@
+book:
+  author: Armein Z. R. Langi
+  chapters:
+  - index.qmd
+  - intro.qmd
+  - part: P1/P1.qmd
+    chapters:
+  - part: P2/P2.qmd
+    chapters:
+  - part: P3/P3.qmd
+    chapters:
+  - part: P4/P4.qmd
+    chapters:
+    - P4/ch05.qmd
+  - part: P5/P5.qmd
+    chapters:
+
+  - part: P6/P6.qmd
+    chapters:
+  - part: backmatter.qmd
+    chapters:
+    - references.qmd
+  subtitle: Arsitektur dan Representasi Pengetahuan
+  title: Rekayasa Sistem Cerdas
+
+project:
+  type: book
+
+format: 
+  typst:
+    keep-typ: true    
