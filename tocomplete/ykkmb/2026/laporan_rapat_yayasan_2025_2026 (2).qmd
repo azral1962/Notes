@@ -1,20 +1,10 @@
 ---
 title: "Laporan Keuangan 2025 dan Draft Budget 2026"
 subtitle: "Bahan Rapat Yayasan"
-author: "Disusun dari workbook laporan keuangan"
+author: "Pengurus YKKMB"
 format:
-  html:
-    toc: true
-    number-sections: true
-    df-print: paged
-  pdf:
-    toc: true
-    number-sections: true
-    papersize: a4
-    geometry:
-      - margin=2.5cm
-  docx:
-    toc: true
+  typst:
+    keep-typ: true
 execute:
   echo: false
   warning: false
