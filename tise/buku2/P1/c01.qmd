@@ -179,3 +179,25 @@ Dalam kerangka *Smart Engineering*, konsep belajar dan mengevaluasi ini diterapk
 -   **Pada Sistem Mesin (Artefak Cerdas):** Setelah agen cerdas (seperti kendaraan otonom atau perangkat lunak analitik) bertindak, ia mengukur efek dari tindakannya tersebut. Mesin kemudian memodifikasi basis pengetahuannya (seperti memperbarui fakta atau aturan dalam model ontologi/Prolog) agar perhitungan dan keputusannya di siklus PUDAL berikutnya menjadi lebih akurat, efisien, dan relevan dengan perubahan lingkungan.
 
 -   **Pada Proses Rekayasa (Tim Insinyur):** Proses desain rekayasa yang dilakukan manusia juga mengandalkan tahap evaluasi ini. Bagi para insinyur, fase *Learning* terjadi ketika mereka **mengevaluasi hasil pengujian (****testing****) dan mengumpulkan umpan balik (****feedback****) dari purwarupa yang telah mereka buat**. Evaluasi observasional ini memberi para insinyur pengetahuan baru yang digunakan untuk melakukan iterasi, merevisi desain, dan memperbaiki solusi teknis pada siklus pengembangan selanjutnya.
+
+Tabel ini membantu memperjelas tahap belajar sebagai evaluasi hasil dan pembaruan pengetahuan. Dalam konteks pembahasan 1.5 Learning (Belajar), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 1.5 Learning (Belajar): Tabel umpan balik, indikator hasil, pembaruan basis pengetahuan, dan perbaikan.
+
+| Hasil Observasi | Indikator | Evaluasi | Pembaruan Pengetahuan | Efek Siklus Berikut |
+| --- | --- | --- | --- | --- |
+| Waktu lebih lama dari target | Delay | Gagal parsial | Aturan rute diperbarui | Keputusan lebih hati-hati |
+| Keluhan pengguna naik | Satisfaction | Perlu perbaikan | Bobot kenyamanan dinaikkan | Layanan lebih responsif |
+| Emisi membaik | CO2/trip | Berhasil | Strategi dipertahankan | Optimasi berkelanjutan |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.5 Learning (Belajar): Diagram loop pembelajaran tertutup pada PUDAL.](figures/1-5-learning-belajar.png){#fig-1-5-learning-belajar width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.5 Learning (Belajar): Diagram loop pembelajaran tertutup pada PUDAL.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram loop pembelajaran tertutup pada pudal. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram loop pembelajaran tertutup pada PUDAL. untuk section '1.5 Learning (Belajar)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."

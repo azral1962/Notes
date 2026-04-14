@@ -3,7 +3,8 @@ title: "Daftar Gambar yang Harus Dibuat untuk Buku Rekayasa Sistem Cerdas"
 author: "Armein Z. R. Langi"
 format:
   docx: default
-  typst: default
+  typst: 
+    keep-typ: true
 toc: true
 number-sections: true
 ---
@@ -64,6 +65,15 @@ Jumlah gambar yang teridentifikasi: **38**.
 | 38 | Metrik: Waktu, Biaya, Emisi CO2 | `figures/12-3-metrik-waktu-biaya-emisi-co2.png` | `fig-12-3-metrik-waktu-biaya-emisi-co2` |
 
 ## Gambar 1: Perceive (Persepsi)
+
+
+![Gambar usulan untuk 1.1 Perceive (Persepsi): Diagram alur persepsi dari stimulus ke data terstruktur.](slide0.pdf){#fig-1-1-perceive-persepsi page=2 width=80%}
+
+
+
+```{=typst}
+  #image("slide0.pdf", page: 2)
+```
 
 **Bab:** Sistem Cerdas & Siklus PUDAL
 

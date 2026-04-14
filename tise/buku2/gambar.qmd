@@ -1,61 +1,8 @@
----
-title: "Usulan Tabel dan Gambar untuk Buku *Rekayasa Sistem Cerdas*"
-subtitle: "Draft pengayaan visual dan tabular per section"
-author: "Disusun oleh ChatGPT untuk Armein Z. R. Langi"
-format:
-  html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-  pdf:
-    toc: true
-    number-sections: true
-lang: id
----
 
-# Pendahuluan
-
-Dokumen ini disusun untuk memperkaya draft buku **Rekayasa Sistem Cerdas: Arsitektur dan Representasi Pengetahuan** dengan tabel dan gambar yang berlimpah. Prinsip kerja dokumen ini adalah sebagai berikut.
-
-1. Setiap **section** diupayakan memiliki **minimal satu tabel** dan **minimal satu usulan gambar**.
-2. Untuk setiap tabel disediakan **caption**, **lokasi penyisipan usulan** (halaman dan kisaran baris), serta **paragraf pengantar** yang menjelaskan fungsi tabel di dalam alur diskusi.
-3. Untuk setiap gambar disediakan **placeholder**, **caption**, **deskripsi**, dan **prompt** untuk **Nano Banana Pro**.
-4. Gaya gambar yang diusulkan dibuat **sesederhana mungkin**, **latar putih**, dan **garis pena hitam** agar konsisten dengan buku teknik yang bersih dan mudah dicetak.
-
-# Catatan Penyuntingan
-
-- Nomor halaman yang dipakai di bawah ini mengacu pada **halaman buku** sebagaimana tampil pada daftar isi draft.
-- Nomor baris bersifat **perkiraan editorial** untuk memudahkan penyisipan awal; saat layout akhir berubah, editor dapat menggesernya sedikit tanpa mengubah makna.
-- Karena bahan yang saya akses di sini adalah draft PDF yang diunggah, usulan ini bertumpu terutama pada struktur daftar isi dan isi konseptual naskah yang tersedia.
-
-# Ringkasan Cakupan
-
-- Total bagian: **4**
-- Total bab: **12**
-- Total section yang diberi usulan: **38**  
-  (termasuk **Bab 4** yang tidak memiliki subsection eksplisit, sehingga diberi entri khusus **4.0 SEA** agar tetap memperoleh pengayaan visual)
-
-# Bagian 1
-
-## Bab 1. Sistem Cerdas & Siklus PUDAL
+1. Untuk setiap gambar disediakan **placeholder**, **caption**, **deskripsi**, dan **prompt** untuk **Nano Banana Pro**.
+4. Gaya gambar yang diusulkan dibuat **sesederhana mungkin**, **latar putih**, dan **garis pena hitam** agar konsisten dengan buku teknik yang bersih dan mudah 
 
 ### 1.1 Perceive (Persepsi)
-
-**Bab:** Bab 1. Sistem Cerdas & Siklus PUDAL  
-**Lokasi usulan tabel:** halaman buku 12, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 12, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas tahap persepsi sebagai gerbang data pada siklus pudal. Dalam konteks pembahasan 1.1 Perceive (Persepsi), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 1.1 Perceive (Persepsi): Matriks sumber data, jenis sensor, keluaran persepsi, dan risiko salah baca.
-
-| Sumber Stimulus | Mekanisme Tangkap | Data Mentah | Risiko | Makna Desain |
-| --- | --- | --- | --- | --- |
-| Lingkungan fisik | Sensor | Kecepatan, posisi, suhu | Noise | Menentukan konteks awal |
-| Pengguna | Input UI | Klik, teks, pilihan | Salah input | Mencerminkan niat pengguna |
-| Sistem internal | Log/status | Error, beban, baterai | Latency | Menilai kesehatan sistem |
-| Jaringan | Telemetri | Paket, delay, loss | Dropout | Menentukan stabilitas koneksi |
 
 
 **Placeholder gambar:**  
@@ -71,23 +18,6 @@ Gambar berupa diagram alur persepsi dari stimulus ke data terstruktur. dalam gay
 
 ### 1.2 Understand (Memahami)
 
-**Bab:** Bab 1. Sistem Cerdas & Siklus PUDAL  
-**Lokasi usulan tabel:** halaman buku 13, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 13, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas tahap memahami sebagai pembentukan representasi situasional berbasis ontologi. Dalam konteks pembahasan 1.2 Understand (Memahami), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 1.2 Understand (Memahami): Pemetaan data mentah ke kelas, individu, properti, dan relasi ontologi.
-
-| Data Mentah | Kelas Ontologi | Individu | Properti | Relasi |
-| --- | --- | --- | --- | --- |
-| Kecepatan 80 km/jam | Kendaraan | EV_01 | speed=80 | berada_di(rute_1) |
-| SOC 40% | Baterai | Battery_01 | soc=0.40 | milik(EV_01) |
-| Permintaan tinggi | Layanan | Trip_A | priority=tinggi | diminta_oleh(user_7) |
-| Kemacetan | Lingkungan | Koridor_BJ | density=padat | mempengaruhi(Trip_A) |
-
-
 **Placeholder gambar:**  
 `![Gambar usulan untuk 1.2 Understand (Memahami): Sketsa transformasi data mentah menjadi model konseptual.](figures/1-2-understand-memahami.png){#fig-1-2-understand-memahami width=80%}`
 
@@ -100,21 +30,6 @@ Gambar berupa sketsa transformasi data mentah menjadi model konseptual. dalam ga
 "Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa transformasi data mentah menjadi model konseptual. untuk section '1.2 Understand (Memahami)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
 
 ### 1.3 Decision (Keputusan)
-
-**Bab:** Bab 1. Sistem Cerdas & Siklus PUDAL  
-**Lokasi usulan tabel:** halaman buku 14, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 14, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas tahap keputusan sebagai pemilihan tindakan rasional berbasis penalaran. Dalam konteks pembahasan 1.3 Decision (Keputusan), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 1.3 Decision (Keputusan): Tabel aturan keputusan, kondisi, inferensi, dan tindakan.
-
-| Kondisi | Aturan | Inferensi | Keputusan | Alasan |
-| --- | --- | --- | --- | --- |
-| SOC rendah | Jika SOC<0.2 maka hindari rute panjang | Perlu pengisian | Pilih halte pengisian | Menjaga kontinuitas layanan |
-| Kemacetan tinggi | Jika density=padat maka cari alternatif | Rute utama tidak efisien | Alih rute | Meminimalkan waktu tempuh |
-| Permintaan tinggi | Jika priority=tinggi maka percepat dispatch | Layanan harus diprioritaskan | Tambah armada | Menjaga SLA |
 
 
 **Placeholder gambar:**  
@@ -130,20 +45,6 @@ Gambar berupa diagram pohon keputusan sederhana dalam konteks sistem cerdas. dal
 
 ### 1.4 Act (Tindakan)
 
-**Bab:** Bab 1. Sistem Cerdas & Siklus PUDAL  
-**Lokasi usulan tabel:** halaman buku 15, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 15, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas tahap tindakan sebagai eksekusi rencana ke lingkungan nyata. Dalam konteks pembahasan 1.4 Act (Tindakan), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 1.4 Act (Tindakan): Tabel hubungan keputusan, aksi, aktuator, dan dampak lingkungan.
-
-| Rencana | Aksi Eksekusi | Komponen Pelaksana | Output | Dampak |
-| --- | --- | --- | --- | --- |
-| Alih rute | Ubah jalur navigasi | Kontrol kendaraan | Rute baru aktif | Waktu turun |
-| Tambah armada | Aktifkan unit cadangan | Sistem dispatch | Frekuensi naik | Antrian turun |
-| Kurangi beban | Batasi penumpang | Pengendali layanan | Kapasitas adaptif | Keamanan naik |
 
 
 **Placeholder gambar:**  
@@ -159,20 +60,6 @@ Gambar berupa sketsa alur aksi dari rencana ke perubahan lingkungan. dalam gaya 
 
 ### 1.5 Learning (Belajar)
 
-**Bab:** Bab 1. Sistem Cerdas & Siklus PUDAL  
-**Lokasi usulan tabel:** halaman buku 16, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 16, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas tahap belajar sebagai evaluasi hasil dan pembaruan pengetahuan. Dalam konteks pembahasan 1.5 Learning (Belajar), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 1.5 Learning (Belajar): Tabel umpan balik, indikator hasil, pembaruan basis pengetahuan, dan perbaikan.
-
-| Hasil Observasi | Indikator | Evaluasi | Pembaruan Pengetahuan | Efek Siklus Berikut |
-| --- | --- | --- | --- | --- |
-| Waktu lebih lama dari target | Delay | Gagal parsial | Aturan rute diperbarui | Keputusan lebih hati-hati |
-| Keluhan pengguna naik | Satisfaction | Perlu perbaikan | Bobot kenyamanan dinaikkan | Layanan lebih responsif |
-| Emisi membaik | CO2/trip | Berhasil | Strategi dipertahankan | Optimasi berkelanjutan |
 
 
 **Placeholder gambar:**  
@@ -190,21 +77,6 @@ Gambar berupa diagram loop pembelajaran tertutup pada pudal. dalam gaya sketsa p
 
 ### 2.1 Product (Produk)
 
-**Bab:** Bab 2. Artefak PSKVE  
-**Lokasi usulan tabel:** halaman buku 20, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 20, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas produk sebagai artefak fisik pembawa fungsi dan konversi energi. Dalam konteks pembahasan 2.1 Product (Produk), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 2.1 Product (Produk): Tabel atribut produk cerdas: kapasitas, daya, reliabilitas, dan fungsi utama.
-
-| Atribut Produk | Contoh Properti | Satuan | Makna Teknik | Keterkaitan PSKVE |
-| --- | --- | --- | --- | --- |
-| Kapasitas | 40 penumpang | orang | Kemampuan angkut | Mempengaruhi layanan |
-| Energi | 75 kWh | kWh | Cadangan operasi | Mempengaruhi biaya dan emisi |
-| Reliabilitas | MTBF 1200 | jam | Keandalan sistem | Mempengaruhi nilai |
-| Modularitas | baterai swap | kategori | Kemudahan pemeliharaan | Mempengaruhi pengetahuan dan layanan |
 
 
 **Placeholder gambar:**  
@@ -220,22 +92,6 @@ Gambar berupa sketsa produk cerdas dengan label komponen utama. dalam gaya skets
 
 ### 2.2 Service (Layanan)
 
-**Bab:** Bab 2. Artefak PSKVE  
-**Lokasi usulan tabel:** halaman buku 22, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 22, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas layanan sebagai energi interaksi, waktu, dan perhatian pengguna. Dalam konteks pembahasan 2.2 Service (Layanan), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 2.2 Service (Layanan): Tabel indikator layanan: waktu respons, aksesibilitas, kenyamanan, dan reliabilitas.
-
-| Indikator Layanan | Definisi | Satuan | Pengguna Rasakan | Dampak Desain |
-| --- | --- | --- | --- | --- |
-| Waktu respons | Lama dari permintaan ke layanan | menit | Cepat/lambat | Butuh optimasi dispatch |
-| Aksesibilitas | Kemudahan dijangkau | skor | Inklusivitas | Perlu titik layanan dekat |
-| Kenyamanan | Kualitas pengalaman | skor | Nyaman/tidak | Perlu kontrol getaran/suhu |
-| Keandalan | Layanan berjalan konsisten | % | Kepercayaan | Perlu redundansi |
-
 
 **Placeholder gambar:**  
 `![Gambar usulan untuk 2.2 Service (Layanan): Diagram interaksi pengguna dengan layanan cerdas.](figures/2-2-service-layanan.png){#fig-2-2-service-layanan width=80%}`
@@ -249,22 +105,6 @@ Gambar berupa diagram interaksi pengguna dengan layanan cerdas. dalam gaya skets
 "Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram interaksi pengguna dengan layanan cerdas. untuk section '2.2 Service (Layanan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
 
 ### 2.3 Knowledge (Pengetahuan)
-
-**Bab:** Bab 2. Artefak PSKVE  
-**Lokasi usulan tabel:** halaman buku 23, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 23, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas pengetahuan sebagai energi algoritmik yang tertanam dalam artefak. Dalam konteks pembahasan 2.3 Knowledge (Pengetahuan), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 2.3 Knowledge (Pengetahuan): Tabel bentuk knowledge energy: model, aturan, dataset, dan kebaruan.
-
-| Komponen Pengetahuan | Bentuk | Peran | Indikator | Nilai Tambah |
-| --- | --- | --- | --- | --- |
-| Aturan | Rule base | Penalaran simbolik | jumlah aturan | Konsistensi keputusan |
-| Model | ML/analitik | Prediksi | akurasi | Adaptasi lebih baik |
-| Dataset | Histori operasi | Pembelajaran | cakupan | Generalisasi |
-| Dokumentasi | Spesifikasi | Transfer pengetahuan | kelengkapan | Pemeliharaan mudah |
 
 
 **Placeholder gambar:**  
@@ -280,21 +120,6 @@ Gambar berupa sketsa lapisan pengetahuan di dalam artefak cerdas. dalam gaya ske
 
 ### 2.4 Value (Nilai)
 
-**Bab:** Bab 2. Artefak PSKVE  
-**Lokasi usulan tabel:** halaman buku 24, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 24, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas nilai sebagai manfaat ekonomi, sosial, dan strategis. Dalam konteks pembahasan 2.4 Value (Nilai), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 2.4 Value (Nilai): Tabel konversi knowledge dan service menjadi nilai yang dirasakan pemangku kepentingan.
-
-| Sumber Nilai | Wujud Nilai | Penerima | Cara Ukur | Konversi dari |
-| --- | --- | --- | --- | --- |
-| Efisiensi biaya | Penghematan operasional | Operator | Rp/trip | Produk+pengetahuan |
-| Kenyamanan | Kepuasan pengguna | Penumpang | skor survei | Layanan |
-| Reputasi hijau | Citra berkelanjutan | Organisasi | indeks reputasi | Lingkungan |
-| Kecepatan keputusan | Produktivitas | Tim insinyur | jam hemat | Pengetahuan |
 
 
 **Placeholder gambar:**  
@@ -310,21 +135,6 @@ Gambar berupa diagram panah konversi dari produk-layanan-pengetahuan menuju nila
 
 ### 2.5 Environment (Lingkungan)
 
-**Bab:** Bab 2. Artefak PSKVE  
-**Lokasi usulan tabel:** halaman buku 26, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 26, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas lingkungan sebagai ruang dampak, inspirasi, dan jejak ekologis. Dalam konteks pembahasan 2.5 Environment (Lingkungan), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 2.5 Environment (Lingkungan): Tabel metrik lingkungan: emisi, ruang, kebisingan, inspirasi, dan keselamatan.
-
-| Dimensi Lingkungan | Indikator | Satuan | Dampak | Arah Desain |
-| --- | --- | --- | --- | --- |
-| Emisi | CO2 ekuivalen | kg/trip | Jejak karbon | Semakin rendah lebih baik |
-| Kebisingan | Noise | dB | Kenyamanan ruang | Redam suara |
-| Jejak ruang | Luas layanan | m2 | Kepadatan ruang | Optimasi tata ruang |
-| Inspirasi ruang | Kualitas pengalaman | skor | Kreativitas/adopsi | Rancang ruang lebih manusiawi |
 
 
 **Placeholder gambar:**  
@@ -342,22 +152,6 @@ Gambar berupa sketsa artefak di dalam ruang lingkungan dengan jejak dampak. dala
 
 ### 3.1 Energi Produk (Fisik)
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 30, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 30, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas energi fisik sebagai dasar kerja material dan performa artefak. Dalam konteks pembahasan 3.1 Energi Produk (Fisik), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.1 Energi Produk (Fisik): Tabel bentuk energi produk, satuan, indikator, dan contoh rekayasa.
-
-| Bentuk Energi | Contoh | Satuan | Masuk/Keluar | Fungsi |
-| --- | --- | --- | --- | --- |
-| Listrik | Baterai EV | kWh | Masuk | Menggerakkan motor |
-| Mekanik | Torsi roda | Nm | Keluar | Menghasilkan gerak |
-| Termal | Panas motor | °C | Sampingan | Perlu pendinginan |
-| Kapasitas angkut | Muatan | orang/kg | Keluaran layanan | Nilai guna sistem |
-
 
 **Placeholder gambar:**  
 `![Gambar usulan untuk 3.1 Energi Produk (Fisik): Diagram alir energi fisik masuk-keluar.](figures/3-1-energi-produk-fisik.png){#fig-3-1-energi-produk-fisik width=80%}`
@@ -372,23 +166,6 @@ Gambar berupa diagram alir energi fisik masuk-keluar. dalam gaya sketsa pena hit
 
 ### 3.2 Energi Layanan (Atensi)
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 32, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 32, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas energi layanan sebagai konsumsi waktu, fokus, dan interaksi. Dalam konteks pembahasan 3.2 Energi Layanan (Atensi), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.2 Energi Layanan (Atensi): Tabel komponen atensi pengguna dan implikasinya terhadap rancangan layanan.
-
-| Komponen Atensi | Deskripsi | Satuan | Resiko | Implikasi |
-| --- | --- | --- | --- | --- |
-| Waktu tunggu | Sebelum layanan aktif | menit | Bosan | Perlu percepatan |
-| Waktu interaksi | Saat memakai sistem | menit | Beban kognitif | Perlu UI sederhana |
-| Fokus pengguna | Perhatian dibutuhkan | skor | Error penggunaan | Perlu otomasi |
-| Pemulihan masalah | Waktu saat gangguan | menit | Frustrasi | Perlu bantuan adaptif |
-
-
 **Placeholder gambar:**  
 `![Gambar usulan untuk 3.2 Energi Layanan (Atensi): Sketsa jam-atensi-interaksi pada layanan digital/fisik.](figures/3-2-energi-layanan-atensi.png){#fig-3-2-energi-layanan-atensi width=80%}`
 
@@ -402,21 +179,6 @@ Gambar berupa sketsa jam-atensi-interaksi pada layanan digital/fisik. dalam gaya
 
 ### 3.3 Energi Pengetahuan (Algoritma)
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 33, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 33, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas energi pengetahuan sebagai kapasitas algoritma mengubah data menjadi keputusan. Dalam konteks pembahasan 3.3 Energi Pengetahuan (Algoritma), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.3 Energi Pengetahuan (Algoritma): Tabel komponen algoritmik: data, model, inferensi, dan keluaran.
-
-| Tahap Algoritmik | Masukan | Proses | Keluaran | Nilai |
-| --- | --- | --- | --- | --- |
-| Akuisisi data | Sensor/log | Parsing | dataset bersih | Siap dianalisis |
-| Inferensi | Fakta+aturan | Reasoning | kesimpulan | Keputusan rasional |
-| Prediksi | Data historis | Model | forecast | Antisipasi risiko |
-| Optimasi | Alternatif solusi | Search | rencana terbaik | Efisiensi tinggi |
 
 
 **Placeholder gambar:**  
@@ -432,21 +194,6 @@ Gambar berupa diagram alur data ke algoritma ke keputusan. dalam gaya sketsa pen
 
 ### 3.4 Energi Nilai (Finansial/Sosial)
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 35, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 35, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas energi nilai sebagai hasil yang dapat dipertukarkan dan dirasakan. Dalam konteks pembahasan 3.4 Energi Nilai (Finansial/Sosial), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.4 Energi Nilai (Finansial/Sosial): Tabel dimensi nilai: finansial, sosial, waktu, reputasi, dan keberlanjutan.
-
-| Dimensi Nilai | Contoh | Satuan/Indikator | Pihak Utama | Catatan |
-| --- | --- | --- | --- | --- |
-| Finansial | Penghematan | Rp | Operator | Kas dan margin |
-| Sosial | Akses mobilitas | skor | Masyarakat | Pemerataan layanan |
-| Waktu | Jam hemat | jam | Pengguna | Produktivitas |
-| Keberlanjutan | Emisi terhindar | kg CO2 | Lingkungan | Dampak jangka panjang |
 
 
 **Placeholder gambar:**  
@@ -462,22 +209,6 @@ Gambar berupa sketsa pertukaran nilai antar pemangku kepentingan. dalam gaya ske
 
 ### 3.5 Energi Ruang Lingkungan (Inspirasi)
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 36, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 36, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas ruang lingkungan sebagai energi yang mempengaruhi perilaku dan pengalaman. Dalam konteks pembahasan 3.5 Energi Ruang Lingkungan (Inspirasi), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.5 Energi Ruang Lingkungan (Inspirasi): Tabel kualitas ruang: imersif, aman, nyaman, inspiratif, dan ekologis.
-
-| Kualitas Ruang | Definisi | Indikator | Efek pada Pengguna | Contoh |
-| --- | --- | --- | --- | --- |
-| Aman | Bebas risiko | skor | Meningkatkan kepercayaan | Halte terang |
-| Nyaman | Mendukung pengalaman | skor | Mengurangi stres | Kursi dan ventilasi |
-| Imersif | Menyatu dengan layanan | skor | Adopsi naik | Informasi terpadu |
-| Inspiratif | Mendorong kreativitas | skor | Partisipasi naik | Ruang kolaboratif |
-
 
 **Placeholder gambar:**  
 `![Gambar usulan untuk 3.5 Energi Ruang Lingkungan (Inspirasi): Sketsa ruang kerja/layanan yang menginspirasi.](figures/3-5-energi-ruang-lingkungan-inspirasi.png){#fig-3-5-energi-ruang-lingkungan-inspirasi width=80%}`
@@ -492,21 +223,6 @@ Gambar berupa sketsa ruang kerja/layanan yang menginspirasi. dalam gaya sketsa p
 
 ### 3.6 Konversi Transaksional
 
-**Bab:** Bab 3. Energi Multi-Dimensi  
-**Lokasi usulan tabel:** halaman buku 38, sekitar baris 6–12  
-**Lokasi usulan gambar:** halaman buku 38, sekitar baris 18–24  
-
-**Paragraf penyerta usulan tabel:**  
-Tabel ini membantu memperjelas konversi transaksional sebagai inti pertukaran antar dimensi energi pskve. Dalam konteks pembahasan 3.6 Konversi Transaksional, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
-
-> **Caption tabel:** Tabel usulan untuk 3.6 Konversi Transaksional: Tabel pola konversi PSKVE antar entitas, masukan, keluaran, dan efek.
-
-| Dari | Ke | Mekanisme | Contoh | Makna |
-| --- | --- | --- | --- | --- |
-| Produk | Layanan | Pemakaian artefak | EV menjadi mobilitas | Fungsi menjadi pengalaman |
-| Pengetahuan | Nilai | Optimasi/otomasi | Algoritma hemat biaya | Informasi jadi manfaat |
-| Layanan | Nilai | Kepuasan dan loyalitas | Waktu tunggu turun | Pengalaman jadi reputasi |
-| Produk | Lingkungan | Jejak operasi | Emisi kendaraan | Fisik jadi dampak ruang |
 
 
 **Placeholder gambar:**  

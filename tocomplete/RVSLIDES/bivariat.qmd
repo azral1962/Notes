@@ -1,10 +1,111 @@
 ---
 title: "Problem Set 6: Probabilitas dan Statistik"
+
+subtitle: Explanation of Bivariate Random Variable Distribution with Examples
 ---
+
+## Introduction
+A <keyword>Bivariate Random Variable</keyword> is a pair of random variables $(X, Y)$ defined on the same probability space, mapping outcomes to points in $\mathbb{R}^2$. This framework allows for the analysis of the relationship and dependency between two stochastic processes.
+
+### Joint Distribution Functions
+
+The probabilistic behavior of a bivariate random variable is completely characterized by its <keyword>Joint Cumulative Distribution Function</keyword> (CDF):
+
+$$F_{X,Y}(x,y) = P(X \le x, Y \le y)$$
+
+- **Discrete Case**: If $X$ and $Y$ take values in a countable set, their distribution is described by the <keyword>Joint Probability Mass Function</keyword> (PMF):
+  $$p_{X,Y}(x,y) = P(X = x, Y = y)$$
+  where $\sum_x \sum_y p_{X,Y}(x,y) = 1$.
+
+
+
+- **Continuous Case**: If there exists a non-negative function $f_{X,Y}(x,y)$ such that for any region $D \subset \mathbb{R}^2$:
+  $$P((X,Y) \in D) = \iint_D f_{X,Y}(x,y) \,dx\,dy$$
+  then $f_{X,Y}(x,y)$ is the <keyword>Joint Probability Density Function</keyword> (PDF).
+
+### Marginal and Conditional Distributions
+
+To isolate the behavior of a single variable or determine the behavior of one given the other, we use marginalization and conditioning.
+
+- **Marginal Distributions**:
+  $$
+  \begin{aligned}
+  f_X(x) &= \int_{-\infty}^{\infty} f_{X,Y}(x,y) \,dy \\
+  f_Y(y) &= \int_{-\infty}^{\infty} f_{X,Y}(x,y) \,dx
+  \end{aligned}
+  $$
+
+- **Conditional Distributions**:
+  The density of $Y$ given $X=x$ is defined as:
+  $$f_{Y|X}(y|x) = \frac{f_{X,Y}(x,y)}{f_X(x)}, \quad f_X(x) > 0$$
+
+### Statistical Independence and Moments**
+
+- **Independence**: $X$ and $Y$ are independent if and only if:
+  $$f_{X,Y}(x,y) = f_X(x) f_Y(y)$$
+
+- **Covariance**: Measures the <keyword>Linear Correlation</keyword> between variables:
+  $$\text{Cov}(X,Y) = E[(X - \mu_X)(Y - \mu_Y)] = E[XY] - E[X]E[Y]$$
+
+- **Correlation Coefficient**: A normalized measure of dependency:
+  $$\rho_{X,Y} = \frac{\text{Cov}(X,Y)}{\sigma_X \sigma_Y}, \quad -1 \le \rho_{X,Y} \le 1$$
+
+<d3-visual data-visual-id="vis_1776004800859_27zc3y7i" data-visual-order="1" data-visual-status="processing">🎨 Generating visualization...</d3-visual>
+
+
+## Examples of Bivariate Distributions
+
+### **Example 1: Discrete Joint PMF (Communication System)**
+  Consider a system where $X$ is the number of packets sent ($X \in \{1, 2\}$) and $Y$ is the number of packets received ($Y \le X$).
+
+  | $p_{X,Y}(x,y)$ | $y=0$ | $y=1$ | $y=2$ |
+  | --- | --- | --- | --- |
+  | $x=1$ | 0.1 | 0.4 | 0 |
+  | $x=2$ | 0.05 | 0.15 | 0.3 |
+
+  The marginal $P(X=2) = 0.05 + 0.15 + 0.3 = 0.5$.
+
+### **Example 2: Bivariate Normal Distribution**
+  In signals and systems, noise is often modeled using the <keyword>Bivariate Normal Distribution</keyword>:
+  $$f_{X,Y}(x,y) = $$
+  
+  $$\frac{1}{2\pi \sigma_X \sigma_Y \sqrt{1-\rho^2}} \exp\left( -\frac{1}{2(1-\rho^2)} \left[ \frac{(x-\mu_X)^2}{\sigma_X^2} + \frac{(y-\mu_Y)^2}{\sigma_Y^2} - \frac{2\rho(x-\mu_X)(y-\mu_Y)}{\sigma_X \sigma_Y} \right] \right)$$
+
+### **Example 3: Uniform Distribution over a Triangular Region**
+  Let $(X,Y)$ be uniformly distributed over the region $0 < x < 1, 0 < y < 1, x+y < 1$. The area is $0.5$, so:
+  $$f_{X,Y}(x,y) = \begin{cases} 2 & 0 < x < 1, 0 < y < 1-x \\ 0 & \text{otherwise} \end{cases}$$
+  The marginal density of $X$ is:
+  $$f_X(x) = \int_0^{1-x} 2 \,dy = 2(1-x), \quad 0 < x < 1$$
+
+### **Example 4: Signal plus Noise**
+  Let $X \sim N(0, \sigma_X^2)$ be a signal and $N \sim N(0, \sigma_N^2)$ be independent noise. Let $Y = X + N$. The joint distribution of $(X, Y)$ is bivariate normal with:
+  $$
+  \begin{aligned}
+  E[Y] &= 0 \\
+  \text{Var}(Y) &= \sigma_X^2 + \sigma_N^2 \\
+  \text{Cov}(X,Y) &= E[X(X+N)] = E[X^2] + E[XN] = \sigma_X^2 \\
+  \rho_{X,Y} &= \frac{\sigma_X^2}{\sigma_X \sqrt{\sigma_X^2 + \sigma_N^2}} = \frac{\sigma_X}{\sqrt{\sigma_X^2 + \sigma_N^2}}
+  \end{aligned}
+  $$
+
+### **Example 5: Rayleigh and Phase (Polar Coordinates)**
+  In wireless fading channels, the in-phase ($I$) and quadrature ($Q$) components are often independent $N(0, \sigma^2)$. Transforming to magnitude $R = \sqrt{I^2 + Q^2}$ and phase $\Theta = \arctan(Q/I)$ yields:
+  $$f_{R,\Theta}(r, \theta) = \frac{r}{2\pi \sigma^2} e^{-r^2 / (2\sigma^2)}, \quad r \ge 0, \theta \in [0, 2\pi)$$
+  Since $f_{R,\Theta}(r, \theta) = f_R(r) f_{\Theta}(\theta)$, the magnitude (Rayleigh) and phase (Uniform) are independent.
+
+
 
 ### **Soal 1**
 
 Tunjukkan bahwa fungsi berikut memenuhi sifat - sifat dari fungsi massa probabilitas gabungan! *(Asumsikan terdapat suatu tabel distribusi probabilitas yang menyertai soal ini)*.
+
+|x|y|f(x,y)|
+|---|---|---|
+|1|0.1|1/4|
+|1.5|2|1/8|
+|1.5|3|1/4|
+|2.5|4|1/4|
+|3|5|1/8|
 
 {{< pause >}}
 
@@ -28,7 +129,8 @@ Empat printer elektronik dipilih dari sejumlah printer rusak. Setiap printer dip
 
 {{< pause >}}
 
-**Jawaban:** Karena total sampel yang diambil adalah 4, kombinasi jumlah printer cacat tidak bisa melebihi 4. Rentang cacat berat $X$: $\mathbf{x \in \{0, 1, 2, 3, 4\}}$. Rentang cacat ringan $Y$: $\mathbf{y \in \{0, 1, 2, 3, 4\}}$. Dengan batasan fungsi probabilitas gabungan: $\mathbf{x + y \le 4}$.
+**Jawaban:** 
+Karena total sampel yang diambil adalah 4, kombinasi jumlah printer cacat tidak bisa melebihi 4. Rentang cacat berat $X$: $\mathbf{x \in \{0, 1, 2, 3, 4\}}$. Rentang cacat ringan $Y$: $\mathbf{y \in \{0, 1, 2, 3, 4\}}$. Dengan batasan fungsi probabilitas gabungan: $\mathbf{x + y \le 4}$.
 
 ------------------------------------------------------------------------
 
@@ -54,11 +156,21 @@ Sebuah *website* bisnis kecil berisikan 100 *webpages* dengan 60%, 30% dan 10% d
 
 - g\. **Tidak Independen**, karena rentang kejadian (ruang sampel) variabel $Y$ secara langsung dibatasi oleh hasil observasi dari $X$ ($x+y \le 4$).
 
-------------------------------------------------------------------------
 
 ### **Soal 5**
 
 Anggap bahwa variabel random $X$, $Y$, dan $Z$ memiliki distribusi probabilitas gabungan berikut. Tentukan: $P(X=2)$, $P(Z<1,5)$, $E(X)$, $P(X=1,Y=2)$, dan $P(X=1 \text{ atau } Z=2)$. *(Asumsi merujuk pada penyelesaian tabel distribusi tri-variat yang setara)*.
+
+|x|y|z|f(x,y,z)|
+|---|---|---|---|
+|1|1|1|0.05|
+|1|1|2|0.10|
+|1|2|1|0.15|
+|1|2|2|0.20|
+|2|1|1|0.20|
+|2|1|2|0.10|
+|2|2|1|0.10|
+|2|2|2|0.05|
 
 {{< pause >}}
 
@@ -74,11 +186,16 @@ Anggap bahwa variabel random $X$, $Y$, dan $Z$ memiliki distribusi probabilitas 
 
 - e\. $P(X=1 \cup Z=2) = P(X=1) + P(Z=2) - P(X=1 \cap Z=2) = \mathbf{0,70}$
 
-------------------------------------------------------------------------
 
 ### **Soal 6**
 
-Empat oven elektronik yang terjatuh pada saat proses pengiriman diperiksa dan diklasifikasikan menjadi kedalam tiga kelas, yakni cacat berat, cacat ringan dan tidak cacat sama sekali. Pada pengalaman sebelumnya, setidaknya 60% dari oven yang terjatuh pada proses pengiriman akan mngalami cacat berat, 30% akan mengalami cacat ringan dan sekitar 10%-nya yang tidak akan mengalami kecacatan sama sekali. Asumsikan bahwa kecacatan pada empat oven muncul secara independen. a. Apakah distribusi probabilitas dari jumlah oven pada setiap kategori bersifat multinomial? Mengapa demikian/mengapa tidak demikian? b. Berapa probabilitas terjadinya kondisi dimana empat oven yang terjatuh,2 diantaranya mengalami cacat berat dan 2 lainnya mengalami cacat ringan. c. Berapa probabilitas terjadinya kondisi dimana tidak ada dari empat oven yang terjatuh tersebut yang mengalami cacat?
+Empat oven elektronik yang terjatuh pada saat proses pengiriman diperiksa dan diklasifikasikan menjadi kedalam tiga kelas, yakni cacat berat, cacat ringan dan tidak cacat sama sekali. Pada pengalaman sebelumnya, setidaknya 60% dari oven yang terjatuh pada proses pengiriman akan mngalami cacat berat, 30% akan mengalami cacat ringan dan sekitar 10%-nya yang tidak akan mengalami kecacatan sama sekali. Asumsikan bahwa kecacatan pada empat oven muncul secara independen. 
+
+a. Apakah distribusi probabilitas dari jumlah oven pada setiap kategori bersifat multinomial? Mengapa demikian/mengapa tidak demikian? 
+
+b. Berapa probabilitas terjadinya kondisi dimana empat oven yang terjatuh,2 diantaranya mengalami cacat berat dan 2 lainnya mengalami cacat ringan. 
+
+c. Berapa probabilitas terjadinya kondisi dimana tidak ada dari empat oven yang terjatuh tersebut yang mengalami cacat?
 
 {{< pause >}}
 
@@ -86,13 +203,18 @@ Empat oven elektronik yang terjatuh pada saat proses pengiriman diperiksa dan di
 
 - a\. **Ya, bersifat multinomial**. Hal ini dikarenakan percobaan bersifat independen, memuat lebih dari dua kategori hasil (mutually exclusive), dan probabilitas per kategori konstan pada setiap ujian.
 
-- b\. $P(2 \text{ berat}, 2 \text{ ringan}) = \frac{4!}{2!2!0!} (0,6)^2 (0,3)^2 (0,1)^0 = 6 \times 0,36 \times 0,09 = \mathbf{0,1944}$ c. $P(0 \text{ cacat}) = \frac{4!}{0!0!4!} (0,1)^4 = \mathbf{0,0001}$
+- b\. $P(2 \text{ berat}, 2 \text{ ringan}) = \frac{4!}{2!2!0!} (0,6)^2 (0,3)^2 (0,1)^0 = 6 \times 0,36 \times 0,09 = \mathbf{0,1944}$ 
 
-------------------------------------------------------------------------
+- c. $P(0 \text{ cacat}) = \frac{4!}{0!0!4!} (0,1)^4 = \mathbf{0,0001}$
+
 
 ### **Soal 7**
 
-Pada sebuah transmisi informasi digital, probabilitas dimana bit mengalami distorsi tinggi, sedang dan rendah, secara berurutan, adalah 0,01, 0,04 dan 0,95. Anggap bahwa tiga bit ditransmisikan dan setiap muatan distorsi pada setiap bit diasumsikan independen. a. Berapa probabilitas terjadinya kondisi dimana dua bit memiliki distorsi tinggi dan satu lainnya mengalami distorsi sedang? b. Berapa probabilitas terjadinya kondisi dimana ketiga bit memiliki distorsi rendah?
+Pada sebuah transmisi informasi digital, probabilitas dimana bit mengalami distorsi tinggi, sedang dan rendah, secara berurutan, adalah 0,01, 0,04 dan 0,95. Anggap bahwa tiga bit ditransmisikan dan setiap muatan distorsi pada setiap bit diasumsikan independen. 
+
+a. Berapa probabilitas terjadinya kondisi dimana dua bit memiliki distorsi tinggi dan satu lainnya mengalami distorsi sedang? 
+
+b. Berapa probabilitas terjadinya kondisi dimana ketiga bit memiliki distorsi rendah?
 
 {{< pause >}}
 
@@ -102,7 +224,6 @@ Pada sebuah transmisi informasi digital, probabilitas dimana bit mengalami disto
 
 - b\. $P(3 \text{ Rendah}) = (0,95)^3 = \mathbf{0,857375}$
 
-------------------------------------------------------------------------
 
 ### **Soal 8 & 9**
 
@@ -112,21 +233,20 @@ Tentukan nilai $c$ yang dapat membuat fungsi $f(x, y) = cxy$ menjadi fungsi pada
 
 **Jawaban:**
 
-- \* Mencari c: $\int_0^3 \int_0^3 cxy dx dy = c \left[\frac{x^2}{2}\right]_0^3 \left[\frac{y^2}{2}\right]_0^3 = c(\frac{81}{4}) = 1 \implies \mathbf{c = 4/81}$
+- Mencari c: $\int_0^3 \int_0^3 cxy dx dy = c \left[\frac{x^2}{2}\right]_0^3 \left[\frac{y^2}{2}\right]_0^3 = c(\frac{81}{4}) = 1 \implies \mathbf{c = 4/81}$
 
-- \* $P(X<1, Y<2) = \int_0^2 \int_0^1 \frac{4}{81}xy dx dy = \mathbf{4/81}$
+- $P(X<1, Y<2) = \int_0^2 \int_0^1 \frac{4}{81}xy dx dy = \mathbf{4/81}$
 
-- \* $P(1<X<2) = \int_0^3 \int_1^2 \frac{4}{81}xy dx dy = \mathbf{1/3}$
+- $P(1<X<2) = \int_0^3 \int_1^2 \frac{4}{81}xy dx dy = \mathbf{1/3}$
 
-- \* $P(Y>1) = \int_1^3 \int_0^3 \frac{4}{81}xy dx dy = \mathbf{8/9}$
+- $P(Y>1) = \int_1^3 \int_0^3 \frac{4}{81}xy dx dy = \mathbf{8/9}$
 
-- \* $P(X<2, Y<2) = \int_0^2 \int_0^2 \frac{4}{81}xy dx dy = \mathbf{16/81}$
+- $P(X<2, Y<2) = \int_0^2 \int_0^2 \frac{4}{81}xy dx dy = \mathbf{16/81}$
 
-- \* $E(X) = \int_0^3 \int_0^3 x (\frac{4}{81}xy) dx dy = \mathbf{2}$
+- $E(X) = \int_0^3 \int_0^3 x (\frac{4}{81}xy) dx dy = \mathbf{2}$
 
 - \* $E(Y) = \mathbf{2}$ (karena rentang x dan y pada fungsi adalah simetris).
 
-------------------------------------------------------------------------
 
 ### **Soal 10**
 
@@ -134,39 +254,94 @@ Dua metode dalam mengukur kehalusan permukaan digunakan dalam mengevaluasi sebua
 
 {{< pause >}}
 
-**Jawaban:** Karena sifat distribusinya seragam, maka nilai probabilitasnya adalah $\frac{1}{\text{Luas Area Batas}}$. Luas area batas: $\int_0^4 ( (x+1) - (x-1) ) dx = \int_0^4 2 dx = 8$. Agar integrasinya bernilai tepat 1, maka nilai konstanta $\mathbf{c = 1/8}$.
+**Jawaban:** 
+Karena sifat distribusinya seragam, maka nilai probabilitasnya adalah $\frac{1}{\text{Luas Area Batas}}$. Luas area batas: $\int_0^4 ( (x+1) - (x-1) ) dx = \int_0^4 2 dx = 8$. Agar integrasinya bernilai tepat 1, maka nilai konstanta $\mathbf{c = 1/8}$.
 
 ------------------------------------------------------------------------
 
 ### **Soal 11**
 
-Sebuah bisnis manufaktur pakaian popular menerima pesanan *online* dari dua *routing system* yang berbeda. Rentang waktu antara setiap pesanan untuk setiap *routing system* pada hari biasa diketahui terdistribusi secara eksponensial dengan rata – rata selama 3,2 menit. Setiap sistem diasumsikan beroperasi secara independen. Maka tentukan: a. Berapa probabilitas terjadinya kondisi tidak ada pesanan yang diterima hingga periode waktu 5 menit dari pesanan terakhir? b. Berapa probabilitas untuk keadaan tidak ada pesanan yang diterima hingga periode waktu 10 menit? c. Berapa probabilitas terjadinya keadaan kedua sistem menerima dua pesanan pada rentang 10 dan 15 menit setelah situs pemesanan baru dibuka? d. Mengapa distribusi probabilitas gabungan tidak dibutuhkan untuk menjawab pertanyaan sebelumnya?
+Sebuah bisnis manufaktur pakaian popular menerima pesanan *online* dari dua *routing system* yang berbeda. Rentang waktu antara setiap pesanan untuk setiap *routing system* pada hari biasa diketahui terdistribusi secara eksponensial dengan rata – rata selama 3,2 menit. Setiap sistem diasumsikan beroperasi secara independen. Maka tentukan: 
+
+- a. Berapa probabilitas terjadinya kondisi tidak ada pesanan yang diterima hingga periode waktu 5 menit dari pesanan terakhir? 
+
+- b. Berapa probabilitas untuk keadaan tidak ada pesanan yang diterima hingga periode waktu 10 menit? 
+
+- c. Berapa probabilitas terjadinya keadaan kedua sistem menerima dua pesanan pada rentang 10 dan 15 menit setelah situs pemesanan baru dibuka? 
+
+- d. Mengapa distribusi probabilitas gabungan tidak dibutuhkan untuk menjawab pertanyaan sebelumnya?
 
 {{< pause >}}
 
-**Jawaban:** Kejadian dimodelkan dengan Distribusi Eksponensial dengan $\lambda = 1/3,2 = 0,3125$. a. Probabilitas gabungan (karena dua sistem identik yang independen) untuk $>5$ menit: $(e^{-5/3,2})^2 \approx \mathbf{0,0439}$. b. Probabilitas gabungan untuk $>10$ menit: $(e^{-10/3,2})^2 \approx \mathbf{0,00193}$. c. Menyelaraskan dengan persamaan proses Poisson pada interval $t=5$ ($\mu = 5/3,2 = 1,5625$). Maka $P(X=2)$ untuk kedua sistem adalah $(e^{-1,5625} \frac{1,5625^2}{2})^2 \approx \mathbf{0,0654}$. d. Fungsi padat probabilitas gabungan secara eksplisit tidak dibutuhkan karena kedua *routing system* **dioperasikan secara independen**. Kita dapat mengkalkulasinya dengan sekadar mengalikan kedua marginal probabilitasnya secara langsung.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Kejadian dimodelkan dengan Distribusi Eksponensial dengan $\lambda = 1/3,2 = 0,3125$. 
+
+- a. Probabilitas gabungan (karena dua sistem identik yang independen) untuk $>5$ menit: $(e^{-5/3,2})^2 \approx \mathbf{0,0439}$. 
+
+- b. Probabilitas gabungan untuk $>10$ menit: $(e^{-10/3,2})^2 \approx \mathbf{0,00193}$. 
+
+- c. Menyelaraskan dengan persamaan proses Poisson pada interval $t=5$ ($\mu = 5/3,2 = 1,5625$). Maka $P(X=2)$ untuk kedua sistem adalah $(e^{-1,5625} \frac{1,5625^2}{2})^2 \approx \mathbf{0,0654}$. 
+
+- d. Fungsi padat probabilitas gabungan secara eksplisit tidak dibutuhkan karena kedua *routing system* **dioperasikan secara independen**. Kita dapat mengkalkulasinya dengan sekadar mengalikan kedua marginal probabilitasnya secara langsung.
+
 
 ### **Soal 12 & 13**
 
-Anggap variabel random $X$, $Y$, dan $Z$ memiliki fungsi padat probabilitas gabungan $f(x, y, z) = 8xyz$ untuk setiap $0 < x < 1$, $0 < y < 1$ dan $0 < z < 1$. Tentukan hal – hal berikut: $P(X < 0,5)$, $P(X < 0,5, Y < 0,5)$, $P(Z < 2)$, $P(X < 0,5, Z < 2)$, $E(X)$. Tentukan nilai $c$ yang dapat membuat fungsi $f_{XYZ} (x, y, z) = c$ menjadi fungsi padat probabilitas gabungan pada wilayah rentang $x > 0$, $y > 0$, $z > 0$, dan $x + y + z < 1$.
+Anggap variabel random $X$, $Y$, dan $Z$ memiliki fungsi padat probabilitas gabungan $f(x, y, z) = 8xyz$ untuk setiap $0 < x < 1$, $0 < y < 1$ dan $0 < z < 1$. Tentukan hal – hal berikut: 
+
+- $P(X < 0,5)$, 
+
+- $P(X < 0,5, Y < 0,5)$, 
+
+- $P(Z < 2)$, 
+
+- $P(X < 0,5, Z < 2)$, 
+
+- $E(X)$. 
+
+- Tentukan nilai $c$ yang dapat membuat fungsi $f_{XYZ} (x, y, z) = c$ menjadi fungsi padat probabilitas gabungan pada wilayah rentang $x > 0$, $y > 0$, $z > 0$, dan $x + y + z < 1$.
 
 {{< pause >}}
 
-**Jawaban:** Berdasarkan batas terpisahnya, fungsi ini saling independen antar variabel: \* $P(X < 0,5) = \int_0^{0,5} 2x dx = \mathbf{0,25}$. \* $P(X < 0,5, Y < 0,5) = P(X<0,5) \times P(Y<0,5) = 0,25 \times 0,25 = \mathbf{0,0625}$. \* $P(Z < 2) = \mathbf{1}$ (Mencakup seluruh area probabilitas karena batas maksimal densitas z hanya sampai 1). \* $P(X < 0,5, Z < 2) = 0,25 \times 1 = \mathbf{0,25}$. \* $E(X) = \int_0^1 x(2x) dx = \mathbf{2/3}$. \* Mencari c: Ruang batas $x+y+z < 1$ merupakan bangun ruang simplex 3D yang volumenya adalah $\frac{1}{6}$. Agar menjadi fungsi sebaran gabungan utuh, probabilitasnya harus 1, sehingga konstan yang mengimbanginya adalah $\mathbf{c = 6}$.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Berdasarkan batas terpisahnya, fungsi ini saling independen antar variabel: \* $P(X < 0,5) = \int_0^{0,5} 2x dx = \mathbf{0,25}$. 
+- $P(X < 0,5, Y < 0,5) = P(X<0,5) \times P(Y<0,5) = 0,25 \times 0,25 = \mathbf{0,0625}$. 
+
+- $P(Z < 2) = \mathbf{1}$ (Mencakup seluruh area probabilitas karena batas maksimal densitas z hanya sampai 1). 
+
+- $P(X < 0,5, Z < 2) = 0,25 \times 1 = \mathbf{0,25}$. \* $E(X) = \int_0^1 x(2x) dx = \mathbf{2/3}$. 
+
+- Mencari c: Ruang batas $x+y+z < 1$ merupakan bangun ruang simplex 3D yang volumenya adalah $\frac{1}{6}$. Agar menjadi fungsi sebaran gabungan utuh, probabilitasnya harus 1, sehingga konstan yang mengimbanginya adalah $\mathbf{c = 6}$.
+
 
 ### **Soal 14**
 
-Sebuah manufaktur lampu elektroluminesen mengetahui bahwa jumlah tinta luminesen yang terkandung dalam setiap satu produknya ialah terdistribusi secara normal dengan nilai rata – rata 1,2 gram dan standar deviasi 0,03 gram. Setiap lampu yang memiliki kurang dari 1,14 gram tinta luminesen akan gagal dalam memenuhi spesifikasi pelanggan. Sampel random sejumlah 25 lampu diambil dan kandungan massa tinta luminesen yang terkandung pada setiap sampel lampu tersebut diukur. Tentukan : a. Berapa probabilitas bahwa setidaknya 1 lampu gagal memenuhi spesifikasi? b. Berapa probabilitas bahwa 5 lampu atau kurang gagal memenuhi spesifikasi? c. Berapa probabilitas bahwa seluruh sampel lampu tersebut memenuhi spesifikasi? d. Mengapa distribusi probabilitas gabungan dari kasus sampel 25 lampu tidak dibutuhkan untuk menjawab pertanyaan sebelumnya?
+Sebuah manufaktur lampu elektroluminesen mengetahui bahwa jumlah tinta luminesen yang terkandung dalam setiap satu produknya ialah terdistribusi secara normal dengan nilai rata – rata 1,2 gram dan standar deviasi 0,03 gram. Setiap lampu yang memiliki kurang dari 1,14 gram tinta luminesen akan gagal dalam memenuhi spesifikasi pelanggan. Sampel random sejumlah 25 lampu diambil dan kandungan massa tinta luminesen yang terkandung pada setiap sampel lampu tersebut diukur. Tentukan : 
+
+- a. Berapa probabilitas bahwa setidaknya 1 lampu gagal memenuhi spesifikasi? 
+
+- b. Berapa probabilitas bahwa 5 lampu atau kurang gagal memenuhi spesifikasi? 
+
+- c. Berapa probabilitas bahwa seluruh sampel lampu tersebut memenuhi spesifikasi? 
+
+- d. Mengapa distribusi probabilitas gabungan dari kasus sampel 25 lampu tidak dibutuhkan untuk menjawab pertanyaan sebelumnya?
 
 {{< pause >}}
 
-**Jawaban:** Diketahui populasi Normal $\mu = 1,2$, $\sigma = 0,03$. Batas cacat $Z = \frac{1,14 - 1,2}{0,03} = -2$. Peluang gagal sebutir lampu adalah $p = P(Z < -2) = 0,02275$. Variabel jumlah lampu mematuhi distribusi Binomial $n=25$. a. $P(X \ge 1) = 1 - P(X = 0) = 1 - (1 - 0,02275)^{25} = \mathbf{0,438}$. b. $P(X \le 5) = \sum_{x=0}^5 \binom{25}{x}(0,02275)^x(0,97725)^{25-x} = \mathbf{0,9999}$. c. $P(X = 0) = (1 - 0,02275)^{25} = \mathbf{0,562}$. d. Fungsi PDF multivariat tidak perlu dirumuskan karena proses pengambilan ke-25 sampel lampu tersebut memenuhi sifat percobaan Bernoulli (setiap lampu **bersifat independen** satu sama lain).
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Diketahui populasi Normal $\mu = 1,2$, $\sigma = 0,03$. Batas cacat $Z = \frac{1,14 - 1,2}{0,03} = -2$. Peluang gagal sebutir lampu adalah $p = P(Z < -2) = 0,02275$. Variabel jumlah lampu mematuhi distribusi Binomial $n=25$. 
+
+- a. $P(X \ge 1) = 1 - P(X = 0) = 1 - (1 - 0,02275)^{25} = \mathbf{0,438}$. 
+
+- b. $P(X \le 5) = \sum_{x=0}^5 \binom{25}{x}(0,02275)^x(0,97725)^{25-x} = \mathbf{0,9999}$. 
+
+- c. $P(X = 0) = (1 - 0,02275)^{25} = \mathbf{0,562}$. 
+
+- d. Fungsi PDF multivariat tidak perlu dirumuskan karena proses pengambilan ke-25 sampel lampu tersebut memenuhi sifat percobaan Bernoulli (setiap lampu **bersifat independen** satu sama lain).
+
 
 ### **Soal 15**
 
@@ -174,9 +349,14 @@ Tentukan nilai c serta nilai kovarian dan korelasi untuk fungsi massa probabilit
 
 {{< pause >}}
 
-**Jawaban:** Telah dibuktikan pada soal No. 2 bahwa $\mathbf{c = 1/36}$. Ekspektasi Marginal: $E(X) = E(Y) = 13/6$. Variansi marginal $V(X) = V(Y) = 23/36$. Ekspektasi Perkalian: $E(XY) = \sum \sum xy \cdot \frac{x+y}{36} = 14/3$. Kovariansi: $Cov(X,Y) = E(XY) - E(X)E(Y) = \frac{14}{3} - (\frac{13}{6})^2 = \mathbf{-1/36}$. Korelasi: $\rho = \frac{Cov(X,Y)}{\sigma_X \sigma_Y} = \frac{-1/36}{23/36} = \mathbf{-1/23}$.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Telah dibuktikan pada soal No. 2 bahwa $\mathbf{c = 1/36}$. Ekspektasi Marginal: $E(X) = E(Y) = 13/6$. Variansi marginal $V(X) = V(Y) = 23/36$. Ekspektasi Perkalian: $E(XY) = \sum \sum xy \cdot \frac{x+y}{36} = 14/3$. 
+
+- Kovariansi: $Cov(X,Y) = E(XY) - E(X)E(Y) = \frac{14}{3} - (\frac{13}{6})^2 = \mathbf{-1/36}$. 
+
+- Korelasi: $\rho = \frac{Cov(X,Y)}{\sigma_X \sigma_Y} = \frac{-1/36}{23/36} = \mathbf{-1/23}$.
+
 
 ### **Soal 16**
 
@@ -186,7 +366,6 @@ Anggap sebuah korelasi antara $X$ dan $Y$ adalah $\rho$. Untuk konstanta a, b, c
 
 **Jawaban:** Konstanta pergeseran linier ($b$ dan $d$) tidak akan mempengaruhi nilai korelasi. Jika hasil kali pada koefisien penskalaan ($a \cdot c$) bernilai positif, korelasinya tetap $\mathbf{\rho}$. Akan tetapi, jika hasil kali ($a \cdot c$) bernilai negatif, maka korelasinya berbalik arah (tanda) menjadi $\mathbf{-\rho}$.
 
-------------------------------------------------------------------------
 
 ### **Soal 17**
 
@@ -196,7 +375,6 @@ Anggap $X$ dan $Y$ merepresentasikan konsentrasi dan viskositas dari sebuah prod
 
 **Jawaban:** *(Interpretasi Bentuk Plot)* \* $\rho = 0$: Gambar kontur berbentuk elips simetris yang datar/sejajar terhadap arah mendatar sumbu-x karena besaran simpangannya $\sigma_x > \sigma_y$. \* $\rho = -0,8$: Gambar kontur elips yang bentuknya miring diagonal memanjang dari arah kiri-atas menuju ke arah kanan-bawah. \* $\rho = 0,8$: Gambar kontur elips yang bentuknya miring diagonal memanjang dari arah kiri-bawah menuju ke arah kanan-atas.
 
-------------------------------------------------------------------------
 
 ### **Soal 18**
 
@@ -204,9 +382,16 @@ Pada sebuah manufaktur lampu elektroluminesen, beberapa lapis berbeda dari tinta
 
 {{< pause >}}
 
-**Jawaban:** Berdasarkan $\rho=0$, variabel $X$ dan $Y$ adalah saling lepas (independen). Lapis X: $Z_X = \frac{0,099535 - 0,1}{0,00031} = \pm 1,5 \implies P(-1,5 < Z_X < 1,5) = 0,8664$. Lapis Y: $Z_Y = \frac{0,22966 - 0,23}{0,00017} = \pm 2,0 \implies P(-2 < Z_Y < 2) = 0,9545$. Probabilitas gabungan (memenuhi seluruh specs): $0,8664 \times 0,9545 = \mathbf{0,827}$.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Berdasarkan $\rho=0$, variabel $X$ dan $Y$ adalah saling lepas (independen). 
+
+- Lapis X: $Z_X = \frac{0,099535 - 0,1}{0,00031} = \pm 1,5 \implies P(-1,5 < Z_X < 1,5) = 0,8664$. 
+
+- Lapis Y: $Z_Y = \frac{0,22966 - 0,23}{0,00017} = \pm 2,0 \implies P(-2 < Z_Y < 2) = 0,9545$. 
+
+- Probabilitas gabungan (memenuhi seluruh specs): $0,8664 \times 0,9545 = \mathbf{0,827}$.
+
 
 ### **Soal 19**
 
@@ -216,17 +401,33 @@ Jika terdapat $X$ dan $Y$, yang mana $X$ dan $Y$ memiliki distribusi normal biva
 
 **Jawaban:** Berdasarkan formula eksak persamaan Densitas Normal Bivariat, ekspresi eksponensial untuk area kovarian berimbang termuat dalam ruas $(x-\mu_x)(y-\mu_y)$. Apabila $\rho = 0$, nilai matematis pada ruas kovarian tersebut akan menjadi nol secara instan. Karena hilangnya efek kovarian gabungan, persamaan eksponensialnya secara sempurna dapat dipecah secara aljabar menjadi $f(x,y) = f_X(x) \times f_Y(y)$, yang menjadi pembuktian kuat bahwa variabel $X$ dan $Y$ independen.
 
-------------------------------------------------------------------------
 
 ### **Soal 20**
 
-Jika terdapat $X$ dan $Y$, yang mana $X$ dan $Y$ independen dan merupakan variabel random normal dengan $E(X) = 0$, $V(X) = 4$, $E(Y) = 10$, dan $V(Y) = 9$. Tentukan hal – hal berikut: $E(2X + 3Y)$, $V(2X + 3Y)$, $P(2X + 3Y < 30)$, $P(2X + 3Y < 40)$.
+Jika terdapat $X$ dan $Y$, yang mana $X$ dan $Y$ independen dan merupakan variabel random normal dengan $E(X) = 0$, $V(X) = 4$, $E(Y) = 10$, dan $V(Y) = 9$. 
+
+Tentukan hal – hal berikut: 
+- $E(2X + 3Y)$, 
+
+- $V(2X + 3Y)$, 
+
+- $P(2X + 3Y < 30)$, 
+
+- $P(2X + 3Y < 40)$.
 
 {{< pause >}}
 
-**Jawaban:** Misalkan kombinasi linear ini dinyatakan sebagai fungsi $W = 2X + 3Y$. \* $E(W) = 2(0) + 3(10) = \mathbf{30}$. \* $V(W) = 2^2(4) + 3^2(9) = 16 + 81 = \mathbf{97}$. \* $P(W < 30) = P(Z < \frac{30 - 30}{\sqrt{97}}) = P(Z < 0) = \mathbf{0,50}$. \* $P(W < 40) = P(Z < \frac{40 - 30}{\sqrt{97}}) = P(Z < 1,015) = \mathbf{0,8449}$.
+**Jawaban:** 
+Misalkan kombinasi linear ini dinyatakan sebagai fungsi $W = 2X + 3Y$. 
 
-------------------------------------------------------------------------
+- $E(W) = 2(0) + 3(10) = \mathbf{30}$. 
+
+- $V(W) = 2^2(4) + 3^2(9) = 16 + 81 = \mathbf{97}$. 
+
+- $P(W < 30) = P(Z < \frac{30 - 30}{\sqrt{97}}) = P(Z < 0) = \mathbf{0,50}$. 
+
+- $P(W < 40) = P(Z < \frac{40 - 30}{\sqrt{97}}) = P(Z < 1,015) = \mathbf{0,8449}$.
+
 
 ### **Soal 21**
 
@@ -234,23 +435,41 @@ Anggap sebuah variabel random $X$ merepresentasikan panjang sebuah bagian yang d
 
 {{< pause >}}
 
-**Jawaban:** Fungsi transformasi linear perbesaran unit dari centimeter ke milimeter adalah $Y = 10X$. Rata-rata: $E(Y) = 10 \cdot E(X) = 10 \times 5 = \mathbf{50 \text{ mm}}$. Variansi: $V(Y) = 10^2 \cdot V(X) = 100 \times 0,25 = \mathbf{25 \text{ mm}^2}$.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+Fungsi transformasi linear perbesaran unit dari centimeter ke milimeter adalah $Y = 10X$. 
+
+- Rata-rata: $E(Y) = 10 \cdot E(X) = 10 \times 5 = \mathbf{50 \text{ mm}}$. 
+
+- Variansi: $V(Y) = 10^2 \cdot V(X) = 100 \times 0,25 = \mathbf{25 \text{ mm}^2}$.
+
 
 ### **Soal 22**
 
-Sebuah casing plastik untuk sebuah piringan magnetik tersusun dari 2 bagian. Ketebalan dari setiap bagian terdistribusi secara normal dengan nilai rata – rata 2 milimeter dan dengan standar deviasi sebesar 0,1 milimeter serta setiap bagian saling independen. a. Tentukan nilai rata – rata dan standar deviasi dari ketebalan total dari kedua bagian casing plastik tersebut. b. Berapa probabilitas ketebalan total dari kedua bagian casing plastik tersebut lebih besar dari 4,3 milimeter.
+Sebuah casing plastik untuk sebuah piringan magnetik tersusun dari 2 bagian. Ketebalan dari setiap bagian terdistribusi secara normal dengan nilai rata – rata 2 milimeter dan dengan standar deviasi sebesar 0,1 milimeter serta setiap bagian saling independen. 
+
+- a. Tentukan nilai rata – rata dan standar deviasi dari ketebalan total dari kedua bagian casing plastik tersebut. 
+
+- b. Berapa probabilitas ketebalan total dari kedua bagian casing plastik tersebut lebih besar dari 4,3 milimeter.
 
 {{< pause >}}
 
-**Jawaban:** a. Model ketebalan total ($T = X_1 + X_2$). $\mu_T = 2+2 = \mathbf{4 \text{ mm}}$. Standar deviasi gabungan $\sigma_T = \sqrt{0,1^2+0,1^2} = \sqrt{0,02} \approx \mathbf{0,1414 \text{ mm}}$. b. $P(T > 4,3) = P(Z > \frac{4,3-4}{0,1414}) = P(Z > 2,12) = \mathbf{0,017}$.
+**Jawaban:** 
 
-------------------------------------------------------------------------
+- a. Model ketebalan total ($T = X_1 + X_2$). $\mu_T = 2+2 = \mathbf{4 \text{ mm}}$. Standar deviasi gabungan $\sigma_T = \sqrt{0,1^2+0,1^2} = \sqrt{0,02} \approx \mathbf{0,1414 \text{ mm}}$. 
+
+- b. $P(T > 4,3) = P(Z > \frac{4,3-4}{0,1414}) = P(Z > 2,12) = \mathbf{0,017}$.
+
 
 ### **Soal 23**
 
-Sebuah komponen berbentuk U terbentuk dari 3 bagian, A, B dan C, sebagaimana digambarkan pada gambar dibawah. Panjang dari A terdistribusi normal dengan nilai rata – rata 10 milimeter dan dengan standar deviasi sebesar 0,1 milimeter. Kemudian, ketebalan bagian B dan C terdistribusi secara normal dengan nila rata – rata 2 milimeter dan dengan standar deviasi sebesar 0,05 milimeter. Asumsikan semua dimensi independen. a. Tentukan nilai rata – rata dan standar deviasi dari panjang gap D. b. Berapa probabilitas bahwa gap D memiliki panjang kurang dari 5,9 milimeter.
+Sebuah komponen berbentuk U terbentuk dari 3 bagian, A, B dan C, sebagaimana digambarkan pada gambar dibawah. Panjang dari A terdistribusi normal dengan nilai rata – rata 10 milimeter dan dengan standar deviasi sebesar 0,1 milimeter. Kemudian, ketebalan bagian B dan C terdistribusi secara normal dengan nila rata – rata 2 milimeter dan dengan standar deviasi sebesar 0,05 milimeter. Asumsikan semua dimensi independen. 
+
+- a. Tentukan nilai rata – rata dan standar deviasi dari panjang gap D. 
+
+- b. Berapa probabilitas bahwa gap D memiliki panjang kurang dari 5,9 milimeter.
+
+![](Diagram.drawio.png)
 
 {{< pause >}}
 
@@ -260,11 +479,20 @@ Sebuah komponen berbentuk U terbentuk dari 3 bagian, A, B dan C, sebagaimana dig
 
 - b\. $P(D < 5,9) = P(Z < \frac{5,9-6}{0,1225}) = P(Z < -0,816) = \mathbf{0,207}$.
 
-------------------------------------------------------------------------
 
 ### **Soal 24**
 
-Persentase orang yang diberi obat antirheumatoid yang menderita efek samping parah, sedang dan ringan secara berurutan ialah 10%, 20% dan 70%. Asumsikan bahwa orang bereaksi secara independen dan misalkan 20 orang diberikan obat. Tentukan hal – hal berikut: a. Probabilitas bahwa 2, 4 dan 14 orang secara berurutan akan menderita efek samping parah, sedang dan rendah. b. Probabilitas bahwa tidak ada seorang pun yang menderita efek samping yang parah. c. Nilai rata – rata dan variansi dari jumlah orang yang menderita efek samping parah. d. Tentukan distribusi probabilitas bersyarat dari jumlah orang yang menderita efek samping parah ketika 19 orang menderita efek samping ringan. e. Tentukan nilai mean bersyarat $\mu_{Y|X}$ dari jumlah orang yang menderita efek samping parah ketika 19 orang menderita efek samping ringan.
+Persentase orang yang diberi obat antirheumatoid yang menderita efek samping parah, sedang dan ringan secara berurutan ialah 10%, 20% dan 70%. Asumsikan bahwa orang bereaksi secara independen dan misalkan 20 orang diberikan obat. Tentukan hal – hal berikut: 
+
+a. Probabilitas bahwa 2, 4 dan 14 orang secara berurutan akan menderita efek samping parah, sedang dan rendah. 
+
+b. Probabilitas bahwa tidak ada seorang pun yang menderita efek samping yang parah. 
+
+c. Nilai rata – rata dan variansi dari jumlah orang yang menderita efek samping parah. 
+
+d. Tentukan distribusi probabilitas bersyarat dari jumlah orang yang menderita efek samping parah ketika 19 orang menderita efek samping ringan. 
+
+e. Tentukan nilai mean bersyarat $\mu_{Y|X}$ dari jumlah orang yang menderita efek samping parah ketika 19 orang menderita efek samping ringan.
 
 {{< pause >}}
 
@@ -280,7 +508,6 @@ Persentase orang yang diberi obat antirheumatoid yang menderita efek samping par
 
 - e\. $\mu_{Y|X=19} = n \cdot p_{relatif} = 1(1/3) = \mathbf{1/3}$.
 
-------------------------------------------------------------------------
 
 ### **Soal 25**
 
@@ -290,7 +517,6 @@ Tentukan nilai $c$ sedemikian rupa sehingga fungsi $f(x, y) = cx^2y$ untuk setia
 
 **Jawaban:** $$ \int_0^3 \int_0^2 cx^2y dy dx = c \left[\frac{x^3}{3}\right]_0^3 \left[\frac{y^2}{2}\right]_0^2 = c(9)(2) = 18c = 1 \implies \mathbf{c = 1/18} $$
 
-------------------------------------------------------------------------
 
 ### **Soal 26**
 
@@ -312,7 +538,6 @@ Sebuah distribusi gabungan dari variabel random kontinu $X$, $Y$, dan $Z$ adalah
 
 - \* Secara umum $E(Z|x,y) = \mathbf{2}$ karena distribusi Z memancar memanjang seragam dari ketinggian 0 sampai 4 di manapun koordinat horizontal X dan Y diletakkan.
 
-------------------------------------------------------------------------
 
 ### **Soal 27**
 
@@ -328,7 +553,6 @@ Pengujian mematuhi hukum independensi (distribusi memori eksponensial):
 
 - b\. $P(\text{setidaknya 1} > 25.000) = 1 - P(\text{seluruh gagal} \le 25.000) = 1 - \prod (1 - e^{-25000/\mu_i})$.
 
-------------------------------------------------------------------------
 
 ### **Soal 28**
 
@@ -338,7 +562,6 @@ Jika $f_{XY}(x,y) = \frac{1}{1,2\pi} \exp\{- [0,72(x-1)^2 - 1,6(x-1)(y-2) + (y-2
 
 **Jawaban:** Berdasarkan pendekatan aljabar pada matriks persamaan Normal Bivariat Eksponensial standard, titik pusat nilai sebaran dapat diidentifikasi secara langsung dari komponen translasi sumbunya yang ada di dalam tanda kurung kuadratik. Hal ini menghasilkan $E(X) = \mathbf{1}$ dan $E(Y) = \mathbf{2}$.
 
-------------------------------------------------------------------------
 
 ### **Soal 29**
 

@@ -490,7 +490,7 @@ Tabel ini membantu memperjelas tahap persepsi sebagai gerbang data pada siklus p
   [Jaringan], [Telemetri], [Paket, delay, loss], [Dropout], [Menentukan stabilitas koneksi],
 )
 #figure([
-#box(image("figures/1-1-perceive-persepsi.png", width: 80.0%))
+#box(image("slide0.pdf", width: 80.0%))
 ], caption: figure.caption(
 position: bottom, 
 [
