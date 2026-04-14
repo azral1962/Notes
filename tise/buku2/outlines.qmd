@@ -1,0 +1,57 @@
+---
+title: Smart Engineering Framework
+Subtitle:Arsitektur Ontologi dan Metodologi Rekayasa Sistem Cerdas
+---
+# Konsep Inti Ontologi
+## Sistem Cerdas & Siklus PUDAL
+### Perceive (Persepsi)
+### Understand (Memahami)
+### Decision (Keputusan)
+### Act (Tindakan)
+### Learning (Belajar)
+## Artefak PSKVE
+### Product (Produk)
+### Service (Layanan)
+### Knowledge (Pengetahuan)
+### Value (Nilai)
+### Environment (Lingkungan)
+## Energi Multi-Dimensi
+### Energi Produk (Fisik)
+### Energi Layanan (Atensi)
+### Energi Pengetahuan (Algoritma)
+### Energi Nilai (Finansial/Sosial)
+### Energi Ruang Lingkungan (Inspirasi)
+### Konversi Transaksional
+## Smart Engine Abstraction (SEA)
+# Metodologi Multi-Domain (PICOC)
+## Domain Aplikasi (A)
+### P: Stakeholder
+### I: Solusi Baru
+### Cx: Masalah Spesifik
+## Domain Sistem (S)
+### P: Testbeds/Dataset
+### I: Arsitektur Sistem Cerdas
+## Domain Teknologi (T)
+### P: Energi Sumber/Data Mentah
+### I: Engine/Modul Teknologi
+## Domain Riset Fundamental (F)
+### P: Fenomena/Prinsip Sains
+### I: Teori/Model Baru
+# Integrasi Teknologi
+## Prolog (Penalaran Simbolik)
+### Representasi Fakta & Aturan
+### Mesin Inferensi Logika
+### Pemetaan Komponen Ontologi
+## Python (Algoritma & Aplikasi)
+### Pemrosesan Data
+### Antarmuka Pengguna
+### Orkestrasi Simulasi
+## Bridge Libraries
+### PySWIP
+### Janus (SWI-Prolog)
+### PrologMQI
+# Studi Kasus
+## Studi Kasus: Transportasi 2030
+### Skenario Bandung-Jakarta
+### Evaluasi Fleet EV vs Bus vs Kereta Cepat
+### Metrik: Waktu, Biaya, Emisi CO2

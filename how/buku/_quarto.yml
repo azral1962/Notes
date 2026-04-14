@@ -16,7 +16,7 @@ bibliography: references.bib
 lang: id
 logo: logo.png
 format:
-  typst:
+  bookly-typst:
     keep-typ: true
     papersize: "iso-b5"
     include-in-header: header.typ

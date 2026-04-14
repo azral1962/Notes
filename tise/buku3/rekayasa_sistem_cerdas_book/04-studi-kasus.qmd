@@ -1,0 +1,189 @@
+# Ringkasan Studi Kasus
+
+Bagian ini menghadirkan penerapan terpadu dari konsep ontologi, metodologi PICOC, dan integrasi Prolog--Python dalam sebuah skenario rekayasa yang konkret. Fokusnya bukan hanya menunjukkan cara kerja model, tetapi juga memperlihatkan bagaimana kerangka *Smart Engineering* dapat dipakai untuk membandingkan alternatif solusi secara sistematis berdasarkan waktu, biaya, dan emisi.
+
+# Studi Kasus: Transportasi 2030
+
+Studi Kasus Transportasi koridor Bandung-Jakarta 2030 adalah sebuah simulasi praktis yang dirancang secara khusus untuk mendemonstrasikan kegunaan kerangka kerja ontologis *Smart Engineering* dalam menyelesaikan masalah rekayasa multi-domain yang kompleks.
+
+Dalam konteks yang lebih luas dari *Smart Engineering*, studi kasus ini menyoroti beberapa penerapan prinsip fundamental:
+
+**1\. Implementasi Nyata Integrasi Prolog-Python** Simulasi ini menjadi bukti nyata dari penerapan arsitektur sistem (Domain Sistem) yang memadukan komputasi algoritmik dan penalaran simbolis.
+
+-   **Prolog sebagai Basis Pengetahuan:** Model ontologi terkait konsep komponen tahun 2030—seperti spesifikasi *Electric Sedan*, bus *biodiesel*, kereta cepat, kapasitas penumpang, biaya jaringan listrik, hingga intensitas CO2—didefinisikan secara deklaratif di dalam basis pengetahuan Prolog.
+
+-   **Python sebagai Orkestrator dan Mesin Kalkulasi:** Python bertugas menjalankan logika skenario (misalnya target membawa 100 penumpang). Melalui pustaka penghubung seperti `pyswip`, *class* di Python menarik data properti kendaraan dari Prolog, lalu menggunakan algoritma matematisnya untuk menghitung jumlah armada yang dibutuhkan, mengalkulasi biaya total operasional, dan menghitung emisi secara keseluruhan. Pemisahan yang jelas antara representasi pengetahuan (Prolog) dan logika simulasi (Python) ini terbukti sangat berharga untuk meningkatkan modularitas dan kemudahan pemeliharaan sistem perangkat lunak.
+
+**2\. Pergeseran Metrik Evaluasi menuju Dimensi Energi PSKVE** Alih-alih sekadar membandingkan spesifikasi teknis mesin fisik, *Smart Engineering* memandang solusi rekayasa dari lensa multi-dimensi PSKVE (Produk, Layanan, Pengetahuan, Nilai, Lingkungan). Kinerja ketiga alternatif solusi transportasi dalam studi kasus ini dievaluasi melalui matriks energi tersebut:
+
+-   **Energi Layanan (*Service Energy*):** Direpresentasikan secara objektif melalui efisiensi waktu atau estimasi waktu tempuh perjalanan, di mana Kereta Cepat menunjukkan performa Energi Layanan terbaik.
+
+-   **Energi Nilai (*Value Energy*):** Diukur melalui total biaya yang harus dikeluarkan per penumpang. Parameter algoritmik di Python mengakumulasikan biaya ini berdasarkan harga energi, tarif tol, nilai tiket, hingga pro-rata biaya pemeliharaan mesin.
+
+-   **Energi Ruang Lingkungan (*Environmental Space Energy*):** Mewakili jejak ekologis dari teknologi tersebut, yang dalam simulasi ini dikalkulasi sebagai jumlah gram emisi CO2 ekuivalen per penumpang.
+
+**3\. Mengilustrasikan Prinsip Konversi Transaksional** Studi kasus ini juga memperlihatkan cara kerja Konversi Transaksional (*Transactional Conversion*) di dunia nyata. Sistem transportasi ini memodelkan bagaimana pemangku kepentingan (penumpang) melakukan transaksi energi dimensi silang: **mereka menukarkan Energi Nilai yang mereka miliki (berupa uang/biaya tiket) untuk mendapatkan Energi Layanan (akses transportasi yang efisien) serta memanfaatkan konversi Energi Produk (pengoperasian mekanis kendaraan)**.
+
+**4\. Menggambarkan Interaksi Multi-Domain yang Rumit** Dengan mengevaluasi kendaraan yang berbeda (armada mobil listrik pribadi, bus diesel, dan kereta cepat), simulasi ini mendemonstrasikan kompleksitas interaksi dari berbagai "wares" (perangkat keras kendaraan, perangkat lunak sistem otonom, hingga infrastruktur jaringan energi). Sebagai contoh, simulasi ini membuktikan bahwa **Energi Pengetahuan (*Knowledge Energy*)** yang disematkan dalam teknologi baterai *Electric Vehicle* (EV) atau manajemen jaringan listrik cerdas akan secara langsung mendikte seberapa efisien konsumsi **Energi Produk** kendaraan tersebut, dan pada akhirnya menentukan besaran **Energi Ruang Lingkungan** (emisi) yang dihasilkannya.
+
+Secara keseluruhan, simulasi rute Bandung-Jakarta 2030 ini bukan sekadar studi kasus transportasi biasa, melainkan cetak biru (*blueprint*) tentang bagaimana kerangka kerja *Smart Engineering* memberdayakan para insinyur untuk merancang, membandingkan, dan mengoptimalkan sistem masa depan secara holistik dengan memadukan basis pengetahuan kecerdasan buatan, perhitungan matematis algoritmik, dan valuasi multi-dimensi PSKVE.
+
+## Skenario Bandung-Jakarta
+
+
+```{=typst}
+#figure(
+  image("slide.pdf", page: 45),
+  caption: [Skenario Bandung-Jakarta],
+) <fig:slide-45>
+```
+
+
+Dalam kerangka Studi Kasus Transportasi 2030, **Skenario Bandung-Jakarta** merupakan sebuah model simulasi praktis yang dirancang untuk mendemonstrasikan bagaimana kerangka kerja ontologis *Smart Engineering* dapat diimplementasikan untuk mengevaluasi alternatif solusi sistem rekayasa multi-domain.
+
+Berikut adalah rincian dari Skenario Bandung-Jakarta dan signifikansinya di dalam konteks studi kasus yang lebih luas:
+
+**1\. Batasan dan Parameter Skenario** Untuk menjalankan simulasi yang terukur, skenario ini menetapkan tiga parameter operasional utama:
+
+-   **Rute Perjalanan:** Koridor dari Bandung menuju Jakarta dengan estimasi jarak tempuh 150 km.
+
+-   **Tahun Proyeksi:** Kondisi teknologi, harga energi, dan infrastruktur disimulasikan untuk tahun 2030.
+
+-   **Beban Permintaan (*Passenger Demand*):** Skenario ini menargetkan pengangkutan sebuah kelompok yang terdiri dari **100 orang penumpang** secara bersamaan.
+
+**2\. Alternatif Transportasi yang Dievaluasi** Skenario ini membandingkan tiga jenis teknologi kendaraan massal dan pribadi (yang datanya tersimpan di dalam basis pengetahuan Prolog) untuk memenuhi permintaan 100 penumpang tersebut:
+
+-   **Armada Sedan Listrik (*Electric Sedan*):** Memiliki kapasitas 4 penumpang per unit, sehingga skenario ini membutuhkan kalkulasi pengoperasian 25 unit mobil listrik.
+
+-   **Armada Bus Diesel Euro 6 (*Biodiesel*):** Memiliki kapasitas 40 penumpang per unit, sehingga skenario ini membutuhkan pengoperasian 3 unit bus.
+
+-   **Kereta Cepat Listrik (*High-Speed Train*):** Memiliki kapasitas masif sebesar 500 penumpang per rangkaian, sehingga cukup menggunakan satu layanan untuk mengangkut seluruh kelompok.
+
+**3\. Evaluasi Berdasarkan Metrik Energi PSKVE** Alih-alih membandingkan spesifikasi mesin secara mentah, skenario Bandung-Jakarta mengevaluasi kinerja ketiga solusi tersebut menggunakan lensa multi-dimensi Energi PSKVE:
+
+-   **Energi Layanan (*Service Energy*):** Direpresentasikan melalui estimasi waktu tempuh. Kereta Cepat menawarkan efisiensi energi layanan terbaik (sekitar 1 hingga 1,5 jam) dibandingkan opsi jalan raya.
+
+-   **Energi Nilai (*Value Energy*):** Direpresentasikan melalui total biaya operasional per penumpang. Dalam simulasi algoritma Python, biaya ini diakumulasikan dari harga energi/bahan bakar, tarif tol, hingga prorata biaya pemeliharaan. Hasil ilustratif menunjukkan Bus Diesel memiliki potensi biaya per penumpang termurah, diikuti oleh armada Sedan EV, sedangkan Kereta Cepat memiliki biaya langsung tertinggi melalui harga tiket.
+
+-   **Energi Ruang Lingkungan (*Environmental Space Energy*):** Direpresentasikan dari total emisi ekuivalen CO2 per penumpang. Kereta Cepat menghasilkan jejak karbon terendah, sementara emisi Sedan EV sangat bergantung pada intensitas karbon jaringan listrik PLN di tahun 2030, dan Bus Diesel mencatatkan hasil polusi tertinggi.
+
+**4\. Signifikansi dalam Konteks** **Smart Engineering** Skenario Bandung-Jakarta ini berfungsi sebagai pembuktian konsep (*proof of concept*) dari dua prinsip utama *Smart Engineering*:
+
+-   **Pembuktian Integrasi Python-Prolog:** Simulasi ini memvalidasi kegunaan pemisahan arsitektur sistem. Data sifat kendaraan (seperti kapasitas dan konsumsi energi) diisolasi secara rapi di dalam pangkalan pengetahuan Prolog, sementara skrip Python secara dinamis menarik data tersebut untuk mengeksekusi kalkulasi matematis (seperti menghitung jumlah armada yang dibutuhkan untuk 100 penumpang dan total biaya gabungan).
+
+-   **Pembuktian Konversi Transaksional:** Skenario ini mengilustrasikan secara konkret bagaimana pengguna (penumpang) melakukan pertukaran energi lintas-dimensi di dunia nyata: mereka menukarkan Energi Nilai (uang/biaya) untuk mendapatkan Energi Layanan (waktu perjalanan yang efisien) dengan mempekerjakan Energi Produk mekanis kendaraan.
+
+Tabel ini membantu memperjelas skenario perjalanan bandung-jakarta sebagai konteks evaluasi sistem. Dalam konteks pembahasan 12.1 Skenario Bandung-Jakarta, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel ini ideal diletakkan segera setelah pengantar konsep pada section terkait agar pembaca memperoleh kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+| Skenario | Moda | Asumsi Utama | Kondisi Koridor | Tujuan Evaluasi |
+| --- | --- | --- | --- | --- |
+| Komuter cepat | Kereta cepat | stasiun mudah diakses | padat | waktu minimum |
+| Layanan fleksibel | Fleet EV | pickup dekat pengguna | beragam | kenyamanan personal |
+| Mass transit murah | Bus | jalur umum tersedia | macet | biaya rendah |
+: Skenario Perjalanan: Moda, Asumsi, Jarak, Waktu, dan Hambatan {#tbl-skenario-perjalanan}
+
+## Evaluasi Fleet EV vs Bus vs Kereta Cepat
+
+
+```{=typst}
+#figure(
+  image("slide.pdf", page: 46),
+  caption: [Subjek Uji: Tiga Alternatif Moda Transportasi],
+) <fig:slide-46>
+```
+
+
+Dalam kerangka Studi Kasus Transportasi 2030, evaluasi antara **Armada Sedan EV (*Electric Vehicle*)**, **Armada Bus Diesel**, dan **Kereta Cepat** merupakan model simulasi yang krusial untuk mendemonstrasikan bagaimana kerangka kerja ontologis *Smart Engineering* membandingkan berbagai alternatif solusi secara holistik. Skenario ini membandingkan ketiga moda tersebut untuk memenuhi permintaan pengangkutan 100 orang penumpang di koridor rute Bandung-Jakarta (150 km).
+
+Berikut adalah perbandingan dan evaluasi komprehensif dari ketiga solusi transportasi tersebut menggunakan lensa dimensi energi PSKVE (Produk, Layanan, Pengetahuan, Nilai, Lingkungan):
+
+**1\. Konfigurasi Kebutuhan Armada (Domain Sistem)** Untuk mengangkut kelompok berisi 100 penumpang, algoritma komputasi Python menarik data properti fisik kendaraan dari ontologi Prolog dan menghitung kebutuhan kapasitas masing-masing solusi:
+
+-   **Armada Sedan EV:** Karena setiap mobil berkapasitas 4 orang, skenario ini harus menyimulasikan operasi **25 unit mobil listrik** secara bersamaan.
+
+-   **Armada Bus Diesel:** Memiliki kapasitas 40 orang per unit, sehingga skenario ini cukup mengevaluasi **3 unit bus** (yang diasumsikan menggunakan bahan bakar biodiesel B30).
+
+-   **Kereta Cepat Elektrik:** Memiliki kapasitas masif sebesar 500 penumpang per rangkaian, sehingga pengoperasian **1 layanan rangkaian** sudah lebih dari cukup untuk memenuhi permintaan target.
+
+**2\. Evaluasi Energi Layanan (*Service Energy*)** Metrik ini mengukur kinerja layanan berdasarkan efisiensi waktu tempuh perjalanan. Dalam dimensi ini, **Kereta Cepat menawarkan performa yang paling superior**, dengan estimasi waktu tempuh hanya 1,0 hingga 1,5 jam. Sebaliknya, alternatif yang menggunakan infrastruktur jalan raya jauh lebih lambat; Armada Sedan EV membutuhkan waktu sekitar 2,5 hingga 3,5 jam, dan Armada Bus Diesel menjadi opsi paling lambat dengan estimasi 3,0 hingga 4,0 jam perjalanan.
+
+**3\. Evaluasi Energi Nilai (*Value Energy*)** Metrik ini mengevaluasi pengorbanan finansial melalui akumulasi total biaya per penumpang. Pada simulasi armada berbasis jalan raya, biaya ini dikalkulasi dengan menjumlahkan tarif energi/bahan bakar, tarif tol, serta pembagian prorata biaya pemeliharaan tahunan.
+
+-   **Armada Bus Diesel terbukti sebagai solusi paling ekonomis secara biaya operasional langsung**, yang diestimasikan sekitar Rp76.381 per penumpang.
+
+-   **Armada Sedan EV** menyusul di posisi kedua dengan beban biaya operasional sekitar Rp107.750 per penumpang.
+
+-   **Kereta Cepat** merupakan opsi transportasi paling mahal bagi pengguna langsung, yang direpresentasikan oleh harga pembelian tiket sebesar Rp150.000 per penumpang. Meski angka tersebut tampak definitif, sumber mencatat bahwa evaluasi Energi Nilai akan jauh lebih komprehensif jika simulasi ini turut memperhitungkan biaya siklus hidup (*lifecycle cost*), termasuk pengeluaran modal infrastruktur secara penuh.
+
+**4\. Evaluasi Energi Ruang Lingkungan (*Environmental Space Energy*)** Evaluasi jejak karbon diukur dari besaran emisi ekuivalen CO2 yang dihasilkan untuk memindahkan satu orang penumpang.
+
+-   **Kereta Cepat merupakan solusi yang paling ramah lingkungan**, menghasilkan emisi terendah (sekitar 840 gram CO2eq per penumpang) dengan asumsi suplai dari jaringan listrik yang lebih bersih di tahun 2030.
+
+-   **Armada Sedan EV** berada di posisi kedua (sekitar 1.575 gram CO2eq per penumpang). Evaluasi menekankan bahwa seberapa bersih performa lingkungan mobil listrik sangat bergantung pada intensitas karbon dari jaringan listrik utama (PLN) yang menyuplainya. Hal ini mencontohkan bagaimana Energi Pengetahuan (misalnya, kecerdasan dalam sistem *smart grid*) sangat mendikte dampak pencemaran dari sistem tersebut.
+
+-   **Armada Bus Diesel** mencatatkan dampak lingkungan terburuk dengan emisi tertinggi (sekitar 3.234 gram CO2eq per penumpang), sekalipun sudah dihipotesiskan menggunakan bahan bakar biofuel.
+
+**Signifikansi Evaluasi Komparatif** Evaluasi antara EV, Bus, dan Kereta Cepat ini secara nyata memvalidasi prinsip **Konversi Transaksional**. Simulasi ini mengilustrasikan sebuah ekosistem *Smart Engineering* di mana penumpang menukarkan Energi Nilai (berupa uang tiket atau biaya tol) untuk mendapatkan Energi Layanan (efisiensi waktu yang tinggi pada kereta cepat, atau akses pada bus murah) dengan mempekerjakan Energi Produk dari operasi mekanis ketiga kendaraan tersebut. Pada akhirnya, simulasi ini membuktikan kemampuan arsitektur hibrida untuk membantu insinyur menimbang ragam kompromi (*trade-offs*) sistem multi-domain secara objektif dan matematis.
+
+Tabel ini membantu memperjelas perbandingan moda untuk melihat trade-off antar alternatif sistem. Dalam konteks pembahasan 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel ini ideal diletakkan segera setelah pengantar konsep pada section terkait agar pembaca memperoleh kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+| Moda | Kelebihan | Keterbatasan | Cocok untuk | Catatan |
+| --- | --- | --- | --- | --- |
+| Fleet EV | fleksibel, emisi rendah | perlu charging | first-last mile | butuh manajemen armada |
+| Bus | murah, kapasitas baik | terpengaruh macet | layanan massal | jadwal penting |
+| Kereta cepat | sangat cepat | akses stasiun | perjalanan antarkota | butuh integrasi feeder |
+: Komparatif EV, Bus, dan Kereta Cepat menurut Beberapa Metrik Kunci {#tbl-komparatif-kendaraan}
+
+
+
+
+## Metrik: Waktu, Biaya, Emisi CO2
+
+
+```{=typst}
+#figure(
+  image("slide.pdf", page: 47),
+  caption: [Metrik & Hasil Evaluasi],
+) <fig:slide-47>
+```
+
+
+Dalam Studi Kasus Transportasi koridor Bandung-Jakarta 2030, metrik **Waktu, Biaya, dan Emisi CO2** tidak sekadar dipandang sebagai ukuran teknis tradisional, melainkan digunakan sebagai wujud kuantitatif dari dimensi **Energi PSKVE (Produk, Layanan, Pengetahuan, Nilai, Lingkungan)** di dalam kerangka *Smart Engineering*.
+
+Algoritma komputasi Python secara dinamis mengekstraksi data spesifikasi kendaraan dari ontologi Prolog, lalu menghitung ketiga metrik tersebut untuk mengevaluasi skenario pemenuhan target 100 penumpang melintasi jarak 150 km. Berikut adalah penjabaran ketiga metrik tersebut dalam simulasi ini:
+
+**1\. Metrik Waktu Tempuh: Representasi Energi Layanan (*Service Energy*)** Waktu tempuh dievaluasi untuk mengukur efisiensi layanan dari sebuah sistem transportasi.
+
+-   **Kereta Cepat Elektrik** menawarkan efisiensi Energi Layanan yang paling superior dengan perkiraan waktu tempuh hanya 1,0 hingga 1,5 jam.-   Opsi berbasis infrastruktur jalan raya jauh lebih lambat, di mana **Armada Sedan EV** membutuhkan waktu 2,5 hingga 3,5 jam, dan **Armada Bus Diesel** merupakan opsi paling lambat dengan waktu 3,0 hingga 4,0 jam.
+
+**2\. Metrik Biaya: Representasi Energi Nilai (*Value Energy*)** Metrik biaya mengukur total pengorbanan finansial per penumpang. Untuk armada jalan raya, kalkulator algoritma Python menyimulasikan biaya ini dengan menjumlahkan tarif energi/bahan bakar, tarif tol jalan, serta pembagian secara prorata untuk biaya pemeliharaan kendaraan per tahun. Sementara untuk kereta cepat, harga tiket digunakan sebagai indikator langsung.
+
+-   **Armada Bus Diesel** menjadi solusi dengan Energi Nilai paling ekonomis secara langsung, yakni sekitar Rp76.381 per penumpang.
+
+-   **Armada Sedan EV** menyusul dengan estimasi beban sekitar Rp107.750 per penumpang.
+
+-   **Kereta Cepat** merupakan moda yang menuntut pengeluaran biaya langsung tertinggi sebesar Rp150.000 per penumpang. Sumber mencatat bahwa untuk mendapatkan gambaran Energi Nilai yang lebih utuh, perhitungan metrik biaya di masa depan idealnya turut menyertakan evaluasi biaya siklus hidup (*lifecycle cost*) secara penuh, termasuk biaya modal pembangunan infrastruktur transportasi tersebut.
+
+**3\. Metrik Emisi CO2: Representasi Energi Ruang Lingkungan (*Environmental Space Energy*)** Metrik ini mengukur jejak karbon dalam wujud gram ekuivalen CO2 per penumpang untuk merepresentasikan dampak ekologis sistem transportasi.
+
+-   **Kereta Cepat** kembali unggul dengan emisi terendah (sekitar 840 gram CO2eq per penumpang), diasumsikan didukung oleh jaringan listrik yang lebih bersih.
+
+-   **Armada Sedan EV** menghasilkan sekitar 1.575 gram CO2eq per penumpang. Metrik emisi untuk kendaraan listrik ini sangat fluktuatif dan bergantung langsung pada tingkat kebersihan (intensitas karbon) dari jaringan listrik utama (PLN) di tahun 2030.
+
+-   **Armada Bus Diesel** mencatatkan dampak lingkungan terburuk dengan memproduksi emisi tertinggi (sekitar 3.234 gram CO2eq per penumpang) meskipun telah menggunakan alternatif biofuel.
+
+**Signifikansi dalam Kerangka** **Smart Engineering** Perhitungan ketiga metrik ini digunakan untuk memvalidasi prinsip **Konversi Transaksional (*Transactional Conversion*)**. Melalui komparasi simulasi ini, sistem *Smart Engineering* mengilustrasikan bagaimana seorang pengguna (penumpang) melakukan transaksi energi dimensi silang di dunia nyata: **mereka menukarkan Energi Nilai (biaya operasional atau tiket) untuk mendapatkan Energi Layanan (efisiensi waktu tempuh) dengan mempekerjakan Energi Produk mekanis kendaraan, yang keseluruhannya meninggalkan jejak Energi Ruang Lingkungan (emisi CO2)**.
+
+Pada akhirnya, pendelegasian ontologi data ke Prolog dan eksekusi komputasi metrik oleh Python membuktikan bahwa arsitektur multi-domain ini mampu membantu insinyur menimbang berbagai kompromi (*trade-offs*) sistem rekayasa secara objektif.
+
+Tabel ini membantu memperjelas metrik evaluasi mengikat keputusan pada ukuran kinerja yang eksplisit. Dalam konteks pembahasan 12.3 Metrik: Waktu, Biaya, Emisi CO2, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel ini ideal diletakkan segera setelah pengantar konsep pada section terkait agar pembaca memperoleh kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+| Metrik | Definisi | Satuan | Arah Preferensi | Sumber |
+| --- | --- | --- | --- | --- |
+| Waktu tempuh | lama perjalanan pintu ke pintu | menit | lebih kecil lebih baik | simulasi/log |
+| Biaya | biaya total per penumpang | Rp | lebih kecil lebih baik | model ekonomi |
+| Emisi CO2 | jejak karbon perjalanan | kg CO2e | lebih kecil lebih baik | faktor emisi |
+| Kenyamanan* | opsional pelengkap | skor | lebih besar lebih baik | survei |
+: Metrik Inti, Definisi, Satuan, Arah Preferensi, dan Sumber Data {#tbl-metrik-inti}
+
+

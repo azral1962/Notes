@@ -1,0 +1,21 @@
+```{=typst}
+
+#bibliography("bibliography.bib")
+
+```
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+
+```{=typst}
+
+#show: appendix
+#part("Document appendices")
+
+```
+
+# Lampiran 1

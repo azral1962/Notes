@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: "Judul"
+  author: "Norah Jones"
+  date: "4/10/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+lang: id
+fontsize: 12pt
+format:
+  monograf-typst:
+    keep-typ: true
+    papersize: "iso-b5"
+    margin:
+      top: 1cm
+      bottom: 1.25cm
+      left: 1.25cm
+      right: 1cm
+    include-in-header: "in_header.typ"
+    include-before-body: "in_before.typ"
+    include-after-body: "in_after.typ"
+
+
+
+
