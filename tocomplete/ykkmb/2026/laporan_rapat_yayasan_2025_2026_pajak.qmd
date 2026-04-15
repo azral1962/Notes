@@ -1,0 +1,257 @@
+---
+title: "Laporan Keuangan 2025 dan Draft Budget 2026"
+subtitle: "Bahan Rapat Yayasan"
+author: "Disusun dari workbook laporan keuangan"
+format:
+  html:
+    toc: true
+    number-sections: true
+    df-print: paged
+  pdf:
+    toc: true
+    number-sections: true
+    papersize: a4
+    geometry:
+      - margin=2.5cm
+  docx:
+    toc: true
+execute:
+  echo: false
+  warning: false
+  message: false
+lang: id
+---
+
+# Pendahuluan
+
+Dokumen ini disusun sebagai bahan pembahasan rapat yayasan mengenai kinerja keuangan tahun 2025 dan draft budget tahun 2026. Fokus utama laporan ini adalah memberikan gambaran ringkas namun cukup lengkap mengenai posisi kas, hasil operasional, posisi keuangan pada akhir tahun, serta implikasinya terhadap rencana anggaran tahun berikutnya.
+
+# Ringkasan eksekutif
+
+Secara umum, kondisi keuangan yayasan pada tahun 2025 menunjukkan hasil yang **positif dan sehat**. Selama tahun 2025, yayasan mencatat total penerimaan bruto sebesar **Rp187.750.000** dan total pengeluaran operasional sebesar **Rp95.809.100**. Dari total penerimaan tersebut, **pendapatan sewa sebesar Rp155.000.000** merupakan objek **pajak final 10%**, sehingga timbul **beban pajak final sebesar Rp15.500.000**. Dengan demikian, surplus tahun berjalan **sebelum pajak** sebesar **Rp91.940.900**, sedangkan surplus **setelah pajak** menjadi **Rp76.440.900**.
+
+Koreksi klasifikasi yang digunakan dalam revisi ini adalah bahwa **seluruh pemasukan dari Geprek Bensu** selama 2025, yaitu **Rp20.000.000**, diklasifikasikan sebagai **pendapatan sewa**. Dengan koreksi ini, basis pendapatan sewa yang menjadi objek pajak final meningkat dari Rp135.000.000 menjadi **Rp155.000.000**.
+
+
+Saldo kas/bank pada awal tahun sebesar **Rp328.860.000** meningkat menjadi **Rp420.800.900** pada akhir tahun 2025. Dengan demikian, terjadi kenaikan saldo kas sebesar **Rp91.940.900** selama satu tahun buku. Namun demikian, untuk tujuan pelaporan keuangan, saldo kas tersebut perlu dibaca bersama dengan **kewajiban pajak final sebesar Rp15.500.000** apabila sampai 31 Desember 2025 pajak tersebut belum disetor.
+
+::: {.callout-note}
+## Pokok-pokok yang perlu dicermati dalam rapat
+
+- Penerimaan yayasan tahun 2025 masih sangat ditopang oleh **pendapatan sewa**, dan bagian ini merupakan **objek pajak final 10%**.
+- Hasil operasional 2025 memberikan **surplus kas yang kuat**, namun surplus akuntansi setelah memperhitungkan pajak final menjadi lebih rendah dari surplus kas sebelum pajak.
+- Draft budget 2026 disusun secara konservatif dengan asumsi:
+  - pertumbuhan pendapatan **3%**
+  - pertumbuhan beban **5%**
+  - cadangan/contingency **2% atas beban**
+- Dengan demikian, **kenaikan beban efektif dalam draft 2026 adalah 7%** dari realisasi 2025.
+:::
+
+# Ringkasan angka utama
+
+| Uraian | Nilai |
+| --- | --- |
+| Saldo Awal 2025 | Rp328.860.000 |
+| Total Penerimaan 2025 | Rp187.750.000 |
+| Total Pengeluaran 2025 | Rp95.809.100 |
+| Surplus Arus Kas / Surplus Sebelum Pajak | Rp91.940.900 |
+| Beban Pajak Final atas Pendapatan Sewa | Rp15.500.000 |
+| Surplus Setelah Pajak | Rp78.440.900 |
+| Saldo Akhir 2025 | Rp420.800.900 |
+| Draft Total Pendapatan 2026 (bruto) | Rp193.382.500 |
+| Draft Pajak Final 2026 atas Pendapatan Sewa | Rp15.965.000 |
+| Draft Total Beban 2026 termasuk pajak | Rp116.420.737 |
+| Draft Surplus 2026 setelah pajak | Rp74.901.763 |
+
+# Laporan arus kas 2025
+
+Laporan arus kas menunjukkan bahwa yayasan menghasilkan arus kas bersih positif sebesar **Rp91.940.900** sepanjang tahun 2025. Walaupun terdapat beberapa bulan dengan arus kas negatif, secara agregat kondisi kas tetap kuat dan mampu menutup seluruh kebutuhan operasional.
+
+::: {.callout-important}
+## Catatan perlakuan pajak dalam membaca arus kas
+
+Laporan arus kas menunjukkan **arus kas aktual** masuk dan keluar selama tahun 2025. Karena itu, angka arus kas bersih **belum otomatis sama** dengan surplus setelah pajak. Pajak final atas pendapatan sewa sebesar **10% x Rp155.000.000 = Rp15.500.000** perlu diakui sebagai kewajiban/beban tersendiri. Apabila pajak ini belum dibayar sampai 31 Desember 2025, maka kas akhir tetap sebesar **Rp420.800.900**, tetapi kas tersebut belum seluruhnya bebas digunakan karena terdapat **kewajiban pajak**.
+:::
+
+## Tabel arus kas bulanan 2025
+
+| Bulan | Saldo Awal | Penerimaan | Pengeluaran | Arus Kas Bersih | Saldo Akhir |
+| --- | --- | --- | --- | --- | --- |
+| Jan | Rp328.860.000 | Rp20.200.000 | Rp7.637.000 | Rp12.563.000 | Rp341.423.000 |
+| Feb | Rp341.423.000 | Rp11.150.000 | Rp11.439.400 | Rp-289.400 | Rp341.133.600 |
+| Mar | Rp341.133.600 | Rp21.900.000 | Rp16.933.900 | Rp4.966.100 | Rp346.099.700 |
+| Apr | Rp346.099.700 | Rp17.700.000 | Rp13.744.900 | Rp3.955.100 | Rp350.054.800 |
+| Mei | Rp350.054.800 | Rp8.700.000 | Rp7.760.800 | Rp939.200 | Rp350.994.000 |
+| Jun | Rp350.994.000 | Rp16.400.000 | Rp6.908.250 | Rp9.491.750 | Rp360.485.750 |
+| Jul | Rp360.485.750 | Rp14.500.000 | Rp4.591.900 | Rp9.908.100 | Rp370.393.850 |
+| Agu | Rp370.393.850 | Rp5.150.000 | Rp5.221.400 | Rp-71.400 | Rp370.322.450 |
+| Sep | Rp370.322.450 | Rp15.400.000 | Rp5.976.400 | Rp9.423.600 | Rp379.746.050 |
+| Okt | Rp379.746.050 | Rp41.500.000 | Rp4.419.000 | Rp37.081.000 | Rp416.827.050 |
+| Nov | Rp416.827.050 | Rp2.150.000 | Rp6.162.500 | Rp-4.012.500 | Rp412.814.550 |
+| Des | Rp412.814.550 | Rp13.000.000 | Rp5.013.650 | Rp7.986.350 | Rp420.800.900 |
+| **Total** | **Rp328.860.000** | **Rp187.750.000** | **Rp95.809.100** | **Rp91.940.900** | **Rp420.800.900** |
+
+## Catatan arus kas
+
+Beberapa hal penting dari arus kas 2025 adalah sebagai berikut:
+
+- Bulan dengan penerimaan tertinggi adalah **Oktober**, yaitu sebesar **Rp41.500.000**.
+- Bulan dengan arus kas bersih negatif terjadi pada **Februari**, **Agustus**, dan **November**.
+- Defisit kas bulanan terbesar terjadi pada **November** sebesar **Rp-4.012.500**.
+- Meskipun terdapat fluktuasi bulanan, saldo akhir tetap meningkat secara signifikan dari awal tahun.
+
+# Laporan aktivitas / income statement 2025
+
+Laporan ini menunjukkan hasil operasional yayasan selama tahun 2025 dengan memperhitungkan perlakuan pajak sebagai berikut:
+
+- **Pendapatan sewa** merupakan **objek pajak final 10%**
+- **Penerimaan dari kegiatan gereja** diperlakukan sebagai **sumbangan**, sehingga **bukan objek pajak**
+
+## Pendapatan 2025
+
+| Pos | Nilai | Keterangan Pajak |
+| --- | --- | --- |
+| Pendapatan Sewa | Rp155.000.000 | Objek pajak final 10% |
+| Sumbangan/Kegiatan Gereja | Rp32.750.000 | Bukan objek pajak |
+| **Total Pendapatan Bruto** | **Rp187.750.000** |  |
+
+## Beban operasional dan pajak 2025
+
+| Pos | Nilai |
+| --- | --- |
+| Gaji & Honor | Rp53.700.000 |
+| Utilitas & Internet | Rp15.516.600 |
+| Program/Kegiatan | Rp13.795.500 |
+| Perlengkapan & Perawatan | Rp5.765.000 |
+| Perbaikan | Rp2.799.000 |
+| Iuran Sampah | Rp2.650.000 |
+| Beban Lain-lain | Rp1.218.000 |
+| BBM & Transport | Rp365.000 |
+| **Total Beban Operasional** | **Rp95.809.100** |
+| Pajak Final 10% atas Pendapatan Sewa | Rp15.500.000 |
+| **Total Beban dan Pajak** | **Rp109.309.100** |
+| **Surplus Sebelum Pajak** | **Rp91.940.900** |
+| **Surplus Setelah Pajak** | **Rp78.440.900** |
+
+## Analisis singkat income statement
+
+Struktur pendapatan menunjukkan bahwa sumber penerimaan terbesar berasal dari **Pendapatan Sewa**, yaitu **Rp155.000.000**, atau sekitar **82,6%** dari total pendapatan bruto. Penerimaan dari **kegiatan gereja/sumbangan** sebesar **Rp32.750.000**, atau sekitar **17,4%**, tidak diperlakukan sebagai objek pajak.
+
+Dengan demikian, penting dibedakan antara:
+
+- **surplus kas/sebelum pajak**: **Rp91.940.900**
+- **surplus setelah pajak**: **Rp78.440.900**
+
+Pembedaan ini penting agar rapat yayasan tidak membaca seluruh kenaikan kas sebagai surplus bebas pakai, sebab terdapat bagian yang secara substansi merupakan **kewajiban kepada negara** dalam bentuk pajak final atas pendapatan sewa.
+
+
+# Neraca per 31 Desember 2025
+
+Neraca per 31 Desember 2025 perlu memperhitungkan **kewajiban pajak final** atas pendapatan sewa tahun 2025. Apabila sampai tanggal pelaporan pajak tersebut belum dibayar, maka penyajiannya lebih tepat sebagai **kewajiban pajak**.
+
+| Pos | Nilai |
+| --- | --- |
+| Kas/Bank | Rp420.800.900 |
+| **Total Aset** | **Rp420.800.900** |
+| Kewajiban Pajak Final | Rp15.500.000 |
+| Ekuitas Awal | Rp328.860.000 |
+| Surplus Setelah Pajak | Rp78.440.900 |
+| **Total Ekuitas** | **Rp407.300.900** |
+| **Total Kewajiban & Ekuitas** | **Rp420.800.900** |
+
+## Makna posisi neraca
+
+Posisi neraca ini menunjukkan bahwa:
+
+- yayasan memiliki likuiditas yang baik pada akhir tahun;
+- terdapat **kewajiban pajak final** yang perlu diselesaikan jika sampai 31 Desember 2025 belum disetor;
+- pertumbuhan ekuitas yang sesungguhnya untuk tahun 2025 lebih tepat diukur dari **surplus setelah pajak**, bukan dari surplus sebelum pajak.
+
+# Evaluasi umum kinerja keuangan 2025
+
+Secara keseluruhan, laporan 2025 tetap memperlihatkan kondisi yang sehat. Terdapat tiga indikator utama yang mendukung kesimpulan ini.
+
+Pertama, yayasan membukukan **surplus operasional** yang tinggi. Kedua, saldo kas akhir tahun meningkat secara nyata dibandingkan saldo awal. Ketiga, sekalipun perlu diakui adanya kewajiban pajak, posisi kas tetap cukup kuat sehingga yayasan berada pada kondisi likuid.
+
+Namun demikian, rapat yayasan tetap perlu memperhatikan beberapa risiko:
+
+1. **Konsentrasi pendapatan** pada satu sumber utama, yaitu pendapatan sewa.
+2. **Fluktuasi penerimaan bulanan**, yang terlihat dari beberapa bulan dengan arus kas negatif.
+3. Kebutuhan untuk memastikan **kepatuhan pajak** atas pendapatan sewa.
+4. Kebutuhan untuk menjaga keseimbangan antara surplus kas dan kualitas pelayanan/program yayasan.
+
+
+# Asumsi draft budget 2026
+
+Draft budget 2026 disusun berdasarkan asumsi yang tercantum dalam workbook, dengan tambahan perlakuan pajak berikut:
+
+| Asumsi | Nilai | Catatan |
+| --- | --- | --- |
+| Pertumbuhan pendapatan 2026 vs realisasi 2025 | 3% | default 3% |
+| Pertumbuhan beban 2026 vs realisasi 2025 | 5% | default 5% |
+| Cadangan/contingency atas beban | 2% | default 2% |
+| Tarif pajak final atas pendapatan sewa | 10% | diterapkan atas pendapatan sewa |
+| Perlakuan penerimaan kegiatan gereja | non-objek pajak | diperlakukan sebagai sumbangan |
+
+Catatan penting: pada implementasi draft budget, komponen beban operasional dihitung dengan **growth efektif 7%**, yaitu akumulasi pertumbuhan beban 5% ditambah contingency 2%. Di luar itu, perlu ditambahkan **beban pajak final** atas pendapatan sewa.
+
+# Draft budget 2026
+
+## Rencana pendapatan 2026
+
+| Pos Pendapatan | Basis 2025 | Growth | Budget 2026 | Keterangan Pajak |
+| --- | --- | --- | --- | --- |
+| Pendapatan Sewa | Rp155.000.000 | 3% | Rp159.650.000 | Objek pajak final 10% |
+| Sumbangan/Kegiatan Gereja | Rp32.750.000 | 3% | Rp33.732.500 | Bukan objek pajak |
+| **Total Pendapatan Bruto** | **Rp187.750.000** |  | **Rp193.382.500** |  |
+
+## Rencana beban 2026
+
+| Pos Beban | Basis 2025 | Growth Efektif | Budget 2026 |
+| --- | --- | --- | --- |
+| Gaji & Honor | Rp53.700.000 | 7% | Rp57.459.000 |
+| Utilitas & Internet | Rp15.516.600 | 7% | Rp16.602.762 |
+| Program/Kegiatan | Rp13.795.500 | 7% | Rp14.761.185 |
+| Perlengkapan & Perawatan | Rp5.765.000 | 7% | Rp6.168.550 |
+| Perbaikan | Rp2.799.000 | 7% | Rp2.994.930 |
+| Iuran Sampah | Rp2.650.000 | 7% | Rp2.835.500 |
+| Beban Lain-lain | Rp1.218.000 | 7% | Rp1.303.260 |
+| BBM & Transport | Rp365.000 | 7% | Rp390.550 |
+| **Total Beban Operasional** | **Rp95.809.100** |  | **Rp102.515.737** |
+| Pajak Final 10% atas Pendapatan Sewa | Rp15.500.000 | 3% mengikuti basis sewa | Rp13.905.000 |
+| **Total Beban dan Pajak** |  |  | **Rp116.420.737** |
+| **Surplus/(Defisit) Budget 2026 setelah pajak** |  |  | **Rp74.901.763** |
+
+## Interpretasi draft budget 2026
+
+Dengan asumsi pertumbuhan pendapatan yang relatif moderat, total pendapatan bruto 2026 diproyeksikan menjadi **Rp193.382.500**. Sementara itu, total beban operasional diproyeksikan menjadi **Rp102.515.737**. Karena **pendapatan sewa** tetap menjadi objek **pajak final 10%**, maka perlu dianggarkan pula **beban pajak final sebesar Rp15.965.000**.
+
+Berdasarkan proyeksi tersebut, yayasan masih diharapkan mencatat **surplus anggaran 2026 setelah pajak sebesar Rp76.961.763**.
+
+Hal ini menunjukkan bahwa draft budget 2026 masih berada dalam koridor yang sehat. Meskipun demikian, ruang surplus yang sesungguhnya perlu selalu dibaca **setelah memperhitungkan pajak**, bukan hanya berdasarkan selisih pendapatan bruto dan beban operasional.
+
+# Agenda pembahasan dan usul keputusan rapat
+
+Berikut beberapa butir yang dapat dijadikan agenda pembahasan dan dasar keputusan rapat yayasan:
+
+1. **Mengesahkan laporan keuangan tahun 2025** yang meliputi laporan arus kas, laporan aktivitas, dan neraca per 31 Desember 2025.
+2. **Mengesahkan perlakuan pajak** bahwa:
+   - pendapatan dari **sewa** dikenai **pajak final 10%**;
+   - penerimaan dari **kegiatan gereja** diperlakukan sebagai **sumbangan** dan **bukan objek pajak**.
+3. **Menetapkan penyelesaian kewajiban pajak 2025** apabila sampai tanggal rapat masih belum dilakukan penyetoran.
+4. **Menyetujui atau menyesuaikan asumsi budget 2026**, terutama pada:
+   - target pertumbuhan pendapatan;
+   - laju kenaikan beban;
+   - besaran contingency;
+   - disiplin penganggaran pajak final atas pendapatan sewa.
+5. **Menetapkan mekanisme monitoring bulanan**, agar realisasi 2026 dapat dibandingkan secara berkala dengan budget, termasuk monitoring kewajiban pajak.
+
+# Rancangan rumusan keputusan rapat
+
+Berikut contoh rumusan singkat keputusan yang dapat digunakan atau disesuaikan:
+
+> Rapat Yayasan menyetujui Laporan Keuangan Tahun 2025 yang terdiri atas Laporan Arus Kas, Laporan Aktivitas, dan Neraca per 31 Desember 2025, dengan perlakuan bahwa pendapatan sewa dikenai pajak final 10% dan penerimaan dari kegiatan gereja diperlakukan sebagai sumbangan yang bukan merupakan objek pajak.
+>
+> Rapat Yayasan mencatat adanya kewajiban pajak final tahun 2025 sebesar Rp15.500.000, sejauh pajak tersebut belum disetor pada tanggal pelaporan, dan meminta pengurus untuk menindaklanjuti penyelesaiannya sesuai ketentuan yang berlaku.
+>
+> Rapat Yayasan juga menerima Draft Budget Tahun 2026 sebagai dasar pelaksanaan anggaran, termasuk pengakuan beban pajak final atas pendapatan sewa, dengan catatan bahwa pengurus dapat melakukan penyesuaian terbatas sesuai kebutuhan operasional dan keputusan rapat lanjutan.

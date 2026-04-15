@@ -3,3 +3,15 @@
 This is a book created from markdown and executable code.
 
 See @knuth84 for additional discussion of literate programming.
+
+```{mermaid}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```{python}
+print("Hello World")
+```

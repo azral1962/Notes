@@ -1,0 +1,222 @@
+---
+title: "Laporan Keuangan 2025 dan Draft Budget 2026"
+subtitle: "Bahan Rapat Yayasan"
+author: "Pengurus YKKMB"
+format:
+  typst:
+    keep-typ: true
+execute:
+  echo: false
+  warning: false
+  message: false
+lang: id
+---
+
+# Pendahuluan
+
+Dokumen ini disusun sebagai bahan pembahasan rapat yayasan mengenai kinerja keuangan tahun 2025 dan draft budget tahun 2026. Fokus utama laporan ini adalah memberikan gambaran ringkas namun cukup lengkap mengenai posisi kas, hasil operasional, posisi keuangan pada akhir tahun, serta implikasinya terhadap rencana anggaran tahun berikutnya.
+
+# Ringkasan eksekutif
+
+Secara umum, kondisi keuangan yayasan pada tahun 2025 menunjukkan hasil yang **positif dan sehat**. Selama tahun 2025, yayasan mencatat total penerimaan sebesar **Rp187.750.000** dan total pengeluaran sebesar **Rp95.809.100**, sehingga menghasilkan surplus tahun berjalan sebesar **Rp91.940.900**.
+
+Saldo kas/bank pada awal tahun sebesar **Rp328.860.000** meningkat menjadi **Rp420.800.900** pada akhir tahun 2025. Dengan demikian, terjadi kenaikan saldo kas sebesar **Rp91.940.900** selama satu tahun buku.
+
+::: {.callout-note}
+## Pokok-pokok yang perlu dicermati dalam rapat
+
+- Penerimaan yayasan tahun 2025 masih sangat ditopang oleh **pendapatan sewa**.
+- Hasil operasional 2025 memberikan **surplus yang kuat**, sehingga likuiditas yayasan pada akhir tahun berada pada posisi baik.
+- Draft budget 2026 disusun secara konservatif dengan asumsi:
+  - pertumbuhan pendapatan **3%**
+  - pertumbuhan beban **5%**
+  - cadangan/contingency **2% atas beban**
+- Dengan demikian, **kenaikan beban efektif dalam draft 2026 adalah 7%** dari realisasi 2025.
+:::
+
+# Ringkasan angka utama
+
+| Uraian | Nilai |
+| --- | --- |
+| Saldo Awal 2025 | Rp328.860.000 |
+| Total Penerimaan 2025 | Rp187.750.000 |
+| Total Pengeluaran 2025 | Rp95.809.100 |
+| Surplus Arus Kas / Surplus Tahun Berjalan | Rp91.940.900 |
+| Saldo Akhir 2025 | Rp420.800.900 |
+| Draft Total Pendapatan 2026 | Rp193.382.500 |
+| Draft Total Beban 2026 | Rp102.515.737 |
+| Draft Surplus 2026 | Rp90.866.763 |
+
+# Laporan arus kas 2025
+
+Laporan arus kas menunjukkan bahwa yayasan menghasilkan arus kas bersih positif sebesar **Rp91.940.900** sepanjang tahun 2025. Walaupun terdapat beberapa bulan dengan arus kas negatif, secara agregat kondisi kas tetap kuat dan mampu menutup seluruh kebutuhan operasional.
+
+## Tabel arus kas bulanan 2025
+
+| Bulan | Saldo Awal | Penerimaan | Pengeluaran | Arus Kas Bersih | Saldo Akhir |
+| --- | --- | --- | --- | --- | --- |
+| Jan | Rp328.860.000 | Rp20.200.000 | Rp7.637.000 | Rp12.563.000 | Rp341.423.000 |
+| Feb | Rp341.423.000 | Rp11.150.000 | Rp11.439.400 | Rp-289.400 | Rp341.133.600 |
+| Mar | Rp341.133.600 | Rp21.900.000 | Rp16.933.900 | Rp4.966.100 | Rp346.099.700 |
+| Apr | Rp346.099.700 | Rp17.700.000 | Rp13.744.900 | Rp3.955.100 | Rp350.054.800 |
+| Mei | Rp350.054.800 | Rp8.700.000 | Rp7.760.800 | Rp939.200 | Rp350.994.000 |
+| Jun | Rp350.994.000 | Rp16.400.000 | Rp6.908.250 | Rp9.491.750 | Rp360.485.750 |
+| Jul | Rp360.485.750 | Rp14.500.000 | Rp4.591.900 | Rp9.908.100 | Rp370.393.850 |
+| Agu | Rp370.393.850 | Rp5.150.000 | Rp5.221.400 | Rp-71.400 | Rp370.322.450 |
+| Sep | Rp370.322.450 | Rp15.400.000 | Rp5.976.400 | Rp9.423.600 | Rp379.746.050 |
+| Okt | Rp379.746.050 | Rp41.500.000 | Rp4.419.000 | Rp37.081.000 | Rp416.827.050 |
+| Nov | Rp416.827.050 | Rp2.150.000 | Rp6.162.500 | Rp-4.012.500 | Rp412.814.550 |
+| Des | Rp412.814.550 | Rp13.000.000 | Rp5.013.650 | Rp7.986.350 | Rp420.800.900 |
+| **Total** | **Rp328.860.000** | **Rp187.750.000** | **Rp95.809.100** | **Rp91.940.900** | **Rp420.800.900** |
+
+## Catatan arus kas
+
+Beberapa hal penting dari arus kas 2025 adalah sebagai berikut:
+
+- Bulan dengan penerimaan tertinggi adalah **Oktober**, yaitu sebesar **Rp41.500.000**.
+- Bulan dengan arus kas bersih negatif terjadi pada **Februari**, **Agustus**, dan **November**.
+- Defisit kas bulanan terbesar terjadi pada **November** sebesar **Rp-4.012.500**.
+- Meskipun terdapat fluktuasi bulanan, saldo akhir tetap meningkat secara signifikan dari awal tahun.
+
+# Laporan aktivitas / income statement 2025
+
+Laporan ini menunjukkan hasil operasional yayasan selama tahun 2025.
+
+## Pendapatan 2025
+
+| Pos | Nilai |
+| --- | --- |
+| Pendapatan Sewa | Rp135.000.000 |
+| Donasi/Penerimaan | Rp52.750.000 |
+| **Total Pendapatan** | **Rp187.750.000** |
+
+## Beban operasional 2025
+
+| Pos | Nilai |
+| --- | --- |
+| Gaji & Honor | Rp53.700.000 |
+| Utilitas & Internet | Rp15.516.600 |
+| Program/Kegiatan | Rp13.795.500 |
+| Perlengkapan & Perawatan | Rp5.765.000 |
+| Perbaikan | Rp2.799.000 |
+| Iuran Sampah | Rp2.650.000 |
+| Beban Lain-lain | Rp1.218.000 |
+| BBM & Transport | Rp365.000 |
+| **Total Beban** | **Rp95.809.100** |
+| **Surplus Tahun Berjalan** | **Rp91.940.900** |
+
+## Analisis singkat income statement
+
+Struktur pendapatan menunjukkan bahwa sumber penerimaan terbesar berasal dari **Pendapatan Sewa**, yaitu **Rp135.000.000**, atau sekitar **71,9%** dari total pendapatan. Sisanya berasal dari **Donasi/Penerimaan** sebesar **Rp52.750.000**, atau sekitar **28,1%** dari total pendapatan.
+
+Di sisi beban, komponen terbesar adalah:
+
+- **Gaji & Honor**: **Rp53.700.000**
+- **Utilitas & Internet**: **Rp15.516.600**
+- **Program/Kegiatan**: **Rp13.795.500**
+
+Komposisi ini menunjukkan bahwa beban yayasan terutama bertumpu pada biaya SDM dan biaya penunjang operasional rutin. Dengan total pendapatan yang jauh lebih tinggi daripada total beban, yayasan membukukan surplus operasional yang memadai.
+
+# Neraca per 31 Desember 2025
+
+Neraca per 31 Desember 2025 menunjukkan bahwa posisi aset yayasan seluruhnya tercermin dalam kas/bank, dan pada saat penyusunan laporan ini tidak terdapat kewajiban yang dicatat.
+
+| Pos | Nilai |
+| --- | --- |
+| Kas/Bank | Rp420.800.900 |
+| **Total Aset** | **Rp420.800.900** |
+| Kewajiban | Rp0 |
+| Ekuitas Awal | Rp328.860.000 |
+| Surplus Tahun Berjalan | Rp91.940.900 |
+| **Total Ekuitas** | **Rp420.800.900** |
+| **Total Kewajiban & Ekuitas** | **Rp420.800.900** |
+
+## Makna posisi neraca
+
+Posisi neraca ini menunjukkan bahwa:
+
+- yayasan memiliki likuiditas yang baik pada akhir tahun;
+- tidak ada kewajiban yang tercatat dalam laporan;
+- pertumbuhan ekuitas sepenuhnya didorong oleh surplus tahun berjalan 2025.
+
+# Evaluasi umum kinerja keuangan 2025
+
+Secara keseluruhan, laporan 2025 memperlihatkan kondisi yang sehat. Terdapat tiga indikator utama yang mendukung kesimpulan ini.
+
+Pertama, yayasan membukukan **surplus operasional** yang tinggi. Kedua, saldo kas akhir tahun meningkat secara nyata dibandingkan saldo awal. Ketiga, yayasan tidak mencatat kewajiban pada akhir tahun, sehingga struktur keuangannya relatif sederhana dan kuat.
+
+Namun demikian, rapat yayasan tetap perlu memperhatikan beberapa risiko:
+
+1. **Konsentrasi pendapatan** pada satu sumber utama, yaitu pendapatan sewa.
+2. **Fluktuasi penerimaan bulanan**, yang terlihat dari beberapa bulan dengan arus kas negatif.
+3. Kebutuhan untuk menjaga keseimbangan antara surplus kas dan kualitas pelayanan/program yayasan.
+
+# Asumsi draft budget 2026
+
+Draft budget 2026 disusun berdasarkan asumsi yang tercantum dalam workbook, yaitu:
+
+| Asumsi | Nilai | Catatan |
+| --- | --- | --- |
+| Pertumbuhan pendapatan 2026 vs realisasi 2025 | 3% | default 3% |
+| Pertumbuhan beban 2026 vs realisasi 2025 | 5% | default 5% |
+| Cadangan/contingency atas beban | 2% | default 2% |
+
+Catatan penting: pada implementasi draft budget, komponen beban dihitung dengan **growth efektif 7%**, yaitu akumulasi pertumbuhan beban 5% ditambah contingency 2%.
+
+# Draft budget 2026
+
+## Rencana pendapatan 2026
+
+| Pos Pendapatan | Basis 2025 | Growth | Budget 2026 |
+| --- | --- | --- | --- |
+| Pendapatan Sewa | Rp135.000.000 | 3% | Rp139.050.000 |
+| Donasi/Penerimaan | Rp52.750.000 | 3% | Rp54.332.500 |
+| **Total Pendapatan** | **Rp187.750.000** |  | **Rp193.382.500** |
+
+## Rencana beban 2026
+
+| Pos Beban | Basis 2025 | Growth Efektif | Budget 2026 |
+| --- | --- | --- | --- |
+| Gaji & Honor | Rp53.700.000 | 7% | Rp57.459.000 |
+| Utilitas & Internet | Rp15.516.600 | 7% | Rp16.602.762 |
+| Program/Kegiatan | Rp13.795.500 | 7% | Rp14.761.185 |
+| Perlengkapan & Perawatan | Rp5.765.000 | 7% | Rp6.168.550 |
+| Perbaikan | Rp2.799.000 | 7% | Rp2.994.930 |
+| Iuran Sampah | Rp2.650.000 | 7% | Rp2.835.500 |
+| Beban Lain-lain | Rp1.218.000 | 7% | Rp1.303.260 |
+| BBM & Transport | Rp365.000 | 7% | Rp390.550 |
+| **Total Beban** | **Rp95.809.100** |  | **Rp102.515.737** |
+| **Surplus/(Defisit) Budget 2026** |  |  | **Rp90.866.763** |
+
+## Interpretasi draft budget 2026
+
+Dengan asumsi pertumbuhan pendapatan yang relatif moderat, total pendapatan 2026 diproyeksikan menjadi **Rp193.382.500**. Sementara itu, total beban diproyeksikan menjadi **Rp102.515.737**. Berdasarkan proyeksi tersebut, yayasan masih diharapkan mencatat **surplus anggaran 2026 sebesar Rp90.866.763**.
+
+Hal ini menunjukkan bahwa draft budget 2026 masih berada dalam koridor yang sehat. Meskipun demikian, ruang surplus sedikit lebih rendah dibandingkan capaian riil 2025, sehingga disiplin pelaksanaan anggaran tetap penting.
+
+# Agenda pembahasan dan usul keputusan rapat
+
+Berikut beberapa butir yang dapat dijadikan agenda pembahasan dan dasar keputusan rapat yayasan:
+
+1. **Mengesahkan laporan keuangan tahun 2025** yang meliputi laporan arus kas, income statement, dan balance sheet.
+2. **Mengevaluasi struktur pendapatan yayasan**, khususnya ketergantungan pada pendapatan sewa.
+3. **Menyetujui atau menyesuaikan asumsi budget 2026**, terutama pada:
+   - target pertumbuhan pendapatan;
+   - laju kenaikan beban;
+   - besaran contingency.
+4. **Menetapkan prioritas pengeluaran 2026**, terutama untuk program, operasional rutin, dan pemeliharaan.
+5. **Menetapkan mekanisme monitoring bulanan**, agar realisasi 2026 dapat dibandingkan secara berkala dengan budget.
+
+# Rancangan rumusan keputusan rapat
+
+Berikut contoh rumusan singkat keputusan yang dapat digunakan atau disesuaikan:
+
+> Rapat Yayasan menyetujui Laporan Keuangan Tahun 2025 yang terdiri atas Laporan Arus Kas, Laporan Aktivitas/Income Statement, dan Neraca per 31 Desember 2025.
+>
+> Rapat Yayasan juga menerima Draft Budget Tahun 2026 sebagai dasar pelaksanaan anggaran, dengan catatan bahwa pengurus dapat melakukan penyesuaian terbatas sesuai kebutuhan operasional dan keputusan rapat lanjutan.
+>
+> Rapat meminta agar realisasi keuangan tahun 2026 dimonitor secara berkala dan dilaporkan secara periodik kepada pengurus yayasan.
+
+# Penutup
+
+Dokumen ini dimaksudkan sebagai bahan kerja untuk rapat yayasan. Angka-angka di dalamnya sudah konsisten dengan workbook laporan keuangan 2025 dan draft budget 2026 yang menjadi dasar penyusunan. Naskah ini masih dapat dilengkapi lebih lanjut dengan identitas yayasan, tanggal rapat, nama ketua/pengurus, serta lampiran-lampiran pendukung bila diperlukan.
