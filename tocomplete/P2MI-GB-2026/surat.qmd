@@ -1,0 +1,176 @@
+
+
+
+**SURAT KETERANGAN**
+**Nomor: …………………………………**
+
+**Tentang**
+**Justifikasi Pengadaan Perangkat Tablet Android**
+**untuk Kegiatan Riset PPMI STEI 2026 – Riset Guru Besar**
+
+Yang bertanda tangan di bawah ini:
+
+**Nama**: Prof. Ir. Armein Z. R. Langi, M.Sc., Ph.D.
+**NIP**: 196208171990031002
+**Jabatan**: Guru Besar / Ketua Tim Peneliti
+**Unit Kerja**: Kelompok Keahlian Teknologi Informasi,
+Sekolah Teknik Elektro dan Informatika, Institut Teknologi Bandung
+
+dengan ini menerangkan bahwa dalam pelaksanaan kegiatan riset PPMI STEI 2026 – Riset Guru Besar berjudul:
+
+**“Meta-Architecture of Triune-Intelligence Smart Engineering (TISE 3.0): A Prompt-Based Framework for Narrative-Empowered Multidisciplinary Systems”**
+
+diperlukan pengadaan perangkat **tablet Android Samsung Galaxy Tab S10 FE 5G 8/128 GB** sebagai **barang modal riset**.
+
+Pengadaan perangkat tersebut diperlukan dengan pertimbangan sebagai berikut:
+
+1. **Sebagai alat komunikasi naratif untuk lansia**
+   Dalam riset ini, salah satu arah implementasi purwarupa adalah pemanfaatan antarmuka yang mendukung interaksi manusia secara alami, komunikatif, dan reflektif. Tablet Android diperlukan sebagai media interaksi yang nyaman bagi pengguna lansia karena memiliki layar yang cukup besar, antarmuka sentuh yang intuitif, portabilitas tinggi, serta mendukung komunikasi multimodal berupa teks, suara, gambar, dan video. Karakteristik ini penting untuk menguji pendekatan pemberdayaan naratif manusia yang menjadi salah satu inti riset.
+
+2. **Sebagai platform prototipe agen audio-video**
+   Riset mengembangkan purwarupa berbasis sistem multi-agen dan Large Language Model yang bekerja melalui prompt bahasa alami, pengolahan naratif, serta keluaran yang dapat berupa respons audio dan visual. Tablet Android dibutuhkan sebagai perangkat uji untuk menjalankan prototipe antarmuka audio-video, termasuk perekaman suara, pemutaran audio, tampilan visual, video call, dokumentasi interaksi, dan pengujian pengalaman pengguna pada perangkat bergerak.
+
+3. **Sebagai sarana validasi lapangan dan demonstrator purwarupa**
+   Sesuai metodologi riset, purwarupa perlu divalidasi melalui skenario penggunaan yang realistis. Tablet Android dibutuhkan agar sistem dapat diuji dalam konteks operasional yang menyerupai penggunaan nyata oleh pengguna non-teknis, khususnya lansia, baik di lingkungan laboratorium maupun pada skenario demonstrasi lapangan.
+
+4. **Sebagai perangkat pendukung konektivitas mobile**
+   Varian **5G** diperlukan agar perangkat dapat digunakan secara fleksibel tanpa selalu bergantung pada jaringan Wi-Fi lokal, terutama dalam kegiatan demonstrasi, pengumpulan data interaksi, sinkronisasi dengan layanan cloud/agent backend, serta pengujian sistem pada berbagai konteks penggunaan.
+
+5. **Sebagai barang modal yang menunjang capaian riset**
+   Perangkat ini bukan merupakan barang konsumtif, melainkan aset pendukung eksperimen, demonstrasi, validasi, dan penyusunan artefak purwarupa dalam keseluruhan tahapan riset. Pengadaan ini sejalan dengan rencana pengembangan purwarupa TISE 3.0 dan kebutuhan integrasi sistem berbasis agen, prompt, dan antarmuka manusia-mesin sebagaimana dijelaskan dalam proposal riset. 
+
+Dengan demikian, perangkat **Samsung Galaxy Tab S10 FE 5G 8/128 GB** tersebut dibutuhkan secara langsung untuk mendukung pelaksanaan riset, pengembangan prototipe, pengujian usability, validasi interaksi audio-video, dan demonstrasi keluaran riset kepada pemangku kepentingan.
+
+Demikian surat keterangan ini dibuat dengan sebenar-benarnya untuk digunakan sebagai dokumen pendukung justifikasi pengadaan barang modal pada kegiatan Riset PPMI STEI 2026 – Riset Guru Besar.
+
+Bandung, …………………… 2026
+Ketua Tim Peneliti,
+
+**Prof. Ir. Armein Z. R. Langi, M.Sc., Ph.D.**
+NIP. 196208171990031002
+
+---
+
+## Lampiran: rencana penggunaan tablet Android
+
+**LAMPIRAN SURAT KETERANGAN**
+**Rencana Penggunaan Tablet Android Samsung Galaxy Tab S10 FE 5G 8/128 GB**
+**untuk Kegiatan Riset PPMI STEI 2026 – Riset Guru Besar**
+
+### 1. Identitas penggunaan
+
+**Nama perangkat**: Samsung Galaxy Tab S10 FE 5G 8/128 GB
+**Fungsi utama**: Perangkat antarmuka pengguna, demonstrator purwarupa, dan sarana eksperimen interaksi audio-video berbasis agen cerdas
+**Kegiatan riset**:
+*Meta-Architecture of Triune-Intelligence Smart Engineering (TISE 3.0): A Prompt-Based Framework for Narrative-Empowered Multidisciplinary Systems* 
+
+### 2. Tujuan penggunaan
+
+Tablet akan digunakan untuk:
+
+1. Menjadi **alat komunikasi naratif** bagi pengguna lansia dalam interaksi berbasis sentuh, suara, gambar, dan video.
+2. Menjadi **platform prototipe front-end** untuk agen cerdas berbasis prompt dan layanan audio-video.
+3. Menjadi **media uji usability** dan aksesibilitas interaksi untuk pengguna non-teknis.
+4. Menjadi **perangkat demonstrasi riset** saat validasi purwarupa, diskusi tim, presentasi, dan diseminasi hasil.
+5. Menjadi **terminal mobile** untuk koneksi ke backend multi-agent system, cloud service, dan digital twin eksperimen. Proposal memang menjadwalkan pengembangan MAS, desain digital twin, dan pengujian kompresi nilai sepanjang April–Desember 2026. 
+
+### 3. Skenario penggunaan teknis
+
+#### A. Komunikasi naratif untuk lansia
+
+Tablet dipakai untuk menguji antarmuka yang membantu lansia:
+
+* menerima pertanyaan reflektif dari agen,
+* menjawab melalui suara atau sentuhan,
+* melihat tampilan visual sederhana,
+* mendengar respons audio yang lebih ramah,
+* mengikuti percakapan naratif secara bertahap.
+
+#### B. Prototipe audio-video berbasis agen
+
+Tablet dipakai untuk:
+
+* perekaman suara pengguna,
+* pemutaran respons text-to-speech,
+* visualisasi percakapan agen,
+* tampilan avatar/antarmuka dialog,
+* panggilan video atau sesi sinkron jarak jauh,
+* dokumentasi video interaksi untuk evaluasi.
+
+#### C. Validasi usability dan pengalaman pengguna
+
+Tablet dipakai untuk menguji:
+
+* keterbacaan teks pada layar,
+* kemudahan navigasi,
+* kenyamanan interaksi sentuh,
+* kejelasan audio,
+* ketepatan alur dialog,
+* penerimaan pengguna lansia terhadap sistem.
+
+#### D. Integrasi sistem riset
+
+Tablet dipakai sebagai klien untuk:
+
+* mengirim prompt ke backend,
+* menerima keluaran agen,
+* mengakses model/layanan cloud,
+* menampilkan hasil orkestrasi multi-agen,
+* menguji purwarupa TISE 3.0 pada lingkungan nyata.
+
+### 4. Kesesuaian dengan metodologi riset
+
+Riset ini membangun purwarupa TISE 3.0 dengan tiga peran agen utama: **Meta-Architect Agent**, **Generative Engineer Agent**, dan **Critic Agent**. Tablet berfungsi sebagai perangkat antarmuka pengguna untuk menerima input bahasa alami dan menampilkan keluaran yang dapat diuji langsung pada skenario manusia-sistem. Hal ini konsisten dengan metodologi proposal yang menekankan dekomposisi niat pengguna, desain internal MAS, validasi PICOC, dan integrasi/pengujian FTSA. 
+
+### 5. Rencana penggunaan per tahap waktu
+
+#### April–Mei 2026
+
+* Penyiapan perangkat
+* Instalasi aplikasi dasar dan lingkungan prototipe
+* Desain antarmuka awal komunikasi naratif
+* Uji konektivitas dan alur input-output
+
+#### Juni–Juli 2026
+
+* Integrasi tablet dengan backend multi-agent system
+* Implementasi fitur audio input/output
+* Uji awal skenario prompt dan respons naratif
+* Eksperimen tampilan visual dan multimedia
+
+#### Agustus–September 2026
+
+* Uji coba pengguna terbatas
+* Perbaikan usability dan aksesibilitas
+* Pengujian skenario validasi dan digital twin
+* Pengumpulan catatan observasi interaksi
+
+#### Oktober–November 2026
+
+* Demonstrasi purwarupa fungsional
+* Validasi hasil eksperimen
+* Dokumentasi audio-video penggunaan
+* Penyusunan bukti pendukung untuk manuskrip/pelaporan
+
+#### Desember 2026
+
+* Finalisasi dokumentasi penggunaan perangkat
+* Dukungan presentasi hasil riset
+* Arsip aset dan evaluasi pemanfaatan perangkat
+
+Jadwal ini konsisten dengan tahapan proposal dari spesifikasi ASTF, pengembangan MAS, desain PICOC dan digital twin, sampai finalisasi manuskrip. 
+
+### 6. Output yang didukung oleh perangkat
+
+Perangkat tablet ini mendukung keluaran berupa:
+
+* purwarupa antarmuka komunikasi naratif untuk lansia,
+* demonstrasi sistem agen audio-video,
+* data observasi usability dan interaksi,
+* dokumentasi visual pengujian,
+* bahan presentasi dan validasi eksperimen,
+* dukungan terhadap publikasi ilmiah target Q1. Target utama proposal adalah publikasi jurnal Q1 dengan submisi tahun 2026. 
+
+### 7. Penutup
+
+Berdasarkan fungsi, tahapan penggunaan, dan keterkaitannya dengan metodologi serta output riset, tablet Android **Samsung Galaxy Tab S10 FE 5G 8/128 GB** merupakan perangkat yang relevan, wajar, dan diperlukan untuk menunjang pelaksanaan riset PPMI STEI 2026 – Riset Guru Besar.

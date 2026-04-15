@@ -1,0 +1,226 @@
+---
+title: "Pemilihan MRI"
+format: typst
+---
+
+# Share
+
+Suatu rumah sakit sedang memilih 1 dari 3 brand mesin MRI: mesin ABC, Mesin DEF dan XYZ. MRI brand ABC memiliki umur (waktu sampai mesin rusak) yang terdistribusi normal dengan mean 200300 jam dan standar deviasi 2000 jam. MRI brand DEF memiliki umur yang terdistribusi eksponensial dengan mean 220300 jam. MRI brand XYZ memiliki umur yang terdistribusi Weibull dengan mean 210300 jam dan parameter beta 1.4.
+
+soal:
+
+1.  Berapa probabilitas MRI brand ABC rusak sebelum 15000-20000 jam?
+
+2.  Berapa probabilitas MRI brand DEF rusak setelah 20000-25000 jam?
+
+3.  Berapa probabilitas MRI brand XYZ rusak antara 20000-22000 jam?
+
+4.  Apabila rumah sakit memilih brand dengan pertimbangan: ‘MRI brand dengan variansi umur terendah’, maka rumah sakit akan memilih brand mana?
+
+5.  Apabila rumah sakit memilih brand dengan pertimbangan: ‘MRI brand dengan probabilitas rusak sebelum 20000 jam paling rendah’, maka rumah sakit akan memilih brand mana
+
+Untuk menjawab soal ini, kita akan menggunakan distribusi probabilitas sesuai dengan tipe distribusi umur masing-masing mesin MRI. Berikut adalah langkah-langkah dan solusi untuk setiap pertanyaan:
+
+------------------------------------------------------------------------
+
+### **1. Probabilitas MRI brand ABC rusak sebelum 15.000–20.000 jam**
+
+MRI brand ABC memiliki distribusi normal dengan rata-rata ( \mu = 200300 ) jam dan standar deviasi ( \sigma = 2000 ) jam. Untuk menghitung probabilitas, kita transformasikan nilai ke dalam bentuk distribusi normal standar (( Z )):
+
+$ Z = \frac{X - \mu}{\sigma} $
+
+**Probabilitas antara 15.000 dan 20.000 jam:** $ P(15000 \leq X \leq 20000) = P\left(\frac{15000 - 200300}{2000} \leq Z \leq \frac{20000 - 200300}{2000}\right) $
+
+Substitusi nilai: $ P(15000 \leq X \leq 20000) = P\left(\frac{-185300}{2000} \leq Z \leq \frac{-180300}{2000}\right) $
+
+Kita akan menghitung nilai ( Z ) dan mencari probabilitas menggunakan tabel distribusi normal.
+
+------------------------------------------------------------------------
+
+### **2. Probabilitas MRI brand DEF rusak setelah 20.000–25.000 jam**
+
+MRI brand DEF memiliki distribusi eksponensial dengan mean ( \lambda = 220300 ) jam. Parameter distribusi eksponensial ( \beta ) dapat dihitung sebagai kebalikan dari rata-rata: $ \beta = \frac{1}{\text{mean}} = \frac{1}{220300} $
+
+**Probabilitas antara 20.000 dan 25.000 jam:** $ P(20000 \leq X \leq 25000) = P(X \> 20000) - P(X \> 25000) $
+
+Dengan distribusi eksponensial: $ P(X \> x) = e\^{-\beta x} $
+
+Substitusi nilai ( \beta ) dan ( x ) untuk menghitung probabilitas.
+
+------------------------------------------------------------------------
+
+### **3. Probabilitas MRI brand XYZ rusak antara 20.000–22.000 jam**
+
+MRI brand XYZ memiliki distribusi Weibull dengan parameter ( \beta = 1.4 ) dan mean ( \mu = 210300 ). Hubungan antara mean, parameter skala (( \lambda )), dan parameter bentuk (( k )) adalah: $ \mu = \lambda \Gamma\left(1 + \frac{1}{k}\right) $
+
+Dari mean yang diberikan (( \mu = 210300 )), kita dapat menghitung ( \lambda ). Selanjutnya, probabilitas antara 20.000–22.000 jam dihitung sebagai: $ P(20000 \leq X \leq 22000) = P(X \leq 22000) - P(X \leq 20000) $
+
+Untuk distribusi Weibull, fungsi distribusi kumulatif (CDF) adalah: $ P(X \leq x) = 1 - e\^{-(x / \lambda)\^k} $
+
+Substitusi ( \lambda ), ( k = 1.4 ), dan nilai ( x ) untuk menghitung probabilitas.
+
+------------------------------------------------------------------------
+
+### **4. Brand dengan variansi umur terendah**
+
+-   **Brand ABC (Normal):** Variansi ( \sigma\^2 = 2000\^2 = 4000000 ).
+-   **Brand DEF (Eksponensial):** Variansi ( \text{Var} = \frac{1}{\beta^2} = \text{mean}\^2 = 220300\^2 ).
+-   **Brand XYZ (Weibull):** Variansi dihitung dengan rumus: $ \text{Var}(X) = \lambda\^2 \left[\Gamma\left(1 + \frac{2}{k}\right) - \left(\Gamma\left(1 + \frac{1}{k}\right)\right)^2\right]$
+
+Bandingkan nilai variansi untuk menentukan brand dengan variansi terendah.
+
+------------------------------------------------------------------------
+
+### **5. Brand dengan probabilitas rusak sebelum 20.000 jam paling rendah**
+
+**Langkah:** - Hitung ( P(X \leq 20000) ) untuk setiap brand. - **Brand ABC (Normal):** Gunakan distribusi normal. - **Brand DEF (Eksponensial):** Gunakan ( P(X \leq x) = 1 - P(X \> x) = 1 - e\^{-\beta x} ). - **Brand XYZ (Weibull):** Gunakan ( P(X \leq x) = 1 - e\^{-(x / \lambda)\^k} ).
+
+Pilih brand dengan probabilitas terendah.
+
+------------------------------------------------------------------------
+
+**Catatan:** Untuk langkah perhitungan detail (menggunakan nilai tabel atau perangkat lunak), saya dapat melakukan komputasi jika Anda ingin. Apakah saya boleh langsung menghitung menggunakan Python?
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+# 1. Probabilitas MRI brand ABC rusak sebelum 15000–20000 jam
+mean_ABC <- 200300
+sd_ABC <- 2000
+
+# Z-scores untuk batas 15000 dan 20000
+z1 <- (15000 - mean_ABC) / sd_ABC
+z2 <- (20000 - mean_ABC) / sd_ABC
+
+# Probabilitas
+prob_ABC <- pnorm(z2) - pnorm(z1)
+cat("Probabilitas ABC (15000-20000 jam):", prob_ABC, "\n")
+
+# 2. Probabilitas MRI brand DEF rusak setelah 20000–25000 jam
+mean_DEF <- 220300
+beta_DEF <- 1 / mean_DEF
+
+# Probabilitas
+prob_DEF <- exp(-beta_DEF * 20000) - exp(-beta_DEF * 25000)
+cat("Probabilitas DEF (20000-25000 jam):", prob_DEF, "\n")
+
+# 3. Probabilitas MRI brand XYZ rusak antara 20000–22000 jam
+mean_XYZ <- 210300
+beta_XYZ <- 1.4
+
+# Hitung parameter skala lambda
+gamma_1 <- gamma(1 + 1 / beta_XYZ)
+lambda_XYZ <- mean_XYZ / gamma_1
+
+# Probabilitas
+prob_XYZ <- (1 - exp(-(22000 / lambda_XYZ)^beta_XYZ)) - (1 - exp(-(20000 / lambda_XYZ)^beta_XYZ))
+cat("Probabilitas XYZ (20000-22000 jam):", prob_XYZ, "\n")
+
+# 4. Variansi umur terendah
+# Variansi ABC
+var_ABC <- sd_ABC^2
+
+# Variansi DEF
+var_DEF <- mean_DEF^2
+
+# Variansi XYZ
+gamma_2 <- gamma(1 + 2 / beta_XYZ)
+var_XYZ <- lambda_XYZ^2 * (gamma_2 - gamma_1^2)
+
+# Output variansi
+cat("Variansi ABC:", var_ABC, "\n")
+cat("Variansi DEF:", var_DEF, "\n")
+cat("Variansi XYZ:", var_XYZ, "\n")
+
+# Pilihan variansi terendah
+variances <- c(ABC = var_ABC, DEF = var_DEF, XYZ = var_XYZ)
+brand_variance <- names(which.min(variances))
+cat("Brand dengan variansi terendah:", brand_variance, "\n")
+
+# 5. Probabilitas rusak sebelum 20000 jam
+prob_ABC_before <- pnorm((20000 - mean_ABC) / sd_ABC)
+prob_DEF_before <- 1 - exp(-beta_DEF * 20000)
+prob_XYZ_before <- 1 - exp(-(20000 / lambda_XYZ)^beta_XYZ)
+
+# Output probabilitas
+cat("Probabilitas ABC (sebelum 20000 jam):", prob_ABC_before, "\n")
+cat("Probabilitas DEF (sebelum 20000 jam):", prob_DEF_before, "\n")
+cat("Probabilitas XYZ (sebelum 20000 jam):", prob_XYZ_before, "\n")
+
+# Pilihan probabilitas terendah
+probs <- c(ABC = prob_ABC_before, DEF = prob_DEF_before, XYZ = prob_XYZ_before)
+brand_prob <- names(which.min(probs))
+cat("Brand dengan probabilitas rusak sebelum 20000 jam paling rendah:", brand_prob, "\n")
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+set.seed(123) # Untuk replikasi hasil
+
+# Parameter untuk ketiga brand
+mean_ABC <- 200300
+sd_ABC <- 2000
+
+mean_DEF <- 220300
+beta_DEF <- 1 / mean_DEF
+
+mean_XYZ <- 210300
+beta_XYZ <- 1.4
+
+# Hitung parameter skala untuk Weibull
+gamma_1 <- gamma(1 + 1 / beta_XYZ)
+lambda_XYZ <- mean_XYZ / gamma_1
+
+# Jumlah simulasi
+n_sim <- 1e6
+
+# 1. Simulasi waktu kerusakan
+ABC_times <- rnorm(n_sim, mean = mean_ABC, sd = sd_ABC)
+DEF_times <- rexp(n_sim, rate = beta_DEF)
+XYZ_times <- rweibull(n_sim, shape = beta_XYZ, scale = lambda_XYZ)
+
+# 2. Probabilitas untuk setiap pertanyaan
+# ABC: Probabilitas 15000-20000 jam
+prob_ABC_sim <- mean(ABC_times >= 15000 & ABC_times <= 20000)
+
+# DEF: Probabilitas rusak setelah 20000-25000 jam
+prob_DEF_sim <- mean(DEF_times >= 20000 & DEF_times <= 25000)
+
+# XYZ: Probabilitas rusak antara 20000-22000 jam
+prob_XYZ_sim <- mean(XYZ_times >= 20000 & XYZ_times <= 22000)
+
+# 3. Variansi simulasi
+var_ABC_sim <- var(ABC_times)
+var_DEF_sim <- var(DEF_times)
+var_XYZ_sim <- var(XYZ_times)
+
+# 4. Probabilitas rusak sebelum 20000 jam
+prob_ABC_before_sim <- mean(ABC_times <= 20000)
+prob_DEF_before_sim <- mean(DEF_times <= 20000)
+prob_XYZ_before_sim <- mean(XYZ_times <= 20000)
+
+# Output hasil simulasi
+cat("Simulasi Probabilitas ABC (15000-20000 jam):", prob_ABC_sim, "\n")
+cat("Simulasi Probabilitas DEF (20000-25000 jam):", prob_DEF_sim, "\n")
+cat("Simulasi Probabilitas XYZ (20000-22000 jam):", prob_XYZ_sim, "\n")
+
+cat("Simulasi Variansi ABC:", var_ABC_sim, "\n")
+cat("Simulasi Variansi DEF:", var_DEF_sim, "\n")
+cat("Simulasi Variansi XYZ:", var_XYZ_sim, "\n")
+
+cat("Simulasi Probabilitas ABC (sebelum 20000 jam):", prob_ABC_before_sim, "\n")
+cat("Simulasi Probabilitas DEF (sebelum 20000 jam):", prob_DEF_before_sim, "\n")
+cat("Simulasi Probabilitas XYZ (sebelum 20000 jam):", prob_XYZ_before_sim, "\n")
+
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
