@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Armein Z. R. Langi">
+
+<title>Daftar Fungsi Python untuk Random Variable</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="fungsi_python_random_variable_files/libs/clipboard/clipboard.min.js"></script>
+<script src="fungsi_python_random_variable_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="fungsi_python_random_variable_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="fungsi_python_random_variable_files/libs/quarto-html/popper.min.js"></script>
+<script src="fungsi_python_random_variable_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="fungsi_python_random_variable_files/libs/quarto-html/anchor.min.js"></script>
+<link href="fungsi_python_random_variable_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="fungsi_python_random_variable_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="fungsi_python_random_variable_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="fungsi_python_random_variable_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="fungsi_python_random_variable_files/libs/bootstrap/bootstrap-b6355b1472165c7ff7c103b005f02d85.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan"><span class="header-section-number">1</span> Pendahuluan</a>
+  <ul class="collapse">
+  <li><a href="#pustaka-yang-digunakan" id="toc-pustaka-yang-digunakan" class="nav-link" data-scroll-target="#pustaka-yang-digunakan"><span class="header-section-number">1.1</span> Pustaka yang digunakan</a></li>
+  </ul></li>
+  <li><a href="#random-variable-diskrit" id="toc-random-variable-diskrit" class="nav-link" data-scroll-target="#random-variable-diskrit"><span class="header-section-number">2</span> Random Variable Diskrit</a>
+  <ul class="collapse">
+  <li><a href="#bilangan-acak-diskrit-sederhana" id="toc-bilangan-acak-diskrit-sederhana" class="nav-link" data-scroll-target="#bilangan-acak-diskrit-sederhana"><span class="header-section-number">2.1</span> Bilangan acak diskrit sederhana</a>
+  <ul class="collapse">
+  <li><a href="#random.randinta-b" id="toc-random.randinta-b" class="nav-link" data-scroll-target="#random.randinta-b"><span class="header-section-number">2.1.1</span> <code>random.randint(a, b)</code></a></li>
+  <li><a href="#random.choiceseq" id="toc-random.choiceseq" class="nav-link" data-scroll-target="#random.choiceseq"><span class="header-section-number">2.1.2</span> <code>random.choice(seq)</code></a></li>
+  <li><a href="#numpy.random.randintlow-high-size" id="toc-numpy.random.randintlow-high-size" class="nav-link" data-scroll-target="#numpy.random.randintlow-high-size"><span class="header-section-number">2.1.3</span> <code>numpy.random.randint(low, high, size)</code></a></li>
+  </ul></li>
+  <li><a href="#bernoulli" id="toc-bernoulli" class="nav-link" data-scroll-target="#bernoulli"><span class="header-section-number">2.2</span> Bernoulli</a>
+  <ul class="collapse">
+  <li><a href="#simulasi-dengan-random.random" id="toc-simulasi-dengan-random.random" class="nav-link" data-scroll-target="#simulasi-dengan-random.random"><span class="header-section-number">2.2.1</span> Simulasi dengan <code>random.random()</code></a></li>
+  <li><a href="#numpy.random.binomialn-p-size-untuk-bernoulli" id="toc-numpy.random.binomialn-p-size-untuk-bernoulli" class="nav-link" data-scroll-target="#numpy.random.binomialn-p-size-untuk-bernoulli"><span class="header-section-number">2.2.2</span> <code>numpy.random.binomial(n, p, size)</code> untuk Bernoulli</a></li>
+  </ul></li>
+  <li><a href="#binomial" id="toc-binomial" class="nav-link" data-scroll-target="#binomial"><span class="header-section-number">2.3</span> Binomial</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.binomialn-p-size" id="toc-numpy.random.binomialn-p-size" class="nav-link" data-scroll-target="#numpy.random.binomialn-p-size"><span class="header-section-number">2.3.1</span> <code>numpy.random.binomial(n, p, size)</code></a></li>
+  <li><a href="#scipy.stats.binom.pmfk-n-p" id="toc-scipy.stats.binom.pmfk-n-p" class="nav-link" data-scroll-target="#scipy.stats.binom.pmfk-n-p"><span class="header-section-number">2.3.2</span> <code>scipy.stats.binom.pmf(k, n, p)</code></a></li>
+  <li><a href="#scipy.stats.binom.cdfk-n-p" id="toc-scipy.stats.binom.cdfk-n-p" class="nav-link" data-scroll-target="#scipy.stats.binom.cdfk-n-p"><span class="header-section-number">2.3.3</span> <code>scipy.stats.binom.cdf(k, n, p)</code></a></li>
+  </ul></li>
+  <li><a href="#poisson" id="toc-poisson" class="nav-link" data-scroll-target="#poisson"><span class="header-section-number">2.4</span> Poisson</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.poissonlam-size" id="toc-numpy.random.poissonlam-size" class="nav-link" data-scroll-target="#numpy.random.poissonlam-size"><span class="header-section-number">2.4.1</span> <code>numpy.random.poisson(lam, size)</code></a></li>
+  <li><a href="#scipy.stats.poisson.pmfk-mu" id="toc-scipy.stats.poisson.pmfk-mu" class="nav-link" data-scroll-target="#scipy.stats.poisson.pmfk-mu"><span class="header-section-number">2.4.2</span> <code>scipy.stats.poisson.pmf(k, mu)</code></a></li>
+  <li><a href="#scipy.stats.poisson.cdfk-mu" id="toc-scipy.stats.poisson.cdfk-mu" class="nav-link" data-scroll-target="#scipy.stats.poisson.cdfk-mu"><span class="header-section-number">2.4.3</span> <code>scipy.stats.poisson.cdf(k, mu)</code></a></li>
+  </ul></li>
+  <li><a href="#geometrik" id="toc-geometrik" class="nav-link" data-scroll-target="#geometrik"><span class="header-section-number">2.5</span> Geometrik</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.geometricp-size" id="toc-numpy.random.geometricp-size" class="nav-link" data-scroll-target="#numpy.random.geometricp-size"><span class="header-section-number">2.5.1</span> <code>numpy.random.geometric(p, size)</code></a></li>
+  <li><a href="#scipy.stats.geom.pmfk-p" id="toc-scipy.stats.geom.pmfk-p" class="nav-link" data-scroll-target="#scipy.stats.geom.pmfk-p"><span class="header-section-number">2.5.2</span> <code>scipy.stats.geom.pmf(k, p)</code></a></li>
+  </ul></li>
+  <li><a href="#nilai-harapan-dan-variansi-diskrit" id="toc-nilai-harapan-dan-variansi-diskrit" class="nav-link" data-scroll-target="#nilai-harapan-dan-variansi-diskrit"><span class="header-section-number">2.6</span> Nilai harapan dan variansi diskrit</a>
+  <ul class="collapse">
+  <li><a href="#mean-dengan-numpy.sum" id="toc-mean-dengan-numpy.sum" class="nav-link" data-scroll-target="#mean-dengan-numpy.sum"><span class="header-section-number">2.6.1</span> Mean dengan <code>numpy.sum()</code></a></li>
+  <li><a href="#variansi-dengan-rumus-ex2---ex2" id="toc-variansi-dengan-rumus-ex2---ex2" class="nav-link" data-scroll-target="#variansi-dengan-rumus-ex2---ex2"><span class="header-section-number">2.6.2</span> Variansi dengan rumus <span class="math inline">\(E[X^2] - (E[X])^2\)</span></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#random-variable-kontinu" id="toc-random-variable-kontinu" class="nav-link" data-scroll-target="#random-variable-kontinu"><span class="header-section-number">3</span> Random Variable Kontinu</a>
+  <ul class="collapse">
+  <li><a href="#uniform-kontinu" id="toc-uniform-kontinu" class="nav-link" data-scroll-target="#uniform-kontinu"><span class="header-section-number">3.1</span> Uniform kontinu</a>
+  <ul class="collapse">
+  <li><a href="#random.random" id="toc-random.random" class="nav-link" data-scroll-target="#random.random"><span class="header-section-number">3.1.1</span> <code>random.random()</code></a></li>
+  <li><a href="#random.uniforma-b" id="toc-random.uniforma-b" class="nav-link" data-scroll-target="#random.uniforma-b"><span class="header-section-number">3.1.2</span> <code>random.uniform(a, b)</code></a></li>
+  <li><a href="#numpy.random.uniformlow-high-size" id="toc-numpy.random.uniformlow-high-size" class="nav-link" data-scroll-target="#numpy.random.uniformlow-high-size"><span class="header-section-number">3.1.3</span> <code>numpy.random.uniform(low, high, size)</code></a></li>
+  </ul></li>
+  <li><a href="#normal" id="toc-normal" class="nav-link" data-scroll-target="#normal"><span class="header-section-number">3.2</span> Normal</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.normalloc-scale-size" id="toc-numpy.random.normalloc-scale-size" class="nav-link" data-scroll-target="#numpy.random.normalloc-scale-size"><span class="header-section-number">3.2.1</span> <code>numpy.random.normal(loc, scale, size)</code></a></li>
+  <li><a href="#scipy.stats.norm.pdfx-loc-scale" id="toc-scipy.stats.norm.pdfx-loc-scale" class="nav-link" data-scroll-target="#scipy.stats.norm.pdfx-loc-scale"><span class="header-section-number">3.2.2</span> <code>scipy.stats.norm.pdf(x, loc, scale)</code></a></li>
+  <li><a href="#scipy.stats.norm.cdfx-loc-scale" id="toc-scipy.stats.norm.cdfx-loc-scale" class="nav-link" data-scroll-target="#scipy.stats.norm.cdfx-loc-scale"><span class="header-section-number">3.2.3</span> <code>scipy.stats.norm.cdf(x, loc, scale)</code></a></li>
+  <li><a href="#scipy.stats.norm.ppfq-loc-scale" id="toc-scipy.stats.norm.ppfq-loc-scale" class="nav-link" data-scroll-target="#scipy.stats.norm.ppfq-loc-scale"><span class="header-section-number">3.2.4</span> <code>scipy.stats.norm.ppf(q, loc, scale)</code></a></li>
+  </ul></li>
+  <li><a href="#eksponensial" id="toc-eksponensial" class="nav-link" data-scroll-target="#eksponensial"><span class="header-section-number">3.3</span> Eksponensial</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.exponentialscale-size" id="toc-numpy.random.exponentialscale-size" class="nav-link" data-scroll-target="#numpy.random.exponentialscale-size"><span class="header-section-number">3.3.1</span> <code>numpy.random.exponential(scale, size)</code></a></li>
+  <li><a href="#scipy.stats.expon.pdfx-scale" id="toc-scipy.stats.expon.pdfx-scale" class="nav-link" data-scroll-target="#scipy.stats.expon.pdfx-scale"><span class="header-section-number">3.3.2</span> <code>scipy.stats.expon.pdf(x, scale)</code></a></li>
+  <li><a href="#scipy.stats.expon.cdfx-scale" id="toc-scipy.stats.expon.cdfx-scale" class="nav-link" data-scroll-target="#scipy.stats.expon.cdfx-scale"><span class="header-section-number">3.3.3</span> <code>scipy.stats.expon.cdf(x, scale)</code></a></li>
+  </ul></li>
+  <li><a href="#statistik-sampel-kontinu" id="toc-statistik-sampel-kontinu" class="nav-link" data-scroll-target="#statistik-sampel-kontinu"><span class="header-section-number">3.4</span> Statistik sampel kontinu</a>
+  <ul class="collapse">
+  <li><a href="#mean-dengan-numpy.mean" id="toc-mean-dengan-numpy.mean" class="nav-link" data-scroll-target="#mean-dengan-numpy.mean"><span class="header-section-number">3.4.1</span> Mean dengan <code>numpy.mean()</code></a></li>
+  <li><a href="#variansi-dengan-numpy.var" id="toc-variansi-dengan-numpy.var" class="nav-link" data-scroll-target="#variansi-dengan-numpy.var"><span class="header-section-number">3.4.2</span> Variansi dengan <code>numpy.var()</code></a></li>
+  <li><a href="#simpangan-baku-dengan-numpy.std" id="toc-simpangan-baku-dengan-numpy.std" class="nav-link" data-scroll-target="#simpangan-baku-dengan-numpy.std"><span class="header-section-number">3.4.3</span> Simpangan baku dengan <code>numpy.std()</code></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#random-variable-bivariate" id="toc-random-variable-bivariate" class="nav-link" data-scroll-target="#random-variable-bivariate"><span class="header-section-number">4</span> Random Variable Bivariate</a>
+  <ul class="collapse">
+  <li><a href="#membuat-sampel-bivariate-independen" id="toc-membuat-sampel-bivariate-independen" class="nav-link" data-scroll-target="#membuat-sampel-bivariate-independen"><span class="header-section-number">4.1</span> Membuat sampel bivariate independen</a></li>
+  <li><a href="#membuat-sampel-bivariate-berkorelasi" id="toc-membuat-sampel-bivariate-berkorelasi" class="nav-link" data-scroll-target="#membuat-sampel-bivariate-berkorelasi"><span class="header-section-number">4.2</span> Membuat sampel bivariate berkorelasi</a>
+  <ul class="collapse">
+  <li><a href="#numpy.random.multivariate_normalmean-cov-size" id="toc-numpy.random.multivariate_normalmean-cov-size" class="nav-link" data-scroll-target="#numpy.random.multivariate_normalmean-cov-size"><span class="header-section-number">4.2.1</span> <code>numpy.random.multivariate_normal(mean, cov, size)</code></a></li>
+  </ul></li>
+  <li><a href="#kovariansi" id="toc-kovariansi" class="nav-link" data-scroll-target="#kovariansi"><span class="header-section-number">4.3</span> Kovariansi</a>
+  <ul class="collapse">
+  <li><a href="#numpy.covm-rowvarfalse" id="toc-numpy.covm-rowvarfalse" class="nav-link" data-scroll-target="#numpy.covm-rowvarfalse"><span class="header-section-number">4.3.1</span> <code>numpy.cov(m, rowvar=False)</code></a></li>
+  </ul></li>
+  <li><a href="#korelasi" id="toc-korelasi" class="nav-link" data-scroll-target="#korelasi"><span class="header-section-number">4.4</span> Korelasi</a>
+  <ul class="collapse">
+  <li><a href="#numpy.corrcoefx-y" id="toc-numpy.corrcoefx-y" class="nav-link" data-scroll-target="#numpy.corrcoefx-y"><span class="header-section-number">4.4.1</span> <code>numpy.corrcoef(x, y)</code></a></li>
+  <li><a href="#scipy.stats.pearsonrx-y" id="toc-scipy.stats.pearsonrx-y" class="nav-link" data-scroll-target="#scipy.stats.pearsonrx-y"><span class="header-section-number">4.4.2</span> <code>scipy.stats.pearsonr(x, y)</code></a></li>
+  </ul></li>
+  <li><a href="#regresi-linear-sederhana" id="toc-regresi-linear-sederhana" class="nav-link" data-scroll-target="#regresi-linear-sederhana"><span class="header-section-number">4.5</span> Regresi linear sederhana</a>
+  <ul class="collapse">
+  <li><a href="#scipy.stats.linregressx-y" id="toc-scipy.stats.linregressx-y" class="nav-link" data-scroll-target="#scipy.stats.linregressx-y"><span class="header-section-number">4.5.1</span> <code>scipy.stats.linregress(x, y)</code></a></li>
+  </ul></li>
+  <li><a href="#joint-distribution-empiris-untuk-data-diskrit-bivariate" id="toc-joint-distribution-empiris-untuk-data-diskrit-bivariate" class="nav-link" data-scroll-target="#joint-distribution-empiris-untuk-data-diskrit-bivariate"><span class="header-section-number">4.6</span> Joint distribution empiris untuk data diskrit bivariate</a>
+  <ul class="collapse">
+  <li><a href="#menghitung-frekuensi-gabungan-dengan-pandas.crosstab" id="toc-menghitung-frekuensi-gabungan-dengan-pandas.crosstab" class="nav-link" data-scroll-target="#menghitung-frekuensi-gabungan-dengan-pandas.crosstab"><span class="header-section-number">4.6.1</span> Menghitung frekuensi gabungan dengan <code>pandas.crosstab()</code></a></li>
+  <li><a href="#mengubah-menjadi-peluang-gabungan-empiris" id="toc-mengubah-menjadi-peluang-gabungan-empiris" class="nav-link" data-scroll-target="#mengubah-menjadi-peluang-gabungan-empiris"><span class="header-section-number">4.6.2</span> Mengubah menjadi peluang gabungan empiris</a></li>
+  </ul></li>
+  <li><a href="#mean-variansi-dan-kovariansi-bivariate" id="toc-mean-variansi-dan-kovariansi-bivariate" class="nav-link" data-scroll-target="#mean-variansi-dan-kovariansi-bivariate"><span class="header-section-number">4.7</span> Mean, variansi, dan kovariansi bivariate</a></li>
+  </ul></li>
+  <li><a href="#visualisasi" id="toc-visualisasi" class="nav-link" data-scroll-target="#visualisasi"><span class="header-section-number">5</span> Visualisasi</a>
+  <ul class="collapse">
+  <li><a href="#histogram-untuk-random-variable-tunggal" id="toc-histogram-untuk-random-variable-tunggal" class="nav-link" data-scroll-target="#histogram-untuk-random-variable-tunggal"><span class="header-section-number">5.1</span> Histogram untuk random variable tunggal</a></li>
+  <li><a href="#scatter-plot-untuk-random-variable-bivariate" id="toc-scatter-plot-untuk-random-variable-bivariate" class="nav-link" data-scroll-target="#scatter-plot-untuk-random-variable-bivariate"><span class="header-section-number">5.2</span> Scatter plot untuk random variable bivariate</a></li>
+  <li><a href="#overlay-histogram-dan-pdf-teoritis" id="toc-overlay-histogram-dan-pdf-teoritis" class="nav-link" data-scroll-target="#overlay-histogram-dan-pdf-teoritis"><span class="header-section-number">5.3</span> Overlay histogram dan PDF teoritis</a></li>
+  </ul></li>
+  <li><a href="#ringkasan-fungsi-penting" id="toc-ringkasan-fungsi-penting" class="nav-link" data-scroll-target="#ringkasan-fungsi-penting"><span class="header-section-number">6</span> Ringkasan Fungsi Penting</a>
+  <ul class="collapse">
+  <li><a href="#random-variable-diskrit-1" id="toc-random-variable-diskrit-1" class="nav-link" data-scroll-target="#random-variable-diskrit-1"><span class="header-section-number">6.1</span> Random variable diskrit</a></li>
+  <li><a href="#random-variable-kontinu-1" id="toc-random-variable-kontinu-1" class="nav-link" data-scroll-target="#random-variable-kontinu-1"><span class="header-section-number">6.2</span> Random variable kontinu</a></li>
+  <li><a href="#random-variable-bivariate-1" id="toc-random-variable-bivariate-1" class="nav-link" data-scroll-target="#random-variable-bivariate-1"><span class="header-section-number">6.3</span> Random variable bivariate</a></li>
+  </ul></li>
+  <li><a href="#contoh-mini-proyek" id="toc-contoh-mini-proyek" class="nav-link" data-scroll-target="#contoh-mini-proyek"><span class="header-section-number">7</span> Contoh Mini Proyek</a>
+  <ul class="collapse">
+  <li><a href="#simulasi-dadu-diskrit" id="toc-simulasi-dadu-diskrit" class="nav-link" data-scroll-target="#simulasi-dadu-diskrit"><span class="header-section-number">7.1</span> Simulasi dadu diskrit</a></li>
+  <li><a href="#simulasi-tinggi-badan-kontinu" id="toc-simulasi-tinggi-badan-kontinu" class="nav-link" data-scroll-target="#simulasi-tinggi-badan-kontinu"><span class="header-section-number">7.2</span> Simulasi tinggi badan kontinu</a></li>
+  <li><a href="#simulasi-dua-variabel-berkorelasi" id="toc-simulasi-dua-variabel-berkorelasi" class="nav-link" data-scroll-target="#simulasi-dua-variabel-berkorelasi"><span class="header-section-number">7.3</span> Simulasi dua variabel berkorelasi</a></li>
+  </ul></li>
+  <li><a href="#penutup" id="toc-penutup" class="nav-link" data-scroll-target="#penutup"><span class="header-section-number">8</span> Penutup</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Format Lain</h2><ul><li><a href="fungsi_python_random_variable.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="fungsi_python_random_variable.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Daftar Fungsi Python untuk Random Variable</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Penulis</div>
+    <div class="quarto-title-meta-contents">
+             <p>Armein Z. R. Langi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="pendahuluan" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Pendahuluan</h1>
+<p>Dokumen ini merangkum fungsi-fungsi Python yang umum digunakan untuk bekerja dengan <strong>random variable diskrit, kontinu, dan bivariate</strong>, beserta contoh penggunaannya. Fokus utama adalah pada pustaka:</p>
+<ul>
+<li><code>random</code> untuk simulasi sederhana,</li>
+<li><code>numpy</code> untuk komputasi numerik dan pembangkitan sampel,</li>
+<li><code>scipy.stats</code> untuk distribusi probabilitas,</li>
+<li><code>matplotlib</code> untuk visualisasi.</li>
+</ul>
+<section id="pustaka-yang-digunakan" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="pustaka-yang-digunakan"><span class="header-section-number">1.1</span> Pustaka yang digunakan</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="random-variable-diskrit" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Random Variable Diskrit</h1>
+<p>Random variable diskrit memiliki nilai yang dapat dihitung satu per satu, misalnya jumlah sukses, hasil lemparan dadu, atau jumlah kedatangan kejadian.</p>
+<section id="bilangan-acak-diskrit-sederhana" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="bilangan-acak-diskrit-sederhana"><span class="header-section-number">2.1</span> Bilangan acak diskrit sederhana</h2>
+<section id="random.randinta-b" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="random.randinta-b"><span class="header-section-number">2.1.1</span> <code>random.randint(a, b)</code></h3>
+<p>Menghasilkan bilangan bulat acak dari <code>a</code> sampai <code>b</code>, inklusif.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Contoh penggunaan: simulasi satu lemparan dadu.</p>
+</section>
+<section id="random.choiceseq" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="random.choiceseq"><span class="header-section-number">2.1.2</span> <code>random.choice(seq)</code></h3>
+<p>Memilih satu elemen acak dari suatu daftar.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>warna <span class="op">=</span> [<span class="st">"merah"</span>, <span class="st">"hijau"</span>, <span class="st">"biru"</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pilih <span class="op">=</span> random.choice(warna)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pilih)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="numpy.random.randintlow-high-size" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="numpy.random.randintlow-high-size"><span class="header-section-number">2.1.3</span> <code>numpy.random.randint(low, high, size)</code></h3>
+<p>Menghasilkan array bilangan bulat acak. Perhatikan bahwa <code>high</code> tidak termasuk.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sampel_dadu <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_dadu)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="bernoulli" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="bernoulli"><span class="header-section-number">2.2</span> Bernoulli</h2>
+<p>Random variable Bernoulli bernilai 1 untuk sukses dan 0 untuk gagal.</p>
+<section id="simulasi-dengan-random.random" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="simulasi-dengan-random.random"><span class="header-section-number">2.2.1</span> Simulasi dengan <code>random.random()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> random.random() <span class="op">&lt;</span> p <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="numpy.random.binomialn-p-size-untuk-bernoulli" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="numpy.random.binomialn-p-size-untuk-bernoulli"><span class="header-section-number">2.2.2</span> <code>numpy.random.binomial(n, p, size)</code> untuk Bernoulli</h3>
+<p>Karena Bernoulli adalah Binomial dengan <code>n=1</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sampel_bernoulli <span class="op">=</span> np.random.binomial(<span class="dv">1</span>, <span class="fl">0.3</span>, size<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_bernoulli)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="binomial" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="binomial"><span class="header-section-number">2.3</span> Binomial</h2>
+<section id="numpy.random.binomialn-p-size" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="numpy.random.binomialn-p-size"><span class="header-section-number">2.3.1</span> <code>numpy.random.binomial(n, p, size)</code></h3>
+<p>Menghasilkan sampel dari distribusi Binomial.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sampel_binomial <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.4</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_binomial[:<span class="dv">10</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.binom.pmfk-n-p" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="scipy.stats.binom.pmfk-n-p"><span class="header-section-number">2.3.2</span> <code>scipy.stats.binom.pmf(k, n, p)</code></h3>
+<p>Menghitung peluang tepat <code>k</code> sukses.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>peluang <span class="op">=</span> stats.binom.pmf(k<span class="op">=</span><span class="dv">3</span>, n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(peluang)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.binom.cdfk-n-p" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="scipy.stats.binom.cdfk-n-p"><span class="header-section-number">2.3.3</span> <code>scipy.stats.binom.cdf(k, n, p)</code></h3>
+<p>Menghitung peluang kumulatif <span class="math inline">\(P(X \le k)\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>peluang_kumulatif <span class="op">=</span> stats.binom.cdf(k<span class="op">=</span><span class="dv">3</span>, n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(peluang_kumulatif)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="poisson" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="poisson"><span class="header-section-number">2.4</span> Poisson</h2>
+<section id="numpy.random.poissonlam-size" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="numpy.random.poissonlam-size"><span class="header-section-number">2.4.1</span> <code>numpy.random.poisson(lam, size)</code></h3>
+<p>Menghasilkan sampel Poisson.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sampel_poisson <span class="op">=</span> np.random.poisson(lam<span class="op">=</span><span class="fl">2.5</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_poisson[:<span class="dv">10</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.poisson.pmfk-mu" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="scipy.stats.poisson.pmfk-mu"><span class="header-section-number">2.4.2</span> <code>scipy.stats.poisson.pmf(k, mu)</code></h3>
+<p>Menghitung peluang tepat <code>k</code> kejadian.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>peluang <span class="op">=</span> stats.poisson.pmf(k<span class="op">=</span><span class="dv">4</span>, mu<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(peluang)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.poisson.cdfk-mu" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="scipy.stats.poisson.cdfk-mu"><span class="header-section-number">2.4.3</span> <code>scipy.stats.poisson.cdf(k, mu)</code></h3>
+<p>Menghitung peluang kumulatif.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>peluang_kumulatif <span class="op">=</span> stats.poisson.cdf(k<span class="op">=</span><span class="dv">4</span>, mu<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(peluang_kumulatif)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="geometrik" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="geometrik"><span class="header-section-number">2.5</span> Geometrik</h2>
+<section id="numpy.random.geometricp-size" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="numpy.random.geometricp-size"><span class="header-section-number">2.5.1</span> <code>numpy.random.geometric(p, size)</code></h3>
+<p>Menghasilkan sampel dari distribusi Geometrik.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>sampel_geom <span class="op">=</span> np.random.geometric(p<span class="op">=</span><span class="fl">0.2</span>, size<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_geom)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.geom.pmfk-p" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="scipy.stats.geom.pmfk-p"><span class="header-section-number">2.5.2</span> <code>scipy.stats.geom.pmf(k, p)</code></h3>
+<p>Menghitung peluang sukses pertama terjadi pada percobaan ke-<code>k</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>peluang <span class="op">=</span> stats.geom.pmf(k<span class="op">=</span><span class="dv">4</span>, p<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(peluang)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="nilai-harapan-dan-variansi-diskrit" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="nilai-harapan-dan-variansi-diskrit"><span class="header-section-number">2.6</span> Nilai harapan dan variansi diskrit</h2>
+<p>Jika tersedia array data diskrit:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.array([<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="mean-dengan-numpy.sum" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="mean-dengan-numpy.sum"><span class="header-section-number">2.6.1</span> Mean dengan <code>numpy.sum()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ekspektasi <span class="op">=</span> np.<span class="bu">sum</span>(x <span class="op">*</span> p)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ekspektasi)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="variansi-dengan-rumus-ex2---ex2" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="variansi-dengan-rumus-ex2---ex2"><span class="header-section-number">2.6.2</span> Variansi dengan rumus <span class="math inline">\(E[X^2] - (E[X])^2\)</span></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>variansi <span class="op">=</span> np.<span class="bu">sum</span>((x<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> p) <span class="op">-</span> ekspektasi<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(variansi)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+</section>
+<section id="random-variable-kontinu" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Random Variable Kontinu</h1>
+<p>Random variable kontinu dapat mengambil nilai pada suatu interval kontinu, misalnya tinggi badan, berat badan, atau waktu tunggu.</p>
+<section id="uniform-kontinu" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="uniform-kontinu"><span class="header-section-number">3.1</span> Uniform kontinu</h2>
+<section id="random.random" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="random.random"><span class="header-section-number">3.1.1</span> <code>random.random()</code></h3>
+<p>Menghasilkan bilangan acak uniform pada interval <span class="math inline">\([0,1)\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> random.random()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(u)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="random.uniforma-b" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="random.uniforma-b"><span class="header-section-number">3.1.2</span> <code>random.uniform(a, b)</code></h3>
+<p>Menghasilkan bilangan acak uniform pada interval <span class="math inline">\([a,b]\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> random.uniform(<span class="dv">10</span>, <span class="dv">20</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="numpy.random.uniformlow-high-size" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="numpy.random.uniformlow-high-size"><span class="header-section-number">3.1.3</span> <code>numpy.random.uniform(low, high, size)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sampel_uniform <span class="op">=</span> np.random.uniform(<span class="dv">10</span>, <span class="dv">20</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_uniform[:<span class="dv">10</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="normal" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="normal"><span class="header-section-number">3.2</span> Normal</h2>
+<section id="numpy.random.normalloc-scale-size" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="numpy.random.normalloc-scale-size"><span class="header-section-number">3.2.1</span> <code>numpy.random.normal(loc, scale, size)</code></h3>
+<p>Menghasilkan sampel dari distribusi Normal.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sampel_normal <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">170</span>, scale<span class="op">=</span><span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_normal[:<span class="dv">10</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.norm.pdfx-loc-scale" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="scipy.stats.norm.pdfx-loc-scale"><span class="header-section-number">3.2.2</span> <code>scipy.stats.norm.pdf(x, loc, scale)</code></h3>
+<p>Menghitung nilai fungsi densitas peluang (PDF).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>pdf_175 <span class="op">=</span> stats.norm.pdf(<span class="dv">175</span>, loc<span class="op">=</span><span class="dv">170</span>, scale<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pdf_175)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.norm.cdfx-loc-scale" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="scipy.stats.norm.cdfx-loc-scale"><span class="header-section-number">3.2.3</span> <code>scipy.stats.norm.cdf(x, loc, scale)</code></h3>
+<p>Menghitung peluang kumulatif <span class="math inline">\(P(X \le x)\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>cdf_175 <span class="op">=</span> stats.norm.cdf(<span class="dv">175</span>, loc<span class="op">=</span><span class="dv">170</span>, scale<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cdf_175)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.norm.ppfq-loc-scale" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="scipy.stats.norm.ppfq-loc-scale"><span class="header-section-number">3.2.4</span> <code>scipy.stats.norm.ppf(q, loc, scale)</code></h3>
+<p>Menghitung kuantil atau inverse CDF.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>x95 <span class="op">=</span> stats.norm.ppf(<span class="fl">0.95</span>, loc<span class="op">=</span><span class="dv">170</span>, scale<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x95)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="eksponensial" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="eksponensial"><span class="header-section-number">3.3</span> Eksponensial</h2>
+<section id="numpy.random.exponentialscale-size" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="numpy.random.exponentialscale-size"><span class="header-section-number">3.3.1</span> <code>numpy.random.exponential(scale, size)</code></h3>
+<p>Untuk laju <span class="math inline">\(\lambda\)</span>, parameter <code>scale = 1/\lambda</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sampel_exp <span class="op">=</span> np.random.exponential(scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.5</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sampel_exp[:<span class="dv">10</span>])</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.expon.pdfx-scale" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="scipy.stats.expon.pdfx-scale"><span class="header-section-number">3.3.2</span> <code>scipy.stats.expon.pdf(x, scale)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>pdf_2 <span class="op">=</span> stats.expon.pdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.5</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pdf_2)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scipy.stats.expon.cdfx-scale" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="scipy.stats.expon.cdfx-scale"><span class="header-section-number">3.3.3</span> <code>scipy.stats.expon.cdf(x, scale)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>cdf_2 <span class="op">=</span> stats.expon.cdf(<span class="dv">2</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="fl">0.5</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cdf_2)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="statistik-sampel-kontinu" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="statistik-sampel-kontinu"><span class="header-section-number">3.4</span> Statistik sampel kontinu</h2>
+<p>Jika data tersimpan dalam array <code>x</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">170</span>, <span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="mean-dengan-numpy.mean" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="mean-dengan-numpy.mean"><span class="header-section-number">3.4.1</span> Mean dengan <code>numpy.mean()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>mean_x <span class="op">=</span> np.mean(x)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean_x)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="variansi-dengan-numpy.var" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="variansi-dengan-numpy.var"><span class="header-section-number">3.4.2</span> Variansi dengan <code>numpy.var()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>var_pop <span class="op">=</span> np.var(x)          <span class="co"># variansi populasi</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>var_sampel <span class="op">=</span> np.var(x, ddof<span class="op">=</span><span class="dv">1</span>)  <span class="co"># variansi sampel</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(var_pop, var_sampel)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="simpangan-baku-dengan-numpy.std" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="simpangan-baku-dengan-numpy.std"><span class="header-section-number">3.4.3</span> Simpangan baku dengan <code>numpy.std()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>std_pop <span class="op">=</span> np.std(x)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>std_sampel <span class="op">=</span> np.std(x, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(std_pop, std_sampel)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+</section>
+<section id="random-variable-bivariate" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Random Variable Bivariate</h1>
+<p>Bivariate berarti ada dua random variable yang diamati bersama, misalnya tinggi dan berat, atau storage dan compute cost.</p>
+<section id="membuat-sampel-bivariate-independen" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="membuat-sampel-bivariate-independen"><span class="header-section-number">4.1</span> Membuat sampel bivariate independen</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">170</span>, <span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(<span class="dv">65</span>, <span class="dv">10</span>, size<span class="op">=</span><span class="dv">1000</span>)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="membuat-sampel-bivariate-berkorelasi" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="membuat-sampel-bivariate-berkorelasi"><span class="header-section-number">4.2</span> Membuat sampel bivariate berkorelasi</h2>
+<section id="numpy.random.multivariate_normalmean-cov-size" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="numpy.random.multivariate_normalmean-cov-size"><span class="header-section-number">4.2.1</span> <code>numpy.random.multivariate_normal(mean, cov, size)</code></h3>
+<p>Fungsi ini sangat penting untuk simulasi bivariate normal.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">100</span>]</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>cov <span class="op">=</span> [[<span class="dv">25</span>, <span class="dv">14</span>],</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>       [<span class="dv">14</span>, <span class="dv">36</span>]]</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>sampel <span class="op">=</span> np.random.multivariate_normal(mean, cov, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> sampel[:, <span class="dv">0</span>]</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> sampel[:, <span class="dv">1</span>]</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="kovariansi" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="kovariansi"><span class="header-section-number">4.3</span> Kovariansi</h2>
+<section id="numpy.covm-rowvarfalse" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="numpy.covm-rowvarfalse"><span class="header-section-number">4.3.1</span> <code>numpy.cov(m, rowvar=False)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.column_stack((x, y))</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>matriks_cov <span class="op">=</span> np.cov(data, rowvar<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matriks_cov)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Atau langsung:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>matriks_cov <span class="op">=</span> np.cov(x, y)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matriks_cov)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="korelasi" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="korelasi"><span class="header-section-number">4.4</span> Korelasi</h2>
+<section id="numpy.corrcoefx-y" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="numpy.corrcoefx-y"><span class="header-section-number">4.4.1</span> <code>numpy.corrcoef(x, y)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>matriks_corr <span class="op">=</span> np.corrcoef(x, y)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matriks_corr)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Koefisien korelasi Pearson terdapat pada elemen di luar diagonal.</p>
+</section>
+<section id="scipy.stats.pearsonrx-y" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="scipy.stats.pearsonrx-y"><span class="header-section-number">4.4.2</span> <code>scipy.stats.pearsonr(x, y)</code></h3>
+<p>Menghasilkan koefisien korelasi sekaligus p-value.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>r, p_value <span class="op">=</span> stats.pearsonr(x, y)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(r, p_value)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="regresi-linear-sederhana" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="regresi-linear-sederhana"><span class="header-section-number">4.5</span> Regresi linear sederhana</h2>
+<section id="scipy.stats.linregressx-y" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="scipy.stats.linregressx-y"><span class="header-section-number">4.5.1</span> <code>scipy.stats.linregress(x, y)</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>hasil <span class="op">=</span> stats.linregress(x, y)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"slope ="</span>, hasil.slope)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"intercept ="</span>, hasil.intercept)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"rvalue ="</span>, hasil.rvalue)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="joint-distribution-empiris-untuk-data-diskrit-bivariate" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="joint-distribution-empiris-untuk-data-diskrit-bivariate"><span class="header-section-number">4.6</span> Joint distribution empiris untuk data diskrit bivariate</h2>
+<p>Jika <code>x</code> dan <code>y</code> adalah data diskrit:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">4</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">5</span>, size<span class="op">=</span><span class="dv">1000</span>)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="menghitung-frekuensi-gabungan-dengan-pandas.crosstab" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="menghitung-frekuensi-gabungan-dengan-pandas.crosstab"><span class="header-section-number">4.6.1</span> Menghitung frekuensi gabungan dengan <code>pandas.crosstab()</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>tabel <span class="op">=</span> pd.crosstab(x, y)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabel)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mengubah-menjadi-peluang-gabungan-empiris" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="mengubah-menjadi-peluang-gabungan-empiris"><span class="header-section-number">4.6.2</span> Mengubah menjadi peluang gabungan empiris</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>joint_prob <span class="op">=</span> pd.crosstab(x, y, normalize<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(joint_prob)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="mean-variansi-dan-kovariansi-bivariate" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="mean-variansi-dan-kovariansi-bivariate"><span class="header-section-number">4.7</span> Mean, variansi, dan kovariansi bivariate</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>mean_x <span class="op">=</span> np.mean(x)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>mean_y <span class="op">=</span> np.mean(y)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>var_x <span class="op">=</span> np.var(x, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>var_y <span class="op">=</span> np.var(y, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>cov_xy <span class="op">=</span> np.cov(x, y, ddof<span class="op">=</span><span class="dv">1</span>)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean_x, mean_y, var_x, var_y, cov_xy)</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="visualisasi" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Visualisasi</h1>
+<p>Visualisasi sangat penting untuk memahami random variable.</p>
+<section id="histogram-untuk-random-variable-tunggal" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="histogram-untuk-random-variable-tunggal"><span class="header-section-number">5.1</span> Histogram untuk random variable tunggal</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">170</span>, <span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Nilai"</span>)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Frekuensi"</span>)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Histogram Sampel Normal"</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scatter-plot-untuk-random-variable-bivariate" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="scatter-plot-untuk-random-variable-bivariate"><span class="header-section-number">5.2</span> Scatter plot untuk random variable bivariate</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">100</span>]</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>cov <span class="op">=</span> [[<span class="dv">25</span>, <span class="dv">14</span>], [<span class="dv">14</span>, <span class="dv">36</span>]]</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>sampel <span class="op">=</span> np.random.multivariate_normal(mean, cov, size<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(sampel[:, <span class="dv">0</span>], sampel[:, <span class="dv">1</span>], alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"X"</span>)</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Y"</span>)</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Scatter Plot Data Bivariate"</span>)</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="overlay-histogram-dan-pdf-teoritis" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="overlay-histogram-dan-pdf-teoritis"><span class="header-section-number">5.3</span> Overlay histogram dan PDF teoritis</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">170</span>, <span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>plt.hist(x, bins<span class="op">=</span><span class="dv">30</span>, density<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>xx <span class="op">=</span> np.linspace(<span class="dv">140</span>, <span class="dv">200</span>, <span class="dv">400</span>)</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> stats.norm.pdf(xx, loc<span class="op">=</span><span class="dv">170</span>, scale<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>plt.plot(xx, pdf)</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Density"</span>)</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Histogram dan PDF Normal"</span>)</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="ringkasan-fungsi-penting" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Ringkasan Fungsi Penting</h1>
+<section id="random-variable-diskrit-1" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="random-variable-diskrit-1"><span class="header-section-number">6.1</span> Random variable diskrit</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kebutuhan</th>
+<th>Fungsi Python</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bilangan bulat acak</td>
+<td><code>random.randint(a,b)</code></td>
+<td><code>random.randint(1,6)</code></td>
+</tr>
+<tr class="even">
+<td>Sampel integer banyak</td>
+<td><code>np.random.randint(low, high, size)</code></td>
+<td><code>np.random.randint(1,7,100)</code></td>
+</tr>
+<tr class="odd">
+<td>Bernoulli</td>
+<td><code>np.random.binomial(1,p,size)</code></td>
+<td><code>np.random.binomial(1,0.3,20)</code></td>
+</tr>
+<tr class="even">
+<td>Binomial sampel</td>
+<td><code>np.random.binomial(n,p,size)</code></td>
+<td><code>np.random.binomial(10,0.4,1000)</code></td>
+</tr>
+<tr class="odd">
+<td>Binomial PMF</td>
+<td><code>stats.binom.pmf(k,n,p)</code></td>
+<td><code>stats.binom.pmf(3,10,0.4)</code></td>
+</tr>
+<tr class="even">
+<td>Poisson sampel</td>
+<td><code>np.random.poisson(lam,size)</code></td>
+<td><code>np.random.poisson(2.5,1000)</code></td>
+</tr>
+<tr class="odd">
+<td>Poisson PMF</td>
+<td><code>stats.poisson.pmf(k,mu)</code></td>
+<td><code>stats.poisson.pmf(4,2.5)</code></td>
+</tr>
+<tr class="even">
+<td>Geometrik sampel</td>
+<td><code>np.random.geometric(p,size)</code></td>
+<td><code>np.random.geometric(0.2,20)</code></td>
+</tr>
+<tr class="odd">
+<td>Mean diskrit</td>
+<td><code>np.sum(x*p)</code></td>
+<td><code>np.sum(x*p)</code></td>
+</tr>
+<tr class="even">
+<td>Variansi diskrit</td>
+<td><code>np.sum((x**2)*p)-E**2</code></td>
+<td>sesuai rumus</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="random-variable-kontinu-1" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="random-variable-kontinu-1"><span class="header-section-number">6.2</span> Random variable kontinu</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kebutuhan</th>
+<th>Fungsi Python</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uniform [0,1)</td>
+<td><code>random.random()</code></td>
+<td><code>random.random()</code></td>
+</tr>
+<tr class="even">
+<td>Uniform [a,b]</td>
+<td><code>random.uniform(a,b)</code></td>
+<td><code>random.uniform(10,20)</code></td>
+</tr>
+<tr class="odd">
+<td>Uniform banyak</td>
+<td><code>np.random.uniform(a,b,size)</code></td>
+<td><code>np.random.uniform(10,20,1000)</code></td>
+</tr>
+<tr class="even">
+<td>Normal sampel</td>
+<td><code>np.random.normal(loc,scale,size)</code></td>
+<td><code>np.random.normal(170,8,1000)</code></td>
+</tr>
+<tr class="odd">
+<td>Normal PDF</td>
+<td><code>stats.norm.pdf(x,loc,scale)</code></td>
+<td><code>stats.norm.pdf(175,170,8)</code></td>
+</tr>
+<tr class="even">
+<td>Normal CDF</td>
+<td><code>stats.norm.cdf(x,loc,scale)</code></td>
+<td><code>stats.norm.cdf(175,170,8)</code></td>
+</tr>
+<tr class="odd">
+<td>Normal inverse CDF</td>
+<td><code>stats.norm.ppf(q,loc,scale)</code></td>
+<td><code>stats.norm.ppf(0.95,170,8)</code></td>
+</tr>
+<tr class="even">
+<td>Eksponensial sampel</td>
+<td><code>np.random.exponential(scale,size)</code></td>
+<td><code>np.random.exponential(2,1000)</code></td>
+</tr>
+<tr class="odd">
+<td>Mean sampel</td>
+<td><code>np.mean(x)</code></td>
+<td><code>np.mean(x)</code></td>
+</tr>
+<tr class="even">
+<td>Variansi sampel</td>
+<td><code>np.var(x,ddof=1)</code></td>
+<td><code>np.var(x,ddof=1)</code></td>
+</tr>
+<tr class="odd">
+<td>Simpangan baku</td>
+<td><code>np.std(x,ddof=1)</code></td>
+<td><code>np.std(x,ddof=1)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="random-variable-bivariate-1" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="random-variable-bivariate-1"><span class="header-section-number">6.3</span> Random variable bivariate</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kebutuhan</th>
+<th>Fungsi Python</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bivariate normal</td>
+<td><code>np.random.multivariate_normal(mean,cov,size)</code></td>
+<td>lihat contoh</td>
+</tr>
+<tr class="even">
+<td>Kovariansi</td>
+<td><code>np.cov(x,y)</code></td>
+<td><code>np.cov(x,y)</code></td>
+</tr>
+<tr class="odd">
+<td>Korelasi</td>
+<td><code>np.corrcoef(x,y)</code></td>
+<td><code>np.corrcoef(x,y)</code></td>
+</tr>
+<tr class="even">
+<td>Korelasi Pearson</td>
+<td><code>stats.pearsonr(x,y)</code></td>
+<td><code>stats.pearsonr(x,y)</code></td>
+</tr>
+<tr class="odd">
+<td>Regresi linear</td>
+<td><code>stats.linregress(x,y)</code></td>
+<td><code>stats.linregress(x,y)</code></td>
+</tr>
+<tr class="even">
+<td>Tabel joint empiris</td>
+<td><code>pd.crosstab(x,y)</code></td>
+<td><code>pd.crosstab(x,y)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="contoh-mini-proyek" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Contoh Mini Proyek</h1>
+<section id="simulasi-dadu-diskrit" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="simulasi-dadu-diskrit"><span class="header-section-number">7.1</span> Simulasi dadu diskrit</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean ="</span>, np.mean(x))</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Variansi ="</span>, np.var(x, ddof<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="simulasi-tinggi-badan-kontinu" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="simulasi-tinggi-badan-kontinu"><span class="header-section-number">7.2</span> Simulasi tinggi badan kontinu</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">170</span>, <span class="dv">8</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean ="</span>, np.mean(x))</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Std ="</span>, np.std(x, ddof<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="simulasi-dua-variabel-berkorelasi" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="simulasi-dua-variabel-berkorelasi"><span class="header-section-number">7.3</span> Simulasi dua variabel berkorelasi</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> [<span class="dv">100</span>, <span class="dv">200</span>]</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>cov <span class="op">=</span> [[<span class="dv">100</span>, <span class="dv">60</span>], [<span class="dv">60</span>, <span class="dv">80</span>]]</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.multivariate_normal(mean, cov, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> data[:, <span class="dv">0</span>]</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[:, <span class="dv">1</span>]</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Covariance matrix:"</span>)</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.cov(x, y))</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Correlation matrix:"</span>)</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.corrcoef(x, y))</span></code></pre></div><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="penutup" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Penutup</h1>
+<p>Dalam Python, kombinasi <code>numpy</code>, <code>scipy.stats</code>, <code>random</code>, dan <code>matplotlib</code> sudah sangat memadai untuk:</p>
+<ul>
+<li>mensimulasikan random variable,</li>
+<li>menghitung PMF, PDF, dan CDF,</li>
+<li>mencari mean, variansi, kovariansi, dan korelasi,</li>
+<li>membuat visualisasi histogram dan scatter plot,</li>
+<li>mempelajari hubungan antar variabel acak secara empiris maupun teoritis.</li>
+</ul>
+<p>Dokumen ini dapat dijadikan referensi awal untuk pembelajaran probabilitas, statistika, simulasi Monte Carlo, dan analisis data berbasis Python.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Disalin!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Disalin!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

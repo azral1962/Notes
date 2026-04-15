@@ -1,0 +1,656 @@
+---
+title: "Fungsi Spreadsheet untuk Random Variable Diskrit, Kontinu, dan Bivariat"
+author: "Armein Z. R. Langi"
+lang: id
+format:
+  typst:
+    keep-typ: true
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Pendahuluan
+
+Dokumen ini merangkum fungsi-fungsi spreadsheet yang berguna untuk mempelajari **random variable diskrit**, **random variable kontinu**, dan **random variable bivariat**. Contoh-contoh ditulis dalam format yang umum dipakai di **Microsoft Excel** dan sebagian besar juga dapat digunakan di **Google Sheets**.
+
+Tujuan dokumen ini adalah membantu pembaca:
+
+1. mengenali fungsi-fungsi penting untuk simulasi dan analisis probabilistik,
+2. memahami cara memakai rumus-rumus spreadsheet secara langsung,
+3. menghubungkan konsep peluang, ekspektasi, variansi, kovariansi, dan korelasi dengan praktik komputasi sederhana.
+
+# Random Variable Diskrit
+
+Random variable diskrit adalah peubah acak yang nilainya dapat dihitung satu per satu, misalnya banyaknya pelanggan datang, jumlah keberhasilan, atau hasil lemparan dadu.
+
+## Membuat Nilai Acak Diskrit
+
+### Fungsi `RANDBETWEEN`
+
+Fungsi ini menghasilkan bilangan bulat acak antara batas bawah dan batas atas.
+
+```excel
+=RANDBETWEEN(1,6)
+```
+
+Contoh ini dapat dipakai untuk mensimulasikan satu kali lemparan dadu.
+
+## Distribusi Bernoulli
+
+Distribusi Bernoulli memiliki dua hasil: sukses (`1`) atau gagal (`0`).
+
+### Simulasi Bernoulli dengan `IF` dan `RAND`
+
+Misalkan peluang sukses adalah `0.3`.
+
+```excel
+=IF(RAND()<0.3,1,0)
+```
+
+Rumus ini menghasilkan:
+
+- `1` dengan peluang 0,3
+- `0` dengan peluang 0,7
+
+## Distribusi Binomial
+
+Distribusi binomial memodelkan banyaknya sukses dari `n` percobaan independen.
+
+### Fungsi `BINOM.DIST`
+
+Bentuk umum:
+
+```excel
+=BINOM.DIST(x,n,p,kumulatif)
+```
+
+Keterangan:
+
+- `x`: jumlah sukses
+- `n`: jumlah percobaan
+- `p`: peluang sukses tiap percobaan
+- `FALSE`: peluang tepat
+- `TRUE`: peluang kumulatif
+
+### Contoh peluang tepat
+
+Peluang tepat 3 sukses dari 10 percobaan, dengan peluang sukses 0,4:
+
+```excel
+=BINOM.DIST(3,10,0.4,FALSE)
+```
+
+### Contoh peluang kumulatif
+
+Peluang paling banyak 3 sukses:
+
+```excel
+=BINOM.DIST(3,10,0.4,TRUE)
+```
+
+## Distribusi Poisson
+
+Distribusi Poisson sering dipakai untuk memodelkan banyak kejadian dalam suatu interval waktu atau ruang.
+
+### Fungsi `POISSON.DIST`
+
+```excel
+=POISSON.DIST(x,lambda,kumulatif)
+```
+
+### Contoh peluang tepat
+
+Peluang tepat 4 kejadian saat rata-rata kejadian `2.5`:
+
+```excel
+=POISSON.DIST(4,2.5,FALSE)
+```
+
+### Contoh peluang kumulatif
+
+Peluang paling banyak 4 kejadian:
+
+```excel
+=POISSON.DIST(4,2.5,TRUE)
+```
+
+## Distribusi Geometrik
+
+Distribusi geometrik memodelkan kapan sukses pertama terjadi.
+
+### Fungsi `GEOM.DIST`
+
+```excel
+=GEOM.DIST(x,p,kumulatif)
+```
+
+Contoh peluang sukses pertama terjadi pada percobaan ke-4 dengan peluang sukses 0,2:
+
+```excel
+=GEOM.DIST(4,0.2,FALSE)
+```
+
+## Ekspektasi Random Variable Diskrit
+
+Jika nilai-nilai acak berada pada rentang `A2:A6` dan peluangnya pada `B2:B6`, maka nilai harapan dapat dihitung dengan `SUMPRODUCT`.
+
+### Fungsi `SUMPRODUCT`
+
+```excel
+=SUMPRODUCT(A2:A6,B2:B6)
+```
+
+Contoh tabel:
+
+| Nilai \(x\) | Peluang \(P(X=x)\) |
+|---:|---:|
+| 0 | 0.1 |
+| 1 | 0.2 |
+| 2 | 0.4 |
+| 3 | 0.2 |
+| 4 | 0.1 |
+
+Rumus ekspektasi:
+
+```excel
+=SUMPRODUCT(A2:A6,B2:B6)
+```
+
+## Variansi Random Variable Diskrit
+
+Gunakan rumus:
+
+$$
+Var(X)=E[X^2]-(E[X])^2
+$$
+
+Jika nilai \(x\) di `A2:A6` dan peluang di `B2:B6`, salah satu cara adalah langsung memakai:
+
+```excel
+=SUMPRODUCT((A2:A6^2),B2:B6)-(SUMPRODUCT(A2:A6,B2:B6))^2
+```
+
+Dalam praktik spreadsheet, sering lebih aman memakai **kolom bantu**.
+
+Misalkan di `C2` tulis:
+
+```excel
+=A2^2
+```
+
+lalu salin ke bawah, dan hitung variansi dengan:
+
+```excel
+=SUMPRODUCT(C2:C6,B2:B6)-(SUMPRODUCT(A2:A6,B2:B6))^2
+```
+
+# Random Variable Kontinu
+
+Random variable kontinu mengambil nilai pada suatu interval, misalnya tinggi badan, berat badan, waktu tunggu, dan temperatur.
+
+## Membuat Nilai Acak Uniform
+
+### Fungsi `RAND`
+
+Fungsi ini menghasilkan angka acak antara 0 dan 1.
+
+```excel
+=RAND()
+```
+
+### Uniform pada interval tertentu
+
+Untuk menghasilkan data acak uniform pada interval \([a,b]\):
+
+```excel
+=a + (b-a)*RAND()
+```
+
+Contoh interval 10 sampai 20:
+
+```excel
+=10 + (20-10)*RAND()
+```
+
+## Distribusi Normal
+
+Distribusi normal sangat penting dalam statistika karena banyak fenomena alam dan sosial mendekatinya.
+
+### Fungsi `NORM.DIST`
+
+```excel
+=NORM.DIST(x,mean,std_dev,kumulatif)
+```
+
+### Contoh densitas
+
+Nilai densitas pada `x = 70`, mean `65`, standar deviasi `8`:
+
+```excel
+=NORM.DIST(70,65,8,FALSE)
+```
+
+### Contoh peluang kumulatif
+
+Peluang \(X \le 70\):
+
+```excel
+=NORM.DIST(70,65,8,TRUE)
+```
+
+## Membuat Sampel Acak Normal
+
+### Fungsi `NORM.INV`
+
+Salah satu cara menghasilkan data normal acak adalah dengan mengubah uniform acak menjadi normal menggunakan inverse CDF.
+
+```excel
+=NORM.INV(RAND(),65,8)
+```
+
+Rumus ini menghasilkan satu sampel acak dari distribusi normal dengan mean `65` dan simpangan baku `8`.
+
+## Distribusi Eksponensial
+
+Distribusi eksponensial sering digunakan untuk memodelkan waktu antar-kejadian.
+
+### Fungsi `EXPON.DIST`
+
+```excel
+=EXPON.DIST(x,lambda,kumulatif)
+```
+
+### Contoh densitas
+
+Nilai densitas pada `x = 2` dengan laju `0.5`:
+
+```excel
+=EXPON.DIST(2,0.5,FALSE)
+```
+
+### Contoh peluang kumulatif
+
+Peluang \(X \le 2\):
+
+```excel
+=EXPON.DIST(2,0.5,TRUE)
+```
+
+## Membuat Sampel Acak Eksponensial
+
+Dengan transformasi invers, distribusi eksponensial dapat disimulasikan melalui:
+
+```excel
+=-LN(1-RAND())/0.5
+```
+
+Rumus ini menghasilkan sampel acak eksponensial dengan parameter laju `0.5`.
+
+## Rata-rata dan Variabilitas Data Kontinu
+
+Misalkan data berada pada rentang `A2:A101`.
+
+### Mean
+
+```excel
+=AVERAGE(A2:A101)
+```
+
+### Variansi sampel
+
+```excel
+=VAR.S(A2:A101)
+```
+
+### Variansi populasi
+
+```excel
+=VAR.P(A2:A101)
+```
+
+### Simpangan baku sampel
+
+```excel
+=STDEV.S(A2:A101)
+```
+
+### Simpangan baku populasi
+
+```excel
+=STDEV.P(A2:A101)
+```
+
+# Random Variable Bivariat
+
+Random variable bivariat melibatkan dua peubah acak yang diamati bersama-sama, misalnya tinggi dan berat, nilai UTS dan UAS, atau permintaan dan biaya.
+
+Misalkan:
+
+- data \(X\) berada di kolom `A`
+- data \(Y\) berada di kolom `B`
+
+## Mean Masing-masing Variabel
+
+Untuk \(X\):
+
+```excel
+=AVERAGE(A2:A101)
+```
+
+Untuk \(Y\):
+
+```excel
+=AVERAGE(B2:B101)
+```
+
+## Variansi Masing-masing Variabel
+
+Untuk \(X\):
+
+```excel
+=VAR.S(A2:A101)
+```
+
+Untuk \(Y\):
+
+```excel
+=VAR.S(B2:B101)
+```
+
+## Kovariansi
+
+Kovariansi mengukur kecenderungan dua variabel berubah bersama.
+
+### Fungsi `COVARIANCE.S` dan `COVARIANCE.P`
+
+Untuk sampel:
+
+```excel
+=COVARIANCE.S(A2:A101,B2:B101)
+```
+
+Untuk populasi:
+
+```excel
+=COVARIANCE.P(A2:A101,B2:B101)
+```
+
+Interpretasi umum:
+
+- bernilai positif: jika `X` naik, `Y` cenderung naik,
+- bernilai negatif: jika `X` naik, `Y` cenderung turun,
+- mendekati nol: hubungan linear lemah.
+
+## Korelasi
+
+Korelasi menormalkan kovariansi sehingga nilainya berada pada interval \([-1,1]\).
+
+### Fungsi `CORREL`
+
+```excel
+=CORREL(A2:A101,B2:B101)
+```
+
+Interpretasi umum:
+
+- mendekati `1`: hubungan linear positif kuat,
+- mendekati `-1`: hubungan linear negatif kuat,
+- mendekati `0`: hubungan linear lemah.
+
+## Regresi Linear Sederhana
+
+Jika ingin memodelkan hubungan linear \(Y\) terhadap \(X\), spreadsheet menyediakan fungsi berikut.
+
+### Kemiringan garis regresi: `SLOPE`
+
+```excel
+=SLOPE(B2:B101,A2:A101)
+```
+
+### Intersep garis regresi: `INTERCEPT`
+
+```excel
+=INTERCEPT(B2:B101,A2:A101)
+```
+
+### Prediksi nilai `Y`
+
+Jika nilai `X` tertentu berada di sel `A2`, maka prediksi \(Y\) adalah:
+
+```excel
+=INTERCEPT(B2:B101,A2:A101) + SLOPE(B2:B101,A2:A101)*A2
+```
+
+## Joint Distribution Diskrit Bivariat
+
+Jika dua variabel diskrit diamati bersama, peluang gabungannya dapat dihitung dengan `COUNTIFS`.
+
+Misalkan:
+
+- data `X` pada `A2:A101`
+- data `Y` pada `B2:B101`
+
+### Peluang bersama
+
+Contoh menghitung \(P(X=1, Y=2)\):
+
+```excel
+=COUNTIFS(A2:A101,1,B2:B101,2)/COUNT(A2:A101)
+```
+
+### Peluang marginal
+
+Contoh menghitung \(P(X=1)\):
+
+```excel
+=COUNTIF(A2:A101,1)/COUNT(A2:A101)
+```
+
+### Peluang kondisional
+
+Contoh menghitung \(P(Y=2 \mid X=1)\):
+
+```excel
+=COUNTIFS(A2:A101,1,B2:B101,2)/COUNTIF(A2:A101,1)
+```
+
+## Expected Value pada Joint Distribution
+
+Misalkan tabel peluang gabungan disusun sebagai berikut:
+
+- nilai `X` di `B1:E1`
+- nilai `Y` di `A2:A5`
+- probabilitas gabungan di `B2:E5`
+
+Dalam praktik, perhitungan ekspektasi gabungan sering memerlukan tabel bantu.
+
+### Menghitung \(E[X]\)
+
+Secara konseptual, kita jumlahkan semua nilai `X` dikalikan probabilitas marginalnya. Jika struktur tabel sudah sesuai, `SUMPRODUCT` dapat digunakan.
+
+### Menghitung \(E[XY]\)
+
+Buat matriks hasil kali `x*y`, lalu kalikan dengan matriks probabilitas bersama:
+
+```excel
+=SUMPRODUCT(matriks_XY, matriks_probabilitas)
+```
+
+# Fungsi Penting Lain yang Sering Dipakai
+
+## Frekuensi dan Histogram
+
+### Fungsi `FREQUENCY`
+
+```excel
+=FREQUENCY(A2:A101,D2:D6)
+```
+
+Fungsi ini berguna untuk membuat distribusi frekuensi empiris atau histogram.
+
+## Persentil dan Kuartil
+
+### Persentil
+
+```excel
+=PERCENTILE.INC(A2:A101,0.25)
+```
+
+### Median
+
+```excel
+=MEDIAN(A2:A101)
+```
+
+### Kuartil
+
+```excel
+=QUARTILE.INC(A2:A101,3)
+```
+
+## Nilai Minimum dan Maksimum
+
+```excel
+=MIN(A2:A101)
+```
+
+```excel
+=MAX(A2:A101)
+```
+
+## Menghitung Peluang Empiris
+
+Jika nilai tertentu ditulis di `D2`, maka jumlah kemunculannya dapat dihitung dengan:
+
+```excel
+=COUNTIF(A2:A101,D2)
+```
+
+Peluang empirisnya:
+
+```excel
+=COUNTIF(A2:A101,D2)/COUNT(A2:A101)
+```
+
+# Contoh Penggunaan Ringkas
+
+## Contoh 1: Lempar Dadu 100 Kali
+
+Pada sel `A2`, tulis:
+
+```excel
+=RANDBETWEEN(1,6)
+```
+
+Salin hingga `A101`.
+
+### Rata-rata hasil lemparan
+
+```excel
+=AVERAGE(A2:A101)
+```
+
+### Variansi hasil lemparan
+
+```excel
+=VAR.S(A2:A101)
+```
+
+### Peluang empiris muncul angka 4
+
+```excel
+=COUNTIF(A2:A101,4)/COUNT(A2:A101)
+```
+
+## Contoh 2: Tinggi Badan Berdistribusi Normal
+
+Pada sel `A2`, tulis:
+
+```excel
+=NORM.INV(RAND(),170,8)
+```
+
+Salin ke bawah.
+
+### Mean sampel
+
+```excel
+=AVERAGE(A2:A101)
+```
+
+### Simpangan baku sampel
+
+```excel
+=STDEV.S(A2:A101)
+```
+
+### Peluang teoritis tinggi \(\le 175\)
+
+```excel
+=NORM.DIST(175,170,8,TRUE)
+```
+
+## Contoh 3: Tinggi dan Berat sebagai Data Bivariat
+
+Misalkan:
+
+- tinggi di `A2:A101`
+- berat di `B2:B101`
+
+### Kovariansi
+
+```excel
+=COVARIANCE.S(A2:A101,B2:B101)
+```
+
+### Korelasi
+
+```excel
+=CORREL(A2:A101,B2:B101)
+```
+
+### Slope regresi berat terhadap tinggi
+
+```excel
+=SLOPE(B2:B101,A2:A101)
+```
+
+# Tabel Ringkasan Fungsi Utama
+
+| Topik | Fungsi Spreadsheet | Kegunaan Utama |
+|---|---|---|
+| Acak diskrit | `RANDBETWEEN`, `RAND`, `IF` | Simulasi nilai acak sederhana |
+| Bernoulli/Binomial | `BINOM.DIST` | Peluang banyak sukses |
+| Poisson | `POISSON.DIST` | Peluang jumlah kejadian |
+| Geometrik | `GEOM.DIST` | Peluang sukses pertama |
+| Normal | `NORM.DIST`, `NORM.INV` | Distribusi normal dan simulasi |
+| Eksponensial | `EXPON.DIST` | Distribusi waktu tunggu |
+| Mean | `AVERAGE` | Nilai rata-rata |
+| Variansi | `VAR.S`, `VAR.P` | Ukuran penyebaran |
+| Simpangan baku | `STDEV.S`, `STDEV.P` | Akar dari variansi |
+| Kovariansi | `COVARIANCE.S`, `COVARIANCE.P` | Hubungan perubahan bersama |
+| Korelasi | `CORREL` | Kekuatan hubungan linear |
+| Regresi | `SLOPE`, `INTERCEPT` | Model linear sederhana |
+| Frekuensi | `COUNTIF`, `COUNTIFS`, `FREQUENCY` | Distribusi empiris |
+| Ekspektasi diskrit | `SUMPRODUCT` | Nilai harapan |
+
+# Penutup
+
+Spreadsheet menyediakan banyak fungsi yang cukup kuat untuk mendukung pembelajaran probabilitas dan statistika tanpa harus langsung memakai bahasa pemrograman. Dengan fungsi-fungsi seperti `RANDBETWEEN`, `NORM.INV`, `SUMPRODUCT`, `COVARIANCE.S`, dan `CORREL`, pembaca dapat melakukan simulasi, menghitung ukuran-ukuran statistik, serta mempelajari hubungan antar-variabel secara langsung.
+
+Dokumen ini dapat dijadikan sebagai:
+
+- catatan ringkas saat belajar,
+- bahan ajar di kelas,
+- panduan praktikum spreadsheet,
+- dasar untuk membuat tugas eksplorasi random variable.

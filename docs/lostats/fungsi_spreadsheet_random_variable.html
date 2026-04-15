@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="OpenAI">
+
+<title>Fungsi Spreadsheet untuk Random Variable Diskrit, Kontinu, dan Bivariat</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="fungsi_spreadsheet_random_variable_files/libs/clipboard/clipboard.min.js"></script>
+<script src="fungsi_spreadsheet_random_variable_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="fungsi_spreadsheet_random_variable_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="fungsi_spreadsheet_random_variable_files/libs/quarto-html/popper.min.js"></script>
+<script src="fungsi_spreadsheet_random_variable_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="fungsi_spreadsheet_random_variable_files/libs/quarto-html/anchor.min.js"></script>
+<link href="fungsi_spreadsheet_random_variable_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="fungsi_spreadsheet_random_variable_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="fungsi_spreadsheet_random_variable_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="fungsi_spreadsheet_random_variable_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="fungsi_spreadsheet_random_variable_files/libs/bootstrap/bootstrap-50d8b1abee42e92a82be279ad74090c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan"><span class="header-section-number">1</span> Pendahuluan</a></li>
+  <li><a href="#random-variable-diskrit" id="toc-random-variable-diskrit" class="nav-link" data-scroll-target="#random-variable-diskrit"><span class="header-section-number">2</span> Random Variable Diskrit</a>
+  <ul class="collapse">
+  <li><a href="#membuat-nilai-acak-diskrit" id="toc-membuat-nilai-acak-diskrit" class="nav-link" data-scroll-target="#membuat-nilai-acak-diskrit"><span class="header-section-number">2.1</span> Membuat Nilai Acak Diskrit</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-randbetween" id="toc-fungsi-randbetween" class="nav-link" data-scroll-target="#fungsi-randbetween"><span class="header-section-number">2.1.1</span> Fungsi <code>RANDBETWEEN</code></a></li>
+  </ul></li>
+  <li><a href="#distribusi-bernoulli" id="toc-distribusi-bernoulli" class="nav-link" data-scroll-target="#distribusi-bernoulli"><span class="header-section-number">2.2</span> Distribusi Bernoulli</a>
+  <ul class="collapse">
+  <li><a href="#simulasi-bernoulli-dengan-if-dan-rand" id="toc-simulasi-bernoulli-dengan-if-dan-rand" class="nav-link" data-scroll-target="#simulasi-bernoulli-dengan-if-dan-rand"><span class="header-section-number">2.2.1</span> Simulasi Bernoulli dengan <code>IF</code> dan <code>RAND</code></a></li>
+  </ul></li>
+  <li><a href="#distribusi-binomial" id="toc-distribusi-binomial" class="nav-link" data-scroll-target="#distribusi-binomial"><span class="header-section-number">2.3</span> Distribusi Binomial</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-binom.dist" id="toc-fungsi-binom.dist" class="nav-link" data-scroll-target="#fungsi-binom.dist"><span class="header-section-number">2.3.1</span> Fungsi <code>BINOM.DIST</code></a></li>
+  <li><a href="#contoh-peluang-tepat" id="toc-contoh-peluang-tepat" class="nav-link" data-scroll-target="#contoh-peluang-tepat"><span class="header-section-number">2.3.2</span> Contoh peluang tepat</a></li>
+  <li><a href="#contoh-peluang-kumulatif" id="toc-contoh-peluang-kumulatif" class="nav-link" data-scroll-target="#contoh-peluang-kumulatif"><span class="header-section-number">2.3.3</span> Contoh peluang kumulatif</a></li>
+  </ul></li>
+  <li><a href="#distribusi-poisson" id="toc-distribusi-poisson" class="nav-link" data-scroll-target="#distribusi-poisson"><span class="header-section-number">2.4</span> Distribusi Poisson</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-poisson.dist" id="toc-fungsi-poisson.dist" class="nav-link" data-scroll-target="#fungsi-poisson.dist"><span class="header-section-number">2.4.1</span> Fungsi <code>POISSON.DIST</code></a></li>
+  <li><a href="#contoh-peluang-tepat-1" id="toc-contoh-peluang-tepat-1" class="nav-link" data-scroll-target="#contoh-peluang-tepat-1"><span class="header-section-number">2.4.2</span> Contoh peluang tepat</a></li>
+  <li><a href="#contoh-peluang-kumulatif-1" id="toc-contoh-peluang-kumulatif-1" class="nav-link" data-scroll-target="#contoh-peluang-kumulatif-1"><span class="header-section-number">2.4.3</span> Contoh peluang kumulatif</a></li>
+  </ul></li>
+  <li><a href="#distribusi-geometrik" id="toc-distribusi-geometrik" class="nav-link" data-scroll-target="#distribusi-geometrik"><span class="header-section-number">2.5</span> Distribusi Geometrik</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-geom.dist" id="toc-fungsi-geom.dist" class="nav-link" data-scroll-target="#fungsi-geom.dist"><span class="header-section-number">2.5.1</span> Fungsi <code>GEOM.DIST</code></a></li>
+  </ul></li>
+  <li><a href="#ekspektasi-random-variable-diskrit" id="toc-ekspektasi-random-variable-diskrit" class="nav-link" data-scroll-target="#ekspektasi-random-variable-diskrit"><span class="header-section-number">2.6</span> Ekspektasi Random Variable Diskrit</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-sumproduct" id="toc-fungsi-sumproduct" class="nav-link" data-scroll-target="#fungsi-sumproduct"><span class="header-section-number">2.6.1</span> Fungsi <code>SUMPRODUCT</code></a></li>
+  </ul></li>
+  <li><a href="#variansi-random-variable-diskrit" id="toc-variansi-random-variable-diskrit" class="nav-link" data-scroll-target="#variansi-random-variable-diskrit"><span class="header-section-number">2.7</span> Variansi Random Variable Diskrit</a></li>
+  </ul></li>
+  <li><a href="#random-variable-kontinu" id="toc-random-variable-kontinu" class="nav-link" data-scroll-target="#random-variable-kontinu"><span class="header-section-number">3</span> Random Variable Kontinu</a>
+  <ul class="collapse">
+  <li><a href="#membuat-nilai-acak-uniform" id="toc-membuat-nilai-acak-uniform" class="nav-link" data-scroll-target="#membuat-nilai-acak-uniform"><span class="header-section-number">3.1</span> Membuat Nilai Acak Uniform</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-rand" id="toc-fungsi-rand" class="nav-link" data-scroll-target="#fungsi-rand"><span class="header-section-number">3.1.1</span> Fungsi <code>RAND</code></a></li>
+  <li><a href="#uniform-pada-interval-tertentu" id="toc-uniform-pada-interval-tertentu" class="nav-link" data-scroll-target="#uniform-pada-interval-tertentu"><span class="header-section-number">3.1.2</span> Uniform pada interval tertentu</a></li>
+  </ul></li>
+  <li><a href="#distribusi-normal" id="toc-distribusi-normal" class="nav-link" data-scroll-target="#distribusi-normal"><span class="header-section-number">3.2</span> Distribusi Normal</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-norm.dist" id="toc-fungsi-norm.dist" class="nav-link" data-scroll-target="#fungsi-norm.dist"><span class="header-section-number">3.2.1</span> Fungsi <code>NORM.DIST</code></a></li>
+  <li><a href="#contoh-densitas" id="toc-contoh-densitas" class="nav-link" data-scroll-target="#contoh-densitas"><span class="header-section-number">3.2.2</span> Contoh densitas</a></li>
+  <li><a href="#contoh-peluang-kumulatif-2" id="toc-contoh-peluang-kumulatif-2" class="nav-link" data-scroll-target="#contoh-peluang-kumulatif-2"><span class="header-section-number">3.2.3</span> Contoh peluang kumulatif</a></li>
+  </ul></li>
+  <li><a href="#membuat-sampel-acak-normal" id="toc-membuat-sampel-acak-normal" class="nav-link" data-scroll-target="#membuat-sampel-acak-normal"><span class="header-section-number">3.3</span> Membuat Sampel Acak Normal</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-norm.inv" id="toc-fungsi-norm.inv" class="nav-link" data-scroll-target="#fungsi-norm.inv"><span class="header-section-number">3.3.1</span> Fungsi <code>NORM.INV</code></a></li>
+  </ul></li>
+  <li><a href="#distribusi-eksponensial" id="toc-distribusi-eksponensial" class="nav-link" data-scroll-target="#distribusi-eksponensial"><span class="header-section-number">3.4</span> Distribusi Eksponensial</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-expon.dist" id="toc-fungsi-expon.dist" class="nav-link" data-scroll-target="#fungsi-expon.dist"><span class="header-section-number">3.4.1</span> Fungsi <code>EXPON.DIST</code></a></li>
+  <li><a href="#contoh-densitas-1" id="toc-contoh-densitas-1" class="nav-link" data-scroll-target="#contoh-densitas-1"><span class="header-section-number">3.4.2</span> Contoh densitas</a></li>
+  <li><a href="#contoh-peluang-kumulatif-3" id="toc-contoh-peluang-kumulatif-3" class="nav-link" data-scroll-target="#contoh-peluang-kumulatif-3"><span class="header-section-number">3.4.3</span> Contoh peluang kumulatif</a></li>
+  </ul></li>
+  <li><a href="#membuat-sampel-acak-eksponensial" id="toc-membuat-sampel-acak-eksponensial" class="nav-link" data-scroll-target="#membuat-sampel-acak-eksponensial"><span class="header-section-number">3.5</span> Membuat Sampel Acak Eksponensial</a></li>
+  <li><a href="#rata-rata-dan-variabilitas-data-kontinu" id="toc-rata-rata-dan-variabilitas-data-kontinu" class="nav-link" data-scroll-target="#rata-rata-dan-variabilitas-data-kontinu"><span class="header-section-number">3.6</span> Rata-rata dan Variabilitas Data Kontinu</a>
+  <ul class="collapse">
+  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean"><span class="header-section-number">3.6.1</span> Mean</a></li>
+  <li><a href="#variansi-sampel" id="toc-variansi-sampel" class="nav-link" data-scroll-target="#variansi-sampel"><span class="header-section-number">3.6.2</span> Variansi sampel</a></li>
+  <li><a href="#variansi-populasi" id="toc-variansi-populasi" class="nav-link" data-scroll-target="#variansi-populasi"><span class="header-section-number">3.6.3</span> Variansi populasi</a></li>
+  <li><a href="#simpangan-baku-sampel" id="toc-simpangan-baku-sampel" class="nav-link" data-scroll-target="#simpangan-baku-sampel"><span class="header-section-number">3.6.4</span> Simpangan baku sampel</a></li>
+  <li><a href="#simpangan-baku-populasi" id="toc-simpangan-baku-populasi" class="nav-link" data-scroll-target="#simpangan-baku-populasi"><span class="header-section-number">3.6.5</span> Simpangan baku populasi</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#random-variable-bivariat" id="toc-random-variable-bivariat" class="nav-link" data-scroll-target="#random-variable-bivariat"><span class="header-section-number">4</span> Random Variable Bivariat</a>
+  <ul class="collapse">
+  <li><a href="#mean-masing-masing-variabel" id="toc-mean-masing-masing-variabel" class="nav-link" data-scroll-target="#mean-masing-masing-variabel"><span class="header-section-number">4.1</span> Mean Masing-masing Variabel</a></li>
+  <li><a href="#variansi-masing-masing-variabel" id="toc-variansi-masing-masing-variabel" class="nav-link" data-scroll-target="#variansi-masing-masing-variabel"><span class="header-section-number">4.2</span> Variansi Masing-masing Variabel</a></li>
+  <li><a href="#kovariansi" id="toc-kovariansi" class="nav-link" data-scroll-target="#kovariansi"><span class="header-section-number">4.3</span> Kovariansi</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-covariance.s-dan-covariance.p" id="toc-fungsi-covariance.s-dan-covariance.p" class="nav-link" data-scroll-target="#fungsi-covariance.s-dan-covariance.p"><span class="header-section-number">4.3.1</span> Fungsi <code>COVARIANCE.S</code> dan <code>COVARIANCE.P</code></a></li>
+  </ul></li>
+  <li><a href="#korelasi" id="toc-korelasi" class="nav-link" data-scroll-target="#korelasi"><span class="header-section-number">4.4</span> Korelasi</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-correl" id="toc-fungsi-correl" class="nav-link" data-scroll-target="#fungsi-correl"><span class="header-section-number">4.4.1</span> Fungsi <code>CORREL</code></a></li>
+  </ul></li>
+  <li><a href="#regresi-linear-sederhana" id="toc-regresi-linear-sederhana" class="nav-link" data-scroll-target="#regresi-linear-sederhana"><span class="header-section-number">4.5</span> Regresi Linear Sederhana</a>
+  <ul class="collapse">
+  <li><a href="#kemiringan-garis-regresi-slope" id="toc-kemiringan-garis-regresi-slope" class="nav-link" data-scroll-target="#kemiringan-garis-regresi-slope"><span class="header-section-number">4.5.1</span> Kemiringan garis regresi: <code>SLOPE</code></a></li>
+  <li><a href="#intersep-garis-regresi-intercept" id="toc-intersep-garis-regresi-intercept" class="nav-link" data-scroll-target="#intersep-garis-regresi-intercept"><span class="header-section-number">4.5.2</span> Intersep garis regresi: <code>INTERCEPT</code></a></li>
+  <li><a href="#prediksi-nilai-y" id="toc-prediksi-nilai-y" class="nav-link" data-scroll-target="#prediksi-nilai-y"><span class="header-section-number">4.5.3</span> Prediksi nilai <code>Y</code></a></li>
+  </ul></li>
+  <li><a href="#joint-distribution-diskrit-bivariat" id="toc-joint-distribution-diskrit-bivariat" class="nav-link" data-scroll-target="#joint-distribution-diskrit-bivariat"><span class="header-section-number">4.6</span> Joint Distribution Diskrit Bivariat</a>
+  <ul class="collapse">
+  <li><a href="#peluang-bersama" id="toc-peluang-bersama" class="nav-link" data-scroll-target="#peluang-bersama"><span class="header-section-number">4.6.1</span> Peluang bersama</a></li>
+  <li><a href="#peluang-marginal" id="toc-peluang-marginal" class="nav-link" data-scroll-target="#peluang-marginal"><span class="header-section-number">4.6.2</span> Peluang marginal</a></li>
+  <li><a href="#peluang-kondisional" id="toc-peluang-kondisional" class="nav-link" data-scroll-target="#peluang-kondisional"><span class="header-section-number">4.6.3</span> Peluang kondisional</a></li>
+  </ul></li>
+  <li><a href="#expected-value-pada-joint-distribution" id="toc-expected-value-pada-joint-distribution" class="nav-link" data-scroll-target="#expected-value-pada-joint-distribution"><span class="header-section-number">4.7</span> Expected Value pada Joint Distribution</a>
+  <ul class="collapse">
+  <li><a href="#menghitung-ex" id="toc-menghitung-ex" class="nav-link" data-scroll-target="#menghitung-ex"><span class="header-section-number">4.7.1</span> Menghitung (E[X])</a></li>
+  <li><a href="#menghitung-exy" id="toc-menghitung-exy" class="nav-link" data-scroll-target="#menghitung-exy"><span class="header-section-number">4.7.2</span> Menghitung (E[XY])</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#fungsi-penting-lain-yang-sering-dipakai" id="toc-fungsi-penting-lain-yang-sering-dipakai" class="nav-link" data-scroll-target="#fungsi-penting-lain-yang-sering-dipakai"><span class="header-section-number">5</span> Fungsi Penting Lain yang Sering Dipakai</a>
+  <ul class="collapse">
+  <li><a href="#frekuensi-dan-histogram" id="toc-frekuensi-dan-histogram" class="nav-link" data-scroll-target="#frekuensi-dan-histogram"><span class="header-section-number">5.1</span> Frekuensi dan Histogram</a>
+  <ul class="collapse">
+  <li><a href="#fungsi-frequency" id="toc-fungsi-frequency" class="nav-link" data-scroll-target="#fungsi-frequency"><span class="header-section-number">5.1.1</span> Fungsi <code>FREQUENCY</code></a></li>
+  </ul></li>
+  <li><a href="#persentil-dan-kuartil" id="toc-persentil-dan-kuartil" class="nav-link" data-scroll-target="#persentil-dan-kuartil"><span class="header-section-number">5.2</span> Persentil dan Kuartil</a>
+  <ul class="collapse">
+  <li><a href="#persentil" id="toc-persentil" class="nav-link" data-scroll-target="#persentil"><span class="header-section-number">5.2.1</span> Persentil</a></li>
+  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median"><span class="header-section-number">5.2.2</span> Median</a></li>
+  <li><a href="#kuartil" id="toc-kuartil" class="nav-link" data-scroll-target="#kuartil"><span class="header-section-number">5.2.3</span> Kuartil</a></li>
+  </ul></li>
+  <li><a href="#nilai-minimum-dan-maksimum" id="toc-nilai-minimum-dan-maksimum" class="nav-link" data-scroll-target="#nilai-minimum-dan-maksimum"><span class="header-section-number">5.3</span> Nilai Minimum dan Maksimum</a></li>
+  <li><a href="#menghitung-peluang-empiris" id="toc-menghitung-peluang-empiris" class="nav-link" data-scroll-target="#menghitung-peluang-empiris"><span class="header-section-number">5.4</span> Menghitung Peluang Empiris</a></li>
+  </ul></li>
+  <li><a href="#contoh-penggunaan-ringkas" id="toc-contoh-penggunaan-ringkas" class="nav-link" data-scroll-target="#contoh-penggunaan-ringkas"><span class="header-section-number">6</span> Contoh Penggunaan Ringkas</a>
+  <ul class="collapse">
+  <li><a href="#contoh-1-lempar-dadu-100-kali" id="toc-contoh-1-lempar-dadu-100-kali" class="nav-link" data-scroll-target="#contoh-1-lempar-dadu-100-kali"><span class="header-section-number">6.1</span> Contoh 1: Lempar Dadu 100 Kali</a>
+  <ul class="collapse">
+  <li><a href="#rata-rata-hasil-lemparan" id="toc-rata-rata-hasil-lemparan" class="nav-link" data-scroll-target="#rata-rata-hasil-lemparan"><span class="header-section-number">6.1.1</span> Rata-rata hasil lemparan</a></li>
+  <li><a href="#variansi-hasil-lemparan" id="toc-variansi-hasil-lemparan" class="nav-link" data-scroll-target="#variansi-hasil-lemparan"><span class="header-section-number">6.1.2</span> Variansi hasil lemparan</a></li>
+  <li><a href="#peluang-empiris-muncul-angka-4" id="toc-peluang-empiris-muncul-angka-4" class="nav-link" data-scroll-target="#peluang-empiris-muncul-angka-4"><span class="header-section-number">6.1.3</span> Peluang empiris muncul angka 4</a></li>
+  </ul></li>
+  <li><a href="#contoh-2-tinggi-badan-berdistribusi-normal" id="toc-contoh-2-tinggi-badan-berdistribusi-normal" class="nav-link" data-scroll-target="#contoh-2-tinggi-badan-berdistribusi-normal"><span class="header-section-number">6.2</span> Contoh 2: Tinggi Badan Berdistribusi Normal</a>
+  <ul class="collapse">
+  <li><a href="#mean-sampel" id="toc-mean-sampel" class="nav-link" data-scroll-target="#mean-sampel"><span class="header-section-number">6.2.1</span> Mean sampel</a></li>
+  <li><a href="#simpangan-baku-sampel-1" id="toc-simpangan-baku-sampel-1" class="nav-link" data-scroll-target="#simpangan-baku-sampel-1"><span class="header-section-number">6.2.2</span> Simpangan baku sampel</a></li>
+  <li><a href="#peluang-teoritis-tinggi" id="toc-peluang-teoritis-tinggi" class="nav-link" data-scroll-target="#peluang-teoritis-tinggi"><span class="header-section-number">6.2.3</span> Peluang teoritis tinggi ()</a></li>
+  </ul></li>
+  <li><a href="#contoh-3-tinggi-dan-berat-sebagai-data-bivariat" id="toc-contoh-3-tinggi-dan-berat-sebagai-data-bivariat" class="nav-link" data-scroll-target="#contoh-3-tinggi-dan-berat-sebagai-data-bivariat"><span class="header-section-number">6.3</span> Contoh 3: Tinggi dan Berat sebagai Data Bivariat</a>
+  <ul class="collapse">
+  <li><a href="#kovariansi-1" id="toc-kovariansi-1" class="nav-link" data-scroll-target="#kovariansi-1"><span class="header-section-number">6.3.1</span> Kovariansi</a></li>
+  <li><a href="#korelasi-1" id="toc-korelasi-1" class="nav-link" data-scroll-target="#korelasi-1"><span class="header-section-number">6.3.2</span> Korelasi</a></li>
+  <li><a href="#slope-regresi-berat-terhadap-tinggi" id="toc-slope-regresi-berat-terhadap-tinggi" class="nav-link" data-scroll-target="#slope-regresi-berat-terhadap-tinggi"><span class="header-section-number">6.3.3</span> Slope regresi berat terhadap tinggi</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#tabel-ringkasan-fungsi-utama" id="toc-tabel-ringkasan-fungsi-utama" class="nav-link" data-scroll-target="#tabel-ringkasan-fungsi-utama"><span class="header-section-number">7</span> Tabel Ringkasan Fungsi Utama</a></li>
+  <li><a href="#penutup" id="toc-penutup" class="nav-link" data-scroll-target="#penutup"><span class="header-section-number">8</span> Penutup</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Format Lain</h2><ul><li><a href="fungsi_spreadsheet_random_variable.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="fungsi_spreadsheet_random_variable.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fungsi Spreadsheet untuk Random Variable Diskrit, Kontinu, dan Bivariat</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Penulis</div>
+    <div class="quarto-title-meta-contents">
+             <p>OpenAI </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="pendahuluan" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Pendahuluan</h1>
+<p>Dokumen ini merangkum fungsi-fungsi spreadsheet yang berguna untuk mempelajari <strong>random variable diskrit</strong>, <strong>random variable kontinu</strong>, dan <strong>random variable bivariat</strong>. Contoh-contoh ditulis dalam format yang umum dipakai di <strong>Microsoft Excel</strong> dan sebagian besar juga dapat digunakan di <strong>Google Sheets</strong>.</p>
+<p>Tujuan dokumen ini adalah membantu pembaca:</p>
+<ol type="1">
+<li>mengenali fungsi-fungsi penting untuk simulasi dan analisis probabilistik,</li>
+<li>memahami cara memakai rumus-rumus spreadsheet secara langsung,</li>
+<li>menghubungkan konsep peluang, ekspektasi, variansi, kovariansi, dan korelasi dengan praktik komputasi sederhana.</li>
+</ol>
+</section>
+<section id="random-variable-diskrit" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Random Variable Diskrit</h1>
+<p>Random variable diskrit adalah peubah acak yang nilainya dapat dihitung satu per satu, misalnya banyaknya pelanggan datang, jumlah keberhasilan, atau hasil lemparan dadu.</p>
+<section id="membuat-nilai-acak-diskrit" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="membuat-nilai-acak-diskrit"><span class="header-section-number">2.1</span> Membuat Nilai Acak Diskrit</h2>
+<section id="fungsi-randbetween" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="fungsi-randbetween"><span class="header-section-number">2.1.1</span> Fungsi <code>RANDBETWEEN</code></h3>
+<p>Fungsi ini menghasilkan bilangan bulat acak antara batas bawah dan batas atas.</p>
+<pre class="excel"><code>=RANDBETWEEN(1,6)</code></pre>
+<p>Contoh ini dapat dipakai untuk mensimulasikan satu kali lemparan dadu.</p>
+</section>
+</section>
+<section id="distribusi-bernoulli" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="distribusi-bernoulli"><span class="header-section-number">2.2</span> Distribusi Bernoulli</h2>
+<p>Distribusi Bernoulli memiliki dua hasil: sukses (<code>1</code>) atau gagal (<code>0</code>).</p>
+<section id="simulasi-bernoulli-dengan-if-dan-rand" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="simulasi-bernoulli-dengan-if-dan-rand"><span class="header-section-number">2.2.1</span> Simulasi Bernoulli dengan <code>IF</code> dan <code>RAND</code></h3>
+<p>Misalkan peluang sukses adalah <code>0.3</code>.</p>
+<pre class="excel"><code>=IF(RAND()&lt;0.3,1,0)</code></pre>
+<p>Rumus ini menghasilkan:</p>
+<ul>
+<li><code>1</code> dengan peluang 0,3</li>
+<li><code>0</code> dengan peluang 0,7</li>
+</ul>
+</section>
+</section>
+<section id="distribusi-binomial" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="distribusi-binomial"><span class="header-section-number">2.3</span> Distribusi Binomial</h2>
+<p>Distribusi binomial memodelkan banyaknya sukses dari <code>n</code> percobaan independen.</p>
+<section id="fungsi-binom.dist" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="fungsi-binom.dist"><span class="header-section-number">2.3.1</span> Fungsi <code>BINOM.DIST</code></h3>
+<p>Bentuk umum:</p>
+<pre class="excel"><code>=BINOM.DIST(x,n,p,kumulatif)</code></pre>
+<p>Keterangan:</p>
+<ul>
+<li><code>x</code>: jumlah sukses</li>
+<li><code>n</code>: jumlah percobaan</li>
+<li><code>p</code>: peluang sukses tiap percobaan</li>
+<li><code>FALSE</code>: peluang tepat</li>
+<li><code>TRUE</code>: peluang kumulatif</li>
+</ul>
+</section>
+<section id="contoh-peluang-tepat" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="contoh-peluang-tepat"><span class="header-section-number">2.3.2</span> Contoh peluang tepat</h3>
+<p>Peluang tepat 3 sukses dari 10 percobaan, dengan peluang sukses 0,4:</p>
+<pre class="excel"><code>=BINOM.DIST(3,10,0.4,FALSE)</code></pre>
+</section>
+<section id="contoh-peluang-kumulatif" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="contoh-peluang-kumulatif"><span class="header-section-number">2.3.3</span> Contoh peluang kumulatif</h3>
+<p>Peluang paling banyak 3 sukses:</p>
+<pre class="excel"><code>=BINOM.DIST(3,10,0.4,TRUE)</code></pre>
+</section>
+</section>
+<section id="distribusi-poisson" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="distribusi-poisson"><span class="header-section-number">2.4</span> Distribusi Poisson</h2>
+<p>Distribusi Poisson sering dipakai untuk memodelkan banyak kejadian dalam suatu interval waktu atau ruang.</p>
+<section id="fungsi-poisson.dist" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="fungsi-poisson.dist"><span class="header-section-number">2.4.1</span> Fungsi <code>POISSON.DIST</code></h3>
+<pre class="excel"><code>=POISSON.DIST(x,lambda,kumulatif)</code></pre>
+</section>
+<section id="contoh-peluang-tepat-1" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="contoh-peluang-tepat-1"><span class="header-section-number">2.4.2</span> Contoh peluang tepat</h3>
+<p>Peluang tepat 4 kejadian saat rata-rata kejadian <code>2.5</code>:</p>
+<pre class="excel"><code>=POISSON.DIST(4,2.5,FALSE)</code></pre>
+</section>
+<section id="contoh-peluang-kumulatif-1" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="contoh-peluang-kumulatif-1"><span class="header-section-number">2.4.3</span> Contoh peluang kumulatif</h3>
+<p>Peluang paling banyak 4 kejadian:</p>
+<pre class="excel"><code>=POISSON.DIST(4,2.5,TRUE)</code></pre>
+</section>
+</section>
+<section id="distribusi-geometrik" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="distribusi-geometrik"><span class="header-section-number">2.5</span> Distribusi Geometrik</h2>
+<p>Distribusi geometrik memodelkan kapan sukses pertama terjadi.</p>
+<section id="fungsi-geom.dist" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="fungsi-geom.dist"><span class="header-section-number">2.5.1</span> Fungsi <code>GEOM.DIST</code></h3>
+<pre class="excel"><code>=GEOM.DIST(x,p,kumulatif)</code></pre>
+<p>Contoh peluang sukses pertama terjadi pada percobaan ke-4 dengan peluang sukses 0,2:</p>
+<pre class="excel"><code>=GEOM.DIST(4,0.2,FALSE)</code></pre>
+</section>
+</section>
+<section id="ekspektasi-random-variable-diskrit" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="ekspektasi-random-variable-diskrit"><span class="header-section-number">2.6</span> Ekspektasi Random Variable Diskrit</h2>
+<p>Jika nilai-nilai acak berada pada rentang <code>A2:A6</code> dan peluangnya pada <code>B2:B6</code>, maka nilai harapan dapat dihitung dengan <code>SUMPRODUCT</code>.</p>
+<section id="fungsi-sumproduct" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="fungsi-sumproduct"><span class="header-section-number">2.6.1</span> Fungsi <code>SUMPRODUCT</code></h3>
+<pre class="excel"><code>=SUMPRODUCT(A2:A6,B2:B6)</code></pre>
+<p>Contoh tabel:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Nilai (x)</th>
+<th style="text-align: right;">Peluang (P(X=x))</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.1</td>
+</tr>
+</tbody>
+</table>
+<p>Rumus ekspektasi:</p>
+<pre class="excel"><code>=SUMPRODUCT(A2:A6,B2:B6)</code></pre>
+</section>
+</section>
+<section id="variansi-random-variable-diskrit" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="variansi-random-variable-diskrit"><span class="header-section-number">2.7</span> Variansi Random Variable Diskrit</h2>
+<p>Gunakan rumus:</p>
+<p><span class="math display">\[
+Var(X)=E[X^2]-(E[X])^2
+\]</span></p>
+<p>Jika nilai (x) di <code>A2:A6</code> dan peluang di <code>B2:B6</code>, salah satu cara adalah langsung memakai:</p>
+<pre class="excel"><code>=SUMPRODUCT((A2:A6^2),B2:B6)-(SUMPRODUCT(A2:A6,B2:B6))^2</code></pre>
+<p>Dalam praktik spreadsheet, sering lebih aman memakai <strong>kolom bantu</strong>.</p>
+<p>Misalkan di <code>C2</code> tulis:</p>
+<pre class="excel"><code>=A2^2</code></pre>
+<p>lalu salin ke bawah, dan hitung variansi dengan:</p>
+<pre class="excel"><code>=SUMPRODUCT(C2:C6,B2:B6)-(SUMPRODUCT(A2:A6,B2:B6))^2</code></pre>
+</section>
+</section>
+<section id="random-variable-kontinu" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Random Variable Kontinu</h1>
+<p>Random variable kontinu mengambil nilai pada suatu interval, misalnya tinggi badan, berat badan, waktu tunggu, dan temperatur.</p>
+<section id="membuat-nilai-acak-uniform" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="membuat-nilai-acak-uniform"><span class="header-section-number">3.1</span> Membuat Nilai Acak Uniform</h2>
+<section id="fungsi-rand" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="fungsi-rand"><span class="header-section-number">3.1.1</span> Fungsi <code>RAND</code></h3>
+<p>Fungsi ini menghasilkan angka acak antara 0 dan 1.</p>
+<pre class="excel"><code>=RAND()</code></pre>
+</section>
+<section id="uniform-pada-interval-tertentu" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="uniform-pada-interval-tertentu"><span class="header-section-number">3.1.2</span> Uniform pada interval tertentu</h3>
+<p>Untuk menghasilkan data acak uniform pada interval ([a,b]):</p>
+<pre class="excel"><code>=a + (b-a)*RAND()</code></pre>
+<p>Contoh interval 10 sampai 20:</p>
+<pre class="excel"><code>=10 + (20-10)*RAND()</code></pre>
+</section>
+</section>
+<section id="distribusi-normal" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="distribusi-normal"><span class="header-section-number">3.2</span> Distribusi Normal</h2>
+<p>Distribusi normal sangat penting dalam statistika karena banyak fenomena alam dan sosial mendekatinya.</p>
+<section id="fungsi-norm.dist" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="fungsi-norm.dist"><span class="header-section-number">3.2.1</span> Fungsi <code>NORM.DIST</code></h3>
+<pre class="excel"><code>=NORM.DIST(x,mean,std_dev,kumulatif)</code></pre>
+</section>
+<section id="contoh-densitas" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="contoh-densitas"><span class="header-section-number">3.2.2</span> Contoh densitas</h3>
+<p>Nilai densitas pada <code>x = 70</code>, mean <code>65</code>, standar deviasi <code>8</code>:</p>
+<pre class="excel"><code>=NORM.DIST(70,65,8,FALSE)</code></pre>
+</section>
+<section id="contoh-peluang-kumulatif-2" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="contoh-peluang-kumulatif-2"><span class="header-section-number">3.2.3</span> Contoh peluang kumulatif</h3>
+<p>Peluang (X ):</p>
+<pre class="excel"><code>=NORM.DIST(70,65,8,TRUE)</code></pre>
+</section>
+</section>
+<section id="membuat-sampel-acak-normal" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="membuat-sampel-acak-normal"><span class="header-section-number">3.3</span> Membuat Sampel Acak Normal</h2>
+<section id="fungsi-norm.inv" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="fungsi-norm.inv"><span class="header-section-number">3.3.1</span> Fungsi <code>NORM.INV</code></h3>
+<p>Salah satu cara menghasilkan data normal acak adalah dengan mengubah uniform acak menjadi normal menggunakan inverse CDF.</p>
+<pre class="excel"><code>=NORM.INV(RAND(),65,8)</code></pre>
+<p>Rumus ini menghasilkan satu sampel acak dari distribusi normal dengan mean <code>65</code> dan simpangan baku <code>8</code>.</p>
+</section>
+</section>
+<section id="distribusi-eksponensial" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="distribusi-eksponensial"><span class="header-section-number">3.4</span> Distribusi Eksponensial</h2>
+<p>Distribusi eksponensial sering digunakan untuk memodelkan waktu antar-kejadian.</p>
+<section id="fungsi-expon.dist" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="fungsi-expon.dist"><span class="header-section-number">3.4.1</span> Fungsi <code>EXPON.DIST</code></h3>
+<pre class="excel"><code>=EXPON.DIST(x,lambda,kumulatif)</code></pre>
+</section>
+<section id="contoh-densitas-1" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="contoh-densitas-1"><span class="header-section-number">3.4.2</span> Contoh densitas</h3>
+<p>Nilai densitas pada <code>x = 2</code> dengan laju <code>0.5</code>:</p>
+<pre class="excel"><code>=EXPON.DIST(2,0.5,FALSE)</code></pre>
+</section>
+<section id="contoh-peluang-kumulatif-3" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="contoh-peluang-kumulatif-3"><span class="header-section-number">3.4.3</span> Contoh peluang kumulatif</h3>
+<p>Peluang (X ):</p>
+<pre class="excel"><code>=EXPON.DIST(2,0.5,TRUE)</code></pre>
+</section>
+</section>
+<section id="membuat-sampel-acak-eksponensial" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="membuat-sampel-acak-eksponensial"><span class="header-section-number">3.5</span> Membuat Sampel Acak Eksponensial</h2>
+<p>Dengan transformasi invers, distribusi eksponensial dapat disimulasikan melalui:</p>
+<pre class="excel"><code>=-LN(1-RAND())/0.5</code></pre>
+<p>Rumus ini menghasilkan sampel acak eksponensial dengan parameter laju <code>0.5</code>.</p>
+</section>
+<section id="rata-rata-dan-variabilitas-data-kontinu" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="rata-rata-dan-variabilitas-data-kontinu"><span class="header-section-number">3.6</span> Rata-rata dan Variabilitas Data Kontinu</h2>
+<p>Misalkan data berada pada rentang <code>A2:A101</code>.</p>
+<section id="mean" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="mean"><span class="header-section-number">3.6.1</span> Mean</h3>
+<pre class="excel"><code>=AVERAGE(A2:A101)</code></pre>
+</section>
+<section id="variansi-sampel" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="variansi-sampel"><span class="header-section-number">3.6.2</span> Variansi sampel</h3>
+<pre class="excel"><code>=VAR.S(A2:A101)</code></pre>
+</section>
+<section id="variansi-populasi" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="variansi-populasi"><span class="header-section-number">3.6.3</span> Variansi populasi</h3>
+<pre class="excel"><code>=VAR.P(A2:A101)</code></pre>
+</section>
+<section id="simpangan-baku-sampel" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="simpangan-baku-sampel"><span class="header-section-number">3.6.4</span> Simpangan baku sampel</h3>
+<pre class="excel"><code>=STDEV.S(A2:A101)</code></pre>
+</section>
+<section id="simpangan-baku-populasi" class="level3" data-number="3.6.5">
+<h3 data-number="3.6.5" class="anchored" data-anchor-id="simpangan-baku-populasi"><span class="header-section-number">3.6.5</span> Simpangan baku populasi</h3>
+<pre class="excel"><code>=STDEV.P(A2:A101)</code></pre>
+</section>
+</section>
+</section>
+<section id="random-variable-bivariat" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Random Variable Bivariat</h1>
+<p>Random variable bivariat melibatkan dua peubah acak yang diamati bersama-sama, misalnya tinggi dan berat, nilai UTS dan UAS, atau permintaan dan biaya.</p>
+<p>Misalkan:</p>
+<ul>
+<li>data (X) berada di kolom <code>A</code></li>
+<li>data (Y) berada di kolom <code>B</code></li>
+</ul>
+<section id="mean-masing-masing-variabel" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="mean-masing-masing-variabel"><span class="header-section-number">4.1</span> Mean Masing-masing Variabel</h2>
+<p>Untuk (X):</p>
+<pre class="excel"><code>=AVERAGE(A2:A101)</code></pre>
+<p>Untuk (Y):</p>
+<pre class="excel"><code>=AVERAGE(B2:B101)</code></pre>
+</section>
+<section id="variansi-masing-masing-variabel" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="variansi-masing-masing-variabel"><span class="header-section-number">4.2</span> Variansi Masing-masing Variabel</h2>
+<p>Untuk (X):</p>
+<pre class="excel"><code>=VAR.S(A2:A101)</code></pre>
+<p>Untuk (Y):</p>
+<pre class="excel"><code>=VAR.S(B2:B101)</code></pre>
+</section>
+<section id="kovariansi" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="kovariansi"><span class="header-section-number">4.3</span> Kovariansi</h2>
+<p>Kovariansi mengukur kecenderungan dua variabel berubah bersama.</p>
+<section id="fungsi-covariance.s-dan-covariance.p" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="fungsi-covariance.s-dan-covariance.p"><span class="header-section-number">4.3.1</span> Fungsi <code>COVARIANCE.S</code> dan <code>COVARIANCE.P</code></h3>
+<p>Untuk sampel:</p>
+<pre class="excel"><code>=COVARIANCE.S(A2:A101,B2:B101)</code></pre>
+<p>Untuk populasi:</p>
+<pre class="excel"><code>=COVARIANCE.P(A2:A101,B2:B101)</code></pre>
+<p>Interpretasi umum:</p>
+<ul>
+<li>bernilai positif: jika <code>X</code> naik, <code>Y</code> cenderung naik,</li>
+<li>bernilai negatif: jika <code>X</code> naik, <code>Y</code> cenderung turun,</li>
+<li>mendekati nol: hubungan linear lemah.</li>
+</ul>
+</section>
+</section>
+<section id="korelasi" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="korelasi"><span class="header-section-number">4.4</span> Korelasi</h2>
+<p>Korelasi menormalkan kovariansi sehingga nilainya berada pada interval ([-1,1]).</p>
+<section id="fungsi-correl" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="fungsi-correl"><span class="header-section-number">4.4.1</span> Fungsi <code>CORREL</code></h3>
+<pre class="excel"><code>=CORREL(A2:A101,B2:B101)</code></pre>
+<p>Interpretasi umum:</p>
+<ul>
+<li>mendekati <code>1</code>: hubungan linear positif kuat,</li>
+<li>mendekati <code>-1</code>: hubungan linear negatif kuat,</li>
+<li>mendekati <code>0</code>: hubungan linear lemah.</li>
+</ul>
+</section>
+</section>
+<section id="regresi-linear-sederhana" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="regresi-linear-sederhana"><span class="header-section-number">4.5</span> Regresi Linear Sederhana</h2>
+<p>Jika ingin memodelkan hubungan linear (Y) terhadap (X), spreadsheet menyediakan fungsi berikut.</p>
+<section id="kemiringan-garis-regresi-slope" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="kemiringan-garis-regresi-slope"><span class="header-section-number">4.5.1</span> Kemiringan garis regresi: <code>SLOPE</code></h3>
+<pre class="excel"><code>=SLOPE(B2:B101,A2:A101)</code></pre>
+</section>
+<section id="intersep-garis-regresi-intercept" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="intersep-garis-regresi-intercept"><span class="header-section-number">4.5.2</span> Intersep garis regresi: <code>INTERCEPT</code></h3>
+<pre class="excel"><code>=INTERCEPT(B2:B101,A2:A101)</code></pre>
+</section>
+<section id="prediksi-nilai-y" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="prediksi-nilai-y"><span class="header-section-number">4.5.3</span> Prediksi nilai <code>Y</code></h3>
+<p>Jika nilai <code>X</code> tertentu berada di sel <code>A2</code>, maka prediksi (Y) adalah:</p>
+<pre class="excel"><code>=INTERCEPT(B2:B101,A2:A101) + SLOPE(B2:B101,A2:A101)*A2</code></pre>
+</section>
+</section>
+<section id="joint-distribution-diskrit-bivariat" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="joint-distribution-diskrit-bivariat"><span class="header-section-number">4.6</span> Joint Distribution Diskrit Bivariat</h2>
+<p>Jika dua variabel diskrit diamati bersama, peluang gabungannya dapat dihitung dengan <code>COUNTIFS</code>.</p>
+<p>Misalkan:</p>
+<ul>
+<li>data <code>X</code> pada <code>A2:A101</code></li>
+<li>data <code>Y</code> pada <code>B2:B101</code></li>
+</ul>
+<section id="peluang-bersama" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="peluang-bersama"><span class="header-section-number">4.6.1</span> Peluang bersama</h3>
+<p>Contoh menghitung (P(X=1, Y=2)):</p>
+<pre class="excel"><code>=COUNTIFS(A2:A101,1,B2:B101,2)/COUNT(A2:A101)</code></pre>
+</section>
+<section id="peluang-marginal" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="peluang-marginal"><span class="header-section-number">4.6.2</span> Peluang marginal</h3>
+<p>Contoh menghitung (P(X=1)):</p>
+<pre class="excel"><code>=COUNTIF(A2:A101,1)/COUNT(A2:A101)</code></pre>
+</section>
+<section id="peluang-kondisional" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="peluang-kondisional"><span class="header-section-number">4.6.3</span> Peluang kondisional</h3>
+<p>Contoh menghitung (P(Y=2 X=1)):</p>
+<pre class="excel"><code>=COUNTIFS(A2:A101,1,B2:B101,2)/COUNTIF(A2:A101,1)</code></pre>
+</section>
+</section>
+<section id="expected-value-pada-joint-distribution" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="expected-value-pada-joint-distribution"><span class="header-section-number">4.7</span> Expected Value pada Joint Distribution</h2>
+<p>Misalkan tabel peluang gabungan disusun sebagai berikut:</p>
+<ul>
+<li>nilai <code>X</code> di <code>B1:E1</code></li>
+<li>nilai <code>Y</code> di <code>A2:A5</code></li>
+<li>probabilitas gabungan di <code>B2:E5</code></li>
+</ul>
+<p>Dalam praktik, perhitungan ekspektasi gabungan sering memerlukan tabel bantu.</p>
+<section id="menghitung-ex" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="menghitung-ex"><span class="header-section-number">4.7.1</span> Menghitung (E[X])</h3>
+<p>Secara konseptual, kita jumlahkan semua nilai <code>X</code> dikalikan probabilitas marginalnya. Jika struktur tabel sudah sesuai, <code>SUMPRODUCT</code> dapat digunakan.</p>
+</section>
+<section id="menghitung-exy" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="menghitung-exy"><span class="header-section-number">4.7.2</span> Menghitung (E[XY])</h3>
+<p>Buat matriks hasil kali <code>x*y</code>, lalu kalikan dengan matriks probabilitas bersama:</p>
+<pre class="excel"><code>=SUMPRODUCT(matriks_XY, matriks_probabilitas)</code></pre>
+</section>
+</section>
+</section>
+<section id="fungsi-penting-lain-yang-sering-dipakai" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Fungsi Penting Lain yang Sering Dipakai</h1>
+<section id="frekuensi-dan-histogram" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="frekuensi-dan-histogram"><span class="header-section-number">5.1</span> Frekuensi dan Histogram</h2>
+<section id="fungsi-frequency" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="fungsi-frequency"><span class="header-section-number">5.1.1</span> Fungsi <code>FREQUENCY</code></h3>
+<pre class="excel"><code>=FREQUENCY(A2:A101,D2:D6)</code></pre>
+<p>Fungsi ini berguna untuk membuat distribusi frekuensi empiris atau histogram.</p>
+</section>
+</section>
+<section id="persentil-dan-kuartil" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="persentil-dan-kuartil"><span class="header-section-number">5.2</span> Persentil dan Kuartil</h2>
+<section id="persentil" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="persentil"><span class="header-section-number">5.2.1</span> Persentil</h3>
+<pre class="excel"><code>=PERCENTILE.INC(A2:A101,0.25)</code></pre>
+</section>
+<section id="median" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="median"><span class="header-section-number">5.2.2</span> Median</h3>
+<pre class="excel"><code>=MEDIAN(A2:A101)</code></pre>
+</section>
+<section id="kuartil" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="kuartil"><span class="header-section-number">5.2.3</span> Kuartil</h3>
+<pre class="excel"><code>=QUARTILE.INC(A2:A101,3)</code></pre>
+</section>
+</section>
+<section id="nilai-minimum-dan-maksimum" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="nilai-minimum-dan-maksimum"><span class="header-section-number">5.3</span> Nilai Minimum dan Maksimum</h2>
+<pre class="excel"><code>=MIN(A2:A101)</code></pre>
+<pre class="excel"><code>=MAX(A2:A101)</code></pre>
+</section>
+<section id="menghitung-peluang-empiris" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="menghitung-peluang-empiris"><span class="header-section-number">5.4</span> Menghitung Peluang Empiris</h2>
+<p>Jika nilai tertentu ditulis di <code>D2</code>, maka jumlah kemunculannya dapat dihitung dengan:</p>
+<pre class="excel"><code>=COUNTIF(A2:A101,D2)</code></pre>
+<p>Peluang empirisnya:</p>
+<pre class="excel"><code>=COUNTIF(A2:A101,D2)/COUNT(A2:A101)</code></pre>
+</section>
+</section>
+<section id="contoh-penggunaan-ringkas" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Contoh Penggunaan Ringkas</h1>
+<section id="contoh-1-lempar-dadu-100-kali" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="contoh-1-lempar-dadu-100-kali"><span class="header-section-number">6.1</span> Contoh 1: Lempar Dadu 100 Kali</h2>
+<p>Pada sel <code>A2</code>, tulis:</p>
+<pre class="excel"><code>=RANDBETWEEN(1,6)</code></pre>
+<p>Salin hingga <code>A101</code>.</p>
+<section id="rata-rata-hasil-lemparan" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="rata-rata-hasil-lemparan"><span class="header-section-number">6.1.1</span> Rata-rata hasil lemparan</h3>
+<pre class="excel"><code>=AVERAGE(A2:A101)</code></pre>
+</section>
+<section id="variansi-hasil-lemparan" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="variansi-hasil-lemparan"><span class="header-section-number">6.1.2</span> Variansi hasil lemparan</h3>
+<pre class="excel"><code>=VAR.S(A2:A101)</code></pre>
+</section>
+<section id="peluang-empiris-muncul-angka-4" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="peluang-empiris-muncul-angka-4"><span class="header-section-number">6.1.3</span> Peluang empiris muncul angka 4</h3>
+<pre class="excel"><code>=COUNTIF(A2:A101,4)/COUNT(A2:A101)</code></pre>
+</section>
+</section>
+<section id="contoh-2-tinggi-badan-berdistribusi-normal" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="contoh-2-tinggi-badan-berdistribusi-normal"><span class="header-section-number">6.2</span> Contoh 2: Tinggi Badan Berdistribusi Normal</h2>
+<p>Pada sel <code>A2</code>, tulis:</p>
+<pre class="excel"><code>=NORM.INV(RAND(),170,8)</code></pre>
+<p>Salin ke bawah.</p>
+<section id="mean-sampel" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="mean-sampel"><span class="header-section-number">6.2.1</span> Mean sampel</h3>
+<pre class="excel"><code>=AVERAGE(A2:A101)</code></pre>
+</section>
+<section id="simpangan-baku-sampel-1" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="simpangan-baku-sampel-1"><span class="header-section-number">6.2.2</span> Simpangan baku sampel</h3>
+<pre class="excel"><code>=STDEV.S(A2:A101)</code></pre>
+</section>
+<section id="peluang-teoritis-tinggi" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="peluang-teoritis-tinggi"><span class="header-section-number">6.2.3</span> Peluang teoritis tinggi ()</h3>
+<pre class="excel"><code>=NORM.DIST(175,170,8,TRUE)</code></pre>
+</section>
+</section>
+<section id="contoh-3-tinggi-dan-berat-sebagai-data-bivariat" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="contoh-3-tinggi-dan-berat-sebagai-data-bivariat"><span class="header-section-number">6.3</span> Contoh 3: Tinggi dan Berat sebagai Data Bivariat</h2>
+<p>Misalkan:</p>
+<ul>
+<li>tinggi di <code>A2:A101</code></li>
+<li>berat di <code>B2:B101</code></li>
+</ul>
+<section id="kovariansi-1" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="kovariansi-1"><span class="header-section-number">6.3.1</span> Kovariansi</h3>
+<pre class="excel"><code>=COVARIANCE.S(A2:A101,B2:B101)</code></pre>
+</section>
+<section id="korelasi-1" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="korelasi-1"><span class="header-section-number">6.3.2</span> Korelasi</h3>
+<pre class="excel"><code>=CORREL(A2:A101,B2:B101)</code></pre>
+</section>
+<section id="slope-regresi-berat-terhadap-tinggi" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="slope-regresi-berat-terhadap-tinggi"><span class="header-section-number">6.3.3</span> Slope regresi berat terhadap tinggi</h3>
+<pre class="excel"><code>=SLOPE(B2:B101,A2:A101)</code></pre>
+</section>
+</section>
+</section>
+<section id="tabel-ringkasan-fungsi-utama" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Tabel Ringkasan Fungsi Utama</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Topik</th>
+<th>Fungsi Spreadsheet</th>
+<th>Kegunaan Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Acak diskrit</td>
+<td><code>RANDBETWEEN</code>, <code>RAND</code>, <code>IF</code></td>
+<td>Simulasi nilai acak sederhana</td>
+</tr>
+<tr class="even">
+<td>Bernoulli/Binomial</td>
+<td><code>BINOM.DIST</code></td>
+<td>Peluang banyak sukses</td>
+</tr>
+<tr class="odd">
+<td>Poisson</td>
+<td><code>POISSON.DIST</code></td>
+<td>Peluang jumlah kejadian</td>
+</tr>
+<tr class="even">
+<td>Geometrik</td>
+<td><code>GEOM.DIST</code></td>
+<td>Peluang sukses pertama</td>
+</tr>
+<tr class="odd">
+<td>Normal</td>
+<td><code>NORM.DIST</code>, <code>NORM.INV</code></td>
+<td>Distribusi normal dan simulasi</td>
+</tr>
+<tr class="even">
+<td>Eksponensial</td>
+<td><code>EXPON.DIST</code></td>
+<td>Distribusi waktu tunggu</td>
+</tr>
+<tr class="odd">
+<td>Mean</td>
+<td><code>AVERAGE</code></td>
+<td>Nilai rata-rata</td>
+</tr>
+<tr class="even">
+<td>Variansi</td>
+<td><code>VAR.S</code>, <code>VAR.P</code></td>
+<td>Ukuran penyebaran</td>
+</tr>
+<tr class="odd">
+<td>Simpangan baku</td>
+<td><code>STDEV.S</code>, <code>STDEV.P</code></td>
+<td>Akar dari variansi</td>
+</tr>
+<tr class="even">
+<td>Kovariansi</td>
+<td><code>COVARIANCE.S</code>, <code>COVARIANCE.P</code></td>
+<td>Hubungan perubahan bersama</td>
+</tr>
+<tr class="odd">
+<td>Korelasi</td>
+<td><code>CORREL</code></td>
+<td>Kekuatan hubungan linear</td>
+</tr>
+<tr class="even">
+<td>Regresi</td>
+<td><code>SLOPE</code>, <code>INTERCEPT</code></td>
+<td>Model linear sederhana</td>
+</tr>
+<tr class="odd">
+<td>Frekuensi</td>
+<td><code>COUNTIF</code>, <code>COUNTIFS</code>, <code>FREQUENCY</code></td>
+<td>Distribusi empiris</td>
+</tr>
+<tr class="even">
+<td>Ekspektasi diskrit</td>
+<td><code>SUMPRODUCT</code></td>
+<td>Nilai harapan</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="penutup" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Penutup</h1>
+<p>Spreadsheet menyediakan banyak fungsi yang cukup kuat untuk mendukung pembelajaran probabilitas dan statistika tanpa harus langsung memakai bahasa pemrograman. Dengan fungsi-fungsi seperti <code>RANDBETWEEN</code>, <code>NORM.INV</code>, <code>SUMPRODUCT</code>, <code>COVARIANCE.S</code>, dan <code>CORREL</code>, pembaca dapat melakukan simulasi, menghitung ukuran-ukuran statistik, serta mempelajari hubungan antar-variabel secara langsung.</p>
+<p>Dokumen ini dapat dijadikan sebagai:</p>
+<ul>
+<li>catatan ringkas saat belajar,</li>
+<li>bahan ajar di kelas,</li>
+<li>panduan praktikum spreadsheet,</li>
+<li>dasar untuk membuat tugas eksplorasi random variable.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Disalin!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Disalin!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,33 @@
+
+Soal 6
+
+*Tender Pengadaan Server*
+
+
+Diketahui PT. K dan PT. L sedang bersaing untuk memenangkan suatu tender pengadaan server. 
+
+
+Rumus nilai akhir adalah 70% nilai teknis + 30% nilai harga. 
+
+
+Rumus nilai harga adalah (40 M – Harga yang diajukan)/40 M \* 100. 
+
+
+Diketahui nilai teknis PT. K adalah 7![](data:image/png). Diketahui harga yang diajukan PT. K terdistribusi uniform antara 15-35 M. Diketahui harga yang diajukan PT. L terdistribusi uniform antara 20-40 M. Asumsikan harga yang diajukan oleh PT. K dan PT. L bersifat independen. Dengan menggunakan konsep fungsi random variabel bivariat kerjakan pertanyaan berikut:
+
+
+a. Nilai ekspektasi harga yang diajukan oleh PT. K adalah … milyar 
+
+E(K) = (15 + 35) / 2 = 25
+
+b. Nilai median harga yang diajukan oleh PT. L adalah … milyar 
+
+median(L) = (20 + 40) / 2 = 30
+
+c. Apabila X mewakili harga yang diajukan oleh PT. K dalam satuan milyar (apabila nilai X = 1, artinya harga yang diajukan 1 milyar) dan Y mewakili harga yang diajukan oleh PT. L dalam satuan milyar. Berapa nilai f(x,y) atau P(X = x, Y = y)? 
+
+f(x, y) = g(x) \* h(y) = (1/20) \* (1/20) = 0.0025
+
+d. Probabilitas PT. K memenangkan tender adalah… 
+
+0.3068

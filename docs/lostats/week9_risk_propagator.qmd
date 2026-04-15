@@ -1,0 +1,382 @@
+---
+title: "Week 9 Mission: The Risk Propagator"
+subtitle: "Analisis Risiko Finansial Cloud Computing dengan Variabel Acak Berkorelasi"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: false
+    theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+execute:
+  echo: true
+  warning: false
+  message: false
+jupyter: python3
+---
+
+# Deskripsi Misi
+
+Mahasiswa menganalisis **risiko finansial cloud computing**. Biaya total bulanan bergantung pada dua variabel acak yang tidak pasti dan saling berkorelasi:
+
+- $S$: **Storage Used (GB)$
+- $C$: **Compute Hours (CPU)$
+
+Keduanya tidak independen. Dalam misi ini, kita memodelkan keduanya sebagai variabel acak bivariat dengan korelasi:
+
+\[
+\rho = 0.7
+\]
+
+Biaya bulanan didefinisikan sebagai:
+
+\[
+\text{Cost} = 0.1S + 0.5C + 0.01(S \times C)
+\]
+
+Term interaksi $S \times C$ melambangkan biaya tambahan yang muncul ketika kebutuhan storage dan compute meningkat secara bersamaan.
+
+# Tujuan Pembelajaran
+
+Setelah menyelesaikan notebook ini, mahasiswa diharapkan mampu:
+
+1. membangkitkan data bivariat dengan korelasi tertentu,
+2. memvisualisasikan hubungan antarvariabel acak,
+3. melakukan transformasi variabel acak ke fungsi biaya,
+4. menghitung statistik empiris dari hasil simulasi,
+5. memahami pengaruh korelasi terhadap ekspektasi dan risiko,
+6. menentukan budget berbasis probabilitas overbudget.
+
+# Setup
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+np.random.seed(42)
+sns.set_theme(style="whitegrid")
+```
+
+# Soal 1 — Data Generation
+
+## Instruksi
+
+Buat **10.000 sampel data bivariat** $(S, C)$ dengan korelasi $\rho = 0.7$.
+
+Gunakan parameter berikut:
+
+- $S \sim$ Storage Used, dengan mean 500 GB dan standar deviasi 100 GB
+- $C \sim$ Compute Hours, dengan mean 200 CPU-hours dan standar deviasi 50 CPU-hours
+
+Kemudian tampilkan **joint plot** untuk menunjukkan adanya korelasi antara $S$ dan $C$.
+
+## Solusi
+
+```{python}
+n = 10_000
+rho = 0.7
+
+mu_S, sigma_S = 500, 100
+mu_C, sigma_C = 200, 50
+
+mean = np.array([mu_S, mu_C])
+cov = np.array([
+    [sigma_S**2, rho * sigma_S * sigma_C],
+    [rho * sigma_S * sigma_C, sigma_C**2]
+])
+
+samples = np.random.multivariate_normal(mean, cov, size=n)
+
+S = samples[:, 0]
+C = samples[:, 1]
+
+# Menjaga agar nilai tidak negatif
+S = np.clip(S, 0, None)
+C = np.clip(C, 0, None)
+
+corr_emp = np.corrcoef(S, C)[0, 1]
+print(f"Korelasi empiris rho(S, C) = {corr_emp:.4f}")
+```
+
+## Visualisasi Joint Plot
+
+```{python}
+g = sns.jointplot(x=S, y=C, kind="scatter", alpha=0.25, height=7)
+g.fig.suptitle("Joint Plot: Storage Used vs Compute Hours", y=1.02)
+g.set_axis_labels("Storage Used, S (GB)", "Compute Hours, C (CPU-hours)")
+plt.show()
+```
+
+## Interpretasi
+
+Dari joint plot, kita mengamati pola sebaran yang cenderung naik ke kanan atas. Ini menunjukkan bahwa saat **storage used** meningkat, **compute hours** juga cenderung meningkat. Hal ini konsisten dengan korelasi positif $\rho = 0.7$.
+
+# Soal 2 — Transformation
+
+## Instruksi
+
+Hitung array biaya bulanan menggunakan fungsi:
+
+\[
+\text{Cost} = 0.1S + 0.5C + 0.01(S \times C)
+\]
+
+Lalu tampilkan histogram dari distribusi biaya.
+
+## Solusi
+
+```{python}
+Cost = 0.1 * S + 0.5 * C + 0.01 * (S * C)
+
+print(f"Jumlah sampel Cost = {len(Cost)}")
+print(f"Contoh 5 nilai Cost pertama:\n{Cost[:5]}")
+```
+
+## Histogram Cost
+
+```{python}
+plt.figure(figsize=(9, 5))
+plt.hist(Cost, bins=50, edgecolor="black", alpha=0.8)
+plt.title("Histogram of Monthly Cloud Cost")
+plt.xlabel("Cost")
+plt.ylabel("Frequency")
+plt.show()
+```
+
+## Interpretasi
+
+Distribusi cost tidak hanya dipengaruhi oleh komponen linear $0.1S$ dan $0.5C$, tetapi juga oleh komponen interaksi $0.01SC$. Karena ada term perkalian, nilai biaya dapat meningkat cukup tajam ketika $S$ dan $C$ sama-sama besar.
+
+# Soal 3 — Analytical Check
+
+## Instruksi
+
+1. Hitung **mean** dan **variansi** dari `Cost` secara empiris.
+2. Periksa apakah berlaku:
+   - $E[S + C] = E[S] + E[C]$
+   - $E[S \times C] = E[S]E[C]$
+
+Berikan penjelasan singkat.
+
+## Solusi Statistik Empiris
+
+```{python}
+mean_cost = np.mean(Cost)
+var_cost = np.var(Cost, ddof=1)
+
+print(f"Mean empiris Cost     = {mean_cost:.4f}")
+print(f"Variansi empiris Cost = {var_cost:.4f}")
+```
+
+## Pemeriksaan Sifat Ekspektasi
+
+```{python}
+E_S = np.mean(S)
+E_C = np.mean(C)
+E_S_plus_C = np.mean(S + C)
+E_S_times_C = np.mean(S * C)
+E_S_mul_E_C = E_S * E_C
+
+print("--- Nilai Ekspektasi Empiris ---")
+print(f"E[S]            = {E_S:.4f}")
+print(f"E[C]            = {E_C:.4f}")
+print(f"E[S + C]        = {E_S_plus_C:.4f}")
+print(f"E[S] + E[C]     = {(E_S + E_C):.4f}")
+print()
+print(f"E[S * C]        = {E_S_times_C:.4f}")
+print(f"E[S] * E[C]     = {E_S_mul_E_C:.4f}")
+print(f"Selisih         = {E_S_times_C - E_S_mul_E_C:.4f}")
+```
+
+## Penjelasan Konseptual
+
+Sifat linear ekspektasi **selalu** berlaku:
+
+\[
+E[S + C] = E[S] + E[C]
+\]
+
+Tetapi untuk perkalian, secara umum:
+
+\[
+E[S \times C] = E[S]E[C]
+\]
+
+**hanya berlaku jika $S$ dan $C$ independen**.
+
+Karena pada kasus ini $S$ dan $C$ berkorelasi positif, maka umumnya:
+
+\[
+E[S \times C] > E[S]E[C]
+\]
+
+Secara teori:
+
+\[
+E[SC] = E[S]E[C] + \operatorname{Cov}(S,C)
+\]
+
+Karena $\operatorname{Cov}(S,C) > 0$, maka $E[SC]$ menjadi lebih besar daripada $E[S]E[C]$.
+
+# Soal 4 — Decision Making
+
+## Instruksi
+
+Tentukan **budget bulanan** agar peluang overbudget tidak lebih dari 5%, yaitu:
+
+\[
+P(\text{Cost} > \text{Budget}) \le 0.05
+\]
+
+## Solusi
+
+Strategi yang digunakan adalah memilih budget sebagai **persentil ke-95** dari distribusi biaya.
+
+```{python}
+budget_95 = np.percentile(Cost, 95)
+prob_overbudget = np.mean(Cost > budget_95)
+
+print(f"Budget bulanan yang disarankan = {budget_95:.4f}")
+print(f"P(Cost > Budget)               = {prob_overbudget:.4f}")
+```
+
+## Interpretasi
+
+Jika budget ditetapkan pada persentil ke-95, maka hanya sekitar 5% kasus simulasi yang melampaui budget tersebut. Dengan demikian, organisasi dapat mengendalikan risiko overbudget ke tingkat yang dapat diterima.
+
+# Soal 5 — Apa yang Terjadi Jika S dan C Independen?
+
+## Instruksi
+
+Ulangi simulasi dengan membuat $S$ dan $C$ **independen**, yaitu:
+
+\[
+\rho = 0
+\]
+
+Bandingkan risiko overbudget dengan kasus awal saat $\rho = 0.7$.
+
+## Simulasi Kasus Independen
+
+```{python}
+rho_indep = 0.0
+
+cov_indep = np.array([
+    [sigma_S**2, rho_indep * sigma_S * sigma_C],
+    [rho_indep * sigma_S * sigma_C, sigma_C**2]
+])
+
+samples_indep = np.random.multivariate_normal(mean, cov_indep, size=n)
+
+S0 = np.clip(samples_indep[:, 0], 0, None)
+C0 = np.clip(samples_indep[:, 1], 0, None)
+
+Cost0 = 0.1 * S0 + 0.5 * C0 + 0.01 * (S0 * C0)
+
+corr_emp_0 = np.corrcoef(S0, C0)[0, 1]
+budget_95_0 = np.percentile(Cost0, 95)
+
+print(f"Korelasi empiris baru          = {corr_emp_0:.4f}")
+print(f"Budget 95% saat rho = 0        = {budget_95_0:.4f}")
+```
+
+## Perbandingan Distribusi Cost
+
+```{python}
+plt.figure(figsize=(10, 5))
+plt.hist(Cost, bins=50, alpha=0.5, density=True, label="Correlated (rho = 0.7)")
+plt.hist(Cost0, bins=50, alpha=0.5, density=True, label="Independent (rho = 0)")
+plt.axvline(budget_95, linestyle="--", linewidth=2, label=f"Budget rho=0.7 = {budget_95:.2f}")
+plt.axvline(budget_95_0, linestyle="--", linewidth=2, label=f"Budget rho=0 = {budget_95_0:.2f}")
+plt.title("Perbandingan Distribusi Cost")
+plt.xlabel("Cost")
+plt.ylabel("Density")
+plt.legend()
+plt.show()
+```
+
+## Perbandingan Statistik Ringkas
+
+```{python}
+mean_cost_0 = np.mean(Cost0)
+var_cost_0 = np.var(Cost0, ddof=1)
+
+summary = {
+    "Kasus": ["Berkorelasi (rho=0.7)", "Independen (rho=0)"],
+    "Mean Cost": [np.mean(Cost), mean_cost_0],
+    "Variance Cost": [np.var(Cost, ddof=1), var_cost_0],
+    "Budget 95%": [budget_95, budget_95_0]
+}
+
+for i in range(2):
+    print(f"{summary['Kasus'][i]}")
+    print(f"  Mean Cost     : {summary['Mean Cost'][i]:.4f}")
+    print(f"  Variance Cost : {summary['Variance Cost'][i]:.4f}")
+    print(f"  Budget 95%    : {summary['Budget 95%'][i]:.4f}")
+    print()
+```
+
+## Interpretasi
+
+Ketika $S$ dan $C$ dibuat independen, kejadian “storage tinggi” dan “compute tinggi” secara bersamaan menjadi lebih jarang dibanding kasus berkorelasi positif. Akibatnya:
+
+- term interaksi $S \times C$ menjadi kurang ekstrem,
+- distribusi biaya menjadi lebih terkendali,
+- ekor kanan distribusi cost cenderung lebih ringan,
+- budget untuk menjaga overbudget di bawah 5% biasanya menjadi lebih rendah.
+
+Dengan kata lain, **mengurangi korelasi antar driver biaya dapat menurunkan risiko finansial**.
+
+# Ringkasan Jawaban
+
+## Temuan utama
+
+1. Data bivariat dengan $\rho = 0.7$ berhasil dibangkitkan dan divisualisasikan melalui joint plot.
+2. Fungsi biaya yang mengandung term interaksi menghasilkan distribusi cost yang lebih lebar dan sensitif terhadap nilai ekstrem.
+3. Sifat ekspektasi linear tetap berlaku:
+
+\[
+E[S + C] = E[S] + E[C]
+\]
+
+4. Namun, untuk perkalian:
+
+\[
+E[S \times C] \neq E[S]E[C]
+\]
+
+karena $S$ dan $C$ tidak independen.
+
+5. Budget bulanan yang menjaga peluang overbudget tidak lebih dari 5% dapat dipilih sebagai **persentil ke-95** dari `Cost`.
+6. Jika korelasi dihilangkan ($\rho = 0$), risiko overbudget turun dan kebutuhan budget pengaman biasanya menjadi lebih kecil.
+
+# Refleksi
+
+Dalam praktik cloud computing, komponen biaya sering kali tidak berdiri sendiri. Ketika dua driver biaya berkorelasi positif, risiko total dapat meningkat lebih tajam daripada yang diperkirakan dari masing-masing komponen secara terpisah. Karena itu, analisis risiko berbasis simulasi menjadi alat yang penting untuk pengambilan keputusan budget yang lebih realistis.
+
+# Tantangan Lanjutan
+
+Cobalah modifikasi notebook ini dengan beberapa eksperimen berikut:
+
+1. Ubah nilai korelasi menjadi $\rho = -0.3$, $\rho = 0$, dan $\rho = 0.9$.
+2. Ubah fungsi biaya agar lebih nonlinier, misalnya menambahkan $C^2$ atau penalti jika $S > 700$.
+3. Bandingkan budget berdasarkan persentil ke-95 dan ke-99.
+4. Cari peluang bahwa cost melebihi suatu budget tetap, misalnya 1500 atau 2000.
+
+# Rubrik Penilaian
+
+| Komponen | Deskripsi | Poin |
+|---|---|---:|
+| Data Generation | Membangkitkan 10.000 sampel bivariat dengan korelasi benar dan menampilkan joint plot | 25 |
+| Transformation | Menghitung `Cost` dan membuat histogram distribusi biaya | 25 |
+| Analytical Check | Menghitung mean, variansi, dan menjelaskan sifat ekspektasi | 20 |
+| Decision Making | Menentukan budget untuk overbudget ≤ 5% dan menjelaskan hasil | 30 |
+| **Total** |  | **100** |
+
+# Penutup
+
+Notebook ini menunjukkan bahwa **korelasi antar variabel acak dapat memperbesar risiko biaya**, terutama ketika fungsi biaya mengandung term interaksi. Dalam konteks manajemen cloud, memahami struktur ketidakpastian seperti ini sangat penting untuk menyusun budget yang robust.
