@@ -1,0 +1,532 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "44941b01",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "title: \"Analisis Risiko Finansial Cloud Computing dengan Variabel Acak Berkorelasi\"\n",
+    "\n",
+    "---\n",
+    "\n",
+    "# Deskripsi Misi\n",
+    "\n",
+    "Mahasiswa menganalisis **risiko finansial cloud computing**. Biaya total bulanan bergantung pada dua variabel acak yang tidak pasti dan saling berkorelasi:\n",
+    "\n",
+    "- $S$: **Storage Used (GB)$\n",
+    "- $C$: **Compute Hours (CPU)$\n",
+    "\n",
+    "Keduanya tidak independen. Dalam misi ini, kita memodelkan keduanya sebagai variabel acak bivariat dengan korelasi:\n",
+    "\n",
+    "\\[\n",
+    "\\rho = 0.7\n",
+    "\\]\n",
+    "\n",
+    "Biaya bulanan didefinisikan sebagai:\n",
+    "\n",
+    "\\[\n",
+    "\\text{Cost} = 0.1S + 0.5C + 0.01(S \\times C)\n",
+    "\\]\n",
+    "\n",
+    "Term interaksi $S \\times C$ melambangkan biaya tambahan yang muncul ketika kebutuhan storage dan compute meningkat secara bersamaan.\n",
+    "\n",
+    "# Tujuan Pembelajaran\n",
+    "\n",
+    "Setelah menyelesaikan notebook ini, mahasiswa diharapkan mampu:\n",
+    "\n",
+    "1. membangkitkan data bivariat dengan korelasi tertentu,\n",
+    "2. memvisualisasikan hubungan antarvariabel acak,\n",
+    "3. melakukan transformasi variabel acak ke fungsi biaya,\n",
+    "4. menghitung statistik empiris dari hasil simulasi,\n",
+    "5. memahami pengaruh korelasi terhadap ekspektasi dan risiko,\n",
+    "6. menentukan budget berbasis probabilitas overbudget.\n",
+    "\n",
+    "# Setup"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "11004799",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import seaborn as sns\n",
+    "\n",
+    "np.random.seed(42)\n",
+    "sns.set_theme(style=\"whitegrid\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "55e0a44f",
+   "metadata": {},
+   "source": [
+    "# Soal 1 — Data Generation\n",
+    "\n",
+    "## Instruksi\n",
+    "\n",
+    "Buat **10.000 sampel data bivariat** $(S, C)$ dengan korelasi $\\rho = 0.7$.\n",
+    "\n",
+    "Gunakan parameter berikut:\n",
+    "\n",
+    "- $S \\sim$ Storage Used, dengan mean 500 GB dan standar deviasi 100 GB\n",
+    "- $C \\sim$ Compute Hours, dengan mean 200 CPU-hours dan standar deviasi 50 CPU-hours\n",
+    "\n",
+    "Kemudian tampilkan **joint plot** untuk menunjukkan adanya korelasi antara $S$ dan $C$.\n",
+    "\n",
+    "## Solusi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "4581326b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n = 10_000\n",
+    "rho = 0.7\n",
+    "\n",
+    "mu_S, sigma_S = 500, 100\n",
+    "mu_C, sigma_C = 200, 50\n",
+    "\n",
+    "mean = np.array([mu_S, mu_C])\n",
+    "cov = np.array([\n",
+    "    [sigma_S**2, rho * sigma_S * sigma_C],\n",
+    "    [rho * sigma_S * sigma_C, sigma_C**2]\n",
+    "])\n",
+    "\n",
+    "samples = np.random.multivariate_normal(mean, cov, size=n)\n",
+    "\n",
+    "S = samples[:, 0]\n",
+    "C = samples[:, 1]\n",
+    "\n",
+    "# Menjaga agar nilai tidak negatif\n",
+    "S = np.clip(S, 0, None)\n",
+    "C = np.clip(C, 0, None)\n",
+    "\n",
+    "corr_emp = np.corrcoef(S, C)[0, 1]\n",
+    "print(f\"Korelasi empiris rho(S, C) = {corr_emp:.4f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "21b36d4b",
+   "metadata": {},
+   "source": [
+    "## Visualisasi Joint Plot"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "fef23609",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "g = sns.jointplot(x=S, y=C, kind=\"scatter\", alpha=0.25, height=7)\n",
+    "g.fig.suptitle(\"Joint Plot: Storage Used vs Compute Hours\", y=1.02)\n",
+    "g.set_axis_labels(\"Storage Used, S (GB)\", \"Compute Hours, C (CPU-hours)\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9872cb6",
+   "metadata": {},
+   "source": [
+    "## Interpretasi\n",
+    "\n",
+    "Dari joint plot, kita mengamati pola sebaran yang cenderung naik ke kanan atas. Ini menunjukkan bahwa saat **storage used** meningkat, **compute hours** juga cenderung meningkat. Hal ini konsisten dengan korelasi positif $\\rho = 0.7$.\n",
+    "\n",
+    "# Soal 2 — Transformation\n",
+    "\n",
+    "## Instruksi\n",
+    "\n",
+    "Hitung array biaya bulanan menggunakan fungsi:\n",
+    "\n",
+    "\\[\n",
+    "\\text{Cost} = 0.1S + 0.5C + 0.01(S \\times C)\n",
+    "\\]\n",
+    "\n",
+    "Lalu tampilkan histogram dari distribusi biaya.\n",
+    "\n",
+    "## Solusi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "3d746c8d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Cost = 0.1 * S + 0.5 * C + 0.01 * (S * C)\n",
+    "\n",
+    "print(f\"Jumlah sampel Cost = {len(Cost)}\")\n",
+    "print(f\"Contoh 5 nilai Cost pertama:\\n{Cost[:5]}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a8f6e99f",
+   "metadata": {},
+   "source": [
+    "## Histogram Cost"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "103a09cb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.figure(figsize=(9, 5))\n",
+    "plt.hist(Cost, bins=50, edgecolor=\"black\", alpha=0.8)\n",
+    "plt.title(\"Histogram of Monthly Cloud Cost\")\n",
+    "plt.xlabel(\"Cost\")\n",
+    "plt.ylabel(\"Frequency\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "43e24872",
+   "metadata": {},
+   "source": [
+    "## Interpretasi\n",
+    "\n",
+    "Distribusi cost tidak hanya dipengaruhi oleh komponen linear $0.1S$ dan $0.5C$, tetapi juga oleh komponen interaksi $0.01SC$. Karena ada term perkalian, nilai biaya dapat meningkat cukup tajam ketika $S$ dan $C$ sama-sama besar.\n",
+    "\n",
+    "# Soal 3 — Analytical Check\n",
+    "\n",
+    "## Instruksi\n",
+    "\n",
+    "1. Hitung **mean** dan **variansi** dari `Cost` secara empiris.\n",
+    "2. Periksa apakah berlaku:\n",
+    "   - $E[S + C] = E[S] + E[C]$\n",
+    "   - $E[S \\times C] = E[S]E[C]$\n",
+    "\n",
+    "Berikan penjelasan singkat.\n",
+    "\n",
+    "## Solusi Statistik Empiris"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "feb7203f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mean_cost = np.mean(Cost)\n",
+    "var_cost = np.var(Cost, ddof=1)\n",
+    "\n",
+    "print(f\"Mean empiris Cost     = {mean_cost:.4f}\")\n",
+    "print(f\"Variansi empiris Cost = {var_cost:.4f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cb4fca05",
+   "metadata": {},
+   "source": [
+    "## Pemeriksaan Sifat Ekspektasi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "6ac17209",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "E_S = np.mean(S)\n",
+    "E_C = np.mean(C)\n",
+    "E_S_plus_C = np.mean(S + C)\n",
+    "E_S_times_C = np.mean(S * C)\n",
+    "E_S_mul_E_C = E_S * E_C\n",
+    "\n",
+    "print(\"--- Nilai Ekspektasi Empiris ---\")\n",
+    "print(f\"E[S]            = {E_S:.4f}\")\n",
+    "print(f\"E[C]            = {E_C:.4f}\")\n",
+    "print(f\"E[S + C]        = {E_S_plus_C:.4f}\")\n",
+    "print(f\"E[S] + E[C]     = {(E_S + E_C):.4f}\")\n",
+    "print()\n",
+    "print(f\"E[S * C]        = {E_S_times_C:.4f}\")\n",
+    "print(f\"E[S] * E[C]     = {E_S_mul_E_C:.4f}\")\n",
+    "print(f\"Selisih         = {E_S_times_C - E_S_mul_E_C:.4f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22095c21",
+   "metadata": {},
+   "source": [
+    "## Penjelasan Konseptual\n",
+    "\n",
+    "Sifat linear ekspektasi **selalu** berlaku:\n",
+    "\n",
+    "\\[\n",
+    "E[S + C] = E[S] + E[C]\n",
+    "\\]\n",
+    "\n",
+    "Tetapi untuk perkalian, secara umum:\n",
+    "\n",
+    "\\[\n",
+    "E[S \\times C] = E[S]E[C]\n",
+    "\\]\n",
+    "\n",
+    "**hanya berlaku jika $S$ dan $C$ independen**.\n",
+    "\n",
+    "Karena pada kasus ini $S$ dan $C$ berkorelasi positif, maka umumnya:\n",
+    "\n",
+    "\\[\n",
+    "E[S \\times C] > E[S]E[C]\n",
+    "\\]\n",
+    "\n",
+    "Secara teori:\n",
+    "\n",
+    "\\[\n",
+    "E[SC] = E[S]E[C] + \\operatorname{Cov}(S,C)\n",
+    "\\]\n",
+    "\n",
+    "Karena $\\operatorname{Cov}(S,C) > 0$, maka $E[SC]$ menjadi lebih besar daripada $E[S]E[C]$.\n",
+    "\n",
+    "# Soal 4 — Decision Making\n",
+    "\n",
+    "## Instruksi\n",
+    "\n",
+    "Tentukan **budget bulanan** agar peluang overbudget tidak lebih dari 5%, yaitu:\n",
+    "\n",
+    "\\[\n",
+    "P(\\text{Cost} > \\text{Budget}) \\le 0.05\n",
+    "\\]\n",
+    "\n",
+    "## Solusi\n",
+    "\n",
+    "Strategi yang digunakan adalah memilih budget sebagai **persentil ke-95** dari distribusi biaya."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "2ca7bad2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "budget_95 = np.percentile(Cost, 95)\n",
+    "prob_overbudget = np.mean(Cost > budget_95)\n",
+    "\n",
+    "print(f\"Budget bulanan yang disarankan = {budget_95:.4f}\")\n",
+    "print(f\"P(Cost > Budget)               = {prob_overbudget:.4f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f0580877",
+   "metadata": {},
+   "source": [
+    "## Interpretasi\n",
+    "\n",
+    "Jika budget ditetapkan pada persentil ke-95, maka hanya sekitar 5% kasus simulasi yang melampaui budget tersebut. Dengan demikian, organisasi dapat mengendalikan risiko overbudget ke tingkat yang dapat diterima.\n",
+    "\n",
+    "# Soal 5 — Apa yang Terjadi Jika S dan C Independen?\n",
+    "\n",
+    "## Instruksi\n",
+    "\n",
+    "Ulangi simulasi dengan membuat $S$ dan $C$ **independen**, yaitu:\n",
+    "\n",
+    "\\[\n",
+    "\\rho = 0\n",
+    "\\]\n",
+    "\n",
+    "Bandingkan risiko overbudget dengan kasus awal saat $\\rho = 0.7$.\n",
+    "\n",
+    "## Simulasi Kasus Independen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "6af5a4b1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rho_indep = 0.0\n",
+    "\n",
+    "cov_indep = np.array([\n",
+    "    [sigma_S**2, rho_indep * sigma_S * sigma_C],\n",
+    "    [rho_indep * sigma_S * sigma_C, sigma_C**2]\n",
+    "])\n",
+    "\n",
+    "samples_indep = np.random.multivariate_normal(mean, cov_indep, size=n)\n",
+    "\n",
+    "S0 = np.clip(samples_indep[:, 0], 0, None)\n",
+    "C0 = np.clip(samples_indep[:, 1], 0, None)\n",
+    "\n",
+    "Cost0 = 0.1 * S0 + 0.5 * C0 + 0.01 * (S0 * C0)\n",
+    "\n",
+    "corr_emp_0 = np.corrcoef(S0, C0)[0, 1]\n",
+    "budget_95_0 = np.percentile(Cost0, 95)\n",
+    "\n",
+    "print(f\"Korelasi empiris baru          = {corr_emp_0:.4f}\")\n",
+    "print(f\"Budget 95% saat rho = 0        = {budget_95_0:.4f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "179b9b9c",
+   "metadata": {},
+   "source": [
+    "## Perbandingan Distribusi Cost"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "205af416",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.figure(figsize=(10, 5))\n",
+    "plt.hist(Cost, bins=50, alpha=0.5, density=True, label=\"Correlated (rho = 0.7)\")\n",
+    "plt.hist(Cost0, bins=50, alpha=0.5, density=True, label=\"Independent (rho = 0)\")\n",
+    "plt.axvline(budget_95, linestyle=\"--\", linewidth=2, label=f\"Budget rho=0.7 = {budget_95:.2f}\")\n",
+    "plt.axvline(budget_95_0, linestyle=\"--\", linewidth=2, label=f\"Budget rho=0 = {budget_95_0:.2f}\")\n",
+    "plt.title(\"Perbandingan Distribusi Cost\")\n",
+    "plt.xlabel(\"Cost\")\n",
+    "plt.ylabel(\"Density\")\n",
+    "plt.legend()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "05d054e4",
+   "metadata": {},
+   "source": [
+    "## Perbandingan Statistik Ringkas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "57168d42",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mean_cost_0 = np.mean(Cost0)\n",
+    "var_cost_0 = np.var(Cost0, ddof=1)\n",
+    "\n",
+    "summary = {\n",
+    "    \"Kasus\": [\"Berkorelasi (rho=0.7)\", \"Independen (rho=0)\"],\n",
+    "    \"Mean Cost\": [np.mean(Cost), mean_cost_0],\n",
+    "    \"Variance Cost\": [np.var(Cost, ddof=1), var_cost_0],\n",
+    "    \"Budget 95%\": [budget_95, budget_95_0]\n",
+    "}\n",
+    "\n",
+    "for i in range(2):\n",
+    "    print(f\"{summary['Kasus'][i]}\")\n",
+    "    print(f\"  Mean Cost     : {summary['Mean Cost'][i]:.4f}\")\n",
+    "    print(f\"  Variance Cost : {summary['Variance Cost'][i]:.4f}\")\n",
+    "    print(f\"  Budget 95%    : {summary['Budget 95%'][i]:.4f}\")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c722e67",
+   "metadata": {},
+   "source": [
+    "## Interpretasi\n",
+    "\n",
+    "Ketika $S$ dan $C$ dibuat independen, kejadian “storage tinggi” dan “compute tinggi” secara bersamaan menjadi lebih jarang dibanding kasus berkorelasi positif. Akibatnya:\n",
+    "\n",
+    "- term interaksi $S \\times C$ menjadi kurang ekstrem,\n",
+    "- distribusi biaya menjadi lebih terkendali,\n",
+    "- ekor kanan distribusi cost cenderung lebih ringan,\n",
+    "- budget untuk menjaga overbudget di bawah 5% biasanya menjadi lebih rendah.\n",
+    "\n",
+    "Dengan kata lain, **mengurangi korelasi antar driver biaya dapat menurunkan risiko finansial**.\n",
+    "\n",
+    "# Ringkasan Jawaban\n",
+    "\n",
+    "## Temuan utama\n",
+    "\n",
+    "1. Data bivariat dengan $\\rho = 0.7$ berhasil dibangkitkan dan divisualisasikan melalui joint plot.\n",
+    "2. Fungsi biaya yang mengandung term interaksi menghasilkan distribusi cost yang lebih lebar dan sensitif terhadap nilai ekstrem.\n",
+    "3. Sifat ekspektasi linear tetap berlaku:\n",
+    "\n",
+    "\\[\n",
+    "E[S + C] = E[S] + E[C]\n",
+    "\\]\n",
+    "\n",
+    "4. Namun, untuk perkalian:\n",
+    "\n",
+    "\\[\n",
+    "E[S \\times C] \\neq E[S]E[C]\n",
+    "\\]\n",
+    "\n",
+    "karena $S$ dan $C$ tidak independen.\n",
+    "\n",
+    "5. Budget bulanan yang menjaga peluang overbudget tidak lebih dari 5% dapat dipilih sebagai **persentil ke-95** dari `Cost`.\n",
+    "6. Jika korelasi dihilangkan ($\\rho = 0$), risiko overbudget turun dan kebutuhan budget pengaman biasanya menjadi lebih kecil.\n",
+    "\n",
+    "# Refleksi\n",
+    "\n",
+    "Dalam praktik cloud computing, komponen biaya sering kali tidak berdiri sendiri. Ketika dua driver biaya berkorelasi positif, risiko total dapat meningkat lebih tajam daripada yang diperkirakan dari masing-masing komponen secara terpisah. Karena itu, analisis risiko berbasis simulasi menjadi alat yang penting untuk pengambilan keputusan budget yang lebih realistis.\n",
+    "\n",
+    "# Tantangan Lanjutan\n",
+    "\n",
+    "Cobalah modifikasi notebook ini dengan beberapa eksperimen berikut:\n",
+    "\n",
+    "1. Ubah nilai korelasi menjadi $\\rho = -0.3$, $\\rho = 0$, dan $\\rho = 0.9$.\n",
+    "2. Ubah fungsi biaya agar lebih nonlinier, misalnya menambahkan $C^2$ atau penalti jika $S > 700$.\n",
+    "3. Bandingkan budget berdasarkan persentil ke-95 dan ke-99.\n",
+    "4. Cari peluang bahwa cost melebihi suatu budget tetap, misalnya 1500 atau 2000.\n",
+    "\n",
+    "# Rubrik Penilaian\n",
+    "\n",
+    "| Komponen | Deskripsi | Poin |\n",
+    "|---|---|---:|\n",
+    "| Data Generation | Membangkitkan 10.000 sampel bivariat dengan korelasi benar dan menampilkan joint plot | 25 |\n",
+    "| Transformation | Menghitung `Cost` dan membuat histogram distribusi biaya | 25 |\n",
+    "| Analytical Check | Menghitung mean, variansi, dan menjelaskan sifat ekspektasi | 20 |\n",
+    "| Decision Making | Menentukan budget untuk overbudget ≤ 5% dan menjelaskan hasil | 30 |\n",
+    "| **Total** |  | **100** |\n",
+    "\n",
+    "# Penutup\n",
+    "\n",
+    "Notebook ini menunjukkan bahwa **korelasi antar variabel acak dapat memperbesar risiko biaya**, terutama ketika fungsi biaya mengandung term interaksi. Dalam konteks manajemen cloud, memahami struktur ketidakpastian seperti ini sangat penting untuk menyusun budget yang robust."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3",
+   "path": "/usr/share/jupyter/kernels/python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

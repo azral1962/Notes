@@ -1,0 +1,141 @@
+Berdasarkan teks yang disediakan dari dokumen sumber, berikut adalah lembar soal yang telah dirapikan ke dalam format **Quarto (.qmd)**. 
+
+*(Catatan: Dalam dokumen sumber yang diberikan, tidak ditemukan variabel atau parameter eksplisit yang mengacu pada NIM mahasiswa seperti `X, Y, Z`. Oleh karena itu, angka-angka dalam soal dipertahankan sesuai dengan data murni dari teks aslinya).*
+
+Anda dapat menyalin blok kode di bawah ini dan menyimpannya sebagai file `Persiapan_UTS_2021.qmd`.
+
+```markdown
+---
+title: "Persiapan UTS Probabilitas dan Statistika 2021"
+format: 
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+  html:
+    theme: cosmo
+    mathjax: true
+---
+
+**Sifat:** Hanya Buka A4  
+**WAKTU:** 100 menit  
+
+**Nama:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \quad **NIK:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Nama Dosen:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \quad **Tanda Tangan:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+
+**Peraturan:**
+
+1. Isi nama, NIK, Nama Dosen dan tanda tangan di halaman muka lembar ujian ini maupun di sisi kanan atas lembar tabel yang diberikan, juga pada kertas buram.
+2. Jangan lupa mengisi presensi dan tanda tangan di sana.
+3. Jawaban boleh dituliskan bolak balik sesuai nomer (lembar untuk nomor satu bolak balik adalah untuk jawaban nomor satu).
+4. Lembar ujian (soal beserta jawaban), kertas buram, beserta tabel yang diberikan semua dikumpulkan.
+
+---
+
+### **Soal 1**
+Kabut asap yang sedang melanda sebagian wilayah di Indonesia mengakibatkan ada penyakit langka yang menyerang satu dari 1.000 orang di dalam populasi. Anggap bahwa ada suatu tes yang bagus (memiliki kecermatan tinggi) untuk penyakit ini, tetapi tidak sempurna: Jika seseorang terserang penyakit itu, tes menunjukkan hasil positif yang 99% benar. Di sisi lain, tes ini juga salah deteksi. Sekitar 2% pasien yang tidak terinfeksi juga positif. 
+
+Misalkan seseorang (bagian dari populasi) baru saja dites dan hasilnya positif. Berapa peluang seseorang tersebut sungguh-sungguh terinfeksi? Jika misalkan anda sebagai konsultan probabilitas dan statistik, dengan informasi yang seadanya tersebut dan risiko persoalan ini konkrit tentang hidup dan mati, Berikan analisis Anda? dan Apa saran Anda untuk persoalan ini?
+
+---
+
+### **Soal 2**
+Dari 40.000 pengukuran yang dilakukan dengan menggunakan *broadband access speed tools*, diperoleh tabel data frekuensi relatif kecepatan *download* dan *upload* layanan internet yang diberikan suatu ISP (Internet Service Provider) sebagai berikut:
+
+| No | Kelas Interval (Mbps) | % Kecepatan Download | % Kecepatan Upload |
+|:--:|:---|:---|:---|
+| 1 | 0 - 0,099 | 6,53% | 14,82% |
+| 2 | 0,1 - 0,199 | 33,42% | 13,32% |
+| 3 | 0,2 - 0,299 | 3,77% | 12,31% |
+| 4 | 0,3 - 0,399 | 8,79% | 13,82% |
+| 5 | 0,4 - 0,499 | 1,76% | 19,60% |
+| 6 | 0,5 - 0,599 | 2,26% | 8,54% |
+| 7 | 0,6 - 0,699 | 0,75% | 12,31% |
+| 8 | 0,7 - 0,799 | 1,51% | 4,52% |
+| 9 | 0,8 - 0,899 | 0,25% | 0,75% |
+| 10 | 0,9 - 0,999 | 1,26% | 0,00% |
+| 11 | 1 - 1,099 | 0,50% | 0,00% |
+| 12 | 1,1 - 1,199 | 1,51% | 0,00% |
+| 13 | 1,2 - 1,299 | 1,01% | 0,00% |
+| 14 | 1,3 - 1,399 | 1,76% | 0,00% |
+| 15 | 1,4 - 1,499 | 0,50% | 0,00% |
+| 16 | 1,5 - 1,599 | 1,01% | 0,00% |
+| 17 | 1,6 - 1,699 | 2,26% | 0,00% |
+| 18 | 1,7 - 1,799 | 3,77% | 0,00% |
+| 19 | 1,8 - 1,899 | 1,76% | 0,00% |
+| 20 | 1,9 - 1,999 | 5,78% | 0,00% |
+| 21 | 2 - 2,099 | 14,57% | 0,00% |
+| 22 | 2,1 - 2,199 | 2,76% | 0,00% |
+| 23 | 2,2 - 2,299 | 1,26% | 0,00% |
+| 24 | 2,3 - 2,399 | 0,00% | 0,00% |
+| 25 | 2,4 - 2,499 | 0,25% | 0,00% |
+| 26 | 2,5 - 2,599 | 0,25% | 0,00% |
+| 27 | 2,6 - 2,699 | 0,00% | 0,00% |
+| 28 | 2,7 - 2,799 | 0,00% | 0,00% |
+| 29 | 2,8 - 2,899 | 0,00% | 0,00% |
+| 30 | 2,9 - 3 | 0,75% | 0,00% |
+
+Dengan berdasarkan tabel data frekuensi relatif kecepatan *download* dan *upload* yang diberikan di atas, jawab pertanyaan-pertanyaan berikut:
+
+a. Saat ini terdapat sebuah layanan TV yang bisa diakses melalui internet baik melalui berbagai gadget. Dalam spesifikasinya, disebutkan bahwa agar layanan TV ini bisa dinikmati dengan baik, kecepatan downstream harus minimal 500 kbps. Tentukan probabilitas layanan TV ini bisa dinikmati dengan baik melalui layanan internet yang diberikan oleh ISP ini!
+b. Anda ingin meng-upload sebuah file video (Penggunaan_EDC_di_Branchless_Banking_di_Bandung.flv) yang berukuran 63 MB ke situs video sharing youtube.com menggunakan layanan internet yang diberikan oleh ISP ini. Tentukan probability bahwa file video bisa diunduh dalam waktu tidak lebih dari 21 menit! Gunakan konversi 1 Bps = 8 bps!
+
+---
+
+### **Soal 3**
+Running time algoritma komputasi tertentu R minimal adalah satu unit waktu (v=1) dan peluang R > 10 unit waktu adalah 0,5. Hal ini dengan asumsi bahwa algoritma ini diinisialisasi secara sebarang, tanpa aturan tertentu atau boleh dianggap acak. Tentukan peluang bahwa running time melebihi 1000 unit waktu! 
+
+Dalam hal ini diasumsikan R mengikuti distribusi Pareto dengan fungsi:
+$$ f(r) = a r^{-a-1} u(r-1), \quad a > 0 $$
+$$ F(r) = (1 - r^{-a}) u(r-1) $$
+*(Fungsi $u(\cdot)$ di sini adalah fungsi tangga satuan. Nilai $u(r)$ nol untuk r kurang dari nol, dan nilainya satu bila r lebih dari sama dengan nol.)*
+
+---
+
+### **Soal 4**
+Sebuah bank berskala nasional merencanakan meletakkan 3 set infrastruktur hardware di 3 Data Center untuk menjalankan aplikasi *Core Banking System* (CBS) yang melayani para nasabah. 3 Data Center masing-masing dipilih di Jakarta, Surabaya dan Kalimantan. Tujuannya adalah untuk mencegah sistem down secara total bila terjadi bencana (*disaster*) di satu data center. Perencanaan juga bertujuan agar bank tetap bisa menjalankan operasi bisnis dan melayani pelanggan dengan baik bila terjadi bencana (*disaster*) yang melumpuhkan operasi di salah satu data center. Masing-masing set infrastruktur hardware memiliki *probability* untuk bekerja dengan baik sebesar 0,9.
+
+a. Buatlah tabel distribusi probabilitas!
+b. Gambarkan histogram!
+c. Tentukan mean dan variansi untuk distribusi probabilitas tersebut!
+d. Tentukan probabilitas sistem down secara total!
+e. Tentukan probabilitas sistem nyaris down secara total, dalam arti tinggal 1 Data Center yang bekerja dengan baik!
+f. Tentukan probabilitas minimal 1 Data Center bekerja dengan baik!
+
+---
+
+### **Soal 5**
+*(Terdapat ilustrasi gambar yang melambangkan rangkaian link komunikasi jaringan antara titik A dan B yang terdiri dari komponen/link $a, b, c, d, e, f, g,$ dan $h$)*.
+
+Dalam kebijakan pemeliharaan yang berlaku saat ini, kejadian *failure* (kerusakan) pada link dapat dianggap kejadian-kejadian yang bebas satu sama lain, dan dapat diasumsikan bahwa, pada setiap waktu, probabilitas dari sebuah link bekerja dengan baik adalah 0,6.
+
+a) Jika sistem diamati pada waktu acak, berapa kemungkinan dari:
+   i. Tepat dua link bekerja dengan baik?
+   ii. Link g dan tepat satu link lagi bekerja dengan baik?
+b) Jika secara bersamaan tepat enam link tidak bekerja dengan baik, berapa kemungkinan A dapat berkomunikasi dengan B?
+
+---
+
+### **Soal 6**
+Waktu *failure* / kegagalan / down dari sebuah komponen mekanik adalah variabel acak seperti pada yang ditunjukkan oleh grafik PDF (*Probability Density Function*) di mana fungsi probabilitasnya konstan pada skala $0,4$ sejak bulan ke-0 hingga bulan ke-2, lalu menurun secara linier menjadi $0$ pada bulan ke-3. 
+*(Ekstraksi persamaan matematis dari kurva PDF tersebut adalah sebagai berikut)*:
+$$
+f_t(t_0) = \begin{cases} 
+0,4 & 0 \le t_0 \le 2 \\ 
+-0,4(t_0 - 3) & 2 < t_0 \le 3 \\ 
+0 & \text{lainnya} 
+\end{cases}
+$$
+
+Kita memiliki lima buah komponen mekanik yang identik seperti itu. Lima buah komponen mekanik tersebut dioperasikan bersama-sama. Waktu $T_1$ dalam satuan bulan adalah waktu di mana salah satu komponen dari kelima buah komponen mekanik tersebut pertama kali down. $T_2$ adalah waktu di mana terjadi down kedua. $T_3$ adalah waktu di mana terjadi down ketiga. $T_4$ adalah waktu di mana terjadi down keempat. Dan $T_5$ adalah waktu di mana lima buah komponen mekanik tersebut telah down semua. 
+
+Asumsikan bahwa operasi lima komponen mekanik tersebut independen satu sama lain secara statistik. Tentukan peluang bahwa $T_5$ adalah lebih dari 1,5 bulan!
+
+---
+
+### **Soal 7**
+Peluang *error* per simbol dalam suatu sistem transmisi adalah p. 10 juta buah simbol ("digit") dikirimkan.
+
+a) Tuliskan formula peluang terjadinya k *error*! ($P(X=k)=?$, di mana $X$ adalah peubah acak yang menunjukkan jumlah *error* yang terjadi dalam pengiriman 10 juta buah simbol ("digit") tersebut). *(Petunjuk: Asumsikan X adalah peubah acak Poisson.)*
+b) Peluang bahwa sebuah *message* yang terdiri atas 10 juta buah simbol ("digit") adalah *error-free* (bebas kesalahan) ternyata adalah setengah kali lipat peluang terjadinya 2 buah (atau 2 digit) error dalam *message* tersebut. Tentukan p! Setelah itu tentukan peluang sebuah *message* yang terdiri atas 10 juta buah simbol ("digit") adalah *error-free* (bebas kesalahan)!
+```

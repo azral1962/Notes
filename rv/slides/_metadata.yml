@@ -1,0 +1,12 @@
+title: Tools Spreadsheet dan Python Untuk Random Variable
+author: Armein Z. R. Langi
+date: 04.13.2026
+subtitle: Random Variable
+lang: id
+format:
+  diaquarto-typst: 
+    layout: medium # small, medium, large
+    ratio: 16/9 # any ratio possible 
+
+execute:
+  eval: false

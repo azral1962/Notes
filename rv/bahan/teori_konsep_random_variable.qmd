@@ -1,0 +1,696 @@
+---
+title: Konsep dan Teori
+---
+
+#  Pendahuluan
+
+Dalam banyak persoalan nyata, kita berhadapan dengan **ketidakpastian**. Hasil suatu pengamatan, eksperimen, atau proses tidak selalu dapat diketahui secara pasti sebelum kejadian itu berlangsung. Untuk memodelkan ketidakpastian ini, statistika dan teori probabilitas menggunakan konsep **random variable** atau **variabel acak**.
+
+Secara intuitif, variabel acak adalah suatu aturan yang mengubah hasil percobaan acak menjadi sebuah nilai numerik. Dengan demikian, kejadian yang semula bersifat kualitatif atau berbentuk hasil eksperimen dapat dianalisis secara matematis. Konsep ini sangat penting karena menjadi dasar bagi distribusi probabilitas, ekspektasi, variansi, inferensi statistik, simulasi, machine learning, dan banyak bidang rekayasa lainnya.
+
+Dokumen ini membahas tiga konsep utama:
+
+1. **Random variable diskrit**
+2. **Random variable kontinu**
+3. **Random variable bivariate**
+
+Setiap bagian menjelaskan definisi, sifat, fungsi distribusi, ukuran-ukuran penting, serta contoh interpretasi.
+
+# Random Variable
+
+## Definisi
+
+Misalkan suatu percobaan acak memiliki ruang sampel $S$. Sebuah **random variable** adalah fungsi
+
+$$
+X: S \to \mathbb{R}
+$$
+
+yang memetakan setiap hasil pada ruang sampel ke suatu bilangan real.
+
+Artinya, jika hasil eksperimen adalah suatu elemen $\omega \in S$, maka variabel acak $X$ memberikan nilai numerik $X(\omega)$.
+
+## Contoh intuitif
+
+- Pada pelemparan dadu, hasil eksperimen adalah salah satu dari $\{1,2,3,4,5,6\}$. Kita dapat mendefinisikan random variable $X$ sebagai nilai mata dadu yang muncul.
+- Pada pengukuran tinggi badan mahasiswa, random variable $X$ adalah tinggi badan setiap mahasiswa yang terpilih secara acak.
+- Pada pengamatan jumlah pelanggan yang datang per jam, random variable $X$ menyatakan jumlah pelanggan yang datang dalam satu interval waktu.
+
+## Notasi penting
+
+Biasanya digunakan notasi:
+
+- Huruf kapital seperti $X$, $Y$, $Z$ untuk random variable
+- Huruf kecil seperti $x$, $y$, $z$ untuk nilai tertentu yang mungkin diambil oleh random variable
+
+Contoh:
+
+- $P(X=3)$ berarti peluang bahwa random variable $X$ bernilai 3
+- $P(X \le 5)$ berarti peluang bahwa $X$ tidak lebih dari 5
+
+# Random Variable Diskrit
+
+## Definisi
+
+Random variable **diskrit** adalah variabel acak yang hanya dapat mengambil nilai-nilai yang dapat dihitung satu per satu.
+
+Nilai-nilai ini bisa:
+
+- berhingga, misalnya $\{0,1,2,3\}$
+- tak berhingga tetapi terhitung, misalnya $\{0,1,2,3,\dots\}$
+
+## Contoh random variable diskrit
+
+- Jumlah anak dalam keluarga
+- Banyaknya pelanggan yang datang dalam satu jam
+- Jumlah barang rusak dalam satu batch produksi
+- Banyaknya keberhasilan dari $n$ percobaan
+- Hasil lemparan dadu
+
+## Probability Mass Function (PMF)
+
+Untuk random variable diskrit, distribusi peluang dinyatakan dengan **probability mass function**:
+
+$$
+p_X(x) = P(X=x)
+$$
+
+PMF harus memenuhi dua syarat:
+
+$$
+p_X(x) \ge 0
+$$
+
+dan
+
+$$
+\sum_x p_X(x) = 1
+$$
+
+## Contoh PMF
+
+Misalkan $X$ adalah hasil lemparan dadu fair. Maka:
+
+$$
+P(X=x)=\frac{1}{6}, \quad x=1,2,3,4,5,6
+$$
+
+Dan untuk nilai lain, peluangnya nol.
+
+## Cumulative Distribution Function (CDF)
+
+Fungsi distribusi kumulatif didefinisikan sebagai:
+
+$$
+F_X(x)=P(X\le x)
+$$
+
+Untuk random variable diskrit, CDF berbentuk fungsi bertingkat karena nilainya bertambah hanya pada titik-titik tertentu.
+
+Sebagai contoh, untuk dadu fair:
+
+$$
+F_X(3)=P(X\le 3)=P(X=1)+P(X=2)+P(X=3)=\frac{3}{6}=0.5
+$$
+
+## Nilai harapan
+
+Nilai harapan atau **ekspektasi** random variable diskrit didefinisikan sebagai:
+
+$$
+E[X]=\sum_x x\,P(X=x)
+$$
+
+Ekspektasi menggambarkan nilai rata-rata jangka panjang jika eksperimen diulang berkali-kali.
+
+### Contoh
+
+Untuk dadu fair:
+
+$$
+E[X]=\sum_{x=1}^{6} x\cdot \frac{1}{6} = \frac{1+2+3+4+5+6}{6}=3.5
+$$
+
+## Variansi
+
+Variansi mengukur tingkat penyebaran random variable terhadap nilai harapannya:
+
+$$
+\operatorname{Var}(X)=E[(X-E[X])^2]
+$$
+
+Rumus praktis:
+
+$$
+\operatorname{Var}(X)=E[X^2]-(E[X])^2
+$$
+
+Semakin besar variansi, semakin besar ketidakpastian atau penyebaran nilai-nilai random variable.
+
+## Distribusi diskrit yang umum
+
+### Distribusi Bernoulli
+
+Digunakan untuk eksperimen dengan dua kemungkinan hasil, misalnya sukses atau gagal.
+
+Jika $X \sim \text{Bernoulli}(p)$, maka:
+
+$$
+P(X=1)=p, \qquad P(X=0)=1-p
+$$
+
+Ekspektasi dan variansi:
+
+$$
+E[X]=p, \qquad \operatorname{Var}(X)=p(1-p)
+$$
+
+### Distribusi Binomial
+
+Menyatakan banyaknya sukses dalam $n$ percobaan Bernoulli independen.
+
+Jika $X \sim \text{Binomial}(n,p)$, maka:
+
+$$
+P(X=x)=\binom{n}{x}p^x(1-p)^{n-x}, \quad x=0,1,\dots,n
+$$
+
+Ekspektasi dan variansi:
+
+$$
+E[X]=np, \qquad \operatorname{Var}(X)=np(1-p)
+$$
+
+### Distribusi Poisson
+
+Digunakan untuk memodelkan banyaknya kejadian dalam interval tertentu.
+
+Jika $X \sim \text{Poisson}(\lambda)$, maka:
+
+$$
+P(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}, \quad x=0,1,2,\dots
+$$
+
+Ekspektasi dan variansi:
+
+$$
+E[X]=\lambda, \qquad \operatorname{Var}(X)=\lambda
+$$
+
+# Random Variable Kontinu
+
+## Definisi
+
+Random variable **kontinu** adalah variabel acak yang dapat mengambil nilai pada suatu interval bilangan real.
+
+Berbeda dari random variable diskrit, random variable kontinu tidak dihitung satu per satu, melainkan dinyatakan melalui suatu fungsi kerapatan.
+
+## Contoh random variable kontinu
+
+- Tinggi badan
+- Berat badan
+- Waktu tunggu
+- Suhu ruangan
+- Tegangan listrik yang diukur secara kontinu
+
+## Probability Density Function (PDF)
+
+Untuk random variable kontinu, distribusi dinyatakan dengan **probability density function**:
+
+$$
+f_X(x)
+$$
+
+PDF harus memenuhi:
+
+$$
+f_X(x) \ge 0
+$$
+
+dan
+
+$$
+\int_{-\infty}^{\infty} f_X(x)\,dx = 1
+$$
+
+Peluang bahwa $X$ berada pada interval $[a,b]$ diberikan oleh:
+
+$$
+P(a\le X\le b)=\int_a^b f_X(x)\,dx
+$$
+
+## Sifat penting
+
+Untuk random variable kontinu,
+
+$$
+P(X=x)=0
+$$
+
+untuk setiap satu nilai tunggal $x$. Ini bukan berarti nilai tersebut mustahil, melainkan karena peluang pada satu titik tunggal dalam konteks kontinu bernilai nol. Peluang hanya bermakna pada interval.
+
+## Cumulative Distribution Function (CDF)
+
+Sama seperti pada kasus diskrit, fungsi distribusi kumulatif adalah:
+
+$$
+F_X(x)=P(X\le x)
+$$
+
+Untuk variabel kontinu:
+
+$$
+F_X(x)=\int_{-\infty}^{x} f_X(t)\,dt
+$$
+
+Dan jika terdiferensialkan,
+
+$$
+f_X(x)=\frac{d}{dx}F_X(x)
+$$
+
+## Nilai harapan
+
+Untuk random variable kontinu:
+
+$$
+E[X]=\int_{-\infty}^{\infty} x f_X(x)\,dx
+$$
+
+## Variansi
+
+$$
+\operatorname{Var}(X)=E[(X-E[X])^2]
+$$
+
+atau
+
+$$
+\operatorname{Var}(X)=E[X^2]-(E[X])^2
+$$
+
+Dengan
+
+$$
+E[X^2]=\int_{-\infty}^{\infty} x^2 f_X(x)\,dx
+$$
+
+## Distribusi kontinu yang umum
+
+### Distribusi Uniform
+
+Jika $X$ terdistribusi uniform pada interval $[a,b]$, maka:
+
+$$
+f_X(x)=\frac{1}{b-a}, \quad a\le x\le b
+$$
+
+Ekspektasi dan variansi:
+
+$$
+E[X]=\frac{a+b}{2}
+$$
+
+$$
+\operatorname{Var}(X)=\frac{(b-a)^2}{12}
+$$
+
+### Distribusi Eksponensial
+
+Distribusi ini sering digunakan untuk memodelkan waktu antar kejadian.
+
+Jika $X \sim \text{Exponential}(\lambda)$, maka:
+
+$$
+f_X(x)=\lambda e^{-\lambda x}, \quad x\ge 0
+$$
+
+Ekspektasi dan variansi:
+
+$$
+E[X]=\frac{1}{\lambda}, \qquad \operatorname{Var}(X)=\frac{1}{\lambda^2}
+$$
+
+### Distribusi Normal
+
+Distribusi normal sangat penting dalam statistika dan sains.
+
+Jika $X \sim N(\mu,\sigma^2)$, maka PDF-nya adalah:
+
+$$
+f_X(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
+Parameter:
+
+- $\mu$: mean
+- $\sigma^2$: variansi
+
+Distribusi normal berbentuk lonceng, simetris terhadap mean.
+
+# Perbandingan Variabel Acak Diskrit dan Kontinu
+
+| Aspek | Diskrit | Kontinu |
+|---|---|---|
+| Nilai yang mungkin | Dapat dihitung satu per satu | Berada pada interval kontinu |
+| Fungsi distribusi utama | PMF | PDF |
+| Peluang pada satu nilai | Bisa positif | Selalu 0 |
+| Operasi utama | Penjumlahan | Integral |
+| Contoh | Jumlah pelanggan | Waktu tunggu |
+
+# Random Variable Bivariate
+
+## Definisi
+
+Random variable **bivariate** melibatkan dua random variable yang diamati bersama-sama, biasanya ditulis sebagai pasangan:
+
+$$
+(X,Y)
+$$
+
+Analisis bivariat penting ketika dua besaran acak saling berkaitan.
+
+## Contoh random variable bivariate
+
+- Tinggi dan berat badan seseorang
+- Nilai UTS dan nilai UAS mahasiswa
+- Storage dan compute cost pada cloud computing
+- Durasi belajar dan nilai ujian
+
+## Joint distribution
+
+Distribusi bersama menggambarkan peluang atau kerapatan bahwa dua random variable mengambil nilai tertentu secara simultan.
+
+### Kasus diskrit
+
+Untuk random variable diskrit bivariat, digunakan **joint PMF**:
+
+$$
+p_{X,Y}(x,y)=P(X=x,Y=y)
+$$
+
+Syaratnya:
+
+$$
+p_{X,Y}(x,y)\ge 0
+$$
+
+dan
+
+$$
+\sum_x \sum_y p_{X,Y}(x,y)=1
+$$
+
+### Kasus kontinu
+
+Untuk random variable kontinu bivariat, digunakan **joint PDF**:
+
+$$
+f_{X,Y}(x,y)
+$$
+
+Syaratnya:
+
+$$
+f_{X,Y}(x,y)\ge 0
+$$
+
+dan
+
+$$
+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dx\,dy = 1
+$$
+
+## Marginal distribution
+
+Dari joint distribution, kita dapat memperoleh distribusi marginal masing-masing variabel.
+
+### Kasus diskrit
+
+$$
+p_X(x)=\sum_y p_{X,Y}(x,y)
+$$
+
+$$
+p_Y(y)=\sum_x p_{X,Y}(x,y)
+$$
+
+### Kasus kontinu
+
+$$
+f_X(x)=\int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dy
+$$
+
+$$
+f_Y(y)=\int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dx
+$$
+
+## Conditional distribution
+
+Distribusi kondisional menyatakan distribusi satu variabel dengan syarat variabel lain diketahui.
+
+### Kasus diskrit
+
+$$
+P(Y=y\mid X=x)=\frac{P(X=x,Y=y)}{P(X=x)}
+$$
+
+jika $P(X=x)>0$.
+
+### Kasus kontinu
+
+$$
+f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}
+$$
+
+jika $f_X(x)>0$.
+
+## Independensi
+
+Dua random variable $X$ dan $Y$ dikatakan **independen** jika informasi tentang salah satunya tidak mengubah distribusi yang lain.
+
+### Kasus diskrit
+
+$$
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+$$
+
+untuk semua $x$ dan $y$.
+
+### Kasus kontinu
+
+$$
+f_{X,Y}(x,y)=f_X(x)f_Y(y)
+$$
+
+untuk semua $x$ dan $y$.
+
+Jika kondisi ini tidak terpenuhi, maka kedua variabel memiliki ketergantungan.
+
+## Nilai harapan bivariat
+
+Ekspektasi masing-masing variabel adalah:
+
+### Kasus diskrit
+
+$$
+E[X]=\sum_x\sum_y x\,p_{X,Y}(x,y)
+$$
+
+$$
+E[Y]=\sum_x\sum_y y\,p_{X,Y}(x,y)
+$$
+
+### Kasus kontinu
+
+$$
+E[X]=\int\int x f_{X,Y}(x,y)\,dx\,dy
+$$
+
+$$
+E[Y]=\int\int y f_{X,Y}(x,y)\,dx\,dy
+$$
+
+## Ekspektasi fungsi dua variabel
+
+Sering kali kita membutuhkan nilai harapan dari fungsi dua random variable, misalnya $g(X,Y)$:
+
+### Kasus diskrit
+
+$$
+E[g(X,Y)] = \sum_x\sum_y g(x,y)p_{X,Y}(x,y)
+$$
+
+### Kasus kontinu
+
+$$
+E[g(X,Y)] = \int\int g(x,y)f_{X,Y}(x,y)\,dx\,dy
+$$
+
+## Kovariansi
+
+Kovariansi mengukur kecenderungan dua random variable berubah bersama:
+
+$$
+\operatorname{Cov}(X,Y)=E[(X-E[X])(Y-E[Y])]
+$$
+
+Rumus lain:
+
+$$
+\operatorname{Cov}(X,Y)=E[XY]-E[X]E[Y]
+$$
+
+Interpretasi umum:
+
+- Kovariansi positif: jika $X$ naik, $Y$ cenderung naik
+- Kovariansi negatif: jika $X$ naik, $Y$ cenderung turun
+- Kovariansi nol: tidak ada hubungan linear, tetapi belum tentu independen
+
+## Korelasi
+
+Karena kovariansi dipengaruhi satuan, digunakan ukuran tak berdimensi yaitu korelasi:
+
+$$
+\rho_{X,Y}=\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y}
+$$
+
+dengan:
+
+- $\rho=1$ menunjukkan hubungan linear positif sempurna
+- $\rho=-1$ menunjukkan hubungan linear negatif sempurna
+- $\rho=0$ menunjukkan tidak ada hubungan linear
+
+## Distribusi normal bivariat
+
+Salah satu distribusi kontinu bivariat yang sangat penting adalah **distribusi normal bivariat**, yang ditentukan oleh:
+
+- mean $\mu_X$ dan $\mu_Y$
+- variansi $\sigma_X^2$ dan $\sigma_Y^2$
+- korelasi $\rho$
+
+Distribusi ini banyak digunakan dalam statistika multivariat, simulasi Monte Carlo, pemodelan risiko, dan machine learning.
+
+# Visualisasi Random Variable Bivariat
+
+Beberapa visualisasi yang sering digunakan untuk memahami hubungan dua random variable:
+
+## Scatter plot
+
+Menampilkan titik pasangan $(x_i,y_i)$ untuk melihat pola hubungan.
+
+## Joint frequency table
+
+Untuk data diskrit, tabel frekuensi bersama membantu melihat distribusi gabungan.
+
+## Contour plot atau heatmap
+
+Untuk data kontinu, plot kontur atau heatmap sering digunakan untuk menunjukkan kepadatan bersama.
+
+# Aplikasi Praktis
+
+## Dalam statistika
+
+Random variable digunakan untuk:
+
+- memodelkan data
+- menghitung probabilitas
+- melakukan estimasi parameter
+- menguji hipotesis
+
+## Dalam rekayasa
+
+Random variable digunakan untuk:
+
+- analisis noise pada sinyal
+- reliabilitas sistem
+- pemodelan trafik jaringan
+- simulasi antrian
+- analisis risiko
+
+## Dalam sains data dan AI
+
+Random variable digunakan untuk:
+
+- model probabilistik
+- Bayesian inference
+- generative models
+- sampling dan simulasi Monte Carlo
+- analisis ketidakpastian prediksi
+
+# Ringkasan
+
+## Ringkasan konsep utama
+
+- **Random variable** adalah pemetaan dari hasil percobaan acak ke bilangan real.
+- **Random variable diskrit** memiliki nilai yang dapat dihitung satu per satu dan dianalisis dengan PMF.
+- **Random variable kontinu** memiliki nilai pada rentang kontinu dan dianalisis dengan PDF.
+- **Random variable bivariate** melibatkan dua variabel acak yang diamati bersama, sehingga diperlukan joint distribution, marginal distribution, conditional distribution, kovariansi, dan korelasi.
+
+## Intuisi akhir
+
+Jika random variable univariat membantu kita menjawab pertanyaan:
+
+- “Berapa peluang suatu nilai terjadi?”
+- “Berapa rata-ratanya?”
+- “Seberapa besar penyebarannya?”
+
+maka random variable bivariat membantu kita menjawab pertanyaan yang lebih kaya:
+
+- “Bagaimana dua variabel berubah bersama?”
+- “Apakah keduanya saling berkaitan?”
+- “Bagaimana distribusi salah satu variabel jika variabel lainnya diketahui?”
+
+Dengan memahami ketiga konsep ini, mahasiswa memiliki fondasi penting untuk mempelajari statistika lanjutan, proses stokastik, machine learning, dan berbagai aplikasi rekayasa berbasis data.
+
+# Latihan Pemahaman
+
+## Soal 1
+
+Jelaskan perbedaan utama antara random variable diskrit dan kontinu dari sisi:
+
+1. himpunan nilai yang mungkin
+2. fungsi distribusi yang digunakan
+3. cara menghitung peluang
+
+## Soal 2
+
+Sebuah random variable diskrit $X$ memiliki PMF berikut:
+
+| $x$ | 0 | 1 | 2 | 3 |
+|---|---:|---:|---:|---:|
+| $P(X=x)$ | 0.1 | 0.3 | 0.4 | 0.2 |
+
+Hitung:
+
+1. $E[X]$
+2. $E[X^2]$
+3. $\operatorname{Var}(X)$
+
+## Soal 3
+
+Misalkan $X$ adalah random variable kontinu dengan PDF:
+
+$$
+f_X(x)=
+\begin{cases}
+2x, & 0 \le x \le 1 \\
+0, & \text{lainnya}
+\end{cases}
+$$
+
+Tentukan:
+
+1. $P(0.2 \le X \le 0.8)$
+2. $F_X(x)$ untuk $0 \le x \le 1$
+3. $E[X]$
+
+## Soal 4
+
+Jelaskan arti kovariansi dan korelasi dalam konteks random variable bivariat. Mengapa korelasi lebih mudah diinterpretasikan dibanding kovariansi?
+
+# Penutup
+
+Konsep random variable merupakan salah satu fondasi terpenting dalam probabilitas dan statistika. Dengan membedakan secara jelas random variable diskrit, kontinu, dan bivariate, kita dapat memilih model probabilistik yang tepat, menghitung ukuran-ukuran penting secara benar, dan menafsirkan data dengan lebih mendalam.
+
+Pemahaman yang baik terhadap topik ini akan sangat membantu dalam berbagai mata kuliah lanjutan maupun aplikasi nyata di bidang sains, teknologi, ekonomi, dan rekayasa.
