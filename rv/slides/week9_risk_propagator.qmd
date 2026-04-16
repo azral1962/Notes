@@ -37,7 +37,7 @@ Setelah menyelesaikan notebook ini, mahasiswa diharapkan mampu:
 
 # Setup
 
-```
+```{python}
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -61,7 +61,7 @@ Kemudian tampilkan **joint plot** untuk menunjukkan adanya korelasi antara $S$ d
 
 ## Solusi
 
-```
+```{python}
 n = 10_000
 rho = 0.7
 
@@ -89,7 +89,7 @@ print(f"Korelasi empiris rho(S, C) = {corr_emp:.4f}")
 
 ## Visualisasi Joint Plot
 
-```
+```{python}
 g = sns.jointplot(x=S, y=C, kind="scatter", alpha=0.25, height=7)
 g.fig.suptitle("Joint Plot: Storage Used vs Compute Hours", y=1.02)
 g.set_axis_labels("Storage Used, S (GB)", "Compute Hours, C (CPU-hours)")
@@ -114,7 +114,7 @@ Lalu tampilkan histogram dari distribusi biaya.
 
 ## Solusi
 
-```
+```{python}
 Cost = 0.1 * S + 0.5 * C + 0.01 * (S * C)
 
 print(f"Jumlah sampel Cost = {len(Cost)}")
@@ -123,7 +123,7 @@ print(f"Contoh 5 nilai Cost pertama:\n{Cost[:5]}")
 
 ## Histogram Cost
 
-```
+```{python}
 plt.figure(figsize=(9, 5))
 plt.hist(Cost, bins=50, edgecolor="black", alpha=0.8)
 plt.title("Histogram of Monthly Cloud Cost")
@@ -149,7 +149,7 @@ Berikan penjelasan singkat.
 
 ## Solusi Statistik Empiris
 
-```
+```{python}
 mean_cost = np.mean(Cost)
 var_cost = np.var(Cost, ddof=1)
 
@@ -159,7 +159,7 @@ print(f"Variansi empiris Cost = {var_cost:.4f}")
 
 ## Pemeriksaan Sifat Ekspektasi
 
-```
+```{python}
 E_S = np.mean(S)
 E_C = np.mean(C)
 E_S_plus_C = np.mean(S + C)
@@ -221,7 +221,7 @@ $$
 
 Strategi yang digunakan adalah memilih budget sebagai **persentil ke-95** dari distribusi biaya.
 
-```
+```{python}
 budget_95 = np.percentile(Cost, 95)
 prob_overbudget = np.mean(Cost > budget_95)
 
@@ -247,7 +247,7 @@ Bandingkan risiko overbudget dengan kasus awal saat $\rho = 0.7$.
 
 ## Simulasi Kasus Independen
 
-```
+```{python}
 rho_indep = 0.0
 
 cov_indep = np.array([
@@ -271,7 +271,7 @@ print(f"Budget 95% saat rho = 0        = {budget_95_0:.4f}")
 
 ## Perbandingan Distribusi Cost
 
-```
+```{python}
 plt.figure(figsize=(10, 5))
 plt.hist(Cost, bins=50, alpha=0.5, density=True, label="Correlated (rho = 0.7)")
 plt.hist(Cost0, bins=50, alpha=0.5, density=True, label="Independent (rho = 0)")
@@ -286,7 +286,7 @@ plt.show()
 
 ## Perbandingan Statistik Ringkas
 
-```
+```{python}
 mean_cost_0 = np.mean(Cost0)
 var_cost_0 = np.var(Cost0, ddof=1)
 
