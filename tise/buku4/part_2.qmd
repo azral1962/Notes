@@ -1,0 +1,106 @@
+
+
+
+# Bab 3. Evolusi Paradigma Rekayasa: dari TISE level 0 hingga TISE level 5
+
+## TISE level 0: Rekayasa Tradisional Berbasis Core Engine
+
+Pada **TISE level 0**, rekayasa dapat dipahami sebagai kegiatan **mengelola energi menjadi kerja** melalui artefak-artefak yang dapat diabstraksikan sebagai **mesin inti** (*core engine*). Mesin, dalam arti luas, adalah konfigurasi instrumen yang mengubah, menyalurkan, menyimpan, mengendalikan, atau menstabilkan energi agar suatu kerja tertentu dapat dicapai. Di balik keragaman disiplin rekayasa, terdapat pola umum: rekayasa adalah desain dan implementasi mesin energi untuk memecahkan masalah yang terkait dengan **beban energi, material, dan informasi (EMI)**.
+
+Pada level ini, mesin dikendalikan terutama melalui mekanisme sederhana seperti **on-off** atau melalui satu besaran kendali dominan yang bersifat satu dimensi, misalnya percepatan atau perlambatan. Secara fungsional terdapat dua jenis mesin: **mesin statik** yang dirancang untuk menjaga kestabilan struktur atau keadaan diam, dan **mesin dinamik** yang dirancang untuk mengatur perpindahan, kecepatan, percepatan, aliran, atau perubahan keadaan.
+
+## TISE level 1: Smart Engineering Berbasis Smart Engine atau Mesin PSKVE
+
+Pada level ini, logika kendali diperluas dari satu besaran dominan ke **lima dimensi**, yaitu **P, S, K, V, dan E** (*Product, Service, Knowledge, Value, Environment*). Karena itu, sistem kendalinya memerlukan **lima derajat kebebasan**, sehingga dibutuhkan komputer, algoritma pengendalian, dan kemampuan komputasional yang lebih tinggi.
+
+TISE level 1 adalah perluasan dari TISE level 0. Jika pada TISE level 0 fokus utama berada pada konversi energi, material, dan informasi, maka pada TISE level 1 fokusnya diperluas pada konversi berbagai jenis energon yang hadir dalam kehidupan manusia, organisasi, dan masyarakat. TISE level 1 karena itu dapat didefinisikan sebagai **rekayasa multidisiplin untuk membangun instrumen konversi energon dalam konfigurasi mesin PSKVE**.
+
+## TISE level 2: Rekayasa Agentik Berbasis Mesin PUDAL
+
+Pada level ini, mesin PSKVE tidak lagi cukup dikendalikan hanya oleh komputer dan algoritma biasa. Ia dikendalikan oleh **mesin cerdas PUDAL** (*Perception, Understanding, Decision, Action, Learning*). Di sini **Triune Intelligence** berinteraksi untuk menjalankan fungsi kendali statik maupun dinamik. Prompts berfungsi sebagai mekanisme komunikasi antaragents.
+
+## TISE level 3: Rekayasa Pementasan Identitas Naratif
+
+Pada level ini, pementasan **identitas naratif** menjadi penggerak utama atau **energon utama** dari mesin-mesin inti, PSKVE, dan PUDAL. Asumsi dasarnya adalah bahwa setiap orang memiliki misi di dunia ini, yaitu mendeliver identitas naratifnya ke dunia sebagai tugas hidupnya. Artefak rekayasa pada level ini dipahami sebagai **teater megah** tempat identitas naratif dipentaskan sehingga memberi inspirasi atau solusi yang dibutuhkan audiens.
+
+## TISE level 4: Rekayasa Meta-TISE Berbasis DNA Desain
+
+Pada level ini, rekayasa bergerak ke ranah **meta-TISE**, yaitu rekayasa terhadap artefak TISE itu sendiri agar menjadi platform untuk melahirkan replika atau “anak artefak”. Pada level ini digunakan metafora biologis berupa **DNA desain**. Sebuah sistem terdiri dari berbagai agents yang menggunakan **buku skills** yang sama, tetapi masing-masing berfokus pada bagian tertentu dari keseluruhan sistem.
+
+## TISE level 5: Rekayasa Konfigurasi Stakeholder Berbasis Matrix of Mission
+
+Pada level ini, rekayasa mencapai tingkat kelembagaan dan sosial yang lebih matang. Fokus utamanya bukan lagi mesin inti, mesin PSKVE, PUDAL, identitas naratif, atau DNA desain, tetapi **organisasi, konsorsium, atau komunitas stakeholder** yang dibentuk untuk memecahkan persoalan kemanusiaan. Pada level ini, artefak rekayasa utama adalah **konfigurasi stakeholder** itu sendiri dan mesinnya adalah **Matrix of Mission**.
+
+## Tabel Perbandingan TISE level 0–5
+
+Untuk memperjelas argumen tentang evolusi abstraksi rekayasa, **Tabel 3.1** merangkum perkembangan level rekayasa dari TISE level 0 hingga TISE level 5. Tabel ini perlu dibaca sebagai peta konseptual yang menunjukkan pergeseran fokus, jenis mesin, mekanisme kendali, artefak utama, dan tujuan rekayasa pada setiap level.
+
+| Level | Nama Level | Fokus Rekayasa | Jenis Mesin | Energon / Sumber Kerja Utama | Mekanisme Kendali | Artefak Utama | Tujuan Utama |
+|---|---|---|---|---|---|---|---|
+| 0 | Rekayasa tradisional | Konversi EMI menjadi kerja atau bentuk tersimpan/tertransmisikan | Core Engine | Energi fisik, material, informasi | On-off, besaran satu dimensi, kendali statik/dinamik klasik | Mesin, struktur, proses, perangkat sektoral | Menyelesaikan persoalan sektoral secara stabil, efisien, dan andal |
+| 1 | Smart Engineering | Konversi energon menjadi PSKVE | Smart Engine / Mesin PSKVE | Energon 1–5 | Kendali multidimensi 5 derajat kebebasan | Lingkungan kerja cerdas: stasiun, jalan, kendaraan | Menghasilkan produk, layanan, pengetahuan, nilai, dan lingkungan yang memecahkan masalah |
+| 2 | Rekayasa agentik | Pengendalian agentik atas mesin PSKVE | Mesin PUDAL | Triune Intelligence yang bekerja melalui agen | PUDAL dan prompts | Sistem agentik yang mengorkestrasi PSKVE | Menutup gap secara adaptif dan cerdas |
+| 3 | Rekayasa naratif | Pementasan identitas naratif sebagai energon utama | Teater Naratif | Identitas naratif, misi hidup, agensi, makna | Interaksi naratif dan prompting reflektif | Teater kehidupan / lingkungan naratif | Memberdayakan stakeholder untuk mendeliver misinya |
+| 4 | Rekayasa meta-TISE | Rekayasa meta-artefak yang dapat melahirkan artefak baru | Mesin DNA Desain / Meta-TISE | Buku skills dan pola desain | Konsistensi DNA desain | Platform TISE yang dapat menghasilkan replika atau anak artefak | Membangun platform rekayasa yang reproduktif |
+| 5 | Rekayasa konfigurasi stakeholder | Rekayasa konfigurasi stakeholder bermisi | Matrix of Mission | Potensi manusia, misi stakeholder, komitmen kolektif | Matrix of Mission dan MOS-7 | Organisasi, konsorsium, komunitas stakeholder, pusat keunggulan | Memobilisasi manusia untuk memecahkan persoalan kemanusiaan |
+
+## Definisi Ringkas TISE level 5
+
+**TISE level 5** adalah level rekayasa di mana TISE hadir sebagai pusat keunggulan yang memobilisasi stakeholder bermisi, agen-agen TISE, dan artefak cerdas untuk memecahkan persoalan kemanusiaan melalui konfigurasi stakeholder, pengoperasian MOS-7, dan penggunaan Matrix of Mission secara berulang, adaptif, dan bermakna.
+
+# Bab 4. Ontologi dan Definisi Formal
+
+## Kebutuhan akan Definisi Formal
+
+Agar TISE level 5 dapat berkembang sebagai paradigma ilmiah, ia tidak cukup dijelaskan secara metaforis atau naratif saja. Diperlukan ontologi dan definisi formal yang memungkinkan istilah-istilah utamanya dipakai secara konsisten dalam penelitian, pengajaran, desain sistem, dan evaluasi implementasi.
+
+## Definisi Energon
+
+**Energon** adalah setiap entitas, kondisi, status, kapasitas, atau sumber daya yang memiliki kemampuan untuk menghasilkan kerja atau memungkinkan kerja terjadi dalam suatu sistem rekayasa.
+
+Secara operasional, energon dapat diklasifikasikan sekurang-kurangnya ke dalam lima jenis:
+1. **Energon-1**: energi fisik;
+2. **Energon-2**: waktu dan perhatian manusia;
+3. **Energon-3**: skill dan pengetahuan;
+4. **Energon-4**: token bernilai seperti uang atau insentif;
+5. **Energon-5**: peran, status, atau keanggotaan dalam lingkungan kerja dan narasi sosial.
+
+## Definisi Core Engine
+
+**Core engine** adalah konfigurasi instrumen yang mengubah, menyalurkan, menyimpan, mengendalikan, atau menstabilkan energi, material, dan informasi untuk menghasilkan kerja atau keluaran tertentu.
+
+## Definisi Smart Engine
+
+**Smart engine** adalah konfigurasi instrumen cerdas yang mengonversi energon menjadi kapasitas kerja, perubahan keadaan, atau keluaran yang dibutuhkan dalam penyelesaian masalah.
+
+## Definisi Mesin PSKVE
+
+**Mesin PSKVE** adalah smart engine yang mengonversi energon menjadi lima bentuk utama hasil rekayasa, yaitu **Product, Service, Knowledge, Value, dan Environment**.
+
+## Definisi Mesin PUDAL
+
+**Mesin PUDAL** adalah mesin agentik yang menjalankan fungsi **Perception, Understanding, Decision, Action, and Learning** untuk mengendalikan dan mengarahkan operasi mesin PSKVE.
+
+## Definisi Identitas Naratif
+
+**Identitas naratif** adalah konstruksi kisah hidup yang diinternalisasi oleh seseorang sebagai dasar bagi pemaknaan diri, orientasi misi, dan tindakan hidupnya di dunia.
+
+## Definisi DNA Desain
+
+**DNA desain** adalah representasi sistematis dari pola-pola desain, skills, aturan, dan struktur konseptual yang memungkinkan suatu artefak TISE direplikasi, dikembangkan, atau “dikawinkan” dengan artefak lain untuk melahirkan generasi artefak baru.
+
+## Definisi Stakeholder Bermisi
+
+**Stakeholder bermisi** adalah pihak manusiawi atau institusional yang memiliki tujuan, panggilan, atau peran bermakna yang ingin dijalankan, serta dapat berkontribusi, menerima manfaat, atau mengalami hambatan dalam suatu konfigurasi solusi.
+
+## Definisi Matrix of Mission
+
+**Matrix of Mission** adalah mesin konfigurasi stakeholder yang memetakan misi, benefit, dan kontribusi timbal balik antar stakeholder untuk membentuk dan mengevaluasi skema solusi.
+
+## Definisi MOS-7
+
+**MOS-7** adalah siklus operasional TISE level 5 yang terdiri dari tujuh langkah: mendengar keluhan, memodelkan stakeholder, mendesain konfigurasi solusi, membangun komitmen, membangun artefak, mengoperasionalkan solusi, serta mengevaluasi dan mengaudit integritas serta dampaknya.
+
+## Definisi TISE level 5
+
+**TISE level 5** adalah level rekayasa di mana TISE hadir sebagai pusat keunggulan yang menggunakan Matrix of Mission dan MOS-7 untuk memobilisasi potensi manusia yang berlimpah guna memecahkan persoalan kemanusiaan melalui konfigurasi stakeholder bermisi.
