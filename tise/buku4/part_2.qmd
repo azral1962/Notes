@@ -1,6 +1,4 @@
 
-
-
 # Bab 3. Evolusi Paradigma Rekayasa: dari TISE level 0 hingga TISE level 5
 
 ## TISE level 0: Rekayasa Tradisional Berbasis Core Engine

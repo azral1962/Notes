@@ -1,0 +1,11 @@
+# Lampiran F. Paket Pertanyaan Teknis untuk TISE level 0
+
+1. Core engine apa yang diperlukan?
+2. Fungsi utamanya apa?
+3. Apakah ia terutama bersifat statik atau dinamik?
+4. Beban energi apa yang harus ditangani?
+5. Material apa yang menjadi medium utama sistem?
+6. Informasi apa yang perlu diproses atau ditransmisikan?
+7. Risiko kegagalan apa yang harus diantisipasi?
+8. Standar atau regulasi teknis apa yang harus dipenuhi?
+

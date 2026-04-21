@@ -9,27 +9,27 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: "Bagian I. Pengantar Monograf dan Posisi TISE level 5
-"
-      chapter:
+    - part: "Bagian I. Pengantar Monograf dan Posisi TISE level 5"
+      chapters:
         - part_1.qmd
     - part: "Bagian II. Evolusi Rekayasa Menuju TISE level 5"
-      chapter:
+      chapters:
         - part_2.qmd
     - part: "Bagian III. Arsitektur TISE level 5 sebagai Buku DNA"
-      chapter:
+      chapters:
         - part_3.qmd
-    - part: "sBagian IV. Domain Aplikasi dan Reusability DNA"
-      chapter:
+    - part: "Bagian IV. Domain Aplikasi dan Reusability DNA"
+      chapters:
         - part_4.qmd
     - summary.qmd
     - references.qmd
-
+  appendices:
+    - lampiran.qmd
 bibliography: references.bib
-
+lang: id
 format:
   typst:
-    keep_typ: true
+    keep-typ: true
 
 
 

@@ -1,0 +1,32 @@
+# Bab 4. Workflow Rekayasa TISE level 5 Full-Scale
+
+## Fase Linear
+
+Workflow TISE level 5 terdiri dari enam fase linear:
+
+1. Persepsi Masalah;
+2. Konsep dan Model;
+3. Desain dan Planning;
+4. Konstruksi;
+5. Operasional;
+6. Evaluasi.
+
+Untuk menjawab kebutuhan pada setiap fase, MOS-7 diputar berkali-kali. Karena itu, metodologi TISE level 5 bersifat **linear pada tingkat fase, tetapi siklik pada tingkat operasi**.
+
+## Tabel Workflow Full-Scale
+
+| Fase Linear | Fokus Utama | Putaran MOS-7 yang Dominan | Level TISE yang Paling Dominan | Keluaran Utama |
+|---|---|---|---|---|
+| Persepsi Masalah | Mendengar keluhan dan mengidentifikasi stakeholder | Hear, Model | TISE level 5 | Rumusan persoalan, alternatif konfigurasi |
+| Konsep dan Model | Memilih konfigurasi terbaik | Hear, Model, Design, Commit | TISE level 5 dan 4 | Matrix of Mission terpilih, arah platform |
+| Desain dan Planning | Menurunkan kebutuhan ke level 4–0 | Design, Commit, Build | TISE level 4, 3, 2, 1 | DNA platform, desain naratif, PUDAL, PSKVE |
+| Konstruksi | Membangun atau memodifikasi elemen | Build, Commit, Operate | TISE level 4 sampai 0 | Artefak anak, layanan, elemen teknis |
+| Operasional | Menjalankan solusi nyata | Operate, Evaluate | Seluruh level | Solusi hidup, operasi provider, experience user |
+| Evaluasi | Audit, pembelajaran, redesign | Evaluate, Hear, Model | TISE level 5 | Hasil evaluasi, redesign, siklus baru |
+
+: Workflow rekayasa TISE level 5 full-scale
+
+## Prinsip Reusability
+
+Workflow full-scale tidak harus selalu ditempuh secara lengkap. Bila banyak elemen sudah tersedia dan reusable, rekayasa dapat dipersingkat dan difokuskan pada elemen yang perlu dimodifikasi.
+

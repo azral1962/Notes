@@ -1,0 +1,28 @@
+# Bab 1. Pendahuluan: Tinjauan Umum atas Buku DNA TISE
+
+## Mengapa Buku DNA Diperlukan
+
+Dalam praktik, inovasi TISE level 5 tidak lahir hanya dari rancangan teoretis, tetapi dari kemampuan banyak pihak untuk membaca visi bersama, memahami perannya, serta menjalankan kontribusinya secara serempak. Karena itu, monograf ini perlu berfungsi seperti **DNA**, yaitu sebagai naskah acuan yang dapat dibaca bersama oleh para stakeholder. Buku ini adalah bagian dari **proses peningkatan readiness** itu sendiri.
+
+TISE level 5 memobilisasi para stakeholder agar bersama-sama menjalankan bagiannya untuk mewujudkan misi masing-masing. Namun, konfigurasi stakeholder dan *arrangement* yang mungkin dibentuk biasanya tidak unik. Beberapa konfigurasi dapat sama-sama layak. Karena itu, rekayasa TISE level 5 memerlukan penetapan **visi konfigurasi terbaik**, yaitu konfigurasi yang paling feasible, paling adil, paling produktif, dan paling bermakna bagi keseluruhan sistem.
+
+## Fungsi Ganda Monograf
+
+Monograf ini menjalankan fungsi ganda:
+
+1. sebagai **rujukan konseptual** tentang evolusi rekayasa dari TISE level 0 sampai TISE level 5;
+2. sebagai **template DNA** yang dapat dipakai ulang oleh rekayasawan;
+3. sebagai **instrumen peningkatan readiness stakeholder**;
+4. sebagai **sumber pertanyaan teknis** yang dapat dijawab oleh stakeholder;
+5. sebagai **bahan mentah bagi agents** untuk menyusun Dokumen DNA operasional.
+
+## Struktur Buku
+
+Struktur buku ini sengaja disusun dari atas ke bawah. Setelah bab pendahuluan yang memberi gambaran utuh, bagian utama dimulai dari TISE level 5 sebagai level tertinggi, lalu turun bertahap sampai TISE level 0. Susunan ini dipilih karena dalam praktik rekayasa kemanusiaan, orientasi solusi harus berangkat dari level tertinggi, yaitu level misi, konfigurasi stakeholder, dan visi sistem, lalu diterjemahkan bertahap ke level yang lebih rendah sampai ke mesin teknis.
+
+Pembagian hirarkis ini memiliki satu benang merah rekayasa yang sama, yaitu **memobilisasi sumber daya yang melimpah untuk dikonversikan menjadi kerja secara terkendali sehingga menghasilkan nilai yang berharga**. Nilai itu dapat hadir sebagai kemampuan untuk mencapai output, behavior, fungsi, target, tujuan, atau misi yang diinginkan. Dalam kerangka ini, level-level yang lebih tinggi memberikan **konteks, arah, dan motivasi**, sedangkan level-level yang lebih rendah memberikan **tumpuan realitas, keterlaksanaan, dan keandalan**. Karena itu, seluruh hirarki TISE perlu dibaca bukan sebagai pecahan-pecahan yang terpisah, melainkan sebagai satu rantai rekayasa yang utuh dari visi sampai realisasi.
+
+## Posisi terhadap Literatur
+
+Secara literatur, monograf ini berdiri di atas tradisi Product-Service Systems (PSS), stakeholder motivation matrix, multi-stakeholder requirements, dan stakeholder engagement [@morelli2002; @vezzoli2014; @berkovich2014; @sholihah2019; @giordano2018; @lievens2021]. Namun, monograf ini melangkah lebih jauh dengan memindahkan fokus dari motivasi ke **misi**, dari peta aktor ke **konfigurasi stakeholder**, dan dari alat representasi ke **Buku DNA** yang membimbing pembentukan solusi secara bertingkat.
+

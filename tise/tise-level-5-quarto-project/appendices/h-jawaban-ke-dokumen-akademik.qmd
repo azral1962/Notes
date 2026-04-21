@@ -1,0 +1,31 @@
+# Lampiran H. Dari Jawaban Stakeholder ke Dokumen Akademik
+
+Lampiran ini menjelaskan bagaimana jawaban atas paket pertanyaan teknis pada Lampiran A sampai Lampiran G dapat diolah menjadi **dokumen akademik**.
+
+## Pemetaan ke Struktur Dokumen Akademik
+
+| Bagian Dokumen Akademik | Sumber Utama dari Lampiran Teknis | Pertanyaan Kunci yang Diolah |
+|---|---|---|
+| Judul | Lampiran A, G | Masalah apa, solusi apa, domain apa, dan pendekatan TISE level berapa? |
+| Abstrak dan Keywords | Lampiran A–G | Apa masalahnya, apa tujuan, model apa yang dipakai, bagaimana metodologinya, dan apa kontribusinya? |
+| Pendahuluan | Lampiran A | Siapa USER, apa persoalannya, mengapa penting, apa gap praktik/riset, dan apa urgensinya? |
+| Teori dan Model | Lampiran A–F | Konsep TISE level 5, Matrix of Mission, readiness, MOS-7, PUDAL, PSKVE, dan level-level pendukung apa yang relevan? |
+| Metodologi dan Desain | Lampiran A–G | Bagaimana konfigurasi stakeholder dibentuk, bagaimana workflow dijalankan, bagaimana desain artefak dikembangkan, dan bagaimana data dikumpulkan? |
+| Pengembangan dan Eksperimen | Lampiran B–F | Artefak apa yang dibangun, bagaimana diuji, indikator apa yang dipakai, dan eksperimen apa yang dilakukan? |
+| Diskusi | Lampiran A–G | Apa makna hasil, apa keterbatasan, bagaimana readiness memengaruhi hasil, apa implikasi teoretis dan praktisnya? |
+| Kesimpulan | Lampiran A, G | Apa temuan utama, apa kontribusi, apa rekomendasi implementasi, dan apa langkah selanjutnya? |
+
+: Pemetaan jawaban stakeholder ke bagian dokumen akademik
+
+## Contoh Misi
+
+> **Mewujudkan sistem rekomendasi cerdas multiobjektif untuk memenuhi kebutuhan makanan sehat, berselera, dan terjangkau bagi warga kampus, dengan memobilisasi stakeholder kampus agar bersama-sama membangun ekosistem pangan yang lebih bernilai, berkelanjutan, dan responsif terhadap preferensi pengguna.**
+
+## Contoh Judul
+
+**Sistem Rekomendasi Cerdas Multiobjektif untuk Memenuhi Kebutuhan Makanan Sehat, Berselera, dan Terjangkau bagi Warga Kampus: Pendekatan TISE level 5 Berbasis Matrix of Mission dan MOS-7**
+
+## Contoh Abstrak Singkat
+
+Kebutuhan makanan sehat, berselera, dan terjangkau merupakan persoalan penting bagi warga kampus karena berkaitan dengan kesehatan, produktivitas, kepuasan hidup, dan keberlanjutan aktivitas akademik. Studi ini mengusulkan pengembangan sistem rekomendasi cerdas multiobjektif dengan pendekatan TISE level 5 untuk membantu membentuk konfigurasi stakeholder yang mampu memenuhi kebutuhan tersebut. Matrix of Mission digunakan untuk memetakan misi, benefit, dan kontribusi USER, SOURCE, REGULATOR, dan PROVIDER, sedangkan MOS-7 digunakan sebagai siklus operasional desain dan evaluasi. Sistem rekomendasi dirancang untuk menyeimbangkan beberapa objektif sekaligus, yaitu kesehatan, selera, keterjangkauan, dan kesiapan operasional penyedia makanan. Kontribusi studi ini adalah integrasi antara rekayasa rekomendasi cerdas multiobjektif dengan kerangka rekayasa kemanusiaan TISE level 5, sehingga solusi tidak hanya optimal secara komputasional tetapi juga layak secara sosial-operasional.
+
