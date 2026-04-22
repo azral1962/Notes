@@ -1,0 +1,82 @@
+---
+title: "Buku DNA TISE level 5"
+subtitle: "Monograf Template untuk Rekayasawan, Stakeholder, dan Agents"
+author: "Armein Z. R. Langi"
+lang: id
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+execute:
+  echo: false
+bibliography: references.bib
+link-citations: true
+---
+
+# Prakata
+
+Monograf ini disusun sebagai **Buku DNA** bagi TISE level 5. Artinya, buku ini bukan hanya menjelaskan teori, tetapi juga dimaksudkan menjadi rujukan kerja bersama bagi rekayasawan, stakeholder, dan agents yang ingin mewujudkan konfigurasi solusi kemanusiaan secara nyata. Dalam kerangka ini, TISE level 5 dipahami sebagai level rekayasa di mana persoalan kemanusiaan dihadapi melalui pembentukan, penguatan, dan pengoperasian konfigurasi stakeholder bermisi.
+
+Agar efektif, Buku DNA ini harus menjalankan dua fungsi sekaligus. Pertama, ia harus menjadi **rujukan konseptual** yang menjelaskan bagaimana evolusi rekayasa bergerak dari TISE level 0 sampai TISE level 5. Kedua, ia harus menjadi **alat peningkatan readiness**, karena dalam kenyataan inovasi TISE level 5 hanya dapat diwujudkan bila para stakeholder bertumbuh dalam kesadaran identitas naratif, kejelasan misi, kompetensi, motivasi, komitmen, dan kemampuan membaca peluang kontribusi.
+
+Karena itu, monograf ini direstruktur sebagai template bertingkat. Setelah pendahuluan yang memberi tinjauan umum atas keseluruhan konsep, pembahasan utama disusun dari **Part 1 yang berfokus pada rekayasa TISE level 5**, kemudian turun bertahap ke **Part 2 untuk TISE level 4**, **Part 3 untuk TISE level 3**, **Part 4 untuk TISE level 2**, **Part 5 untuk TISE level 1**, dan **Part 6 untuk TISE level 0**. Di bagian akhir, monograf ini memberikan rangkuman keseluruhan, arah pengembangan berikutnya, serta lampiran teknis berupa daftar pertanyaan per level yang perlu dijawab oleh para stakeholder. Kumpulan jawaban itu kemudian dapat diolah oleh agents untuk menghasilkan **Dokumen DNA** yang, bila dijalankan oleh para stakeholder, akan membantu mewujudkan visi konfigurasi terbaik.
+
+# Abstrak
+
+Monograf ini merumuskan **TISE level 5** sebagai level tertinggi dalam hirarki rekayasa TISE, yaitu level di mana rekayasa berfokus pada pembentukan konfigurasi stakeholder bermisi untuk memecahkan persoalan kemanusiaan. Argumen utama monograf ini adalah bahwa persoalan manusia abad ke-21 tidak cukup dipahami hanya sebagai persoalan energi, material, dan informasi, tetapi perlu dipandang sebagai persoalan mobilisasi potensi manusia, readiness stakeholder, distribusi benefit, legitimasi regulatif, operasi solusi, dan pengorganisasian misi secara kolektif.
+
+Untuk itu, monograf ini disusun sebagai **Buku DNA**. Setelah memberikan tinjauan umum tentang keseluruhan konsep, buku ini membahas rekayasa secara bertingkat dari **TISE level 5** sampai **TISE level 0**. Pada TISE level 5, mesin utamanya adalah **Matrix of Mission** dan siklus operasionalnya adalah **MOS-7**. Pada level-level di bawahnya, solusi diturunkan secara bertahap menjadi rekayasa DNA desain, rekayasa identitas naratif, rekayasa agentik PUDAL, rekayasa smart engine PSKVE, dan akhirnya rekayasa tradisional berbasis core engine.
+
+Monograf ini juga menegaskan bahwa keberhasilan inovasi TISE level 5 bergantung pada **peningkatan readiness stakeholder**. Karena itu, edukasi, training, coaching, dan pembelajaran berkelanjutan diposisikan sebagai bagian inheren dari rekayasa. Sebagai keluaran operasional, buku ini dilengkapi dengan lampiran teknis berupa daftar pertanyaan per level. Jawaban para stakeholder atas pertanyaan-pertanyaan ini diproses oleh agents untuk menghasilkan **Dokumen DNA** yang memuat daftar tujuan pada berbagai level dan cara para stakeholder mencapainya.
+
+Dengan demikian, monograf ini berfungsi sekaligus sebagai fondasi konseptual, template rekayasa, alat peningkatan readiness, dan kerangka pembentukan pusat keunggulan TISE level 5.
+
+**Kata kunci:** TISE level 5, Buku DNA, Matrix of Mission, MOS-7, readiness stakeholder, rekayasa kemanusiaan, PSKVE, PUDAL.
+
+{{< include chapters/bab-01.qmd >}}
+
+{{< include chapters/part-01.qmd >}}
+
+{{< include chapters/bab-02.qmd >}}
+
+{{< include chapters/bab-03.qmd >}}
+
+{{< include chapters/bab-04.qmd >}}
+
+{{< include chapters/part-02.qmd >}}
+
+{{< include chapters/bab-05.qmd >}}
+
+{{< include chapters/bab-06.qmd >}}
+
+{{< include chapters/part-03.qmd >}}
+
+{{< include chapters/bab-07.qmd >}}
+
+{{< include chapters/bab-08.qmd >}}
+
+{{< include chapters/part-04.qmd >}}
+
+{{< include chapters/bab-09.qmd >}}
+
+{{< include chapters/bab-10.qmd >}}
+
+{{< include chapters/part-05.qmd >}}
+
+{{< include chapters/bab-11.qmd >}}
+
+{{< include chapters/bab-12.qmd >}}
+
+{{< include chapters/part-06.qmd >}}
+
+{{< include chapters/bab-13.qmd >}}
+
+{{< include chapters/bab-14.qmd >}}
+
+{{< include chapters/bab-15.qmd >}}
+
+{{< include appendices/lampiran-a.qmd >}}

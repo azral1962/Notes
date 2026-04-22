@@ -1,0 +1,20 @@
+# Bab 10. Summary dan What Next
+
+## Summary
+
+Monograf ini menunjukkan bahwa rekayasa dapat dipahami secara bertingkat dari TISE level 0 sampai TISE level 5. Pada level tertinggi, persoalan utama bukan lagi hanya mesin teknis, tetapi konfigurasi stakeholder bermisi. Karena itu, TISE level 5 membutuhkan Matrix of Mission, MOS-7, Stakeholder Readiness Framework, dan pusat keunggulan yang memobilisasi manusia untuk manusia.
+
+Di balik seluruh pembagian level tersebut, terdapat satu benang merah yang sama: rekayasa adalah upaya **memobilisasi sumber daya yang melimpah untuk dikonversikan menjadi kerja secara terkendali sehingga menghasilkan nilai yang berharga**. Nilai itu dapat berupa kemampuan mencapai output, behavior, fungsi, target, tujuan, atau misi yang diinginkan. Dalam keseluruhan hirarki ini, level yang lebih tinggi memberi konteks dan motivasi, sedangkan level yang lebih rendah memberi tumpuan realitas dan keandalan.
+
+## What Next
+
+Langkah berikut setelah membaca Buku DNA ini adalah:
+
+1. memilih domain persoalan kemanusiaan;
+2. membentuk visi konfigurasi terbaik;
+3. mengidentifikasi stakeholder dan readiness-nya;
+4. menjalankan paket pertanyaan teknis per level;
+5. mengolah jawaban dengan bantuan agents;
+6. menghasilkan Dokumen DNA operasional;
+7. menjalankan Dokumen DNA itu bersama para stakeholder.
+

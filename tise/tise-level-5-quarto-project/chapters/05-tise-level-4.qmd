@@ -1,0 +1,9 @@
+# Bab 5. DNA Desain, Meta-TISE, dan Artefak Anak
+
+Pada **TISE level 4**, rekayasa bergerak ke ranah **meta-TISE**, yaitu rekayasa terhadap artefak TISE agar menjadi platform untuk melahirkan replika atau **artefak anak**. Rekayasawan perlu membedakan:
+
+- **DNA platform** yang sudah tersedia;
+- **DNA gagasan baru** yang ingin ditambahkan.
+
+“Perkawinan” desain terjadi ketika skill, pola, atau aturan baru ditambahkan ke DNA platform sehingga lahir artefak anak yang relevan dengan visi konfigurasi pada TISE level 5. Perspektif ini membuat TISE level 4 sangat penting sebagai jembatan antara visi stakeholder di atas dan keterbatasan realitas teknis-organisasional di bawah.
+
