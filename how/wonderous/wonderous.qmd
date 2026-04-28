@@ -15,6 +15,11 @@ format:
   fiction-typst: default
 ---
 
+{{< include intro.qmd >}}
+
+{{< include tise.qmd >}}
+
+# ASli
 ## Mondays
 
 Liam hated Mondays. He hated waking up to the sound of his dad's old car sputtering to life outside his window. He hated the smell of burnt toast and instant coffee that filled the kitchen. He hated the sight of his mum's tired face as she handed him his lunch bag and kissed him goodbye. He hated the feel of his worn-out uniform and backpack as he walked to the bus stop. He hated the noise of the other kids on the bus, talking about their weekend plans and their latest crushes. He hated the fact that he had nothing to say to them, nothing to share, nothing to look forward to.
