@@ -1,0 +1,571 @@
+---
+title: "Daftar Fungsi Python untuk Random Variable Diskrit, Kontinu, dan Bivariat"
+author: "Armein Z. R. Langi"
+format:
+  typst:
+    keep-typ: true
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+lang: id
+execute:
+  echo: true
+  warning: false
+  message: false
+jupyter: python3
+---
+
+# Pendahuluan
+
+Dokumen ini merangkum fungsi-fungsi Python yang berguna untuk mempelajari **random variable diskrit**, **random variable kontinu**, dan **random variable bivariat**. Contoh-contoh difokuskan pada pustaka yang paling umum digunakan dalam analisis data dan probabilitas:
+
+- `random`
+- `numpy`
+- `scipy.stats`
+- `pandas`
+- `matplotlib`
+
+Dokumen ini cocok digunakan sebagai catatan kuliah, bahan praktikum, maupun dasar untuk eksperimen komputasional dalam topik probabilitas dan statistika.
+
+# Pustaka yang Digunakan
+
+```{python}
+import random
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+```
+
+# Random Variable Diskrit
+
+## Pengertian
+
+Random variable diskrit mengambil nilai-nilai yang dapat dihitung satu per satu, misalnya hasil lemparan dadu, jumlah keberhasilan, atau banyaknya pelanggan yang datang dalam satu interval waktu.
+
+## Fungsi Dasar dari `random`
+
+### `random.random()`
+
+Menghasilkan bilangan acak uniform pada interval $[0,1)$.
+
+```{python}
+random.random()
+```
+
+### `random.randint(a, b)`
+
+Menghasilkan bilangan bulat acak dari $a$ sampai $b$.
+
+```{python}
+random.randint(1, 6)
+```
+
+Contoh simulasi 10 kali lempar dadu:
+
+```{python}
+[d := random.randint(1, 6) for _ in range(10)]
+```
+
+### `random.choice(seq)`
+
+Memilih satu elemen secara acak dari sebuah daftar.
+
+```{python}
+random.choice([0, 1])
+```
+
+### `random.choices(population, weights, k)`
+
+Mengambil sampel acak dengan bobot tertentu.
+
+```{python}
+random.choices([0, 1], weights=[0.7, 0.3], k=20)
+```
+
+Ini dapat dipakai untuk mensimulasikan variabel Bernoulli dengan peluang sukses 0.3.
+
+## Fungsi Diskrit pada `numpy.random`
+
+### Bernoulli / Binomial
+
+### `np.random.binomial(n, p, size)`
+
+Menghasilkan sampel dari distribusi binomial.
+
+```{python}
+np.random.binomial(n=10, p=0.4, size=8)
+```
+
+Untuk Bernoulli, gunakan `n=1`.
+
+```{python}
+np.random.binomial(n=1, p=0.3, size=20)
+```
+
+### Poisson
+
+### `np.random.poisson(lam, size)`
+
+```{python}
+np.random.poisson(lam=2.5, size=10)
+```
+
+### Geometrik
+
+### `np.random.geometric(p, size)`
+
+```{python}
+np.random.geometric(p=0.2, size=10)
+```
+
+## Fungsi Distribusi Diskrit pada `scipy.stats`
+
+### Binomial: `stats.binom`
+
+```{python}
+stats.binom.pmf(3, n=10, p=0.4)
+```
+
+Probabilitas kumulatif:
+
+```{python}
+stats.binom.cdf(3, n=10, p=0.4)
+```
+
+### Poisson: `stats.poisson`
+
+```{python}
+stats.poisson.pmf(4, mu=2.5)
+```
+
+```{python}
+stats.poisson.cdf(4, mu=2.5)
+```
+
+### Geometrik: `stats.geom`
+
+```{python}
+stats.geom.pmf(4, p=0.2)
+```
+
+## Statistik Ringkas untuk Data Diskrit
+
+```{python}
+sampel_dadu = np.random.randint(1, 7, size=100)
+
+print("Mean:", np.mean(sampel_dadu))
+print("Variansi:", np.var(sampel_dadu, ddof=1))
+print("Simpangan baku:", np.std(sampel_dadu, ddof=1))
+```
+
+## Tabel Frekuensi dengan `pandas`
+
+```{python}
+df_dadu = pd.DataFrame({"dadu": sampel_dadu})
+df_dadu["dadu"].value_counts().sort_index()
+```
+
+Tabel peluang empiris:
+
+```{python}
+df_dadu["dadu"].value_counts(normalize=True).sort_index()
+```
+
+## Visualisasi Diskrit
+
+```{python}
+frekuensi = df_dadu["dadu"].value_counts().sort_index()
+
+plt.figure(figsize=(7,4))
+plt.bar(frekuensi.index, frekuensi.values)
+plt.xlabel("Nilai dadu")
+plt.ylabel("Frekuensi")
+plt.title("Frekuensi Hasil Lemparan Dadu")
+plt.show()
+```
+
+# Random Variable Kontinu
+
+## Pengertian
+
+Random variable kontinu dapat mengambil nilai pada suatu interval kontinu, misalnya tinggi badan, berat badan, lama pelayanan, atau waktu tunggu.
+
+## Fungsi Dasar dari `numpy.random`
+
+### Uniform
+
+### `np.random.uniform(low, high, size)`
+
+```{python}
+np.random.uniform(low=10, high=20, size=5)
+```
+
+### Normal
+
+### `np.random.normal(loc, scale, size)`
+
+```{python}
+np.random.normal(loc=170, scale=8, size=10)
+```
+
+### Eksponensial
+
+### `np.random.exponential(scale, size)`
+
+Perhatikan bahwa pada NumPy, parameter yang digunakan adalah `scale = 1/lambda`.
+
+```{python}
+np.random.exponential(scale=2.0, size=10)
+```
+
+### Gamma
+
+### `np.random.gamma(shape, scale, size)`
+
+```{python}
+np.random.gamma(shape=2.0, scale=3.0, size=10)
+```
+
+## Fungsi Distribusi Kontinu pada `scipy.stats`
+
+### Normal: `stats.norm`
+
+Fungsi densitas probabilitas:
+
+```{python}
+stats.norm.pdf(175, loc=170, scale=8)
+```
+
+Fungsi distribusi kumulatif:
+
+```{python}
+stats.norm.cdf(175, loc=170, scale=8)
+```
+
+Kuantil atau inverse CDF:
+
+```{python}
+stats.norm.ppf(0.95, loc=170, scale=8)
+```
+
+### Eksponensial: `stats.expon`
+
+```{python}
+stats.expon.pdf(2, scale=2.0)
+```
+
+```{python}
+stats.expon.cdf(2, scale=2.0)
+```
+
+### Uniform: `stats.uniform`
+
+```{python}
+stats.uniform.pdf(7, loc=5, scale=10)
+```
+
+```{python}
+stats.uniform.cdf(7, loc=5, scale=10)
+```
+
+## Statistik Ringkas untuk Data Kontinu
+
+```{python}
+tinggi = np.random.normal(loc=170, scale=8, size=1000)
+
+print("Mean:", np.mean(tinggi))
+print("Variansi:", np.var(tinggi, ddof=1))
+print("Simpangan baku:", np.std(tinggi, ddof=1))
+print("Minimum:", np.min(tinggi))
+print("Maksimum:", np.max(tinggi))
+```
+
+## Ringkasan dengan `pandas`
+
+```{python}
+df_tinggi = pd.DataFrame({"tinggi": tinggi})
+df_tinggi.describe()
+```
+
+## Visualisasi Kontinu
+
+```{python}
+plt.figure(figsize=(7,4))
+plt.hist(tinggi, bins=30)
+plt.xlabel("Tinggi")
+plt.ylabel("Frekuensi")
+plt.title("Histogram Data Tinggi")
+plt.show()
+```
+
+### Membandingkan Histogram dengan Kurva Normal
+
+```{python}
+x = np.linspace(min(tinggi), max(tinggi), 300)
+y = stats.norm.pdf(x, loc=np.mean(tinggi), scale=np.std(tinggi, ddof=1))
+
+plt.figure(figsize=(7,4))
+plt.hist(tinggi, bins=30, density=True, alpha=0.7)
+plt.plot(x, y)
+plt.xlabel("Tinggi")
+plt.ylabel("Density")
+plt.title("Histogram dan Kurva Normal")
+plt.show()
+```
+
+# Random Variable Bivariat
+
+## Pengertian
+
+Random variable bivariat melibatkan dua variabel acak yang diamati bersama, misalnya tinggi dan berat, permintaan dan biaya, atau storage dan compute dalam komputasi awan.
+
+## Membuat Data Bivariat dengan Korelasi
+
+### `np.random.multivariate_normal(mean, cov, size)`
+
+Contoh dua variabel dengan korelasi positif.
+
+```{python}
+mean = [170, 65]
+cov = [[8**2, 0.7*8*10],
+       [0.7*8*10, 10**2]]
+
+bivariat = np.random.multivariate_normal(mean, cov, size=1000)
+
+x = bivariat[:, 0]
+y = bivariat[:, 1]
+
+print(x[:5])
+print(y[:5])
+```
+
+## Menyusun Data Bivariat dalam `pandas`
+
+```{python}
+df_biv = pd.DataFrame({
+    "tinggi": x,
+    "berat": y
+})
+
+df_biv.head()
+```
+
+## Statistik Bivariat
+
+### Mean masing-masing variabel
+
+```{python}
+df_biv.mean()
+```
+
+### Variansi dan kovariansi
+
+```{python}
+df_biv.cov()
+```
+
+### Korelasi
+
+```{python}
+df_biv.corr()
+```
+
+Dengan NumPy:
+
+```{python}
+np.cov(x, y)
+```
+
+```{python}
+np.corrcoef(x, y)
+```
+
+## Scatter Plot
+
+```{python}
+plt.figure(figsize=(6,5))
+plt.scatter(x, y, alpha=0.5)
+plt.xlabel("Tinggi")
+plt.ylabel("Berat")
+plt.title("Scatter Plot Tinggi vs Berat")
+plt.show()
+```
+
+## Regresi Linear Sederhana
+
+### `stats.linregress(x, y)`
+
+```{python}
+hasil_regresi = stats.linregress(x, y)
+hasil_regresi
+```
+
+Mengambil slope dan intercept:
+
+```{python}
+print("Slope:", hasil_regresi.slope)
+print("Intercept:", hasil_regresi.intercept)
+print("R-value:", hasil_regresi.rvalue)
+```
+
+Visualisasi garis regresi:
+
+```{python}
+plt.figure(figsize=(6,5))
+plt.scatter(x, y, alpha=0.4)
+plt.plot(x, hasil_regresi.intercept + hasil_regresi.slope * x)
+plt.xlabel("Tinggi")
+plt.ylabel("Berat")
+plt.title("Scatter Plot dan Garis Regresi")
+plt.show()
+```
+
+# Joint Distribution Empiris dengan `pandas`
+
+## Untuk Variabel Diskrit Bivariat
+
+Misalnya kita punya dua dadu.
+
+```{python}
+dadu1 = np.random.randint(1, 7, size=1000)
+dadu2 = np.random.randint(1, 7, size=1000)
+
+df_dua_dadu = pd.DataFrame({"dadu1": dadu1, "dadu2": dadu2})
+```
+
+### Tabel frekuensi gabungan
+
+```{python}
+pd.crosstab(df_dua_dadu["dadu1"], df_dua_dadu["dadu2"])
+```
+
+### Tabel peluang gabungan
+
+```{python}
+pd.crosstab(df_dua_dadu["dadu1"], df_dua_dadu["dadu2"], normalize=True)
+```
+
+### Peluang marginal
+
+```{python}
+pd.crosstab(df_dua_dadu["dadu1"], columns="prob", normalize=True)
+```
+
+```{python}
+pd.crosstab(columns=df_dua_dadu["dadu2"], index="prob", normalize=True)
+```
+
+# Contoh Simulasi Terpadu
+
+## Kasus Diskrit: Jumlah keberhasilan
+
+```{python}
+keberhasilan = np.random.binomial(n=20, p=0.3, size=1000)
+
+print("Rata-rata empiris:", np.mean(keberhasilan))
+print("Rata-rata teoritis:", 20 * 0.3)
+print("Variansi empiris:", np.var(keberhasilan, ddof=1))
+print("Variansi teoritis:", 20 * 0.3 * 0.7)
+```
+
+## Kasus Kontinu: Waktu tunggu eksponensial
+
+```{python}
+waktu_tunggu = np.random.exponential(scale=5, size=1000)
+
+print("Rata-rata empiris:", np.mean(waktu_tunggu))
+print("Rata-rata teoritis:", 5)
+```
+
+## Kasus Bivariat: Tinggi dan berat
+
+```{python}
+print("Kovariansi:\n", df_biv.cov())
+print("Korelasi:\n", df_biv.corr())
+```
+
+# Ringkasan Fungsi Penting
+
+## Diskrit
+
+| Fungsi | Kegunaan | Contoh |
+|---|---|---|
+| `random.randint(a,b)` | Bilangan bulat acak | `random.randint(1,6)` |
+| `random.choice(seq)` | Memilih satu elemen acak | `random.choice([0,1])` |
+| `np.random.binomial(n,p,size)` | Sampel binomial/Bernoulli | `np.random.binomial(1,0.3,10)` |
+| `np.random.poisson(lam,size)` | Sampel Poisson | `np.random.poisson(2.5,10)` |
+| `np.random.geometric(p,size)` | Sampel geometrik | `np.random.geometric(0.2,10)` |
+| `stats.binom.pmf(...)` | Probabilitas titik binomial | `stats.binom.pmf(3,10,0.4)` |
+| `stats.poisson.pmf(...)` | Probabilitas titik Poisson | `stats.poisson.pmf(4,2.5)` |
+
+## Kontinu
+
+| Fungsi | Kegunaan | Contoh |
+|---|---|---|
+| `np.random.uniform(low,high,size)` | Sampel uniform | `np.random.uniform(0,1,10)` |
+| `np.random.normal(loc,scale,size)` | Sampel normal | `np.random.normal(170,8,10)` |
+| `np.random.exponential(scale,size)` | Sampel eksponensial | `np.random.exponential(2,10)` |
+| `stats.norm.pdf(...)` | Densitas normal | `stats.norm.pdf(175,170,8)` |
+| `stats.norm.cdf(...)` | CDF normal | `stats.norm.cdf(175,170,8)` |
+| `stats.norm.ppf(...)` | Kuantil normal | `stats.norm.ppf(0.95,170,8)` |
+
+## Bivariat
+
+| Fungsi | Kegunaan | Contoh |
+|---|---|---|
+| `np.random.multivariate_normal(...)` | Sampel normal bivariat | `np.random.multivariate_normal(mean,cov,1000)` |
+| `df.cov()` | Matriks kovariansi | `df_biv.cov()` |
+| `df.corr()` | Matriks korelasi | `df_biv.corr()` |
+| `np.cov(x,y)` | Kovariansi | `np.cov(x,y)` |
+| `np.corrcoef(x,y)` | Korelasi | `np.corrcoef(x,y)` |
+| `stats.linregress(x,y)` | Regresi linear sederhana | `stats.linregress(x,y)` |
+| `pd.crosstab(...)` | Joint distribution empiris diskrit | `pd.crosstab(df["x"], df["y"])` |
+
+# Latihan Mahasiswa
+
+## Latihan 1: Diskrit
+
+Simulasikan 500 kali lemparan dadu. Hitung:
+
+1. Rata-rata empiris.
+2. Variansi empiris.
+3. Frekuensi masing-masing angka 1 sampai 6.
+4. Buat diagram batang frekuensinya.
+
+## Latihan 2: Kontinu
+
+Bangkitkan 1000 sampel dari distribusi normal dengan mean 70 dan simpangan baku 12. Hitung:
+
+1. Mean empiris.
+2. Variansi empiris.
+3. Histogram data.
+4. Bandingkan histogram dengan kurva normal teoritis.
+
+## Latihan 3: Bivariat
+
+Bangkitkan 2000 sampel bivariat normal dengan korelasi 0.6. Lalu:
+
+1. Hitung mean masing-masing variabel.
+2. Hitung kovariansi dan korelasi.
+3. Buat scatter plot.
+4. Estimasikan garis regresi linear.
+
+## Latihan 4: Joint Distribution Diskrit
+
+Simulasikan dua dadu yang dilempar bersama-sama sebanyak 1000 kali. Gunakan `pd.crosstab()` untuk:
+
+1. Membuat tabel frekuensi gabungan.
+2. Membuat tabel peluang gabungan.
+3. Menghitung peluang marginal.
+4. Mengidentifikasi pasangan hasil yang paling sering muncul.
+
+# Penutup
+
+Python menyediakan ekosistem yang sangat kaya untuk mempelajari random variable dalam bentuk diskrit, kontinu, maupun bivariat. `numpy` sangat kuat untuk simulasi, `scipy.stats` sangat berguna untuk distribusi teoritis, `pandas` membantu tabulasi dan analisis data, sedangkan `matplotlib` memudahkan visualisasi.
+
+Dokumen ini dapat dikembangkan lebih lanjut menjadi notebook praktikum, modul pembelajaran, atau bahan tugas mahasiswa.

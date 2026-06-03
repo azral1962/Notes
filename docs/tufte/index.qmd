@@ -1,0 +1,389 @@
+---
+title: "Petunjuk Analisis Joint Distribution di Spreadsheet"
+subtitle: "Berat, Tinggi, Bulan Lahir, Kovarians, Korelasi, dan Scatter Plot"
+lang: id
+
+documenttype: Handout
+abstract: |
+  This **Tufte Inspired** manuscript format for Quarto honors Edward Tufte's distinctive style. It simplifies creating handout-like documents and websites by emulating the aesthetics of Tufte's books. This document serves two purposes: It showcases the format and acts as an evolving authoring guide.
+
+author: 
+  - name: "Armein Z. R. Langi"
+    email: azr.langi@gmail.com
+toc: true
+
+version: [v.1.0]
+date: last-modified
+execute: 
+  echo: fenced
+  freeze: auto
+bibliography: references.bib
+bibliographystyle: "springer-humanities-author-date"  
+
+---
+
+# Pendahuluan
+
+Dokumen ini menjelaskan cara melakukan analisis sederhana langsung di **spreadsheet** seperti **Microsoft Excel** atau **Google Sheets**, untuk data mahasiswa yang memuat:
+
+- nama mahasiswa,
+- bulan lahir (*month of birth* / `mob`),
+- berat badan,
+- tinggi badan.
+
+Analisis yang akan dibahas meliputi:
+
+1. **joint distribution** untuk pasangan:
+   - berat vs tinggi,
+   - bulan lahir vs berat,
+2. **kovarians**,
+3. **korelasi**,
+4. **scatter plot**.
+
+# Struktur Data
+
+Misalkan data tersusun seperti berikut:
+
+| Kolom | Isi Data |
+|---|---|
+| A | Nama mahasiswa |
+| B | Bulan lahir (`mob`) |
+| C | Berat badan |
+| D | Tinggi badan |
+
+Contoh data berada pada baris **2 sampai 101**.
+
+## Contoh Tabel Data
+
+| Nama | MOB | Berat | Tinggi |
+|---|---|---:|---:|
+| Andi | Jan | 56 | 165 |
+| Budi | Mar | 68 | 172 |
+| Citra | Jan | 49 | 158 |
+| Dewi | Jul | 61 | 160 |
+| Eko | Sep | 73 | 175 |
+
+# Konsep Dasar
+
+## Apa itu joint distribution?
+
+**Joint distribution** adalah distribusi gabungan dua variabel.  
+Dalam konteks spreadsheet, bentuk praktisnya biasanya berupa **tabel frekuensi silang**.
+
+Contoh:
+
+- berapa banyak mahasiswa dengan berat **50--59 kg** dan tinggi **160--169 cm**,
+- berapa banyak mahasiswa lahir di bulan **Januari** dan memiliki berat **60--69 kg**.
+
+## Mengapa perlu bin?
+
+Untuk variabel numerik seperti **berat** dan **tinggi**, data sering dikelompokkan ke dalam **interval** atau **bin** agar mudah dibuat tabel distribusinya.
+
+Contoh bin:
+
+- berat: 40--49, 50--59, 60--69, 70--79
+- tinggi: 150--159, 160--169, 170--179
+
+# Joint Distribution Berat vs Tinggi
+
+Karena **berat** dan **tinggi** adalah variabel numerik, kita buat dulu kolom kategori.
+
+## Langkah 1: membuat kategori berat
+
+Tambahkan kolom baru, misalnya di **E**, dengan judul **Kategori Berat**.
+
+Pada sel `E2` tulis:
+
+```excel
+=FLOOR(C2,10)&"-"&FLOOR(C2,10)+9
+```
+
+Lalu salin ke bawah.
+
+Contoh hasil:
+
+- 56 menjadi `50-59`
+- 68 menjadi `60-69`
+
+## Langkah 2: membuat kategori tinggi
+
+Tambahkan kolom baru, misalnya di **F**, dengan judul **Kategori Tinggi**.
+
+Pada sel `F2` tulis:
+
+```excel
+=FLOOR(D2,10)&"-"&FLOOR(D2,10)+9
+```
+
+Lalu salin ke bawah.
+
+Contoh hasil:
+
+- 165 menjadi `160-169`
+- 172 menjadi `170-179`
+
+## Langkah 3: membuat tabel distribusi gabungan
+
+Misalkan:
+
+- daftar kategori berat diletakkan di `H2:H5`,
+- daftar kategori tinggi diletakkan di `I1:L1`.
+
+Contoh susunan:
+
+|   | I | J | K | L |
+|---|---|---|---|---|
+| 1 | 150-159 | 160-169 | 170-179 | 180-189 |
+| 2 | 40-49 |   |   |   |
+| 3 | 50-59 |   |   |   |
+| 4 | 60-69 |   |   |   |
+| 5 | 70-79 |   |   |   |
+
+Di sel `I2`, masukkan:
+
+```excel
+=COUNTIFS($E$2:$E$101,$H2,$F$2:$F$101,I$1)
+```
+
+Salin ke kanan dan ke bawah.
+
+Hasil tabel ini adalah **joint frequency distribution** antara berat dan tinggi.
+
+## Langkah 4: mengubah frekuensi menjadi probabilitas
+
+Jika ingin menjadi **joint probability distribution**, bagi setiap frekuensi dengan jumlah data.
+
+Misalnya di sel lain:
+
+```excel
+=I2/COUNTA($A$2:$A$101)
+```
+
+Salin ke seluruh tabel.
+
+# Joint Distribution Bulan Lahir vs Berat
+
+Karena **bulan lahir** sudah merupakan variabel kategorikal, kita hanya perlu membuat kategori untuk **berat**.
+
+Gunakan kolom **Kategori Berat** yang sudah dibuat di kolom `E`.
+
+Misalkan:
+
+- daftar bulan diletakkan di `N2:N13`,
+- daftar kategori berat diletakkan di `O1:R1`.
+
+Di sel `O2`, masukkan:
+
+```excel
+=COUNTIFS($B$2:$B$101,$N2,$E$2:$E$101,O$1)
+```
+
+Salin ke kanan dan ke bawah.
+
+Ini menghasilkan **joint frequency distribution** antara bulan lahir dan kategori berat.
+
+## Catatan
+
+Untuk pasangan **bulan lahir vs berat**, joint distribution lebih bermakna daripada menghitung kovarians langsung, karena bulan lahir adalah variabel kategorikal.
+
+# Menggunakan Pivot Table
+
+Untuk banyak pengguna, cara termudah membuat joint distribution adalah dengan **Pivot Table**.
+
+## Berat vs Tinggi
+
+1. Pilih seluruh data.
+2. Klik **Insert** -> **Pivot Table**.
+3. Masukkan **Kategori Berat** ke **Rows**.
+4. Masukkan **Kategori Tinggi** ke **Columns**.
+5. Masukkan **Nama** atau **Berat** ke **Values**, lalu ubah menjadi **Count**.
+
+## Bulan Lahir vs Berat
+
+1. Buat Pivot Table baru.
+2. Masukkan **MOB** ke **Rows**.
+3. Masukkan **Kategori Berat** ke **Columns**.
+4. Masukkan **Nama** ke **Values**, lalu ubah menjadi **Count**.
+
+# Kovarians
+
+Kovarians mengukur bagaimana dua variabel numerik berubah bersama.
+
+Untuk menghitung kovarians antara **berat** dan **tinggi**:
+
+## Kovarians sampel
+
+```excel
+=COVARIANCE.S(C2:C101,D2:D101)
+```
+
+## Kovarians populasi
+
+```excel
+=COVARIANCE.P(C2:C101,D2:D101)
+```
+
+## Interpretasi singkat
+
+- Nilai **positif**: jika berat naik, tinggi cenderung naik.
+- Nilai **negatif**: jika berat naik, tinggi cenderung turun.
+- Nilai dekat **nol**: hubungan linear bersama lemah.
+
+# Korelasi
+
+Korelasi mengukur kekuatan hubungan linear dua variabel numerik.
+
+Gunakan:
+
+```excel
+=CORREL(C2:C101,D2:D101)
+```
+
+## Interpretasi umum
+
+- mendekati `+1`: hubungan positif kuat,
+- mendekati `0`: hubungan linear lemah,
+- mendekati `-1`: hubungan negatif kuat.
+
+## Catatan penting
+
+Korelasi **lebih mudah diinterpretasikan** daripada kovarians karena nilainya selalu berada antara `-1` dan `+1`.
+
+# Scatter Plot
+
+## Scatter plot untuk berat vs tinggi
+
+Ini adalah grafik yang paling sesuai.
+
+Langkah umum:
+
+1. blok kolom **Berat** dan **Tinggi**,
+2. pilih **Insert** -> **Chart**,
+3. pilih jenis **Scatter Plot**,
+4. atur:
+   - sumbu-X = berat,
+   - sumbu-Y = tinggi.
+
+## Interpretasi scatter plot
+
+Dari scatter plot, Anda dapat melihat:
+
+- apakah titik-titik membentuk pola naik,
+- apakah ada *outlier*,
+- apakah hubungan tampak linear atau tidak.
+
+# Bulan Lahir vs Berat: Visualisasi yang Lebih Cocok
+
+Karena bulan lahir adalah kategori, scatter plot kurang ideal.
+
+Visualisasi yang lebih cocok:
+
+- **diagram batang** rata-rata berat per bulan,
+- **box plot** berat per bulan,
+- **pivot chart** dari tabel distribusi.
+
+## Menghitung rata-rata berat per bulan
+
+Misalkan daftar bulan ada di `N2:N13`.  
+Di sel `O2` gunakan:
+
+```excel
+=AVERAGEIF($B$2:$B$101,N2,$C$2:$C$101)
+```
+
+Untuk menghitung banyaknya mahasiswa per bulan:
+
+```excel
+=COUNTIF($B$2:$B$101,N2)
+```
+
+# Ringkasan Rumus Penting
+
+## Kategori berat
+
+```excel
+=FLOOR(C2,10)&"-"&FLOOR(C2,10)+9
+```
+
+## Kategori tinggi
+
+```excel
+=FLOOR(D2,10)&"-"&FLOOR(D2,10)+9
+```
+
+## Joint frequency distribution
+
+```excel
+=COUNTIFS(range_kategori_1,label_baris,range_kategori_2,label_kolom)
+```
+
+## Kovarians sampel
+
+```excel
+=COVARIANCE.S(C2:C101,D2:D101)
+```
+
+## Korelasi
+
+```excel
+=CORREL(C2:C101,D2:D101)
+```
+
+## Rata-rata berat per bulan
+
+```excel
+=AVERAGEIF($B$2:$B$101,N2,$C$2:$C$101)
+```
+
+# Saran Interpretasi untuk Mahasiswa
+
+Saat mahasiswa selesai membuat tabel dan grafik, mereka dapat diminta menjawab pertanyaan seperti:
+
+1. Apakah berat dan tinggi menunjukkan kecenderungan hubungan positif?
+2. Di interval berat dan tinggi mana paling banyak mahasiswa berada?
+3. Apakah bulan lahir tertentu tampak dominan pada kelompok berat tertentu?
+4. Apakah ada data yang tampak menyimpang dari pola umum?
+
+# Latihan Singkat
+
+## Latihan 1
+
+Gunakan data mahasiswa Anda untuk membuat:
+
+- kategori berat,
+- kategori tinggi,
+- tabel joint distribution berat vs tinggi.
+
+## Latihan 2
+
+Hitung:
+
+- kovarians berat dan tinggi,
+- korelasi berat dan tinggi.
+
+Lalu jelaskan apakah hubungan keduanya lemah, sedang, atau kuat.
+
+## Latihan 3
+
+Buat scatter plot berat vs tinggi dan tulis interpretasi singkat dalam 3--5 kalimat.
+
+## Latihan 4
+
+Buat tabel distribusi gabungan antara bulan lahir dan kategori berat, lalu amati apakah ada pola tertentu.
+
+# Penutup
+
+Dengan bantuan fungsi spreadsheet sederhana seperti `COUNTIFS`, `COVARIANCE.S`, `CORREL`, dan fitur **Pivot Table** serta **Scatter Plot**, analisis hubungan dua variabel dapat dilakukan langsung tanpa software statistik tambahan.
+
+Untuk data **numerik vs numerik** seperti berat dan tinggi, analisis yang paling sesuai adalah:
+
+- joint distribution,
+- kovarians,
+- korelasi,
+- scatter plot.
+
+Untuk data **kategorikal vs numerik** seperti bulan lahir dan berat, analisis yang lebih sesuai adalah:
+
+- tabel distribusi gabungan,
+- rata-rata per kategori,
+- diagram batang atau box plot.

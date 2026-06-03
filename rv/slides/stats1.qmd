@@ -1,0 +1,62 @@
+# Statisticl Functiond in Libre Office
+
+LibreOffice Calc offers over 70 statistical functions that cover simple arithmetic to complex probability distributions. These functions allow you to calculate probabilities for various discrete and continuous distributions, as well as their inverse values. [1, 2] 
+## Common Probability Distribution Functions
+Most probability functions in Calc follow a naming convention where .DIST calculates the distribution (PDF/CDF) and .INV calculates the inverse. [2, 3, 4, 5] 
+
+* Normal Distribution:
+* NORM.DIST(Value; Mean; STDEV; Cumulative): Returns the normal distribution for a specified mean and standard deviation.
+   * NORM.INV(Probability; Mean; STDEV): Returns the inverse of the cumulative normal distribution.
+* Binomial Distribution:
+* BINOM.DIST(X; Trials; Probability; Cumulative): Calculates the individual term binomial distribution probability.
+   * BINOM.INV(Trials; Probability; Alpha): Returns the smallest value for which the cumulative binomial distribution is greater than or equal to a criterion value.
+* Poisson Distribution:
+* POISSON.DIST(X; Mean; Cumulative): Returns the Poisson distribution.
+* Chi-Square Distribution:
+* CHISQ.DIST(X; Degrees_freedom; Cumulative): Returns the left-tailed probability of the chi-square distribution.
+* T-Distribution:
+* T.DIST(X; Degrees_freedom; Cumulative): Returns the left-tailed Student's t-distribution. [6, 7, 8] 
+
+## General Probability Functions
+
+* PROB(Data; Probability; Start; End): Returns the probability that values in a range are between two limits.
+* GAUSS(X): Returns the probability that a random variable following the standard normal distribution falls between the mean and $x$ standard deviations.
+* PHI(X): Returns the value of the density function for a standard normal distribution at $x$. [7] 
+
+## Core Statistical Prerequisites
+To use these functions effectively, you often need preliminary data measures:
+
+* Mean: AVERAGE(Range).
+* Standard Deviation: STDEV.P(Range) (for population) or STDEV.S(Range) (for sample).
+* Counting: COUNT(Range) to determine sample size $n$. [6, 7, 9, 10] 
+
+## Analysis Toolpack
+For more advanced analysis without manual formulas, you can use the [Analysis Toolpack](https://help.libreoffice.org/latest/en-US/text/scalc/01/statistics.html) (found under Data > Statistics). This includes: [11] 
+
+* Descriptive Statistics.
+* Regression Analysis.
+* Correlation & Covariance.
+* Tests: ANOVA, F-test, T-test, and Z-test. [7, 12, 13, 14, 15, 16] 
+
+For a full list of over 70 statistical functions, you can browse the [LibreOffice Help Wiki](https://help.libreoffice.org/latest/en-US/text/scalc/01/04060100.html) or use the Function Wizard ($Ctrl + F2$) within Calc and select the "Statistical" category. [17, 18, 19] 
+Would you like a step-by-step example of how to calculate a specific probability distribution (like a Bell Curve) using your own data?
+
+[1] [https://www.yaclass.in](https://www.yaclass.in/p/science-state-board/class-8/libreoffice-calc-13959/introduction-to-spreadsheets-libreoffice-calc-11415/re-7de40015-9350-4fd0-bb38-55a880f5f1a1#:~:text=LibreOffice%20Calc%20includes%20over%2070%20statistical%20functions,total%20of%20a%20given%20set%20of%20values.)
+[2] [https://help.libreoffice.org](https://help.libreoffice.org/latest/uk/text/scalc/01/04060109.html)
+[3] [https://wiki.documentfoundation.org](https://wiki.documentfoundation.org/Documentation/Calc_Functions/NORM.INV)
+[4] [https://help.libreoffice.org](https://help.libreoffice.org/latest/mk/text/scalc/01/04060181.html?&DbPAR=WRITER&System=LIN#:~:text=*%20%D0%9C%D0%B5%D0%BD%D0%B8%D1%98%D0%B0%20%D0%A2%D0%B0%D0%B1%D0%B5%D0%BB%D0%B0%20%D0%9F%D0%BE%D0%BC%D0%BE%D1%88%20*%20%D0%90%D0%BB%D0%B0%D1%82%D0%BD%D0%B8%D1%86%D0%B8%20%D0%90%D0%BB%D0%B0%D1%82%D0%BD%D0%B8%D0%BA,%D0%B7%D0%B0%20%D1%82%D0%B0%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D0%BD%D0%B8%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D1%86%D0%B8%20%D0%90%D0%BB%D0%B0%D1%82%D0%BD%D0%B8%D0%BA%20%D0%B7%D0%B0%20%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%83%D0%B0%D0%BB%D0%BD%D0%B8%20%D0%BE%D0%B1%D1%98%D0%B5%D0%BA%D1%82%D0%B8)
+[5] [https://www.sierrachart.com](https://www.sierrachart.com/index.php?page=doc/SpreadsheetFunctions.html)
+[6] [https://www.youtube.com](https://www.youtube.com/watch?v=urc4yBAxGkc&t=178)
+[7] [https://help.libreoffice.org](https://help.libreoffice.org/latest/en-US/text/scalc/01/04060181.html)
+[8] [https://www.studocu.com](https://www.studocu.com/en-us/document/university-of-the-people/introduction-to-statistics/math-1280-libre-office-guide/68613785)
+[9] [https://www.youtube.com](https://www.youtube.com/watch?v=D6jejan0f18&t=360)
+[10] [https://www.comfsm.fm](http://www.comfsm.fm/~dleeling/statistics/text.html)
+[11] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG252/CG25211-DataAnalysis.html#:~:text=Using%20Statistics%20tools%20The%20tools%20found%20under,are%20described%20in%20the%20subsections%20that%20follow.)
+[12] [https://help.libreoffice.org](https://help.libreoffice.org/latest/en-US/text/scalc/01/statistics.html)
+[13] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG248/CG24811-DataAnalysis.html#:~:text=For%20more%20information%20on%20descriptive%20statistics%2C%20refer%20to%20the%20corresponding%20Wikipedia%20article%20at%20https://en.wikipedia.org/wiki/Descriptive_statistics.)
+[14] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG24/CG2410-DataAnalysis.html#:~:text=For%20more%20information%20on%20statistical%20correlation%2C%20refer%20to%20the%20corresponding%20Wikipedia%20article%20at%20https://en.wikipedia.org/wiki/Correlation_and_dependence.)
+[15] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG252/CG25211-DataAnalysis.html#:~:text=For%20more%20information%20on%20F%2Dtests%2C%20refer%20to%20the%20corresponding%20Wikipedia%20article%20at%20https://en.wikipedia.org/wiki/F%2Dtest.)
+[16] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG262/CG26211-DataAnalysis.html#:~:text=For%20more%20information%20on%20z%2Dtests%2C%20refer%20to%20the%20corresponding%20Wikipedia%20article%20at%20https://en.wikipedia.org/wiki/Z%2Dtest.)
+[17] [https://wiki.documentfoundation.org](https://wiki.documentfoundation.org/images/2/24/CG4116-CalcFunctions.pdf)
+[18] [https://help.libreoffice.org](https://help.libreoffice.org/latest/gu/text/scalc/01/04060181.html?&DbPAR=DRAW&System=UNIX)
+[19] [https://books.libreoffice.org](https://books.libreoffice.org/en/CG72/CG7201-Introduction.html#:~:text=The%20Functions%20deck%20contains%20a%20list%20of,on%20the%20Formula%20Bar%2C%20or%20pressing%20Ctrl+F2.)

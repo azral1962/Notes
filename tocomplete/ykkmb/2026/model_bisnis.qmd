@@ -1,0 +1,184 @@
+---
+title: "Model Bisnis Wisma Sejahtera"
+
+---
+
+Berikut adalah laporan lengkap dalam bahasa Indonesia mengenai analisa usulan anggaran Kawasan Dago 109, yang mengintegrasikan model bisnis berbasis luas lahan, asumsi nilai pasar, dan analisa strategis organisasi.
+
+---
+
+# LAPORAN ANALISA STRATEGIS & USULAN ANGGARAN KAWASAN DAGO 109
+**Periode Kepengurusan 2026 – 2030**
+
+## 1. PENDAHULUAN
+Laporan ini disusun untuk memberikan gambaran komprehensif mengenai transformasi pengelolaan Kawasan Dago 109 (Milik YKKMB) dari model tradisional menuju manajemen profesional. Fokus utama adalah mengoptimalkan aset tanah seluas **2.745 m²** guna mencapai kemandirian finansial yayasan sembari tetap menjalankan misi sosial bagi GMKI Bandung.
+
+## 2. ASUMSI DASAR & NILAI PASAR
+Berdasarkan letak geografis di **Jalan Ir. H. Juanda (Dago)** yang merupakan zona komersial *prime* di Kota Bandung, berikut adalah asumsi yang digunakan:
+
+### A. Parameter Luas Lahan
+* **Total Lahan:** 2.745 m²
+* **Area Sosial (20%):** 549 m² (Sekretariat, ruang rapat, dan kegiatan organisasi – **Gratis**)
+* **Area Komersial (80%):** 2.196 m² (Area yang menghasilkan pendapatan sewa/layanan)
+
+### B. Nilai Pasar Kawasan Dago (Referensi 2026)
+* **Sewa Retail/Kafe:** Rp150.000 – Rp350.000 / m² / bulan.
+* **Sewa Kantor/Startup:** Rp100.000 – Rp200.000 / m² / bulan.
+* **Sewa Lahan Terbuka (Event/Parkir):** Rp25.000 – Rp50.000 / m² / bulan.
+
+### C. Beban SDM Profesional (UMR 2026: Rp4.737.678)
+Untuk mengelola kawasan secara profesional, diperlukan tim minimal:
+1.  **1 Manager Kawasan** (1.5x UMR)
+2.  **1 Petugas Pemelihara** (1x UMR)
+3.  **1 Petugas Ops & Keamanan** (1x UMR)
+* **Total Beban SDM (Termasuk BPJS/Tunjangan):** ± **Rp219.000.000 / tahun.**
+
+---
+
+## 3. ANALISA EMPAT SKENARIO ANGGARAN
+
+| Indikator Analisa | Skenario A (Agresif) | Skenario B (Moderat) | Skenario C (Survival) | Skenario D (Baseline 2025) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Total Penerimaan/Thn** | **> Rp1.100.000.000** | **Rp600.000.000** | **Rp300.000.000** | **Rp187.750.000** |
+| **Penerimaan/m²/Bulan** | **Rp41.742** | **Rp22.768** | **Rp11.384** | **Rp7.124** |
+| **Pajak Final 10%** | Rp110.000.000 | Rp60.000.000 | Rp30.000.000 | Rp18.775.000 |
+| **Biaya SDM (Profesional)** | Rp219.000.000 | Rp219.000.000 | Rp219.000.000 | Rp48.000.000 (Lama) |
+| **Beban Ops (Maint/Util)** | Rp100.000.000 | Rp75.000.000 | Rp50.000.000 | Rp47.809.100 |
+| **Tabungan Strategis HGB** | Rp50.000.000 | Rp25.000.000 | Rp0 | Rp0 |
+| **Surplus Bersih (Kas)** | **± Rp621.000.000** | **± Rp221.000.000** | **± Rp1.000.000** | **Rp73.165.900** |
+
+### Analisa Teknis Model Bisnis:
+* **Skenario A (Target Ideal):** Meskipun agresif, nilai Rp41rb/m²/bulan masih **60% di bawah harga pasar** terendah Dago (Rp100rb). Hal ini menunjukkan potensi pertumbuhan yang sangat tinggi jika lahan terbuka dan Bangunan Studio (eks Petshop) dimaksimalkan.
+* **Skenario D (Kondisi Saat Ini):** Sangat tidak efisien. Pemanfaatan aset hanya mencapai ±7% dari potensi nilai pasar. Skenario ini **tidak dapat dipertahankan** karena surplusnya akan habis hanya untuk membayar gaji tim sesuai UMR 2026.
+
+---
+
+## 4. ANALISA SWOT KAWASAN DAGO 109
+
+### **Kekuatan (Strengths)**
+1.  **Lokasi Strategis:** Berada di pusat aktivitas mahasiswa dan bisnis Kota Bandung (Jl. Ir. H. Juanda).
+2.  **Kepemilikan Sah:** Luas lahan yang besar (2.745 m²) dengan sertipikat HGB yang jelas.
+3.  **Ekosistem Komunitas:** Memiliki pangsa pasar tetap (*captive market*) dari anggota GMKI, alumni, dan jaringan gereja.
+
+### **Kelemahan (Weaknesses)**
+1.  **Produktivitas Rendah:** Nilai sewa saat ini (Rp7rb/m²) jauh di bawah standar komersial kawasan.
+2.  **Fisik Bangunan:** Beberapa unit aset memerlukan renovasi besar untuk mencapai harga sewa pasar.
+3.  **Beban Dana Cadangan:** Adanya kebutuhan dana perpanjangan HGB sebesar Rp2 Miliar pada tahun 2029 yang belum terhimpun.
+
+### **Peluang (Opportunities)**
+1.  **Kampus Digital:** Transformasi menjadi *Digital Production House* dan *Virtual Office* meningkatkan *yield* per m² tanpa bergantung pada fisik gedung yang besar.
+2.  **Youth Park Mall:** Aktivasi 45% lahan terbuka untuk kuliner kreatif (food truck/container) dapat menghasilkan pendapatan harian yang stabil.
+3.  **Kemitraan Strategis:** Potensi kerjasama B2B dengan universitas dan sekolah Kristen di Bandung.
+
+### **Tantangan (Threats)**
+1.  **Kenaikan Biaya SDM:** Kewajiban mengikuti UMR 2026 menaikkan beban operasional secara signifikan.
+2.  **Disiplin Pajak:** Kewajiban Pajak Final 10% atas sewa harus dikelola secara ketat agar tidak menimbulkan masalah legal.
+3.  **Kompetisi:** Banyaknya *coworking space* dan kafe modern di area Dago menuntut keunikan layanan dari Dago 109.
+
+---
+
+## 5. KESIMPULAN & REKOMENDASI
+
+1.  **Transisi Wajib:** Yayasan harus segera meninggalkan **Skenario D** (Model 2025) karena akan menyebabkan defisit kas setelah penyesuaian gaji tim profesional 2026.
+2.  **Target Jangka Pendek:** Menetapkan **Skenario B** sebagai target minimal di tahun 2026 dengan menaikkan rata-rata penerimaan menjadi Rp22.000/m².
+3.  **Strategi Monetisasi:** * Mengonversi Bangunan Studio menjadi area retail kreatif.
+    * Menerapkan tarif parkir komersial dan sewa lahan terbuka untuk event pemuda.
+    * Mengaktifkan layanan *Virtual Office* untuk mendukung konsep Kampus Digital.
+4.  **Dana Cadangan:** Dari surplus Skenario B atau A, wajib menyisihkan minimal Rp25-50 Juta per tahun untuk tabungan perpanjangan HGB 2029.
+
+**Disusun Oleh:**
+*Pengurus YKKMB*
+*Bandung, April 2026*
+
+
+
+# Visi Pengembangan Kawasan Dago 109 (Arsitektur Berlapis)
+Visi pengembangan kawasan Dago 109 dirancang secara berlapis dalam lima tahap:
+1. **Wisma Sejahtera:** Merupakan fondasi awal yang dikelola oleh Pengurus YKKMB untuk menyediakan lingkungan fisik yang aman, asri, dan sehat, serta layanan operasional dasar.
+2. **Youth Center:** Layanan yang dikelola bersama Badan Usaha untuk menghadirkan keramaian pengunjung pemuda melalui pengalaman yang kreatif, edukatif, dan inspiratif dari para *tenants*.
+3. **Digital Campus:** Layanan akademik dan kokurikuler yang dioperasikan oleh *tenant* khusus dan mitra perguruan tinggi untuk mengembangkan talenta, kompetensi digital, dan karakter kepemimpinan peserta didik.
+4. **Entrepreneurial Center:** Pusat kewirausahaan yang mendukung peluncuran *startups*, inovasi, investasi, dan produksi bisnis digital.
+5. **Value Creation Hub:** Tahap puncak kolaborasi jangka panjang bersama masyarakat, pemerintah, dan gereja untuk melahirkan agen-agen pembangun kesejahteraan masyarakat luas.
+
+# Informasi Tambahan :
+Kita tidak miliki informasi spesifik mengenai rata-rata persentase biaya sewa terhadap biaya operasi atau *revenue* dari *tenant*. Namun, sebagai standar umum di dunia bisnis properti komersial, biaya sewa yang sehat dan *sustainable* biasanya berkisar antara **10% hingga 15%** dari total pendapatan kotor (*gross revenue*) sebuah usaha, tergantung pada jenis industrinya (F&B, ritel, atau perkantoran). 
+
+
+**Analisis Kelas Revenue Tenant untuk Skenario A (Berdasarkan Dokumen):**
+
+Untuk mencapai **Skenario A** yang *sustainable*, YKKMB menargetkan total pendapatan dari sewa minimal **Rp 1.000.000.000 per tahun** dari total area komersial seluas 2.196 m². Ini setara dengan beban sewa **Rp 455.373 per m² per tahun** atau sekitar Rp 38.000 per m² per bulan.
+
+Berdasarkan patokan sewa 10%-15% di atas, berikut adalah kelas *revenue* penyewa yang mampu menyewa di Dago 109 secara *sustainable*:
+
+## **1. Penyewa Kawasan Skala Besar (Tenant Strategis / Badan Pelaksana)**
+Jika sebuah badan pelaksana menyewa atau mengambil alih operasional seluruh area komersial dengan nilai KSO Rp 1 Miliar per tahun, maka institusi tersebut harus memiliki kelas *revenue* sebesar **Rp 6,6 Miliar hingga Rp 10 Miliar per tahun**. 
+
+*Dukungan dari Data Sumber:* 
+Angka ini ternyata **sangat realistis dan sejalan dengan proyeksi YKKMB sendiri**. Dalam rancangan Model Bisnis Digital Campus, YKKMB menargetkan *tenant* khusus (Badan Pelaksana) yang memiliki proyeksi pemasukan sebesar **Rp 8,88 Miliar per tahun** (dari uang pangkal, biaya semester, dan SKS). Model bisnis tersebut mengalokasikan beban Non-SDM sebesar **Rp 3,2 Miliar**. Membayar biaya KSO/sewa sebesar Rp 1 Miliar kepada yayasan sangatlah *sustainable* karena porsinya sekitar 11% dari total *revenue* (Rp 8,88 Miliar) dan masih masuk dengan aman di dalam pagu *budget* Non-SDM mereka.
+
+## **2. Penyewa Ruang Skala Kecil (Tenant Satuan di Youth Center / Area Komersial)**
+Apabila ruang disewakan secara eceran (misalnya untuk kafe *startup*, kantor kecil, atau retail *Youth Center*), maka penyewa kelas Usaha Kecil Menengah (UKM) sangat bisa bertahan di sini.
+Sebagai simulasi:
+*   Jika sebuah *tenant* menyewa lahan/ruangan seluas **100 m²**, biaya sewanya hanya sekitar **Rp 45.537.300 per tahun**.
+*   Untuk bisa *sustainable*, *tenant* kelas ini hanya dituntut memiliki target *revenue* sekitar **Rp 300 Juta – Rp 450 Juta per tahun** (atau rata-rata omzet sekitar Rp 25 Juta hingga Rp 37 Juta per bulan).
+
+## Kesimpulan:**
+Untuk mengamankan Skenario A, YKKMB harus menargetkan **Institusi/Badan Usaha Edukasi (kelas revenue ~Rp 8-10 Miliar/tahun)** untuk penyewaan skala besar seperti *Digital Campus*, dan menargetkan **bisnis UKM (kelas revenue ~Rp 300-500 Juta/tahun)** untuk mengisi petak-petak ritel di area terbuka *Youth Center*. Karena harga per m² di YKKMB (Rp 38.000/bulan) masih di bawah standar rata-rata komersial Dago (Rp 100.000 - 200.000/bulan), tingkat keberlanjutan (*sustainability*) bagi tenant untuk Skenario A sangatlah tinggi.
+
+Berikut adalah Laporan Keuangan Yayasan Kristen Kesejahteraan Mahasiswa Bandung (YKKMB) untuk periode tahun buku yang berakhir pada 31 Desember 2025. Laporan ini disusun berdasarkan data realisasi operasional dan posisi aset yayasan.
+
+---
+
+# LAPORAN KEUANGAN YKKMB TAHUN 2025
+
+## I. LAPORAN AKTIVITAS (PENDAPATAN & BEBAN)
+Laporan ini merangkum seluruh arus kas masuk dari aktivitas sewa dan sumbangan, serta biaya operasional yang dikeluarkan selama tahun 2025.
+
+| Keterangan | Nilai (Rp) |
+| :--- | :--- |
+| **PENDAPATAN** | |
+| Pendapatan Sewa (Objek Pajak Final 10%) | 155.000.000 |
+| Pendapatan Sumbangan (Non-Pajak) | 32.750.000 |
+| **Total Penerimaan Bruto** | **187.750.000** |
+| | |
+| **BEBAN OPERASIONAL (OPEX)** | |
+| Beban SDM, Utilitas, dan Pemeliharaan | (95.809.100) |
+| **Surplus Sebelum Pajak** | **91.940.900** |
+| | |
+| **PAJAK** | |
+| Pajak Final 10% atas Sewa | (15.500.000) |
+| **SURPLUS BERSIH TAHUN 2025** | **76.440.900** |
+
+---
+
+## II. NERACA (POSISI KEUANGAN) PER 31 DESEMBER 2025
+Neraca ini menunjukkan kekayaan yang dimiliki yayasan berupa aset lancar dan aset tetap.
+
+### A. ASET
+1. **Aset Lancar**
+   * Kas dan Setara Kas (Surplus berjalan): Rp76.440.900
+   * Deposito Bank Mandiri (Tahun 2020): Rp300.000.000
+   * **Total Aset Lancar: Rp376.440.900**
+
+2. **Aset Tetap (Harga Perolehan)**
+   * Tanah dan Bangunan Dago 109 (Perolehan 1963): Rp8.000.000
+   * **Total Aset Tetap: Rp8.000.000**
+
+**TOTAL ASET: Rp384.440.900**
+
+### B. KEWAJIBAN & EKUITAS
+* **Kewajiban Pajak Terhutang (2025):** Rp15.500.000 (Sejauh belum disetorkan ke kas negara pada tanggal pelaporan).
+* **Ekuitas/Dana Modal:** Rp368.940.900
+
+---
+
+## III. CATATAN ATAS LAPORAN KEUANGAN
+
+1.  **Klasifikasi Pendapatan Sewa:** Seluruh pendapatan dari unit bisnis komersial, termasuk dari pihak ketiga (seperti Geprek Bensu), telah diklasifikasikan sebagai pendapatan sewa untuk kepatuhan perpajakan.
+2.  **Perlakuan Pajak:** Sesuai peraturan, pendapatan sewa dikenai Pajak Penghasilan (PPh) Final sebesar 10%. Sedangkan penerimaan dari sumbangan gereja diperlakukan sebagai sumbangan keagamaan yang bukan merupakan objek pajak.
+3.  **Aset Tanah:** Aset tanah seluas 2.745 m² di Jalan Ir. H. Juanda No. 109 Bandung dicatat berdasarkan nilai historis perolehan tahun 1963. Nilai pasar saat ini diperkirakan jauh lebih tinggi namun tidak direvaluasi dalam laporan ini untuk menjaga konsistensi akuntansi biaya historis.
+4.  **Kesehatan Finansial:** Yayasan dalam kondisi positif dan sehat dengan rasio surplus sebesar 40,7% dari total pendapatan bruto.
+
+---
+**Disahkan Oleh:**
+*Ketua Pengurus YKKMB*

@@ -1,0 +1,18 @@
+# Bab 10. Metodologi dan Workflow Rekayasa TISE level 2
+
+## Fokus Metodologis
+
+Metodologi pada TISE level 2 berfokus pada **rekayasa kecerdasan agentik** melalui mesin PUDAL.
+
+## Langkah Workflow
+
+1. Menentukan apa yang harus **dipersepsi**.
+2. Menentukan mekanisme **understanding**.
+3. Menentukan struktur **decision**.
+4. Menentukan **action**.
+5. Menentukan mekanisme **learning**.
+6. Menyusun **natural language prompts**.
+
+## Contoh Kasus: Healthy Food untuk Warga Kampus
+
+Pada kasus healthy food kampus, PUDAL menangkap data menu, harga, gizi, preferensi pengguna, dan stok, lalu memahami konteks pengguna, membuat keputusan rekomendasi, menampilkan tindakan yang relevan, dan belajar dari umpan balik pengguna.

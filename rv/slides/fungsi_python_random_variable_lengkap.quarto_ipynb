@@ -1,0 +1,1195 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "35bd5b89",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "title: \"Daftar Fungsi Python untuk Random Variable Diskrit, Kontinu, dan Bivariat\"\n",
+    "\n",
+    "\n",
+    "---\n",
+    "\n",
+    "# Pendahuluan\n",
+    "\n",
+    "Dokumen ini merangkum fungsi-fungsi Python yang berguna untuk mempelajari **random variable diskrit**, **random variable kontinu**, dan **random variable bivariat**. Contoh-contoh difokuskan pada pustaka yang paling umum digunakan dalam analisis data dan probabilitas:\n",
+    "\n",
+    "- `random`\n",
+    "- `numpy`\n",
+    "- `scipy.stats`\n",
+    "- `pandas`\n",
+    "- `matplotlib`\n",
+    "\n",
+    "Dokumen ini cocok digunakan sebagai catatan kuliah, bahan praktikum, maupun dasar untuk eksperimen komputasional dalam topik probabilitas dan statistika.\n",
+    "\n",
+    "# Pustaka yang Digunakan"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "111d54ca",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "from scipy import stats"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ff94afe",
+   "metadata": {},
+   "source": [
+    "# Random Variable Diskrit\n",
+    "\n",
+    "## Pengertian\n",
+    "\n",
+    "Random variable diskrit mengambil nilai-nilai yang dapat dihitung satu per satu, misalnya hasil lemparan dadu, jumlah keberhasilan, atau banyaknya pelanggan yang datang dalam satu interval waktu.\n",
+    "\n",
+    "## Fungsi Dasar dari `random`\n",
+    "\n",
+    "### `random.random()`\n",
+    "\n",
+    "Menghasilkan bilangan acak uniform pada interval $[0,1)$."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "c1a26475",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "random.random()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "545ba726",
+   "metadata": {},
+   "source": [
+    "### `random.randint(a, b)`\n",
+    "\n",
+    "Menghasilkan bilangan bulat acak dari $a$ sampai $b$."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "dbd1d9a6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "random.randint(1, 6)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2c4b1b3a",
+   "metadata": {},
+   "source": [
+    "Contoh simulasi 10 kali lempar dadu:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "926c4c34",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "[d := random.randint(1, 6) for _ in range(10)]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0351a9b5",
+   "metadata": {},
+   "source": [
+    "### `random.choice(seq)`\n",
+    "\n",
+    "Memilih satu elemen secara acak dari sebuah daftar."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "53181df6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "random.choice([0, 1])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "58193305",
+   "metadata": {},
+   "source": [
+    "### `random.choices(population, weights, k)`\n",
+    "\n",
+    "Mengambil sampel acak dengan bobot tertentu."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "c92adaef",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "random.choices([0, 1], weights=[0.7, 0.3], k=20)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "242eed30",
+   "metadata": {},
+   "source": [
+    "Ini dapat dipakai untuk mensimulasikan variabel Bernoulli dengan peluang sukses 0.3.\n",
+    "\n",
+    "## Fungsi Diskrit pada `numpy.random`\n",
+    "\n",
+    "### Bernoulli / Binomial\n",
+    "\n",
+    "### `np.random.binomial(n, p, size)`\n",
+    "\n",
+    "Menghasilkan sampel dari distribusi binomial."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "442baf7b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.binomial(n=10, p=0.4, size=8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9821e8f5",
+   "metadata": {},
+   "source": [
+    "Untuk Bernoulli, gunakan `n=1`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "41533543",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.binomial(n=1, p=0.3, size=20)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "928974bb",
+   "metadata": {},
+   "source": [
+    "### Poisson\n",
+    "\n",
+    "### `np.random.poisson(lam, size)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "b228afd3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.poisson(lam=2.5, size=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bee67484",
+   "metadata": {},
+   "source": [
+    "### Geometrik\n",
+    "\n",
+    "### `np.random.geometric(p, size)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "2887417e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.geometric(p=0.2, size=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cedad42",
+   "metadata": {},
+   "source": [
+    "## Fungsi Distribusi Diskrit pada `scipy.stats`\n",
+    "\n",
+    "### Binomial: `stats.binom`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "a05456e5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.binom.pmf(3, n=10, p=0.4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a5767dc3",
+   "metadata": {},
+   "source": [
+    "Probabilitas kumulatif:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "02d2410e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.binom.cdf(3, n=10, p=0.4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3402e8c1",
+   "metadata": {},
+   "source": [
+    "### Poisson: `stats.poisson`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "42e18b68",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.poisson.pmf(4, mu=2.5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "52fa9647",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.poisson.cdf(4, mu=2.5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8d7aa953",
+   "metadata": {},
+   "source": [
+    "### Geometrik: `stats.geom`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "a83151a9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.geom.pmf(4, p=0.2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a302071d",
+   "metadata": {},
+   "source": [
+    "## Statistik Ringkas untuk Data Diskrit"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "5a9e1429",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sampel_dadu = np.random.randint(1, 7, size=100)\n",
+    "\n",
+    "print(\"Mean:\", np.mean(sampel_dadu))\n",
+    "print(\"Variansi:\", np.var(sampel_dadu, ddof=1))\n",
+    "print(\"Simpangan baku:\", np.std(sampel_dadu, ddof=1))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "41274005",
+   "metadata": {},
+   "source": [
+    "## Tabel Frekuensi dengan `pandas`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "71e61d9e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_dadu = pd.DataFrame({\"dadu\": sampel_dadu})\n",
+    "df_dadu[\"dadu\"].value_counts().sort_index()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c50f1680",
+   "metadata": {},
+   "source": [
+    "Tabel peluang empiris:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "71613b63",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_dadu[\"dadu\"].value_counts(normalize=True).sort_index()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b491cd5e",
+   "metadata": {},
+   "source": [
+    "## Visualisasi Diskrit"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "a223e778",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "frekuensi = df_dadu[\"dadu\"].value_counts().sort_index()\n",
+    "\n",
+    "plt.figure(figsize=(7,4))\n",
+    "plt.bar(frekuensi.index, frekuensi.values)\n",
+    "plt.xlabel(\"Nilai dadu\")\n",
+    "plt.ylabel(\"Frekuensi\")\n",
+    "plt.title(\"Frekuensi Hasil Lemparan Dadu\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dd745e48",
+   "metadata": {},
+   "source": [
+    "# Random Variable Kontinu\n",
+    "\n",
+    "## Pengertian\n",
+    "\n",
+    "Random variable kontinu dapat mengambil nilai pada suatu interval kontinu, misalnya tinggi badan, berat badan, lama pelayanan, atau waktu tunggu.\n",
+    "\n",
+    "## Fungsi Dasar dari `numpy.random`\n",
+    "\n",
+    "### Uniform\n",
+    "\n",
+    "### `np.random.uniform(low, high, size)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "cdc5c0db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.uniform(low=10, high=20, size=5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e618643",
+   "metadata": {},
+   "source": [
+    "### Normal\n",
+    "\n",
+    "### `np.random.normal(loc, scale, size)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "5c54349c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.normal(loc=170, scale=8, size=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26072890",
+   "metadata": {},
+   "source": [
+    "### Eksponensial\n",
+    "\n",
+    "### `np.random.exponential(scale, size)`\n",
+    "\n",
+    "Perhatikan bahwa pada NumPy, parameter yang digunakan adalah `scale = 1/lambda`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "d485ab37",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.exponential(scale=2.0, size=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0f96f94a",
+   "metadata": {},
+   "source": [
+    "### Gamma\n",
+    "\n",
+    "### `np.random.gamma(shape, scale, size)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "923bd512",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.gamma(shape=2.0, scale=3.0, size=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a462906e",
+   "metadata": {},
+   "source": [
+    "## Fungsi Distribusi Kontinu pada `scipy.stats`\n",
+    "\n",
+    "### Normal: `stats.norm`\n",
+    "\n",
+    "Fungsi densitas probabilitas:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "384afbdc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.norm.pdf(175, loc=170, scale=8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "652c3569",
+   "metadata": {},
+   "source": [
+    "Fungsi distribusi kumulatif:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "0baa2850",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.norm.cdf(175, loc=170, scale=8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "32dd9336",
+   "metadata": {},
+   "source": [
+    "Kuantil atau inverse CDF:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "76e664da",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.norm.ppf(0.95, loc=170, scale=8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c34f380e",
+   "metadata": {},
+   "source": [
+    "### Eksponensial: `stats.expon`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "97364085",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.expon.pdf(2, scale=2.0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "82a697f5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.expon.cdf(2, scale=2.0)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c452b249",
+   "metadata": {},
+   "source": [
+    "### Uniform: `stats.uniform`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "4a8cf427",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.uniform.pdf(7, loc=5, scale=10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "f617f723",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "stats.uniform.cdf(7, loc=5, scale=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b5c45972",
+   "metadata": {},
+   "source": [
+    "## Statistik Ringkas untuk Data Kontinu"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "7baad5d9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tinggi = np.random.normal(loc=170, scale=8, size=1000)\n",
+    "\n",
+    "print(\"Mean:\", np.mean(tinggi))\n",
+    "print(\"Variansi:\", np.var(tinggi, ddof=1))\n",
+    "print(\"Simpangan baku:\", np.std(tinggi, ddof=1))\n",
+    "print(\"Minimum:\", np.min(tinggi))\n",
+    "print(\"Maksimum:\", np.max(tinggi))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "75384373",
+   "metadata": {},
+   "source": [
+    "## Ringkasan dengan `pandas`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "b751bfca",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_tinggi = pd.DataFrame({\"tinggi\": tinggi})\n",
+    "df_tinggi.describe()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b2ceb781",
+   "metadata": {},
+   "source": [
+    "## Visualisasi Kontinu"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "5b08a3c6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.figure(figsize=(7,4))\n",
+    "plt.hist(tinggi, bins=30)\n",
+    "plt.xlabel(\"Tinggi\")\n",
+    "plt.ylabel(\"Frekuensi\")\n",
+    "plt.title(\"Histogram Data Tinggi\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f86c6a09",
+   "metadata": {},
+   "source": [
+    "### Membandingkan Histogram dengan Kurva Normal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "be5f52e4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = np.linspace(min(tinggi), max(tinggi), 300)\n",
+    "y = stats.norm.pdf(x, loc=np.mean(tinggi), scale=np.std(tinggi, ddof=1))\n",
+    "\n",
+    "plt.figure(figsize=(7,4))\n",
+    "plt.hist(tinggi, bins=30, density=True, alpha=0.7)\n",
+    "plt.plot(x, y)\n",
+    "plt.xlabel(\"Tinggi\")\n",
+    "plt.ylabel(\"Density\")\n",
+    "plt.title(\"Histogram dan Kurva Normal\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8fbf9c78",
+   "metadata": {},
+   "source": [
+    "# Random Variable Bivariat\n",
+    "\n",
+    "## Pengertian\n",
+    "\n",
+    "Random variable bivariat melibatkan dua variabel acak yang diamati bersama, misalnya tinggi dan berat, permintaan dan biaya, atau storage dan compute dalam komputasi awan.\n",
+    "\n",
+    "## Membuat Data Bivariat dengan Korelasi\n",
+    "\n",
+    "### `np.random.multivariate_normal(mean, cov, size)`\n",
+    "\n",
+    "Contoh dua variabel dengan korelasi positif."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "958f6c10",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mean = [170, 65]\n",
+    "cov = [[8**2, 0.7*8*10],\n",
+    "       [0.7*8*10, 10**2]]\n",
+    "\n",
+    "bivariat = np.random.multivariate_normal(mean, cov, size=1000)\n",
+    "\n",
+    "x = bivariat[:, 0]\n",
+    "y = bivariat[:, 1]\n",
+    "\n",
+    "print(x[:5])\n",
+    "print(y[:5])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "adf12423",
+   "metadata": {},
+   "source": [
+    "## Menyusun Data Bivariat dalam `pandas`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "1c7e7c45",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_biv = pd.DataFrame({\n",
+    "    \"tinggi\": x,\n",
+    "    \"berat\": y\n",
+    "})\n",
+    "\n",
+    "df_biv.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "30ec1d9a",
+   "metadata": {},
+   "source": [
+    "## Statistik Bivariat\n",
+    "\n",
+    "### Mean masing-masing variabel"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "1543c106",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_biv.mean()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "68fe2b88",
+   "metadata": {},
+   "source": [
+    "### Variansi dan kovariansi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "ae547300",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_biv.cov()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d647a436",
+   "metadata": {},
+   "source": [
+    "### Korelasi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "ea08923a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_biv.corr()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c1e7657",
+   "metadata": {},
+   "source": [
+    "Dengan NumPy:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "8498a573",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.cov(x, y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "684619fd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.corrcoef(x, y)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bb1bb70c",
+   "metadata": {},
+   "source": [
+    "## Scatter Plot"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "12405800",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.figure(figsize=(6,5))\n",
+    "plt.scatter(x, y, alpha=0.5)\n",
+    "plt.xlabel(\"Tinggi\")\n",
+    "plt.ylabel(\"Berat\")\n",
+    "plt.title(\"Scatter Plot Tinggi vs Berat\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e529a9a9",
+   "metadata": {},
+   "source": [
+    "## Regresi Linear Sederhana\n",
+    "\n",
+    "### `stats.linregress(x, y)`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "4c583319",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "hasil_regresi = stats.linregress(x, y)\n",
+    "hasil_regresi"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ae26b920",
+   "metadata": {},
+   "source": [
+    "Mengambil slope dan intercept:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "382c7b30",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Slope:\", hasil_regresi.slope)\n",
+    "print(\"Intercept:\", hasil_regresi.intercept)\n",
+    "print(\"R-value:\", hasil_regresi.rvalue)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5bd85b3a",
+   "metadata": {},
+   "source": [
+    "Visualisasi garis regresi:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "7ce1cc0d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.figure(figsize=(6,5))\n",
+    "plt.scatter(x, y, alpha=0.4)\n",
+    "plt.plot(x, hasil_regresi.intercept + hasil_regresi.slope * x)\n",
+    "plt.xlabel(\"Tinggi\")\n",
+    "plt.ylabel(\"Berat\")\n",
+    "plt.title(\"Scatter Plot dan Garis Regresi\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2fdb0380",
+   "metadata": {},
+   "source": [
+    "# Joint Distribution Empiris dengan `pandas`\n",
+    "\n",
+    "## Untuk Variabel Diskrit Bivariat\n",
+    "\n",
+    "Misalnya kita punya dua dadu."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "212c5d8f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dadu1 = np.random.randint(1, 7, size=1000)\n",
+    "dadu2 = np.random.randint(1, 7, size=1000)\n",
+    "\n",
+    "df_dua_dadu = pd.DataFrame({\"dadu1\": dadu1, \"dadu2\": dadu2})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5d7a5b75",
+   "metadata": {},
+   "source": [
+    "### Tabel frekuensi gabungan"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "697cf14b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.crosstab(df_dua_dadu[\"dadu1\"], df_dua_dadu[\"dadu2\"])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "13cfc2d5",
+   "metadata": {},
+   "source": [
+    "### Tabel peluang gabungan"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "2ce6867e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.crosstab(df_dua_dadu[\"dadu1\"], df_dua_dadu[\"dadu2\"], normalize=True)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1580ec3c",
+   "metadata": {},
+   "source": [
+    "### Peluang marginal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "6353e8eb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.crosstab(df_dua_dadu[\"dadu1\"], columns=\"prob\", normalize=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "73372f81",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.crosstab(columns=df_dua_dadu[\"dadu2\"], index=\"prob\", normalize=True)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d816a3c3",
+   "metadata": {},
+   "source": [
+    "# Contoh Simulasi Terpadu\n",
+    "\n",
+    "## Kasus Diskrit: Jumlah keberhasilan"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "f99cc288",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "keberhasilan = np.random.binomial(n=20, p=0.3, size=1000)\n",
+    "\n",
+    "print(\"Rata-rata empiris:\", np.mean(keberhasilan))\n",
+    "print(\"Rata-rata teoritis:\", 20 * 0.3)\n",
+    "print(\"Variansi empiris:\", np.var(keberhasilan, ddof=1))\n",
+    "print(\"Variansi teoritis:\", 20 * 0.3 * 0.7)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "06a9dce4",
+   "metadata": {},
+   "source": [
+    "## Kasus Kontinu: Waktu tunggu eksponensial"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "8a38ce4e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "waktu_tunggu = np.random.exponential(scale=5, size=1000)\n",
+    "\n",
+    "print(\"Rata-rata empiris:\", np.mean(waktu_tunggu))\n",
+    "print(\"Rata-rata teoritis:\", 5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9f30ee23",
+   "metadata": {},
+   "source": [
+    "## Kasus Bivariat: Tinggi dan berat"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "dcfc6810",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Kovariansi:\\n\", df_biv.cov())\n",
+    "print(\"Korelasi:\\n\", df_biv.corr())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fe4afdef",
+   "metadata": {},
+   "source": [
+    "# Ringkasan Fungsi Penting\n",
+    "\n",
+    "## Diskrit\n",
+    "\n",
+    "| Fungsi | Kegunaan | Contoh |\n",
+    "|---|---|---|\n",
+    "| `random.randint(a,b)` | Bilangan bulat acak | `random.randint(1,6)` |\n",
+    "| `random.choice(seq)` | Memilih satu elemen acak | `random.choice([0,1])` |\n",
+    "| `np.random.binomial(n,p,size)` | Sampel binomial/Bernoulli | `np.random.binomial(1,0.3,10)` |\n",
+    "| `np.random.poisson(lam,size)` | Sampel Poisson | `np.random.poisson(2.5,10)` |\n",
+    "| `np.random.geometric(p,size)` | Sampel geometrik | `np.random.geometric(0.2,10)` |\n",
+    "| `stats.binom.pmf(...)` | Probabilitas titik binomial | `stats.binom.pmf(3,10,0.4)` |\n",
+    "| `stats.poisson.pmf(...)` | Probabilitas titik Poisson | `stats.poisson.pmf(4,2.5)` |\n",
+    "\n",
+    "## Kontinu\n",
+    "\n",
+    "| Fungsi | Kegunaan | Contoh |\n",
+    "|---|---|---|\n",
+    "| `np.random.uniform(low,high,size)` | Sampel uniform | `np.random.uniform(0,1,10)` |\n",
+    "| `np.random.normal(loc,scale,size)` | Sampel normal | `np.random.normal(170,8,10)` |\n",
+    "| `np.random.exponential(scale,size)` | Sampel eksponensial | `np.random.exponential(2,10)` |\n",
+    "| `stats.norm.pdf(...)` | Densitas normal | `stats.norm.pdf(175,170,8)` |\n",
+    "| `stats.norm.cdf(...)` | CDF normal | `stats.norm.cdf(175,170,8)` |\n",
+    "| `stats.norm.ppf(...)` | Kuantil normal | `stats.norm.ppf(0.95,170,8)` |\n",
+    "\n",
+    "## Bivariat\n",
+    "\n",
+    "| Fungsi | Kegunaan | Contoh |\n",
+    "|---|---|---|\n",
+    "| `np.random.multivariate_normal(...)` | Sampel normal bivariat | `np.random.multivariate_normal(mean,cov,1000)` |\n",
+    "| `df.cov()` | Matriks kovariansi | `df_biv.cov()` |\n",
+    "| `df.corr()` | Matriks korelasi | `df_biv.corr()` |\n",
+    "| `np.cov(x,y)` | Kovariansi | `np.cov(x,y)` |\n",
+    "| `np.corrcoef(x,y)` | Korelasi | `np.corrcoef(x,y)` |\n",
+    "| `stats.linregress(x,y)` | Regresi linear sederhana | `stats.linregress(x,y)` |\n",
+    "| `pd.crosstab(...)` | Joint distribution empiris diskrit | `pd.crosstab(df[\"x\"], df[\"y\"])` |\n",
+    "\n",
+    "# Latihan Mahasiswa\n",
+    "\n",
+    "## Latihan 1: Diskrit\n",
+    "\n",
+    "Simulasikan 500 kali lemparan dadu. Hitung:\n",
+    "\n",
+    "1. Rata-rata empiris.\n",
+    "2. Variansi empiris.\n",
+    "3. Frekuensi masing-masing angka 1 sampai 6.\n",
+    "4. Buat diagram batang frekuensinya.\n",
+    "\n",
+    "## Latihan 2: Kontinu\n",
+    "\n",
+    "Bangkitkan 1000 sampel dari distribusi normal dengan mean 70 dan simpangan baku 12. Hitung:\n",
+    "\n",
+    "1. Mean empiris.\n",
+    "2. Variansi empiris.\n",
+    "3. Histogram data.\n",
+    "4. Bandingkan histogram dengan kurva normal teoritis.\n",
+    "\n",
+    "## Latihan 3: Bivariat\n",
+    "\n",
+    "Bangkitkan 2000 sampel bivariat normal dengan korelasi 0.6. Lalu:\n",
+    "\n",
+    "1. Hitung mean masing-masing variabel.\n",
+    "2. Hitung kovariansi dan korelasi.\n",
+    "3. Buat scatter plot.\n",
+    "4. Estimasikan garis regresi linear.\n",
+    "\n",
+    "## Latihan 4: Joint Distribution Diskrit\n",
+    "\n",
+    "Simulasikan dua dadu yang dilempar bersama-sama sebanyak 1000 kali. Gunakan `pd.crosstab()` untuk:\n",
+    "\n",
+    "1. Membuat tabel frekuensi gabungan.\n",
+    "2. Membuat tabel peluang gabungan.\n",
+    "3. Menghitung peluang marginal.\n",
+    "4. Mengidentifikasi pasangan hasil yang paling sering muncul.\n",
+    "\n",
+    "# Penutup\n",
+    "\n",
+    "Python menyediakan ekosistem yang sangat kaya untuk mempelajari random variable dalam bentuk diskrit, kontinu, maupun bivariat. `numpy` sangat kuat untuk simulasi, `scipy.stats` sangat berguna untuk distribusi teoritis, `pandas` membantu tabulasi dan analisis data, sedangkan `matplotlib` memudahkan visualisasi.\n",
+    "\n",
+    "Dokumen ini dapat dikembangkan lebih lanjut menjadi notebook praktikum, modul pembelajaran, atau bahan tugas mahasiswa."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3",
+   "path": "/usr/share/jupyter/kernels/python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

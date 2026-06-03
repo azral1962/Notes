@@ -1,0 +1,6 @@
+# Bab 7. Mesin Agentik PUDAL dan Orkestrasi Triune Intelligence
+
+Pada **TISE level 2**, mesin utama adalah **PUDAL** (*Perception, Understanding, Decision, Action, Learning*). Triune Intelligence bekerja melalui agents untuk menjalankan fungsi kendali statik dan dinamik. Prompts digunakan sebagai mekanisme komunikasi antaragents, antarlevel, dan antara manusia dengan sistem.
+
+Pada perkembangan TISE yang lebih matang, prompts tidak hanya berfungsi sebagai instruksi imperatif, tetapi juga sebagai alat reflektif yang dapat membantu stakeholder memahami arti pengalaman, kegagalan, dan keberhasilannya. Melalui prompts, agents tidak hanya mengendalikan sistem, tetapi juga membantu manusia menafsirkan kembali perannya di dalam sistem.
+

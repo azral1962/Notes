@@ -1,0 +1,17 @@
+# Bab 8. Metodologi dan Workflow Rekayasa TISE level 3
+
+## Fokus Metodologis
+
+Metodologi pada TISE level 3 berfokus pada **penemuan, formulasi, dan pementasan identitas naratif**.
+
+## Langkah Workflow
+
+1. Menggali **adegan-adegan kunci** dalam kehidupan stakeholder.
+2. Mengidentifikasi **tema naratif** dan nilai inti.
+3. Merumuskan **misi naratif**.
+4. Mendesain **teater solusi**.
+5. Menyusun **prompt reflektif**.
+
+## Contoh Kasus: Healthy Food untuk Warga Kampus
+
+Mahasiswa, pengelola kantin, ahli gizi, dan pimpinan kampus dapat dipetakan sebagai pembawa narasi berbeda yang semuanya perlu dipentaskan dalam teater solusi pangan kampus yang sehat, enak, dan terjangkau.

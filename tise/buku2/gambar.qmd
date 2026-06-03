@@ -1,0 +1,924 @@
+
+1. Untuk setiap gambar disediakan **placeholder**, **caption**, **deskripsi**, dan **prompt** untuk **Nano Banana Pro**.
+4. Gaya gambar yang diusulkan dibuat **sesederhana mungkin**, **latar putih**, dan **garis pena hitam** agar konsisten dengan buku teknik yang bersih dan mudah 
+
+### 1.1 Perceive (Persepsi)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.1 Perceive (Persepsi): Diagram alur persepsi dari stimulus ke data terstruktur.](figures/1-1-perceive-persepsi.png){#fig-1-1-perceive-persepsi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.1 Perceive (Persepsi): Diagram alur persepsi dari stimulus ke data terstruktur.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram alur persepsi dari stimulus ke data terstruktur. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram alur persepsi dari stimulus ke data terstruktur. untuk section '1.1 Perceive (Persepsi)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 1.2 Understand (Memahami)
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.2 Understand (Memahami): Sketsa transformasi data mentah menjadi model konseptual.](figures/1-2-understand-memahami.png){#fig-1-2-understand-memahami width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.2 Understand (Memahami): Sketsa transformasi data mentah menjadi model konseptual.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa transformasi data mentah menjadi model konseptual. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa transformasi data mentah menjadi model konseptual. untuk section '1.2 Understand (Memahami)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 1.3 Decision (Keputusan)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.3 Decision (Keputusan): Diagram pohon keputusan sederhana dalam konteks sistem cerdas.](figures/1-3-decision-keputusan.png){#fig-1-3-decision-keputusan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.3 Decision (Keputusan): Diagram pohon keputusan sederhana dalam konteks sistem cerdas.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram pohon keputusan sederhana dalam konteks sistem cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram pohon keputusan sederhana dalam konteks sistem cerdas. untuk section '1.3 Decision (Keputusan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 1.4 Act (Tindakan)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.4 Act (Tindakan): Sketsa alur aksi dari rencana ke perubahan lingkungan.](figures/1-4-act-tindakan.png){#fig-1-4-act-tindakan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.4 Act (Tindakan): Sketsa alur aksi dari rencana ke perubahan lingkungan.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa alur aksi dari rencana ke perubahan lingkungan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa alur aksi dari rencana ke perubahan lingkungan. untuk section '1.4 Act (Tindakan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 1.5 Learning (Belajar)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 1.5 Learning (Belajar): Diagram loop pembelajaran tertutup pada PUDAL.](figures/1-5-learning-belajar.png){#fig-1-5-learning-belajar width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 1.5 Learning (Belajar): Diagram loop pembelajaran tertutup pada PUDAL.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram loop pembelajaran tertutup pada pudal. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram loop pembelajaran tertutup pada PUDAL. untuk section '1.5 Learning (Belajar)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 2. Artefak PSKVE
+
+### 2.1 Product (Produk)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 2.1 Product (Produk): Sketsa produk cerdas dengan label komponen utama.](figures/2-1-product-produk.png){#fig-2-1-product-produk width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 2.1 Product (Produk): Sketsa produk cerdas dengan label komponen utama.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa produk cerdas dengan label komponen utama. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa produk cerdas dengan label komponen utama. untuk section '2.1 Product (Produk)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 2.2 Service (Layanan)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 2.2 Service (Layanan): Diagram interaksi pengguna dengan layanan cerdas.](figures/2-2-service-layanan.png){#fig-2-2-service-layanan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 2.2 Service (Layanan): Diagram interaksi pengguna dengan layanan cerdas.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram interaksi pengguna dengan layanan cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram interaksi pengguna dengan layanan cerdas. untuk section '2.2 Service (Layanan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 2.3 Knowledge (Pengetahuan)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 2.3 Knowledge (Pengetahuan): Sketsa lapisan pengetahuan di dalam artefak cerdas.](figures/2-3-knowledge-pengetahuan.png){#fig-2-3-knowledge-pengetahuan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 2.3 Knowledge (Pengetahuan): Sketsa lapisan pengetahuan di dalam artefak cerdas.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa lapisan pengetahuan di dalam artefak cerdas. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa lapisan pengetahuan di dalam artefak cerdas. untuk section '2.3 Knowledge (Pengetahuan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 2.4 Value (Nilai)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 2.4 Value (Nilai): Diagram panah konversi dari produk-layanan-pengetahuan menuju nilai.](figures/2-4-value-nilai.png){#fig-2-4-value-nilai width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 2.4 Value (Nilai): Diagram panah konversi dari produk-layanan-pengetahuan menuju nilai.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram panah konversi dari produk-layanan-pengetahuan menuju nilai. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram panah konversi dari produk-layanan-pengetahuan menuju nilai. untuk section '2.4 Value (Nilai)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 2.5 Environment (Lingkungan)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 2.5 Environment (Lingkungan): Sketsa artefak di dalam ruang lingkungan dengan jejak dampak.](figures/2-5-environment-lingkungan.png){#fig-2-5-environment-lingkungan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 2.5 Environment (Lingkungan): Sketsa artefak di dalam ruang lingkungan dengan jejak dampak.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa artefak di dalam ruang lingkungan dengan jejak dampak. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa artefak di dalam ruang lingkungan dengan jejak dampak. untuk section '2.5 Environment (Lingkungan)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 3. Energi Multi-Dimensi
+
+### 3.1 Energi Produk (Fisik)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.1 Energi Produk (Fisik): Diagram alir energi fisik masuk-keluar.](figures/3-1-energi-produk-fisik.png){#fig-3-1-energi-produk-fisik width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.1 Energi Produk (Fisik): Diagram alir energi fisik masuk-keluar.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram alir energi fisik masuk-keluar. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram alir energi fisik masuk-keluar. untuk section '3.1 Energi Produk (Fisik)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 3.2 Energi Layanan (Atensi)
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.2 Energi Layanan (Atensi): Sketsa jam-atensi-interaksi pada layanan digital/fisik.](figures/3-2-energi-layanan-atensi.png){#fig-3-2-energi-layanan-atensi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.2 Energi Layanan (Atensi): Sketsa jam-atensi-interaksi pada layanan digital/fisik.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa jam-atensi-interaksi pada layanan digital/fisik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa jam-atensi-interaksi pada layanan digital/fisik. untuk section '3.2 Energi Layanan (Atensi)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 3.3 Energi Pengetahuan (Algoritma)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.3 Energi Pengetahuan (Algoritma): Diagram alur data ke algoritma ke keputusan.](figures/3-3-energi-pengetahuan-algoritma.png){#fig-3-3-energi-pengetahuan-algoritma width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.3 Energi Pengetahuan (Algoritma): Diagram alur data ke algoritma ke keputusan.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram alur data ke algoritma ke keputusan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram alur data ke algoritma ke keputusan. untuk section '3.3 Energi Pengetahuan (Algoritma)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 3.4 Energi Nilai (Finansial/Sosial)
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.4 Energi Nilai (Finansial/Sosial): Sketsa pertukaran nilai antar pemangku kepentingan.](figures/3-4-energi-nilai-finansial-sosial.png){#fig-3-4-energi-nilai-finansial-sosial width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.4 Energi Nilai (Finansial/Sosial): Sketsa pertukaran nilai antar pemangku kepentingan.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa pertukaran nilai antar pemangku kepentingan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa pertukaran nilai antar pemangku kepentingan. untuk section '3.4 Energi Nilai (Finansial/Sosial)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 3.5 Energi Ruang Lingkungan (Inspirasi)
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.5 Energi Ruang Lingkungan (Inspirasi): Sketsa ruang kerja/layanan yang menginspirasi.](figures/3-5-energi-ruang-lingkungan-inspirasi.png){#fig-3-5-energi-ruang-lingkungan-inspirasi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.5 Energi Ruang Lingkungan (Inspirasi): Sketsa ruang kerja/layanan yang menginspirasi.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa ruang kerja/layanan yang menginspirasi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa ruang kerja/layanan yang menginspirasi. untuk section '3.5 Energi Ruang Lingkungan (Inspirasi)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 3.6 Konversi Transaksional
+
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 3.6 Konversi Transaksional: Diagram jaringan konversi antar dimensi energi.](figures/3-6-konversi-transaksional.png){#fig-3-6-konversi-transaksional width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 3.6 Konversi Transaksional: Diagram jaringan konversi antar dimensi energi.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram jaringan konversi antar dimensi energi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram jaringan konversi antar dimensi energi. untuk section '3.6 Konversi Transaksional'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 4. Smart Engine Abstraction (SEA)
+
+### 4.0 Smart Engine Abstraction (SEA)
+
+**Bab:** Bab 4. Smart Engine Abstraction (SEA)  
+**Lokasi usulan tabel:** halaman buku 41, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 41, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas sea sebagai abstraksi penghubung antara model manusia dan eksekusi mesin. Dalam konteks pembahasan 4.0 Smart Engine Abstraction (SEA), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 4.0 Smart Engine Abstraction (SEA): Tabel lapisan SEA: input, transformasi, pengetahuan, kontrol, dan output.
+
+| Lapisan SEA | Masukan | Transformasi | Keluaran | Peran |
+| --- | --- | --- | --- | --- |
+| Persepsi | Data sensor | Parsing/normalisasi | representasi | Membaca keadaan |
+| Pengetahuan | Ontologi/aturan | Struktur makna | basis inferensi | Memahami konteks |
+| Keputusan | Tujuan+batasan | Reasoning/optimasi | rencana | Memilih aksi |
+| Aksi | Rencana | Eksekusi kontrol | respons | Mengubah lingkungan |
+| Belajar | Umpan balik | Evaluasi/pembaruan | pengetahuan baru | Adaptasi |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 4.0 Smart Engine Abstraction (SEA): Diagram blok Smart Engine Abstraction sederhana.](figures/4-0-smart-engine-abstraction-sea.png){#fig-4-0-smart-engine-abstraction-sea width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 4.0 Smart Engine Abstraction (SEA): Diagram blok Smart Engine Abstraction sederhana.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram blok smart engine abstraction sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram blok Smart Engine Abstraction sederhana. untuk section '4.0 Smart Engine Abstraction (SEA)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+# Bagian 2
+
+## Bab 5. Domain Aplikasi (A)
+
+### 5.1 P: Stakeholder
+
+**Bab:** Bab 5. Domain Aplikasi (A)  
+**Lokasi usulan tabel:** halaman buku 46, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 46, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas stakeholder sebagai sumber kebutuhan, nilai, dan batasan desain. Dalam konteks pembahasan 5.1 P: Stakeholder, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 5.1 P: Stakeholder: Tabel profil stakeholder, tujuan, kebutuhan, dan indikator keberhasilan.
+
+| Stakeholder | Tujuan | Kebutuhan | Kontribusi | Indikator Sukses |
+| --- | --- | --- | --- | --- |
+| Pengguna | Perjalanan nyaman | Cepat, aman, murah | Data kebutuhan | Kepuasan |
+| Operator | Layanan efisien | Utilisasi tinggi | Operasi armada | Biaya/trip |
+| Pemerintah | Mobilitas berkelanjutan | Emisi turun | Regulasi | CO2 dan akses |
+| Insinyur | Sistem bekerja baik | Data dan model | Desain/iterasi | Kinerja sistem |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 5.1 P: Stakeholder: Peta aktor sederhana untuk domain aplikasi.](figures/5-1-p-stakeholder.png){#fig-5-1-p-stakeholder width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 5.1 P: Stakeholder: Peta aktor sederhana untuk domain aplikasi.
+
+**Deskripsi gambar:**  
+Gambar berupa peta aktor sederhana untuk domain aplikasi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Peta aktor sederhana untuk domain aplikasi. untuk section '5.1 P: Stakeholder'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 5.2 I: Solusi Baru
+
+**Bab:** Bab 5. Domain Aplikasi (A)  
+**Lokasi usulan tabel:** halaman buku 47, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 47, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas solusi baru sebagai jawaban rekayasa terhadap masalah nyata. Dalam konteks pembahasan 5.2 I: Solusi Baru, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 5.2 I: Solusi Baru: Tabel alternatif solusi, keunggulan, risiko, dan syarat implementasi.
+
+| Alternatif Solusi | Keunggulan | Risiko | Sumber Daya | Kapan Dipilih |
+| --- | --- | --- | --- | --- |
+| Fleet EV | Emisi rendah | Investasi baterai | Charging infra | Koridor fleksibel |
+| Bus listrik | Kapasitas menengah | Macet jalan | Depot dan jadwal | Permintaan sedang |
+| Kereta cepat | Cepat dan masif | Infrastruktur mahal | Stasiun tetap | Koridor padat |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 5.2 I: Solusi Baru: Sketsa perbandingan dua atau tiga konsep solusi.](figures/5-2-i-solusi-baru.png){#fig-5-2-i-solusi-baru width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 5.2 I: Solusi Baru: Sketsa perbandingan dua atau tiga konsep solusi.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa perbandingan dua atau tiga konsep solusi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa perbandingan dua atau tiga konsep solusi. untuk section '5.2 I: Solusi Baru'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 5.3 Cx: Masalah Spesifik
+
+**Bab:** Bab 5. Domain Aplikasi (A)  
+**Lokasi usulan tabel:** halaman buku 48, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 48, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas masalah spesifik sebagai konteks operasional yang membatasi solusi. Dalam konteks pembahasan 5.3 Cx: Masalah Spesifik, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 5.3 Cx: Masalah Spesifik: Tabel pernyataan masalah, konteks, batasan, dan dampaknya.
+
+| Masalah | Konteks | Akar Penyebab | Batasan | Dampak |
+| --- | --- | --- | --- | --- |
+| Waktu tempuh tinggi | Koridor padat | Kemacetan | Jaringan jalan | Produktivitas turun |
+| Biaya operasi besar | Energi mahal | Utilisasi rendah | Tarif pasar | Margin menurun |
+| Emisi tinggi | Kendaraan fosil | Efisiensi rendah | Teknologi lama | Jejak karbon naik |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 5.3 Cx: Masalah Spesifik: Diagram sebab-akibat masalah spesifik.](figures/5-3-cx-masalah-spesifik.png){#fig-5-3-cx-masalah-spesifik width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 5.3 Cx: Masalah Spesifik: Diagram sebab-akibat masalah spesifik.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram sebab-akibat masalah spesifik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram sebab-akibat masalah spesifik. untuk section '5.3 Cx: Masalah Spesifik'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 6. Domain Sistem (S)
+
+### 6.1 P: Testbeds/Dataset
+
+**Bab:** Bab 6. Domain Sistem (S)  
+**Lokasi usulan tabel:** halaman buku 52, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 52, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas testbed dan dataset sebagai arena validasi perilaku sistem cerdas. Dalam konteks pembahasan 6.1 P: Testbeds/Dataset, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 6.1 P: Testbeds/Dataset: Tabel karakteristik dataset/testbed: sumber, skala, variabel, dan kegunaan.
+
+| Nama | Jenis | Variabel Kunci | Skala | Kegunaan |
+| --- | --- | --- | --- | --- |
+| Log perjalanan | Dataset | waktu, jarak, SOC | besar | Training/prediksi |
+| Koridor simulasi | Testbed | rute, halte, trafik | menengah | Uji skenario |
+| Survei pengguna | Dataset | kepuasan, preferensi | sedang | Evaluasi layanan |
+| Digital twin | Testbed | event operasional | tinggi | Eksperimen aman |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 6.1 P: Testbeds/Dataset: Sketsa lingkungan uji atau alur dataset ke eksperimen.](figures/6-1-p-testbeds-dataset.png){#fig-6-1-p-testbeds-dataset width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 6.1 P: Testbeds/Dataset: Sketsa lingkungan uji atau alur dataset ke eksperimen.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa lingkungan uji atau alur dataset ke eksperimen. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa lingkungan uji atau alur dataset ke eksperimen. untuk section '6.1 P: Testbeds/Dataset'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 6.2 I: Arsitektur Sistem Cerdas
+
+**Bab:** Bab 6. Domain Sistem (S)  
+**Lokasi usulan tabel:** halaman buku 54, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 54, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas arsitektur sistem sebagai susunan modul dan aliran informasi. Dalam konteks pembahasan 6.2 I: Arsitektur Sistem Cerdas, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 6.2 I: Arsitektur Sistem Cerdas: Tabel modul arsitektur, fungsi, input, output, dan ketergantungan.
+
+| Modul | Input | Output | Fungsi | Ketergantungan |
+| --- | --- | --- | --- | --- |
+| Persepsi | Sensor/log | state | Menangkap fakta | Infrastruktur data |
+| Ontologi | state | representasi | Memberi makna | Knowledge base |
+| Inferensi | representasi | keputusan | Bernalar | Rule engine |
+| Kontrol | keputusan | aksi | Eksekusi | Aktuator/UI |
+| Evaluasi | hasil | pembaruan | Belajar | Monitoring |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 6.2 I: Arsitektur Sistem Cerdas: Diagram arsitektur sistem cerdas modular.](figures/6-2-i-arsitektur-sistem-cerdas.png){#fig-6-2-i-arsitektur-sistem-cerdas width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 6.2 I: Arsitektur Sistem Cerdas: Diagram arsitektur sistem cerdas modular.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram arsitektur sistem cerdas modular. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram arsitektur sistem cerdas modular. untuk section '6.2 I: Arsitektur Sistem Cerdas'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 7. Domain Teknologi (T)
+
+### 7.1 P: Energi Sumber/Data Mentah
+
+**Bab:** Bab 7. Domain Teknologi (T)  
+**Lokasi usulan tabel:** halaman buku 59, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 59, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas data mentah dan energi sumber sebagai bahan baku teknologi cerdas. Dalam konteks pembahasan 7.1 P: Energi Sumber/Data Mentah, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 7.1 P: Energi Sumber/Data Mentah: Tabel jenis sumber data/energi, kualitas, keterbatasan, dan biaya.
+
+| Sumber | Bentuk | Kualitas | Biaya Akses | Keterbatasan |
+| --- | --- | --- | --- | --- |
+| Sensor kendaraan | stream | tinggi | menengah | noise |
+| Log aplikasi | event | tinggi | rendah | bias penggunaan |
+| Data publik | tabel | sedang | rendah | kurang rinci |
+| Input manusia | teks/form | bervariasi | rendah | subjektif |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 7.1 P: Energi Sumber/Data Mentah: Sketsa sumber data mentah yang masuk ke engine.](figures/7-1-p-energi-sumber-data-mentah.png){#fig-7-1-p-energi-sumber-data-mentah width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 7.1 P: Energi Sumber/Data Mentah: Sketsa sumber data mentah yang masuk ke engine.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa sumber data mentah yang masuk ke engine. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa sumber data mentah yang masuk ke engine. untuk section '7.1 P: Energi Sumber/Data Mentah'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 7.2 I: Engine/Modul Teknologi
+
+**Bab:** Bab 7. Domain Teknologi (T)  
+**Lokasi usulan tabel:** halaman buku 60, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 60, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas engine/modul teknologi sebagai mesin transformasi utama. Dalam konteks pembahasan 7.2 I: Engine/Modul Teknologi, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 7.2 I: Engine/Modul Teknologi: Tabel modul teknologi, fungsi, API/antarmuka, dan indikator performa.
+
+| Modul | Peran | Antarmuka | Indikator | Catatan |
+| --- | --- | --- | --- | --- |
+| Reasoner Prolog | Inferensi simbolik | query | latensi | baik untuk aturan |
+| Python analytics | Analitik dan simulasi | API/script | throughput | fleksibel |
+| Database | Penyimpanan | SQL/NoSQL | konsistensi | basis data operasi |
+| UI engine | Interaksi pengguna | web/app | usability | jembatan manusia-mesin |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 7.2 I: Engine/Modul Teknologi: Diagram modul teknologi yang saling terhubung.](figures/7-2-i-engine-modul-teknologi.png){#fig-7-2-i-engine-modul-teknologi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 7.2 I: Engine/Modul Teknologi: Diagram modul teknologi yang saling terhubung.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram modul teknologi yang saling terhubung. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram modul teknologi yang saling terhubung. untuk section '7.2 I: Engine/Modul Teknologi'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 8. Domain Riset Fundamental (F)
+
+### 8.1 P: Fenomena/Prinsip Sains
+
+**Bab:** Bab 8. Domain Riset Fundamental (F)  
+**Lokasi usulan tabel:** halaman buku 64, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 64, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas fenomena sains sebagai fondasi penjelasan dan pembatas sistem. Dalam konteks pembahasan 8.1 P: Fenomena/Prinsip Sains, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 8.1 P: Fenomena/Prinsip Sains: Tabel prinsip sains, variabel kunci, hukum terkait, dan implikasi desain.
+
+| Prinsip | Variabel | Hukum/Ide | Implikasi Rekayasa | Contoh |
+| --- | --- | --- | --- | --- |
+| Konservasi energi | daya, efisiensi | fisika dasar | batas performa | baterai dan motor |
+| Teori antrian | arrival, service | queueing | desain kapasitas | halte dan stasiun |
+| Difusi inovasi | adopsi | sosial | strategi implementasi | penerimaan pengguna |
+| Emisi transport | jarak, energi | lingkungan | optimasi jejak | pemilihan moda |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 8.1 P: Fenomena/Prinsip Sains: Sketsa fenomena ilmiah yang mendasari sistem.](figures/8-1-p-fenomena-prinsip-sains.png){#fig-8-1-p-fenomena-prinsip-sains width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 8.1 P: Fenomena/Prinsip Sains: Sketsa fenomena ilmiah yang mendasari sistem.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa fenomena ilmiah yang mendasari sistem. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa fenomena ilmiah yang mendasari sistem. untuk section '8.1 P: Fenomena/Prinsip Sains'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 8.2 I: Teori/Model Baru
+
+**Bab:** Bab 8. Domain Riset Fundamental (F)  
+**Lokasi usulan tabel:** halaman buku 66, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 66, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas teori/model baru sebagai keluaran riset fundamental yang menggerakkan inovasi. Dalam konteks pembahasan 8.2 I: Teori/Model Baru, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 8.2 I: Teori/Model Baru: Tabel komponen model baru, asumsi, variabel, dan prediksi.
+
+| Komponen Model | Asumsi | Variabel | Prediksi | Kontribusi |
+| --- | --- | --- | --- | --- |
+| PSKVE | nilai multidimensi | P,S,K,V,E | trade-off sistem | kerangka evaluasi |
+| PUDAL | siklus adaptif | perceive-learn | respons cerdas | arsitektur agen |
+| SEA | abstraksi engine | input-output | eksekusi sistem | jembatan konsep-mesin |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 8.2 I: Teori/Model Baru: Diagram model konseptual baru berbasis teori.](figures/8-2-i-teori-model-baru.png){#fig-8-2-i-teori-model-baru width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 8.2 I: Teori/Model Baru: Diagram model konseptual baru berbasis teori.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram model konseptual baru berbasis teori. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram model konseptual baru berbasis teori. untuk section '8.2 I: Teori/Model Baru'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+# Bagian 3
+
+## Bab 9. Prolog (Penalaran Simbolik)
+
+### 9.1 Representasi Fakta & Aturan
+
+**Bab:** Bab 9. Prolog (Penalaran Simbolik)  
+**Lokasi usulan tabel:** halaman buku 72, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 72, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas prolog memformalkan ontologi sebagai fakta dan aturan. Dalam konteks pembahasan 9.1 Representasi Fakta & Aturan, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 9.1 Representasi Fakta & Aturan: Tabel padanan konsep ontologi ke fakta, predikat, dan aturan Prolog.
+
+| Konsep Ontologi | Representasi Prolog | Contoh | Peran | Catatan |
+| --- | --- | --- | --- | --- |
+| Kelas | predikat/tipe | kelas(kendaraan). | Taksonomi | abstraksi dasar |
+| Individu | fakta | kendaraan(ev_1). | Instans konkrit | objek spesifik |
+| Properti | atribut/predikat | soc(ev_1,0.4). | Deskripsi | nilai terukur |
+| Relasi | predikat biner | berada_di(ev_1,rute1). | Koneksi | semantik domain |
+| Aturan | clause | butuh_charge(X):-soc(X,S),S<0.2. | Inferensi | pengetahuan implisit |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 9.1 Representasi Fakta & Aturan: Sketsa basis pengetahuan Prolog yang sederhana.](figures/9-1-representasi-fakta-aturan.png){#fig-9-1-representasi-fakta-aturan width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 9.1 Representasi Fakta & Aturan: Sketsa basis pengetahuan Prolog yang sederhana.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa basis pengetahuan prolog yang sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa basis pengetahuan Prolog yang sederhana. untuk section '9.1 Representasi Fakta & Aturan'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 9.2 Mesin Inferensi Logika
+
+**Bab:** Bab 9. Prolog (Penalaran Simbolik)  
+**Lokasi usulan tabel:** halaman buku 74, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 74, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas mesin inferensi menghasilkan kesimpulan baru dari basis pengetahuan. Dalam konteks pembahasan 9.2 Mesin Inferensi Logika, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 9.2 Mesin Inferensi Logika: Tabel jenis inferensi, masukan, proses, dan keluaran penalaran.
+
+| Jenis Inferensi | Masukan | Proses | Keluaran | Nilai |
+| --- | --- | --- | --- | --- |
+| Forward reasoning | fakta | aplikasi aturan | fakta baru | otomasi pemantauan |
+| Backward reasoning | query | pencarian bukti | jawaban | diagnosis cepat |
+| Constraint checking | aturan+batasan | verifikasi | valid/tidak | konsistensi desain |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 9.2 Mesin Inferensi Logika: Diagram query-inferensi-jawaban dalam Prolog.](figures/9-2-mesin-inferensi-logika.png){#fig-9-2-mesin-inferensi-logika width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 9.2 Mesin Inferensi Logika: Diagram query-inferensi-jawaban dalam Prolog.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram query-inferensi-jawaban dalam prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram query-inferensi-jawaban dalam Prolog. untuk section '9.2 Mesin Inferensi Logika'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 9.3 Pemetaan Komponen Ontologi
+
+**Bab:** Bab 9. Prolog (Penalaran Simbolik)  
+**Lokasi usulan tabel:** halaman buku 75, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 75, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas komponen ontologi dipetakan ke struktur simbolik yang dapat dikueri. Dalam konteks pembahasan 9.3 Pemetaan Komponen Ontologi, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 9.3 Pemetaan Komponen Ontologi: Tabel pemetaan kelas-individu-properti-relasi ke konstruksi Prolog.
+
+| Komponen Ontologi | Struktur Simbolik | Pertanyaan yang Bisa Dijawab | Contoh |
+| --- | --- | --- | --- |
+| Kelas | predikat kategori | Objek ini termasuk apa? | kendaraan/1 |
+| Individu | konstanta | Objek mana yang terlibat? | ev_1 |
+| Properti | predikat atribut | Berapa nilainya? | biaya/2 |
+| Relasi | predikat relasional | Bagaimana keterhubungannya? | melayani/2 |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 9.3 Pemetaan Komponen Ontologi: Sketsa jembatan ontologi ke basis pengetahuan simbolik.](figures/9-3-pemetaan-komponen-ontologi.png){#fig-9-3-pemetaan-komponen-ontologi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 9.3 Pemetaan Komponen Ontologi: Sketsa jembatan ontologi ke basis pengetahuan simbolik.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa jembatan ontologi ke basis pengetahuan simbolik. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa jembatan ontologi ke basis pengetahuan simbolik. untuk section '9.3 Pemetaan Komponen Ontologi'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 10. Python (Algoritma & Aplikasi)
+
+### 10.1 Pemrosesan Data
+
+**Bab:** Bab 10. Python (Algoritma & Aplikasi)  
+**Lokasi usulan tabel:** halaman buku 80, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 80, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas python menangani transformasi data, analitik, dan persiapan simulasi. Dalam konteks pembahasan 10.1 Pemrosesan Data, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 10.1 Pemrosesan Data: Tabel tahapan pipeline data di Python: baca, bersih, fitur, analisis, simpan.
+
+| Tahap | Fungsi | Library Umum | Keluaran | Risiko |
+| --- | --- | --- | --- | --- |
+| Baca data | Impor file/stream | pandas | dataframe | format tak konsisten |
+| Pembersihan | Missing/outlier | pandas/numpy | data bersih | bias pembersihan |
+| Fitur | Turunan variabel | numpy | fitur | over-engineering |
+| Analisis | Statistik/model | scipy/sklearn | insight | salah interpretasi |
+| Simpan | Ekspor hasil | csv/parquet | artefak data | versi tak terjaga |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 10.1 Pemrosesan Data: Diagram pipeline data Python.](figures/10-1-pemrosesan-data.png){#fig-10-1-pemrosesan-data width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 10.1 Pemrosesan Data: Diagram pipeline data Python.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram pipeline data python. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram pipeline data Python. untuk section '10.1 Pemrosesan Data'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 10.2 Antarmuka Pengguna
+
+**Bab:** Bab 10. Python (Algoritma & Aplikasi)  
+**Lokasi usulan tabel:** halaman buku 82, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 82, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas python menyediakan antarmuka interaktif bagi pengguna dan insinyur. Dalam konteks pembahasan 10.2 Antarmuka Pengguna, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 10.2 Antarmuka Pengguna: Tabel komponen UI, fungsi, pengguna target, dan indikator usability.
+
+| Komponen UI | Pengguna | Fungsi | Indikator | Catatan |
+| --- | --- | --- | --- | --- |
+| Form input | Operator | Masukkan parameter | error rendah | harus jelas |
+| Dashboard | Manajer | Pantau metrik | waktu baca | ringkas |
+| Peta/rute | Pengguna | Lihat perjalanan | kemudahan paham | visual penting |
+| Panel simulasi | Insinyur | Uji skenario | fleksibilitas | butuh kontrol param |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 10.2 Antarmuka Pengguna: Sketsa layar antarmuka pengguna sederhana.](figures/10-2-antarmuka-pengguna.png){#fig-10-2-antarmuka-pengguna width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 10.2 Antarmuka Pengguna: Sketsa layar antarmuka pengguna sederhana.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa layar antarmuka pengguna sederhana. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa layar antarmuka pengguna sederhana. untuk section '10.2 Antarmuka Pengguna'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 10.3 Orkestrasi Simulasi
+
+**Bab:** Bab 10. Python (Algoritma & Aplikasi)  
+**Lokasi usulan tabel:** halaman buku 83, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 83, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas python mengorkestrasi simulasi dan menghubungkan modul komputasi. Dalam konteks pembahasan 10.3 Orkestrasi Simulasi, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 10.3 Orkestrasi Simulasi: Tabel skenario simulasi, parameter, keluaran, dan tujuan evaluasi.
+
+| Skenario | Parameter | Keluaran | Tujuan | Frekuensi |
+| --- | --- | --- | --- | --- |
+| Jam sibuk | permintaan tinggi | waktu tunggu | uji beban | harian |
+| Energi mahal | tarif listrik | biaya operasi | uji sensitivitas | mingguan |
+| Gangguan rute | jalan tertutup | resiliensi | uji fallback | sesuai kejadian |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 10.3 Orkestrasi Simulasi: Diagram orkestrasi simulasi multi-modul.](figures/10-3-orkestrasi-simulasi.png){#fig-10-3-orkestrasi-simulasi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 10.3 Orkestrasi Simulasi: Diagram orkestrasi simulasi multi-modul.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram orkestrasi simulasi multi-modul. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram orkestrasi simulasi multi-modul. untuk section '10.3 Orkestrasi Simulasi'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+## Bab 11. Bridge Libraries
+
+### 11.1 PySWIP
+
+**Bab:** Bab 11. Bridge Libraries  
+**Lokasi usulan tabel:** halaman buku 86, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 86, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas pyswip sebagai jembatan python ke prolog untuk kueri simbolik. Dalam konteks pembahasan 11.1 PySWIP, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 11.1 PySWIP: Tabel fitur PySWIP, kekuatan, batasan, dan use case.
+
+| Aspek | Keterangan | Kekuatan | Keterbatasan | Use Case |
+| --- | --- | --- | --- | --- |
+| Binding Python-Prolog | Akses query dari Python | mudah dipakai | setup tergantung lingkungan | prototipe cepat |
+| Pemanggilan predikat | Menjalankan rule base | langsung | debug kadang rumit | eksperimen simbolik |
+| Pertukaran hasil | List/dict sederhana | praktis | format perlu adaptasi | pipeline hybrid |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 11.1 PySWIP: Sketsa arsitektur Python-PySWIP-Prolog.](figures/11-1-pyswip.png){#fig-11-1-pyswip width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 11.1 PySWIP: Sketsa arsitektur Python-PySWIP-Prolog.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa arsitektur python-pyswip-prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa arsitektur Python-PySWIP-Prolog. untuk section '11.1 PySWIP'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 11.2 Janus (SWI-Prolog)
+
+**Bab:** Bab 11. Bridge Libraries  
+**Lokasi usulan tabel:** halaman buku 88, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 88, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas janus memungkinkan integrasi dua arah yang lebih erat antara python dan swi-prolog. Dalam konteks pembahasan 11.2 Janus (SWI-Prolog), tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 11.2 Janus (SWI-Prolog): Tabel kemampuan Janus: panggil fungsi, tukar data, performa, dan konteks pakai.
+
+| Aspek | Keterangan | Kekuatan | Keterbatasan | Use Case |
+| --- | --- | --- | --- | --- |
+| Integrasi dua arah | Python memanggil Prolog dan sebaliknya | erat | butuh versi cocok | sistem terpadu |
+| Pertukaran objek | Transfer data lebih kaya | ekspresif | kompleksitas integrasi | simulasi besar |
+| Eksekusi gabungan | Satu proses lebih mulus | efisien | debug lintas bahasa | engine hibrida |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 11.2 Janus (SWI-Prolog): Sketsa pertukaran data dua arah Python-Janus-Prolog.](figures/11-2-janus-swi-prolog.png){#fig-11-2-janus-swi-prolog width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 11.2 Janus (SWI-Prolog): Sketsa pertukaran data dua arah Python-Janus-Prolog.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa pertukaran data dua arah python-janus-prolog. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa pertukaran data dua arah Python-Janus-Prolog. untuk section '11.2 Janus (SWI-Prolog)'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 11.3 PrologMQI
+
+**Bab:** Bab 11. Bridge Libraries  
+**Lokasi usulan tabel:** halaman buku 90, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 90, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas prologmqi menyediakan integrasi berbasis message queue/interface eksternal. Dalam konteks pembahasan 11.3 PrologMQI, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 11.3 PrologMQI: Tabel karakteristik PrologMQI, pola komunikasi, dan skenario penggunaan.
+
+| Aspek | Keterangan | Kekuatan | Keterbatasan | Use Case |
+| --- | --- | --- | --- | --- |
+| Interface eksternal | Klien-server Prolog | terpisah proses | overhead komunikasi | layanan jaringan |
+| Skalabilitas | Dapat dihubungkan dari banyak klien | fleksibel | latensi tambahan | arsitektur service |
+| Kontrol sesi | Query terkelola | aman untuk integrasi | konfigurasi lebih banyak | deployment produksi |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 11.3 PrologMQI: Diagram koneksi klien ke server Prolog melalui MQI.](figures/11-3-prologmqi.png){#fig-11-3-prologmqi width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 11.3 PrologMQI: Diagram koneksi klien ke server Prolog melalui MQI.
+
+**Deskripsi gambar:**  
+Gambar berupa diagram koneksi klien ke server prolog melalui mqi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Diagram koneksi klien ke server Prolog melalui MQI. untuk section '11.3 PrologMQI'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+# Bagian 4
+
+## Bab 12. Studi Kasus: Transportasi 2030
+
+### 12.1 Skenario Bandung-Jakarta
+
+**Bab:** Bab 12. Studi Kasus: Transportasi 2030  
+**Lokasi usulan tabel:** halaman buku 95, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 95, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas skenario perjalanan bandung-jakarta sebagai konteks evaluasi sistem. Dalam konteks pembahasan 12.1 Skenario Bandung-Jakarta, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 12.1 Skenario Bandung-Jakarta: Tabel skenario perjalanan: moda, asumsi, jarak, waktu, dan hambatan.
+
+| Skenario | Moda | Asumsi Utama | Kondisi Koridor | Tujuan Evaluasi |
+| --- | --- | --- | --- | --- |
+| Komuter cepat | Kereta cepat | stasiun mudah diakses | padat | waktu minimum |
+| Layanan fleksibel | Fleet EV | pickup dekat pengguna | beragam | kenyamanan personal |
+| Mass transit murah | Bus | jalur umum tersedia | macet | biaya rendah |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 12.1 Skenario Bandung-Jakarta: Peta garis sederhana koridor Bandung-Jakarta.](figures/12-1-skenario-bandung-jakarta.png){#fig-12-1-skenario-bandung-jakarta width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 12.1 Skenario Bandung-Jakarta: Peta garis sederhana koridor Bandung-Jakarta.
+
+**Deskripsi gambar:**  
+Gambar berupa peta garis sederhana koridor bandung-jakarta. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Peta garis sederhana koridor Bandung-Jakarta. untuk section '12.1 Skenario Bandung-Jakarta'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat
+
+**Bab:** Bab 12. Studi Kasus: Transportasi 2030  
+**Lokasi usulan tabel:** halaman buku 96, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 96, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas perbandingan moda untuk melihat trade-off antar alternatif sistem. Dalam konteks pembahasan 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat: Tabel komparatif EV, bus, dan kereta cepat menurut beberapa metrik kunci.
+
+| Moda | Kelebihan | Keterbatasan | Cocok untuk | Catatan |
+| --- | --- | --- | --- | --- |
+| Fleet EV | fleksibel, emisi rendah | perlu charging | first-last mile | butuh manajemen armada |
+| Bus | murah, kapasitas baik | terpengaruh macet | layanan massal | jadwal penting |
+| Kereta cepat | sangat cepat | akses stasiun | perjalanan antarkota | butuh integrasi feeder |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat: Sketsa tiga moda transportasi berdampingan.](figures/12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat.png){#fig-12-2-evaluasi-fleet-ev-vs-bus-vs-kereta-cepat width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat: Sketsa tiga moda transportasi berdampingan.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa tiga moda transportasi berdampingan. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa tiga moda transportasi berdampingan. untuk section '12.2 Evaluasi Fleet EV vs Bus vs Kereta Cepat'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+### 12.3 Metrik: Waktu, Biaya, Emisi CO2
+
+**Bab:** Bab 12. Studi Kasus: Transportasi 2030  
+**Lokasi usulan tabel:** halaman buku 98, sekitar baris 6–12  
+**Lokasi usulan gambar:** halaman buku 98, sekitar baris 18–24  
+
+**Paragraf penyerta usulan tabel:**  
+Tabel ini membantu memperjelas metrik evaluasi mengikat keputusan pada ukuran kinerja yang eksplisit. Dalam konteks pembahasan 12.3 Metrik: Waktu, Biaya, Emisi CO2, tabel berfungsi sebagai jembatan antara uraian konseptual dan representasi terstruktur yang siap dipakai untuk analisis, perancangan ontologi, atau simulasi. Karena itu, tabel sebaiknya ditempatkan segera setelah pengantar konsep pada section ini agar pembaca mendapat kerangka ringkas sebelum masuk ke uraian lanjutan.
+
+> **Caption tabel:** Tabel usulan untuk 12.3 Metrik: Waktu, Biaya, Emisi CO2: Tabel metrik inti, definisi, satuan, arah preferensi, dan sumber data.
+
+| Metrik | Definisi | Satuan | Arah Preferensi | Sumber |
+| --- | --- | --- | --- | --- |
+| Waktu tempuh | lama perjalanan pintu ke pintu | menit | lebih kecil lebih baik | simulasi/log |
+| Biaya | biaya total per penumpang | Rp | lebih kecil lebih baik | model ekonomi |
+| Emisi CO2 | jejak karbon perjalanan | kg CO2e | lebih kecil lebih baik | faktor emisi |
+| Kenyamanan* | opsional pelengkap | skor | lebih besar lebih baik | survei |
+
+
+**Placeholder gambar:**  
+`![Gambar usulan untuk 12.3 Metrik: Waktu, Biaya, Emisi CO2: Sketsa tiga sumbu evaluasi: waktu, biaya, emisi.](figures/12-3-metrik-waktu-biaya-emisi-co2.png){#fig-12-3-metrik-waktu-biaya-emisi-co2 width=80%}`
+
+**Caption gambar:** Gambar usulan untuk 12.3 Metrik: Waktu, Biaya, Emisi CO2: Sketsa tiga sumbu evaluasi: waktu, biaya, emisi.
+
+**Deskripsi gambar:**  
+Gambar berupa sketsa tiga sumbu evaluasi: waktu, biaya, emisi. dalam gaya sketsa pena hitam di atas latar putih, sederhana, bersih, dan mudah dibaca.
+
+**Prompt Nano Banana Pro:**  
+"Buat ilustrasi line-art sederhana dengan latar putih polos dan garis pena hitam tipis. Topik: Sketsa tiga sumbu evaluasi: waktu, biaya, emisi. untuk section '12.3 Metrik: Waktu, Biaya, Emisi CO2'. Komposisi bersih, minimalis, tanpa shading berat, tanpa warna, tanpa tekstur latar, tanpa detail realistis yang rumit. Gunakan ikon, panah, label singkat, dan bentuk geometris sederhana agar cocok untuk buku akademik teknik."
+
+# Penutup
+
+Usulan di atas dirancang agar buku memiliki kepadatan artefak visual yang tinggi tanpa kehilangan kesederhanaan. Tabel-tabel di sini terutama berfungsi sebagai alat kristalisasi konsep, sedangkan gambar-gambar line-art berfungsi sebagai jangkar visual untuk membantu pembaca memahami relasi antar ide dengan cepat. Pada tahap produksi berikutnya, editor dapat:
+
+1. Memilih tabel/gambar mana yang benar-benar dimasukkan apa adanya.
+2. Menyesuaikan ukuran tabel dengan panjang uraian tiap section.
+3. Menghasilkan gambar secara bertahap memakai prompt yang sudah tersedia.
+4. Menyatukan gaya visual seluruh buku dengan template caption dan penomoran yang konsisten.

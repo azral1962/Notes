@@ -1,0 +1,56 @@
+---
+title: "Berikut adalah diagram Siklus 7-Langkah pemecahan ..."
+format: typst
+---
+
+# Berikut adalah diagram Siklus 7-Langkah pemecahan ...
+
+导出时间: 08/04/2026, 21:21:19
+
+
+
+Berikut adalah diagram Siklus 7-Langkah pemecahan masalah (_problem solving_) berdasarkan referensi yang ada, disajikan dalam kode Mermaid:
+
+```{=mermaid}
+flowchart TD
+    A[1. Inisiasi: Identifikasi Masalah & Tetapkan Target/Strategi] --> B[2. Picu: Jalankan Aksi sesuai Prosedur]
+    B --> C[3. Event: Observasi Fakta Hasil Aksi]
+    C --> D[4. Baca Status: Membaca Pesan Status Entitas]
+    D --> E{5. Evaluasi}
+    
+    E -- Status Tercapai --> G[7. Selesai: Lesson Learned]
+    E -- Maju Sesuai Rencana --> B
+    E -- Tidak Sesuai Rencana --> F[6. Adaptasi: Penyesuaian/Belajar/Rancang Aksi Baru]
+    E -- Target Tidak Realistis --> A
+    
+    F --> B
+```
+**Penjelasan Alur (Siklus 7-Langkah):**
+
+**Inisiasi:** Tahap menetapkan entitas target status, prinsip, strategi, prosedur, dan aksi\[1\].
+
+**Picu:** Menjalankan aksi sesuai dengan prosedur yang telah ditetapkan\[2\].
+
+**Event:** Melakukan observasi atas fakta-fakta yang terjadi sebagai hasil dari aksi tersebut\[2\].
+
+**Baca Status:** Membaca pesan atau informasi mengenai status entitas setelah aksi diberikan\[2\].
+
+**Evaluasi:** Tahap penilaian untuk menentukan langkah selanjutnya\[2\]:
+
+Jika status tercapai, proses berlanjut ke langkah penyelesaian.
+
+Jika kemajuan sesuai rencana, siklus kembali memicu sasaran (Picu).
+
+Jika tidak sesuai rencana, dilakukan evaluasi mendalam pada komponen pengetahuan, prosedur, dan aksi. Apabila semuanya dipastikan sudah benar tetapi gagal, berarti target dinilai tidak realistis sehingga harus kembali merumuskan masalah di tahap **Inisiasi**\[2\]\[3\].
+
+**Adaptasi:** Jika dari evaluasi ditemukan ada strategi atau prosedur yang salah/kurang memadai, maka dilakukan pembelajaran, perancangan prosedur baru, atau latihan aksi baru. Setelah disesuaikan, proses dikembalikan ke tahap **Picu**\[3\]\[4\].
+
+**Selesai:** Mendapatkan pelajaran (_lesson learned_) dari pemecahan masalah\[4\].
+---
+
+## 引用来源
+
+[1] Edukasi XXI UKM v.2.1.docx
+[2] Edukasi XXI UKM v.2.1.docx
+[3] Edukasi XXI UKM v.2.1.docx
+[4] Edukasi XXI UKM v.2.1.docx

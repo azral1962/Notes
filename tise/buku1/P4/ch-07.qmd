@@ -1,0 +1,12 @@
+# Alat Implementasi AI
+
+## Ringkasan
+
+## Ontologi (Basis Semantik)
+
+## Prolog (Penalaran Logika)
+
+## Python (Otot Algoritmik & ML)
+
+## Sistem Janus (Integrasi Neuro-Simbolik)
+

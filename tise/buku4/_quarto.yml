@@ -1,0 +1,35 @@
+project:
+  type: book
+
+book:
+  title: "Rekayasa Multidisiplin di Era Kecerdasan Sistem"
+  subtitle: Triune-Intelligence Smart Engineering Level 5
+  author: "Armein Z. R. Langi"
+  date: "4/20/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: "Bagian I. Pengantar Monograf dan Posisi TISE level 5"
+      chapters:
+        - part_1.qmd
+    - part: "Bagian II. Evolusi Rekayasa Menuju TISE level 5"
+      chapters:
+        - part_2.qmd
+    - part: "Bagian III. Arsitektur TISE level 5 sebagai Buku DNA"
+      chapters:
+        - part_3.qmd
+    - part: "Bagian IV. Domain Aplikasi dan Reusability DNA"
+      chapters:
+        - part_4.qmd
+    - summary.qmd
+    - references.qmd
+  appendices:
+    - lampiran.qmd
+bibliography: references.bib
+lang: id
+format:
+  typst:
+    keep-typ: true
+
+
+

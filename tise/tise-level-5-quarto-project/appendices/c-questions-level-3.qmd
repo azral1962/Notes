@@ -1,0 +1,9 @@
+# Lampiran C. Paket Pertanyaan Teknis untuk TISE level 3
+
+1. Identitas naratif siapa yang paling penting untuk dipentaskan dalam solusi ini?
+2. Kisah apa yang dibawa stakeholder ke dalam sistem?
+3. Apa yang ingin stakeholder deliver kepada dunia melalui perannya?
+4. Ruang atau lingkungan seperti apa yang akan menjadi teater solusi?
+5. Pengalaman apa yang perlu dirasakan audiens?
+6. Prompt apa yang dapat membantu stakeholder memahami perannya?
+

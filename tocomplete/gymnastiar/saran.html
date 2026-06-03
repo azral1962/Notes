@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>saran</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="saran_files/libs/clipboard/clipboard.min.js"></script>
+<script src="saran_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="saran_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="saran_files/libs/quarto-html/popper.min.js"></script>
+<script src="saran_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="saran_files/libs/quarto-html/anchor.min.js"></script>
+<link href="saran_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="saran_files/libs/quarto-html/quarto-syntax-highlighting-7c69b197886ae2a34062761d21e44731.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="saran_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="saran_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="saran_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="usulan-rekayasa-tise-untuk-la-liga" class="level1">
+<h1>Usulan Rekayasa TISE untuk La Liga</h1>
+<p>Dokumen usulan rekayasa mengenai <em>Data Pipeline</em> dan <em>Machine Learning</em> untuk analisis performa La Liga 2023-2024 yang Anda lampirkan sudah sangat solid dari sisi rekayasa tradisional (<strong>TISE Level 0</strong> dan <strong>Level 1</strong>). Usulan tersebut telah mencakup otomasi data, efisiensi pemrosesan (Bronze ke Gold layer), hingga visualisasi produk (Dashboard).</p>
+<p>Namun, agar selaras dengan paradigma <strong>Triune-Intelligence Smart-Engineering (TISE)</strong> yang bertujuan mengamplifikasi agensi manusia dan memulihkan misi hidup, berikut adalah usulan perbaikan dan pengayaan secara hirarkis:</p>
+<section id="transformasi-metodologi-dari-data-pipeline-ke-siklus-pudal-level-2" class="level2">
+<h2 class="anchored" data-anchor-id="transformasi-metodologi-dari-data-pipeline-ke-siklus-pudal-level-2">1. Transformasi Metodologi: Dari Data Pipeline ke Siklus PUDAL (Level 2)</h2>
+<p>Saat ini, metodologi fokus pada <em>Data Engineering Lifecycle</em> (Ingestion-Transformation-Storage). Untuk mencapai TISE, sistem ini harus diubah menjadi siklus kognitif <strong>PUDAL</strong>: * <strong>Perceive (Merasakan):</strong> Jangan hanya menangkap “Event Data” mentah, tapi tangkap “jeritan” kebutuhan taktis di lapangan (misal: penderitaan tim saat menghadapi <em>high pressing</em>). * <strong>Understand (Memahami):</strong> ML tidak hanya melakukan <em>clustering</em>, tapi mencari makna naratif. Mengapa Girona FC mendobrak dominasi? Apa “jiwa” di balik data xG mereka? * <strong>Decide &amp; Act:</strong> Berikan sistem kemampuan untuk menyodorkan rekomendasi tindakan yang memuliakan agensi pelatih, bukan sekadar statistik pasif. * <strong>Learn:</strong> Membangun memori organisasional yang terus belajar dari setiap pertandingan untuk memperkaya talenta unik pemain.</p>
+</section>
+<section id="pengayaan-arsitektur-meta-dna-tise-level-3" class="level2">
+<h2 class="anchored" data-anchor-id="pengayaan-arsitektur-meta-dna-tise-level-3">2. Pengayaan Arsitektur: Meta-DNA TISE (Level 3)</h2>
+<p>Usulan Anda saat ini bersifat <em>hard-coded</em> untuk metrik tertentu (PPDA, Shot Distance). * <strong>Perbaikan:</strong> Ubah sistem menjadi <strong>Agentic Platform</strong>. Bangun lapisan di mana pelatih atau analis dapat menggunakan <em>Natural Language Prompts</em> untuk membuat metrik baru secara instan. * <strong>Visi:</strong> Insinyur tidak lagi membuatkan dashboard tetap, tapi menyediakan “Mesin Pembuat Mesin” yang memungkinkan staf teknis klub merekayasa solusi mereka sendiri sesuai misi unik klub tersebut.</p>
+</section>
+<section id="fokus-inti-narative-identity-agency-level-4" class="level2">
+<h2 class="anchored" data-anchor-id="fokus-inti-narative-identity-agency-level-4">3. Fokus Inti: Narative Identity &amp; Agency (Level 4)</h2>
+<p>Saat ini, <em>Machine Learning</em> digunakan untuk mengelompokkan klub berdasarkan gaya bermain (<em>Tactical Identity</em>). Dalam TISE, kita harus naik ke <strong>Narrative Identity</strong>. * <strong>Pengayaan:</strong> Gunakan data statistik untuk menyusun “Naskah Perjalanan” pemain. Misalnya, bagaimana data membantu seorang pemain cadangan melihat potensi uniknya untuk menjadi “Rockstar” dalam skenario pertandingan tertentu. * <strong>Tujuan:</strong> Teknologi bukan menggantikan insting pemain, tapi menjadi “Sound System” yang mengamplifikasi talenta unik mereka agar dapat dinikmati oleh stadion global.</p>
+</section>
+<section id="implementasi-ekonomi-misi-konfigurasi-stakeholder-level-5" class="level2">
+<h2 class="anchored" data-anchor-id="implementasi-ekonomi-misi-konfigurasi-stakeholder-level-5">4. Implementasi Ekonomi Misi: Konfigurasi Stakeholder (Level 5)</h2>
+<p>Usulan Anda masih terfokus pada sisi teknis internal. TISE mendorong terciptanya <strong>Economy of Mission</strong>: * <strong>Perbaikan:</strong> Rancang sistem yang menghubungkan berbagai stakeholder. Data performa (K - <em>Knowledge</em>) dari klub besar bisa dikonversi menjadi layanan (<em>Service</em>) untuk akademi sepak bola di daerah terpencil. * <strong>Penyelesaian 4 Kegagalan Misi:</strong> * <strong>Right Audience:</strong> Hubungkan talenta unik pemain (berdasarkan ML clustering) dengan klub yang benar-benar membutuhkan profil tersebut untuk menjalankan misinya. * <strong>Right Instrument:</strong> Pastikan aplikasi ini menjadi alat yang memberdayakan pemain untuk melakukan <em>main gig</em> mereka (bermain bola) dengan lebih otentik.</p>
+</section>
+<section id="penyesuaian-luaran-mesin-pskve-yang-utuh" class="level2">
+<h2 class="anchored" data-anchor-id="penyesuaian-luaran-mesin-pskve-yang-utuh">5. Penyesuaian Luaran: Mesin PSKVE yang Utuh</h2>
+<p>Dalam laporan tersebut, luaran utamanya adalah Dashboard (Product). Mari perkaya menjadi <strong>PSKVE</strong>: * <strong>Product (P):</strong> Pipeline data yang andal dan cepat. * <strong>Service (S):</strong> Pendampingan cerdas bagi pelatih saat mengambil keputusan <em>real-time</em>. * <strong>Knowledge (K):</strong> Library taktis yang lahir dari hasil ML, yang bisa dipelajari oleh manusia (bukan <em>black-box</em>). * <strong>Value (V):</strong> Nilai ekonomi dari peningkatan nilai pasar pemain dan nilai inspiratif bagi fans. * <strong>Environment (E):</strong> Ekosistem kompetisi yang lebih adil karena data menyingkap kebenaran di balik keberhasilan tim <em>underdog</em>.</p>
+<p>Dengan pengayaan ini, proyek analisis La Liga Anda tidak hanya menjadi alat statistik, tetapi menjadi bagian dari <strong>Splendid Theaters of Life</strong>, di mana setiap data poin adalah notasi musik yang mengamplifikasi performa heroik para pemain di atas panggung stadion global.</p>
+</section>
+</section>
+<section id="usulan-transformasi-algoritma-clustering" class="level1">
+<h1>Usulan Transformasi Algoritma Clustering</h1>
+<p>Kita bedah bagaimana kita dapat mentransformasi algoritma <strong>Clustering</strong> tradisional (yang biasanya hanya mengelompokkan klub/pemain berdasarkan efisiensi teknis) menjadi instrumen untuk menyingkap <strong>Narrative Identity</strong> pemain dalam kerangka TISE.</p>
+<p>Dalam paradigma TISE, kita tidak hanya ingin tahu “siapa yang efisien”, tapi “siapa yang sedang menjalankan misi uniknya”. Berikut adalah detail modifikasinya:</p>
+<section id="transformasi-input-dari-statistik-pasif-ke-agency-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="transformasi-input-dari-statistik-pasif-ke-agency-metrics">1. Transformasi Input: Dari Statistik Pasif ke <em>Agency Metrics</em></h2>
+<p>Clustering tradisional menggunakan fitur seperti <em>Pass Accuracy</em> atau <em>Possession</em>. Untuk <strong>Narrative Identity</strong>, kita perlu fitur yang menunjukkan “kehendak” atau “agensi” pemain: * <strong>Decisiveness Index:</strong> Seberapa sering pemain mengambil risiko dalam momen kritis (misalnya: <em>progressive passes</em> saat tim tertinggal). Ini menunjukkan narasi “sang penyelamat”. * <strong>Resilience Factor:</strong> Performa pemain setelah melakukan kesalahan (misal: <em>recovery rate</em> setelah kehilangan bola). Ini menyingkap narasi “penebusan” (<em>redemption</em>). * <strong>Creative Autonomy:</strong> Seberapa sering pemain keluar dari pola taktis standar untuk menciptakan peluang unik. Ini mengidentifikasi “Sang Rockstar”.</p>
+</section>
+<section id="algoritma-dynamic-clustering-untuk-menangkap-alur-cerita" class="level2">
+<h2 class="anchored" data-anchor-id="algoritma-dynamic-clustering-untuk-menangkap-alur-cerita">2. Algoritma: <em>Dynamic Clustering</em> untuk Menangkap Alur Cerita</h2>
+<p>Narasi bersifat temporal (memiliki awal, konflik, dan resolusi). Clustering statis tidak cukup. * <strong>Temporal Clustering:</strong> Jangan hanya mengelompokkan berdasarkan rata-rata musim. Kelompokkan pemain berdasarkan “perubahan profil” mereka dari waktu ke waktu. * <strong>Insight:</strong> Kita bisa mendeteksi narasi “The Rising Star” (pemain yang klasternya berpindah drastis dari <em>benchwarmer</em> ke <em>key playmaker</em>) atau “The Reliable Veteran”.</p>
+</section>
+<section id="output-dari-label-angka-ke-profil-naratif-the-rockstar-profile" class="level2">
+<h2 class="anchored" data-anchor-id="output-dari-label-angka-ke-profil-naratif-the-rockstar-profile">3. Output: Dari Label Angka ke Profil Naratif (The Rockstar Profile)</h2>
+<p>Alih-alih hanya memberi label “Cluster 1: High Pressing”, sistem TISE akan menghasilkan output <strong>PSKVE</strong> yang mendukung <strong>Narrative Identity</strong>: * <strong>The Narrative Label:</strong> Ganti label “Cluster A” menjadi profil naratif, misalnya: <em>“The Silence Breaker”</em> (pemain yang statistiknya biasa saja tapi selalu muncul di momen krusial untuk memecah kebuntuan). * <strong>Knowledge (K):</strong> Berikan penjelasan pada pemain: <em>“Data menunjukkan Anda memiliki talenta unik dalam menstabilkan emosi tim melalui akurasi umpan pendek saat tekanan tinggi.”</em> Ini memulihkan agensi mereka.</p>
+</section>
+<section id="menghubungkan-dengan-economy-of-mission-level-5" class="level2">
+<h2 class="anchored" data-anchor-id="menghubungkan-dengan-economy-of-mission-level-5">4. Menghubungkan dengan <em>Economy of Mission</em> (Level 5)</h2>
+<p>Hasil clustering ini digunakan untuk menyelesaikan masalah <strong>“Wrong Audience”</strong>: * Sistem akan merekomendasikan: <em>“Pemain ini memiliki narasi ‘The Tactical Anchor’. Ia tidak cocok di klub X yang butuh ‘The Chaos Creator’, tapi ia adalah kepingan misi yang hilang bagi klub Y.”</em> * Ini menciptakan pertukaran nilai di mana pemain menemukan panggung (<em>stage</em>) yang tepat untuk mementaskan talenta uniknya.</p>
+</section>
+<section id="contoh-implementasi-pada-data-la-liga-girona-fc" class="level2">
+<h2 class="anchored" data-anchor-id="contoh-implementasi-pada-data-la-liga-girona-fc">Contoh Implementasi pada Data La Liga (Girona FC):</h2>
+<p>Jika kita melakukan clustering pada pemain Girona, kita mungkin menemukan bahwa kesuksesan mereka bukan karena “pemain bintang”, tapi karena sistem TISE-nya berhasil menyatukan individu-individu dengan narasi <strong>“The Underdog’s Redemption”</strong>. Algoritma akan menyoroti bagaimana pemain yang “dibuang” klub besar justru menemukan agensi maksimalnya di sini.</p>
+</section>
+</section>
+<section id="python-pseudocode-untuk-temporal-clustering-with-agency-metrics" class="level1">
+<h1>Python Pseudocode untuk Temporal Clustering with Agency Metrics</h1>
+<p>Draf <strong>Python pseudocode</strong> yang dirancang untuk menggeser paradigma dari sekadar statistik performa menjadi metrik agensi. Kode ini mengintegrasikan logika <strong>Level 4 TISE (Narrative Identity)</strong> ke dalam proses <em>clustering</em> pada data La Liga.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. PERCEIVE &amp; UNDERSTAND: Mendefinisikan Metrik Agensi (Agency Metrics)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Kita tidak hanya menghitung jumlah, tapi konteks di balik tindakan.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_decisiveness(match_data):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Menghitung seberapa berani pemain mengambil keputusan kritis.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Bobot diberikan lebih tinggi jika tindakan dilakukan saat tim tertinggal.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># High-risk actions: forward passes in final third, dribbles, shots</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    risk_actions <span class="op">=</span> match_data[<span class="st">'progressive_passes'</span>] <span class="op">+</span> match_data[<span class="st">'dribbles_completed'</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Context Weight: 1.5x jika skor sedang kalah atau seri di menit akhir</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    context_weight <span class="op">=</span> match_data[<span class="st">'match_state'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="fl">1.5</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">'trailing'</span> <span class="cf">else</span> <span class="fl">1.0</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (risk_actions <span class="op">*</span> context_weight).mean()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_resilience(match_data):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">    Menghitung daya pulih (Redemption).</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Dihitung dari kesuksesan aksi tepat setelah terjadi kesalahan (turnover/foul).</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Success rate of action (t+1) after a failure at (t)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    recovery_events <span class="op">=</span> match_data[match_data[<span class="st">'prev_action_failed'</span>] <span class="op">==</span> <span class="va">True</span>]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    resilience_score <span class="op">=</span> recovery_events[<span class="st">'current_action_success'</span>].mean()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> resilience_score</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_creative_autonomy(match_data, tactical_template):</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">    Menghitung deviasi kreatif dari instruksi taktis standar.</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">    Semakin unik polanya dibandingkan 'expected pattern', semakin tinggi skor Rockstar-nya.</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Deviation from expected tactical heatmaps or pass clusters</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    actual_pattern <span class="op">=</span> match_data[<span class="st">'event_location_clusters'</span>]</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    deviation <span class="op">=</span> calculate_distance(actual_pattern, tactical_template)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> deviation</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. DECIDE: Membangun Pipeline Clustering TISE</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_narrative_clusters(player_stats):</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fitur input bukan lagi sekadar 'Goals' atau 'Assists'</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    features <span class="op">=</span> player_stats[[</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">'decisiveness_index'</span>, </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="st">'resilience_factor'</span>, </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="st">'creative_autonomy'</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    ]]</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    scaled_features <span class="op">=</span> scaler.fit_transform(features)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Menggunakan K-Means untuk menemukan 7 miliar (skala) potensi talenta</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    player_stats[<span class="st">'cluster'</span>] <span class="op">=</span> kmeans.fit_predict(scaled_features)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> player_stats</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. ACT: Mentransformasi Output menjadi Rockstar Profile (Level 4)</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_rockstar_profile(cluster_id):</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    profiles <span class="op">=</span> {</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>        <span class="dv">0</span>: <span class="st">"The Silent Anchor (High Resilience, Low Deviation)"</span>,</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="dv">1</span>: <span class="st">"The Chaos Creator (High Creative Autonomy)"</span>,</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span>: <span class="st">"The Clutch Performer (High Decisiveness in Trailing State)"</span>,</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        <span class="dv">3</span>: <span class="st">"The Systematic Engine (Low Deviation, High Efficiency)"</span>,</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span>: <span class="st">"The Redemption Hero (Extreme Resilience after Error)"</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> profiles.get(cluster_id, <span class="st">"Unique Talent"</span>)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Eksekusi ---</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data La Liga (misal: Girona FC)</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_json(<span class="st">"la_liga_event_data.json"</span>)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformasi data menjadi metrik agensi</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>player_stats <span class="op">=</span> data.groupby(<span class="st">'player_id'</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: pd.Series({</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">'decisiveness_index'</span>: calculate_decisiveness(x),</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    <span class="st">'resilience_factor'</span>: calculate_resilience(x),</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">'creative_autonomy'</span>: calculate_creative_autonomy(x, girona_tactic)</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Clustering berbasis Narasi</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>narrative_data <span class="op">=</span> generate_narrative_clusters(player_stats)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="co"># Output: Memulihkan Identitas Pemain</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, row <span class="kw">in</span> narrative_data.iterrows():</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    profile <span class="op">=</span> get_rockstar_profile(row[<span class="st">'cluster'</span>])</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Player </span><span class="sc">{</span>row<span class="sc">.</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>profile<span class="sc">}</span><span class="ss"> - Ready for his/her Main Gig."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="penjelasan-logika-tise-dalam-kode" class="level2">
+<h2 class="anchored" data-anchor-id="penjelasan-logika-tise-dalam-kode">Penjelasan Logika TISE dalam Kode:</h2>
+<ol type="1">
+<li><strong>Metrik Decisiveness:</strong> Mengubah data menjadi “keberanian”. Inilah cara rekayasa melihat <strong>Agensi</strong> manusia—kemampuan untuk bertindak meskipun di bawah tekanan (Wrong Event/Situation).</li>
+<li><strong>Metrik Resilience:</strong> Fokus pada pemulihan (<em>Redemption</em>). Ini adalah inti dari psikologi naratif dalam TISE, di mana kegagalan bukan akhir, melainkan awal dari cerita kepahlawanan.</li>
+<li><strong>Creative Autonomy:</strong> Menghargai <strong>Talenta Unik</strong>. Kita tidak menghukum pemain yang keluar dari taktik, tapi kita merekamnya sebagai bentuk kreativitas yang mungkin menjadi solusi yang belum terpikirkan (<em>The Right Song</em>).</li>
+<li><strong>Rockstar Profile:</strong> Output akhirnya bukan angka 0.85, melainkan label identitas yang memberdayakan individu untuk memahami peran strategisnya di stadion global.</li>
+</ol>
+<p>Draf ini bisa Anda kembangkan lebih lanjut di dalam bab implementasi teknis untuk menunjukkan bagaimana <strong>Meta-TISE DNA (Level 3)</strong> bekerja secara otomatis membangun profil manusia yang berdaya.</p>
+</section>
+</section>
+<section id="implementasi-psikologi-naratif-mengubah-data-tracking-menjadi-kepercayaan-diri-dilema-pelatih-vs.-pemain" class="level1">
+<h1>Implementasi Psikologi Naratif: Mengubah Data Tracking menjadi Kepercayaan Diri (Dilema Pelatih vs.&nbsp;Pemain)</h1>
+<p>Logika matematis untuk <strong>Decisiveness Weight</strong> (Bobot Keputusan). Dalam rekayasa TISE, kita ingin mengonversi “data mentah” menjadi “makna naratif”.</p>
+<p>Untuk menghitung seberapa besar <strong>Agensi</strong> seorang pemain, kita tidak bisa menyamakan nilai sebuah umpan di menit ke-10 saat menang 3-0 dengan umpan di menit ke-90 saat skor imbang. Bobot ini adalah instrumen untuk mendeteksi siapa “Rockstar” yang muncul di momen krusial.</p>
+<section id="formulasi-matematis-decisiveness-weight-w_d" class="level2">
+<h2 class="anchored" data-anchor-id="formulasi-matematis-decisiveness-weight-w_d">1. Formulasi Matematis Decisiveness Weight (<span class="math inline">\(W_d\)</span>)</h2>
+<p>Kita dapat merumuskan bobot keputusan sebagai fungsi dari waktu (<span class="math inline">\(t\)</span>), selisih skor (<span class="math inline">\(\Delta s\)</span>), dan lokasi kejadian (<span class="math inline">\(L\)</span>):</p>
+<p><span class="math display">\[W_d = 1 + \left( \alpha \cdot e^{\frac{t}{T}} \cdot \frac{1}{1 + |\Delta s|} \cdot \text{Zone\_Multiplier} \right)\]</span></p>
+<p>Keterangan: * <strong><span class="math inline">\(e^{\frac{t}{T}}\)</span>:</strong> Fungsi eksponensial untuk memberikan nilai lebih tinggi pada aksi di akhir pertandingan (misal <span class="math inline">\(T=90\)</span>). * <strong><span class="math inline">\(\frac{1}{1 + |\Delta s|}\)</span>:</strong> Memberikan bobot maksimal saat skor imbang (<span class="math inline">\(\Delta s = 0\)</span>) atau selisih tipis. * <strong>Zone Multiplier:</strong> Memberikan nilai lebih tinggi untuk aksi di <em>final third</em> (area lawan).</p>
+</section>
+<section id="implementasi-python-advanced-decisiveness" class="level2">
+<h2 class="anchored" data-anchor-id="implementasi-python-advanced-decisiveness">2. Implementasi Python: Advanced Decisiveness</h2>
+<p>Berikut adalah pengembangan dari <em>pseudocode</em> sebelumnya yang lebih presisi secara matematis:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_advanced_decisiveness(events, match_duration<span class="op">=</span><span class="dv">90</span>):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Menghitung skor decisiveness berdasarkan urgensi temporal dan situasional.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    decisiveness_scores <span class="op">=</span> []</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _, event <span class="kw">in</span> events.iterrows():</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 1. Faktor Waktu (Eksponensial)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Aksi di menit akhir jauh lebih berharga bagi narasi 'The Clutch'</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        time_factor <span class="op">=</span> np.exp(event[<span class="st">'minute'</span>] <span class="op">/</span> match_duration)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 2. Faktor Skor (Urgensi)</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Selisih skor kecil (0 atau 1) meningkatkan urgensi agensi</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        score_gap <span class="op">=</span> <span class="bu">abs</span>(event[<span class="st">'team_score'</span>] <span class="op">-</span> event[<span class="st">'opponent_score'</span>])</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        urgency_factor <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> score_gap)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 3. Faktor Lokasi (Konteks Lapangan)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Aksi di area pertahanan lawan (X &gt; 80) memiliki dampak lebih besar</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        zone_multiplier <span class="op">=</span> <span class="fl">1.5</span> <span class="cf">if</span> event[<span class="st">'location_x'</span>] <span class="op">&gt;</span> <span class="dv">80</span> <span class="cf">else</span> <span class="fl">1.0</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Menghitung Bobot Akhir untuk aksi berisiko (progressive passes, shots, dribbles)</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> event[<span class="st">'is_progressive'</span>] <span class="kw">or</span> event[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'Shot'</span>:</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            event_weight <span class="op">=</span> time_factor <span class="op">*</span> urgency_factor <span class="op">*</span> zone_multiplier</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            decisiveness_scores.append(event_weight)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean(decisiveness_scores) <span class="cf">if</span> decisiveness_scores <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Contoh Aplikasi pada Cluster Level 4 (Narrative Identity)</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Pemain dengan skor tinggi di sini akan masuk ke klaster "The Clutch Performer"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="menyingkap-narrative-identity-level-4" class="level2">
+<h2 class="anchored" data-anchor-id="menyingkap-narrative-identity-level-4">3. Menyingkap Narrative Identity (Level 4)</h2>
+<p>Dengan menggunakan bobot matematis ini, mesin <strong>Meta-DNA (Level 3)</strong> tidak lagi hanya menghasilkan angka statistik, melainkan “Identitas”.</p>
+<ul>
+<li><strong>Identitas “The Savior” (Sang Penyelamat):</strong> Pemain yang memiliki rata-rata <span class="math inline">\(W_d\)</span> sangat tinggi di 15 menit terakhir pertandingan. Ini adalah talenta unik untuk tetap tenang di bawah tekanan luar biasa.</li>
+<li><strong>Identitas “The Game Controller”:</strong> Pemain dengan <span class="math inline">\(W_d\)</span> tinggi secara konsisten di area tengah, menunjukkan agensi untuk mengatur tempo saat tim sedang goyah.</li>
+</ul>
+</section>
+<section id="menuju-ekonomi-misi-level-5" class="level2">
+<h2 class="anchored" data-anchor-id="menuju-ekonomi-misi-level-5">4. Menuju Ekonomi Misi (Level 5)</h2>
+<p>Data hasil perhitungan ini akan digunakan untuk menyelesaikan masalah <strong>“Wrong Instrument”</strong> dan <strong>“Wrong Audience”</strong>.</p>
+<p>Bayangkan sebuah klub (Stakeholder A) yang sering kehilangan poin di menit-menit akhir. Melalui analisis ini, sistem akan mencocokkan mereka dengan pemain (Stakeholder B) yang memiliki profil naratif “The Savior”. Inilah <strong>Economy of Mission</strong>: teknologi tidak sekadar menghitung, tapi menjahit hubungan antar manusia agar setiap individu bisa mempersembahkan <em>the best of them</em> di panggung yang tepat.</p>
+<p>Berikut kita bisa membuatkan visualisasi sederhana (seperti grafik radar) yang membandingkan profil “The Rockstar” vs “The Systematic Engine” menggunakan metrik-metrik agensi ini?</p>
+</section>
+</section>
+<section id="visualisasi-radar-the-rockstar-vs-the-systematic-engine" class="level1">
+<h1>Visualisasi Radar: The Rockstar vs The Systematic Engine</h1>
+<p>Beikut ini adalah visualisasi konseptual dalam bentuk <strong>Radar Chart</strong> (Grafik Radar) yang membandingkan dua profil utama dalam ekosistem TISE. Grafik ini menggunakan lima sumbu metrik agensi yang telah kita formulasikan sebelumnya.</p>
+<section id="perbandingan-profil-the-rockstar-vs-the-systematic-engine" class="level2">
+<h2 class="anchored" data-anchor-id="perbandingan-profil-the-rockstar-vs-the-systematic-engine">Perbandingan Profil: “The Rockstar” vs “The Systematic Engine”</h2>
+<p>Dalam TISE Level 4 (Identitas Naratif), kita tidak mencari siapa yang “lebih baik”, melainkan siapa yang memiliki <strong>Misi</strong> yang tepat untuk <strong>Panggung</strong> yang tepat.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sumbu Metrik</th>
+<th style="text-align: left;">Deskripsi TISE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Decisiveness (<span class="math inline">\(W_d\)</span>)</strong></td>
+<td style="text-align: left;">Keberanian mengambil keputusan kritis di bawah tekanan (Agensi).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Creative Autonomy</strong></td>
+<td style="text-align: left;">Kemampuan melakukan deviasi kreatif/pola unik (Talenta Unik).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Resilience</strong></td>
+<td style="text-align: left;">Daya pulih dan keberlanjutan setelah melakukan kesalahan (Penebusan).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Traditional Efficiency</strong></td>
+<td style="text-align: left;">Akurasi dan efisiensi teknis dasar (TISE Level 0).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Narrative Value</strong></td>
+<td style="text-align: left;">Besarnya dampak inspiratif bagi 7 miliar manusia (Amplifikasi).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="visualisasi-radar-chart-konseptual" class="level2">
+<h2 class="anchored" data-anchor-id="visualisasi-radar-chart-konseptual">1. Visualisasi Radar Chart (Konseptual)</h2>
+<pre class="text"><code>                 Decisiveness (Wd)
+                    10 |
+                       |    * (Rockstar)
+                     8 +        . (Systematic)
+                       |      .   *
+    Narrative Value    |    .       * Creative Autonomy
+          10-----------+------------10
+          * |  .       *
+          * .       + 4      *
+          * .   |      *
+          * |    *
+                       10
+                  Resilience</code></pre>
+</section>
+<section id="interpretasi-data-profil" class="level2">
+<h2 class="anchored" data-anchor-id="interpretasi-data-profil">2. Interpretasi Data Profil</h2>
+<ul>
+<li><strong>The Rockstar (Garis Bintang <code>*</code>):</strong>
+<ul>
+<li><strong>Decisiveness:</strong> Sangat Tinggi (Muncul sebagai penyelamat di menit akhir).</li>
+<li><strong>Creative Autonomy:</strong> Sangat Tinggi (Melakukan aksi tak terduga/improvisasi).</li>
+<li><strong>Traditional Efficiency:</strong> Sedang (Mungkin banyak spekulasi, tapi berdampak besar).</li>
+<li><strong>Narrative Value:</strong> Maksimal (Menjadi pusat perhatian stadion global).</li>
+<li><em>Misi:</em> Menginspirasi melalui momen heroik.</li>
+</ul></li>
+<li><strong>The Systematic Engine (Garis Titik <code>.</code>):</strong>
+<ul>
+<li><strong>Decisiveness:</strong> Sedang (Bekerja dalam instruksi yang aman).</li>
+<li><strong>Creative Autonomy:</strong> Rendah (Sangat disiplin pada pola taktis).</li>
+<li><strong>Traditional Efficiency:</strong> Maksimal (Akurasi tinggi, minim kesalahan).</li>
+<li><strong>Resilience:</strong> Sangat Tinggi (Konsisten menjaga performa sepanjang laga).</li>
+<li><em>Misi:</em> Menjamin stabilitas dan keandalan sistem (Fondasi).</li>
+</ul></li>
+</ul>
+</section>
+<section id="menuju-economy-of-mission-level-5" class="level2">
+<h2 class="anchored" data-anchor-id="menuju-economy-of-mission-level-5">Menuju Economy of Mission (Level 5)</h2>
+<p>Visualisasi ini menjawab pertanyaan <strong>“Bagaimana caranya?”</strong> menghubungkan 7 miliar talenta:</p>
+<ol type="1">
+<li><strong>Identifikasi:</strong> Dengan radar ini, kita bisa melihat bahwa “The Systematic Engine” adalah infrastruktur yang dibutuhkan agar “The Rockstar” bisa bernyanyi dengan aman.</li>
+<li><strong>Matching (Mencegah Wrong Audience):</strong> Jika sebuah klub (Stakeholder) sudah memiliki banyak “Systematic Engines” tapi kekurangan daya dobrak, algoritma TISE Level 5 akan secara otomatis mencari individu dengan profil “Rockstar” untuk melengkapi konfigurasi tersebut.</li>
+<li><strong>Valorization:</strong> Nilai ekonomi dihasilkan dari keharmonisan kedua profil ini di atas panggung. Tanpa “Engine”, “Rockstar” tidak punya panggung. Tanpa “Rockstar”, “Engine” tidak punya lagu untuk diamplifikasi.</li>
+</ol>
+<p>Dengan cara ini, setiap individu merasa berharga karena talentanya—apakah itu talenta untuk menjadi mesin yang andal atau menjadi penyanyi yang mempesona—sama-sama terekam dan dihargai dalam <strong>Ekosistem Keunggulan</strong>.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
