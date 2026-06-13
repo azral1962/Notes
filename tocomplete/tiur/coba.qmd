@@ -1,0 +1,88 @@
+# I. Introduction
+
+Population aging is reshaping healthcare, labor, family structures, and public services. In response, digital systems for older adults have grown rapidly, especially in telehealth, remote monitoring, medication support, and care coordination. These systems are valuable, but many are built around narrow assumptions: that old age is primarily a condition of decline, risk, and dependency.
+
+That assumption is socially and technically limiting. Older adults are not only patients or service users. They are also storytellers, mentors, workers, caregivers, citizens, spiritual beings, and bearers of memory and legacy. Their wellbeing depends not only on safety and functional support, but also on continuity of identity, meaningful relationships, opportunities to contribute, and the capacity to interpret life events within a coherent story.
+
+This paper proposes GRACE—Growing, Resourceful, Active, and Enriched Life—as a socio-technical ecosystem for elder wellbeing. GRACE is an intelligent community computing framework organized around five relational domains: 1) spiritual self, 2) family and friends, 3) working colleagues, 4) communities, and 5) the wider world, including markets and public services. GRACE is grounded in the premise that elder wellbeing is relational and that the quality of relationships shapes the exchange of care, recognition, participation, and contribution.
+
+The central design claim of GRACE is that narrative identity should be treated as a core systems concept. Older adults should not be modeled merely through static profiles, health states, or risk scores. They should be understood as persons living through unfolding stories. GRACE therefore acts as a live autobiographical ecosystem, helping elders remain connected to selfhood across daily life, transitions, and adversity. A high-level overview is shown in Fig. 1, with the multiagent architecture shown in Fig. 2 and the dynamic closed-loop logic in Fig. 3.
+
+To operationalize this vision, the paper introduces the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood. The paper further adds three innovations: 1) a Daily Story Creation Engine that frames lived experience through the hero’s journey, 2) an AI-based Fast State Predictor that forecasts near-future wellbeing state, and 3) a Smart Stimulus Agent that initiates timely, personalized prompts to preserve wellbeing and authorship. Finally, the paper proposes an agent-based simulation design to demonstrate these innovations.
+
+## Contributions
+
+1. A socio-technical framework for elder wellbeing centered on narrative identity, relationship quality, and contribution exchange.
+2. The GRACE Index, a daily metric of narrative selfhood and adaptive continuity.
+3. Three AI-enabled innovations—daily story creation, fast state prediction, and smart stimuli—for anticipatory wellbeing support.
+4. An agent-based simulation design for evaluating these mechanisms before real-world deployment.
+
+
+
+# II. Related Work
+
+## A. Aging Technologies and Deficit-Oriented Design
+
+Technologies for older adults have often focused on safety, surveillance, and functional support (Sixsmith & Gutman, 2013; Czaja et al., 2006; Mitzner et al., 2010). While these systems can improve independence and care delivery, they may also reproduce deficit-oriented assumptions about aging. HCI scholarship has argued that such framings narrow the design space and underplay agency, participation, and dignity (Vines et al., 2015).
+
+## B. Social Connectedness and Wellbeing
+
+Social relationships are strongly associated with wellbeing, resilience, and mortality outcomes (Holt-Lunstad et al., 2010). Social isolation and perceived loneliness can negatively affect cognition and health (Cacioppo & Hawkley, 2009). In later life, relationship quality matters as much as contact frequency, including dimensions such as reciprocity, belonging, and social integration (Cornwell & Waite, 2009; Berkman et al., 2000).
+
+## C. Narrative Identity and Later Life
+
+Narrative identity theory suggests that individuals construct a sense of self through evolving life stories (McAdams, 2001; Habermas & Bluck, 2000; Singer, 2004). In later life, autobiographical continuity and life review become especially important for meaning-making, legacy, and coping with transition (Butler, 1963; Bohlmeijer et al., 2007). Yet most digital systems do not operationalize narrative identity as a core computational construct.
+
+## D. Generativity and Productive Aging
+
+Older adults continue to contribute through mentoring, caregiving, volunteering, advising, and cultural transmission. Generativity is a major source of meaning and self-worth (McAdams & de St. Aubin, 1992; Erikson, 1982). Productive aging research likewise emphasizes the value of creating roles and systems that support continued contribution (Morrow-Howell et al., 2017).
+
+## E. Community Computing, Multiagent Systems, and Human-Centered AI
+
+Community informatics has shown how digital infrastructures can support participation, local engagement, and social inclusion (Gurstein, 2007; Carroll, 2014). Multiagent systems offer a framework for distributed intelligence, coordination, and adaptive decision-making (Jennings et al., 1998; Wooldridge, 2009). Human-centered AI emphasizes reliability, safety, and alignment with human values (Shneiderman, 2020). GRACE integrates these strands into a single socio-technical architecture.
+
+## F. Research Gap
+
+Existing work rarely integrates all of the following in one coherent framework: narrative identity, relationship quality, contribution exchange, community participation, institutional and market access, predictive wellbeing support. GRACE addresses this gap by proposing a narrative-centered, socially grounded AI ecosystem for elder wellbeing.
+
+# III. GRACE as a Socio-Technical Ecosystem
+
+The overall socio-technical structure of GRACE is illustrated in Fig. 1. The five relational domains, their functions, and example system supports are summarized in Table I.
+
+## A. Core Premise
+
+GRACE is based on a simple claim: elder wellbeing emerges from the interaction of identity, relationships, contribution, and access. A person flourishes when they remain connected to who they are, to people who matter, to ways of contributing, and to the broader systems that structure everyday life.
+
+## B. Five Relational Domains
+
+GRACE supports the elder’s relationship with: 1. Spiritual self 2. Family and friends 3. Working colleagues 4. Communities 5. Wider world, including markets and public services.
+
+| Domain | Description | Wellbeing Functions | Example System Supports |
+|---|---|---|---|
+| Spiritual Self | Inner life, values, faith, reflection, existential orientation | peace, meaning, hope, acceptance, moral continuity | reflection prompts, prayer/meditation support, ritual reminders, grief-sensitive dialogue |
+| Family and Friends | Intimate and enduring personal relationships | belonging, affection, care continuity, emotional security, shared memory | family coordination, message prompts, memory sharing, visit planning |
+| Working Colleagues | Ongoing or legacy vocational and professional ties | role continuity, usefulness, recognition, mentoring, productive identity | mentoring matching, advisory opportunities, skill-sharing, encore work prompts |
+| Communities | Local groups, associations, faith communities, neighborhoods, civic groups | participation, recognition, mutual aid, collective belonging | event discovery, volunteering prompts, group participation support, community connectors |
+| Wider World | Markets, institutions, services, transport, civic systems, public services | inclusion, access, autonomy, service reach, economic and civic participation | service navigation, benefits support, transport coordination, marketplace access |
+
+## C. Narrative Identity as System Core
+
+Rather than using a conventional user profile, GRACE maintains a Living Autobiography Model. Its principal constructs are summarized in Table II.
+
+| Construct | Description | Examples | Function |
+|---|---|---|---|
+| Life Chapters | Major periods or phases of life | childhood, career phase, retirement, caregiving years | supports contextual interpretation of current events |
+| Major Transitions | Turning points and disruptions | bereavement, migration, illness onset, retirement | supports sensitivity to recurring vulnerabilities and resilience patterns |
+| Key Relationships | Important persons and social ties | spouse, children, friends, mentor, colleague | informs relational prompts and support priorities |
+| Roles and Identities | Enduring self-definitions | parent, teacher, engineer, volunteer, believer | supports role continuity and contribution opportunities |
+| Values and Beliefs | Moral, spiritual, and existential commitments | faith, service, independence, compassion | aligns prompts and interventions with personal meaning |
+| Strengths and Skills | Capabilities and resources | mentoring, storytelling, teaching, organizing | supports contribution matching |
+| Meaningful Places | Places of emotional or narrative significance | family home, workplace, temple, neighborhood park | supports memory prompts and place-based engagement |
+| Rituals and Traditions | Recurrent meaningful practices | weekly worship, family dinners, anniversaries | supports temporal and spiritual grounding |
+| Significant Memories | Events with autobiographical weight | marriage, awards, losses, milestones | supports story creation and identity continuity |
+| Present Concerns | Current needs and stresses | loneliness, mobility limits, family conflict | supports adaptive intervention |
+| Future Hopes | Forward-looking aims | legacy project, reconnecting with family, community service | supports future-oriented narrative continuity |
+
+## D. Theater-of-Life Perspective
+
+GRACE may be understood as a theater of life: the elder is the lead performer and author, life settings are stages, daily events are scenes, human and AI participants form the cast, and narrative identity is the script in progress. This metaphor is not decorative; it is a design principle. It emphasizes authorship, visibility, and continuity.

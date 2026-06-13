@@ -1,0 +1,15 @@
+title: "Judul"
+subtitle: "Sub judul" 
+
+format:
+  pdf:
+    documentclass: report
+    keep-tex: true
+    include-in-header: 
+      - text: header.tex
+    include-before-body:
+      - text: before.tex
+    include-after-body: 
+      - text: after.tex
+    pdf-engine: pdflatex
+    fontfamily: anttor

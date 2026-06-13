@@ -1,9 +1,0 @@
-# Lampiran D. Paket Pertanyaan Teknis untuk TISE level 2
-
-1. Apa yang perlu dipersepsi oleh sistem?
-2. Bagaimana data atau pengalaman itu dimaknai?
-3. Keputusan apa yang perlu diambil oleh sistem?
-4. Tindakan apa yang perlu dilakukan setelah keputusan diambil?
-5. Umpan balik apa yang akan dikumpulkan?
-6. Prompt apa yang diperlukan sebagai bahasa koordinasi?
-

@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="First Author">
+<meta name="author" content="Second Author">
+<meta name="dcterms.date" content="2023-06-23">
+<meta name="keywords" content="IEEE, IEEEtran, journal, Quarto, Pandoc, template">
+
+<title>GRACE: A Narrative-Centered Socio-Technical Ecosystem for Elder Wellbeing</title><style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/clipboard/clipboard.min.js"></script>
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/popper.min.js"></script>
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/anchor.min.js"></script>
+<link href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing_files/libs/bootstrap/bootstrap-09c1a541552e8979af35e5759c276857.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<!-- This is what works with Quarto -->
+<script>
+  MathJax = {
+    loader: {load: ['[tex]/mhchem', '[tex]/physics']},
+    tex: {
+      tags: 'ams',  // should be 'ams', 'none', or 'all'
+      packages: {'[+]': ['mhchem','physics']}
+    }
+  };
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="citation_title" content="GRACE: A Narrative-Centered Socio-Technical Ecosystem for Elder Wellbeing">
+<meta name="citation_abstract" content="This document describes the most common article elements and how to use the 
+`quarto-ieee` class with Pandoc/Quarto-Markdown to produce files that are
+suitable for submission to IEEE journals.  
+`quarto-ieee` can produce conference, journal, and technical note (correspondence) 
+papers with a suitable choice of class options. 
+It intends to generate PDF and HTML outputs that closely mimick what IEEE would generate.
+">
+<meta name="citation_keywords" content="IEEE,IEEEtran,journal,Quarto,Pandoc,template">
+<meta name="citation_author" content="First Author">
+<meta name="citation_author" content="Second Author">
+<meta name="citation_publication_date" content="2023-06-23">
+<meta name="citation_cover_date" content="2023-06-23">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-06-23">
+<meta name="citation_fulltext_html_url" content="https://github.com/dfolio/quarto-ieee">
+<meta name="citation_pdf_url" content="https://github.com/dfolio/quarto-ieee/template.pdf">
+<meta name="citation_language" content="en">
+<meta name="citation_firstpage" content="1">
+<meta name="citation_lastpage" content="3">
+<meta name="citation_journal_title" content="GitHUB">
+<meta name="citation_reference" content="citation_title=The LaTeX companion;,citation_author=F. Mittelbach;,citation_author=U. Fischer;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_isbn=978-0-201-36300-5;,citation_series_title=Addison-Wesley series on tools and techniques for computer typesetting;">
+<meta name="citation_reference" content="citation_title=Pandoc;,citation_author=John MacFarlane;,citation_author=Albert Krewinkel;,citation_author=Jesse Rosenthal;,citation_fulltext_html_url=https://github.com/jgm/pandoc;">
+<meta name="citation_reference" content="citation_title=Quarto;,citation_author=J. J. Allaire;,citation_author=Charles Teague;,citation_author=Carlos Scheidegger;,citation_author=Yihui Xie;,citation_author=Christophe Dervieux;,citation_publication_date=2022-01;,citation_cover_date=2022-01;,citation_year=2022;,citation_fulltext_html_url=https://github.com/quarto-dev/quarto-cli;,citation_doi=10.5281/zenodo.5960048;">
+<meta name="citation_reference" content="citation_title=Quarto - Markdown Basics;,citation_fulltext_html_url=https://quarto.org/docs/authoring/markdown-basics;,citation_language=en-US;,citation_publisher=Quarto;">
+<meta name="citation_reference" content="citation_title=Quarto - Front Matter;,citation_fulltext_html_url=https://quarto.org/docs/authoring/front-matter.html#funding;,citation_language=en-US;,citation_publisher=Quarto;">
+<meta name="citation_reference" content="citation_title=Quarto - Authors &amp;amp;amp; Affiliations;,citation_fulltext_html_url=https://quarto.org/docs/journals/authors.html;,citation_language=en-US;,citation_publisher=Quarto;">
+<meta name="citation_reference" content="citation_title=Quarto - Creating Citeable Articles;,citation_fulltext_html_url=https://quarto.org/docs/authoring/create-citeable-articles.html;,citation_language=en-US;,citation_publisher=Quarto;">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Document Sections</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract"><span class="header-section-number">1</span> Abstract</a></li>
+  <li><a href="#i.-introduction" id="toc-i.-introduction" class="nav-link" data-scroll-target="#i.-introduction"><span class="header-section-number">2</span> I. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#contributions" id="toc-contributions" class="nav-link" data-scroll-target="#contributions"><span class="header-section-number">2.1</span> Contributions</a></li>
+  </ul></li>
+  <li><a href="#ii.-related-work" id="toc-ii.-related-work" class="nav-link" data-scroll-target="#ii.-related-work"><span class="header-section-number">3</span> II. Related Work</a>
+  <ul class="collapse">
+  <li><a href="#a.-aging-technologies-and-deficit-oriented-design" id="toc-a.-aging-technologies-and-deficit-oriented-design" class="nav-link" data-scroll-target="#a.-aging-technologies-and-deficit-oriented-design"><span class="header-section-number">3.1</span> A. Aging Technologies and Deficit-Oriented Design</a></li>
+  <li><a href="#b.-social-connectedness-and-wellbeing" id="toc-b.-social-connectedness-and-wellbeing" class="nav-link" data-scroll-target="#b.-social-connectedness-and-wellbeing"><span class="header-section-number">3.2</span> B. Social Connectedness and Wellbeing</a></li>
+  <li><a href="#c.-narrative-identity-and-later-life" id="toc-c.-narrative-identity-and-later-life" class="nav-link" data-scroll-target="#c.-narrative-identity-and-later-life"><span class="header-section-number">3.3</span> C. Narrative Identity and Later Life</a></li>
+  <li><a href="#d.-generativity-and-productive-aging" id="toc-d.-generativity-and-productive-aging" class="nav-link" data-scroll-target="#d.-generativity-and-productive-aging"><span class="header-section-number">3.4</span> D. Generativity and Productive Aging</a></li>
+  <li><a href="#e.-community-computing-multiagent-systems-and-human-centered-ai" id="toc-e.-community-computing-multiagent-systems-and-human-centered-ai" class="nav-link" data-scroll-target="#e.-community-computing-multiagent-systems-and-human-centered-ai"><span class="header-section-number">3.5</span> E. Community Computing, Multiagent Systems, and Human-Centered AI</a></li>
+  <li><a href="#f.-research-gap" id="toc-f.-research-gap" class="nav-link" data-scroll-target="#f.-research-gap"><span class="header-section-number">3.6</span> F. Research Gap</a></li>
+  </ul></li>
+  <li><a href="#iii.-grace-as-a-socio-technical-ecosystem" id="toc-iii.-grace-as-a-socio-technical-ecosystem" class="nav-link" data-scroll-target="#iii.-grace-as-a-socio-technical-ecosystem"><span class="header-section-number">4</span> III. GRACE as a Socio-Technical Ecosystem</a>
+  <ul class="collapse">
+  <li><a href="#a.-core-premise" id="toc-a.-core-premise" class="nav-link" data-scroll-target="#a.-core-premise"><span class="header-section-number">4.1</span> A. Core Premise</a></li>
+  <li><a href="#b.-five-relational-domains" id="toc-b.-five-relational-domains" class="nav-link" data-scroll-target="#b.-five-relational-domains"><span class="header-section-number">4.2</span> B. Five Relational Domains</a></li>
+  <li><a href="#c.-narrative-identity-as-system-core" id="toc-c.-narrative-identity-as-system-core" class="nav-link" data-scroll-target="#c.-narrative-identity-as-system-core"><span class="header-section-number">4.3</span> C. Narrative Identity as System Core</a></li>
+  <li><a href="#d.-theater-of-life-perspective" id="toc-d.-theater-of-life-perspective" class="nav-link" data-scroll-target="#d.-theater-of-life-perspective"><span class="header-section-number">4.4</span> D. Theater-of-Life Perspective</a></li>
+  </ul></li>
+  <li><a href="#iv.-the-grace-index" id="toc-iv.-the-grace-index" class="nav-link" data-scroll-target="#iv.-the-grace-index"><span class="header-section-number">5</span> IV. The GRACE Index</a>
+  <ul class="collapse">
+  <li><a href="#a.-purpose" id="toc-a.-purpose" class="nav-link" data-scroll-target="#a.-purpose"><span class="header-section-number">5.1</span> A. Purpose</a></li>
+  <li><a href="#b.-dimensions" id="toc-b.-dimensions" class="nav-link" data-scroll-target="#b.-dimensions"><span class="header-section-number">5.2</span> B. Dimensions</a></li>
+  <li><a href="#c.-scoring-model" id="toc-c.-scoring-model" class="nav-link" data-scroll-target="#c.-scoring-model"><span class="header-section-number">5.3</span> C. Scoring Model</a></li>
+  <li><a href="#d.-zone-interpretation" id="toc-d.-zone-interpretation" class="nav-link" data-scroll-target="#d.-zone-interpretation"><span class="header-section-number">5.4</span> D. Zone Interpretation</a></li>
+  </ul></li>
+  <li><a href="#v.-three-ai-enabled-innovations" id="toc-v.-three-ai-enabled-innovations" class="nav-link" data-scroll-target="#v.-three-ai-enabled-innovations"><span class="header-section-number">6</span> V. Three AI-Enabled Innovations</a>
+  <ul class="collapse">
+  <li><a href="#a.-daily-story-creation-through-the-heros-journey" id="toc-a.-daily-story-creation-through-the-heros-journey" class="nav-link" data-scroll-target="#a.-daily-story-creation-through-the-heros-journey"><span class="header-section-number">6.1</span> A. Daily Story Creation Through the Hero’s Journey</a></li>
+  <li><a href="#b.-ai-based-fast-state-predictor" id="toc-b.-ai-based-fast-state-predictor" class="nav-link" data-scroll-target="#b.-ai-based-fast-state-predictor"><span class="header-section-number">6.2</span> B. AI-Based Fast State Predictor</a></li>
+  <li><a href="#c.-smart-stimulus-agent" id="toc-c.-smart-stimulus-agent" class="nav-link" data-scroll-target="#c.-smart-stimulus-agent"><span class="header-section-number">6.3</span> C. Smart Stimulus Agent</a></li>
+  </ul></li>
+  <li><a href="#vi.-multiagent-architecture-and-governance" id="toc-vi.-multiagent-architecture-and-governance" class="nav-link" data-scroll-target="#vi.-multiagent-architecture-and-governance"><span class="header-section-number">7</span> VI. Multiagent Architecture and Governance</a></li>
+  <li><a href="#vii.-agent-based-simulation-design" id="toc-vii.-agent-based-simulation-design" class="nav-link" data-scroll-target="#vii.-agent-based-simulation-design"><span class="header-section-number">8</span> VII. Agent-Based Simulation Design</a>
+  <ul class="collapse">
+  <li><a href="#a.-objective" id="toc-a.-objective" class="nav-link" data-scroll-target="#a.-objective"><span class="header-section-number">8.1</span> A. Objective</a></li>
+  <li><a href="#b.-agents" id="toc-b.-agents" class="nav-link" data-scroll-target="#b.-agents"><span class="header-section-number">8.2</span> B. Agents</a></li>
+  <li><a href="#c.-state-representation" id="toc-c.-state-representation" class="nav-link" data-scroll-target="#c.-state-representation"><span class="header-section-number">8.3</span> C. State Representation</a></li>
+  </ul></li>
+  <li><a href="#viii.-technology-and-society-implications" id="toc-viii.-technology-and-society-implications" class="nav-link" data-scroll-target="#viii.-technology-and-society-implications"><span class="header-section-number">9</span> VIII. Technology and Society Implications</a>
+  <ul class="collapse">
+  <li><a href="#a.-from-monitoring-to-meaning" id="toc-a.-from-monitoring-to-meaning" class="nav-link" data-scroll-target="#a.-from-monitoring-to-meaning"><span class="header-section-number">9.1</span> A. From Monitoring to Meaning</a></li>
+  <li><a href="#b.-the-social-construction-of-aging-through-technology" id="toc-b.-the-social-construction-of-aging-through-technology" class="nav-link" data-scroll-target="#b.-the-social-construction-of-aging-through-technology"><span class="header-section-number">9.2</span> B. The Social Construction of Aging Through Technology</a></li>
+  <li><a href="#c.-narrative-data-as-a-new-category-of-sensitive-data" id="toc-c.-narrative-data-as-a-new-category-of-sensitive-data" class="nav-link" data-scroll-target="#c.-narrative-data-as-a-new-category-of-sensitive-data"><span class="header-section-number">9.3</span> C. Narrative Data as a New Category of Sensitive Data</a></li>
+  <li><a href="#d.-prediction-intervention-and-the-risk-of-paternalism" id="toc-d.-prediction-intervention-and-the-risk-of-paternalism" class="nav-link" data-scroll-target="#d.-prediction-intervention-and-the-risk-of-paternalism"><span class="header-section-number">9.4</span> D. Prediction, Intervention, and the Risk of Paternalism</a></li>
+  <li><a href="#e.-human-centered-ai-in-socially-embedded-contexts" id="toc-e.-human-centered-ai-in-socially-embedded-contexts" class="nav-link" data-scroll-target="#e.-human-centered-ai-in-socially-embedded-contexts"><span class="header-section-number">9.5</span> E. Human-Centered AI in Socially Embedded Contexts</a></li>
+  <li><a href="#f.-social-infrastructure-and-inclusion" id="toc-f.-social-infrastructure-and-inclusion" class="nav-link" data-scroll-target="#f.-social-infrastructure-and-inclusion"><span class="header-section-number">9.6</span> F. Social Infrastructure and Inclusion</a></li>
+  <li><a href="#g.-implications-for-technology-governance" id="toc-g.-implications-for-technology-governance" class="nav-link" data-scroll-target="#g.-implications-for-technology-governance"><span class="header-section-number">9.7</span> G. Implications for Technology Governance</a></li>
+  <li><a href="#h.-broader-relevance" id="toc-h.-broader-relevance" class="nav-link" data-scroll-target="#h.-broader-relevance"><span class="header-section-number">9.8</span> H. Broader Relevance</a></li>
+  </ul></li>
+  <li><a href="#ix.-discussion" id="toc-ix.-discussion" class="nav-link" data-scroll-target="#ix.-discussion"><span class="header-section-number">10</span> IX. Discussion</a></li>
+  <li><a href="#x.-limitations-and-future-work" id="toc-x.-limitations-and-future-work" class="nav-link" data-scroll-target="#x.-limitations-and-future-work"><span class="header-section-number">11</span> X. Limitations and Future Work</a></li>
+  <li><a href="#xi.-conclusion" id="toc-xi.-conclusion" class="nav-link" data-scroll-target="#xi.-conclusion"><span class="header-section-number">12</span> XI. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">13</span> References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="grace_narrative_centered_socio_technical_ecosystem_for_elder_wellbeing.pdf"><i class="bi bi-file-pdf"></i>PDF (ieee)</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full" itemprop="headline">
+<div class="col-12 page-columns page-full">
+<div class="quarto-header page-columns page-full">
+
+  <div class="quarto-title column-body">
+  <div class="container col">
+    <h1 class="title" itemprop="headline">GRACE: A Narrative-Centered Socio-Technical Ecosystem for Elder Wellbeing</h1>
+    
+    <div class="container">
+    <div class="mb-3 mt-2 d-grid gap-3 d-md-flex">
+      
+      <a href="#citation" class="btn btn-outline-primary" role="button">Cite This</a>
+      <a href="https://github.com/dfolio/quarto-ieee/blob/main/template.pdf" class="btn btn-danger text-white" role="button"><i class="bi bi-file-pdf" rel="img" aria-label="PDF"></i>PDF</a>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="quarto-subheader">
+  <div class="quarto-author-banner p-0">
+  <div class="d-flex align-items-center flex-nowrap">
+        <div class="quarto-author overflow-hidden">
+    <div class="d-flex flex-nowrap">
+      <div class="quarto-author-contents align-items-center text-truncate pe-0">
+                <span class="author-info"><a href="https://ieee.org/" title="First Institution, Departmen, Second Institution, ">First Author</a><a href="https://orcid.org/0000-0001-9430-6091" class="quarto-title-author-orcid px-1" target="orcid.widget" rel="me noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"></a></span> and&nbsp;<span class="author-info">Second Author</span>
+              </div>
+    </div>
+    </div>
+    
+    <div class="d-none d-md-flex align-items-center">
+    <div class="author-all d-none d-md-block">
+      <a href="#authors" class="">All Authors</a>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</div>
+</div>
+<hr class="px-3 mt-2">
+</header>
+<div class="quarto-main-body container p-0">
+<section class="quarto-abstract d-flex">
+<div class="container">
+<div class="quarto-abstract-block d-flex row g-0">
+<div class="col-12">
+  <div class="abstract mb-3">
+    <strong class="abstract-title">Abstract:</strong>
+    <p>This document describes the most common article elements and how to use the <code>quarto-ieee</code> class with Pandoc/Quarto-Markdown to produce files that are suitable for submission to IEEE journals.<br>
+    <code>quarto-ieee</code> can produce conference, journal, and technical note (correspondence) papers with a suitable choice of class options. It intends to generate PDF and HTML outputs that closely mimick what IEEE would generate.</p>
+  </div>
+</div>
+</div>
+
+<div class="citation-meta published-in pb-3">
+<strong class="citation-title">Published in:</strong> GitHUB
+(
+
+2023-06-23)
+
+</div>
+
+<div class="container g-0 pt-3">
+<div class="grid">
+  <div class="g-col-6">
+        <div class="citation-meta pb-3"><strong class="citation-title">Page(s):</strong> 1-3</div>
+            <div class="citation-meta pb-3"><strong class="citation-title">Date of Publication:</strong> 23 June 2023</div>  </div>
+  <div class="g-col-6">
+    
+    
+  </div>
+
+    <div class="g-col-12 pb-3">
+    <div class="funding">
+      <a class="btn p-0" data-bs-toggle="collapse" href="#collapseFA" role="button" aria-expanded="false" aria-controls="collapseFA"><div class="expand_caret caret"><i class="bi bi-caret-right-fill"></i></div><strong>Funding Agency</strong></a>
+      <div class="collapse" id="collapseFA">
+        <div class="funding-info">
+        The <code>quarto-ieee</code> template is freely available under the MIT license on github: <a href="https://github.com/dfolio/quarto-ieee" class="uri">https://github.com/dfolio/quarto-ieee</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+<div class="quarto-body-content">
+<section id="abstract" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="abstract"><span class="header-section-number">1</span> Abstract</h2>
+<p>Population aging is increasing demand for digital systems that support older adults’ wellbeing. Most existing systems emphasize safety, monitoring, and service coordination, but underrepresent identity, meaning, contribution, and relationship quality. This paper proposes GRACE (Growing, Resourceful, Active, and Enriched Life), a narrative-centered socio-technical ecosystem for elder wellbeing. GRACE is designed as an intelligent multiagent community computing framework that supports older adults in maintaining relationships with the spiritual self, family and friends, working colleagues, communities, and the wider world, including markets and public services. The paper makes four contributions. First, it introduces a narrative-centered theory of elder wellbeing grounded in relationship quality and contribution exchange. Second, it proposes the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood during ordinary and difficult periods. Third, it extends the framework with three innovations: daily hero’s-journey story creation, an AI-based fast state predictor, and a smart stimulus agent for anticipatory support. Fourth, it presents an agent-based simulation design to evaluate these innovations. We argue that elder-oriented AI should move beyond deficit-oriented monitoring toward socio-technical ecosystems that preserve dignity, agency, reciprocity, and life authorship.</p>
+<p><strong>Index Terms—</strong> aging, wellbeing, narrative identity, multiagent systems, human-centered AI, socio-technical systems, community computing, eldercare technology.</p>
+</section>
+<section id="i.-introduction" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="i.-introduction"><span class="header-section-number">2</span> I. Introduction</h2>
+<p>Population aging is reshaping healthcare, labor, family structures, and public services. In response, digital systems for older adults have grown rapidly, especially in telehealth, remote monitoring, medication support, and care coordination. These systems are valuable, but many are built around narrow assumptions: that old age is primarily a condition of decline, risk, and dependency.</p>
+<p>That assumption is socially and technically limiting. Older adults are not only patients or service users. They are also storytellers, mentors, workers, caregivers, citizens, spiritual beings, and bearers of memory and legacy. Their wellbeing depends not only on safety and functional support, but also on continuity of identity, meaningful relationships, opportunities to contribute, and the capacity to interpret life events within a coherent story.</p>
+<p>This paper proposes GRACE—Growing, Resourceful, Active, and Enriched Life—as a socio-technical ecosystem for elder wellbeing. GRACE is an intelligent community computing framework organized around five relational domains: 1) spiritual self, 2) family and friends, 3) working colleagues, 4) communities, and 5) the wider world, including markets and public services. GRACE is grounded in the premise that elder wellbeing is relational and that the quality of relationships shapes the exchange of care, recognition, participation, and contribution.</p>
+<p>The central design claim of GRACE is that narrative identity should be treated as a core systems concept. Older adults should not be modeled merely through static profiles, health states, or risk scores. They should be understood as persons living through unfolding stories. GRACE therefore acts as a live autobiographical ecosystem, helping elders remain connected to selfhood across daily life, transitions, and adversity. A high-level overview is shown in Fig. 1, with the multiagent architecture shown in Fig. 2 and the dynamic closed-loop logic in Fig. 3.</p>
+<p>To operationalize this vision, the paper introduces the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood. The paper further adds three innovations: 1) a Daily Story Creation Engine that frames lived experience through the hero’s journey, 2) an AI-based Fast State Predictor that forecasts near-future wellbeing state, and 3) a Smart Stimulus Agent that initiates timely, personalized prompts to preserve wellbeing and authorship. Finally, the paper proposes an agent-based simulation design to demonstrate these innovations.</p>
+<section id="contributions" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="contributions"><span class="header-section-number">2.1</span> Contributions</h3>
+<ol type="1">
+<li>A socio-technical framework for elder wellbeing centered on narrative identity, relationship quality, and contribution exchange.</li>
+<li>The GRACE Index, a daily metric of narrative selfhood and adaptive continuity.</li>
+<li>Three AI-enabled innovations—daily story creation, fast state prediction, and smart stimuli—for anticipatory wellbeing support.</li>
+<li>An agent-based simulation design for evaluating these mechanisms before real-world deployment.</li>
+</ol>
+</section>
+</section>
+<section id="ii.-related-work" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="ii.-related-work"><span class="header-section-number">3</span> II. Related Work</h2>
+<section id="a.-aging-technologies-and-deficit-oriented-design" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="a.-aging-technologies-and-deficit-oriented-design"><span class="header-section-number">3.1</span> A. Aging Technologies and Deficit-Oriented Design</h3>
+<p>Technologies for older adults have often focused on safety, surveillance, and functional support (Sixsmith &amp; Gutman, 2013; Czaja et al., 2006; Mitzner et al., 2010). While these systems can improve independence and care delivery, they may also reproduce deficit-oriented assumptions about aging. HCI scholarship has argued that such framings narrow the design space and underplay agency, participation, and dignity (Vines et al., 2015).</p>
+</section>
+<section id="b.-social-connectedness-and-wellbeing" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="b.-social-connectedness-and-wellbeing"><span class="header-section-number">3.2</span> B. Social Connectedness and Wellbeing</h3>
+<p>Social relationships are strongly associated with wellbeing, resilience, and mortality outcomes (Holt-Lunstad et al., 2010). Social isolation and perceived loneliness can negatively affect cognition and health (Cacioppo &amp; Hawkley, 2009). In later life, relationship quality matters as much as contact frequency, including dimensions such as reciprocity, belonging, and social integration (Cornwell &amp; Waite, 2009; Berkman et al., 2000).</p>
+</section>
+<section id="c.-narrative-identity-and-later-life" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="c.-narrative-identity-and-later-life"><span class="header-section-number">3.3</span> C. Narrative Identity and Later Life</h3>
+<p>Narrative identity theory suggests that individuals construct a sense of self through evolving life stories (McAdams, 2001; Habermas &amp; Bluck, 2000; Singer, 2004). In later life, autobiographical continuity and life review become especially important for meaning-making, legacy, and coping with transition (Butler, 1963; Bohlmeijer et al., 2007). Yet most digital systems do not operationalize narrative identity as a core computational construct.</p>
+</section>
+<section id="d.-generativity-and-productive-aging" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="d.-generativity-and-productive-aging"><span class="header-section-number">3.4</span> D. Generativity and Productive Aging</h3>
+<p>Older adults continue to contribute through mentoring, caregiving, volunteering, advising, and cultural transmission. Generativity is a major source of meaning and self-worth (McAdams &amp; de St.&nbsp;Aubin, 1992; Erikson, 1982). Productive aging research likewise emphasizes the value of creating roles and systems that support continued contribution (Morrow-Howell et al., 2017).</p>
+</section>
+<section id="e.-community-computing-multiagent-systems-and-human-centered-ai" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="e.-community-computing-multiagent-systems-and-human-centered-ai"><span class="header-section-number">3.5</span> E. Community Computing, Multiagent Systems, and Human-Centered AI</h3>
+<p>Community informatics has shown how digital infrastructures can support participation, local engagement, and social inclusion (Gurstein, 2007; Carroll, 2014). Multiagent systems offer a framework for distributed intelligence, coordination, and adaptive decision-making (Jennings et al., 1998; Wooldridge, 2009). Human-centered AI emphasizes reliability, safety, and alignment with human values (Shneiderman, 2020). GRACE integrates these strands into a single socio-technical architecture.</p>
+</section>
+<section id="f.-research-gap" class="level3" data-number="3.6">
+<h3 data-number="3.6" class="anchored" data-anchor-id="f.-research-gap"><span class="header-section-number">3.6</span> F. Research Gap</h3>
+<p>Existing work rarely integrates all of the following in one coherent framework: narrative identity, relationship quality, contribution exchange, community participation, institutional and market access, predictive wellbeing support. GRACE addresses this gap by proposing a narrative-centered, socially grounded AI ecosystem for elder wellbeing.</p>
+</section>
+</section>
+<section id="iii.-grace-as-a-socio-technical-ecosystem" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="iii.-grace-as-a-socio-technical-ecosystem"><span class="header-section-number">4</span> III. GRACE as a Socio-Technical Ecosystem</h2>
+<p>The overall socio-technical structure of GRACE is illustrated in Fig. 1. The five relational domains, their functions, and example system supports are summarized in Table I.</p>
+<section id="a.-core-premise" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="a.-core-premise"><span class="header-section-number">4.1</span> A. Core Premise</h3>
+<p>GRACE is based on a simple claim: elder wellbeing emerges from the interaction of identity, relationships, contribution, and access. A person flourishes when they remain connected to who they are, to people who matter, to ways of contributing, and to the broader systems that structure everyday life.</p>
+</section>
+<section id="b.-five-relational-domains" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="b.-five-relational-domains"><span class="header-section-number">4.2</span> B. Five Relational Domains</h3>
+<p>GRACE supports the elder’s relationship with: 1. Spiritual self 2. Family and friends 3. Working colleagues 4. Communities 5. Wider world, including markets and public services.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Description</th>
+<th>Wellbeing Functions</th>
+<th>Example System Supports</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spiritual Self</td>
+<td>Inner life, values, faith, reflection, existential orientation</td>
+<td>peace, meaning, hope, acceptance, moral continuity</td>
+<td>reflection prompts, prayer/meditation support, ritual reminders, grief-sensitive dialogue</td>
+</tr>
+<tr class="even">
+<td>Family and Friends</td>
+<td>Intimate and enduring personal relationships</td>
+<td>belonging, affection, care continuity, emotional security, shared memory</td>
+<td>family coordination, message prompts, memory sharing, visit planning</td>
+</tr>
+<tr class="odd">
+<td>Working Colleagues</td>
+<td>Ongoing or legacy vocational and professional ties</td>
+<td>role continuity, usefulness, recognition, mentoring, productive identity</td>
+<td>mentoring matching, advisory opportunities, skill-sharing, encore work prompts</td>
+</tr>
+<tr class="even">
+<td>Communities</td>
+<td>Local groups, associations, faith communities, neighborhoods, civic groups</td>
+<td>participation, recognition, mutual aid, collective belonging</td>
+<td>event discovery, volunteering prompts, group participation support, community connectors</td>
+</tr>
+<tr class="odd">
+<td>Wider World</td>
+<td>Markets, institutions, services, transport, civic systems, public services</td>
+<td>inclusion, access, autonomy, service reach, economic and civic participation</td>
+<td>service navigation, benefits support, transport coordination, marketplace access</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-narrative-identity-as-system-core" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="c.-narrative-identity-as-system-core"><span class="header-section-number">4.3</span> C. Narrative Identity as System Core</h3>
+<p>Rather than using a conventional user profile, GRACE maintains a Living Autobiography Model. Its principal constructs are summarized in Table II.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Construct</th>
+<th>Description</th>
+<th>Examples</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Life Chapters</td>
+<td>Major periods or phases of life</td>
+<td>childhood, career phase, retirement, caregiving years</td>
+<td>supports contextual interpretation of current events</td>
+</tr>
+<tr class="even">
+<td>Major Transitions</td>
+<td>Turning points and disruptions</td>
+<td>bereavement, migration, illness onset, retirement</td>
+<td>supports sensitivity to recurring vulnerabilities and resilience patterns</td>
+</tr>
+<tr class="odd">
+<td>Key Relationships</td>
+<td>Important persons and social ties</td>
+<td>spouse, children, friends, mentor, colleague</td>
+<td>informs relational prompts and support priorities</td>
+</tr>
+<tr class="even">
+<td>Roles and Identities</td>
+<td>Enduring self-definitions</td>
+<td>parent, teacher, engineer, volunteer, believer</td>
+<td>supports role continuity and contribution opportunities</td>
+</tr>
+<tr class="odd">
+<td>Values and Beliefs</td>
+<td>Moral, spiritual, and existential commitments</td>
+<td>faith, service, independence, compassion</td>
+<td>aligns prompts and interventions with personal meaning</td>
+</tr>
+<tr class="even">
+<td>Strengths and Skills</td>
+<td>Capabilities and resources</td>
+<td>mentoring, storytelling, teaching, organizing</td>
+<td>supports contribution matching</td>
+</tr>
+<tr class="odd">
+<td>Meaningful Places</td>
+<td>Places of emotional or narrative significance</td>
+<td>family home, workplace, temple, neighborhood park</td>
+<td>supports memory prompts and place-based engagement</td>
+</tr>
+<tr class="even">
+<td>Rituals and Traditions</td>
+<td>Recurrent meaningful practices</td>
+<td>weekly worship, family dinners, anniversaries</td>
+<td>supports temporal and spiritual grounding</td>
+</tr>
+<tr class="odd">
+<td>Significant Memories</td>
+<td>Events with autobiographical weight</td>
+<td>marriage, awards, losses, milestones</td>
+<td>supports story creation and identity continuity</td>
+</tr>
+<tr class="even">
+<td>Present Concerns</td>
+<td>Current needs and stresses</td>
+<td>loneliness, mobility limits, family conflict</td>
+<td>supports adaptive intervention</td>
+</tr>
+<tr class="odd">
+<td>Future Hopes</td>
+<td>Forward-looking aims</td>
+<td>legacy project, reconnecting with family, community service</td>
+<td>supports future-oriented narrative continuity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d.-theater-of-life-perspective" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="d.-theater-of-life-perspective"><span class="header-section-number">4.4</span> D. Theater-of-Life Perspective</h3>
+<p>GRACE may be understood as a theater of life: the elder is the lead performer and author, life settings are stages, daily events are scenes, human and AI participants form the cast, and narrative identity is the script in progress. This metaphor is not decorative; it is a design principle. It emphasizes authorship, visibility, and continuity.</p>
+</section>
+</section>
+<section id="iv.-the-grace-index" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="iv.-the-grace-index"><span class="header-section-number">5</span> IV. The GRACE Index</h2>
+<p>The GRACE Index model is summarized visually in Fig. 5, with dimensions and data sources in Table III and scoring interpretation in Table IV.</p>
+<section id="a.-purpose" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="a.-purpose"><span class="header-section-number">5.1</span> A. Purpose</h3>
+<p>The GRACE Index is a daily composite indicator designed to assess whether a person remains “in the zone” of narrative selfhood. This means the person still experiences life as meaningfully their own, even when facing difficulty, grief, illness, or uncertainty. The index is intended to measure narrative integrity, not merely mood or symptom burden.</p>
+</section>
+<section id="b.-dimensions" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="b.-dimensions"><span class="header-section-number">5.2</span> B. Dimensions</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Description</th>
+<th>Indicators</th>
+<th>Example Data Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Narrative Continuity</td>
+<td>Sense of remaining connected to one’s life story and selfhood</td>
+<td>felt like self, could make sense of the day, role continuity, future orientation</td>
+<td>self-report, voice reflections, story engine outputs</td>
+</tr>
+<tr class="even">
+<td>Spiritual Grounding</td>
+<td>Degree of inner peace, reflection, faith, or value alignment</td>
+<td>prayer/reflection, gratitude, acceptance, values-based action</td>
+<td>self-report, ritual logs, spiritual prompts</td>
+</tr>
+<tr class="odd">
+<td>Relational Vitality</td>
+<td>Quality of meaningful connection and belonging</td>
+<td>meaningful contact, warmth of interaction, reciprocity, felt belonging</td>
+<td>interaction logs, visit records, self-report</td>
+</tr>
+<tr class="even">
+<td>Contribution and Usefulness</td>
+<td>Sense of helping, guiding, teaching, or being needed</td>
+<td>mentoring, helping, advice-giving, feeling useful</td>
+<td>contribution logs, task records, self-report</td>
+</tr>
+<tr class="odd">
+<td>Community and World Engagement</td>
+<td>Participation beyond the immediate self or household</td>
+<td>event attendance, service access, neighborhood interaction, civic participation</td>
+<td>activity logs, appointments, community records</td>
+</tr>
+<tr class="even">
+<td>Adaptive Resilience</td>
+<td>Capacity to remain centered and recover during stress</td>
+<td>coping, help-seeking, recovery after setbacks, staying grounded</td>
+<td>self-report, predictor features, behavior trends</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-scoring-model" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="c.-scoring-model"><span class="header-section-number">5.3</span> C. Scoring Model</h3>
+<p>Let N = Narrative Continuity; S = Spiritual Grounding; R = Relational Vitality; C = Contribution and Usefulness; E = Community and World Engagement; A = Adaptive Resilience.</p>
+<p><span class="math display">\[G_t = 0.22N_t + 0.14S_t + 0.20R_t + 0.16C_t + 0.13E_t + 0.15A_t\]</span></p>
+<p>with scores normalized to 0–100.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component / Zone</th>
+<th>Weight / Range</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Narrative Continuity N</td>
+<td>0.22</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Spiritual Grounding S</td>
+<td>0.14</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Relational Vitality R</td>
+<td>0.20</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Contribution and Usefulness C</td>
+<td>0.16</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Community and World Engagement E</td>
+<td>0.13</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Adaptive Resilience A</td>
+<td>0.15</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Flourishing Zone</td>
+<td>85–100</td>
+<td>strong continuity, connection, contribution, and resilience; reinforce growth and legacy opportunities</td>
+</tr>
+<tr class="even">
+<td>Stable Narrative Zone</td>
+<td>70–84</td>
+<td>stable selfhood and functioning despite ordinary challenges; maintain routines and meaningful engagement</td>
+</tr>
+<tr class="odd">
+<td>Vulnerability Zone</td>
+<td>50–69</td>
+<td>early signs of drift, withdrawal, or reduced engagement; initiate gentle, targeted support</td>
+</tr>
+<tr class="even">
+<td>Disruption Zone</td>
+<td>30–49</td>
+<td>significant weakening of narrative continuity or relational vitality; escalate coordinated intervention</td>
+</tr>
+<tr class="odd">
+<td>Fragmentation Risk Zone</td>
+<td>0–29</td>
+<td>severe disconnection, overwhelm, or loss of self-authorship; urgent, high-touch support with human oversight</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d.-zone-interpretation" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="d.-zone-interpretation"><span class="header-section-number">5.4</span> D. Zone Interpretation</h3>
+<p>A person may remain in a stable narrative zone even during distress if selfhood, belonging, and meaning remain intact.</p>
+</section>
+</section>
+<section id="v.-three-ai-enabled-innovations" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="v.-three-ai-enabled-innovations"><span class="header-section-number">6</span> V. Three AI-Enabled Innovations</h2>
+<p>These innovations are summarized in Table V. The hero’s-journey structure is shown in Fig. 4, while the predictive-intervention loop is shown in Fig. 3.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Innovation</th>
+<th>Inputs</th>
+<th>Mechanism</th>
+<th>Outputs</th>
+<th>Intended Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daily Story Creation Engine</td>
+<td>daily events, emotional signals, interactions, reflections</td>
+<td>converts daily life into hero’s-journey narrative structure</td>
+<td>daily story, heroic integration score, narrative tags</td>
+<td>improved meaning-making and narrative continuity</td>
+</tr>
+<tr class="even">
+<td>Fast State Predictor</td>
+<td>GRACE Index history, trends, event context, story features</td>
+<td>forecasts near-future wellbeing state and risk</td>
+<td>predicted score, predicted zone, intervention urgency</td>
+<td>earlier detection of decline</td>
+</tr>
+<tr class="odd">
+<td>Smart Stimulus Agent</td>
+<td>predicted state, preferences, consent rules, intervention history</td>
+<td>selects personalized prompt or support action</td>
+<td>narrative/relational/spiritual/contribution/community/practical stimulus</td>
+<td>reduced time in vulnerable or disrupted states</td>
+</tr>
+</tbody>
+</table>
+<section id="a.-daily-story-creation-through-the-heros-journey" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="a.-daily-story-creation-through-the-heros-journey"><span class="header-section-number">6.1</span> A. Daily Story Creation Through the Hero’s Journey</h3>
+<p>GRACE includes a Daily Story Creation Engine that interprets everyday life through the hero’s journey. Instead of storing events as isolated entries, it reframes them through elements such as ordinary world, call to adventure, trial, guide, courage, insight, and return.</p>
+<p><span class="math display">\[H_t = \alpha_1T_t + \alpha_2Gd_t + \alpha_3Co_t + \alpha_4In_t\]</span></p>
+<p>This mechanism is intended to buffer narrative fragmentation by preserving meaning under adversity.</p>
+</section>
+<section id="b.-ai-based-fast-state-predictor" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="b.-ai-based-fast-state-predictor"><span class="header-section-number">6.2</span> B. AI-Based Fast State Predictor</h3>
+<p>GRACE includes a Fast State Predictor that forecasts near-future wellbeing state using recent GRACE Index trajectories, event patterns, and story features.</p>
+<p><span class="math display">\[\hat{G}_{t+\tau} = P(G_{t-\ell:t}, X_{t-\ell:t}, H_{t-\ell:t}, U_{t-\ell:t})\]</span></p>
+<p>This predictor enables the system to shift from reactive monitoring to anticipatory support.</p>
+</section>
+<section id="c.-smart-stimulus-agent" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="c.-smart-stimulus-agent"><span class="header-section-number">6.3</span> C. Smart Stimulus Agent</h3>
+<p>GRACE also includes a Smart Stimulus Agent that selects a personalized prompt or support action based on predicted state.</p>
+<p><span class="math display">\[a_t \in A = \{a^{nar}, a^{rel}, a^{spi}, a^{con}, a^{com}, a^{prac}, a^{none}\}\]</span></p>
+<p><span class="math display">\[a_t = \pi(\hat{Z}_{t+1}, X_t, p)\]</span></p>
+<p>The aim is not behavior control, but supportive intervention that helps preserve dignity, continuity, and agency.</p>
+</section>
+</section>
+<section id="vi.-multiagent-architecture-and-governance" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="vi.-multiagent-architecture-and-governance"><span class="header-section-number">7</span> VI. Multiagent Architecture and Governance</h2>
+<p>The architecture is shown in Fig. 2. Agent responsibilities are summarized in Table VI. Governance risks and safeguards are summarized in Table VII and visually in Fig. 7.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agent</th>
+<th>Role</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>Domains</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Narrative Agent</td>
+<td>maintain autobiographical continuity</td>
+<td>reflections, memories, daily events</td>
+<td>stories, narrative summaries, continuity signals</td>
+<td>all domains</td>
+</tr>
+<tr class="even">
+<td>Relationship Agent</td>
+<td>track and strengthen social ties</td>
+<td>interaction logs, visit patterns</td>
+<td>tie-strength estimates, reconnection suggestions</td>
+<td>family, colleagues, communities</td>
+</tr>
+<tr class="odd">
+<td>Wellbeing Agent</td>
+<td>synthesize cross-domain wellbeing</td>
+<td>GRACE dimensions, trends, events</td>
+<td>state summaries, risk signals</td>
+<td>all domains</td>
+</tr>
+<tr class="even">
+<td>Spiritual Companion Agent</td>
+<td>support reflection and spiritual grounding</td>
+<td>rituals, reflections, values</td>
+<td>spiritual prompts, grounding support</td>
+<td>spiritual self</td>
+</tr>
+<tr class="odd">
+<td>Family Coordination Agent</td>
+<td>coordinate communication and care continuity</td>
+<td>family contacts, calendars, events</td>
+<td>visit plans, updates, reminders</td>
+<td>family and friends</td>
+</tr>
+<tr class="even">
+<td>Work and Contribution Agent</td>
+<td>identify contribution opportunities</td>
+<td>skills, roles, requests</td>
+<td>mentoring matches, contribution prompts</td>
+<td>colleagues, communities</td>
+</tr>
+<tr class="odd">
+<td>Community Connector Agent</td>
+<td>support participation and local belonging</td>
+<td>local events, memberships, opportunities</td>
+<td>engagement recommendations</td>
+<td>communities</td>
+</tr>
+<tr class="even">
+<td>Service Access Agent</td>
+<td>connect to services and institutions</td>
+<td>appointments, transport, benefits needs</td>
+<td>service guidance, access support</td>
+<td>wider world</td>
+</tr>
+<tr class="odd">
+<td>Memory and Legacy Agent</td>
+<td>preserve long-term story and artifacts</td>
+<td>stories, photos, milestones</td>
+<td>archives, legacy packages</td>
+<td>family, communities</td>
+</tr>
+<tr class="even">
+<td>Ethics and Safety Agent</td>
+<td>enforce safeguards and accountability</td>
+<td>consent rules, system actions, risk states</td>
+<td>approvals, constraints, audit records</td>
+<td>all domains</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>Concern</th>
+<th>Safeguard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paternalism</td>
+<td>system over-directs behavior; erosion of autonomy</td>
+<td>adjustable autonomy, opt-out controls, human override</td>
+</tr>
+<tr class="even">
+<td>Narrative Imposition</td>
+<td>system interprets life story too forcefully; distortion of selfhood</td>
+<td>user-editable stories, narrative sovereignty, transparency</td>
+</tr>
+<tr class="odd">
+<td>Privacy Breach</td>
+<td>sensitive autobiographical data exposed; loss of trust, harm to dignity</td>
+<td>access controls, encryption, consent-based sharing</td>
+</tr>
+<tr class="even">
+<td>Over-Intervention</td>
+<td>too many prompts or alerts; fatigue, frustration, disengagement</td>
+<td>rate limits, preference learning, intervention thresholds</td>
+</tr>
+<tr class="odd">
+<td>Family Misuse</td>
+<td>relatives use system to pressure elder; coercion or conflict</td>
+<td>granular permissions, elder-first governance</td>
+</tr>
+<tr class="even">
+<td>Prediction Opacity</td>
+<td>unclear reason for risk prediction; mistrust, confusion</td>
+<td>explainable prediction summaries</td>
+</tr>
+<tr class="odd">
+<td>Bias in Prediction</td>
+<td>model underperforms for some groups; inequitable support</td>
+<td>fairness auditing, subgroup validation</td>
+</tr>
+<tr class="even">
+<td>Emotional Harm</td>
+<td>prompts surface painful memories badly; distress or retraumatization</td>
+<td>sensitivity rules, contextual timing, human escalation</td>
+</tr>
+<tr class="odd">
+<td>Dependency on System</td>
+<td>overreliance on AI mediation; reduced direct human engagement</td>
+<td>human-in-the-loop design, connection-first policies</td>
+</tr>
+</tbody>
+</table>
+<p>Because GRACE handles intimate autobiographical and relational data, governance is central. The system should include consent-based data access, explainable interventions, adjustable autonomy, human override, privacy protection, and safeguards against manipulative prompting.</p>
+</section>
+<section id="vii.-agent-based-simulation-design" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="vii.-agent-based-simulation-design"><span class="header-section-number">8</span> VII. Agent-Based Simulation Design</h2>
+<p>The simulation structure is shown in Fig. 6, with conditions and hypotheses in Table VIII and variables in Table IX.</p>
+<section id="a.-objective" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="a.-objective"><span class="header-section-number">8.1</span> A. Objective</h3>
+<p>Before real-world deployment, the three innovations should be evaluated in simulation.</p>
+</section>
+<section id="b.-agents" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="b.-agents"><span class="header-section-number">8.2</span> B. Agents</h3>
+<p>Elder Agent; Narrative Agent; Predictor Agent; Stimulus Agent; Social Tie Agents; Environment Agent.</p>
+</section>
+<section id="c.-state-representation" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="c.-state-representation"><span class="header-section-number">8.3</span> C. State Representation</h3>
+<p><span class="math display">\[X_{i,t} = [N_{i,t}, S_{i,t}, R_{i,t}, C_{i,t}, E_{i,t}, A_{i,t}]\]</span></p>
+<p><span class="math display">\[G_{i,t} = 0.22N_{i,t} + 0.14S_{i,t} + 0.20R_{i,t} + 0.16C_{i,t} + 0.13E_{i,t} + 0.15A_{i,t}\]</span></p>
+<p><span class="math display">\[X_{i,t+1} = f(X_{i,t}, U_{i,t}, H_{i,t}, A_{i,t}^{stim}, \varepsilon_{i,t})\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition / Hypothesis</th>
+<th>Story</th>
+<th>Prediction</th>
+<th>Stimulus</th>
+<th>Expectation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Baseline</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>monitoring only</td>
+</tr>
+<tr class="even">
+<td>Story Only</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>improved narrative continuity</td>
+</tr>
+<tr class="odd">
+<td>Story + Prediction</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>improved early risk detection</td>
+</tr>
+<tr class="even">
+<td>Full GRACE</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>highest stability and fastest recovery</td>
+</tr>
+<tr class="odd">
+<td>H1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Story creation increases Narrative Continuity relative to baseline</td>
+</tr>
+<tr class="even">
+<td>H2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fast prediction improves early detection of decline</td>
+</tr>
+<tr class="odd">
+<td>H3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Smart stimuli reduce time spent in low GRACE zones</td>
+</tr>
+<tr class="even">
+<td>H4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Full GRACE yields highest average GRACE Index</td>
+</tr>
+<tr class="odd">
+<td>H5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Full GRACE reduces recovery time after adverse shocks</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Name</th>
+<th>Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>N</td>
+<td>Narrative Continuity</td>
+<td>state variable</td>
+<td>tracks self-story coherence</td>
+</tr>
+<tr class="even">
+<td>S</td>
+<td>Spiritual Grounding</td>
+<td>state variable</td>
+<td>tracks inner steadiness</td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td>Relational Vitality</td>
+<td>state variable</td>
+<td>tracks connection quality</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>Contribution and Usefulness</td>
+<td>state variable</td>
+<td>tracks perceived usefulness</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Community and World Engagement</td>
+<td>state variable</td>
+<td>tracks external participation</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>Adaptive Resilience</td>
+<td>state variable</td>
+<td>tracks coping and recovery</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>GRACE Index</td>
+<td>composite metric</td>
+<td>primary wellbeing outcome</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>Heroic Integration Score</td>
+<td>derived metric</td>
+<td>measures successful narrative reframing</td>
+</tr>
+<tr class="odd">
+<td>Stable-Zone Days</td>
+<td>—</td>
+<td>outcome metric</td>
+<td>proportion of days with G ≥ 70; assesses sustained wellbeing</td>
+</tr>
+<tr class="even">
+<td>Vulnerable/Disrupted Days</td>
+<td>—</td>
+<td>outcome metric</td>
+<td>proportion of days with G &lt; 70; assesses instability</td>
+</tr>
+<tr class="odd">
+<td>Recovery Time</td>
+<td>—</td>
+<td>outcome metric</td>
+<td>days to return to stable zone after shock; assesses resilience</td>
+</tr>
+<tr class="even">
+<td>Reframing Success</td>
+<td>—</td>
+<td>outcome metric</td>
+<td>proportion of adverse days with high H; assesses story engine effect</td>
+</tr>
+<tr class="odd">
+<td>Intervention Efficiency</td>
+<td>—</td>
+<td>outcome metric</td>
+<td>gain in G per stimulus action; assesses stimulus value</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="viii.-technology-and-society-implications" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="viii.-technology-and-society-implications"><span class="header-section-number">9</span> VIII. Technology and Society Implications</h2>
+<section id="a.-from-monitoring-to-meaning" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="a.-from-monitoring-to-meaning"><span class="header-section-number">9.1</span> A. From Monitoring to Meaning</h3>
+<p>Many existing systems for older adults are designed around surveillance, compliance, and risk reduction. Although these functions are often necessary, they can narrow the social meaning of technology to observation and behavioral management. GRACE suggests a different orientation: intelligent systems should also support meaning-making, narrative continuity, and relationship quality. This matters because technologies do not merely assist users; they also shape how users are socially perceived. A system that frames older adults mainly as vulnerable subjects of monitoring may reinforce dependency narratives. By contrast, a system that recognizes them as authors, contributors, and relational beings may support dignity and public visibility.</p>
+</section>
+<section id="b.-the-social-construction-of-aging-through-technology" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="b.-the-social-construction-of-aging-through-technology"><span class="header-section-number">9.2</span> B. The Social Construction of Aging Through Technology</h3>
+<p>Technologies embody assumptions about the populations they serve. In aging contexts, these assumptions often center decline, burden, and incapacity. Such framings can indirectly reproduce ageism by embedding deficit-oriented views of later life into interfaces, workflows, and service logics. GRACE instead frames later life as a stage of ongoing identity development, contribution, and relational growth. This shift has implications beyond design. It suggests that socio-technical systems should not merely adapt to older adults as they are socially classified, but should also challenge reductive classifications that limit participation and agency.</p>
+</section>
+<section id="c.-narrative-data-as-a-new-category-of-sensitive-data" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="c.-narrative-data-as-a-new-category-of-sensitive-data"><span class="header-section-number">9.3</span> C. Narrative Data as a New Category of Sensitive Data</h3>
+<p>GRACE relies on autobiographical, relational, and interpretive data in addition to behavioral and service data. This class of information is especially sensitive because it concerns identity, memory, grief, values, and social bonds. Conventional privacy models may be insufficient for such data because the issue is not only exposure, but interpretation and authorship. Questions arise regarding who owns a life story representation, who may correct or extend it, and how conflicting interpretations should be handled when family members or institutions are involved. The use of narrative data therefore requires governance structures that protect not only privacy, but also identity integrity.</p>
+</section>
+<section id="d.-prediction-intervention-and-the-risk-of-paternalism" class="level3" data-number="9.4">
+<h3 data-number="9.4" class="anchored" data-anchor-id="d.-prediction-intervention-and-the-risk-of-paternalism"><span class="header-section-number">9.4</span> D. Prediction, Intervention, and the Risk of Paternalism</h3>
+<p>The Fast State Predictor and Smart Stimulus Agent introduce anticipatory action into elder-oriented systems. While this can improve support, it also creates the risk of paternalism. Predictions may be used to steer behavior in ways that are insufficiently transparent or insufficiently aligned with the elder’s own intentions. In contexts where older adults are already socially positioned as dependent, such interventions may amplify rather than reduce power asymmetries. GRACE therefore implies that predictive systems should be explainable, consent-aware, adjustable in intensity, and always open to refusal or override. The goal is not to optimize the person, but to support the person’s own authorship.</p>
+</section>
+<section id="e.-human-centered-ai-in-socially-embedded-contexts" class="level3" data-number="9.5">
+<h3 data-number="9.5" class="anchored" data-anchor-id="e.-human-centered-ai-in-socially-embedded-contexts"><span class="header-section-number">9.5</span> E. Human-Centered AI in Socially Embedded Contexts</h3>
+<p>GRACE contributes to human-centered AI by expanding what counts as success in intelligent systems. Reliability, safety, and performance remain necessary, but they are not sufficient in socially embedded domains such as aging. Systems should also be evaluated according to whether they preserve agency, dignity, self-interpretation, reciprocity, and belonging. In this sense, GRACE argues for a broader evaluative framework for AI in society: one that includes effects on identity and relational life alongside traditional technical metrics.</p>
+</section>
+<section id="f.-social-infrastructure-and-inclusion" class="level3" data-number="9.6">
+<h3 data-number="9.6" class="anchored" data-anchor-id="f.-social-infrastructure-and-inclusion"><span class="header-section-number">9.6</span> F. Social Infrastructure and Inclusion</h3>
+<p>Older adult wellbeing depends not only on internal state or family support, but also on access to social infrastructure, including transportation, public services, community groups, and marketplaces. GRACE highlights that intelligent support systems should therefore function not merely as private assistants, but as bridges to institutional and civic participation. This has policy implications. Public-interest technologies for aging should be designed to support inclusion, not just care; participation, not just monitoring; and contribution, not just dependency management.</p>
+</section>
+<section id="g.-implications-for-technology-governance" class="level3" data-number="9.7">
+<h3 data-number="9.7" class="anchored" data-anchor-id="g.-implications-for-technology-governance"><span class="header-section-number">9.7</span> G. Implications for Technology Governance</h3>
+<p>From a technology-and-society perspective, GRACE suggests five governance principles for elder-oriented AI. First, narrative sovereignty: the elder retains primary authority over their life story representation. Second, consentful prediction: predictive analytics must be understandable, optional, and bounded in use. Third, non-manipulative intervention: prompts and actions should support rather than coerce. Fourth, relational accountability: system actions should be evaluated for their effects on family, community, and institutional relationships. Fifth, dignity-centered evaluation: success should include preservation of selfhood, not only efficiency or compliance.</p>
+</section>
+<section id="h.-broader-relevance" class="level3" data-number="9.8">
+<h3 data-number="9.8" class="anchored" data-anchor-id="h.-broader-relevance"><span class="header-section-number">9.8</span> H. Broader Relevance</h3>
+<p>Although GRACE is developed for older adults, its implications extend to other domains in which wellbeing depends on identity continuity and social participation, including disability support, chronic illness, rehabilitation, and mental health recovery. More broadly, the framework suggests that intelligent socio-technical systems should be designed not only to predict and intervene, but also to help persons remain present in their own lives.</p>
+</section>
+</section>
+<section id="ix.-discussion" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="ix.-discussion"><span class="header-section-number">10</span> IX. Discussion</h2>
+<p>Taken together, Figs. 1–7 and Tables I–IX show that GRACE is not merely a collection of tools, but an integrated socio-technical ecosystem.</p>
+<p>GRACE reframes elder-oriented AI away from narrow models of surveillance and deficit management. Its central contribution is to treat older adults as ongoing authors of life rather than passive subjects of care. This reframing changes the role of intelligent systems. Instead of merely detecting problems or enforcing routines, such systems can support meaning, relationship quality, contribution, and continuity of self.</p>
+<p>The GRACE Index is important in this regard because it shifts measurement away from symptom burden alone and toward narrative integrity. A person may be grieving, ill, or facing uncertainty while still remaining deeply connected to selfhood, belonging, and purpose. Conventional metrics may not capture this distinction. By contrast, the GRACE Index is intended to identify whether the person remains “in the zone” of narrative selfhood, thereby enabling support that is more humane and context-sensitive.</p>
+<p>The three added innovations extend this contribution. The Daily Story Creation Engine offers a computational mechanism for narrative reframing. The Fast State Predictor moves the system from reactive to anticipatory operation. The Smart Stimulus Agent transforms prediction into practical support. In combination, these mechanisms suggest a new class of elder-oriented intelligent systems: systems that are reflective, predictive, and supportive, while remaining grounded in dignity and agency.</p>
+<p>For IEEE audiences, the broader implication is that intelligent systems in socially sensitive settings should be evaluated not only by technical performance, but also by their effects on identity, autonomy, and social life. GRACE therefore contributes to ongoing conversations about human-centered AI, algorithmic governance, and the social responsibilities of digital infrastructure.</p>
+<p>The proposed agent-based simulation design provides a useful intermediate step before real-world deployment. It allows key questions to be examined under controlled conditions: whether narrative reframing buffers decline, whether predictive models can identify vulnerability early, and whether stimulus policies improve recovery without becoming intrusive. It also enables examination of governance concerns such as intervention thresholds, uncertainty handling, and the trade-off between support and paternalism.</p>
+<p>At the same time, GRACE should be understood as a framework rather than a finished system. Its value lies in offering a coherent socio-technical direction for future work at the intersection of aging, AI, and community computing.</p>
+</section>
+<section id="x.-limitations-and-future-work" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="x.-limitations-and-future-work"><span class="header-section-number">11</span> X. Limitations and Future Work</h2>
+<p>This paper is conceptual and simulation-oriented. Several limitations should therefore be acknowledged.</p>
+<p>First, the GRACE Index is proposed as a theoretically grounded composite measure, but its weighting scheme and dimensional structure have not yet been empirically validated. The model should be treated as provisional until psychometric testing, longitudinal analysis, and user-centered validation are conducted.</p>
+<p>Second, the Daily Story Creation Engine, Fast State Predictor, and Smart Stimulus Agent are presented as design innovations, not as fully implemented and tested modules. Their actual effectiveness will depend on interface quality, data quality, personalization logic, and the degree to which users perceive them as supportive rather than intrusive.</p>
+<p>Third, the proposed simulation is an abstraction of real life. Although simulation can help evaluate mechanisms and explore policy behavior, it cannot fully represent the emotional, cultural, and relational complexity of lived aging. Real-world evaluation with older adults, families, and community organizations remains essential.</p>
+<p>Fourth, the framework may require substantial cultural adaptation. Narrative identity, spirituality, family expectations, contribution norms, and attitudes toward AI vary across settings. A system designed around autobiographical continuity and relational support must therefore be locally interpretable and culturally responsive.</p>
+<p>Fifth, governance challenges remain significant. The use of autobiographical and predictive data introduces risks related to privacy, bias, paternalism, narrative imposition, and over-intervention. Future work should address these issues through fairness testing, explainability design, participatory governance, and careful consent models.</p>
+<p>Future research should proceed along at least six directions: 1. participatory co-design with older adults, caregivers, and community stakeholders; 2. prototype implementation of the GRACE ecosystem and GRACE Index interfaces; 3. simulation execution and reporting to evaluate the three innovations under controlled scenarios; 4. psychometric validation of the GRACE Index across diverse elder populations; 5. pilot deployment studies to assess usability, acceptability, and perceived dignity impact; and 6. governance and fairness analysis focused on predictive intervention, consent, and relational accountability.</p>
+<p>These steps are necessary to move GRACE from a conceptual socio-technical framework toward a validated and ethically robust intelligent ecosystem.</p>
+</section>
+<section id="xi.-conclusion" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="xi.-conclusion"><span class="header-section-number">12</span> XI. Conclusion</h2>
+<p>GRACE proposes a narrative-centered socio-technical ecosystem for elder wellbeing. By integrating relationship quality, autobiographical continuity, predictive modeling, and anticipatory intervention, it offers an alternative to deficit-oriented aging technologies. Rather than viewing older adults primarily through decline, risk, and service dependency, GRACE understands them as persons who continue to live, interpret, and contribute within unfolding life stories.</p>
+<p>The framework contributes four main ideas: a relational and narrative model of elder wellbeing; the GRACE Index as a daily measure of narrative selfhood; three AI-enabled mechanisms for story creation, prediction, and supportive intervention; and an agent-based simulation design for structured evaluation. Together, these elements suggest that intelligent systems for older adults should be designed not only to manage risk, but also to sustain dignity, reciprocity, participation, and the ongoing authorship of life.</p>
+<p>More broadly, GRACE argues that the future of elder-oriented AI should be socio-technical rather than merely technical, and human-centered in a deep sense: not simply usable, but respectful of identity, meaning, and relationship. If developed responsibly, systems like GRACE may help ensure that digital innovation in aging supports not only longer life, but more connected, authored, and enriched life.</p>
+</section>
+<section id="references" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="references"><span class="header-section-number">13</span> References</h2>
+<p>Baltes, P. B., &amp; Smith, J. (2008). <em>The fascination of wisdom: Its nature, ontogeny, and function.</em> Perspectives on Psychological Science, 3(1), 56–64.</p>
+<p>Berkman, L. F., Glass, T., Brissette, I., &amp; Seeman, T. E. (2000). From social integration to health: Durkheim in the new millennium. <em>Social Science &amp; Medicine</em>, 51(6), 843–857.</p>
+<p>Bohlmeijer, E., Roemer, M., Cuijpers, P., &amp; Smit, F. (2007). The effects of reminiscence on psychological well-being in older adults: A meta-analysis. <em>Aging &amp; Mental Health</em>, 11(3), 291–300.</p>
+<p>Butler, R. N. (1963). The life review: An interpretation of reminiscence in the aged. <em>Psychiatry</em>, 26(1), 65–76.</p>
+<p>Carroll, J. M. (2014). <em>Human-computer interaction in the new millennium.</em> Addison-Wesley.</p>
+<p>Carstensen, L. L., Isaacowitz, D. M., &amp; Charles, S. T. (1999). Taking time seriously: A theory of socioemotional selectivity. <em>American Psychologist</em>, 54(3), 165–181.</p>
+<p>Cacioppo, J. T., &amp; Hawkley, L. C. (2009). Perceived social isolation and cognition. <em>Trends in Cognitive Sciences</em>, 13(10), 447–454.</p>
+<p>Cornwell, E. Y., &amp; Waite, L. J. (2009). Social disconnectedness, perceived isolation, and health among older adults. <em>Journal of Health and Social Behavior</em>, 50(1), 31–48.</p>
+<p>Czaja, S. J., Charness, N., Fisk, A. D., Hertzog, C., Nair, S. N., Rogers, W. A., &amp; Sharit, J. (2006). Factors predicting the use of technology: Findings from the Center for Research and Education on Aging and Technology Enhancement (CREATE). <em>Psychology and Aging</em>, 21(2), 333–352.</p>
+<p>Erikson, E. H. (1982). <em>The life cycle completed.</em> W. W. Norton.</p>
+<p>Gurstein, M. (2007). <em>What is community informatics (and why does it matter)?</em> Polimetrica.</p>
+<p>Habermas, T., &amp; Bluck, S. (2000). Getting a life: The emergence of the life story in adolescence. <em>Psychological Bulletin</em>, 126(5), 748–769.</p>
+<p>Holt-Lunstad, J., Smith, T. B., &amp; Layton, J. B. (2010). Social relationships and mortality risk: A meta-analytic review. <em>PLoS Medicine</em>, 7(7), e1000316.</p>
+<p>Jennings, N. R., Sycara, K., &amp; Wooldridge, M. (1998). A roadmap of agent research and development. <em>Autonomous Agents and Multi-Agent Systems</em>, 1(1), 7–38.</p>
+<p>McAdams, D. P. (2001). The psychology of life stories. <em>Review of General Psychology</em>, 5(2), 100–122.</p>
+<p>McAdams, D. P., &amp; de St.&nbsp;Aubin, E. (1992). A theory of generativity and its assessment through self-report, behavioral acts, and narrative themes in autobiography. <em>Journal of Personality and Social Psychology</em>, 62(6), 1003–1015.</p>
+<p>Mitzner, T. L., Boron, J. B., Fausset, C. B., Adams, A. E., Charness, N., Czaja, S. J., Dijkstra, K., Fisk, A. D., Rogers, W. A., &amp; Sharit, J. (2010). Older adults talk technology: Technology usage and attitudes. <em>Computers in Human Behavior</em>, 26(6), 1710–1721.</p>
+<p>Morrow-Howell, N., Gonzales, E., Harootyan, R., Lee, Y., &amp; Lindberg, B. (2017). Approaches, policies, and practices to support the productive engagement of older adults. <em>Journal of Gerontological Social Work</em>, 60(3), 193–200.</p>
+<p>Shneiderman, B. (2020). Human-centered artificial intelligence: Reliable, safe &amp; trustworthy. <em>International Journal of Human-Computer Interaction</em>, 36(6), 495–504.</p>
+<p>Singer, J. A. (2004). Narrative identity and meaning making across the adult lifespan: An introduction. <em>Journal of Personality</em>, 72(3), 437–460.</p>
+<p>Sixsmith, A., &amp; Gutman, G. M. (Eds.). (2013). <em>Technologies for active aging.</em> Springer.</p>
+<p>Vines, J., Pritchard, G., Wright, P., Olivier, P., &amp; Brittain, K. (2015). An age-old problem: Examining the discourses of ageing in HCI and strategies for future research. <em>ACM Transactions on Computer-Human Interaction</em>, 22(1), Article 2.</p>
+<p>Wooldridge, M. (2009). <em>An introduction to multiagent systems</em> (2nd ed.). Wiley.</p>
+</section>
+</div>
+
+<div id="quarto-accordion" class="accordion d-none d-md-block" role="tablist">
+    <div class="accordion-item container" id="">
+    <div class="accordion-header d-flex justify-content-between" id="heading-author" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-authors" aria-expanded="false" aria-controls="collapse-authors">Authors</button>
+    </div>
+    <div id="collapse-authors" class="accordion-body collapse" aria-labelledby="heading-authors" data-bs-parent="#quarto-accordion" role="tabpanel">
+          <div class="accordion-authors container">
+      <div class="author-card"><div class="grid gap-0">
+                <div class="author-photo g-col-3 pe-3">
+          <img src="david-folio.png" alt="Author image of First Author">
+        </div>
+        <div class="g-col-9">
+          <div><span class="author-info"><a href="https://ieee.org/" title="First Institution, Departmen, Second Institution, ">First Author</a><a href="https://orcid.org/0000-0001-9430-6091" class="quarto-title-author-orcid px-1" target="orcid.widget" rel="me noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"></a></span></div>
+          <div>Departmen, First Institution, City, 18800 Country, Second Institution</div>
+        </div>
+              </div>
+      <div><p>Use <code>IEEEbiography</code> with figure as option and the author name as the argument followed by the biography text.</p></div>
+      </div>
+      </div>
+           <div class="accordion-authors container">
+      <div class="author-card"><div class="grid gap-0">
+                <div class="g-col-12">
+          <div><span class="author-info">Second Author</span></div>
+          <div>Anonymous University</div>
+        </div>
+              </div>
+      <div><p>Use <code>IEEEbiographynophoto</code> and the author name as the argument followed by the biography text.</p></div>
+      </div>
+      </div>
+         </div>
+  </div>
+  
+    <div class="accordion-item container">
+    <div class="accordion-header d-flex justify-content-between" id="heading-references" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-references" aria-expanded="false" aria-controls="collapse-references">References</button>
+    </div>
+    <div id="collapse-references" class="accordion-body collapse" aria-labelledby="heading-references" data-bs-parent="#quarto-accordion" role="tabpanel">
+      <section id="references" class="accordion-references">
+        <div id="refs" role="list">
+
+        </div>
+      </section>
+    </div>
+  </div>
+      <div class="accordion-item container">
+    <div class="accordion-header d-flex justify-content-between" id="heading-keywords" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-keywords" aria-expanded="false" aria-controls="collapse-keywords">Keywords</button>
+    </div>
+    <div id="collapse-keywords" class="accordion-body collapse" aria-labelledby="heading-keywords" data-bs-parent="#quarto-accordion" role="tabpanel">
+      <div class="accordion-keywords">
+        <strong>Author Keywords</strong>
+        <ul class="mt-3 p-0">
+                <li>IEEE, </li><li>IEEEtran, </li><li>journal, </li><li>Quarto, </li><li>Pandoc, </li>
+        <li>template</li>
+                </ul>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@software{author2023,
+  author = {Author, First and Author, Second},
+  title = {GRACE: {A} {Narrative-Centered} {Socio-Technical} {Ecosystem}
+    for {Elder} {Wellbeing}},
+  pages = {1-3},
+  date = {2023-06-23},
+  url = {https://github.com/dfolio/quarto-ieee},
+  langid = {en},
+  abstract = {This document describes the most common article elements
+    and how to use the `quarto-ieee` class with Pandoc/Quarto-Markdown
+    to produce files that are suitable for submission to IEEE journals.
+    `quarto-ieee` can produce conference, journal, and technical note
+    (correspondence) papers with a suitable choice of class options. It
+    intends to generate PDF and HTML outputs that closely mimick what
+    IEEE would generate.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-author2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="">F.
+Author and S. Author, <span>“GRACE: A Narrative-Centered Socio-Technical
+Ecosystem for Elder Wellbeing,”</span> <em>GitHUB</em>. pp. 1–3,
+23-June-2023 [Online]. Available: <a href="https://github.com/dfolio/quarto-ieee">https://github.com/dfolio/quarto-ieee</a></div>
+</div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

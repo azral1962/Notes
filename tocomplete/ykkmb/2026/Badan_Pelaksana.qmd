@@ -1,0 +1,121 @@
+# Badan Pelaksana
+
+Usulan struktur kepengurusan dan kebutuhan personalia untuk pelaksanaan operasional Kawasan Dago 109 YKKMB, serta model bisnis dan kebutuhan anggaran untuk program beasiswa kawasan.
+
+Tahap 1: Lapis 1 (Saat Ini) - Wisma Sejahtera
+Tahap 2: Lapis 2 (Jangka Pendek) - Youth Center 
+Tahap 3: Lapis 3 (Jangka Menengah 1) - Digital Campus
+Tahap 4: Lapis 4 (Jangka Menengah 2) - Entrepreneurial Center
+Tahap 5: Lapis 5 (Jangka Panjang) - Value Creation Hub  
+
+Badan Pelaksana Semwntara Tahap 1 menuju 2:
+Direktur Eksekutif (CEO) yang ditunjuk oleh Pengurus YKKMB, dengan dukungan tim operasional yang terdiri dari Manajer Kawasan, Petugas Pemelihara, dan Petugas Keamanan.
+Direktur Eksekutif (adinterim): Imanuel Wangkai
+Manajer Kawasan: Supardji
+Petugas Pemelihara: "Dedi"
+Petugas Keamanan: "Edi"
+
+
+## Konsep Badan Pelaksana Kawasan Dago 109 YKKMB
+Berdasarkan dokumen Rencana Strategis (Renstra) YKKMB dan arsitektur pengembangannya, pelaksanaan operasional untuk kelima *layer* (lapis) Kawasan Dago 109 secara spesifik didelegasikan kepada badan atau lembaga yang berbeda sesuai dengan fungsi dan model bisnisnya. 
+
+Selain itu, secara legal dan struktural, Pembina YKKMB telah menetapkan pemisahan tugas antara **Yayasan** (fokus pada visi, misi, legal, dan aset) dan **Badan Usaha** (fokus pada komersial, investasi, dan monetisasi kawasan seperti Koperasi atau Perseroan Terbatas). 
+
+Berikut adalah usulan/penetapan badan yang bertanggung jawab untuk setiap *layer* pelaksanaannya:
+
+**1. Lapis 1: Wisma Sejahtera (Saat Ini)**
+*   **Lembaga Bertanggung Jawab:** **Pengurus YKKMB (Yayasan)**.
+*   **Peran & Fungsi:** Pengurus yayasan bertindak langsung sebagai pengelola tahap dasar yang bertanggung jawab atas legalitas, kepemilikan aset fisik, pemeliharaan fasilitas (keamanan, kebersihan), serta penjagaan nilai-nilai dasar. Pengurus mengelola anggaran untuk operasional dasar dan menyisihkan dana untuk perpanjangan HGB aset yayasan.
+
+**2. Lapis 2: Youth Center (Jangka Pendek)**
+*   **Lembaga Bertanggung Jawab:** **Tim Kerja** dan **Badan Usaha (Koperasi/PT)** yang didirikan oleh Komunitas Dago 109.
+*   **Peran & Fungsi:** Badan Usaha bertugas mengoperasikan kawasan secara komersial (melalui skema Kontrak Kerjasama Operasi/KSO dengan Yayasan). Mereka bertanggung jawab mengelola area komersial (*food court*, area parkir, ruang *tenant*) untuk menghadirkan layanan yang kreatif dan edukatif bagi pengunjung pemuda, mahasiswa, dan GMKI Bandung.
+
+**3. Lapis 3: Digital Campus (Jangka Menengah 1)**
+*   **Lembaga Bertanggung Jawab:** **Badan Pelaksana (Tenant Khusus)** yang didirikan melalui kolaborasi antara YKKMB, Badan Layanan, dan Mitra Perguruan Tinggi.
+*   **Peran & Fungsi:** Badan ini secara khusus mengoperasikan layanan akademik digital, kokurikuler penguatan karakter, serta inovasi pendidikan abad ke-21. Lembaga ini mengandalkan tenaga akademik profesional dan kemitraan dengan universitas (seperti SBM-ITB atau universitas Kristen lainnya) untuk melayani kaum muda dan mahasiswa.
+
+**4. Lapis 4: Entrepreneurial Center (Jangka Menengah 2)**
+*   **Lembaga Bertanggung Jawab:** **Badan Kerjasama / Tenant Khusus** yang dibentuk bersama Mitra Investor, dunia usaha, dan gereja.
+*   **Peran & Fungsi:** Bertanggung jawab menjadi inkubator bisnis dan pusat *sociotechnopreneurship*. Lembaga ini berfokus melayani para *entrepreneur* dan investor, serta memberikan dukungan langsung untuk peluncuran *startups* dan produksi bisnis digital.
+
+**5. Lapis 5: Value Creation Hub (Jangka Panjang)**
+*   **Lembaga Bertanggung Jawab:** **Badan Kerjasama (Konsorsium Tingkat Lanjut)** yang melibatkan sinergi antara YKKMB, institusi pemerintah, lembaga masyarakat, dan investor sosial.
+*   **Peran & Fungsi:** Lembaga ini bertanggung jawab mengeksekusi program-program berdampak skala luas untuk membangun kesejahteraan masyarakat. Fokusnya adalah menyatukan berbagai platform yang telah dibangun pada *layer* sebelumnya untuk mendukung inisiatif pemerintah dan melahirkan "Manusia Syaloom" (agen-agen sejahtera) bagi masyarakat luas.
+
+## Pendahuluan
+Dalam rangka mewujudkan visi dan misi pengembangan Kawasan Dago 109 YKKMB, struktur kepengurusan dan tenaga personalia menjadi aspek krusial yang harus dirancang dengan cermat. Laporan ini menyajikan gambaran lengkap mengenai pengelolaan dan kebutuhan sumber daya manusia di setiap *layer* (lapis) pengembangan kawasan, mulai dari layanan dasar hingga inovasi sosial yang berdampak luas.
+
+## Pengurus
+Berikut adalah laporan lengkap mengenai struktur kepengurusan dan tenaga personalia pada kelima *layer* (lapis) pengembangan Kawasan Dago 109 YKKMB:
+
+**1. Lapis 1: Wisma Sejahtera (Layanan Dasar Saat Ini)**
+Pada tahap fondasi ini, pengelolaan berfokus pada kepemilikan aset fisik, legalitas (seperti HGB), serta pemeliharaan lingkungan yang aman dan sehat.
+*   **Kepengurusan Utama:** Dikelola secara langsung oleh **Pengurus YKKMB (Yayasan)**. Berdasarkan struktur masa bakti 2026-2030, susunan kepengurusan yayasan adalah sebagai berikut:
+    *   **Dewan Pembina:** Suhardi (Ketua), Marim Purba, Sularso, Arthur H. L. Tobing, K. T. Sirait.
+    *   **Dewan Pengawas:** Ferdinand Manurung (Ketua), Torkis Parlaungan Siregar, Simon Panggabean.
+    *   **Pengurus Harian:** Armein Z. R. Langi (Ketua), Herdjon Panggabean (Wakil Ketua), Noir Purba (Sekretaris), Desmon Donald Siagian (Bendahara), Beng Sugiharto (Anggota).
+*   **Tenaga Personalia Operasional:** Diperlukan 3 orang tenaga kerja profesional penuh waktu (*full-timer*) yang digaji sesuai UMR, yang terdiri dari: 1 Manager Kawasan, 1 Petugas Pemelihara, dan 1 Petugas Operasional & Keamanan.
+
+**2. Lapis 2: Youth Center (Jangka Pendek)**
+Fokus pada lapis ini adalah menghadirkan keramaian pengunjung pemuda melalui layanan operasional *food court*, ritel, dan ruang kreatif.
+*   **Kepengurusan:** Dikelola oleh **Tim Kerja** dan **Badan Usaha** (dalam bentuk Koperasi atau Perseroan Terbatas) yang terpisah secara operasional dari Yayasan, namun terikat melalui Kontrak Kerjasama Operasi (KSO Kawasan). Untuk menyiapkan ini, YKKMB membentuk Tim Penyiapan, Pengembangan dan Koordinasi Badan Usaha (TPPK-BU) dan Tim Penyiapan dan Koordinasi Komunitas (TPK-K).
+*   **Tenaga Personalia:** Pengurus/Manajemen Koperasi atau Perseroan Terbatas, serta para penyewa komersial (*tenants*) yang secara mandiri menjalankan bisnis mereka di kawasan tersebut. 
+
+**3. Lapis 3: Digital Campus (Jangka Menengah 1)**
+Lapis ini menyediakan layanan akademik digital, riset, serta pengembangan talenta dan kepemimpinan.
+*   **Kepengurusan:** Dikelola oleh **Badan Pelaksana (Tenant Khusus)** yang didirikan melalui kemitraan strategis antara YKKMB, Badan Layanan, dan Mitra Perguruan Tinggi.
+*   **Tenaga Personalia:** Membutuhkan tenaga akademik unggul Kristiani. Berdasarkan asumsi model bisnis konservatif untuk melayani 400 mahasiswa/peserta didik, personalia yang dibutuhkan adalah sekitar **20 staf akademik (dosen)** dan **10 staf pendukung lainnya**.
+
+**4. Lapis 4: Entrepreneurial Center (Jangka Menengah 2)**
+Berfungsi sebagai inkubator bisnis dan pusat *sociotechnopreneurship* untuk melahirkan *startup* hingga tahap penawaran saham publik (IPO).
+*   **Kepengurusan:** Dikelola oleh **Badan Kerjasama / Tenant Khusus** yang bersinergi langsung dengan mitra investor, dunia usaha, dan jaringan gereja.
+*   **Tenaga Personalia:** Karena berfokus pada ekosistem kewirausahaan, tenaga yang terlibat adalah para pakar dan praktisi, yang meliputi:
+    *   Komunitas mentor keahlian keuangan.
+    *   Komunitas *Angel Investor*.
+    *   Komunitas mentor pengembangan produk yang kompetitif.
+    *   Komunitas mentor pemasaran dan platform bisnis digital.
+    *   Komunitas mentor proses menuju IPO.
+
+**5. Lapis 5: Value Creation Hub (Jangka Panjang)**
+Tahap puncak ini bertujuan untuk membangun platform yang berdampak luas bagi kesejahteraan masyarakat di luar batas fisik Dago 109.
+*   **Kepengurusan:** Dikelola secara kolaboratif oleh sebuah **Badan Kerjasama Konsorsium** yang terdiri dari Komunitas, Mitra Investasi, Gereja, Institusi Pemerintah, Lembaga Masyarakat, dan Investor Sosial.
+*   **Tenaga Personalia:** Digerakkan oleh para pemimpin lintas sektor, agen-agen pembangun kesejahteraan ("Manusia Syaloom"), serta jejaring komunitas global maupun regional yang mengimplementasikan inovasi pelayanan dan kesejahteraan sosial. 
+
+Secara keseluruhan, seiring dengan meningkatnya *layer* pelayanan (dari Lapis 1 ke Lapis 5), kepengurusan akan semakin didelegasikan dari **Pengurus Yayasan** ke lembaga-lembaga profesional spesifik (**Badan Usaha, Tenant Khusus, dan Konsorsium**), dan personalia yang terlibat akan bergeser dari staf pemeliharaan fisik menuju tenaga akademik dan profesional bisnis berkeahlian tinggi.
+
+## Model Bisnis dan Kebutuhan Anggaran Program Beasiswa Kawasan Dago 109
+
+Melengkapi laporan kepengurusan dan personalia sebelumnya, berikut adalah kalkulasi kebutuhan anggaran (*budget*) dan model keuangan untuk membiayai operasional di setiap *layer* pengembangan Kawasan Dago 109:
+
+**1. Lapis 1: Wisma Sejahtera (Dikelola Yayasan)**
+Sebagai penyedia infrastruktur dasar, beban yayasan berfokus pada biaya pemeliharaan (*OPEX*) kawasan dan gaji tim profesional. Berdasarkan penyesuaian UMR Kota Bandung 2026, total estimasi kebutuhan anggaran adalah **Rp304.880.720 per tahun** (sekitar Rp25,4 juta per bulan).
+*   **Biaya SDM (3 Personel):** Rp218.880.720/tahun (menggaji 1 Manager Kawasan, 1 Petugas Pemelihara, dan 1 Petugas Keamanan, termasuk tunjangan dan BPJS 10%),.
+*   **Utilitas (Listrik, Air, Internet):** Rp42.000.000/tahun.
+*   **Bahan Pemeliharaan:** Rp18.000.000/tahun.
+*   **Administrasi & Legal:** Rp6.000.000/tahun.
+*   **Tabungan Strategis HGB:** Rp20.000.000 hingga Rp50.000.000/tahun untuk persiapan perpanjangan jatuh tempo di 2029,.
+*   *Sumber Pendanaan:* Anggaran ini akan ditutupi dari pendapatan Kontrak Kerjasama Operasi (KSO) atau penyewaan 80% area komersial yang ditargetkan melampaui Rp1 Miliar per tahun,. Yayasan juga wajib mencadangkan 10% (Rp100 juta) dari pendapatan tersebut khusus untuk Pajak Final,.
+
+**2. Lapis 2: Youth Center (Dikelola Badan Usaha / Koperasi)**
+Badan usaha yang mengelola area ritel dan *food court* secara komersial memiliki struktur anggaran yang lebih besar karena berhadapan langsung dengan publik.
+*   **Kebutuhan Pengeluaran Tahunan:** Diestimasikan sebesar **Rp1.750.000.000**, yang terdiri dari biaya operasional *Youth Center* sebesar Rp750.000.000 dan pembayaran kewajiban *fee* KSO Kawasan kepada Yayasan sebesar Rp1 Miliar.
+*   *Sumber Pendanaan:* Ditargetkan meraup penerimaan sebesar Rp2,6 Miliar per tahun yang bersumber dari uang sewa *tenants*, parkir berbayar, *foodcourt*, dan layanan lainnya.
+
+**3. Lapis 3: Digital Campus (Dikelola Badan Pelaksana / Tenant Khusus)**
+Kalkulasi anggaran pada lapis ini menggunakan asumsi model bisnis konservatif yang melayani 400 mahasiswa dengan 20 tenaga akademik (dosen) dan 10 staf pendukung.
+*   **Kebutuhan Pengeluaran Tahunan:** Diestimasikan mencapai **Rp8.000.000.000**, dengan rincian:
+    *   Gaji Dosen (asumsi Rp15 Juta/bulan): Rp3.600.000.000.
+    *   Gaji Staf Pendukung (asumsi Rp10 Juta/bulan): Rp1.200.000.000.
+    *   Beban Non-SDM (operasional akademik maksimal 40%): Rp3.200.000.000.
+*   *Sumber Pendanaan:* Berasal dari pembayaran mahasiswa (Pangkal Rp2 Miliar, Semester Rp4 Miliar, dan SKS Rp2,88 Miliar) dengan total target penerimaan Rp8,88 Miliar. Kekurangan atau inovasi tambahan dapat didanai dari hibah riset eksternal.
+
+**4. Lapis 4 & Lapis 5 (Entrepreneurial Center & Value Creation Hub)**
+Untuk lapis inkubator bisnis (*startup*) dan konsorsium kesejahteraan masyarakat, dokumen perencanaan mencatat bahwa rincian kebutuhan anggarannya saat ini masih dalam status **TBD (*To Be Determined* / Akan Ditentukan Kemudian)**,. Anggaran pada *layer* puncak ini tidak bersifat tetap karena akan sangat bergantung pada dinamika investasi modal (dari *angel investor*), dukungan finansial gereja, dan skema kemitraan program dengan institusi pemerintah yang berjalan di masa depan,.
+
+## Kesimpulan
+
+Struktur kepengurusan dan kebutuhan personalia di Kawasan Dago 109 YKKMB dirancang secara bertahap sesuai dengan kompleksitas layanan yang disediakan di setiap *layer* pengembangan. Dari pengelolaan dasar oleh Yayasan hingga operasional komersial oleh Badan Usaha, serta layanan akademik dan inkubasi bisnis yang dikelola oleh tenant khusus, setiap lapis memiliki kebutuhan sumber daya manusia yang spesifik.
+
+Pada tahap awal (Lapis 1), fokusnya adalah pada pemeliharaan fisik dan operasional dasar dengan tim kecil yang profesional. Seiring dengan meningkatnya layanan (Lapis 2 hingga Lapis 5), keterlibatan tenaga akademik, profesional bisnis, dan komunitas mentor menjadi semakin penting untuk mendukung ekosistem yang berkembang di kawasan tersebut.
+

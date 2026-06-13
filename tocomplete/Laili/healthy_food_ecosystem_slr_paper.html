@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>healthy_food_ecosystem_slr_paper</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="healthy_food_ecosystem_slr_paper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/popper.min.js"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="healthy_food_ecosystem_slr_paper_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="healthy_food_ecosystem_slr_paper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="healthy_food_ecosystem_slr_paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="healthy_food_ecosystem_slr_paper_files/libs/bootstrap/bootstrap-fbdc57a7294c43e0a3279315f8cbeb6f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="healthy_food_ecosystem_slr_paper_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="healthy_food_ecosystem_slr_paper_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>University campuses provide a revealing context for engineering management because they operate as service ecosystems in which multiple actors must coordinate around shared but partially conflicting objectives. In food services, students and staff seek meals that are healthy, tasty, convenient, and affordable; canteens seek operational feasibility and waste reduction; suppliers seek stable and predictable demand; and university administrators seek alignment with broader missions of sustainability, wellbeing, and inclusion. Managing such ecosystems is difficult because value is not created by any single actor in isolation, but co-created through interdependent decisions across sourcing, production, pricing, consumption, and governance. This paper argues that mission-oriented sustainable service ecosystems can be better designed when value co-creation is modeled explicitly and supported by digital coordination mechanisms such as multi-stakeholder recommendation systems. Using the case of campus food services, we develop a framework that integrates stakeholder utilities, food flows, and decision-support logic to show how engineering management can move from optimizing isolated functions to orchestrating ecosystem-level performance.</p>
+<p>Despite this importance, campus food environments often remain characterized by unhealthy default options, limited dietary personalization, operational inefficiencies, price sensitivity, and food waste. Existing food recommender systems offer useful personalization tools, but most are designed to optimize outcomes for a single stakeholder, usually the consumer. In contrast, a campus food system involves multiple stakeholders whose interests are interdependent: consumers seek healthy, affordable, and appealing meals; canteens seek feasible production and reduced waste; suppliers seek stable demand; researchers seek measurable intervention settings; and administrators seek alignment with institutional health and sustainability goals.</p>
+<p>This paper addresses that gap by developing a <strong>systematic literature review and conceptual framework</strong> for a <strong>multi-stakeholder healthy-food ecosystem</strong> for university campuses. The central argument is that food recommendation in this setting should be understood as a coordination mechanism linking choice, operations, procurement, sustainability, and governance rather than as a simple user-only prediction task.</p>
+</section>
+<section id="review-methodology" class="level1">
+<h1>Review Methodology</h1>
+<section id="review-objective" class="level2">
+<h2 class="anchored" data-anchor-id="review-objective">Review objective</h2>
+<p>The review aimed to identify and synthesize research relevant to a <strong>healthy-food ecosystem for university campuses using multi-stakeholder recommendation systems</strong>. Because this exact topic is still emerging, the review used an interdisciplinary search strategy spanning four linked domains:</p>
+<ol type="1">
+<li>campus food environments,</li>
+<li>food and healthy-food recommender systems,</li>
+<li>multi-stakeholder recommendation and fairness,</li>
+<li>sustainability and food-service operations.</li>
+</ol>
+</section>
+<section id="search-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="search-strategy">Search strategy</h2>
+<p>A rapid systematic review logic was applied using targeted scholarly web searching across the four domains above. Search terms included combinations of the following concepts:</p>
+<ul>
+<li>multi-stakeholder recommendation,</li>
+<li>food recommender systems,</li>
+<li>healthy food recommendation,</li>
+<li>campus food environment,</li>
+<li>university food environment,</li>
+<li>university restaurants sustainability,</li>
+<li>food waste in food services.</li>
+</ul>
+<p>Priority was given to review papers, foundational conceptual papers, technical studies with clear relevance, and implementation-oriented studies.</p>
+</section>
+<section id="inclusion-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="inclusion-criteria">Inclusion criteria</h2>
+<p>Studies were included if they contributed directly to at least one of the following:</p>
+<ol type="1">
+<li>university or campus food environments,</li>
+<li>food or healthy-food recommender systems,</li>
+<li>multi-stakeholder recommendation, multi-sided fairness, or multi-objective recommendation,</li>
+<li>sustainability, food-service operations, or waste reduction in institutional dining.</li>
+</ol>
+</section>
+<section id="exclusion-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="exclusion-criteria">Exclusion criteria</h2>
+<p>Studies were excluded if they:</p>
+<ul>
+<li>were unrelated to food, recommendation, or institutional dining,</li>
+<li>were too general to inform the proposed framework,</li>
+<li>or did not contribute meaningful conceptual, empirical, or methodological insight.</li>
+</ul>
+</section>
+<section id="screening-and-selection-logic" class="level2">
+<h2 class="anchored" data-anchor-id="screening-and-selection-logic">Screening and selection logic</h2>
+<p>Screening followed a staged logic. First, potentially relevant studies were identified across the four domains. Second, titles and abstracts or result snippets were screened for conceptual relevance. Third, full-text or source-level pages were assessed for eligibility. Studies were retained if they offered direct evidence on campus food behavior or institutional food systems, technical or conceptual foundations for healthy-food recommendation, theoretical grounding for multi-stakeholder recommendation, or sustainability and operational insights relevant to food-service coordination.</p>
+</section>
+</section>
+<section id="prisma-style-flow-of-study-selection" class="level1">
+<h1>PRISMA-Style Flow of Study Selection</h1>
+<p>This review followed a rapid systematic literature review approach across four related domains: campus food environments, food and healthy-food recommender systems, multi-stakeholder recommendation and fairness, and sustainability or food-service operations. Because the topic remains emergent and interdisciplinary, the review used a PRISMA-style flow logic rather than a full database-exhaustive PRISMA 2020 procedure.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Records identified through targeted scholarly searching across 4 domains&lt;br/&gt;- Campus food environments&lt;br/&gt;- Food / healthy-food recommender systems&lt;br/&gt;- Multi-stakeholder recommendation / fairness&lt;br/&gt;- Sustainability / food-service operations] --&gt; B[Records screened by title, abstract, or result snippet]
+
+    B --&gt; C[Records excluded&lt;br/&gt;- Not relevant to food or campus context&lt;br/&gt;- Not relevant to recommendation or sustainability&lt;br/&gt;- Too general or weakly connected to the framework]
+
+    B --&gt; D[Full-text/source pages assessed for eligibility]
+
+    D --&gt; E[Reports excluded after eligibility assessment&lt;br/&gt;- Limited conceptual contribution&lt;br/&gt;- No meaningful relevance to the ecosystem model&lt;br/&gt;- Duplicate thematic coverage]
+
+    D --&gt; F[Studies included in final thematic synthesis&lt;br/&gt;n = 20 key papers]
+
+    F --&gt; G[Themes synthesized&lt;br/&gt;1. Campus food environments&lt;br/&gt;2. Food recommender systems&lt;br/&gt;3. Multi-stakeholder recommendation&lt;br/&gt;4. Sustainability and food-service operations]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Figure 1. PRISMA-style flow of study selection.</strong> Records were identified through targeted scholarly searching across four domains: campus food environments, food recommender systems, multi-stakeholder recommendation, and sustainability or food-service operations. After screening and eligibility assessment, 20 key studies were included in the final thematic synthesis.</p>
+</section>
+<section id="descriptive-overview-of-the-literature" class="level1">
+<h1>Descriptive Overview of the Literature</h1>
+<section id="campus-food-environment-research" class="level2">
+<h2 class="anchored" data-anchor-id="campus-food-environment-research">Campus food environment research</h2>
+<p>The campus food environment literature shows that university food settings significantly affect dietary behavior through availability, affordability, convenience, social context, and environmental design <span class="citation" data-cites="roy2015tertiary deliens2014determinants caruso2025campus">[@roy2015tertiary; @deliens2014determinants; @caruso2025campus]</span>. This stream establishes the university as a legitimate unit of intervention and supports the view that food choice is shaped by institutional conditions rather than personal preference alone.</p>
+</section>
+<section id="food-and-healthy-food-recommender-systems" class="level2">
+<h2 class="anchored" data-anchor-id="food-and-healthy-food-recommender-systems">Food and healthy-food recommender systems</h2>
+<p>The food recommender systems literature shows that food recommendation is now a well-developed subfield <span class="citation" data-cites="bondevik2024 tran2018healthy trattner2017food">[@bondevik2024; @tran2018healthy; @trattner2017food]</span>. Common methods include content-based recommendation, collaborative filtering, hybrid models, and machine-learning approaches. However, most systems remain strongly user-centric even when they include health-aware logic.</p>
+</section>
+<section id="multi-stakeholder-recommendation-and-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="multi-stakeholder-recommendation-and-fairness">Multi-stakeholder recommendation and fairness</h2>
+<p>The multi-stakeholder recommendation literature provides the strongest theoretical foundation for the proposed framework <span class="citation" data-cites="zheng2017msr abdollahpouri2019fairness wu2021multifr">[@zheng2017msr; @abdollahpouri2019fairness; @wu2021multifr]</span>. This stream argues that recommendation environments often involve several affected parties and that recommendation quality should therefore be evaluated across multiple utilities rather than only end-user satisfaction.</p>
+</section>
+<section id="sustainability-and-food-service-operations" class="level2">
+<h2 class="anchored" data-anchor-id="sustainability-and-food-service-operations">Sustainability and food-service operations</h2>
+<p>The sustainability and institutional food-service literature emphasizes food waste, restaurant sustainability, and operational coordination <span class="citation" data-cites="peixoto2026sustainability guimaraes2024waste">[@peixoto2026sustainability; @guimaraes2024waste]</span>. This stream is especially relevant for canteen planning, procurement, and waste reduction, although it is still only weakly connected to healthy-food recommender system design.</p>
+</section>
+</section>
+<section id="thematic-synthesis-of-the-literature" class="level1">
+<h1>Thematic Synthesis of the Literature</h1>
+<p>The reviewed literature can be synthesized into four interrelated streams: <strong>campus food environments</strong>, <strong>food and healthy-food recommender systems</strong>, <strong>multi-stakeholder recommendation</strong>, and <strong>sustainability and food-service operations</strong>. Taken together, these streams strongly support the relevance of the proposed topic, but they also show that the field remains fragmented and that an integrated university-campus framework is still underdeveloped <span class="citation" data-cites="bondevik2024 caruso2025campus zheng2017msr peixoto2026sustainability">[@bondevik2024; @caruso2025campus; @zheng2017msr; @peixoto2026sustainability]</span>.</p>
+<section id="campus-food-environments-as-intervention-settings" class="level2">
+<h2 class="anchored" data-anchor-id="campus-food-environments-as-intervention-settings">1. Campus food environments as intervention settings</h2>
+<p>A consistent finding across campus food studies is that university food environments shape dietary behavior through factors such as availability, affordability, convenience, time pressure, and social context <span class="citation" data-cites="roy2015tertiary deliens2014determinants caruso2025campus">[@roy2015tertiary; @deliens2014determinants; @caruso2025campus]</span>. This means that healthy eating on campus cannot be reduced to individual preference alone. Any recommendation framework intended for university campuses must therefore be embedded in the actual food environment rather than designed as an isolated personalization tool.</p>
+</section>
+<section id="food-recommender-systems-are-mature-but-mainly-user-centric" class="level2">
+<h2 class="anchored" data-anchor-id="food-recommender-systems-are-mature-but-mainly-user-centric">2. Food recommender systems are mature, but mainly user-centric</h2>
+<p>The food recommender systems literature is now sufficiently mature to support domain-specific design choices <span class="citation" data-cites="bondevik2024 tran2018healthy trattner2017food">[@bondevik2024; @tran2018healthy; @trattner2017food]</span>. However, most existing systems remain centered on the individual user. Even when they incorporate health-aware logic, they usually optimize for some combination of user preference, dietary fit, and nutritional value, while paying limited attention to food-service feasibility, supplier constraints, institutional objectives, or environmental outcomes.</p>
+</section>
+<section id="multi-stakeholder-recommendation-offers-the-strongest-theoretical-foundation" class="level2">
+<h2 class="anchored" data-anchor-id="multi-stakeholder-recommendation-offers-the-strongest-theoretical-foundation">3. Multi-stakeholder recommendation offers the strongest theoretical foundation</h2>
+<p>The multi-stakeholder recommendation literature provides the clearest conceptual basis for the proposed healthy-food ecosystem <span class="citation" data-cites="zheng2017msr abdollahpouri2019fairness wu2021multifr">[@zheng2017msr; @abdollahpouri2019fairness; @wu2021multifr]</span>. This literature is highly relevant because campus food systems are inherently multi-actor environments. Consumers seek taste, convenience, affordability, and health; canteens seek manageable production and waste reduction; suppliers seek predictable demand; and administrators may prioritize sustainability and wellbeing.</p>
+</section>
+<section id="sustainability-and-food-service-research-remain-insufficiently-integrated-with-recommendation" class="level2">
+<h2 class="anchored" data-anchor-id="sustainability-and-food-service-research-remain-insufficiently-integrated-with-recommendation">4. Sustainability and food-service research remain insufficiently integrated with recommendation</h2>
+<p>The sustainability and food-service literature adds an important operational perspective <span class="citation" data-cites="peixoto2026sustainability guimaraes2024waste">[@peixoto2026sustainability; @guimaraes2024waste]</span>. Research in this stream still focuses heavily on waste reduction, especially post-distribution and plate waste. While this is important, the literature provides weaker integration between sustainability metrics, nutritional goals, and recommendation-system design.</p>
+</section>
+<section id="explainability-trust-and-real-world-deployment-are-emerging-priorities" class="level2">
+<h2 class="anchored" data-anchor-id="explainability-trust-and-real-world-deployment-are-emerging-priorities">5. Explainability, trust, and real-world deployment are emerging priorities</h2>
+<p>Newer implementation-oriented studies indicate that healthy-food recommendation is moving beyond technical prototypes toward real-life settings <span class="citation" data-cites="workplace2025explanation wang2024hypergraph rostami2024group">[@workplace2025explanation; @wang2024hypergraph; @rostami2024group]</span>. This has direct implications for campus adoption. A university healthy-food ecosystem would likely require not only accurate recommendation, but also interpretable suggestions, stakeholder buy-in, and policy legitimacy.</p>
+</section>
+<section id="overall-synthesis-and-gap" class="level2">
+<h2 class="anchored" data-anchor-id="overall-synthesis-and-gap">6. Overall synthesis and gap</h2>
+<p>Across the reviewed streams, the literature supports three major conclusions <span class="citation" data-cites="bondevik2024 caruso2025campus zheng2017msr peixoto2026sustainability">[@bondevik2024; @caruso2025campus; @zheng2017msr; @peixoto2026sustainability]</span>. First, the campus is a valid and influential food environment. Second, healthy-food recommendation is technically feasible and increasingly sophisticated. Third, multi-stakeholder recommendation provides an appropriate framework for balancing competing interests. What remains missing is an integrated model that combines these insights into a single university-campus food ecosystem connecting consumers, canteens, providers, suppliers, researchers, and administrators.</p>
+</section>
+</section>
+<section id="evidence-map-20-key-papers" class="level1">
+<h1>Evidence Map: 20 Key Papers</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Paper</th>
+<th>Stream</th>
+<th>Aim</th>
+<th>Method</th>
+<th>Main finding</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Bondevik et al.&nbsp;(2024), <em>A systematic review on food recommender systems</em></td>
+<td>Food RS</td>
+<td>Review the food recommender field</td>
+<td>Systematic review</td>
+<td>Food recommenders are mature but fragmented across methods and goals</td>
+<td>High-level overview of food RS</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Tran et al.&nbsp;(2018), <em>An overview of recommender systems in the healthy food domain</em></td>
+<td>Healthy food RS</td>
+<td>Survey healthy-food recommenders</td>
+<td>Technical review</td>
+<td>Healthy-food RS must balance preference, nutrition, and behavior change</td>
+<td>Foundation for healthy recommendation logic</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Trattner &amp; Elsweiler (2017), <em>Food Recommender Systems: Important Contributions, Challenges and Future Research Directions</em></td>
+<td>Food RS</td>
+<td>Summarize contributions and challenges</td>
+<td>Scholarly survey</td>
+<td>Food RS differ from generic RS due to health and context</td>
+<td>Seminal conceptual framing</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Ge et al.&nbsp;(2015), <em>Health-aware Food Recommender System</em></td>
+<td>Healthy food RS</td>
+<td>Introduce a health-aware recommender</td>
+<td>Conference system paper</td>
+<td>Health can be embedded in recommendation logic</td>
+<td>Early nutrition-aware system</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Rostami et al.&nbsp;(2024), <em>A novel healthy food recommendation to user groups…</em></td>
+<td>Healthy food RS</td>
+<td>Move from individual to group recommendation</td>
+<td>Model + experiments</td>
+<td>Group recommendation is feasible in food contexts</td>
+<td>Relevant for shared dining settings</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Wang et al.&nbsp;(2024), <em>Improving healthy food recommender systems through heterogeneous hypergraph learning</em></td>
+<td>Healthy food RS</td>
+<td>Improve recommendation accuracy</td>
+<td>ML model</td>
+<td>Richer user-food-ingredient modeling improves personalization</td>
+<td>Useful for technical engine design</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Workplace explanation study (2025)</td>
+<td>Explainability</td>
+<td>Study explanations in deployment</td>
+<td>User-centered deployment study</td>
+<td>Explanations improve understanding and control</td>
+<td>Relevant for trust and adoption</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Tsolakidis et al.&nbsp;(2024), <em>AI and ML Technologies for Personalized Nutrition: A Review</em></td>
+<td>Personalized nutrition</td>
+<td>Review AI/ML for nutrition</td>
+<td>Review</td>
+<td>Personalized nutrition is increasingly recommender-driven</td>
+<td>Bridge to nutrition science</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Zheng (2017), <em>Multi-Stakeholder Recommendation: Applications and Challenges</em></td>
+<td>MSR</td>
+<td>Define MSR and agenda</td>
+<td>Conceptual paper</td>
+<td>Recommendation involves multiple legitimate utilities</td>
+<td>Core theory</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Abdollahpouri &amp; Burke (2019), <em>Multi-stakeholder Recommendation and its Connection to Multi-sided Fairness</em></td>
+<td>MSR</td>
+<td>Connect MSR with fairness</td>
+<td>Conceptual paper</td>
+<td>Fairness is central in multi-stakeholder settings</td>
+<td>Governance foundation</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Wu et al.&nbsp;(2021), <em>Multi-FR</em></td>
+<td>Fairness-aware RS</td>
+<td>Optimize across stakeholder interests</td>
+<td>Multi-objective framework</td>
+<td>Multi-objective optimization can balance utilities</td>
+<td>Strong precedent for scoring models</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Burke et al.&nbsp;(2018), <em>Balanced neighborhoods for multi-sided fairness in recommendation</em></td>
+<td>Fairness-aware RS</td>
+<td>Improve fairness in exposure</td>
+<td>Fairness-aware method</td>
+<td>Rankings can reduce one-sided bias</td>
+<td>Relevant for equitable food exposure</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Tran et al.&nbsp;(2021), <em>Recommender systems in the healthcare domain</em></td>
+<td>Health RS</td>
+<td>Review healthcare RS</td>
+<td>State-of-the-art review</td>
+<td>Food RS fit within digital health RS</td>
+<td>Useful positioning paper</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Roy et al.&nbsp;(2015), <em>Food environment interventions in tertiary education settings</em></td>
+<td>Campus food</td>
+<td>Review interventions</td>
+<td>Systematic review</td>
+<td>Tertiary food interventions can improve choices</td>
+<td>Strong campus evidence</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Deliens et al.&nbsp;(2014), <em>Determinants of eating behaviour in university students</em></td>
+<td>Campus food</td>
+<td>Identify drivers of eating behavior</td>
+<td>Qualitative study</td>
+<td>Taste, convenience, peers, price, and availability matter</td>
+<td>Supports context-aware design</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Caruso et al.&nbsp;(2025), <em>The campus food environment and postsecondary student diet</em></td>
+<td>Campus food</td>
+<td>Review links between campus environment and diet</td>
+<td>Systematic review</td>
+<td>Campus food environments influence diet</td>
+<td>Supports ecosystem framing</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>Dahl et al.&nbsp;(2024), <em>Assessing the Healthfulness of University Food Environments</em></td>
+<td>Campus food / measurement</td>
+<td>Review methods and tools</td>
+<td>Systematic review</td>
+<td>Assessment methods are heterogeneous</td>
+<td>Useful for KPI design</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>Peixoto et al.&nbsp;(2026), <em>Sustainability in university restaurants</em></td>
+<td>Sustainability</td>
+<td>Map strategies in university restaurants</td>
+<td>Scoping review</td>
+<td>Research is still waste-centric</td>
+<td>Reveals gap for integration</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>Guimarães et al.&nbsp;(2024), <em>Plate Food Waste in Food Services</em></td>
+<td>Operations / waste</td>
+<td>Quantify plate waste</td>
+<td>Systematic review + meta-analysis</td>
+<td>Food waste is measurable and significant</td>
+<td>Useful for canteen objectives</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td><em>Recommender systems and sustainability: a dual perspective</em> (2026)</td>
+<td>Sustainability + RS</td>
+<td>Review sustainability in RS</td>
+<td>Literature review</td>
+<td>Sustainability should be both outcome and design principle</td>
+<td>Relevant for environmental objectives</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="research-gaps" class="level1">
+<h1>Research Gaps</h1>
+<p>The review identifies five major gaps:</p>
+<ol type="1">
+<li><strong>No integrated campus framework</strong> combining consumers, canteens, providers, suppliers, researchers, and administrators in one recommendation ecosystem.</li>
+<li><strong>Operational constraints</strong> such as kitchen capacity, inventory, and procurement are rarely integrated into healthy-food recommendation models.</li>
+<li><strong>Sustainability variables</strong> such as sourcing, seasonality, and emissions remain weakly linked to recommendation objectives.</li>
+<li><strong>Real-world institutional deployments</strong> are still limited.</li>
+<li><strong>Governance issues</strong> such as fairness, explainability, consent, and institutional priority weighting are underdeveloped in food-specific applications.</li>
+</ol>
+</section>
+<section id="conceptual-framework" class="level1">
+<h1>Conceptual Framework</h1>
+<section id="core-proposition" class="level2">
+<h2 class="anchored" data-anchor-id="core-proposition">Core proposition</h2>
+<p>Based on the literature, this paper proposes that a university healthy-food ecosystem should be built around a <strong>multi-stakeholder recommendation architecture</strong> rather than a consumer-only app. In this architecture, recommendation is treated as a coordination mechanism across multiple actors.</p>
+</section>
+<section id="key-stakeholders" class="level2">
+<h2 class="anchored" data-anchor-id="key-stakeholders">Key stakeholders</h2>
+<p>The proposed ecosystem includes:</p>
+<ul>
+<li>consumers: students, professors, support staff,</li>
+<li>canteens and food-service operators,</li>
+<li>food providers and caterers,</li>
+<li>raw-food suppliers,</li>
+<li>healthy-food researchers,</li>
+<li>university administration.</li>
+</ul>
+</section>
+<section id="core-system-modules" class="level2">
+<h2 class="anchored" data-anchor-id="core-system-modules">Core system modules</h2>
+<p>A future implementation should include:</p>
+<ul>
+<li>personalized meal recommendation,</li>
+<li>group or shared-choice recommendation,</li>
+<li>multi-objective optimization,</li>
+<li>demand forecasting,</li>
+<li>menu optimization,</li>
+<li>procurement recommendation,</li>
+<li>sustainability scoring,</li>
+<li>explanation interfaces,</li>
+<li>intervention and nudge testing,</li>
+<li>governance mechanisms for fairness and consent.</li>
+</ul>
+</section>
+</section>
+<section id="implications" class="level1">
+<h1>Implications</h1>
+<section id="theoretical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-implications">Theoretical implications</h2>
+<p>This review shows that the proposed topic is best understood as an <strong>integration problem</strong> across multiple literatures <span class="citation" data-cites="bondevik2024 zheng2017msr peixoto2026sustainability">[@bondevik2024; @zheng2017msr; @peixoto2026sustainability]</span>. It extends food recommender systems from user-level personalization toward ecosystem-level coordination and applies multi-stakeholder recommendation logic to a food-service setting with strong public-health and sustainability relevance.</p>
+</section>
+<section id="practical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="practical-implications">Practical implications</h2>
+<p>For universities, the framework offers a blueprint for redesigning campus dining as an integrated ecosystem rather than a set of isolated outlets. It suggests that healthy-food promotion, waste reduction, procurement stability, and sustainability should be coordinated rather than treated as separate projects.</p>
+</section>
+<section id="methodological-implications" class="level2">
+<h2 class="anchored" data-anchor-id="methodological-implications">Methodological implications</h2>
+<p>Future studies should combine design science, system prototyping, stakeholder modeling, and field deployment to test whether multi-stakeholder food recommendation improves healthy-food uptake and institutional viability.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>This paper reviewed literature relevant to a <strong>multi-stakeholder healthy-food ecosystem for university campuses</strong> and found strong support for each component of the concept, but limited integration across them. Campus food environment research validates the setting, food recommender research validates the mechanism, multi-stakeholder recommendation provides the theory, and sustainability research highlights operational priorities. The main opportunity for future work is to combine these strands into a coherent campus ecosystem architecture that balances health, affordability, operational feasibility, sustainability, and institutional governance.</p>
+</section>
+<section id="journal-ready-methodology-and-architecture" class="level1">
+<h1>Journal-Ready Methodology and Architecture</h1>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="research-design" class="level3">
+<h3 class="anchored" data-anchor-id="research-design">Research design</h3>
+<p>This study adopts a <strong>design science and simulation-based research</strong> approach to develop and evaluate a <strong>multi-stakeholder healthy-food ecosystem</strong> for university campuses. The proposed artifact is an integrated socio-technical system composed of four tightly connected layers: <strong>stakeholders</strong>, <strong>food flow</strong>, <strong>decision support</strong>, and a <strong>multi-stakeholder recommendation system (MSRS)</strong>. For experimental evaluation, the ecosystem is specified as a <strong>multi-agent system (MAS)</strong> in which autonomous stakeholders interact within a shared campus food-service environment. Formally, the system may be represented as <span class="math inline">\(MAS = (A, E, F, O, P, U, T)\)</span>, where <span class="math inline">\(A\)</span> denotes the set of agents, <span class="math inline">\(E\)</span> the environment, <span class="math inline">\(F\)</span> the food-flow states and transitions, <span class="math inline">\(O\)</span> the observations available to each agent, <span class="math inline">\(P\)</span> the decision policies, <span class="math inline">\(U\)</span> the stakeholder-specific utility functions, and <span class="math inline">\(T\)</span> the temporal transition rules. The agent set includes consumers, canteens, suppliers, research/policy actors, administrators, and an MSRS coordinator. The environment contains menus, inventory, kitchen capacity, supplier pipelines, prices, queues, waste, and policy settings, while food entities move through state-based transitions from raw ingredients to preparation, serving, consumption, and waste. Each agent observes a subset of the system state and chooses actions according to its objectives and constraints. Consumer agents maximize taste, health, affordability, and convenience; canteen agents maximize margin, feasibility, and service quality while minimizing waste; supplier agents maximize order stability and fulfillment performance; and administrative actors maximize health, sustainability, fairness, and affordability outcomes. The MSRS coordinator agent ranks candidate actions using a weighted ecosystem objective and generates coordinated recommendations for meal choice, menu planning, procurement, pricing, and interventions. This framing is appropriate because multi-stakeholder recommendation research treats recommendation as a setting with multiple legitimate utilities, while agrifood digital-twin and simulation literature supports virtual experimentation for food-flow, operational, and sustainability decisions <span class="citation" data-cites="zheng2017msr abdollahpouri2019fairness wu2021multifr">[@zheng2017msr; @abdollahpouri2019fairness; @wu2021multifr]</span>.</p>
+</section>
+<section id="ecosystem-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="ecosystem-architecture">Ecosystem architecture</h3>
+<p>The ecosystem is modeled as a layered architecture:</p>
+<ol type="1">
+<li><strong>Stakeholder layer</strong></li>
+<li><strong>Food-flow layer</strong></li>
+<li><strong>Decision-support layer</strong></li>
+<li><strong>MSRS optimization layer</strong></li>
+<li><strong>Governance and monitoring layer</strong></li>
+</ol>
+<p>This layered structure enables the integration of physical food operations with digital intelligence and coordinated decision-making <span class="citation" data-cites="zheng2017msr wu2021multifr">[@zheng2017msr; @wu2021multifr]</span>.</p>
+</section>
+<section id="stakeholder-model" class="level3">
+<h3 class="anchored" data-anchor-id="stakeholder-model">Stakeholder model</h3>
+<p>The stakeholder layer includes:</p>
+<ul>
+<li><strong>Consumers:</strong> students, faculty, and staff</li>
+<li><strong>Food-service operators:</strong> canteens, caterers, kitchen managers</li>
+<li><strong>Supply actors:</strong> raw-food suppliers, processors, distributors</li>
+<li><strong>Governance actors:</strong> nutrition researchers, sustainability office, university administration</li>
+</ul>
+<p>Each stakeholder group <span class="math inline">\(s\)</span> is represented by: - a utility function <span class="math inline">\(U_s\)</span>, - constraints <span class="math inline">\(C_s\)</span>, - decisions <span class="math inline">\(D_s\)</span>, - and performance measures <span class="math inline">\(K_s\)</span>.</p>
+<p>Typical utility structures include: - consumer utility: taste, affordability, health, convenience; - canteen utility: margin, feasibility, throughput, waste reduction; - supplier utility: demand stability, order visibility, spoilage reduction; - university utility: health promotion, sustainability, fairness, and policy compliance.</p>
+</section>
+<section id="food-flow-model" class="level3">
+<h3 class="anchored" data-anchor-id="food-flow-model">Food-flow model</h3>
+<p>The food system is modeled as a directed network:</p>
+<p><span class="math display">\[G = (N,E)\]</span></p>
+<p>where <span class="math inline">\(N\)</span> denotes process nodes and <span class="math inline">\(E\)</span> denotes flow links. The main food-flow chain is:</p>
+<p><strong>Raw material supply → inbound logistics → storage → preprocessing → recipe assembly → cooking/preparation → serving/display → purchase → consumption → leftovers/returns → waste or recovery</strong></p>
+<p>Each food entity is characterized by: - quantity, - unit cost, - lead time, - shelf life, - nutritional profile, - expected taste score, - sustainability score or carbon footprint, - preparation time, - spoilage/waste risk, - selling price.</p>
+</section>
+<section id="decision-support-system" class="level3">
+<h3 class="anchored" data-anchor-id="decision-support-system">Decision-support system</h3>
+<p>The DSS is modeled as four modules.</p>
+<section id="data-module" class="level4">
+<h4 class="anchored" data-anchor-id="data-module">Data module</h4>
+<ul>
+<li>POS transactions</li>
+<li>recipe and nutrition databases</li>
+<li>inventory and procurement records</li>
+<li>supplier deliveries</li>
+<li>queue and service-time data</li>
+<li>user preferences and ratings</li>
+<li>waste audits</li>
+<li>sustainability attributes</li>
+</ul>
+</section>
+<section id="analytics-module" class="level4">
+<h4 class="anchored" data-anchor-id="analytics-module">Analytics module</h4>
+<ul>
+<li>demand forecasting</li>
+<li>inventory monitoring</li>
+<li>waste prediction</li>
+<li>taste preference learning</li>
+<li>price sensitivity estimation</li>
+<li>nutrition scoring</li>
+<li>sustainability scoring</li>
+</ul>
+</section>
+<section id="decision-module" class="level4">
+<h4 class="anchored" data-anchor-id="decision-module">Decision module</h4>
+<ul>
+<li>menu planning</li>
+<li>procurement planning</li>
+<li>production scheduling</li>
+<li>dynamic pricing and subsidy suggestions</li>
+<li>recommendation ranking</li>
+<li>intervention and nudge selection</li>
+</ul>
+</section>
+<section id="execution-module" class="level4">
+<h4 class="anchored" data-anchor-id="execution-module">Execution module</h4>
+<ul>
+<li>consumer app</li>
+<li>canteen dashboard</li>
+<li>supplier portal</li>
+<li>researcher dashboard</li>
+<li>administrative control panel</li>
+</ul>
+</section>
+</section>
+<section id="msrs-model" class="level3">
+<h3 class="anchored" data-anchor-id="msrs-model">MSRS model</h3>
+<p>The MSRS evaluates candidate actions <span class="math inline">\(a\)</span> using a weighted multi-stakeholder objective:</p>
+<p><span class="math display">\[Score(a)=\sum_s w_s U_s(a)\]</span></p>
+<p>where: - <span class="math inline">\(U_s(a)\)</span> is the utility of stakeholder <span class="math inline">\(s\)</span> under action <span class="math inline">\(a\)</span>, - <span class="math inline">\(w_s\)</span> is the policy weight assigned to stakeholder <span class="math inline">\(s\)</span>.</p>
+<p>The MSRS generates differentiated outputs for multiple actors: - <strong>Consumers:</strong> meal recommendations, bundles, substitutions - <strong>Canteens:</strong> prep quantities, menu mix adjustments, markdown timing - <strong>Suppliers:</strong> replenishment plans, sourcing alternatives - <strong>Researchers/administrators:</strong> nudges, labels, subsidy rules, intervention placement</p>
+</section>
+<section id="governance-layer" class="level3">
+<h3 class="anchored" data-anchor-id="governance-layer">Governance layer</h3>
+<p>A cross-cutting governance layer oversees the entire architecture through: - fairness controls, - explainability, - consent and privacy management, - policy-weight management, - KPI monitoring and auditability.</p>
+</section>
+<section id="simulation-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-strategy">Simulation strategy</h3>
+<p>To evaluate the proposed ecosystem, the study uses a <strong>hybrid simulation design</strong>:</p>
+<ul>
+<li><strong>Agent-based modeling (ABM)</strong> for stakeholder behavior and adaptation</li>
+<li><strong>Discrete-event simulation (DES)</strong> for kitchen operations, queues, inventory depletion, and deliveries</li>
+<li><strong>System dynamics (SD)</strong> for longer-term feedback loops such as demand-waste interactions and policy effects</li>
+</ul>
+</section>
+<section id="experimental-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-scenarios">Experimental scenarios</h3>
+<p>The simulation compares four scenarios:</p>
+<ol type="1">
+<li><strong>No recommender</strong></li>
+<li><strong>Consumer-only recommender</strong></li>
+<li><strong>Rule-based healthy menu planning</strong></li>
+<li><strong>Full MSRS-enabled ecosystem</strong></li>
+</ol>
+<p>Experimental factors include: - demand volatility, - budget pressure, - supplier disruption, - taste-preference heterogeneity, - subsidy intensity, - sustainability-priority settings.</p>
+</section>
+<section id="evaluation-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-metrics">Evaluation metrics</h3>
+<p>Performance is evaluated across six dimensions:</p>
+<ul>
+<li><strong>Consumer:</strong> healthy meal uptake, taste satisfaction, affordability compliance, recommendation acceptance</li>
+<li><strong>Operations:</strong> forecast accuracy, wait time, stockouts, waste, capacity use</li>
+<li><strong>Financial:</strong> margin, meal cost, subsidy efficiency</li>
+<li><strong>Sustainability:</strong> carbon footprint per meal, local/seasonal sourcing, total waste</li>
+<li><strong>Supplier:</strong> order variability, fill rate, spoilage</li>
+<li><strong>Governance:</strong> fair access, utility balance, explainability/trust</li>
+</ul>
+<p>Improvement should be demonstrated through: 1. <strong>statistical significance</strong> across simulation replications, 2. <strong>practical significance</strong> using relative gains and effect sizes, 3. <strong>Pareto improvement</strong> across health, taste, price, and sustainability trade-offs.</p>
+</section>
+</section>
+<section id="system-architecture-description" class="level2">
+<h2 class="anchored" data-anchor-id="system-architecture-description">System Architecture Description</h2>
+<p>The proposed architecture links the physical flow of food with digital recommendation and governance.</p>
+<section id="stakeholder-layer" class="level3">
+<h3 class="anchored" data-anchor-id="stakeholder-layer">Stakeholder layer</h3>
+<p>The top layer contains all actors: consumers, canteens, suppliers, researchers, and administrators. These actors contribute data, receive recommendations, and adapt their decisions over time.</p>
+</section>
+<section id="food-flow-and-operations-layer" class="level3">
+<h3 class="anchored" data-anchor-id="food-flow-and-operations-layer">Food-flow and operations layer</h3>
+<p>This layer represents the physical transformation chain from raw ingredients to ready-to-consume meals and waste streams:</p>
+<p><strong>Raw ingredients → logistics → storage → preprocessing → assembly → cooking → serving → purchase → consumption → leftovers/waste</strong></p>
+</section>
+<section id="data-integration-layer" class="level3">
+<h3 class="anchored" data-anchor-id="data-integration-layer">Data integration layer</h3>
+<p>This layer aggregates: - user profiles, - transactions, - recipes and nutrition, - stock and procurement, - delivery records, - queue data, - waste logs, - sustainability indicators.</p>
+</section>
+<section id="analytics-and-dss-layer" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-and-dss-layer">Analytics and DSS layer</h3>
+<p>This layer transforms data into decisions through: - forecasting, - waste analytics, - nutrition and taste modeling, - price modeling, - sustainability scoring, - intervention analytics.</p>
+</section>
+<section id="msrs-optimization-layer" class="level3">
+<h3 class="anchored" data-anchor-id="msrs-optimization-layer">MSRS optimization layer</h3>
+<p>This is the coordination core. It ranks meals and actions according to multi-stakeholder utility and returns tailored outputs to each actor group.</p>
+</section>
+<section id="governance-and-monitoring-layer" class="level3">
+<h3 class="anchored" data-anchor-id="governance-and-monitoring-layer">Governance and monitoring layer</h3>
+<p>This layer overlays all others and manages: - fairness, - transparency, - privacy, - policy priorities, - KPI reporting.</p>
+</section>
+<section id="value-co-creation-logic" class="level3">
+<h3 class="anchored" data-anchor-id="value-co-creation-logic">Value co-creation logic</h3>
+<p>Value is co-created when coordinated recommendations improve several stakeholder objectives simultaneously: - <strong>product innovation</strong> through new recipes and substitutions, - <strong>effectiveness</strong> through healthier and more accepted choices, - <strong>efficiency</strong> through lower waste and better forecasting, - <strong>taste</strong> through improved preference-fit, - <strong>price</strong> through affordability and sourcing efficiency.</p>
+</section>
+</section>
+<section id="simulation-experiment-design" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-experiment-design">Simulation Experiment Design</h2>
+<table class="caption-top table">
+<caption>Simulation experiment design for evaluating the MSRS-enabled campus healthy-food ecosystem.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Specification</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Objective</strong></td>
+<td>Evaluate whether an MSRS-enabled campus food ecosystem improves health, taste, affordability, efficiency, and sustainability relative to baseline systems</td>
+<td>Tests ecosystem-level value of MSRS</td>
+</tr>
+<tr class="even">
+<td><strong>Model type</strong></td>
+<td>Hybrid <strong>ABM + DES + SD</strong></td>
+<td>Captures heterogeneous actors, operational events, and long-term feedback</td>
+</tr>
+<tr class="odd">
+<td><strong>Unit of analysis</strong></td>
+<td>Campus food ecosystem over daily, weekly, and semester horizons</td>
+<td>Supports both operational and strategic evaluation</td>
+</tr>
+<tr class="even">
+<td><strong>Agents</strong></td>
+<td>Consumers, canteens, suppliers, researchers, administrators</td>
+<td>Represents multi-stakeholder behavior</td>
+</tr>
+<tr class="odd">
+<td><strong>Food entities</strong></td>
+<td>Ingredients, recipes, prepared meals, served meals, leftovers, waste streams</td>
+<td>Represents end-to-end food flow</td>
+</tr>
+<tr class="even">
+<td><strong>Decision engine</strong></td>
+<td>Forecasting + DSS + MSRS optimizer</td>
+<td>Simulates coordinated decision support</td>
+</tr>
+<tr class="odd">
+<td><strong>Baseline scenario 1</strong></td>
+<td>No recommender</td>
+<td>Pure operational reference</td>
+</tr>
+<tr class="even">
+<td><strong>Baseline scenario 2</strong></td>
+<td>Consumer-only recommender</td>
+<td>Compares against standard personalization</td>
+</tr>
+<tr class="odd">
+<td><strong>Baseline scenario 3</strong></td>
+<td>Rule-based healthy menu planning</td>
+<td>Compares against non-learning policy approach</td>
+</tr>
+<tr class="even">
+<td><strong>Treatment scenario</strong></td>
+<td>Full MSRS-enabled ecosystem</td>
+<td>Main intervention condition</td>
+</tr>
+<tr class="odd">
+<td><strong>Time step</strong></td>
+<td>Daily operational step; weekly planning cycle; semester evaluation</td>
+<td>Matches food-service decision frequency</td>
+</tr>
+<tr class="even">
+<td><strong>Demand conditions</strong></td>
+<td>Low, medium, high volatility</td>
+<td>Tests robustness to uncertainty</td>
+</tr>
+<tr class="odd">
+<td><strong>Budget conditions</strong></td>
+<td>Low, medium, high consumer budget pressure</td>
+<td>Tests affordability sensitivity</td>
+</tr>
+<tr class="even">
+<td><strong>Supply conditions</strong></td>
+<td>Stable supply vs disrupted supply</td>
+<td>Tests resilience</td>
+</tr>
+<tr class="odd">
+<td><strong>Preference conditions</strong></td>
+<td>Homogeneous vs heterogeneous taste-health preferences</td>
+<td>Tests personalization value</td>
+</tr>
+<tr class="even">
+<td><strong>Policy conditions</strong></td>
+<td>Different subsidy levels and sustainability weights</td>
+<td>Tests policy sensitivity</td>
+</tr>
+<tr class="odd">
+<td><strong>Consumer outcomes</strong></td>
+<td>Healthy meal uptake, taste satisfaction, affordability compliance, recommendation acceptance, repeat purchase</td>
+<td>Measures user-facing success</td>
+</tr>
+<tr class="even">
+<td><strong>Operational outcomes</strong></td>
+<td>Forecast accuracy, stockouts, wait time, capacity use, food waste</td>
+<td>Measures efficiency and feasibility</td>
+</tr>
+<tr class="odd">
+<td><strong>Financial outcomes</strong></td>
+<td>Margin, cost per meal, healthy meal revenue share, subsidy efficiency</td>
+<td>Measures economic viability</td>
+</tr>
+<tr class="even">
+<td><strong>Sustainability outcomes</strong></td>
+<td>Carbon footprint per meal, local/seasonal sourcing rate, total waste, packaging waste</td>
+<td>Measures environmental performance</td>
+</tr>
+<tr class="odd">
+<td><strong>Supplier outcomes</strong></td>
+<td>Order variability, fill rate, lead-time reliability, spoilage</td>
+<td>Measures upstream coordination</td>
+</tr>
+<tr class="even">
+<td><strong>Governance outcomes</strong></td>
+<td>Fair access, stakeholder utility balance, explainability/trust</td>
+<td>Measures legitimacy and equity</td>
+</tr>
+<tr class="odd">
+<td><strong>Statistical analysis</strong></td>
+<td>Multiple replications; confidence intervals; pairwise tests and multi-scenario comparison</td>
+<td>Tests significance</td>
+</tr>
+<tr class="even">
+<td><strong>Practical significance</strong></td>
+<td>% improvement, effect sizes, relative gain vs baseline</td>
+<td>Tests real usefulness</td>
+</tr>
+<tr class="odd">
+<td><strong>Trade-off analysis</strong></td>
+<td>Pareto frontier across health, taste, price, and waste</td>
+<td>Tests multi-objective superiority</td>
+</tr>
+<tr class="even">
+<td><strong>Robustness analysis</strong></td>
+<td>Stress tests under disruption, price shock, and demand shifts</td>
+<td>Tests stability of improvements</td>
+</tr>
+<tr class="odd">
+<td><strong>Success criterion</strong></td>
+<td>MSRS outperforms baselines on key KPIs without major loss to any stakeholder group</td>
+<td>Demonstrates balanced value co-creation</td>
+</tr>
+</tbody>
+</table>
+<section id="example-hypotheses" class="level3">
+<h3 class="anchored" data-anchor-id="example-hypotheses">Example hypotheses</h3>
+<ul>
+<li><strong>H1:</strong> The MSRS scenario yields significantly higher healthy meal uptake than the consumer-only recommender.</li>
+<li><strong>H2:</strong> The MSRS scenario significantly reduces food waste and stockouts compared with rule-based menu planning.</li>
+<li><strong>H3:</strong> The MSRS scenario improves the combined ecosystem performance score without reducing taste satisfaction or affordability.</li>
+<li><strong>H4:</strong> The MSRS scenario produces more favorable Pareto trade-offs across health, taste, price, and sustainability than all baselines.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="hypothetical-results" class="level1">
+<h1>Hypothetical Results</h1>
+<section id="overview-of-comparative-performance" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-comparative-performance">Overview of comparative performance</h2>
+<p>To illustrate the managerial value of the proposed framework, we report a set of <strong>hypothetical simulation results</strong> comparing four scenarios: <strong>no recommender</strong>, <strong>consumer-only recommender</strong>, <strong>rule-based healthy menu planning</strong>, and the <strong>full MSRS-enabled ecosystem</strong>. Across repeated simulation runs, the MSRS scenario outperforms all baseline conditions on the majority of ecosystem-level indicators while avoiding major losses in any stakeholder group.</p>
+<p>In the hypothetical results, the MSRS scenario increases <strong>healthy meal uptake</strong> by approximately <strong>18–26%</strong> relative to the no-recommender baseline and by <strong>8–14%</strong> relative to the consumer-only recommender. At the same time, <strong>taste satisfaction</strong> remains stable or improves slightly, suggesting that the system does not achieve health gains by sacrificing perceived meal quality. <strong>Affordability compliance</strong> also improves because the decision-support layer uses pricing, bundling, and substitution logic to keep recommended meals within student budget constraints.</p>
+</section>
+<section id="operational-and-sustainability-results" class="level2">
+<h2 class="anchored" data-anchor-id="operational-and-sustainability-results">Operational and sustainability results</h2>
+<p>Operationally, the MSRS scenario yields improvements in <strong>forecast accuracy</strong>, <strong>stockout reduction</strong>, and <strong>food waste minimization</strong>. In the hypothetical simulation, forecast accuracy improves from roughly <strong>72–78%</strong> in baseline settings to <strong>84–89%</strong> under the full ecosystem model. Plate and production waste fall by <strong>12–21%</strong>, primarily because the system aligns menu planning, demand forecasting, and procurement more effectively. Queue time remains within acceptable limits, indicating that healthier and more diversified offerings do not create excessive service bottlenecks.</p>
+<p>The environmental results are also favorable. The MSRS scenario lowers the <strong>carbon footprint per meal</strong> through more targeted sourcing, better menu composition, and lower waste. In the hypothetical runs, carbon intensity declines by <strong>9–16%</strong>, while the share of <strong>local/seasonal sourcing</strong> rises under scenarios where sustainability receives moderate or high policy weight.</p>
+</section>
+<section id="stakeholder-utility-results" class="level2">
+<h2 class="anchored" data-anchor-id="stakeholder-utility-results">Stakeholder utility results</h2>
+<p>The simulated stakeholder-utility analysis shows that the full MSRS model produces the most balanced outcome across actors. Consumers gain through improved choice relevance, health fit, and affordability; canteens gain through waste reduction and better production planning; suppliers gain through lower order volatility and better visibility; and administrators gain through improved health and sustainability KPIs. Although some scenarios produce small trade-offs, the MSRS condition dominates baseline approaches on the combined ecosystem performance score and produces a more favorable Pareto frontier across <strong>health</strong>, <strong>taste</strong>, <strong>price</strong>, and <strong>waste</strong>.</p>
+</section>
+<section id="illustrative-summary-table" class="level2">
+<h2 class="anchored" data-anchor-id="illustrative-summary-table">Illustrative summary table</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th style="text-align: right;">No recommender</th>
+<th style="text-align: right;">Consumer-only recommender</th>
+<th style="text-align: right;">Rule-based planning</th>
+<th style="text-align: right;">Full MSRS ecosystem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Healthy meal uptake (%)</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td>Taste satisfaction (1–5)</td>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">4.1</td>
+</tr>
+<tr class="odd">
+<td>Meals within budget (%)</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">82</td>
+</tr>
+<tr class="even">
+<td>Forecast accuracy (%)</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="odd">
+<td>Food waste per 100 meals (kg)</td>
+<td style="text-align: right;">18.5</td>
+<td style="text-align: right;">16.9</td>
+<td style="text-align: right;">15.8</td>
+<td style="text-align: right;">13.9</td>
+</tr>
+<tr class="even">
+<td>Carbon footprint per meal (kg CO2e)</td>
+<td style="text-align: right;">2.40</td>
+<td style="text-align: right;">2.31</td>
+<td style="text-align: right;">2.20</td>
+<td style="text-align: right;">2.02</td>
+</tr>
+<tr class="odd">
+<td>Supplier order variability index</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">0.88</td>
+<td style="text-align: right;">0.76</td>
+</tr>
+<tr class="even">
+<td>Ecosystem performance score (0–100)</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">81</td>
+</tr>
+</tbody>
+</table>
+<p>These results are illustrative and are intended to demonstrate the type of empirical pattern that would validate the framework once fully implemented and simulated.</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<section id="engineering-management-implications" class="level2">
+<h2 class="anchored" data-anchor-id="engineering-management-implications">Engineering management implications</h2>
+<p>The hypothetical findings suggest that the proposed framework is relevant to engineering management because it shifts the design problem from isolated optimization to <strong>ecosystem orchestration</strong>. Rather than treating food-service performance as the outcome of a single actor or department, the framework models value as co-created through coordinated decisions among consumers, operators, suppliers, and governance actors. From an engineering management perspective, this is important because many mission-oriented service systems require cross-boundary coordination, dynamic trade-off management, and performance measurement across multiple objectives rather than a single efficiency metric.</p>
+</section>
+<section id="value-co-creation-as-a-design-problem" class="level2">
+<h2 class="anchored" data-anchor-id="value-co-creation-as-a-design-problem">Value co-creation as a design problem</h2>
+<p>The results also support the argument that <strong>value co-creation</strong> should be treated as an operationalizable design logic rather than only a conceptual descriptor. In the proposed model, co-creation emerges when coordinated recommendations improve stakeholder utilities simultaneously: healthier and tastier meals are chosen by consumers, waste and uncertainty are reduced for canteens, procurement becomes more stable for suppliers, and institutional goals are advanced for administrators. This extends value co-creation into a form that can be modeled, simulated, and managed.</p>
+</section>
+<section id="why-msrs-adds-value-beyond-consumer-personalization" class="level2">
+<h2 class="anchored" data-anchor-id="why-msrs-adds-value-beyond-consumer-personalization">Why MSRS adds value beyond consumer personalization</h2>
+<p>A key implication of the comparative scenarios is that a <strong>consumer-only recommender</strong> is not sufficient for mission-oriented sustainable systems. Although such a recommender improves relevance at the user level, it does not necessarily improve supply stability, waste, or ecosystem-wide efficiency. The MSRS creates added value because it embeds recommendation inside a broader decision-support architecture that links demand, menu design, procurement, pricing, and sustainability. Thus, the main managerial contribution of the MSRS is not only better personalization, but better <strong>coordination across stakeholder interfaces</strong>.</p>
+</section>
+<section id="broader-transferability" class="level2">
+<h2 class="anchored" data-anchor-id="broader-transferability">Broader transferability</h2>
+<p>Although the present application focuses on campus food services, the framework is transferable to other service ecosystems in which multiple actors co-create value around mission-oriented outcomes. Examples include hospital food services, workplace catering, school meal systems, community health provisioning, and other sustainability-oriented service platforms. More broadly, the model offers an engineering management template for designing digital coordination systems in settings where quality, affordability, operational efficiency, and sustainability must be balanced simultaneously.</p>
+</section>
+</section>
+<section id="conclusion-1" class="level1">
+<h1>Conclusion</h1>
+<p>This paper developed a value co-creation modeling framework for <strong>mission-oriented sustainable service ecosystems</strong> and illustrated its application to <strong>healthy, tasty, and affordable campus food services</strong>. The central contribution is the integration of stakeholder modeling, food-flow modeling, decision support, and multi-stakeholder recommendation into a single engineering management architecture. In this formulation, the MSRS is not merely a personalization engine, but a coordination mechanism that helps align consumer preferences, operational feasibility, supplier stability, affordability, and sustainability.</p>
+<p>The paper contributes to engineering management by showing how mission-oriented ecosystems can be designed as multi-stakeholder systems with measurable value co-creation outcomes. It also demonstrates how recommendation systems can be reframed from user-centric tools into broader mechanisms for ecosystem governance and performance improvement. The proposed framework provides a structured basis for future empirical work, simulation experiments, and field implementation in campus food services and analogous service ecosystems.</p>
+</section>
+<section id="future-work" class="level1">
+<h1>Future Work</h1>
+<p>Future research should extend the present framework in five directions. First, the model should be implemented as a full <strong>simulation environment or digital twin</strong> in order to test sensitivity to demand volatility, policy weighting, supply disruptions, and consumer heterogeneity. Second, future studies should estimate stakeholder utility functions empirically using transaction data, survey data, interviews, and operational records. Third, field studies should examine whether the framework improves outcomes in real campus dining settings and whether observed gains are robust over time.</p>
+<p>Fourth, future work should examine governance issues in greater depth, particularly fairness across user groups, explainability of recommendations, and the managerial legitimacy of stakeholder-weight assignments. Finally, the framework should be generalized beyond campus food services to other sustainable service ecosystems in which mission-oriented innovation depends on coordinated digital decision support. Together, these directions would move the framework from conceptual and simulation-based design toward validated engineering management practice.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<section id="core-references-used-in-the-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="core-references-used-in-the-synthesis">Core references used in the synthesis</h2>
+<ul>
+<li>Bondevik et al.&nbsp;(2024). <em>A systematic review on food recommender systems</em>.</li>
+<li>Tran et al.&nbsp;(2018). <em>An overview of recommender systems in the healthy food domain</em>.</li>
+<li>Trattner &amp; Elsweiler (2017). <em>Food Recommender Systems: Important Contributions, Challenges and Future Research Directions</em>.</li>
+<li>Ge et al.&nbsp;(2015). <em>Health-aware Food Recommender System</em>.</li>
+<li>Zheng (2017). <em>Multi-Stakeholder Recommendation: Applications and Challenges</em>.</li>
+<li>Abdollahpouri &amp; Burke (2019). <em>Multi-stakeholder Recommendation and its Connection to Multi-sided Fairness</em>.</li>
+<li>Wu et al.&nbsp;(2021). <em>Multi-FR: A Multi-objective Optimization Framework for Multi-stakeholder Fairness-aware Recommendation</em>.</li>
+<li>Burke et al.&nbsp;(2018). <em>Balanced neighborhoods for multi-sided fairness in recommendation</em>.</li>
+<li>Roy et al.&nbsp;(2015). <em>Food environment interventions to improve the dietary behavior of young adults in tertiary education settings</em>.</li>
+<li>Deliens et al.&nbsp;(2014). <em>Determinants of eating behaviour in university students</em>.</li>
+<li>Caruso et al.&nbsp;(2025). <em>The campus food environment and postsecondary student diet: a systematic review</em>.</li>
+<li>Dahl et al.&nbsp;(2024). <em>Assessing the Healthfulness of University Food Environments: A Systematic Review of Methods and Tools</em>.</li>
+<li>Peixoto et al.&nbsp;(2026). <em>Sustainability in university restaurants: a scoping review of evaluation focus and strategies</em>.</li>
+<li>Guimarães et al.&nbsp;(2024). <em>Plate Food Waste in Food Services: A Systematic Review and Meta-Analysis</em>.</li>
+<li>Tsolakidis et al.&nbsp;(2024). <em>Artificial Intelligence and Machine Learning Technologies for Personalized Nutrition: A Review</em>.</li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

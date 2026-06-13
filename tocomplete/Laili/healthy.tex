@@ -1,0 +1,1592 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Value Co-Creation Modeling for Mission-Oriented Sustainable Service Ecosystems: A Multi-Stakeholder Recommendation Framework for Campus Food Services},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Value Co-Creation Modeling for Mission-Oriented Sustainable
+Service Ecosystems: A Multi-Stakeholder Recommendation Framework for
+Campus Food Services}
+\author{First Author \and Second Author \and Third Author}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Mission-oriented sustainable ecosystems require organizations to
+coordinate multiple stakeholders whose objectives are interdependent but
+not fully aligned. This paper proposes a \textbf{value co-creation
+modeling framework} for designing and improving sustainable service
+ecosystems through a \textbf{Multi-Stakeholder Recommendation System
+(MSRS)} embedded in a decision-support architecture. The framework is
+developed from an engineering management perspective, with emphasis on
+system design, stakeholder coordination, operational feasibility, and
+performance improvement.
+
+The study applies the framework to \textbf{healthy, tasty, and
+affordable campus food services}, a setting in which consumers,
+canteens, food providers, suppliers, researchers, and university
+administrators jointly shape service outcomes. The proposed model
+integrates three elements: (1) a stakeholder ecosystem model, (2) a
+food-flow model tracing the transformation of raw ingredients into
+ready-to-consume meals and waste streams, and (3) a decision-support
+system that uses MSRS logic to coordinate menu planning, procurement,
+pricing, production, and personalized recommendations. In this
+architecture, the MSRS is not treated solely as a consumer
+personalization tool; rather, it functions as a coordination mechanism
+for balancing taste, health, affordability, operational efficiency,
+supplier stability, and sustainability.
+
+This paper contributes to engineering management in three ways. First,
+it formalizes value co-creation as a design problem in mission-oriented
+sustainable ecosystems. Second, it extends recommendation systems from
+user-centric optimization to multi-stakeholder coordination. Third, it
+provides a simulation-ready framework for evaluating ecosystem
+performance using multidimensional measures such as healthy meal uptake,
+taste satisfaction, price accessibility, waste reduction, and
+sustainability. The framework offers a transferable foundation for
+managing sustainable service ecosystems in food and other industries
+where digital intelligence can improve both stakeholder value and
+system-level performance.
+\end{abstract}
+
+
+\section{Introduction}\label{introduction}
+
+University campuses provide a revealing context for engineering
+management because they operate as service ecosystems in which multiple
+actors must coordinate around shared but partially conflicting
+objectives. In food services, students and staff seek meals that are
+healthy, tasty, convenient, and affordable; canteens seek operational
+feasibility and waste reduction; suppliers seek stable and predictable
+demand; and university administrators seek alignment with broader
+missions of sustainability, wellbeing, and inclusion. Managing such
+ecosystems is difficult because value is not created by any single actor
+in isolation, but co-created through interdependent decisions across
+sourcing, production, pricing, consumption, and governance. This paper
+argues that mission-oriented sustainable service ecosystems can be
+better designed when value co-creation is modeled explicitly and
+supported by digital coordination mechanisms such as multi-stakeholder
+recommendation systems. Using the case of campus food services, we
+develop a framework that integrates stakeholder utilities, food flows,
+and decision-support logic to show how engineering management can move
+from optimizing isolated functions to orchestrating ecosystem-level
+performance.
+
+Despite this importance, campus food environments often remain
+characterized by unhealthy default options, limited dietary
+personalization, operational inefficiencies, price sensitivity, and food
+waste. Existing food recommender systems offer useful personalization
+tools, but most are designed to optimize outcomes for a single
+stakeholder, usually the consumer. In contrast, a campus food system
+involves multiple stakeholders whose interests are interdependent:
+consumers seek healthy, affordable, and appealing meals; canteens seek
+feasible production and reduced waste; suppliers seek stable demand;
+researchers seek measurable intervention settings; and administrators
+seek alignment with institutional health and sustainability goals.
+
+This paper addresses that gap by developing a \textbf{systematic
+literature review and conceptual framework} for a
+\textbf{multi-stakeholder healthy-food ecosystem} for university
+campuses. The central argument is that food recommendation in this
+setting should be understood as a coordination mechanism linking choice,
+operations, procurement, sustainability, and governance rather than as a
+simple user-only prediction task.
+
+\section{Review Methodology}\label{review-methodology}
+
+\subsection{Review objective}\label{review-objective}
+
+The review aimed to identify and synthesize research relevant to a
+\textbf{healthy-food ecosystem for university campuses using
+multi-stakeholder recommendation systems}. Because this exact topic is
+still emerging, the review used an interdisciplinary search strategy
+spanning four linked domains:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  campus food environments,
+\item
+  food and healthy-food recommender systems,
+\item
+  multi-stakeholder recommendation and fairness,
+\item
+  sustainability and food-service operations.
+\end{enumerate}
+
+\subsection{Search strategy}\label{search-strategy}
+
+A rapid systematic review logic was applied using targeted scholarly web
+searching across the four domains above. Search terms included
+combinations of the following concepts:
+
+\begin{itemize}
+\tightlist
+\item
+  multi-stakeholder recommendation,
+\item
+  food recommender systems,
+\item
+  healthy food recommendation,
+\item
+  campus food environment,
+\item
+  university food environment,
+\item
+  university restaurants sustainability,
+\item
+  food waste in food services.
+\end{itemize}
+
+Priority was given to review papers, foundational conceptual papers,
+technical studies with clear relevance, and implementation-oriented
+studies.
+
+\subsection{Inclusion criteria}\label{inclusion-criteria}
+
+Studies were included if they contributed directly to at least one of
+the following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  university or campus food environments,
+\item
+  food or healthy-food recommender systems,
+\item
+  multi-stakeholder recommendation, multi-sided fairness, or
+  multi-objective recommendation,
+\item
+  sustainability, food-service operations, or waste reduction in
+  institutional dining.
+\end{enumerate}
+
+\subsection{Exclusion criteria}\label{exclusion-criteria}
+
+Studies were excluded if they:
+
+\begin{itemize}
+\tightlist
+\item
+  were unrelated to food, recommendation, or institutional dining,
+\item
+  were too general to inform the proposed framework,
+\item
+  or did not contribute meaningful conceptual, empirical, or
+  methodological insight.
+\end{itemize}
+
+\subsection{Screening and selection
+logic}\label{screening-and-selection-logic}
+
+Screening followed a staged logic. First, potentially relevant studies
+were identified across the four domains. Second, titles and abstracts or
+result snippets were screened for conceptual relevance. Third, full-text
+or source-level pages were assessed for eligibility. Studies were
+retained if they offered direct evidence on campus food behavior or
+institutional food systems, technical or conceptual foundations for
+healthy-food recommendation, theoretical grounding for multi-stakeholder
+recommendation, or sustainability and operational insights relevant to
+food-service coordination.
+
+\section{PRISMA-Style Flow of Study
+Selection}\label{prisma-style-flow-of-study-selection}
+
+This review followed a rapid systematic literature review approach
+across four related domains: campus food environments, food and
+healthy-food recommender systems, multi-stakeholder recommendation and
+fairness, and sustainability or food-service operations. Because the
+topic remains emergent and interdisciplinary, the review used a
+PRISMA-style flow logic rather than a full database-exhaustive PRISMA
+2020 procedure.
+
+\includegraphics[width=7.72in,height=13.31in]{healthy_files/figure-latex/mermaid-figure-1.png}
+
+\textbf{Figure 1. PRISMA-style flow of study selection.} Records were
+identified through targeted scholarly searching across four domains:
+campus food environments, food recommender systems, multi-stakeholder
+recommendation, and sustainability or food-service operations. After
+screening and eligibility assessment, 20 key studies were included in
+the final thematic synthesis.
+
+\section{Descriptive Overview of the
+Literature}\label{descriptive-overview-of-the-literature}
+
+\subsection{Campus food environment
+research}\label{campus-food-environment-research}
+
+The campus food environment literature shows that university food
+settings significantly affect dietary behavior through availability,
+affordability, convenience, social context, and environmental design
+(Roy et al. 2015; Deliens et al. 2014; {Caruso et al.} 2025). This
+stream establishes the university as a legitimate unit of intervention
+and supports the view that food choice is shaped by institutional
+conditions rather than personal preference alone.
+
+\subsection{Food and healthy-food recommender
+systems}\label{food-and-healthy-food-recommender-systems}
+
+The food recommender systems literature shows that food recommendation
+is now a well-developed subfield ({Bondevik et al.} 2024; Tran et al.
+2018; Trattner and Elsweiler 2017). Common methods include content-based
+recommendation, collaborative filtering, hybrid models, and
+machine-learning approaches. However, most systems remain strongly
+user-centric even when they include health-aware logic.
+
+\subsection{Multi-stakeholder recommendation and
+fairness}\label{multi-stakeholder-recommendation-and-fairness}
+
+The multi-stakeholder recommendation literature provides the strongest
+theoretical foundation for the proposed framework (Zheng 2017;
+Abdollahpouri and Burke 2019; {Wu et al.} 2021). This stream argues that
+recommendation environments often involve several affected parties and
+that recommendation quality should therefore be evaluated across
+multiple utilities rather than only end-user satisfaction.
+
+\subsection{Sustainability and food-service
+operations}\label{sustainability-and-food-service-operations}
+
+The sustainability and institutional food-service literature emphasizes
+food waste, restaurant sustainability, and operational coordination
+({Peixoto et al.} 2026; {Guimaraes et al.} 2024). This stream is
+especially relevant for canteen planning, procurement, and waste
+reduction, although it is still only weakly connected to healthy-food
+recommender system design.
+
+\section{Thematic Synthesis of the
+Literature}\label{thematic-synthesis-of-the-literature}
+
+The reviewed literature can be synthesized into four interrelated
+streams: \textbf{campus food environments}, \textbf{food and
+healthy-food recommender systems}, \textbf{multi-stakeholder
+recommendation}, and \textbf{sustainability and food-service
+operations}. Taken together, these streams strongly support the
+relevance of the proposed topic, but they also show that the field
+remains fragmented and that an integrated university-campus framework is
+still underdeveloped ({Bondevik et al.} 2024; {Caruso et al.} 2025;
+Zheng 2017; {Peixoto et al.} 2026).
+
+\subsection{1. Campus food environments as intervention
+settings}\label{campus-food-environments-as-intervention-settings}
+
+A consistent finding across campus food studies is that university food
+environments shape dietary behavior through factors such as
+availability, affordability, convenience, time pressure, and social
+context (Roy et al. 2015; Deliens et al. 2014; {Caruso et al.} 2025).
+This means that healthy eating on campus cannot be reduced to individual
+preference alone. Any recommendation framework intended for university
+campuses must therefore be embedded in the actual food environment
+rather than designed as an isolated personalization tool.
+
+\subsection{2. Food recommender systems are mature, but mainly
+user-centric}\label{food-recommender-systems-are-mature-but-mainly-user-centric}
+
+The food recommender systems literature is now sufficiently mature to
+support domain-specific design choices ({Bondevik et al.} 2024; Tran et
+al. 2018; Trattner and Elsweiler 2017). However, most existing systems
+remain centered on the individual user. Even when they incorporate
+health-aware logic, they usually optimize for some combination of user
+preference, dietary fit, and nutritional value, while paying limited
+attention to food-service feasibility, supplier constraints,
+institutional objectives, or environmental outcomes.
+
+\subsection{3. Multi-stakeholder recommendation offers the strongest
+theoretical
+foundation}\label{multi-stakeholder-recommendation-offers-the-strongest-theoretical-foundation}
+
+The multi-stakeholder recommendation literature provides the clearest
+conceptual basis for the proposed healthy-food ecosystem (Zheng 2017;
+Abdollahpouri and Burke 2019; {Wu et al.} 2021). This literature is
+highly relevant because campus food systems are inherently multi-actor
+environments. Consumers seek taste, convenience, affordability, and
+health; canteens seek manageable production and waste reduction;
+suppliers seek predictable demand; and administrators may prioritize
+sustainability and wellbeing.
+
+\subsection{4. Sustainability and food-service research remain
+insufficiently integrated with
+recommendation}\label{sustainability-and-food-service-research-remain-insufficiently-integrated-with-recommendation}
+
+The sustainability and food-service literature adds an important
+operational perspective ({Peixoto et al.} 2026; {Guimaraes et al.}
+2024). Research in this stream still focuses heavily on waste reduction,
+especially post-distribution and plate waste. While this is important,
+the literature provides weaker integration between sustainability
+metrics, nutritional goals, and recommendation-system design.
+
+\subsection{5. Explainability, trust, and real-world deployment are
+emerging
+priorities}\label{explainability-trust-and-real-world-deployment-are-emerging-priorities}
+
+Newer implementation-oriented studies indicate that healthy-food
+recommendation is moving beyond technical prototypes toward real-life
+settings (Unknown 2025; {Wang et al.} 2024; {Rostami et al.} 2024). This
+has direct implications for campus adoption. A university healthy-food
+ecosystem would likely require not only accurate recommendation, but
+also interpretable suggestions, stakeholder buy-in, and policy
+legitimacy.
+
+\subsection{6. Overall synthesis and
+gap}\label{overall-synthesis-and-gap}
+
+Across the reviewed streams, the literature supports three major
+conclusions ({Bondevik et al.} 2024; {Caruso et al.} 2025; Zheng 2017;
+{Peixoto et al.} 2026). First, the campus is a valid and influential
+food environment. Second, healthy-food recommendation is technically
+feasible and increasingly sophisticated. Third, multi-stakeholder
+recommendation provides an appropriate framework for balancing competing
+interests. What remains missing is an integrated model that combines
+these insights into a single university-campus food ecosystem connecting
+consumers, canteens, providers, suppliers, researchers, and
+administrators.
+
+\section{Evidence Map: 20 Key Papers}\label{evidence-map-20-key-papers}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Bondevik et al.~(2024), \emph{A systematic review on food
+  recommender systems}}. \emph{Stream:} Food RS. \emph{Aim:} Review the
+  food recommender field. \emph{Method:} Systematic review. \emph{Main
+  finding:} Food recommenders are mature but fragmented across methods
+  and goals. \emph{Why it matters:} High-level overview of food RS.
+\item
+  \textbf{Tran et al.~(2018), \emph{An overview of recommender systems
+  in the healthy food domain}}. \emph{Stream:} Healthy food RS.
+  \emph{Aim:} Survey healthy-food recommenders. \emph{Method:} Technical
+  review. \emph{Main finding:} Healthy-food RS must balance preference,
+  nutrition, and behavior change. \emph{Why it matters:} Foundation for
+  healthy recommendation logic.
+\item
+  \textbf{Trattner \& Elsweiler (2017), \emph{Food Recommender Systems:
+  Important Contributions, Challenges and Future Research Directions}}.
+  \emph{Stream:} Food RS. \emph{Aim:} Summarize contributions and
+  challenges. \emph{Method:} Scholarly survey. \emph{Main finding:} Food
+  RS differ from generic RS due to health and context. \emph{Why it
+  matters:} Seminal conceptual framing.
+\item
+  \textbf{Ge et al.~(2015), \emph{Health-aware Food Recommender
+  System}}. \emph{Stream:} Healthy food RS. \emph{Aim:} Introduce a
+  health-aware recommender. \emph{Method:} Conference system paper.
+  \emph{Main finding:} Health can be embedded in recommendation logic.
+  \emph{Why it matters:} Early nutrition-aware system.
+\item
+  \textbf{Rostami et al.~(2024), \emph{A novel healthy food
+  recommendation to user groups\ldots{}}}. \emph{Stream:} Healthy food
+  RS. \emph{Aim:} Move from individual to group recommendation.
+  \emph{Method:} Model + experiments. \emph{Main finding:} Group
+  recommendation is feasible in food contexts. \emph{Why it matters:}
+  Relevant for shared dining settings.
+\item
+  \textbf{Wang et al.~(2024), \emph{Improving healthy food recommender
+  systems through heterogeneous hypergraph learning}}. \emph{Stream:}
+  Healthy food RS. \emph{Aim:} Improve recommendation accuracy.
+  \emph{Method:} ML model. \emph{Main finding:} Richer
+  user-food-ingredient modeling improves personalization. \emph{Why it
+  matters:} Useful for technical engine design.
+\item
+  \textbf{Workplace explanation study (2025)}. \emph{Stream:}
+  Explainability. \emph{Aim:} Study explanations in deployment.
+  \emph{Method:} User-centered deployment study. \emph{Main finding:}
+  Explanations improve understanding and control. \emph{Why it matters:}
+  Relevant for trust and adoption.
+\item
+  \textbf{Tsolakidis et al.~(2024), \emph{AI and ML Technologies for
+  Personalized Nutrition: A Review}}. \emph{Stream:} Personalized
+  nutrition. \emph{Aim:} Review AI/ML for nutrition. \emph{Method:}
+  Review. \emph{Main finding:} Personalized nutrition is increasingly
+  recommender-driven. \emph{Why it matters:} Bridge to nutrition
+  science.
+\item
+  \textbf{Zheng (2017), \emph{Multi-Stakeholder Recommendation:
+  Applications and Challenges}}. \emph{Stream:} MSR. \emph{Aim:} Define
+  MSR and agenda. \emph{Method:} Conceptual paper. \emph{Main finding:}
+  Recommendation involves multiple legitimate utilities. \emph{Why it
+  matters:} Core theory.
+\item
+  \textbf{Abdollahpouri \& Burke (2019), \emph{Multi-stakeholder
+  Recommendation and its Connection to Multi-sided Fairness}}.
+  \emph{Stream:} MSR. \emph{Aim:} Connect MSR with fairness.
+  \emph{Method:} Conceptual paper. \emph{Main finding:} Fairness is
+  central in multi-stakeholder settings. \emph{Why it matters:}
+  Governance foundation.
+\item
+  \textbf{Wu et al.~(2021), \emph{Multi-FR}}. \emph{Stream:}
+  Fairness-aware RS. \emph{Aim:} Optimize across stakeholder interests.
+  \emph{Method:} Multi-objective framework. \emph{Main finding:}
+  Multi-objective optimization can balance utilities. \emph{Why it
+  matters:} Strong precedent for scoring models.
+\item
+  \textbf{Burke et al.~(2018), \emph{Balanced neighborhoods for
+  multi-sided fairness in recommendation}}. \emph{Stream:}
+  Fairness-aware RS. \emph{Aim:} Improve fairness in exposure.
+  \emph{Method:} Fairness-aware method. \emph{Main finding:} Rankings
+  can reduce one-sided bias. \emph{Why it matters:} Relevant for
+  equitable food exposure.
+\item
+  \textbf{Tran et al.~(2021), \emph{Recommender systems in the
+  healthcare domain}}. \emph{Stream:} Health RS. \emph{Aim:} Review
+  healthcare RS. \emph{Method:} State-of-the-art review. \emph{Main
+  finding:} Food RS fit within digital health RS. \emph{Why it matters:}
+  Useful positioning paper.
+\item
+  \textbf{Roy et al.~(2015), \emph{Food environment interventions in
+  tertiary education settings}}. \emph{Stream:} Campus food. \emph{Aim:}
+  Review interventions. \emph{Method:} Systematic review. \emph{Main
+  finding:} Tertiary food interventions can improve choices. \emph{Why
+  it matters:} Strong campus evidence.
+\item
+  \textbf{Deliens et al.~(2014), \emph{Determinants of eating behaviour
+  in university students}}. \emph{Stream:} Campus food. \emph{Aim:}
+  Identify drivers of eating behavior. \emph{Method:} Qualitative study.
+  \emph{Main finding:} Taste, convenience, peers, price, and
+  availability matter. \emph{Why it matters:} Supports context-aware
+  design.
+\item
+  \textbf{Caruso et al.~(2025), \emph{The campus food environment and
+  postsecondary student diet}}. \emph{Stream:} Campus food. \emph{Aim:}
+  Review links between campus environment and diet. \emph{Method:}
+  Systematic review. \emph{Main finding:} Campus food environments
+  influence diet. \emph{Why it matters:} Supports ecosystem framing.
+\item
+  \textbf{Dahl et al.~(2024), \emph{Assessing the Healthfulness of
+  University Food Environments}}. \emph{Stream:} Campus food /
+  measurement. \emph{Aim:} Review methods and tools. \emph{Method:}
+  Systematic review. \emph{Main finding:} Assessment methods are
+  heterogeneous. \emph{Why it matters:} Useful for KPI design.
+\item
+  \textbf{Peixoto et al.~(2026), \emph{Sustainability in university
+  restaurants}}. \emph{Stream:} Sustainability. \emph{Aim:} Map
+  strategies in university restaurants. \emph{Method:} Scoping review.
+  \emph{Main finding:} Research is still waste-centric. \emph{Why it
+  matters:} Reveals gap for integration.
+\item
+  \textbf{Guimarães et al.~(2024), \emph{Plate Food Waste in Food
+  Services}}. \emph{Stream:} Operations / waste. \emph{Aim:} Quantify
+  plate waste. \emph{Method:} Systematic review + meta-analysis.
+  \emph{Main finding:} Food waste is measurable and significant.
+  \emph{Why it matters:} Useful for canteen objectives.
+\item
+  \textbf{\emph{Recommender systems and sustainability: a dual
+  perspective} (2026)}. \emph{Stream:} Sustainability + RS. \emph{Aim:}
+  Review sustainability in RS. \emph{Method:} Literature review.
+  \emph{Main finding:} Sustainability should be both outcome and design
+  principle. \emph{Why it matters:} Relevant for environmental
+  objectives.
+\end{enumerate}
+
+\section{Research Gaps}\label{research-gaps}
+
+The review identifies five major gaps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{No integrated campus framework} combining consumers, canteens,
+  providers, suppliers, researchers, and administrators in one
+  recommendation ecosystem.
+\item
+  \textbf{Operational constraints} such as kitchen capacity, inventory,
+  and procurement are rarely integrated into healthy-food recommendation
+  models.
+\item
+  \textbf{Sustainability variables} such as sourcing, seasonality, and
+  emissions remain weakly linked to recommendation objectives.
+\item
+  \textbf{Real-world institutional deployments} are still limited.
+\item
+  \textbf{Governance issues} such as fairness, explainability, consent,
+  and institutional priority weighting are underdeveloped in
+  food-specific applications.
+\end{enumerate}
+
+\section{Conceptual Framework}\label{conceptual-framework}
+
+\subsection{Core proposition}\label{core-proposition}
+
+Based on the literature, this paper proposes that a university
+healthy-food ecosystem should be built around a
+\textbf{multi-stakeholder recommendation architecture} rather than a
+consumer-only app. In this architecture, recommendation is treated as a
+coordination mechanism across multiple actors.
+
+\subsection{Key stakeholders}\label{key-stakeholders}
+
+The proposed ecosystem includes:
+
+\begin{itemize}
+\tightlist
+\item
+  consumers: students, professors, support staff,
+\item
+  canteens and food-service operators,
+\item
+  food providers and caterers,
+\item
+  raw-food suppliers,
+\item
+  healthy-food researchers,
+\item
+  university administration.
+\end{itemize}
+
+\subsection{Core system modules}\label{core-system-modules}
+
+A future implementation should include:
+
+\begin{itemize}
+\tightlist
+\item
+  personalized meal recommendation,
+\item
+  group or shared-choice recommendation,
+\item
+  multi-objective optimization,
+\item
+  demand forecasting,
+\item
+  menu optimization,
+\item
+  procurement recommendation,
+\item
+  sustainability scoring,
+\item
+  explanation interfaces,
+\item
+  intervention and nudge testing,
+\item
+  governance mechanisms for fairness and consent.
+\end{itemize}
+
+\section{Implications}\label{implications}
+
+\subsection{Theoretical implications}\label{theoretical-implications}
+
+This review shows that the proposed topic is best understood as an
+\textbf{integration problem} across multiple literatures ({Bondevik et
+al.} 2024; Zheng 2017; {Peixoto et al.} 2026). It extends food
+recommender systems from user-level personalization toward
+ecosystem-level coordination and applies multi-stakeholder
+recommendation logic to a food-service setting with strong public-health
+and sustainability relevance.
+
+\subsection{Practical implications}\label{practical-implications}
+
+For universities, the framework offers a blueprint for redesigning
+campus dining as an integrated ecosystem rather than a set of isolated
+outlets. It suggests that healthy-food promotion, waste reduction,
+procurement stability, and sustainability should be coordinated rather
+than treated as separate projects.
+
+\subsection{Methodological
+implications}\label{methodological-implications}
+
+Future studies should combine design science, system prototyping,
+stakeholder modeling, and field deployment to test whether
+multi-stakeholder food recommendation improves healthy-food uptake and
+institutional viability.
+
+\section{Conclusion}\label{conclusion}
+
+This paper reviewed literature relevant to a \textbf{multi-stakeholder
+healthy-food ecosystem for university campuses} and found strong support
+for each component of the concept, but limited integration across them.
+Campus food environment research validates the setting, food recommender
+research validates the mechanism, multi-stakeholder recommendation
+provides the theory, and sustainability research highlights operational
+priorities. The main opportunity for future work is to combine these
+strands into a coherent campus ecosystem architecture that balances
+health, affordability, operational feasibility, sustainability, and
+institutional governance.
+
+\section{Journal-Ready Methodology and
+Architecture}\label{journal-ready-methodology-and-architecture}
+
+\subsection{Methodology}\label{methodology}
+
+\subsubsection{Research design}\label{research-design}
+
+This study adopts a \textbf{design science and simulation-based
+research} approach to develop and evaluate a \textbf{multi-stakeholder
+healthy-food ecosystem} for university campuses. The proposed artifact
+is an integrated socio-technical system composed of four tightly
+connected layers: \textbf{stakeholders}, \textbf{food flow},
+\textbf{decision support}, and a \textbf{multi-stakeholder
+recommendation system (MSRS)}. For experimental evaluation, the
+ecosystem is specified as a \textbf{multi-agent system (MAS)} in which
+autonomous stakeholders interact within a shared campus food-service
+environment. Formally, the system may be represented as
+\(MAS = (A, E, F, O, P, U, T)\), where \(A\) denotes the set of agents,
+\(E\) the environment, \(F\) the food-flow states and transitions, \(O\)
+the observations available to each agent, \(P\) the decision policies,
+\(U\) the stakeholder-specific utility functions, and \(T\) the temporal
+transition rules. The agent set includes consumers, canteens, suppliers,
+research/policy actors, administrators, and an MSRS coordinator. The
+environment contains menus, inventory, kitchen capacity, supplier
+pipelines, prices, queues, waste, and policy settings, while food
+entities move through state-based transitions from raw ingredients to
+preparation, serving, consumption, and waste. Each agent observes a
+subset of the system state and chooses actions according to its
+objectives and constraints. Consumer agents maximize taste, health,
+affordability, and convenience; canteen agents maximize margin,
+feasibility, and service quality while minimizing waste; supplier agents
+maximize order stability and fulfillment performance; and administrative
+actors maximize health, sustainability, fairness, and affordability
+outcomes. The MSRS coordinator agent ranks candidate actions using a
+weighted ecosystem objective and generates coordinated recommendations
+for meal choice, menu planning, procurement, pricing, and interventions.
+This framing is appropriate because multi-stakeholder recommendation
+research treats recommendation as a setting with multiple legitimate
+utilities, while agrifood digital-twin and simulation literature
+supports virtual experimentation for food-flow, operational, and
+sustainability decisions (Zheng 2017; Abdollahpouri and Burke 2019; {Wu
+et al.} 2021).
+
+\subsubsection{Ecosystem architecture}\label{ecosystem-architecture}
+
+The ecosystem is modeled as a layered architecture:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Stakeholder layer}
+\item
+  \textbf{Food-flow layer}
+\item
+  \textbf{Decision-support layer}
+\item
+  \textbf{MSRS optimization layer}
+\item
+  \textbf{Governance and monitoring layer}
+\end{enumerate}
+
+This layered structure enables the integration of physical food
+operations with digital intelligence and coordinated decision-making
+(Zheng 2017; {Wu et al.} 2021).
+
+\subsubsection{Stakeholder model}\label{stakeholder-model}
+
+The stakeholder layer includes:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Consumers:} students, faculty, and staff
+\item
+  \textbf{Food-service operators:} canteens, caterers, kitchen managers
+\item
+  \textbf{Supply actors:} raw-food suppliers, processors, distributors
+\item
+  \textbf{Governance actors:} nutrition researchers, sustainability
+  office, university administration
+\end{itemize}
+
+Each stakeholder group \(s\) is represented by: - a utility function
+\(U_s\), - constraints \(C_s\), - decisions \(D_s\), - and performance
+measures \(K_s\).
+
+Typical utility structures include: - consumer utility: taste,
+affordability, health, convenience; - canteen utility: margin,
+feasibility, throughput, waste reduction; - supplier utility: demand
+stability, order visibility, spoilage reduction; - university utility:
+health promotion, sustainability, fairness, and policy compliance.
+
+\subsubsection{Food-flow model}\label{food-flow-model}
+
+The food system is modeled as a directed network:
+
+\[G = (N,E)\]
+
+where \(N\) denotes process nodes and \(E\) denotes flow links. The main
+food-flow chain is:
+
+\textbf{Raw material supply → inbound logistics → storage →
+preprocessing → recipe assembly → cooking/preparation → serving/display
+→ purchase → consumption → leftovers/returns → waste or recovery}
+
+Each food entity is characterized by: - quantity, - unit cost, - lead
+time, - shelf life, - nutritional profile, - expected taste score, -
+sustainability score or carbon footprint, - preparation time, -
+spoilage/waste risk, - selling price.
+
+\subsubsection{Decision-support system}\label{decision-support-system}
+
+The DSS is modeled as four modules.
+
+\paragraph{Data module}\label{data-module}
+
+\begin{itemize}
+\tightlist
+\item
+  POS transactions
+\item
+  recipe and nutrition databases
+\item
+  inventory and procurement records
+\item
+  supplier deliveries
+\item
+  queue and service-time data
+\item
+  user preferences and ratings
+\item
+  waste audits
+\item
+  sustainability attributes
+\end{itemize}
+
+\paragraph{Analytics module}\label{analytics-module}
+
+\begin{itemize}
+\tightlist
+\item
+  demand forecasting
+\item
+  inventory monitoring
+\item
+  waste prediction
+\item
+  taste preference learning
+\item
+  price sensitivity estimation
+\item
+  nutrition scoring
+\item
+  sustainability scoring
+\end{itemize}
+
+\paragraph{Decision module}\label{decision-module}
+
+\begin{itemize}
+\tightlist
+\item
+  menu planning
+\item
+  procurement planning
+\item
+  production scheduling
+\item
+  dynamic pricing and subsidy suggestions
+\item
+  recommendation ranking
+\item
+  intervention and nudge selection
+\end{itemize}
+
+\paragraph{Execution module}\label{execution-module}
+
+\begin{itemize}
+\tightlist
+\item
+  consumer app
+\item
+  canteen dashboard
+\item
+  supplier portal
+\item
+  researcher dashboard
+\item
+  administrative control panel
+\end{itemize}
+
+\subsubsection{MSRS model}\label{msrs-model}
+
+The MSRS evaluates candidate actions \(a\) using a weighted
+multi-stakeholder objective:
+
+\[Score(a)=\sum_s w_s U_s(a)\]
+
+where: - \(U_s(a)\) is the utility of stakeholder \(s\) under action
+\(a\), - \(w_s\) is the policy weight assigned to stakeholder \(s\).
+
+The MSRS generates differentiated outputs for multiple actors: -
+\textbf{Consumers:} meal recommendations, bundles, substitutions -
+\textbf{Canteens:} prep quantities, menu mix adjustments, markdown
+timing - \textbf{Suppliers:} replenishment plans, sourcing alternatives
+- \textbf{Researchers/administrators:} nudges, labels, subsidy rules,
+intervention placement
+
+\subsubsection{Governance layer}\label{governance-layer}
+
+A cross-cutting governance layer oversees the entire architecture
+through: - fairness controls, - explainability, - consent and privacy
+management, - policy-weight management, - KPI monitoring and
+auditability.
+
+\subsubsection{Simulation strategy}\label{simulation-strategy}
+
+To evaluate the proposed ecosystem, the study uses a \textbf{hybrid
+simulation design}:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Agent-based modeling (ABM)} for stakeholder behavior and
+  adaptation
+\item
+  \textbf{Discrete-event simulation (DES)} for kitchen operations,
+  queues, inventory depletion, and deliveries
+\item
+  \textbf{System dynamics (SD)} for longer-term feedback loops such as
+  demand-waste interactions and policy effects
+\end{itemize}
+
+\subsubsection{Experimental scenarios}\label{experimental-scenarios}
+
+The simulation compares four scenarios:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{No recommender}
+\item
+  \textbf{Consumer-only recommender}
+\item
+  \textbf{Rule-based healthy menu planning}
+\item
+  \textbf{Full MSRS-enabled ecosystem}
+\end{enumerate}
+
+Experimental factors include: - demand volatility, - budget pressure, -
+supplier disruption, - taste-preference heterogeneity, - subsidy
+intensity, - sustainability-priority settings.
+
+\subsubsection{Evaluation metrics}\label{evaluation-metrics}
+
+Performance is evaluated across six dimensions:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Consumer:} healthy meal uptake, taste satisfaction,
+  affordability compliance, recommendation acceptance
+\item
+  \textbf{Operations:} forecast accuracy, wait time, stockouts, waste,
+  capacity use
+\item
+  \textbf{Financial:} margin, meal cost, subsidy efficiency
+\item
+  \textbf{Sustainability:} carbon footprint per meal, local/seasonal
+  sourcing, total waste
+\item
+  \textbf{Supplier:} order variability, fill rate, spoilage
+\item
+  \textbf{Governance:} fair access, utility balance,
+  explainability/trust
+\end{itemize}
+
+Improvement should be demonstrated through: 1. \textbf{statistical
+significance} across simulation replications, 2. \textbf{practical
+significance} using relative gains and effect sizes, 3. \textbf{Pareto
+improvement} across health, taste, price, and sustainability trade-offs.
+
+\subsection{System Architecture
+Description}\label{system-architecture-description}
+
+The proposed architecture links the physical flow of food with digital
+recommendation and governance.
+
+\subsubsection{Stakeholder layer}\label{stakeholder-layer}
+
+The top layer contains all actors: consumers, canteens, suppliers,
+researchers, and administrators. These actors contribute data, receive
+recommendations, and adapt their decisions over time.
+
+\subsubsection{Food-flow and operations
+layer}\label{food-flow-and-operations-layer}
+
+This layer represents the physical transformation chain from raw
+ingredients to ready-to-consume meals and waste streams:
+
+\textbf{Raw ingredients → logistics → storage → preprocessing → assembly
+→ cooking → serving → purchase → consumption → leftovers/waste}
+
+\subsubsection{Data integration layer}\label{data-integration-layer}
+
+This layer aggregates: - user profiles, - transactions, - recipes and
+nutrition, - stock and procurement, - delivery records, - queue data, -
+waste logs, - sustainability indicators.
+
+\subsubsection{Analytics and DSS layer}\label{analytics-and-dss-layer}
+
+This layer transforms data into decisions through: - forecasting, -
+waste analytics, - nutrition and taste modeling, - price modeling, -
+sustainability scoring, - intervention analytics.
+
+\subsubsection{MSRS optimization layer}\label{msrs-optimization-layer}
+
+This is the coordination core. It ranks meals and actions according to
+multi-stakeholder utility and returns tailored outputs to each actor
+group.
+
+\subsubsection{Governance and monitoring
+layer}\label{governance-and-monitoring-layer}
+
+This layer overlays all others and manages: - fairness, - transparency,
+- privacy, - policy priorities, - KPI reporting.
+
+\subsubsection{Value co-creation logic}\label{value-co-creation-logic}
+
+Value is co-created when coordinated recommendations improve several
+stakeholder objectives simultaneously: - \textbf{product innovation}
+through new recipes and substitutions, - \textbf{effectiveness} through
+healthier and more accepted choices, - \textbf{efficiency} through lower
+waste and better forecasting, - \textbf{taste} through improved
+preference-fit, - \textbf{price} through affordability and sourcing
+efficiency.
+
+\subsection{Simulation Experiment
+Design}\label{simulation-experiment-design}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Objective}: Evaluate whether an MSRS-enabled campus food
+  ecosystem improves health, taste, affordability, efficiency, and
+  sustainability relative to baseline systems. \emph{Rationale:} Tests
+  ecosystem-level value of MSRS.
+\item
+  \textbf{Model type}: Hybrid \textbf{ABM + DES + SD}. \emph{Rationale:}
+  Captures heterogeneous actors, operational events, and long-term
+  feedback.
+\item
+  \textbf{Unit of analysis}: Campus food ecosystem over daily, weekly,
+  and semester horizons. \emph{Rationale:} Supports both operational and
+  strategic evaluation.
+\item
+  \textbf{Agents}: Consumers, canteens, suppliers, researchers,
+  administrators. \emph{Rationale:} Represents multi-stakeholder
+  behavior.
+\item
+  \textbf{Food entities}: Ingredients, recipes, prepared meals, served
+  meals, leftovers, waste streams. \emph{Rationale:} Represents
+  end-to-end food flow.
+\item
+  \textbf{Decision engine}: Forecasting + DSS + MSRS optimizer.
+  \emph{Rationale:} Simulates coordinated decision support.
+\item
+  \textbf{Baseline scenario 1}: No recommender. \emph{Rationale:} Pure
+  operational reference.
+\item
+  \textbf{Baseline scenario 2}: Consumer-only recommender.
+  \emph{Rationale:} Compares against standard personalization.
+\item
+  \textbf{Baseline scenario 3}: Rule-based healthy menu planning.
+  \emph{Rationale:} Compares against non-learning policy approach.
+\item
+  \textbf{Treatment scenario}: Full MSRS-enabled ecosystem.
+  \emph{Rationale:} Main intervention condition.
+\item
+  \textbf{Time step}: Daily operational step; weekly planning cycle;
+  semester evaluation. \emph{Rationale:} Matches food-service decision
+  frequency.
+\item
+  \textbf{Demand conditions}: Low, medium, high volatility.
+  \emph{Rationale:} Tests robustness to uncertainty.
+\item
+  \textbf{Budget conditions}: Low, medium, high consumer budget
+  pressure. \emph{Rationale:} Tests affordability sensitivity.
+\item
+  \textbf{Supply conditions}: Stable supply vs disrupted supply.
+  \emph{Rationale:} Tests resilience.
+\item
+  \textbf{Preference conditions}: Homogeneous vs heterogeneous
+  taste-health preferences. \emph{Rationale:} Tests personalization
+  value.
+\item
+  \textbf{Policy conditions}: Different subsidy levels and
+  sustainability weights. \emph{Rationale:} Tests policy sensitivity.
+\item
+  \textbf{Consumer outcomes}: Healthy meal uptake, taste satisfaction,
+  affordability compliance, recommendation acceptance, repeat purchase.
+  \emph{Rationale:} Measures user-facing success.
+\item
+  \textbf{Operational outcomes}: Forecast accuracy, stockouts, wait
+  time, capacity use, food waste. \emph{Rationale:} Measures efficiency
+  and feasibility.
+\item
+  \textbf{Financial outcomes}: Margin, cost per meal, healthy meal
+  revenue share, subsidy efficiency. \emph{Rationale:} Measures economic
+  viability.
+\item
+  \textbf{Sustainability outcomes}: Carbon footprint per meal,
+  local/seasonal sourcing rate, total waste, packaging waste.
+  \emph{Rationale:} Measures environmental performance.
+\item
+  \textbf{Supplier outcomes}: Order variability, fill rate, lead-time
+  reliability, spoilage. \emph{Rationale:} Measures upstream
+  coordination.
+\item
+  \textbf{Governance outcomes}: Fair access, stakeholder utility
+  balance, explainability/trust. \emph{Rationale:} Measures legitimacy
+  and equity.
+\item
+  \textbf{Statistical analysis}: Multiple replications; confidence
+  intervals; pairwise tests and multi-scenario comparison.
+  \emph{Rationale:} Tests significance.
+\item
+  \textbf{Practical significance}: \% improvement, effect sizes,
+  relative gain vs baseline. \emph{Rationale:} Tests real usefulness.
+\item
+  \textbf{Trade-off analysis}: Pareto frontier across health, taste,
+  price, and waste. \emph{Rationale:} Tests multi-objective superiority.
+\item
+  \textbf{Robustness analysis}: Stress tests under disruption, price
+  shock, and demand shifts. \emph{Rationale:} Tests stability of
+  improvements.
+\item
+  \textbf{Success criterion}: MSRS outperforms baselines on key KPIs
+  without major loss to any stakeholder group. \emph{Rationale:}
+  Demonstrates balanced value co-creation.
+\end{itemize}
+
+: Simulation experiment design for evaluating the MSRS-enabled campus
+healthy-food ecosystem.
+
+\subsubsection{Example hypotheses}\label{example-hypotheses}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{H1:} The MSRS scenario yields significantly higher healthy
+  meal uptake than the consumer-only recommender.
+\item
+  \textbf{H2:} The MSRS scenario significantly reduces food waste and
+  stockouts compared with rule-based menu planning.
+\item
+  \textbf{H3:} The MSRS scenario improves the combined ecosystem
+  performance score without reducing taste satisfaction or
+  affordability.
+\item
+  \textbf{H4:} The MSRS scenario produces more favorable Pareto
+  trade-offs across health, taste, price, and sustainability than all
+  baselines.
+\end{itemize}
+
+\section{Hypothetical Results}\label{hypothetical-results}
+
+\subsection{Overview of comparative
+performance}\label{overview-of-comparative-performance}
+
+To illustrate the managerial value of the proposed framework, we report
+a set of \textbf{hypothetical simulation results} comparing four
+scenarios: \textbf{no recommender}, \textbf{consumer-only recommender},
+\textbf{rule-based healthy menu planning}, and the \textbf{full
+MSRS-enabled ecosystem}. Across repeated simulation runs, the MSRS
+scenario outperforms all baseline conditions on the majority of
+ecosystem-level indicators while avoiding major losses in any
+stakeholder group.
+
+In the hypothetical results, the MSRS scenario increases \textbf{healthy
+meal uptake} by approximately \textbf{18--26\%} relative to the
+no-recommender baseline and by \textbf{8--14\%} relative to the
+consumer-only recommender. At the same time, \textbf{taste satisfaction}
+remains stable or improves slightly, suggesting that the system does not
+achieve health gains by sacrificing perceived meal quality.
+\textbf{Affordability compliance} also improves because the
+decision-support layer uses pricing, bundling, and substitution logic to
+keep recommended meals within student budget constraints.
+
+\subsection{Operational and sustainability
+results}\label{operational-and-sustainability-results}
+
+Operationally, the MSRS scenario yields improvements in \textbf{forecast
+accuracy}, \textbf{stockout reduction}, and \textbf{food waste
+minimization}. In the hypothetical simulation, forecast accuracy
+improves from roughly \textbf{72--78\%} in baseline settings to
+\textbf{84--89\%} under the full ecosystem model. Plate and production
+waste fall by \textbf{12--21\%}, primarily because the system aligns
+menu planning, demand forecasting, and procurement more effectively.
+Queue time remains within acceptable limits, indicating that healthier
+and more diversified offerings do not create excessive service
+bottlenecks.
+
+The environmental results are also favorable. The MSRS scenario lowers
+the \textbf{carbon footprint per meal} through more targeted sourcing,
+better menu composition, and lower waste. In the hypothetical runs,
+carbon intensity declines by \textbf{9--16\%}, while the share of
+\textbf{local/seasonal sourcing} rises under scenarios where
+sustainability receives moderate or high policy weight.
+
+\subsection{Stakeholder utility
+results}\label{stakeholder-utility-results}
+
+The simulated stakeholder-utility analysis shows that the full MSRS
+model produces the most balanced outcome across actors. Consumers gain
+through improved choice relevance, health fit, and affordability;
+canteens gain through waste reduction and better production planning;
+suppliers gain through lower order volatility and better visibility; and
+administrators gain through improved health and sustainability KPIs.
+Although some scenarios produce small trade-offs, the MSRS condition
+dominates baseline approaches on the combined ecosystem performance
+score and produces a more favorable Pareto frontier across
+\textbf{health}, \textbf{taste}, \textbf{price}, and \textbf{waste}.
+
+\subsection{Illustrative summary
+table}\label{illustrative-summary-table}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Healthy meal uptake (\%)}: No recommender: 31; Consumer-only
+  recommender: 39; Rule-based planning: 42; Full MSRS ecosystem: 49.
+\item
+  \textbf{Taste satisfaction (1--5)}: No recommender: 3.9; Consumer-only
+  recommender: 4.0; Rule-based planning: 3.8; Full MSRS ecosystem: 4.1.
+\item
+  \textbf{Meals within budget (\%)}: No recommender: 68; Consumer-only
+  recommender: 73; Rule-based planning: 75; Full MSRS ecosystem: 82.
+\item
+  \textbf{Forecast accuracy (\%)}: No recommender: 74; Consumer-only
+  recommender: 77; Rule-based planning: 81; Full MSRS ecosystem: 87.
+\item
+  \textbf{Food waste per 100 meals (kg)}: No recommender: 18.5;
+  Consumer-only recommender: 16.9; Rule-based planning: 15.8; Full MSRS
+  ecosystem: 13.9.
+\item
+  \textbf{Carbon footprint per meal (kg CO2e)}: No recommender: 2.40;
+  Consumer-only recommender: 2.31; Rule-based planning: 2.20; Full MSRS
+  ecosystem: 2.02.
+\item
+  \textbf{Supplier order variability index}: No recommender: 1.00;
+  Consumer-only recommender: 0.94; Rule-based planning: 0.88; Full MSRS
+  ecosystem: 0.76.
+\item
+  \textbf{Ecosystem performance score (0--100)}: No recommender: 56;
+  Consumer-only recommender: 64; Rule-based planning: 69; Full MSRS
+  ecosystem: 81.
+\end{itemize}
+
+These results are illustrative and are intended to demonstrate the type
+of empirical pattern that would validate the framework once fully
+implemented and simulated.
+
+\section{Discussion}\label{discussion}
+
+\subsection{Engineering management
+implications}\label{engineering-management-implications}
+
+The hypothetical findings suggest that the proposed framework is
+relevant to engineering management because it shifts the design problem
+from isolated optimization to \textbf{ecosystem orchestration}. Rather
+than treating food-service performance as the outcome of a single actor
+or department, the framework models value as co-created through
+coordinated decisions among consumers, operators, suppliers, and
+governance actors. From an engineering management perspective, this is
+important because many mission-oriented service systems require
+cross-boundary coordination, dynamic trade-off management, and
+performance measurement across multiple objectives rather than a single
+efficiency metric.
+
+\subsection{Value co-creation as a design
+problem}\label{value-co-creation-as-a-design-problem}
+
+The results also support the argument that \textbf{value co-creation}
+should be treated as an operationalizable design logic rather than only
+a conceptual descriptor. In the proposed model, co-creation emerges when
+coordinated recommendations improve stakeholder utilities
+simultaneously: healthier and tastier meals are chosen by consumers,
+waste and uncertainty are reduced for canteens, procurement becomes more
+stable for suppliers, and institutional goals are advanced for
+administrators. This extends value co-creation into a form that can be
+modeled, simulated, and managed.
+
+\subsection{Why MSRS adds value beyond consumer
+personalization}\label{why-msrs-adds-value-beyond-consumer-personalization}
+
+A key implication of the comparative scenarios is that a
+\textbf{consumer-only recommender} is not sufficient for
+mission-oriented sustainable systems. Although such a recommender
+improves relevance at the user level, it does not necessarily improve
+supply stability, waste, or ecosystem-wide efficiency. The MSRS creates
+added value because it embeds recommendation inside a broader
+decision-support architecture that links demand, menu design,
+procurement, pricing, and sustainability. Thus, the main managerial
+contribution of the MSRS is not only better personalization, but better
+\textbf{coordination across stakeholder interfaces}.
+
+\subsection{Broader transferability}\label{broader-transferability}
+
+Although the present application focuses on campus food services, the
+framework is transferable to other service ecosystems in which multiple
+actors co-create value around mission-oriented outcomes. Examples
+include hospital food services, workplace catering, school meal systems,
+community health provisioning, and other sustainability-oriented service
+platforms. More broadly, the model offers an engineering management
+template for designing digital coordination systems in settings where
+quality, affordability, operational efficiency, and sustainability must
+be balanced simultaneously.
+
+\section{Conclusion}\label{conclusion-1}
+
+This paper developed a value co-creation modeling framework for
+\textbf{mission-oriented sustainable service ecosystems} and illustrated
+its application to \textbf{healthy, tasty, and affordable campus food
+services}. The central contribution is the integration of stakeholder
+modeling, food-flow modeling, decision support, and multi-stakeholder
+recommendation into a single engineering management architecture. In
+this formulation, the MSRS is not merely a personalization engine, but a
+coordination mechanism that helps align consumer preferences,
+operational feasibility, supplier stability, affordability, and
+sustainability.
+
+The paper contributes to engineering management by showing how
+mission-oriented ecosystems can be designed as multi-stakeholder systems
+with measurable value co-creation outcomes. It also demonstrates how
+recommendation systems can be reframed from user-centric tools into
+broader mechanisms for ecosystem governance and performance improvement.
+The proposed framework provides a structured basis for future empirical
+work, simulation experiments, and field implementation in campus food
+services and analogous service ecosystems.
+
+\section{Future Work}\label{future-work}
+
+Future research should extend the present framework in five directions.
+First, the model should be implemented as a full \textbf{simulation
+environment or digital twin} in order to test sensitivity to demand
+volatility, policy weighting, supply disruptions, and consumer
+heterogeneity. Second, future studies should estimate stakeholder
+utility functions empirically using transaction data, survey data,
+interviews, and operational records. Third, field studies should examine
+whether the framework improves outcomes in real campus dining settings
+and whether observed gains are robust over time.
+
+Fourth, future work should examine governance issues in greater depth,
+particularly fairness across user groups, explainability of
+recommendations, and the managerial legitimacy of stakeholder-weight
+assignments. Finally, the framework should be generalized beyond campus
+food services to other sustainable service ecosystems in which
+mission-oriented innovation depends on coordinated digital decision
+support. Together, these directions would move the framework from
+conceptual and simulation-based design toward validated engineering
+management practice.
+
+\section{References}\label{references}
+
+\subsection{Core references used in the
+synthesis}\label{core-references-used-in-the-synthesis}
+
+\begin{itemize}
+\tightlist
+\item
+  Bondevik et al.~(2024). \emph{A systematic review on food recommender
+  systems}.
+\item
+  Tran et al.~(2018). \emph{An overview of recommender systems in the
+  healthy food domain}.
+\item
+  Trattner \& Elsweiler (2017). \emph{Food Recommender Systems:
+  Important Contributions, Challenges and Future Research Directions}.
+\item
+  Ge et al.~(2015). \emph{Health-aware Food Recommender System}.
+\item
+  Zheng (2017). \emph{Multi-Stakeholder Recommendation: Applications and
+  Challenges}.
+\item
+  Abdollahpouri \& Burke (2019). \emph{Multi-stakeholder Recommendation
+  and its Connection to Multi-sided Fairness}.
+\item
+  Wu et al.~(2021). \emph{Multi-FR: A Multi-objective Optimization
+  Framework for Multi-stakeholder Fairness-aware Recommendation}.
+\item
+  Burke et al.~(2018). \emph{Balanced neighborhoods for multi-sided
+  fairness in recommendation}.
+\item
+  Roy et al.~(2015). \emph{Food environment interventions to improve the
+  dietary behavior of young adults in tertiary education settings}.
+\item
+  Deliens et al.~(2014). \emph{Determinants of eating behaviour in
+  university students}.
+\item
+  Caruso et al.~(2025). \emph{The campus food environment and
+  postsecondary student diet: a systematic review}.
+\item
+  Dahl et al.~(2024). \emph{Assessing the Healthfulness of University
+  Food Environments: A Systematic Review of Methods and Tools}.
+\item
+  Peixoto et al.~(2026). \emph{Sustainability in university restaurants:
+  a scoping review of evaluation focus and strategies}.
+\item
+  Guimarães et al.~(2024). \emph{Plate Food Waste in Food Services: A
+  Systematic Review and Meta-Analysis}.
+\item
+  Tsolakidis et al.~(2024). \emph{Artificial Intelligence and Machine
+  Learning Technologies for Personalized Nutrition: A Review}.
+\end{itemize}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-abdollahpouri2019fairness}
+Abdollahpouri, H., and R. Burke. 2019. {``Multi-Stakeholder
+Recommendation and Its Connection to Multi-Sided Fairness.''}
+\emph{Adjunct Proceedings of the 27th ACM Conference on User Modeling,
+Adaptation and Personalization}.
+
+\bibitem[\citeproctext]{ref-bondevik2024}
+{Bondevik, H. et al.} 2024. {``A Systematic Review on Food Recommender
+Systems.''} \emph{Artificial Intelligence Review}.
+
+\bibitem[\citeproctext]{ref-caruso2025campus}
+{Caruso, M. L. et al.} 2025. {``The Campus Food Environment and
+Postsecondary Student Diet: A Systematic Review.''} \emph{Journal of
+American College Health}.
+
+\bibitem[\citeproctext]{ref-deliens2014determinants}
+Deliens, T., P. Clarys, I. De Bourdeaudhuij, and B. Deforche. 2014.
+{``Determinants of Eating Behaviour in University Students: A
+Qualitative Study Using Focus Group Discussions.''} \emph{BMC Public
+Health} 14: 53.
+
+\bibitem[\citeproctext]{ref-guimaraes2024waste}
+{Guimaraes, J. et al.} 2024. {``Plate Food Waste in Food Services: A
+Systematic Review and Meta-Analysis.''} \emph{Nutrients / Source TBD}.
+
+\bibitem[\citeproctext]{ref-peixoto2026sustainability}
+{Peixoto, A. et al.} 2026. {``Sustainability in University Restaurants:
+A Scoping Review of Evaluation Focus and Strategies.''} \emph{Revista de
+Nutricao / Source TBD}.
+
+\bibitem[\citeproctext]{ref-rostami2024group}
+{Rostami, S. et al.} 2024. {``A Novel Healthy Food Recommendation to
+User Groups Based on Their Preferences and Health Conditions.''}
+\emph{Neurocomputing}.
+
+\bibitem[\citeproctext]{ref-roy2015tertiary}
+Roy, R., B. Kelly, A. Rangan, and M. Allman-Farinelli. 2015. {``Food
+Environment Interventions to Improve the Dietary Behavior of Young
+Adults in Tertiary Education Settings: A Systematic Literature
+Review.''} \emph{Journal of the Academy of Nutrition and Dietetics} 115
+(10): 1647--81.
+
+\bibitem[\citeproctext]{ref-tran2018healthy}
+Tran, T. N. T., M. Atas, A. Felfernig, and M. Stettinger. 2018. {``An
+Overview of Recommender Systems in the Healthy Food Domain.''}
+\emph{Journal of Intelligent Information Systems} 50 (3): 501--26.
+
+\bibitem[\citeproctext]{ref-trattner2017food}
+Trattner, C., and D. Elsweiler. 2017. {``Food Recommender Systems:
+Important Contributions, Challenges and Future Research Directions.''}
+\emph{arXiv Preprint arXiv:1711.02760}.
+
+\bibitem[\citeproctext]{ref-workplace2025explanation}
+Unknown, A. 2025. {``An Explanation Interface for Healthy Food
+Recommendations in a Real-Life Workplace Deployment.''}
+\emph{Journal/Source TBD}.
+
+\bibitem[\citeproctext]{ref-wang2024hypergraph}
+{Wang, X. et al.} 2024. {``Improving Healthy Food Recommender Systems
+Through Heterogeneous Hypergraph Learning.''} \emph{Journal of King Saud
+University - Computer and Information Sciences}.
+
+\bibitem[\citeproctext]{ref-wu2021multifr}
+{Wu, Z. et al.} 2021. {``Multi-FR: A Multi-Objective Optimization
+Framework for Multi-Stakeholder Fairness-Aware Recommendation.''}
+\emph{arXiv Preprint arXiv:2105.02951}.
+
+\bibitem[\citeproctext]{ref-zheng2017msr}
+Zheng, Y. 2017. {``Multi-Stakeholder Recommendation: Applications and
+Challenges.''} \emph{arXiv Preprint arXiv:1707.08913}.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}

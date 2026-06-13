@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="David Folio">
+<meta name="author" content="John Doe">
+<meta name="dcterms.date" content="2023-06-23">
+<meta name="keywords" content="IEEE, IEEEtran, journal, Quarto, Pandoc, template">
+
+<title>A Sample Article Using quarto-ieee for IEEE Journal and Transactions</title><style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="coba_files/libs/clipboard/clipboard.min.js"></script>
+<script src="coba_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="coba_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="coba_files/libs/quarto-html/popper.min.js"></script>
+<script src="coba_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="coba_files/libs/quarto-html/anchor.min.js"></script>
+<link href="coba_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="coba_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="coba_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="coba_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="coba_files/libs/bootstrap/bootstrap-09c1a541552e8979af35e5759c276857.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<!-- This is what works with Quarto -->
+<script>
+  MathJax = {
+    loader: {load: ['[tex]/mhchem', '[tex]/physics']},
+    tex: {
+      tags: 'ams',  // should be 'ams', 'none', or 'all'
+      packages: {'[+]': ['mhchem','physics']}
+    }
+  };
+</script>
+
+
+<meta name="citation_title" content="A Sample Article Using `quarto-ieee` for IEEE Journal and Transactions">
+<meta name="citation_abstract" content="This document describes the most common article elements and how to use the 
+`quarto-ieee` class with Pandoc/Quarto-Markdown to produce files that are
+suitable for submission to IEEE journals.  
+`quarto-ieee` can produce conference, journal, and technical note (correspondence) 
+papers with a suitable choice of class options. 
+It intends to generate PDF and HTML outputs that closely mimick what IEEE would generate.
+">
+<meta name="citation_keywords" content="IEEE,IEEEtran,journal,Quarto,Pandoc,template">
+<meta name="citation_author" content="David Folio">
+<meta name="citation_author" content="John Doe">
+<meta name="citation_publication_date" content="2023-06-23">
+<meta name="citation_cover_date" content="2023-06-23">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-06-23">
+<meta name="citation_fulltext_html_url" content="https://github.com/dfolio/quarto-ieee">
+<meta name="citation_pdf_url" content="https://github.com/dfolio/quarto-ieee/template.pdf">
+<meta name="citation_language" content="en">
+<meta name="citation_firstpage" content="1">
+<meta name="citation_lastpage" content="3">
+<meta name="citation_journal_title" content="GitHUB">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Document Sections</h2>
+   
+  <ul>
+  <li><a href="#i.-introduction" id="toc-i.-introduction" class="nav-link active" data-scroll-target="#i.-introduction"><span class="header-section-number">1</span> I. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#contributions" id="toc-contributions" class="nav-link" data-scroll-target="#contributions"><span class="header-section-number">1.1</span> Contributions</a></li>
+  </ul></li>
+  <li><a href="#ii.-related-work" id="toc-ii.-related-work" class="nav-link" data-scroll-target="#ii.-related-work"><span class="header-section-number">2</span> II. Related Work</a>
+  <ul class="collapse">
+  <li><a href="#a.-aging-technologies-and-deficit-oriented-design" id="toc-a.-aging-technologies-and-deficit-oriented-design" class="nav-link" data-scroll-target="#a.-aging-technologies-and-deficit-oriented-design"><span class="header-section-number">2.1</span> A. Aging Technologies and Deficit-Oriented Design</a></li>
+  <li><a href="#b.-social-connectedness-and-wellbeing" id="toc-b.-social-connectedness-and-wellbeing" class="nav-link" data-scroll-target="#b.-social-connectedness-and-wellbeing"><span class="header-section-number">2.2</span> B. Social Connectedness and Wellbeing</a></li>
+  <li><a href="#c.-narrative-identity-and-later-life" id="toc-c.-narrative-identity-and-later-life" class="nav-link" data-scroll-target="#c.-narrative-identity-and-later-life"><span class="header-section-number">2.3</span> C. Narrative Identity and Later Life</a></li>
+  <li><a href="#d.-generativity-and-productive-aging" id="toc-d.-generativity-and-productive-aging" class="nav-link" data-scroll-target="#d.-generativity-and-productive-aging"><span class="header-section-number">2.4</span> D. Generativity and Productive Aging</a></li>
+  <li><a href="#e.-community-computing-multiagent-systems-and-human-centered-ai" id="toc-e.-community-computing-multiagent-systems-and-human-centered-ai" class="nav-link" data-scroll-target="#e.-community-computing-multiagent-systems-and-human-centered-ai"><span class="header-section-number">2.5</span> E. Community Computing, Multiagent Systems, and Human-Centered AI</a></li>
+  <li><a href="#f.-research-gap" id="toc-f.-research-gap" class="nav-link" data-scroll-target="#f.-research-gap"><span class="header-section-number">2.6</span> F. Research Gap</a></li>
+  </ul></li>
+  <li><a href="#iii.-grace-as-a-socio-technical-ecosystem" id="toc-iii.-grace-as-a-socio-technical-ecosystem" class="nav-link" data-scroll-target="#iii.-grace-as-a-socio-technical-ecosystem"><span class="header-section-number">3</span> III. GRACE as a Socio-Technical Ecosystem</a>
+  <ul class="collapse">
+  <li><a href="#a.-core-premise" id="toc-a.-core-premise" class="nav-link" data-scroll-target="#a.-core-premise"><span class="header-section-number">3.1</span> A. Core Premise</a></li>
+  <li><a href="#b.-five-relational-domains" id="toc-b.-five-relational-domains" class="nav-link" data-scroll-target="#b.-five-relational-domains"><span class="header-section-number">3.2</span> B. Five Relational Domains</a></li>
+  <li><a href="#c.-narrative-identity-as-system-core" id="toc-c.-narrative-identity-as-system-core" class="nav-link" data-scroll-target="#c.-narrative-identity-as-system-core"><span class="header-section-number">3.3</span> C. Narrative Identity as System Core</a></li>
+  <li><a href="#d.-theater-of-life-perspective" id="toc-d.-theater-of-life-perspective" class="nav-link" data-scroll-target="#d.-theater-of-life-perspective"><span class="header-section-number">3.4</span> D. Theater-of-Life Perspective</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="coba.pdf"><i class="bi bi-file-pdf"></i>PDF (ieee)</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full" itemprop="headline">
+<div class="col-12 page-columns page-full">
+<div class="quarto-header page-columns page-full">
+
+  <div class="quarto-title column-body">
+  <div class="container col">
+    <h1 class="title" itemprop="headline">A Sample Article Using <code>quarto-ieee</code> for IEEE Journal and Transactions</h1>
+    
+    <div class="container">
+    <div class="mb-3 mt-2 d-grid gap-3 d-md-flex">
+      
+      <a href="#citation" class="btn btn-outline-primary" role="button">Cite This</a>
+      <a href="https://github.com/dfolio/quarto-ieee/blob/main/template.pdf" class="btn btn-danger text-white" role="button"><i class="bi bi-file-pdf" rel="img" aria-label="PDF"></i>PDF</a>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="quarto-subheader">
+  <div class="quarto-author-banner p-0">
+  <div class="d-flex align-items-center flex-nowrap">
+        <div class="quarto-author overflow-hidden">
+    <div class="d-flex flex-nowrap">
+      <div class="quarto-author-contents align-items-center text-truncate pe-0">
+                <span class="author-info"><a href="https://dfolio.fr/" title="INSA Centre Val de Loire, Laboratoire Prisme, Unknown affiliation, ">David Folio</a><a href="https://orcid.org/0000-0001-9430-6091" class="quarto-title-author-orcid px-1" target="orcid.widget" rel="me noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"></a></span> and&nbsp;<span class="author-info">John Doe</span>
+              </div>
+    </div>
+    </div>
+    
+    <div class="d-none d-md-flex align-items-center">
+    <div class="author-all d-none d-md-block">
+      <a href="#authors" class="">All Authors</a>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</div>
+</div>
+<hr class="px-3 mt-2">
+</header>
+<div class="quarto-main-body container p-0">
+<section class="quarto-abstract d-flex">
+<div class="container">
+<div class="quarto-abstract-block d-flex row g-0">
+<div class="col-12">
+  <div class="abstract mb-3">
+    <strong class="abstract-title">Abstract:</strong>
+    <p>This document describes the most common article elements and how to use the <code>quarto-ieee</code> class with Pandoc/Quarto-Markdown to produce files that are suitable for submission to IEEE journals.<br>
+    <code>quarto-ieee</code> can produce conference, journal, and technical note (correspondence) papers with a suitable choice of class options. It intends to generate PDF and HTML outputs that closely mimick what IEEE would generate.</p>
+  </div>
+</div>
+</div>
+
+<div class="citation-meta published-in pb-3">
+<strong class="citation-title">Published in:</strong> GitHUB
+(
+
+2023-06-23)
+
+</div>
+
+<div class="container g-0 pt-3">
+<div class="grid">
+  <div class="g-col-6">
+        <div class="citation-meta pb-3"><strong class="citation-title">Page(s):</strong> 1-3</div>
+            <div class="citation-meta pb-3"><strong class="citation-title">Date of Publication:</strong> 23 June 2023</div>  </div>
+  <div class="g-col-6">
+    
+    
+  </div>
+
+    <div class="g-col-12 pb-3">
+    <div class="funding">
+      <a class="btn p-0" data-bs-toggle="collapse" href="#collapseFA" role="button" aria-expanded="false" aria-controls="collapseFA"><div class="expand_caret caret"><i class="bi bi-caret-right-fill"></i></div><strong>Funding Agency</strong></a>
+      <div class="collapse" id="collapseFA">
+        <div class="funding-info">
+        The <code>quarto-ieee</code> template is freely available under the MIT license on github: <a href="https://github.com/dfolio/quarto-ieee" class="uri">https://github.com/dfolio/quarto-ieee</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+<div class="quarto-body-content">
+<section id="i.-introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> I. Introduction</h1>
+<p>Population aging is reshaping healthcare, labor, family structures, and public services. In response, digital systems for older adults have grown rapidly, especially in telehealth, remote monitoring, medication support, and care coordination. These systems are valuable, but many are built around narrow assumptions: that old age is primarily a condition of decline, risk, and dependency.</p>
+<p>That assumption is socially and technically limiting. Older adults are not only patients or service users. They are also storytellers, mentors, workers, caregivers, citizens, spiritual beings, and bearers of memory and legacy. Their wellbeing depends not only on safety and functional support, but also on continuity of identity, meaningful relationships, opportunities to contribute, and the capacity to interpret life events within a coherent story.</p>
+<p>This paper proposes GRACE—Growing, Resourceful, Active, and Enriched Life—as a socio-technical ecosystem for elder wellbeing. GRACE is an intelligent community computing framework organized around five relational domains: 1) spiritual self, 2) family and friends, 3) working colleagues, 4) communities, and 5) the wider world, including markets and public services. GRACE is grounded in the premise that elder wellbeing is relational and that the quality of relationships shapes the exchange of care, recognition, participation, and contribution.</p>
+<p>The central design claim of GRACE is that narrative identity should be treated as a core systems concept. Older adults should not be modeled merely through static profiles, health states, or risk scores. They should be understood as persons living through unfolding stories. GRACE therefore acts as a live autobiographical ecosystem, helping elders remain connected to selfhood across daily life, transitions, and adversity. A high-level overview is shown in Fig. 1, with the multiagent architecture shown in Fig. 2 and the dynamic closed-loop logic in Fig. 3.</p>
+<p>To operationalize this vision, the paper introduces the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood. The paper further adds three innovations: 1) a Daily Story Creation Engine that frames lived experience through the hero’s journey, 2) an AI-based Fast State Predictor that forecasts near-future wellbeing state, and 3) a Smart Stimulus Agent that initiates timely, personalized prompts to preserve wellbeing and authorship. Finally, the paper proposes an agent-based simulation design to demonstrate these innovations.</p>
+<section id="contributions" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="contributions"><span class="header-section-number">1.1</span> Contributions</h2>
+<ol type="1">
+<li>A socio-technical framework for elder wellbeing centered on narrative identity, relationship quality, and contribution exchange.</li>
+<li>The GRACE Index, a daily metric of narrative selfhood and adaptive continuity.</li>
+<li>Three AI-enabled innovations—daily story creation, fast state prediction, and smart stimuli—for anticipatory wellbeing support.</li>
+<li>An agent-based simulation design for evaluating these mechanisms before real-world deployment.</li>
+</ol>
+</section>
+</section>
+<section id="ii.-related-work" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> II. Related Work</h1>
+<section id="a.-aging-technologies-and-deficit-oriented-design" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="a.-aging-technologies-and-deficit-oriented-design"><span class="header-section-number">2.1</span> A. Aging Technologies and Deficit-Oriented Design</h2>
+<p>Technologies for older adults have often focused on safety, surveillance, and functional support (Sixsmith &amp; Gutman, 2013; Czaja et al., 2006; Mitzner et al., 2010). While these systems can improve independence and care delivery, they may also reproduce deficit-oriented assumptions about aging. HCI scholarship has argued that such framings narrow the design space and underplay agency, participation, and dignity (Vines et al., 2015).</p>
+</section>
+<section id="b.-social-connectedness-and-wellbeing" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="b.-social-connectedness-and-wellbeing"><span class="header-section-number">2.2</span> B. Social Connectedness and Wellbeing</h2>
+<p>Social relationships are strongly associated with wellbeing, resilience, and mortality outcomes (Holt-Lunstad et al., 2010). Social isolation and perceived loneliness can negatively affect cognition and health (Cacioppo &amp; Hawkley, 2009). In later life, relationship quality matters as much as contact frequency, including dimensions such as reciprocity, belonging, and social integration (Cornwell &amp; Waite, 2009; Berkman et al., 2000).</p>
+</section>
+<section id="c.-narrative-identity-and-later-life" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="c.-narrative-identity-and-later-life"><span class="header-section-number">2.3</span> C. Narrative Identity and Later Life</h2>
+<p>Narrative identity theory suggests that individuals construct a sense of self through evolving life stories (McAdams, 2001; Habermas &amp; Bluck, 2000; Singer, 2004). In later life, autobiographical continuity and life review become especially important for meaning-making, legacy, and coping with transition (Butler, 1963; Bohlmeijer et al., 2007). Yet most digital systems do not operationalize narrative identity as a core computational construct.</p>
+</section>
+<section id="d.-generativity-and-productive-aging" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="d.-generativity-and-productive-aging"><span class="header-section-number">2.4</span> D. Generativity and Productive Aging</h2>
+<p>Older adults continue to contribute through mentoring, caregiving, volunteering, advising, and cultural transmission. Generativity is a major source of meaning and self-worth (McAdams &amp; de St.&nbsp;Aubin, 1992; Erikson, 1982). Productive aging research likewise emphasizes the value of creating roles and systems that support continued contribution (Morrow-Howell et al., 2017).</p>
+</section>
+<section id="e.-community-computing-multiagent-systems-and-human-centered-ai" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="e.-community-computing-multiagent-systems-and-human-centered-ai"><span class="header-section-number">2.5</span> E. Community Computing, Multiagent Systems, and Human-Centered AI</h2>
+<p>Community informatics has shown how digital infrastructures can support participation, local engagement, and social inclusion (Gurstein, 2007; Carroll, 2014). Multiagent systems offer a framework for distributed intelligence, coordination, and adaptive decision-making (Jennings et al., 1998; Wooldridge, 2009). Human-centered AI emphasizes reliability, safety, and alignment with human values (Shneiderman, 2020). GRACE integrates these strands into a single socio-technical architecture.</p>
+</section>
+<section id="f.-research-gap" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="f.-research-gap"><span class="header-section-number">2.6</span> F. Research Gap</h2>
+<p>Existing work rarely integrates all of the following in one coherent framework: narrative identity, relationship quality, contribution exchange, community participation, institutional and market access, predictive wellbeing support. GRACE addresses this gap by proposing a narrative-centered, socially grounded AI ecosystem for elder wellbeing.</p>
+</section>
+</section>
+<section id="iii.-grace-as-a-socio-technical-ecosystem" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> III. GRACE as a Socio-Technical Ecosystem</h1>
+<p>The overall socio-technical structure of GRACE is illustrated in Fig. 1. The five relational domains, their functions, and example system supports are summarized in Table I.</p>
+<section id="a.-core-premise" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="a.-core-premise"><span class="header-section-number">3.1</span> A. Core Premise</h2>
+<p>GRACE is based on a simple claim: elder wellbeing emerges from the interaction of identity, relationships, contribution, and access. A person flourishes when they remain connected to who they are, to people who matter, to ways of contributing, and to the broader systems that structure everyday life.</p>
+</section>
+<section id="b.-five-relational-domains" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="b.-five-relational-domains"><span class="header-section-number">3.2</span> B. Five Relational Domains</h2>
+<p>GRACE supports the elder’s relationship with: 1. Spiritual self 2. Family and friends 3. Working colleagues 4. Communities 5. Wider world, including markets and public services.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Description</th>
+<th>Wellbeing Functions</th>
+<th>Example System Supports</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spiritual Self</td>
+<td>Inner life, values, faith, reflection, existential orientation</td>
+<td>peace, meaning, hope, acceptance, moral continuity</td>
+<td>reflection prompts, prayer/meditation support, ritual reminders, grief-sensitive dialogue</td>
+</tr>
+<tr class="even">
+<td>Family and Friends</td>
+<td>Intimate and enduring personal relationships</td>
+<td>belonging, affection, care continuity, emotional security, shared memory</td>
+<td>family coordination, message prompts, memory sharing, visit planning</td>
+</tr>
+<tr class="odd">
+<td>Working Colleagues</td>
+<td>Ongoing or legacy vocational and professional ties</td>
+<td>role continuity, usefulness, recognition, mentoring, productive identity</td>
+<td>mentoring matching, advisory opportunities, skill-sharing, encore work prompts</td>
+</tr>
+<tr class="even">
+<td>Communities</td>
+<td>Local groups, associations, faith communities, neighborhoods, civic groups</td>
+<td>participation, recognition, mutual aid, collective belonging</td>
+<td>event discovery, volunteering prompts, group participation support, community connectors</td>
+</tr>
+<tr class="odd">
+<td>Wider World</td>
+<td>Markets, institutions, services, transport, civic systems, public services</td>
+<td>inclusion, access, autonomy, service reach, economic and civic participation</td>
+<td>service navigation, benefits support, transport coordination, marketplace access</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-narrative-identity-as-system-core" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="c.-narrative-identity-as-system-core"><span class="header-section-number">3.3</span> C. Narrative Identity as System Core</h2>
+<p>Rather than using a conventional user profile, GRACE maintains a Living Autobiography Model. Its principal constructs are summarized in Table II.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Construct</th>
+<th>Description</th>
+<th>Examples</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Life Chapters</td>
+<td>Major periods or phases of life</td>
+<td>childhood, career phase, retirement, caregiving years</td>
+<td>supports contextual interpretation of current events</td>
+</tr>
+<tr class="even">
+<td>Major Transitions</td>
+<td>Turning points and disruptions</td>
+<td>bereavement, migration, illness onset, retirement</td>
+<td>supports sensitivity to recurring vulnerabilities and resilience patterns</td>
+</tr>
+<tr class="odd">
+<td>Key Relationships</td>
+<td>Important persons and social ties</td>
+<td>spouse, children, friends, mentor, colleague</td>
+<td>informs relational prompts and support priorities</td>
+</tr>
+<tr class="even">
+<td>Roles and Identities</td>
+<td>Enduring self-definitions</td>
+<td>parent, teacher, engineer, volunteer, believer</td>
+<td>supports role continuity and contribution opportunities</td>
+</tr>
+<tr class="odd">
+<td>Values and Beliefs</td>
+<td>Moral, spiritual, and existential commitments</td>
+<td>faith, service, independence, compassion</td>
+<td>aligns prompts and interventions with personal meaning</td>
+</tr>
+<tr class="even">
+<td>Strengths and Skills</td>
+<td>Capabilities and resources</td>
+<td>mentoring, storytelling, teaching, organizing</td>
+<td>supports contribution matching</td>
+</tr>
+<tr class="odd">
+<td>Meaningful Places</td>
+<td>Places of emotional or narrative significance</td>
+<td>family home, workplace, temple, neighborhood park</td>
+<td>supports memory prompts and place-based engagement</td>
+</tr>
+<tr class="even">
+<td>Rituals and Traditions</td>
+<td>Recurrent meaningful practices</td>
+<td>weekly worship, family dinners, anniversaries</td>
+<td>supports temporal and spiritual grounding</td>
+</tr>
+<tr class="odd">
+<td>Significant Memories</td>
+<td>Events with autobiographical weight</td>
+<td>marriage, awards, losses, milestones</td>
+<td>supports story creation and identity continuity</td>
+</tr>
+<tr class="even">
+<td>Present Concerns</td>
+<td>Current needs and stresses</td>
+<td>loneliness, mobility limits, family conflict</td>
+<td>supports adaptive intervention</td>
+</tr>
+<tr class="odd">
+<td>Future Hopes</td>
+<td>Forward-looking aims</td>
+<td>legacy project, reconnecting with family, community service</td>
+<td>supports future-oriented narrative continuity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d.-theater-of-life-perspective" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="d.-theater-of-life-perspective"><span class="header-section-number">3.4</span> D. Theater-of-Life Perspective</h2>
+<p>GRACE may be understood as a theater of life: the elder is the lead performer and author, life settings are stages, daily events are scenes, human and AI participants form the cast, and narrative identity is the script in progress. This metaphor is not decorative; it is a design principle. It emphasizes authorship, visibility, and continuity.</p>
+</section>
+</section>
+</div>
+
+<div id="quarto-accordion" class="accordion d-none d-md-block" role="tablist">
+    <div class="accordion-item container" id="">
+    <div class="accordion-header d-flex justify-content-between" id="heading-author" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-authors" aria-expanded="false" aria-controls="collapse-authors">Authors</button>
+    </div>
+    <div id="collapse-authors" class="accordion-body collapse" aria-labelledby="heading-authors" data-bs-parent="#quarto-accordion" role="tabpanel">
+          <div class="accordion-authors container">
+      <div class="author-card"><div class="grid gap-0">
+                <div class="author-photo g-col-3 pe-3">
+          <img src="david-folio.png" alt="Author image of David Folio">
+        </div>
+        <div class="g-col-9">
+          <div><span class="author-info"><a href="https://dfolio.fr/" title="INSA Centre Val de Loire, Laboratoire Prisme, Unknown affiliation, ">David Folio</a><a href="https://orcid.org/0000-0001-9430-6091" class="quarto-title-author-orcid px-1" target="orcid.widget" rel="me noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"></a></span></div>
+          <div>Laboratoire Prisme, INSA Centre Val de Loire, Bourges, 18800 France, Unknown affiliation</div>
+        </div>
+              </div>
+      <div><p>Use <code>IEEEbiography</code> with figure as option and the author name as the argument followed by the biography text.</p></div>
+      </div>
+      </div>
+           <div class="accordion-authors container">
+      <div class="author-card"><div class="grid gap-0">
+                <div class="g-col-12">
+          <div><span class="author-info">John Doe</span></div>
+          <div>Anonymous University</div>
+        </div>
+              </div>
+      <div><p>Use <code>IEEEbiographynophoto</code> and the author name as the argument followed by the biography text.</p></div>
+      </div>
+      </div>
+         </div>
+  </div>
+  
+    <div class="accordion-item container">
+    <div class="accordion-header d-flex justify-content-between" id="heading-references" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-references" aria-expanded="false" aria-controls="collapse-references">References</button>
+    </div>
+    <div id="collapse-references" class="accordion-body collapse" aria-labelledby="heading-references" data-bs-parent="#quarto-accordion" role="tabpanel">
+      <section id="references" class="accordion-references">
+        <div id="refs" role="list">
+
+        </div>
+      </section>
+    </div>
+  </div>
+      <div class="accordion-item container">
+    <div class="accordion-header d-flex justify-content-between" id="heading-keywords" role="tab">
+      <button id="authors" class="accordion-button p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-keywords" aria-expanded="false" aria-controls="collapse-keywords">Keywords</button>
+    </div>
+    <div id="collapse-keywords" class="accordion-body collapse" aria-labelledby="heading-keywords" data-bs-parent="#quarto-accordion" role="tabpanel">
+      <div class="accordion-keywords">
+        <strong>Author Keywords</strong>
+        <ul class="mt-3 p-0">
+                <li>IEEE, </li><li>IEEEtran, </li><li>journal, </li><li>Quarto, </li><li>Pandoc, </li>
+        <li>template</li>
+                </ul>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@software{folio2023,
+  author = {Folio, David and Doe, John},
+  title = {A {Sample} {Article} {Using} `Quarto-Ieee` for {IEEE}
+    {Journal} and {Transactions}},
+  pages = {1-3},
+  date = {2023-06-23},
+  url = {https://github.com/dfolio/quarto-ieee},
+  langid = {en},
+  abstract = {This document describes the most common article elements
+    and how to use the `quarto-ieee` class with Pandoc/Quarto-Markdown
+    to produce files that are suitable for submission to IEEE journals.
+    `quarto-ieee` can produce conference, journal, and technical note
+    (correspondence) papers with a suitable choice of class options. It
+    intends to generate PDF and HTML outputs that closely mimick what
+    IEEE would generate.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-folio2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="">D.
+Folio and J. Doe, <span>“A Sample Article Using `quarto-ieee` for IEEE
+Journal and Transactions,”</span> <em>GitHUB</em>. pp. 1–3, 23-June-2023
+[Online]. Available: <a href="https://github.com/dfolio/quarto-ieee">https://github.com/dfolio/quarto-ieee</a></div>
+</div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

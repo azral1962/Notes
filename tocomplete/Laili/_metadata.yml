@@ -1,0 +1,50 @@
+title: "Value Co-Creation Modeling for Mission-Oriented Sustainable Service Ecosystems: A Multi-Stakeholder Recommendation Framework for Campus Food Services"
+authors:
+  - name: "First Author"
+    affiliations:
+      - name: ITB
+        department: STEI
+        city: Bandung
+        country: Indonesia
+    email: "author1@university.edu"
+  - name: "Second Author"
+    affiliations:
+      - name: ITB
+        department: STEI
+        city: Bandung
+        country: Indonesia
+    email: "author2@university.edu"
+  - name: "Third Author"
+    affiliations:
+      - name: ITB
+        department: STEI
+        city: Bandung
+        country: Indonesia
+    email: "author3@university.edu"
+
+bibliography: references.bib
+
+
+abstract: |
+  Mission-oriented sustainable ecosystems require organizations to coordinate multiple stakeholders whose objectives are interdependent but not fully aligned. This paper proposes a **value co-creation modeling framework** for designing and improving sustainable service ecosystems through a **Multi-Stakeholder Recommendation System (MSRS)** embedded in a decision-support architecture. The framework is developed from an engineering management perspective, with emphasis on system design, stakeholder coordination, operational feasibility, and performance improvement.
+
+  The study applies the framework to **healthy, tasty, and affordable campus food services**, a setting in which consumers, canteens, food providers, suppliers, researchers, and university administrators jointly shape service outcomes. The proposed model integrates three elements: (1) a stakeholder ecosystem model, (2) a food-flow model tracing the transformation of raw ingredients into ready-to-consume meals and waste streams, and (3) a decision-support system that uses MSRS logic to coordinate menu planning, procurement, pricing, production, and personalized recommendations. In this architecture, the MSRS is not treated solely as a consumer personalization tool; rather, it functions as a coordination mechanism for balancing taste, health, affordability, operational efficiency, supplier stability, and sustainability.
+
+  This paper contributes to engineering management in three ways. First, it formalizes value co-creation as a design problem in mission-oriented sustainable ecosystems. Second, it extends recommendation systems from user-centric optimization to multi-stakeholder coordination. Third, it provides a simulation-ready framework for evaluating ecosystem performance using multidimensional measures such as healthy meal uptake, taste satisfaction, price accessibility, waste reduction, and sustainability. The framework offers a transferable foundation for managing sustainable service ecosystems in food and other industries where digital intelligence can improve both stakeholder value and system-level performance.
+
+index-terms: 
+   - engineering management
+   - mission-oriented innovation
+   - sustainable service ecosystem
+   - value co-creation
+   - multi-stakeholder recommendation system 
+   - decision support system
+   - service innovation
+   - campus food services
+   - affordability
+   - sustainability
+
+format:
+  ieee-typst: 
+    keep-typ: true
+

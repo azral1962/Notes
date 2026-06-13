@@ -1,9 +1,0 @@
-# Bab 9. Rekayasa Tradisional, Core Engine, dan EMI
-
-Pada **TISE level 0**, rekayasa berfokus pada desain dan implementasi **core engine** untuk memecahkan masalah terkait **energi, material, dan informasi (EMI)**. Secara fungsional, pada level ini terdapat dua jenis mesin:
-
-- mesin statik;
-- mesin dinamik.
-
-TISE level 0 tetap menjadi fondasi yang harus tersedia agar semua level di atasnya dapat diwujudkan secara nyata. Dalam arti ini, level tertinggi tidak membatalkan level terendah. Sebaliknya, semakin tinggi level rekayasa, semakin besar kebutuhan akan keandalan, keterukuran, dan realitas yang disediakan oleh level di bawahnya.
-
