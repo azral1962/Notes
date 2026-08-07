@@ -1,0 +1,26 @@
+
+# II. Related Work
+
+## A. Aging Technologies and Deficit-Oriented Design
+
+Technologies for older adults have often focused on safety, surveillance, and functional support (Sixsmith & Gutman, 2013; Czaja et al., 2006; Mitzner et al., 2010). While these systems can improve independence and care delivery, they may also reproduce deficit-oriented assumptions about aging. HCI scholarship has argued that such framings narrow the design space and underplay agency, participation, and dignity (Vines et al., 2015).
+
+## B. Social Connectedness and Wellbeing
+
+Social relationships are strongly associated with wellbeing, resilience, and mortality outcomes (Holt-Lunstad et al., 2010). Social isolation and perceived loneliness can negatively affect cognition and health (Cacioppo & Hawkley, 2009). In later life, relationship quality matters as much as contact frequency, including dimensions such as reciprocity, belonging, and social integration (Cornwell & Waite, 2009; Berkman et al., 2000).
+
+## C. Narrative Identity and Later Life
+
+Narrative identity theory suggests that individuals construct a sense of self through evolving life stories (McAdams, 2001; Habermas & Bluck, 2000; Singer, 2004). In later life, autobiographical continuity and life review become especially important for meaning-making, legacy, and coping with transition (Butler, 1963; Bohlmeijer et al., 2007). Yet most digital systems do not operationalize narrative identity as a core computational construct.
+
+## D. Generativity and Productive Aging
+
+Older adults continue to contribute through mentoring, caregiving, volunteering, advising, and cultural transmission. Generativity is a major source of meaning and self-worth (McAdams & de St. Aubin, 1992; Erikson, 1982). Productive aging research likewise emphasizes the value of creating roles and systems that support continued contribution (Morrow-Howell et al., 2017).
+
+## E. Community Computing, Multiagent Systems, and Human-Centered AI
+
+Community informatics has shown how digital infrastructures can support participation, local engagement, and social inclusion (Gurstein, 2007; Carroll, 2014). Multiagent systems offer a framework for distributed intelligence, coordination, and adaptive decision-making (Jennings et al., 1998; Wooldridge, 2009). Human-centered AI emphasizes reliability, safety, and alignment with human values (Shneiderman, 2020). GRACE integrates these strands into a single socio-technical architecture.
+
+## F. Research Gap
+
+Existing work rarely integrates all of the following in one coherent framework: narrative identity, relationship quality, contribution exchange, community participation, institutional and market access, predictive wellbeing support. GRACE addresses this gap by proposing a narrative-centered, socially grounded AI ecosystem for elder wellbeing.

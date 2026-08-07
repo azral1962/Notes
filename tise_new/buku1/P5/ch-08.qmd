@@ -1,0 +1,12 @@
+# Aplikasi & Tantangan
+
+## Ringkasan
+
+## Smart City & Transportasi Otonom
+
+## Diagnosis Medis (DSS)
+
+## Explainable AI (XAI)
+
+## Etika & Tanggung Jawab Hukum (Liability)
+

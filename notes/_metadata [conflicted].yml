@@ -1,0 +1,28 @@
+author: "Armein Z. R. Langi"
+date: last-modified
+
+format:
+    typst:
+        toc: true
+        number-sections: true
+        title: "Notes"
+        title-block: true
+        title-block-style: "large"
+        title-block-alignment: "center"
+        title-block-spacing: 1em
+        title-block-font: "serif"
+        title-block-color: "primary"
+        title-block-background: "background"
+        title-block-border: "1pt solid primary"
+        title-block-border-radius: 0.5em
+        title-block-shadow: "0.5em 0.5em 1em rgba(0, 0, 0, 0.1)"
+        title-block-padding: 1em
+        title-block-margin: 1em
+        title-block-width: "80%"
+        title-block-max-width: "800px"
+        title-block-min-width: "400px"
+        title-block-responsive: true
+        title-block-responsive-breakpoint: "600px"
+        title-block-responsive-width: "100%"
+        title-block-responsive-max-width: "100%"
+        title-block-responsive-min-width: "100%"            

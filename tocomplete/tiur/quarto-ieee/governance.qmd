@@ -1,0 +1,82 @@
+
+# V. Three AI-Enabled Innovations
+
+These innovations are summarized in @tbl-innovations. The hero’s-journey structure is shown in @fig-heros-journey, while the predictive-intervention loop is shown in @fig-predictive-loop.
+
+| Innovation | Inputs | Mechanism | Outputs | Intended Effect |
+|---|---|---|---|---|
+| Daily Story Creation Engine | daily events, emotional signals, interactions, reflections | converts daily life into hero’s-journey narrative structure | daily story, heroic integration score, narrative tags | improved meaning-making and narrative continuity |
+| Fast State Predictor | GRACE Index history, trends, event context, story features | forecasts near-future wellbeing state and risk | predicted score, predicted zone, intervention urgency | earlier detection of decline |
+| Smart Stimulus Agent | predicted state, preferences, consent rules, intervention history | selects personalized prompt or support action | narrative/relational/spiritual/contribution/community/practical stimulus | reduced time in vulnerable or disrupted states |
+
+: Three AI-enabled innovations in GRACE. {#tbl-innovations}
+
+## A. Daily Story Creation Through the Hero’s Journey
+
+GRACE includes a Daily Story Creation Engine that interprets everyday life through the hero’s journey. Instead of storing events as isolated entries, it reframes them through elements such as ordinary world, call to adventure, trial, guide, courage, insight, and return.
+
+![Placeholder for the daily hero's-journey story structure.](assets/figures/fig-heros-journey.png){#fig-heros-journey}
+
+$$H_t = \alpha_1T_t + \alpha_2Gd_t + \alpha_3Co_t + \alpha_4In_t$$
+
+This mechanism is intended to buffer narrative fragmentation by preserving meaning under adversity.
+
+## B. AI-Based Fast State Predictor
+
+GRACE includes a Fast State Predictor that forecasts near-future wellbeing state using recent GRACE Index trajectories, event patterns, and story features.
+
+![Placeholder for the predictive-intervention loop.](assets/figures/fig-predictive-loop.png){#fig-predictive-loop}
+
+$$\hat{G}_{t+\tau} = P(G_{t-\ell:t}, X_{t-\ell:t}, H_{t-\ell:t}, U_{t-\ell:t})$$
+
+This predictor enables the system to shift from reactive monitoring to anticipatory support.
+
+## C. Smart Stimulus Agent
+
+GRACE also includes a Smart Stimulus Agent that selects a personalized prompt or support action based on predicted state.
+
+$$a_t \in A = \{a^{nar}, a^{rel}, a^{spi}, a^{con}, a^{com}, a^{prac}, a^{none}\}$$
+
+$$a_t = \pi(\hat{Z}_{t+1}, X_t, p)$$
+
+The aim is not behavior control, but supportive intervention that helps preserve dignity, continuity, and agency.
+
+# VI. Multiagent Architecture and Governance
+
+The architecture is shown in @fig-multiagent-architecture. Agent responsibilities are summarized in @tbl-agents. Governance risks and safeguards are summarized in @tbl-governance and visually in @fig-governance-safeguards.
+
+![Placeholder for the GRACE multiagent architecture.](assets/figures/fig-multiagent-architecture.png){#fig-multiagent-architecture}
+
+| Agent | Role | Inputs | Outputs | Domains |
+|---|---|---|---|---|
+| Narrative Agent | maintain autobiographical continuity | reflections, memories, daily events | stories, narrative summaries, continuity signals | all domains |
+| Relationship Agent | track and strengthen social ties | interaction logs, visit patterns | tie-strength estimates, reconnection suggestions | family, colleagues, communities |
+| Wellbeing Agent | synthesize cross-domain wellbeing | GRACE dimensions, trends, events | state summaries, risk signals | all domains |
+| Spiritual Companion Agent | support reflection and spiritual grounding | rituals, reflections, values | spiritual prompts, grounding support | spiritual self |
+| Family Coordination Agent | coordinate communication and care continuity | family contacts, calendars, events | visit plans, updates, reminders | family and friends |
+| Work and Contribution Agent | identify contribution opportunities | skills, roles, requests | mentoring matches, contribution prompts | colleagues, communities |
+| Community Connector Agent | support participation and local belonging | local events, memberships, opportunities | engagement recommendations | communities |
+| Service Access Agent | connect to services and institutions | appointments, transport, benefits needs | service guidance, access support | wider world |
+| Memory and Legacy Agent | preserve long-term story and artifacts | stories, photos, milestones | archives, legacy packages | family, communities |
+| Ethics and Safety Agent | enforce safeguards and accountability | consent rules, system actions, risk states | approvals, constraints, audit records | all domains |
+
+: Agent responsibilities in the GRACE ecosystem. {#tbl-agents}
+
+
+| Risk | Concern | Safeguard |
+|---|----|----|
+| Paternalism | system over-directs behavior; erosion of autonomy | adjustable autonomy, opt-out controls, human override |
+| Narrative Imposition | system interprets life story too forcefully; distortion of selfhood | user-editable stories, narrative sovereignty, transparency |
+| Privacy Breach | sensitive autobiographical data exposed; loss of trust, harm to dignity | access controls, encryption, consent-based sharing |
+| Over-Intervention | too many prompts or alerts; fatigue, frustration, disengagement | rate limits, preference learning, intervention thresholds |
+| Family Misuse | relatives use system to pressure elder; coercion or conflict | granular permissions, elder-first governance |
+| Prediction Opacity | unclear reason for risk prediction; mistrust, confusion | explainable prediction summaries |
+| Bias in Prediction | model underperforms for some groups; inequitable support | fairness auditing, subgroup validation |
+| Emotional Harm | prompts surface painful memories badly; distress or retraumatization | sensitivity rules, contextual timing, human escalation |
+| Dependency on System | overreliance on AI mediation; reduced direct human engagement | human-in-the-loop design, connection-first policies |
+
+: Governance risks and safeguards for GRACE. {#tbl-governance}
+
+![Placeholder for governance risks and safeguards.](assets/figures/fig-governance-safeguards.png){#fig-governance-safeguards}
+
+Because GRACE handles intimate autobiographical and relational data, governance is central. The risks and safeguards in @tbl-governance address paternalism, narrative imposition, privacy breaches, over-intervention, family misuse, prediction opacity, bias, emotional harm, and dependency. The system should include consent-based data access, explainable interventions, adjustable autonomy, human override, privacy protection, and safeguards against manipulative prompting.

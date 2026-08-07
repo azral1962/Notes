@@ -1,0 +1,21 @@
+
+# Introduction {#sec-intro}
+
+[P]{.IEEEPARstart}[population]{} 
+ aging is reshaping healthcare, labor, family structures, and public services. In response, digital systems for older adults have grown rapidly, especially in telehealth, remote monitoring, medication support, and care coordination. These systems are valuable, but many are built around narrow assumptions: that old age is primarily a condition of decline, risk, and dependency.
+
+That assumption is socially and technically limiting. Older adults are not only patients or service users. They are also storytellers, mentors, workers, caregivers, citizens, spiritual beings, and bearers of memory and legacy. Their wellbeing depends not only on safety and functional support, but also on continuity of identity, meaningful relationships, opportunities to contribute, and the capacity to interpret life events within a coherent story.
+
+This paper proposes GRACE—Growing, Resourceful, Active, and Enriched Life—as a socio-technical ecosystem for elder wellbeing. GRACE is an intelligent community computing framework organized around five relational domains: 1) spiritual self, 2) family and friends, 3) working colleagues, 4) communities, and 5) the wider world, including markets and public services. GRACE is grounded in the premise that elder wellbeing is relational and that the quality of relationships shapes the exchange of care, recognition, participation, and contribution.
+
+The central design claim of GRACE is that narrative identity should be treated as a core systems concept. Older adults should not be modeled merely through static profiles, health states, or risk scores. They should be understood as persons living through unfolding stories. GRACE therefore acts as a live autobiographical ecosystem, helping elders remain connected to selfhood across daily life, transitions, and adversity. A high-level overview is shown in @fig-grace-ecosystem, with the multiagent architecture shown in @fig-multiagent-architecture and the dynamic closed-loop logic in @fig-predictive-loop.
+
+To operationalize this vision, the paper introduces the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood. The paper further adds three innovations: 1) a Daily Story Creation Engine that frames lived experience through the hero’s journey, 2) an AI-based Fast State Predictor that forecasts near-future wellbeing state, and 3) a Smart Stimulus Agent that initiates timely, personalized prompts to preserve wellbeing and authorship. Finally, the paper proposes an agent-based simulation design to demonstrate these innovations.
+
+## Contributions
+
+1. A socio-technical framework for elder wellbeing centered on narrative identity, relationship quality, and contribution exchange.
+2. The GRACE Index, a daily metric of narrative selfhood and adaptive continuity.
+3. Three AI-enabled innovations—daily story creation, fast state prediction, and smart stimuli—for anticipatory wellbeing support.
+4. An agent-based simulation design for evaluating these mechanisms before real-world deployment.
+

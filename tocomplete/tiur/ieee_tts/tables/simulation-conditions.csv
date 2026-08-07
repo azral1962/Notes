@@ -1,0 +1,5 @@
+Condition,Story,Prediction,Stimulus,Expectation
+Baseline,No,No,No,monitoring only
+Story Only,Yes,No,No,improved narrative continuity
+Story + Prediction,Yes,Yes,No,improved early risk detection
+Full GRACE,Yes,Yes,Yes,highest stability and fastest recovery

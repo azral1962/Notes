@@ -1,0 +1,220 @@
+# Note Template
+
+Date: 2026-03-28
+
+## Summary
+
+- 
+
+## Tasks
+
+- [ ] 
+
+## Ideas
+
+- 
+
+## References
+
+Bisa, dan malah enak—**Codespaces** sudah siap untuk pakai `git` dan Anda bisa install `gh` (GitHub CLI) dengan cepat. Jadi Anda bisa menjalankan **release-week** dan **send PR massal** langsung dari browser.
+
+Berikut cara yang paling mulus.
+
+---
+
+## 1) Buat Codespace dari repo template `II-2111-2026/tugas`
+
+1. Buka repo `II-2111-2026/tugas`
+2. Klik **Code** → tab **Codespaces** → **Create codespace on main**
+3. Tunggu sampai VS Code web terbuka
+
+---
+
+## 2) Install GitHub CLI (`gh`) di Codespace
+
+Di terminal Codespace jalankan:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y gh
+```
+
+Cek:
+
+```bash
+gh --version
+```
+
+---
+
+## 3) Login `gh` (biasanya otomatis)
+
+Coba:
+
+```bash
+gh auth status
+```
+
+Kalau belum login:
+
+```bash
+gh auth login -h github.com -p https -w
+```
+
+`-w` akan membuka browser auth flow. Ikuti instruksinya.
+
+---
+
+## 4) Jalankan workflow mingguan di Codespace
+
+### A) Release minggu aktif (edit `ACTIVE_WEEK.txt` + push)
+
+Cara simpel (tanpa script):
+
+```bash
+echo "w02" > ACTIVE_WEEK.txt
+git add ACTIVE_WEEK.txt
+git commit -m "Release: set ACTIVE_WEEK to w02" || true
+git push
+```
+
+### B) Kirim PR massal ke semua repo mahasiswa
+
+Anda bisa pakai script bash yang saya berikan sebelumnya (lebih cocok di Codespace daripada PowerShell).
+
+Buat file `send_sync_prs.sh`:
+
+```bash
+cat > send_sync_prs.sh << 'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+
+ORG="II-2111-2026"
+TEMPLATE_REPO="tugas"
+STUDENT_PREFIX="tugas-"
+UPSTREAM_URL="https://github.com/${ORG}/${TEMPLATE_REPO}.git"
+
+gh auth status >/dev/null 2>&1 || { echo "Run: gh auth login"; exit 1; }
+
+UPSTREAM_BRANCH="$(gh repo view "${ORG}/${TEMPLATE_REPO}" --json defaultBranchRef --jq '.defaultBranchRef.name')"
+
+BRANCH_NAME="sync-template-$(date +%Y%m%d-%H%M)"
+PR_TITLE="Sync course updates ($(date +%Y-%m-%d))"
+PR_BODY="Sync update dosen dari ${ORG}/${TEMPLATE_REPO}. Student work di submissions/ tidak diubah."
+
+WORKDIR="_sync_repos"
+mkdir -p "$WORKDIR"
+cd "$WORKDIR"
+
+REPOS="$(gh repo list "$ORG" --limit 1000 --json name --jq '.[].name' | grep "^${STUDENT_PREFIX}" || true)"
+[ -z "$REPOS" ] && { echo "No repos found."; exit 0; }
+
+for REPO in $REPOS; do
+  FULL="${ORG}/${REPO}"
+  [ "$REPO" = "$TEMPLATE_REPO" ] && continue
+
+  BASE_BRANCH="$(gh repo view "$FULL" --json defaultBranchRef --jq '.defaultBranchRef.name')"
+
+  if [ ! -d "$REPO/.git" ]; then
+    gh repo clone "$FULL" "$REPO"
+  fi
+  cd "$REPO"
+
+  git remote get-url upstream >/dev/null 2>&1 || git remote add upstream "$UPSTREAM_URL"
+  git fetch origin
+  git fetch upstream
+
+  git checkout "$BASE_BRANCH"
+  git pull --ff-only origin "$BASE_BRANCH"
+
+  BEFORE="$(git rev-parse HEAD)"
+  git checkout -B "$BRANCH_NAME"
+
+  if ! git merge --no-edit "upstream/${UPSTREAM_BRANCH}"; then
+    echo "Conflict in $FULL, resolve manually in _sync_repos/$REPO"
+    cd ..
+    continue
+  fi
+
+  AFTER="$(git rev-parse HEAD)"
+  if [ "$BEFORE" = "$AFTER" ]; then
+    echo "No changes for $FULL"
+    cd ..
+    continue
+  fi
+
+  git push -u origin "$BRANCH_NAME" --force-with-lease
+
+  if ! gh pr view --repo "$FULL" "$BRANCH_NAME" >/dev/null 2>&1; then
+    gh pr create --repo "$FULL" \
+      --base "$BASE_BRANCH" \
+      --head "$BRANCH_NAME" \
+      --title "$PR_TITLE" \
+      --body "$PR_BODY"
+    echo "PR created for $FULL"
+  fi
+
+  cd ..
+done
+EOF
+
+chmod +x send_sync_prs.sh
+```
+
+Lalu jalankan:
+
+```bash
+./send_sync_prs.sh
+```
+
+---
+
+## 5) Kenapa Codespaces cocok?
+
+* Tidak perlu install Git di laptop
+* Bisa jalan dari mana saja
+* Aman untuk operasi massal (PR ke banyak repo)
+* Mudah copy/paste log jika ada konflik
+
+---
+
+## Catatan penting (agar tidak overwrite kerja mahasiswa)
+
+Selama mahasiswa hanya mengedit `submissions/**`, dan Anda hanya update `weeks/**`, `tests_bank/**`, `.github/**`, `tools/**`, maka merge PR hampir selalu bersih.
+
+---
+
+Kalau Anda ingin, saya bisa buatkan **folder `admin/`** di repo template berisi:
+
+* `release_week.sh`
+* `send_sync_prs.sh`
+* `README_admin.md`
+  sehingga Anda tinggal “run 2 commands” setiap minggu di Codespace.
+
+
+Siap—ini **patch ZIP** yang menambahkan folder `admin/` berisi script untuk dipakai di **GitHub Codespaces**:
+
+[Download admin_scripts_patch.zip](sandbox:/mnt/data/admin_scripts_patch.zip)
+
+## Isi folder `admin/`
+
+* `admin/README_admin.md` → panduan singkat (2 perintah utama)
+* `admin/install_gh.sh` → install GitHub CLI (`gh`) di Codespace
+* `admin/release_week.sh` → set `ACTIVE_WEEK.txt` (mis. `w02`) lalu commit+push ke branch default
+* `admin/send_sync_prs.sh` → kirim PR massal ke semua repo mahasiswa prefix `tugas-`
+
+## Cara pakai di Codespaces (ringkas)
+
+Di root repo template `II-2111-2026/tugas`:
+
+```bash
+chmod +x admin/*.sh
+./admin/install_gh.sh
+gh auth login -h github.com -p https -w   # kalau belum login
+
+./admin/release_week.sh w02
+./admin/send_sync_prs.sh
+```
+
+Mahasiswa tinggal buka repo mereka → tab **Pull requests** → klik **Merge pull request**.
+

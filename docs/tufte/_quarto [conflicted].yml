@@ -1,0 +1,4 @@
+project:
+  type: manuscript
+format:
+  tufte-inspired-typst: default

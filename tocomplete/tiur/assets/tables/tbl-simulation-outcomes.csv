@@ -1,0 +1,6 @@
+﻿"Variable","Type","Function"
+"Stable-Zone Days","outcome metric","proportion of days with G ≥ 70; assesses sustained wellbeing"
+"Vulnerable/Disrupted Days","outcome metric","proportion of days with G < 70; assesses instability"
+"Recovery Time","outcome metric","days to return to stable zone after shock; assesses resilience"
+"Reframing Success","outcome metric","proportion of adverse days with high H; assesses story engine effect"
+"Intervention Efficiency","outcome metric","gain in G per stimulus action; assesses stimulus value"

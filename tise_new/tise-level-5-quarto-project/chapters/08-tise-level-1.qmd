@@ -1,0 +1,22 @@
+# Bab 8. Smart Engineering, Energon, dan Mesin PSKVE
+
+Pada **TISE level 1**, rekayasa diperluas dari konversi energi, material, dan informasi menjadi konversi **energon**.
+
+Energon adalah segala sesuatu yang memiliki kapasitas untuk melakukan kerja atau memungkinkan kerja terjadi. Lima jenis energon yang penting adalah:
+
+1. energi fisik;
+2. waktu dan perhatian manusia;
+3. skill dan pengetahuan;
+4. token bernilai;
+5. peran, status, atau keanggotaan.
+
+Mesin **PSKVE** adalah smart engine yang mengonversi energon menjadi:
+
+- Product;
+- Service;
+- Knowledge;
+- Value;
+- Environment.
+
+Kekuatan utama mesin PSKVE terletak pada kemampuannya untuk tidak mereduksi solusi menjadi satu jenis output saja. Sebuah solusi dapat gagal bila hanya menghasilkan produk, tetapi tidak menghadirkan layanan; dapat rapuh bila hanya memberi layanan tanpa membangun pengetahuan; dapat tidak berkelanjutan bila tidak menghasilkan nilai yang dirasakan; dan dapat sulit hidup bila tidak didukung lingkungan yang tepat.
+

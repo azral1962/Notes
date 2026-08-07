@@ -1,0 +1,10 @@
+# Metodologi Rekayasa
+
+## Ringkasan
+
+## Arsitektur ASTF (Application, System, Tech, Fund)
+
+## Validasi PICOC (Evidence-based)
+
+## V-Method (Siklus Hidup Terstruktur)
+

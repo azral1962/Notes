@@ -1,0 +1,18 @@
+# Metodologi dan Workflow Rekayasa TISE level 1
+
+## Fokus Metodologis
+
+Metodologi pada TISE level 1 berfokus pada **konversi energon** menjadi PSKVE melalui mesin multidisiplin.
+
+## Langkah Workflow
+
+1. Mengidentifikasi **beban masalah**.
+2. Mengidentifikasi **energon**.
+3. Mendesain hasil yang dibutuhkan dalam bentuk **PSKVE**.
+4. Mendesain **instrumen konversi** dan **transaksi**.
+5. Mengonfigurasi **stasiun, jalan, dan kendaraan**.
+6. Mengevaluasi apakah kapasitas kerja yang dihasilkan sudah lebih besar daripada beban masalah.
+
+## Contoh Kasus: Healthy Food untuk Warga Kampus
+
+Pada level ini, sistem healthy food kampus dapat dipahami sebagai lingkungan kerja cerdas dengan stasiun (kantin, aplikasi, dashboard), jalan (aliran data, transaksi, pengguna), dan kendaraan (aplikasi, agen rekomendasi, petugas kantin, sistem pembayaran).

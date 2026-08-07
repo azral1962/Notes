@@ -1,0 +1,17 @@
+# Ba    b 11. Smart Engineering, Energon, dan Mesin PSKVE
+
+## Prinsip Umum Rekayasa
+
+Keberhasilan suatu solusi terjadi bila solusi tersebut memiliki **kapasitas kekuatan yang melebihi berat beban masalah**. Pada TISE level 1, logika ini diperluas: beban masalah tidak lagi hanya berbentuk energi fisik, material, atau informasi, tetapi juga dapat hadir sebagai kekurangan layanan, pengetahuan, nilai, atau lingkungan.
+
+## Energon
+
+Energon adalah segala sesuatu yang memiliki kapasitas untuk melakukan kerja atau memungkinkan kerja terjadi.
+
+## PSKVE sebagai Kapasitas Kerja
+
+PSKVE dapat dipahami sebagai lima bentuk kapasitas kerja yang dibutuhkan untuk menghadapi berbagai domain masalah: **Product, Service, Knowledge, Value, Environment**.
+
+## Lingkungan Kerja: Stasiun, Jalan, Kendaraan
+
+Konsep **stasiun, jalan, dan kendaraan** dipakai sebagai proto-model dari PSKVE engineering untuk menjelaskan bagaimana berbagai energon dikonversi, dipindahkan, ditransaksikan, dan diwujudkan menjadi PSKVE.

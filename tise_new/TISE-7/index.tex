@@ -1,0 +1,897 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Rekayasa Cerdas Triune-Intelligence},
+  pdfauthor={Norah Jones},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Rekayasa Cerdas Triune-Intelligence}
+\author{Norah Jones}
+\date{2026-04-28}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+This is a Quarto book.
+
+To learn more about Quarto books visit
+\url{https://quarto.org/docs/books}.
+
+\bookmarksetup{startatroot}
+
+\chapter{Paradigma, Metodologi, dan Hirarki Rekayasa
+TISE}\label{paradigma-metodologi-dan-hirarki-rekayasa-tise}
+
+\section{Pendahuluan: Panggilan Rekayasa Abad
+ke-21}\label{pendahuluan-panggilan-rekayasa-abad-ke-21}
+
+Rekayasa pada abad ke-21 menghadapi krisis fundamental berupa devaluasi
+agensi manusia akibat otomatisasi yang bersifat menggantikan. Sebagai
+respons, paradigma \emph{Triune-Intelligence Smart-Engineering} (TISE)
+hadir bukan sebagai evolusi teknis semata, melainkan sebagai panggilan
+bagi para rekayasawan untuk menjadi seorang ``Vokator''---problem solver
+kreatif yang berdiri teguh di persimpangan antara sains murni dan
+filosofi kemanusiaan yang mendalam.
+
+TISE menawarkan antitesis terhadap otomatisasi yang memarginalkan
+manusia. Jika rekayasa tradisional sering kali bertujuan menggantikan
+peran manusia demi efisiensi, TISE menerapkan prinsip \emph{Leverage \&
+Amplification}. Visi ini dapat dipahami melalui analogi ``Penyanyi Rock
+dan \emph{Sound System}''. Dalam paradigma lama, mesin dirancang untuk
+menyanyi menggantikan sang artis. Sebaliknya, dalam sistem TISE,
+teknologi berperan sebagai sistem tata suara raksasa yang tidak
+menggantikan suara penyanyi, melainkan mengamplifikasi pesona suara
+tersebut agar getarannya mampu menjangkau ratusan ribu pendengar di
+stadion global. TISE mengubah teknologi dari alat otomatisasi yang
+mematikan peran (displace) menjadi instrumen amplifikasi yang
+memberdayakan (empower).
+
+``People Aspire, You Inspire, Engineers Deliver.''
+
+Visi akhir TISE adalah mentransformasi manusia dari konsumen pasif
+menjadi agen aktif yang menjalankan misi uniknya. Rekayasa TISE adalah
+sebuah janji akademik dan kemanusiaan: untuk tidak membiarkan satu pun
+talenta manusia di bumi ini terbuang sia-sia.
+
+\section{Struktur Hirarki Keilmuan
+Penopang}\label{struktur-hirarki-keilmuan-penopang}
+
+Penerapan TISE bertumpu pada tiga pilar keilmuan yang saling mengunci
+untuk memberikan arah, presisi, dan ``jiwa'' bagi setiap solusi
+teknologi:
+
+\textbf{Fundamen (Ilmu Pengetahuan Alam):} Menyediakan hukum-hukum dasar
+mengenai materi dan energi sebagai tumpuan realitas fisik dan batas
+keterlaksanaan teknis.
+
+\textbf{Penengah (Ilmu Formal/Matematika):} Berfungsi sebagai jembatan
+pemroses data yang presisi, logika sistemik, dan pengelola kompleksitas
+melalui pemodelan matematis.
+
+\textbf{Penarik/Konteks (Ilmu Kemanusiaan dan Etika):} Sosiologi,
+filosofi, dan etika yang memberikan makna, tujuan, dan batasan moral
+agar teknologi senantiasa memuliakan martabat manusia sebagai subjek
+utama.
+
+\section{Evolusi Rekayasa: Hirarki 7 Level
+TISE}\label{evolusi-rekayasa-hirarki-7-level-tise}
+
+Hirarki TISE disusun secara sistematis dari lapisan fisik hingga
+ekosistem kemanusiaan global, di mana level yang lebih tinggi memberikan
+konteks dan arah, sementara level yang lebih rendah memberikan tumpuan
+realitas dan keandalan.
+
+\subsection{Level 0: Lapisan Rekayasa Tradisional (EMI
+Core)}\label{level-0-lapisan-rekayasa-tradisional-emi-core}
+
+Pada level ini, fokus rekayasa adalah konversi Energi, Material, dan
+Informasi (EMI) melalui \emph{Core Engine}. Berdasarkan
+fungsionalitasnya, level ini membedakan antara \textbf{Mesin Statik}
+yang berfokus pada stabilitas dan kemampuan menahan beban, serta
+\textbf{Mesin Dinamik} yang berfokus pada pengendalian gerak dan aliran.
+
+\textbf{Tabel 3.1: Komponen Core Engine TISE Level 0}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Komponen
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Fungsi Utama
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Intake & Gerbang kontrol pertama bagi masuknya sumber daya EMI ke dalam
+sistem. \\
+Encoder & Mengubah sumber daya mentah menjadi bentuk yang siap diproses
+(kondisi aliran/sinyal). \\
+Decoder & Menerjemahkan hasil pemrosesan internal menjadi aksi atau
+keluaran nyata. \\
+Exhaust & Mekanisme pelepasan hasil samping atau limbah untuk menjaga
+efisiensi siklus. \\
+Flywheel & Penyimpan energi kerja yang menjaga kontinuitas, momentum,
+dan kestabilan siklus. \\
+\end{longtable}
+}
+
+\subsection{Level 1: Lapisan Smart Engineering (PSKVE \&
+Energon)}\label{level-1-lapisan-smart-engineering-pskve-energon}
+
+Level 1 memperluas domain rekayasa ke arah konversi
+\emph{Energon}---segala sesuatu yang memiliki kapasitas untuk melakukan
+kerja. Rekayasa ini menggunakan metafora lingkungan kerja yang terdiri
+dari \textbf{Stasiun} (titik layanan), \textbf{Jalan} (jalur
+distribusi), dan \textbf{Kendaraan} (penggerak/protokol). Mesin
+\textbf{PSKVE} bekerja melalui \textbf{Instrumen Konversi} (mengubah
+energon menjadi bentuk kerja) dan \textbf{Instrumen Transaksi}
+(mengelola aliran nilai).
+
+Lima jenis \emph{Energon} yang dimobilisasi adalah:
+
+\textbf{Energon-1:} Energi fisik dan material tradisional.
+
+\textbf{Energon-2:} Waktu dan perhatian manusia.
+
+\textbf{Energon-3:} Skill, keahlian, dan pengetahuan.
+
+\textbf{Energon-4:} Token bernilai (finansial/aset).
+
+\textbf{Energon-5:} Peran, status, dan keanggotaan sosial.
+
+Mesin ini mengonversi energon menjadi kapasitas kerja dalam lima bentuk:
+\emph{Product, Service, Knowledge, Value,} dan \emph{Environment}.
+
+\subsection{Level 2: Lapisan PUDAL Triune (Kecerdasan
+Agen)}\label{level-2-lapisan-pudal-triune-kecerdasan-agen}
+
+Level ini mengorkestrasi \emph{Triune Intelligence} (NI, CI, AI) dalam
+siklus agentik adaptif menggunakan \emph{Natural Language Prompting}
+sebagai medium interaksi lintas kecerdasan.
+
+\textbf{Perception:} NI menangkap intuisi dan emosi; CI menangkap norma
+komunitas; AI menangkap data digital dan pola statistik.
+
+\textbf{Understanding:} NI menafsirkan niat; CI memberikan konteks
+sosial; AI mengolah klasifikasi dan prediksi data.
+
+\textbf{Decision:} NI memberikan pertimbangan etis; CI memberikan
+legitimasi kolektif; AI mensimulasikan konsekuensi logis.
+
+\textbf{Action:} Dilaksanakan melalui aksi manusia (NI), koordinasi
+kelompok (CI), atau otomasi sistem (AI).
+
+\textbf{Learning:} NI belajar melalui refleksi; CI melalui audit sosial;
+AI melalui penyesuaian model data operasional.
+
+\subsection{Level 3: Lapisan Narasi (Identitas \&
+Agensi)}\label{level-3-lapisan-narasi-identitas-agensi}
+
+Sesuai dengan monograf TISE, Level 3 berfokus pada \textbf{Identitas
+Naratif} sebagai sumber utama formulasi misi. Manusia dipandang sebagai
+protagonis yang menuliskan kisah hidupnya. Rekayasa di sini membangun
+``Teater Solusi''---lingkungan di mana stakeholder mementaskan talenta
+uniknya. Penggunaan \textbf{Prompt Reflektif} di level ini membantu
+stakeholder untuk tidak sekadar menjadi operator teknis, melainkan
+memahami peran, nilai, dan panggilan naratifnya dalam sistem.
+
+\subsection{Level 4: Lapisan Meta-TISE DNA (Platform \&
+Reproduksi)}\label{level-4-lapisan-meta-tise-dna-platform-reproduksi}
+
+Level 4 adalah rekayasa atas artefak TISE itu sendiri agar menjadi
+platform reproduktif. Fokusnya adalah menjaga \textbf{DNA Desain} (pola,
+aturan, dan logika operasi) yang memungkinkan lahirnya \textbf{Artefak
+Anak}. Proses ini melibatkan ``perkawinan'' antara DNA platform yang
+sudah teruji dengan DNA gagasan baru, memastikan prinsip
+\emph{reusability} sehingga solusi tidak perlu dibangun dari nol,
+melainkan diwariskan dengan adaptasi konteks yang segar.
+
+\subsection{Level 5: Lapisan Valorize (Ekonomi Misi \&
+Stakeholder)}\label{level-5-lapisan-valorize-ekonomi-misi-stakeholder}
+
+Level 5 adalah level operasional tertinggi yang memobilisasi stakeholder
+bermisi melalui mesin \textbf{Matrix of Mission}. Struktur ini
+memastikan adanya pertukaran nilai yang adil dan berkelanjutan.
+
+\textbf{Tabel 3.2: Matrix of Mission (Arsitektur Kontribusi)}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Stakeholder
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+USER
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SOURCE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+REGULATOR
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+PROVIDER
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+USER & Misi \& Benefit & Kontribusi U ke S & Kontribusi U ke R &
+Kontribusi U ke P \\
+SOURCE & Kontribusi S ke U & Misi \& Benefit & Kontribusi S ke R &
+Kontribusi S ke P \\
+REGULATOR & Kontribusi R ke U & Kontribusi R ke S & Misi \& Benefit &
+Kontribusi R ke P \\
+PROVIDER & Kontribusi P ke U & Kontribusi P ke S & Kontribusi P ke R &
+Misi \& Benefit \\
+\end{longtable}
+}
+
+Keberhasilan level ini ditentukan oleh \textbf{Stakeholder Readiness
+Framework} (Arsitektur Kesiapan) yang mencakup 6 dimensi:
+\emph{Narrative, Mission, Competency, Motivational, Commitment,} dan
+\emph{Opportunity Readiness}.
+
+\subsection{Level 6: Ekosistem Keunggulan (Splendid Theaters of
+Life)}\label{level-6-ekosistem-keunggulan-splendid-theaters-of-life}
+
+Puncak evolusi TISE adalah terwujudnya \emph{Splendid Theaters of Life}.
+Ini adalah visi akhir di mana 7 miliar manusia mementaskan talenta
+uniknya di panggung dunia tanpa degradasi agensi. Dunia bertransformasi
+menjadi stadion global digital di mana teknologi memastikan setiap
+kontribusi individu memberikan nilai maksimal bagi kemanusiaan secara
+keseluruhan.
+
+\section{Metodologi Operasional
+Integratif}\label{metodologi-operasional-integratif}
+
+Operasionalisasi TISE mengintegrasikan fase linear rekayasa dengan
+siklus operasional \textbf{MOS-7} (\emph{Mission Operating System})
+untuk menjaga integritas misi dari awal hingga akhir.
+
+\textbf{Tabel 4.1: Workflow Rekayasa TISE Terintegrasi}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Fase Linear
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Fokus Utama
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MOS-7 Dominan
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Level TISE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Keluaran Utama
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Persepsi Masalah & Mendengar keluhan stakeholder & Hear, Model & Level 5
+& Rumusan persoalan \& alternatif konfigurasi \\
+Konsep \& Model & Memilih konfigurasi terbaik & Hear, Model, Design,
+Commit & Level 5, 3 & Matrix of Mission terpilih \& arah narasi \\
+Desain \& Planning & Menurunkan kebutuhan teknis & Design, Commit, Build
+& Level 4, 2, 1 & DNA Platform \& skema PUDAL/PSKVE \\
+Konstruksi & Membangun elemen \& artefak & Build, Commit, Operate &
+Level 4 s.d. 0 & Artefak anak \& instrumen layanan hidup \\
+Operasional & Menjalankan solusi nyata & Operate, Evaluate & Seluruh
+Level & Pengalaman user \& operasi provider nyata \\
+Evaluasi & Audit etika \& pembelajaran & Evaluate, Hear, Model & Level 5
+& Hasil audit misi \& desain siklus baru \\
+\end{longtable}
+}
+
+\section{Sintesis dan Kesimpulan}\label{sintesis-dan-kesimpulan}
+
+Hirarki TISE (0-6) membentuk satu rantai rekayasa utuh yang menyatukan
+visi kemanusiaan dengan keandalan teknologi. TISE menolak pemisahan
+antara efisiensi mesin dan martabat manusia, menempatkan pertumbuhan
+manusia sebagai bagian inheren dari proses rekayasa itu sendiri.
+
+\textbf{3 Prinsip Utama Keberhasilan TISE:}
+
+\textbf{Sentralitas Misi:} Solusi harus berakar pada misi naratif
+stakeholder, bukan sekadar fungsi teknis.
+
+\textbf{Amplifikasi Agensi:} Teknologi wajib memperkuat dan
+mengamplifikasi, bukan menggantikan, talenta unik manusia.
+
+\textbf{Kesiapan Stakeholder (Readiness):} Keberhasilan sistem
+bergantung pada pertumbuhan kesadaran, kompetensi, dan komitmen manusia
+di dalamnya melalui arsitektur kesiapan yang terukur.
+
+TISE adalah janji masa depan: sebuah paradigma rekayasa yang memastikan
+bahwa di tengah kemajuan teknologi, tidak akan ada satu pun talenta
+manusia yang terbuang sia-sia.
+
+\section{Daftar Pustaka}\label{daftar-pustaka}
+
+Morelli, N. (2002). Designing product/service systems: A methodological
+exploration. \emph{Design Issues}, 18(3), 3--17.
+
+Vezzoli, C., et al.~(2014). \emph{Product-Service System Design for
+Sustainability}. Sheffield, U.K.: Greenleaf Publishing.
+
+Berkovich, M., Leimeister, J. M., Hoffmann, A., \& Krcmar, H. (2014). A
+requirements data model for product service systems. \emph{Requirements
+Engineering}, 19, 161--186.
+
+Sholihah, M., Mitake, Y., Nakada, T., \& Shimomura, Y. (2019).
+Innovative design method for a valuable product-service system:
+Concretizing multi-stakeholder requirements. \emph{Journal of Advanced
+Mechanical Design, Systems and Manufacturing}, 13(5).
+
+Giordano, F., Morelli, N., De Götzen, A., \& Hunziker, J. (2018). The
+stakeholder map: A conversation tool for designing people-led public
+services. \emph{ServDes2018 Conference Proceedings}.
+
+Lievens, A., \& Blazevic, V. (2021). A service design perspective on the
+stakeholder engagement journey during B2B innovation. \emph{Industrial
+Marketing Management}, 95, 128--141.
+
+\bookmarksetup{startatroot}
+
+\chapter{Inovasi Pendidikan Teknik VALORAIZE melalui Paradigma
+TISE}\label{inovasi-pendidikan-teknik-valoraize-melalui-paradigma-tise}
+
+\section{Fondasi Filosofis: Paradigma Triune-Intelligence Smart
+Engineering
+(TISE)}\label{fondasi-filosofis-paradigma-triune-intelligence-smart-engineering-tise}
+
+Pendidikan teknik masa depan menuntut lebih dari sekadar penguasaan
+rumus; ia memerlukan kerangka kerja yang mampu menyinergikan kapasitas
+teknologi dengan nilai kemanusiaan dan batasan alam. Paradigma
+\textbf{Triune-Intelligence Smart Engineering (TISE)} mendefinisikan
+rekayasa sebagai aplikasi kreatif pengetahuan ilmiah untuk menghasilkan
+artefak (``Rancang-Bangun'') yang memanfaatkan kekuatan alam secara aman
+dan terkendali guna memecahkan masalah penting manusia.
+
+Filosofi TISE menggeser fokus dari optimasi teknis murni (seperti biaya
+dan efisiensi) menuju penciptaan nilai holistik. Hal ini dicapai melalui
+sinergi tiga pilar kecerdasan:
+
+\textbf{Kecerdasan Manusia (Homocordium):} Bertindak sebagai kompas
+moral, etika, dan penentu ``apa yang penting'' bagi kesejahteraan
+manusia.
+
+\textbf{Kecerdasan Buatan (Homodeus/Homologos):} Memberikan kekuatan
+komputasi, logika, dan kemampuan belajar adaptif sebagai mitra berpikir.
+
+\textbf{Kecerdasan Alam (Natural Intelligence):} Menetapkan batasan
+fisik, hukum termodinamika, dan parameter keberlanjutan ekosistem.
+
+Setiap artefak atau sistem yang lahir dari paradigma ini wajib memenuhi
+enam karakteristik utama:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Karakteristik
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Deskripsi Teknis
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Strong & Memiliki Core Engine fundamental untuk konversi energi sumber
+menjadi energi kerja. \\
+Smart & Memiliki PUDAL Engine sebagai inti kognitif untuk persepsi dan
+adaptasi berkelanjutan. \\
+Extended Range & Mampu mengoptimalkan nilai di lima dimensi energi:
+Product, Service, Knowledge, Value, dan Environmental. \\
+Realistic & Kinerja artefak divalidasi secara empiris menggunakan
+metodologi PICOC yang ketat. \\
+Doable & Kompleksitas desain dikelola melalui dekomposisi hierarkis
+struktur ASTF. \\
+Methodic & Pengembangan mengikuti proses sistematis yang menghubungkan
+desain dan validasi (V-Model). \\
+\end{longtable}
+}
+
+-\/-------------------------------------------------------------------------------
+
+\section{Arsitektur Platform VALORAIZE Learning: Dekomposisi
+ASTF}\label{arsitektur-platform-valoraize-learning-dekomposisi-astf}
+
+VALORAIZE mengadopsi kerangka kerja \textbf{ASTF} (\emph{Application,
+System, Technology, Fundamental}) untuk membedah struktur pendidikan
+teknik menjadi lapisan-lapisan yang dapat dikelola secara presisi.
+
+\textbf{Layer Aplikasi (A):} Fokus pada masalah utama mahasiswa:
+pencapaian N buah Capaian Pembelajaran Mata Kuliah (CPMK) dalam durasi
+15 minggu. Solusinya berupa lingkungan belajar digital yang mewajibkan
+penyerahan ``Karya'' sebagai bukti tertulis penguasaan materi.
+
+\textbf{Layer Sistem (S):} Mengatur integrasi antara \emph{Knowledge
+Marketplace}, Sistem Peta Pengetahuan Dasar (tempat berlatih kompetensi
+mikro), dan Sistem Peta Aplikasi (tempat menyusun solusi kompleks).
+
+\textbf{Layer Teknologi (T):} Menggunakan mesin kognitif berbasis AI
+untuk mengelola transaksi pengetahuan dan platform digital untuk
+mencatat akumulasi kompetensi mahasiswa.
+
+\textbf{Layer Riset Fundamental (F):} Berpijak pada prinsip optimasi
+jadwal waktu (riset operasi) dan teori konversi nilai PSKVE dalam proses
+transformasi belajar menjadi aset intelektual.
+
+\textbf{Aliran Vertikal:} Kerangka ASTF ini tidak berdiri sendiri; ia
+bekerja selaras dengan V-Model. Desain diturunkan dari Layer A menuju
+Layer F (sisi kiri V), sementara validasi dilakukan dari Layer F kembali
+naik ke Layer A (sisi kanan V) untuk memastikan setiap prinsip
+fundamental mendukung aplikasi akhir.
+
+-\/-------------------------------------------------------------------------------
+
+\section{Mekanisme Operasional: Siklus Kognitif PUDAL dan Transaksi
+PSKVE}\label{mekanisme-operasional-siklus-kognitif-pudal-dan-transaksi-pskve}
+
+VALORAIZE beroperasi sebagai ``mesin rekayasa pembelajaran'' melalui dua
+siklus utama: kognisi dan konversi nilai.
+
+\subsection{Siklus PUDAL (Proses
+Kognitif)}\label{siklus-pudal-proses-kognitif}
+
+Mahasiswa memproses setiap unit pengetahuan melalui lima tahap:
+
+\textbf{Perceive:} Merasakan kebutuhan pengetahuan berdasarkan
+\emph{Learning Outcome}.
+
+\textbf{Understand:} Mencerna materi melalui pola dan hubungan antar
+konsep.
+
+\textbf{Decision-making:} Merancang rute belajar untuk memecahkan
+persoalan CPMK.
+
+\textbf{Act:} Mengeksekusi rute dengan menghasilkan ``Produk
+Pengetahuan''.
+
+\textbf{Learning:} Mengevaluasi umpan balik untuk memperbarui skema
+kognitif.
+
+\subsection{Siklus Konversi Energi PSKVE (Ekonomi
+Pengetahuan)}\label{siklus-konversi-energi-pskve-ekonomi-pengetahuan}
+
+VALORAIZE memandang proses belajar sebagai siklus konversi transaksional
+lima dimensi energi:
+
+\textbf{Knowledge (Energi Pengetahuan):} Algoritma, skema, dan data yang
+dikuasai.
+
+\textbf{Product (Energi Produk):} Karya nyata atau tugas yang
+dihasilkan.
+
+\textbf{Service (Energi Layanan):} Kapasitas memberikan solusi yang
+memuaskan kebutuhan CPMK.
+
+\textbf{Value (Energi Nilai):} ``Mata uang'' berupa nilai atau pengakuan
+kompetensi.
+
+\textbf{Environmental (Energi Lingkungan):} Keberlanjutan rute belajar
+dan dampaknya pada ekosistem kelas.
+
+Dalam siklus ini, \textbf{Value Energy} (nilai/kredit) yang diberikan
+dosen digunakan untuk ``membeli'' atau menggerakkan \textbf{Knowledge
+Energy} mahasiswa, yang kemudian dikonversi menjadi \textbf{Product
+Energy} (tugas). Keberhasilan konversi ini mengisi ``Rekening Kekayaan
+Mahasiswa,'' di mana nilai akhir adalah akumulasi dari kualitas
+transaksi tersebut.
+
+-\/-------------------------------------------------------------------------------
+
+\section{Knowledge Marketplace dan Navigasi Rute
+Belajar}\label{knowledge-marketplace-dan-navigasi-rute-belajar}
+
+VALORAIZE memfasilitasi transaksi ``Produk Pengetahuan'' dalam sebuah
+pasar digital yang transparan.
+
+\subsection{Mekanisme Marketplace}\label{mekanisme-marketplace}
+
+\textbf{Dosen:} Menayangkan ``Iklan Produk Pengetahuan'' yang
+mendefinisikan \textbf{APA} (\emph{WHAT}) yang harus dicapai sebagai
+profil target.
+
+\textbf{Mahasiswa:} Mensubmit ``Produk Pengetahuan'' yang melaporkan
+\textbf{BAGAIMANA} (\emph{HOW}) rute kompetensi tersebut dijalani.
+
+\subsection{Navigasi 12-Langkah: Analogi Bandung ke
+Stanford}\label{navigasi-12-langkah-analogi-bandung-ke-stanford}
+
+Untuk memecahkan masalah kompleks, mahasiswa menyusun rute aplikasi
+seperti perjalanan dari Bandung ke Stanford University:
+
+Jalan Kaki (Rumah -\textgreater{} Gerbang). 2. Taksi (Gerbang
+-\textgreater{} Stasiun Bandung). 3. Jalan Kaki (Platform
+-\textgreater{} Gerbong). 4. Kereta Argo Parahyangan (Bandung
+-\textgreater{} Gambir). 5. Jalan Kaki (Gerbong -\textgreater{} Platform
+Gambir). 6. Jalan Kaki (Platform -\textgreater{} Bus Damri). 7. Bus
+Damri (Gambir -\textgreater{} Terminal 3 Soetta). 8. Prosedur Bandara
+(Check-in, Imigrasi, Boarding). 9. Terbang (Soetta -\textgreater{} SFO
+via Taipei). 10. Prosedur SFO (Imigrasi, Bagasi). 11. Bus SamTrans (SFO
+-\textgreater{} Palo Alto). 12. Stanford Shuttle (Palo Alto
+-\textgreater{} Kampus).
+
+Dalam setiap langkah, mahasiswa harus memilih moda:
+
+\textbf{Jalan Kaki:} Melakukan penurunan matematis dan logis secara
+manual (derivasi fundamental).
+
+\textbf{Berkendaraan:} Menggunakan rumus, tabel, atau program komputer
+(aplikasi praktis).
+
+\subsection{Struktur Mandatori Produk Pengetahuan (20
+Item)}\label{struktur-mandatori-produk-pengetahuan-20-item}
+
+Setiap karya mahasiswa wajib mengikuti struktur standar untuk menjamin
+kualitas:
+
+Judul; 2. Subjudul; 3. Abstrak; 4. Pendahuluan; 5. Masalah; 6. Konsep
+Solusi \& Kompetensi; 7. Laporan Kompetensi yang Didemonstrasikan; 8.
+Studi Literatur; 9. Peta Dasar (Rute \& Kendaraan); 10. Peta Aplikasi;
+11. Metodologi; 12. \emph{Gap} yang Dituju; 13. Analisis Tarik Mundur
+(\emph{Backwards Analysis}); 14. Evaluasi Pilihan Rute; 15. Susunan Rute
+Terpilih; 16. Hasil \& Diskusi; 17. Laporan Titik Antara; 18. Kesimpulan
+\& Saran; 19. Lampiran; 20. Rujukan.
+
+-\/-------------------------------------------------------------------------------
+
+\section{Metodologi Validasi: V-Model dan PICOC
+Berlapis}\label{metodologi-validasi-v-model-dan-picoc-berlapis}
+
+VALORAIZE memastikan keterandalan pendidikan melalui validasi berbasis
+bukti pada setiap lapisan ASTF di sisi kanan V-Model.
+
+\textbf{V-Model:} Sisi kiri mendekomposisi kebutuhan (dari Aplikasi
+hingga Riset Fundamental). Sisi kanan melakukan validasi dari bawah ke
+atas.
+
+\textbf{PICOC Berlapis:} Validasi dilakukan secara sistematis pada
+setiap tingkatan:
+
+\textbf{PICOC(F):} Memvalidasi teori konversi nilai (Misal: Apakah model
+PSKVE benar-benar mengoptimalkan alokasi waktu?).
+
+\textbf{PICOC(T):} Memvalidasi keandalan teknologi (Misal: Akurasi AI
+dalam mendeteksi profil kompetensi).
+
+\textbf{PICOC(S):} Memvalidasi integritas sistem (Misal:
+\emph{Throughput} pencapaian CPMK dalam 15 minggu).
+
+\textbf{PICOC(A):} Memvalidasi dampak pada pengguna (Misal: Kepuasan
+mahasiswa dan dosen terhadap lingkungan belajar).
+
+-\/-------------------------------------------------------------------------------
+
+\section{Studi Kasus: Mata Kuliah Sinyal dan Sistem
+(EL2007)}\label{studi-kasus-mata-kuliah-sinyal-dan-sistem-el2007}
+
+Implementasi pada EL2007 mengubah silabus statis menjadi rute dinamis 15
+minggu.
+
+\textbf{Contoh Destinasi Antara (Minggu 2: Sistem LTI):}
+
+\textbf{Target:} Mahasiswa menguasai Integral Konvolusi.
+
+\textbf{Metodologi ``Walking'':} Mahasiswa wajib melakukan penurunan
+matematis integral konvolusi secara manual dari prinsip impuls dasar
+(Materi Oppenheim Bab 2).
+
+\textbf{Metodologi ``Driving'':} Mahasiswa menggunakan fungsi
+\texttt{scipy.signal.convolve} di Python untuk mensimulasikan respons
+sistem terhadap sinyal masukan kompleks.
+
+\textbf{Output:} Mahasiswa menyusun ``Produk Pengetahuan'' dengan 20
+item mandatori, menyertakan \emph{Journal Belajar} yang menceritakan
+proses berpikir dari titik buta (tidak paham konvolusi) hingga mampu
+mendesain sistem filter.
+
+Buku teks (Oppenheim \& Schaum's) diposisikan sebagai ``Peta Dasar'' dan
+``Kendaraan'' yang harus dikendarai untuk mencapai target CPMK di minggu
+ke-15.
+
+\section{Perangkat Pendukung Teknis: Ontologi, Prolog, dan
+Python}\label{perangkat-pendukung-teknis-ontologi-prolog-dan-python}
+
+Keamanan dan akurasi platform VALORAIZE didukung oleh tiga pilar
+teknologi:
+
+\textbf{Ontologi:} Bertindak sebagai \textbf{Single Source of Truth
+(SSOT)}. Seluruh definisi CPMK, hubungan antar kompetensi, dan syarat
+kelulusan didefinisikan secara formal untuk menghindari ambiguitas
+semantik.
+
+\textbf{Prolog:} Digunakan untuk verifikasi formal kebijakan keamanan.
+Mesin logika Prolog memastikan bahwa akses nilai dan perubahan data
+``Rekening Kekayaan Mahasiswa'' mengikuti aturan yang tidak bisa
+ditembus oleh konflik logika.
+
+\textbf{Python:} Bahasa utama untuk simulasi rute belajar dan
+pembangunan prototipe virtual. Python memungkinkan mahasiswa menguji
+hipotesis teknis mereka dalam lingkungan yang aman sebelum dievaluasi
+oleh dosen.
+
+\section{Kesimpulan: Membentuk Insinyur sebagai
+``Vokator''}\label{kesimpulan-membentuk-insinyur-sebagai-vokator}
+
+Melalui paradigma TISE, VALORAIZE tidak sekadar melahirkan teknokrat,
+melainkan seorang \textbf{Vokator}. Seorang Vokator adalah ``Arsitek
+Masa Depan'' yang menyuarakan kebenaran melalui riset bertanggung jawab
+dan produk pengetahuan yang bernilai.
+
+Dengan menyatukan \emph{Homocordium} (etika), \emph{Homodeus} (logika
+AI), dan \emph{Natural Intelligence} (alam), mahasiswa VALORAIZE dididik
+untuk menjadi insinyur yang bijaksana, metodis, dan mampu menciptakan
+``teater kehidupan yang megah'' bagi kemanusiaan. Inilah masa depan
+pendidikan teknik yang holistik dan berkelanjutan.
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Lampiran}\label{lampiran}
+\addcontentsline{toc}{chapter}{Lampiran}
+
+\markboth{Lampiran}{Lampiran}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2632}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2632}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Domain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Core Engine
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Function
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Artifact
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Level 0 & Rekayasa Tradisional berbasis EMI (Energi, Materi, Informasi).
+& Menyediakan tumpuan material, teknis, dan fisik serta fondasi
+teknologi dan keandalan. & Core Engine (Intake, Encoder, Decoder,
+Exhaust, Flywheel). & Konversi energi sumber menjadi kerja mekanis atau
+teknis untuk menangani beban EMI secara statik atau dinamik. \\
+Level 1 & Smart Engineering melalui konversi Energon. & Membangun
+kapasitas kerja multidisiplin dan lingkungan kerja cerdas untuk
+menghadapi beban masalah. & Smart Engine / Mesin PSKVE. & Mengonversi 5
+jenis Energon (fisik, waktu, skill, token, peran) menjadi kapasitas
+kerja terstruktur. \\
+Level 2 & Rekayasa Agentik dan Triune Intelligence. & Memberikan
+kecerdasan agentik, adaptasi, dan respon kontekstual pada artefak. &
+Mesin PUDAL (Perception, Understanding, Decision, Action, Learning). &
+Orkestrasi antara Natural, Collective, dan Artificial Intelligence
+melalui Natural Language Prompting. \\
+Level 3 & Identitas Naratif dan Teater Solusi. & Memberi makna,
+motivasi, dan ruang bagi manusia untuk mementaskan misi hidupnya. &
+Identitas Naratif dan Prompt Reflektif. & Menggali kisah hidup dan nilai
+inti untuk diubah menjadi peran nyata dalam lingkungan yang
+dirancang. \\
+Level 4 & Meta-TISE dan DNA Desain. & Menyediakan pola pewarisan,
+reproduksi desain, dan platform regeneratif. & Meta-TISE (DNA Desain dan
+Platform TISE). & Pewarisan, adaptasi, dan ``perkawinan'' desain antara
+DNA platform lama dengan gagasan baru. \\
+Level 5 & Rekayasa Kemanusiaan dan Ekonomi Misi (VALORAIZE). &
+Mobilisasi konfigurasi stakeholder bermisi untuk memecahkan persoalan
+kemanusiaan. & Matrix of Mission dan MOS-7 (Mission Operating System). &
+Pemetaan kontribusi timbal balik antar stakeholder (USER, SOURCE,
+REGULATOR, PROVIDER) dalam siklus transformatif. \\
+Level 6 & Ekosistem Keunggulan (Splendid Theaters of Life). & Panggung
+global tempat seluruh manusia mementaskan talenta uniknya secara
+maksimal. & Stadion Global Digital. & Amplifikasi talenta unik individu
+menjadi dampak kemanusiaan dalam skala global. \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\protect\phantomsection\label{refs}
+
+
+
+
+\end{document}

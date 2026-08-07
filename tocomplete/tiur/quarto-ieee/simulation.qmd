@@ -1,0 +1,68 @@
+
+# VII. Agent-Based Simulation Design
+
+The simulation structure is shown in @fig-simulation-structure, with conditions in @tbl-simulation-conditions, hypotheses in @tbl-simulation-hypotheses, variables in @tbl-simulation-variables, and outcome metrics in @tbl-simulation-outcomes.
+
+## A. Objective
+
+Before real-world deployment, the three innovations should be evaluated in simulation.
+
+![Placeholder for the agent-based simulation structure.](assets/figures/fig-simulation-structure.png){#fig-simulation-structure}
+
+## B. Agents
+
+Elder Agent; Narrative Agent; Predictor Agent; Stimulus Agent; Social Tie Agents; Environment Agent.
+
+## C. State Representation
+
+$$X_{i,t} = [N_{i,t}, S_{i,t}, R_{i,t}, C_{i,t}, E_{i,t}, A_{i,t}]$$
+
+$$G_{i,t} = 0.22N_{i,t} + 0.14S_{i,t} + 0.20R_{i,t} + 0.16C_{i,t} + 0.13E_{i,t} + 0.15A_{i,t}$$
+
+$$X_{i,t+1} = f(X_{i,t}, U_{i,t}, H_{i,t}, A_{i,t}^{stim}, \varepsilon_{i,t})$$
+
+
+| Condition | Story | Prediction | Stimulus | Expectation |
+|----|--|--|--|-------|
+| Baseline | No | No | No | monitoring only |
+| Story Only | Yes | No | No | improved narrative continuity |
+| Story + Prediction | Yes | Yes | No | improved early risk detection |
+| Full GRACE | Yes | Yes | Yes | highest stability and fastest recovery |
+
+: Simulation conditions for evaluating GRACE innovations. {#tbl-simulation-conditions}
+
+
+| Hypothesis | Expectation |
+|---|---------|
+| H1 | Story creation increases Narrative Continuity relative to baseline |
+| H2 | Fast prediction improves early detection of decline |
+| H3 | Smart stimuli reduce time spent in low GRACE zones |
+| H4 | Full GRACE yields highest average GRACE Index |
+| H5 | Full GRACE reduces recovery time after adverse shocks |
+
+: Simulation hypotheses for GRACE. {#tbl-simulation-hypotheses}
+
+
+| Variable | Name | Type | Function |
+|-|-----|---|-----|
+| N | Narrative Continuity | state variable | tracks self-story coherence |
+| S | Spiritual Grounding | state variable | tracks inner steadiness |
+| R | Relational Vitality | state variable | tracks connection quality |
+| C | Contribution and Usefulness | state variable | tracks perceived usefulness |
+| E | Community and World Engagement | state variable | tracks external participation |
+| A | Adaptive Resilience | state variable | tracks coping and recovery |
+| G | GRACE Index | composite metric | primary wellbeing outcome |
+| H | Heroic Integration Score | derived metric | measures successful narrative reframing |
+
+: State and derived variables tracked in the simulation. {#tbl-simulation-variables}
+
+
+| Variable | Type | Function |
+|---|---|-----|
+| Stable-Zone Days | outcome metric | proportion of days with G ≥ 70; assesses sustained wellbeing |
+| Vulnerable/Disrupted Days | outcome metric | proportion of days with G < 70; assesses instability |
+| Recovery Time | outcome metric | days to return to stable zone after shock; assesses resilience |
+| Reframing Success | outcome metric | proportion of adverse days with high H; assesses story engine effect |
+| Intervention Efficiency | outcome metric | gain in G per stimulus action; assesses stimulus value |
+
+: Outcome metrics used to evaluate the simulation. {#tbl-simulation-outcomes}

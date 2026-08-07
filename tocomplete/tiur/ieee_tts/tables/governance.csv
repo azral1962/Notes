@@ -1,0 +1,10 @@
+Risk,Concern,Safeguard
+Paternalism,"system over-directs behavior; erosion of autonomy","adjustable autonomy, opt-out controls, human override"
+Narrative Imposition,"system interprets life story too forcefully; distortion of selfhood","user-editable stories, narrative sovereignty, transparency"
+Privacy Breach,"sensitive autobiographical data exposed; loss of trust, harm to dignity","access controls, encryption, consent-based sharing"
+Over-Intervention,"too many prompts or alerts; fatigue, frustration, disengagement","rate limits, preference learning, intervention thresholds"
+Family Misuse,"relatives use system to pressure elder; coercion or conflict","granular permissions, elder-first governance"
+Prediction Opacity,"unclear reason for risk prediction; mistrust, confusion",explainable prediction summaries
+Bias in Prediction,"model underperforms for some groups; inequitable support","fairness auditing, subgroup validation"
+Emotional Harm,"prompts surface painful memories badly; distress or retraumatization","sensitivity rules, contextual timing, human escalation"
+Dependency on System,"overreliance on AI mediation; reduced direct human engagement","human-in-the-loop design, connection-first policies"

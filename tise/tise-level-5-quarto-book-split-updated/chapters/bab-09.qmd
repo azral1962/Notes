@@ -1,0 +1,13 @@
+# Mesin Agentik PUDAL dan Orkestrasi Triune Intelligence
+
+## Mengapa Artefak Perlu Adaptif
+
+Semakin kompleks persoalan kemanusiaan yang ingin dipecahkan, semakin jelas bahwa artefak tidak cukup hanya stabil dan andal; artefak juga harus **adaptif**.
+
+## Dari Algoritma ke PUDAL
+
+Algoritma penting, tetapi ketika artefak berhadapan dengan manusia, makna, konteks sosial, dan perubahan misi, kendali algoritmik semata menjadi tidak cukup. Di sinilah dibutuhkan **PUDAL**.
+
+## Triune Intelligence dan Prompting
+
+Siklus PUDAL dijalankan oleh interaksi **Natural Intelligence**, **Collective Intelligence**, dan **Artificial Intelligence** menggunakan **natural language prompting** sebagai bahasa interaksi lintas kecerdasan.

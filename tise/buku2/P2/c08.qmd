@@ -1,0 +1,62 @@
+
+# Domain Riset Fundamental (F)
+
+ Dalam metodologi pelaporan PICOC lintas domain (*multi-domain*), **Domain Riset Fundamental (F)** menempati lapisan paling dasar dan esensial di dalam kerangka kerja desain rekayasa. Fokus utama dari Domain Fundamental bukanlah menciptakan produk akhir untuk pengguna, melainkan **menambah kumpulan pengetahuan (****Body of Knowledge****) tentang realitas, menemukan prinsip-prinsip sains atau rekayasa baru, dan memvalidasi teori-teori dasar**.
+
+Penerapan kelima komponen PICOC secara spesifik pada Domain Riset Fundamental (PICOC-F) dijabarkan sebagai berikut:
+
+-   **P(F) - Populasi (****Population****):** Subjek yang diteliti pada level ini sangat abstrak, yakni berupa **fenomena alam atau konseptual, entitas-entitas fundamental, serta nilai atau energi sumber yang sedang diinvestigasi**.
+
+-   **I(F) - Intervensi (****Intervention****):** Merepresentasikan gagasan fundamental yang baru, yang dapat berupa **proses, teori, kerangka pemodelan (****model****), maupun pendekatan eksperimental baru** yang diusulkan oleh peneliti.
+
+-   **C(F) - Kontrol (****Control****):** Merupakan **teori, model, pendekatan, atau proses eksisting (lama)** yang digunakan sebagai landasan pembanding untuk menguji keabsahan teori baru tersebut.
+
+-   **O(F) - Hasil (****Outcome****):** Keberhasilan di level ini tidak diukur dari uang atau kecepatan komputasi, melainkan dari **terciptanya pengetahuan baru yang diinginkan, pemahaman mekanisme yang jauh lebih dalam, tervalidasinya prinsip-prinsip sains/logika, atau penemuan efek dan nilai yang sebelumnya belum diketahui**.
+
+-   **Cx(F) - Konteks (****Context****):** Merupakan latar belakang akademis yang memotivasi riset, yakni **kebutuhan akan pengetahuan baru, keinginan untuk memahami mekanisme fundamental, atau eksplorasi terhadap wilayah teoretis atau saintifik yang belum dipetakan**, yang nantinya akan relevan untuk mendukung domain di lapisan atasnya.
+
+**Posisi Fundamental (F) dalam Hierarki Lintas Domain** Di dalam struktur rekayasa yang komprehensif, Domain Riset Fundamental bertindak sebagai "akar" yang menyokong seluruh pohon inovasi. Keberhasilan dalam memvalidasi prinsip atau teori di lapisan Fundamental (O(F)) menjadi **fondasi absolut yang menyokong dan memungkinkan penciptaan instrumen mesin atau metode di Domain Teknologi (O(T))**. Tanpa adanya teori yang sahih di level F, inovasi teknologi (T), arsitektur sistem (S), dan penyelesaian masalah di masyarakat (A) tidak akan memiliki pijakan keilmuan yang kuat.
+
+**Contoh Wujud Nyata dalam Rekayasa**
+
+-   **Dalam Paradigma** **Smart Engineering** **& Konversi Energi:** Di tingkat fundamental, riset difokuskan pada upaya **memahami dan merekayasa prinsip konversi transaksional antara berbagai dimensi energi PSKVE**. Contoh yang lebih radikal pada metafora transportasi antargalaksi adalah penemuan prinsip dasar (F) tentang bagaimana mengonversi Energi Elektromagnetik menjadi kerja mekanis murni.
+
+-   **Dalam Rekayasa Perangkat Lunak Terintegrasi:** Pada pengembangan platform cerdas Prolog-Python, intervensi fundamental (I(F)) mencakup penerapan prinsip **logika formal (seperti klausa Horn di Prolog), metodologi representasi pengetahuan (seperti desain ontologi), serta teknik penalaran tingkat tinggi (seperti unifikasi dan** **backtracking****)**. Pembuktian bahwa konsep ontologis (seperti Kelas, Individu, dan Properti) dapat dipetakan secara matematis ke dalam logika predikat merupakan keberhasilan di tingkat O(F) yang memungkinkan terbangunnya teknologi jembatan lintas-bahasa pemrograman.
+
+## P: Fenomena/Prinsip Sains
+
+ Dalam kerangka metodologi pelaporan PICOC lintas domain, **Domain Riset Fundamental (F)** adalah lapisan paling dasar yang murni berfokus pada perluasan kumpulan pengetahuan (*Body of Knowledge*) tentang realitas, penemuan prinsip baru, serta validasi teori. Pada lapisan abstrak ini, komponen **P (Populasi) tidak lagi merujuk pada pemangku kepentingan (manusia), sistem utuh, ataupun bahan baku fisik, melainkan direpresentasikan secara spesifik sebagai Fenomena, Entitas Fundamental, atau Energi/Nilai Sumber yang sedang diinvestigasi**.
+
+Peran dan posisi **P: Fenomena/Entitas Fundamental (P(F))** di dalam ekosistem riset fundamental dijabarkan sebagai berikut:
+
+-   **Sebagai Subjek Utama Investigasi Sains dan Logika:** Populasi di tingkat ini merupakan entitas yang menjadi fokus pengamatan teoretis. Bentuk dari P(F) bisa mencakup fenomena alam yang abstrak atau entitas mendasar dari sebuah sistem nilai. Dalam konteks ilmu komputer seperti pengembangan sistem rekayasa perangkat lunak terintegrasi (misalnya ontologi Prolog), wujud populasi (P(F)) ini mengambil bentuk **proposisi logis, konsep-konsep abstrak, relasi antar-entitas, hingga titik data fundamental**.
+
+-   **Target Evaluasi dari Teori atau Model Baru:** Tantangan utama (*Context* / Cx(F)) di domain ini adalah menjawab pertanyaan mendasar tentang mekanisme dari populasi (P(F)) tersebut karena adanya celah pengetahuan (*knowledge gap*). Untuk menjelaskan fenomena tersebut, peneliti mengusulkan sebuah Intervensi (I(F)) yang dapat berupa teori, kerangka pemodelan, atau pendekatan eksperimental yang sama sekali baru.
+
+-   **Contoh Eksplorasi pada Fenomena Energi:** Dalam metafora inovasi kendaraan lintas galaksi, entitas yang menjadi "populasi" penelitian (P(F)) adalah **fenomena medan energi elektromagnetik murni**. Riset fundamental akan meneliti fenomena ini untuk menemukan keahlian (*know-how*) dan prinsip sains baru tentang bagaimana mengonversi energi elektromagnetik teoretis tersebut menjadi sebuah gaya kerja mekanis yang nyata.
+
+-   **Batu Loncatan bagi Seluruh Hierarki Rekayasa:** Keberhasilan riset pada tingkat ini diukur dari seberapa dalam pemahaman baru yang didapat atau tervalidasinya prinsip-prinsip yang mengatur fenomena tersebut (*Outcome* / O(F)). Evaluasi yang sukses pada fenomena dasar (P(F)) ini akan menciptakan teori yang kokoh, yang mana teori ini **menjadi penyokong dan fondasi mutlak yang memungkinkan lahirnya instrumen di tingkat Teknologi (T), arsitektur operasional di tingkat Sistem (S), dan solusi inovatif di tingkat Aplikasi (A)**.
+
+Singkatnya, pemosisian **Fenomena atau Entitas Fundamental sebagai "Populasi"** menegaskan bahwa tujuan utama Domain Fundamental adalah menginterogasi realitas alam, hukum-hukum konversi energi, atau struktur logika dasar. Penyelidikan mendalam terhadap "populasi" abstrak inilah yang akan menghasilkan kebenaran saintifik untuk menopang seluruh piramida inovasi di dalam *Smart Engineering*.
+
+## I: Teori/Model Baru
+
+ Dalam kerangka kerja pelaporan multi-domain PICOC, komponen **I (Intervensi)** pada Domain Riset Fundamental (PICOC-F) secara spesifik direpresentasikan sebagai **Teori, Model, Proses, atau Pendekatan Eksperimental Baru**.
+
+Berikut adalah peran, posisi, dan wujud **I: Teori/Model Baru (I(F))** di dalam ekosistem Domain Riset Fundamental:
+
+**1\. Sebagai Jawaban atas Kesenjangan Pengetahuan (****Knowledge Gap****)** Domain Fundamental tidak ditujukan untuk merancang produk komersial, melainkan didorong oleh kebutuhan untuk memahami mekanisme dasar alam atau realitas yang belum dipetakan (Cx(F)). Oleh karena itu, Teori atau Model Baru (I(F)) yang diusulkan oleh peneliti berfungsi sebagai kerangka pikir atau hipotesis yang diuji untuk memvalidasi entitas fundamental atau fenomena yang sedang diteliti (P(F)).
+
+**2\. Fondasi Absolut bagi Seluruh Lapisan Rekayasa** Dalam struktur hierarkis *Smart Engineering*, Teori atau Model Baru (I(F)) bertindak sebagai "akar" pemikiran. Keberhasilan dalam memvalidasi prinsip atau model baru ini menjadi pengetahuan atau pemahaman baru (O(F)) yang secara langsung **menyokong dan memungkinkan penciptaan instrumen mesin di lapisan Teknologi (O(T)), arsitektur operasional di lapisan Sistem (O(S)), dan pada akhirnya menghasilkan solusi nyata di lapisan Aplikasi (O(A))**. Tanpa adanya teori yang sahih (I(F)), keseluruhan inovasi di lapisan atasnya tidak akan memiliki landasan sains atau logika yang kuat.
+
+**3\. Wujud I(F) dalam Rekayasa Perangkat Lunak dan Kecerdasan Buatan** Dalam konteks pengembangan platform *Smart Engineering* yang terintegrasi, wujud nyata dari intervensi fundamental (I(F)) ini meliputi penerapan prinsip-prinsip sains komputer dasar, seperti:
+
+-   **Penerapan logika formal**, misalnya penggunaan *Horn clauses* (klausa Horn) yang menjadi basis dari bahasa Prolog.
+
+-   **Metodologi representasi pengetahuan**, seperti pemodelan desain Ontologi yang memanfaatkan Kelas, Individu, Properti, dan Relasi. Model teoretis ini dirancang untuk memastikan bahwa representasi konseptual manusia atas suatu domain teknik dapat diterjemahkan menjadi struktur data yang dapat dinalar secara presisi oleh mesin (*machine-understandable model*).
+
+**4\. Wujud I(F) dalam Metafora Fisik dan Konversi Energi** Jika merujuk pada metafora desain transportasi dan energi, Teori atau Model Baru (I(F)) mempresentasikan penemuan prinsip-prinsip sains (*know-how*) terkait cara memanipulasi energi.
+
+-   Contoh teoretis ekstrem yang disebutkan dalam sumber adalah riset fundamental yang menemukan model cara **mengonversi tenaga Medan Elektromagnetik (EM) antar-galaksi menjadi gaya kerja mekanis murni** bagi sebuah wahana antariksa.-   Dalam konteks energi yang lebih luas di kerangka *Smart Engineering*, I(F) berwujud pencarian dan pemodelan prinsip-prinsip **Konversi Transaksional (****Transactional Conversion****)**, yakni teori yang menjelaskan bagaimana dimensi energi PSKVE (seperti Energi Pengetahuan atau Energi Lingkungan) dapat dipertukarkan satu sama lain secara optimal.
+
+Singkatnya, **I: Teori/Model Baru (I(F))** adalah pijakan awal dari keseluruhan siklus inovasi rekayasa. Ia adalah gagasan teoretis murni yang, apabila tervalidasi kebenarannya, akan bertransformasi menjadi hukum sains atau pola desain yang memandu para insinyur dalam membangun teknologi (T) dan sistem (S) yang lebih cerdas.

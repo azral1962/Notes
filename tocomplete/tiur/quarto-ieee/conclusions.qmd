@@ -1,0 +1,26 @@
+
+# X. Limitations and Future Work
+
+This paper is conceptual and simulation-oriented. Several limitations should therefore be acknowledged.
+
+First, the GRACE Index is proposed as a theoretically grounded composite measure, but its weighting scheme and dimensional structure have not yet been empirically validated. The model should be treated as provisional until psychometric testing, longitudinal analysis, and user-centered validation are conducted.
+
+Second, the Daily Story Creation Engine, Fast State Predictor, and Smart Stimulus Agent are presented as design innovations, not as fully implemented and tested modules. Their actual effectiveness will depend on interface quality, data quality, personalization logic, and the degree to which users perceive them as supportive rather than intrusive.
+
+Third, the proposed simulation is an abstraction of real life. Although simulation can help evaluate mechanisms and explore policy behavior, it cannot fully represent the emotional, cultural, and relational complexity of lived aging. Real-world evaluation with older adults, families, and community organizations remains essential.
+
+Fourth, the framework may require substantial cultural adaptation. Narrative identity, spirituality, family expectations, contribution norms, and attitudes toward AI vary across settings. A system designed around autobiographical continuity and relational support must therefore be locally interpretable and culturally responsive.
+
+Fifth, governance challenges remain significant. The use of autobiographical and predictive data introduces risks related to privacy, bias, paternalism, narrative imposition, and over-intervention. Future work should address these issues through fairness testing, explainability design, participatory governance, and careful consent models.
+
+Future research should proceed along at least six directions: 1. participatory co-design with older adults, caregivers, and community stakeholders; 2. prototype implementation of the GRACE ecosystem and GRACE Index interfaces; 3. simulation execution and reporting to evaluate the three innovations under controlled scenarios; 4. psychometric validation of the GRACE Index across diverse elder populations; 5. pilot deployment studies to assess usability, acceptability, and perceived dignity impact; and 6. governance and fairness analysis focused on predictive intervention, consent, and relational accountability.
+
+These steps are necessary to move GRACE from a conceptual socio-technical framework toward a validated and ethically robust intelligent ecosystem.
+
+# XI. Conclusion
+
+GRACE proposes a narrative-centered socio-technical ecosystem for elder wellbeing. By integrating relationship quality, autobiographical continuity, predictive modeling, and anticipatory intervention, it offers an alternative to deficit-oriented aging technologies. Rather than viewing older adults primarily through decline, risk, and service dependency, GRACE understands them as persons who continue to live, interpret, and contribute within unfolding life stories.
+
+The framework contributes four main ideas: a relational and narrative model of elder wellbeing; the GRACE Index as a daily measure of narrative selfhood; three AI-enabled mechanisms for story creation, prediction, and supportive intervention; and an agent-based simulation design for structured evaluation. Together, these elements suggest that intelligent systems for older adults should be designed not only to manage risk, but also to sustain dignity, reciprocity, participation, and the ongoing authorship of life.
+
+More broadly, GRACE argues that the future of elder-oriented AI should be socio-technical rather than merely technical, and human-centered in a deep sense: not simply usable, but respectful of identity, meaning, and relationship. If developed responsibly, systems like GRACE may help ensure that digital innovation in aging supports not only longer life, but more connected, authored, and enriched life.

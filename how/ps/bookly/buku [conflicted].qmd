@@ -1,0 +1,51 @@
+---
+format:
+  typst:
+    documentclass: book
+    toc: true
+    lof: true
+    lot: true
+    bibliography: bibliography/sample.bib
+    lang: "en"
+    fonts:
+      body: "Lato"
+      math: "Lete Sans Math"
+    colors:
+      primary: rgb("#1d90d0")
+      secondary: rgb("#dddddd").darken(15%)
+    title-page:
+      series: "Typst book series"
+      institution: "Typst community"
+      logo: image("images/typst-logo.svg")
+      cover: image("images/book-cover.jpg", width: 45%)
+    config-options:
+      open-right: true
+---
+
+```{=typst}
+#include "front_matter/front_main.typ"
+
+#include "chapters/ch_main.typ"
+
+#include "appendix/app_main.typ"
+
+#bibliography("bibliography/sample.bib")
+
+#let abstracts-fr-en = (
+  (
+    title: [#set text(lang: "fr"); Résumé :],
+    text: [#lorem(100)],
+  ),
+  (
+    title: [#set text(lang: "en", region: "gb"); Abstract:],
+    text: [#lorem(100)],
+  ),
+)
+
+#let logos = (
+  align(left)[#image("images/typst-logo.svg", width: 50%)],
+  align(right)[#image("images/typst-logo.svg", width: 50%)],
+)
+
+#back-cover(abstracts: abstracts-fr-en, logo: logos)
+```

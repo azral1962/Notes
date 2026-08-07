@@ -1,0 +1,10 @@
+# Lampiran E. Paket Pertanyaan Teknis untuk TISE level 1
+
+1. Energon apa saja yang tersedia dalam sistem?
+2. Energon apa yang melimpah tetapi belum termobilisasi?
+3. Product apa yang perlu dihasilkan?
+4. Service apa yang perlu dialami stakeholder?
+5. Knowledge apa yang dibutuhkan sistem?
+6. Value apa yang ingin dihasilkan?
+7. Environment seperti apa yang diperlukan agar solusi hidup?
+

@@ -1,0 +1,219 @@
+---
+title: A Sample Article Using `quarto-ieee` for IEEE Journal and Transactions
+format:
+  ieee-pdf:
+    keep-tex: true  
+  ieee-html: default
+author:
+  - id: tg
+    name: Tiur Gantini
+    affiliations:
+      - name: Institut Teknologi Bandung
+        department: School of Electrical Engineering and Informatics
+        city: Bandung
+        country: Indonesia
+        postal-code: 40132
+      - name: Maranatha Christian University
+        department: Faculty of Smart Technology and Informatics
+        city: Bandung
+        country: Indonesia
+        postal-code: 40164
+  - id: azrl
+    name: Armein Z. R. Langi
+    affiliations:
+      - name: Institut Teknologi Bandung
+        department: School of Electrical Engineering and Informatics        
+        city: Bandung
+        country: Indonesia
+        postal-code: 40132
+      - name: Unknown affiliation
+    orcid: 0000-0001-9430-6091
+    email: armein@itb.ac.id
+    url: https://stei.itb.ac.id/
+    membership: "Senior Member, IEEE"
+    attributes:
+      corresponding: true
+    photo: azrl.png
+    bio: |
+      Use `IEEEbiography`  with figure as  option and
+      the author name as the argument followed by the biography text.
+  - name: Allyah 
+    affiliations: 
+      - name: Anonymous University
+    bio: |
+      Use `IEEEbiographynophoto` and the author name
+      as the argument followed by the biography text.
+    note: "Template created June 23, 2023; revised `r format(Sys.Date(),format='%B %d, %Y')`."
+abstract: |
+  
+  Population aging is increasing demand for digital systems that support older adults’ wellbeing. Most existing systems emphasize safety, monitoring, and service coordination, but underrepresent identity, meaning, contribution, and relationship quality. This paper proposes GRACE (Growing, Resourceful, Active, and Enriched Life), a narrative-centered socio-technical ecosystem for elder wellbeing. GRACE is designed as an intelligent multiagent community computing framework that supports older adults in maintaining relationships with the spiritual self, family and friends, working colleagues, communities, and the wider world, including markets and public services. The paper makes four contributions. First, it introduces a narrative-centered theory of elder wellbeing grounded in relationship quality and contribution exchange. Second, it proposes the GRACE Index, a daily measure of whether a person remains “in the zone” of narrative selfhood during ordinary and difficult periods. Third, it extends the framework with three innovations: daily hero’s-journey story creation, an AI-based fast state predictor, and a smart stimulus agent for anticipatory support. Fourth, it presents an agent-based simulation design to evaluate these innovations. We argue that elder-oriented AI should move beyond deficit-oriented monitoring toward socio-technical ecosystems that preserve dignity, agency, reciprocity, and life authorship.
+
+keywords: [aging, wellbeing, narrative identity, multiagent systems, human-centered AI, socio-technical systems, community computing, eldercare technology]
+#funding: 
+funding: 
+  statement: "The `quarto-ieee` template is freely available under the MIT license on github: <https://github.com/dfolio/quarto-ieee>."
+pageheader:
+  left: Journal XXX, Month Year
+  right: 'D. Folio:  A Sample Article Using quarto-ieee'
+bibliography: bibliography.bib
+date: 2023-06-23
+pdf: https://github.com/dfolio/quarto-ieee/blob/main/template.pdf
+citation: 
+  container-title: GitHUB
+  page: 1-3
+  type: software
+  issued: 2023-06-23
+  url: https://github.com/dfolio/quarto-ieee
+  pdf-url: https://github.com/dfolio/quarto-ieee/template.pdf
+
+
+---
+<< include: intro.qmd >>
+
+<< include: literature.qmd >>
+
+
+
+# VII. Agent-Based Simulation Design
+
+The simulation structure is shown in @fig-simulation-structure, with conditions in @tbl-simulation-conditions, hypotheses in @tbl-simulation-hypotheses, variables in @tbl-simulation-variables, and outcome metrics in @tbl-simulation-outcomes.
+
+## A. Objective
+
+Before real-world deployment, the three innovations should be evaluated in simulation.
+
+![Placeholder for the agent-based simulation structure.](assets/figures/fig-simulation-structure.png){#fig-simulation-structure}
+
+## B. Agents
+
+Elder Agent; Narrative Agent; Predictor Agent; Stimulus Agent; Social Tie Agents; Environment Agent.
+
+## C. State Representation
+
+$$X_{i,t} = [N_{i,t}, S_{i,t}, R_{i,t}, C_{i,t}, E_{i,t}, A_{i,t}]$$
+
+$$G_{i,t} = 0.22N_{i,t} + 0.14S_{i,t} + 0.20R_{i,t} + 0.16C_{i,t} + 0.13E_{i,t} + 0.15A_{i,t}$$
+
+$$X_{i,t+1} = f(X_{i,t}, U_{i,t}, H_{i,t}, A_{i,t}^{stim}, \varepsilon_{i,t})$$
+
+
+| Condition | Story | Prediction | Stimulus | Expectation |
+|----|--|--|--|-------|
+| Baseline | No | No | No | monitoring only |
+| Story Only | Yes | No | No | improved narrative continuity |
+| Story + Prediction | Yes | Yes | No | improved early risk detection |
+| Full GRACE | Yes | Yes | Yes | highest stability and fastest recovery |
+
+: Simulation conditions for evaluating GRACE innovations. {#tbl-simulation-conditions}
+
+
+| Hypothesis | Expectation |
+|---|---------|
+| H1 | Story creation increases Narrative Continuity relative to baseline |
+| H2 | Fast prediction improves early detection of decline |
+| H3 | Smart stimuli reduce time spent in low GRACE zones |
+| H4 | Full GRACE yields highest average GRACE Index |
+| H5 | Full GRACE reduces recovery time after adverse shocks |
+
+: Simulation hypotheses for GRACE. {#tbl-simulation-hypotheses}
+
+
+| Variable | Name | Type | Function |
+|-|-----|---|-----|
+| N | Narrative Continuity | state variable | tracks self-story coherence |
+| S | Spiritual Grounding | state variable | tracks inner steadiness |
+| R | Relational Vitality | state variable | tracks connection quality |
+| C | Contribution and Usefulness | state variable | tracks perceived usefulness |
+| E | Community and World Engagement | state variable | tracks external participation |
+| A | Adaptive Resilience | state variable | tracks coping and recovery |
+| G | GRACE Index | composite metric | primary wellbeing outcome |
+| H | Heroic Integration Score | derived metric | measures successful narrative reframing |
+
+: State and derived variables tracked in the simulation. {#tbl-simulation-variables}
+
+
+| Variable | Type | Function |
+|---|---|-----|
+| Stable-Zone Days | outcome metric | proportion of days with G ≥ 70; assesses sustained wellbeing |
+| Vulnerable/Disrupted Days | outcome metric | proportion of days with G < 70; assesses instability |
+| Recovery Time | outcome metric | days to return to stable zone after shock; assesses resilience |
+| Reframing Success | outcome metric | proportion of adverse days with high H; assesses story engine effect |
+| Intervention Efficiency | outcome metric | gain in G per stimulus action; assesses stimulus value |
+
+: Outcome metrics used to evaluate the simulation. {#tbl-simulation-outcomes}
+
+# VIII. Technology and Society Implications
+
+## A. From Monitoring to Meaning
+
+Many existing systems for older adults are designed around surveillance, compliance, and risk reduction. Although these functions are often necessary, they can narrow the social meaning of technology to observation and behavioral management. GRACE suggests a different orientation: intelligent systems should also support meaning-making, narrative continuity, and relationship quality. This matters because technologies do not merely assist users; they also shape how users are socially perceived. A system that frames older adults mainly as vulnerable subjects of monitoring may reinforce dependency narratives. By contrast, a system that recognizes them as authors, contributors, and relational beings may support dignity and public visibility.
+
+## B. The Social Construction of Aging Through Technology
+
+Technologies embody assumptions about the populations they serve. In aging contexts, these assumptions often center decline, burden, and incapacity. Such framings can indirectly reproduce ageism by embedding deficit-oriented views of later life into interfaces, workflows, and service logics. GRACE instead frames later life as a stage of ongoing identity development, contribution, and relational growth. This shift has implications beyond design. It suggests that socio-technical systems should not merely adapt to older adults as they are socially classified, but should also challenge reductive classifications that limit participation and agency.
+
+## C. Narrative Data as a New Category of Sensitive Data
+
+GRACE relies on autobiographical, relational, and interpretive data in addition to behavioral and service data. This class of information is especially sensitive because it concerns identity, memory, grief, values, and social bonds. Conventional privacy models may be insufficient for such data because the issue is not only exposure, but interpretation and authorship. Questions arise regarding who owns a life story representation, who may correct or extend it, and how conflicting interpretations should be handled when family members or institutions are involved. The use of narrative data therefore requires governance structures that protect not only privacy, but also identity integrity.
+
+## D. Prediction, Intervention, and the Risk of Paternalism
+
+The Fast State Predictor and Smart Stimulus Agent introduce anticipatory action into elder-oriented systems. While this can improve support, it also creates the risk of paternalism. Predictions may be used to steer behavior in ways that are insufficiently transparent or insufficiently aligned with the elder’s own intentions. In contexts where older adults are already socially positioned as dependent, such interventions may amplify rather than reduce power asymmetries. GRACE therefore implies that predictive systems should be explainable, consent-aware, adjustable in intensity, and always open to refusal or override. The goal is not to optimize the person, but to support the person’s own authorship.
+
+## E. Human-Centered AI in Socially Embedded Contexts
+
+GRACE contributes to human-centered AI by expanding what counts as success in intelligent systems. Reliability, safety, and performance remain necessary, but they are not sufficient in socially embedded domains such as aging. Systems should also be evaluated according to whether they preserve agency, dignity, self-interpretation, reciprocity, and belonging. In this sense, GRACE argues for a broader evaluative framework for AI in society: one that includes effects on identity and relational life alongside traditional technical metrics.
+
+## F. Social Infrastructure and Inclusion
+
+Older adult wellbeing depends not only on internal state or family support, but also on access to social infrastructure, including transportation, public services, community groups, and marketplaces. GRACE highlights that intelligent support systems should therefore function not merely as private assistants, but as bridges to institutional and civic participation. This has policy implications. Public-interest technologies for aging should be designed to support inclusion, not just care; participation, not just monitoring; and contribution, not just dependency management.
+
+## G. Implications for Technology Governance
+
+From a technology-and-society perspective, GRACE suggests five governance principles for elder-oriented AI. First, narrative sovereignty: the elder retains primary authority over their life story representation. Second, consentful prediction: predictive analytics must be understandable, optional, and bounded in use. Third, non-manipulative intervention: prompts and actions should support rather than coerce. Fourth, relational accountability: system actions should be evaluated for their effects on family, community, and institutional relationships. Fifth, dignity-centered evaluation: success should include preservation of selfhood, not only efficiency or compliance.
+
+## H. Broader Relevance
+
+Although GRACE is developed for older adults, its implications extend to other domains in which wellbeing depends on identity continuity and social participation, including disability support, chronic illness, rehabilitation, and mental health recovery. More broadly, the framework suggests that intelligent socio-technical systems should be designed not only to predict and intervene, but also to help persons remain present in their own lives.
+
+# IX. Discussion
+
+Taken together, @fig-grace-ecosystem, @fig-multiagent-architecture, @fig-predictive-loop, @fig-heros-journey, @fig-grace-index, @fig-simulation-structure, @fig-governance-safeguards, and Tables I–IX show that GRACE is not merely a collection of tools, but an integrated socio-technical ecosystem.
+
+GRACE reframes elder-oriented AI away from narrow models of surveillance and deficit management. Its central contribution is to treat older adults as ongoing authors of life rather than passive subjects of care. This reframing changes the role of intelligent systems. Instead of merely detecting problems or enforcing routines, such systems can support meaning, relationship quality, contribution, and continuity of self.
+
+The GRACE Index is important in this regard because it shifts measurement away from symptom burden alone and toward narrative integrity. A person may be grieving, ill, or facing uncertainty while still remaining deeply connected to selfhood, belonging, and purpose. Conventional metrics may not capture this distinction. By contrast, the GRACE Index is intended to identify whether the person remains “in the zone” of narrative selfhood, thereby enabling support that is more humane and context-sensitive.
+
+The three added innovations extend this contribution. The Daily Story Creation Engine offers a computational mechanism for narrative reframing. The Fast State Predictor moves the system from reactive to anticipatory operation. The Smart Stimulus Agent transforms prediction into practical support. In combination, these mechanisms suggest a new class of elder-oriented intelligent systems: systems that are reflective, predictive, and supportive, while remaining grounded in dignity and agency.
+
+For IEEE audiences, the broader implication is that intelligent systems in socially sensitive settings should be evaluated not only by technical performance, but also by their effects on identity, autonomy, and social life. GRACE therefore contributes to ongoing conversations about human-centered AI, algorithmic governance, and the social responsibilities of digital infrastructure.
+
+The proposed agent-based simulation design provides a useful intermediate step before real-world deployment. It allows key questions to be examined under controlled conditions: whether narrative reframing buffers decline, whether predictive models can identify vulnerability early, and whether stimulus policies improve recovery without becoming intrusive. It also enables examination of governance concerns such as intervention thresholds, uncertainty handling, and the trade-off between support and paternalism.
+
+At the same time, GRACE should be understood as a framework rather than a finished system. Its value lies in offering a coherent socio-technical direction for future work at the intersection of aging, AI, and community computing.
+
+# X. Limitations and Future Work
+
+This paper is conceptual and simulation-oriented. Several limitations should therefore be acknowledged.
+
+First, the GRACE Index is proposed as a theoretically grounded composite measure, but its weighting scheme and dimensional structure have not yet been empirically validated. The model should be treated as provisional until psychometric testing, longitudinal analysis, and user-centered validation are conducted.
+
+Second, the Daily Story Creation Engine, Fast State Predictor, and Smart Stimulus Agent are presented as design innovations, not as fully implemented and tested modules. Their actual effectiveness will depend on interface quality, data quality, personalization logic, and the degree to which users perceive them as supportive rather than intrusive.
+
+Third, the proposed simulation is an abstraction of real life. Although simulation can help evaluate mechanisms and explore policy behavior, it cannot fully represent the emotional, cultural, and relational complexity of lived aging. Real-world evaluation with older adults, families, and community organizations remains essential.
+
+Fourth, the framework may require substantial cultural adaptation. Narrative identity, spirituality, family expectations, contribution norms, and attitudes toward AI vary across settings. A system designed around autobiographical continuity and relational support must therefore be locally interpretable and culturally responsive.
+
+Fifth, governance challenges remain significant. The use of autobiographical and predictive data introduces risks related to privacy, bias, paternalism, narrative imposition, and over-intervention. Future work should address these issues through fairness testing, explainability design, participatory governance, and careful consent models.
+
+Future research should proceed along at least six directions: 1. participatory co-design with older adults, caregivers, and community stakeholders; 2. prototype implementation of the GRACE ecosystem and GRACE Index interfaces; 3. simulation execution and reporting to evaluate the three innovations under controlled scenarios; 4. psychometric validation of the GRACE Index across diverse elder populations; 5. pilot deployment studies to assess usability, acceptability, and perceived dignity impact; and 6. governance and fairness analysis focused on predictive intervention, consent, and relational accountability.
+
+These steps are necessary to move GRACE from a conceptual socio-technical framework toward a validated and ethically robust intelligent ecosystem.
+
+# XI. Conclusion
+
+GRACE proposes a narrative-centered socio-technical ecosystem for elder wellbeing. By integrating relationship quality, autobiographical continuity, predictive modeling, and anticipatory intervention, it offers an alternative to deficit-oriented aging technologies. Rather than viewing older adults primarily through decline, risk, and service dependency, GRACE understands them as persons who continue to live, interpret, and contribute within unfolding life stories.
+
+The framework contributes four main ideas: a relational and narrative model of elder wellbeing; the GRACE Index as a daily measure of narrative selfhood; three AI-enabled mechanisms for story creation, prediction, and supportive intervention; and an agent-based simulation design for structured evaluation. Together, these elements suggest that intelligent systems for older adults should be designed not only to manage risk, but also to sustain dignity, reciprocity, participation, and the ongoing authorship of life.
+
+More broadly, GRACE argues that the future of elder-oriented AI should be socio-technical rather than merely technical, and human-centered in a deep sense: not simply usable, but respectful of identity, meaning, and relationship. If developed responsibly, systems like GRACE may help ensure that digital innovation in aging supports not only longer life, but more connected, authored, and enriched lif

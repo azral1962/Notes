@@ -1,0 +1,57 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Triune-Intelligence Smart-Engineering"
+  subtitle: "Rekayasa untuk Kemanusiaan di era Artificial Intelligence"
+  author: "Armein Z. R. Langi"
+  language: id
+  chapters:
+    - index.qmd
+    - chapters/bab-01.qmd
+    - part: Part_Engineering/index.qmd
+      chapters:
+        - Part_Engineering/konsep.qmd
+        - Part_Engineering/metoda.qmd
+        - Part_Engineering/Contoh.qmd
+    - part: Part_System/index.qmd
+      chapters:
+        - Part_System/konsep.qmd
+        - Part_System/metoda.qmd
+        - Part_System/Contoh.qmd
+    - part: Part_Triune/index.qmd
+      chapters:
+        - Part_Triune/konsep.qmd
+        - Part_Triune/metoda.qmd
+        - Part_Triune/Contoh.qmd
+    - part: Part_Identitas/index.qmd
+      chapters:
+        - Part_Identitas/konsep.qmd
+        - Part_Identitas/metoda.qmd
+        - Part_Identitas/Contoh.qmd
+    - part: Part_Meta/index.qmd
+      chapters:
+        - Part_Meta/konsep.qmd
+        - Part_Meta/metoda.qmd
+        - Part_Meta/Contoh.qmd
+    - part: Part_Humanity/index.qmd
+      chapters:
+        - Part_Humanity/konsep.qmd
+        - Part_Humanity/metoda.qmd
+        - Part_Humanity/Contoh.qmd
+        - chapters/bab-15.qmd
+  appendices: 
+    - appendices/lampiran-a.qmd
+
+lang: id
+format:
+  typst:
+    papersize: "a5"
+    toc: true
+    number-sections: true
+    include-in-header: "_header.typ"
+    include-before-body: "_before.typ"
+    include-after-body: "_after.typ"
+bibliography: references.bib
+link-citations: true

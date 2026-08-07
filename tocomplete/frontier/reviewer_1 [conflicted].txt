@@ -1,0 +1,27 @@
+Q1:
+Please list your revision requests for the authors and provide your detailed comments, including highlighting limitations and strengths of the study and evaluating the validity of the methods, results, and data interpretation. If you have additional comments based on Q2 and Q3 you can add them as well.
+
+A1:
+The study presents a timely and original framework that rethinks engineering education for an AI-driven world by integrating cognitive science, motivation theory, professional identity, and value creation. Its major strengths are strong conceptual novelty, practical classroom mechanisms such as knowledge maps and simulations, and promising preliminary evidence of higher and more consistent student performance. However, the study also has notable weaknesses. The empirical validation is still limited by a single-institution, cross-cohort design, modest effect size, insufficient direct measurement of motivation and cognitive load, and possible confounding across semesters. Thus, the framework is promising, but stronger large-scale validation is still needed.
+
+Q2/A2:
+a. Is the quality of the figures and tables satisfactory?
+- Yes
+
+b. Does the reference list cover the relevant literature adequately and in an unbiased manner?
+- Yes
+
+c. Are the statistical methods valid and correctly applied? (e.g. sample size, choice of test)
+- Yes
+
+d. Is a statistician required to evaluate this study?
+- Yes
+
+e. Are the methods sufficiently documented to allow replication studies?
+- Yes
+
+Q3 Rigor: 4/5
+Q4 Quality of the writing: 4/5
+Q5 Overall quality of the content: 3/5
+Q6 Interest to a general audience: 4/5
+ 

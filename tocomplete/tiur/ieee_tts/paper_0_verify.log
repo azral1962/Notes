@@ -1,0 +1,1679 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.3)  7 AUG 2026 20:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**paper_0.tex
+(./paper_0.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(c:/texlive/2025/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen141
+\@IEEEtrantmpdimenB=\dimen142
+\@IEEEtrantmpdimenC=\dimen143
+\@IEEEtrantmpcountA=\count196
+\@IEEEtrantmpcountB=\count197
+\@IEEEtrantmpcountC=\count198
+\@IEEEtrantmptoksA=\toks17
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen144
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen145
+\CLASSINFOnormalsizeunitybaselineskip=\dimen146
+\IEEEnormaljot=\dimen147
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen148
+\IEEEquantizedlengthdiff=\dimen149
+\IEEEquantizedtextheightdiff=\dimen150
+\IEEEilabelindentA=\dimen151
+\IEEEilabelindentB=\dimen152
+\IEEEilabelindent=\dimen153
+\IEEEelabelindent=\dimen154
+\IEEEdlabelindent=\dimen155
+\IEEElabelindent=\dimen156
+\IEEEiednormlabelsep=\dimen157
+\IEEEiedmathlabelsep=\dimen158
+\IEEEiedtopsep=\skip49
+\c@section=\count199
+\c@subsection=\count266
+\c@subsubsection=\count267
+\c@paragraph=\count268
+\c@IEEEsubequation=\count269
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+\c@figure=\count270
+\c@table=\count271
+\@IEEEeqnnumcols=\count272
+\@IEEEeqncolcnt=\count273
+\@IEEEsubeqnnumrollback=\count274
+\@IEEEquantizeheightA=\dimen159
+\@IEEEquantizeheightB=\dimen160
+\@IEEEquantizeheightC=\dimen161
+\@IEEEquantizeprevdepth=\dimen162
+\@IEEEquantizemultiple=\count275
+\@IEEEquantizeboxA=\box52
+\@IEEEtmpitemindent=\dimen163
+\IEEEPARstartletwidth=\dimen164
+\c@IEEEbiography=\count276
+\@IEEEtranrubishbin=\box53
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen165
+))
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen166
+)
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count277
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count278
+\leftroot@=\count279
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count280
+\DOTSCASE@=\count281
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count282
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count283
+\dotsspace@=\muskip17
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
+\tag@help=\toks19
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
+\andhelp@=\toks20
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks21
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
+6.
+
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+))
+(c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+)
+(c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(c:/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count289
+)
+\MT@toks=\toks26
+\MT@tempbox=\box56
+\MT@count=\count290
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks27
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen174
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count291
+
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip55
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2024/09/29 v3.02 Predefined colors according to SVG 1.1 (UK)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2024/09/29 v3.02 Predefined colors according to Unix/X11 (UK)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count292
+\LTcapwidth=\dimen175
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count293
+\LT@rows=\count294
+\c@LT@tables=\count295
+\c@LT@chunks=\count296
+\LT@p@ftn=\toks28
+)
+(c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen176
+\lightrulewidth=\dimen177
+\cmidrulewidth=\dimen178
+\belowrulesep=\dimen179
+\belowbottomsep=\dimen180
+\aboverulesep=\dimen181
+\abovetopsep=\dimen182
+\cmidrulesep=\dimen183
+\cmidrulekern=\dimen184
+\defaultaddspace=\dimen185
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen186
+\@belowrulesep=\dimen187
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen188
+)
+(c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen189
+\ar@mcellbox=\box62
+\extrarowheight=\dimen190
+\NC@list=\toks29
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box63
+)
+\c@none=\count301
+
+(c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count302
+\calc@Bcount=\count303
+\calc@Adimen=\dimen191
+\calc@Bdimen=\dimen192
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count304
+\calc@Cskip=\skip64
+)
+(c:/texlive/2025/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
+\FNH@notes=\box64
+\FNH@width=\dimen193
+\FNH@toks=\toks30
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen194
+\Gin@req@width=\dimen195
+)
+\pandoc@box=\box65
+
+(c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box66
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+))
+(c:/texlive/2025/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+
+(c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+(c:/texlive/2025/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
+ in chemistry (CN)
+\l__chemgreek_tmpa_int=\count306
+\g__chemgreek_tmpa_int=\count307
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count308
+\__mhchem_arrow_extPgfLength_skip=\skip65
+\mhchem@minispace@tmp=\skip66
+\mhchem@minibackspace@tmp=\skip67
+\mhchem@bondwidth=\skip68
+\mhchem@bondheight=\skip69
+\mhchem@smallbondwidth@tmpA=\skip70
+\mhchem@smallbondwidth@tmpB=\skip71
+\mhchem@smallbondwidth=\skip72
+\mhchem@bondtmp@minussidebearingleft=\skip73
+\mhchem@bondtmp@minussidebearingright=\skip74
+\l__mhchem_option_version_int=\count309
+\mhchem@option@minusmathsidebearingleft=\dimen196
+\mhchem@option@minusmathsidebearingright=\dimen197
+\mhchem@option@minustextsidebearingleft=\dimen198
+\mhchem@option@minustextsidebearingright=\dimen199
+)
+(c:/texlive/2025/texmf-dist/tex/latex/orcidlink/orcidlink.sty
+Package: orcidlink 2024/06/26 v1.1.0 Support ORCID's three different ID formats
+.
+
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count310
+)
+(c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen256
+\Hy@linkcounter=\count311
+\Hy@pagecounter=\count312
+
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count313
+
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count314
+
+(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen257
+
+(c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count315
+\Field@Width=\dimen258
+\Fld@charsize=\dimen259
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(c:/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count316
+\c@Item=\count317
+\c@Hfootnote=\count318
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+
+(c:/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count319
+\c@bookmark@seq@number=\count320
+
+(c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip75
+)
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen260
+\pgfutil@tempdimb=\dimen261
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box67
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen262
+\pgf@y=\dimen263
+\pgf@xa=\dimen264
+\pgf@ya=\dimen265
+\pgf@xb=\dimen266
+\pgf@yb=\dimen267
+\pgf@xc=\dimen268
+\pgf@yc=\dimen269
+\pgf@xd=\dimen270
+\pgf@yd=\dimen271
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count321
+\c@pgf@countb=\count322
+\c@pgf@countc=\count323
+\c@pgf@countd=\count324
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count325
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count326
+\pgfsyssoftpath@bigbuffer@items=\count327
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen272
+\pgfmath@count=\count328
+\pgfmath@box=\box68
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count329
+))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen273
+\pgf@picmaxx=\dimen274
+\pgf@picminy=\dimen275
+\pgf@picmaxy=\dimen276
+\pgf@pathminx=\dimen277
+\pgf@pathmaxx=\dimen278
+\pgf@pathminy=\dimen279
+\pgf@pathmaxy=\dimen280
+\pgf@xx=\dimen281
+\pgf@xy=\dimen282
+\pgf@yx=\dimen283
+\pgf@yy=\dimen284
+\pgf@zx=\dimen285
+\pgf@zy=\dimen286
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen287
+\pgf@path@lasty=\dimen288
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen289
+\pgf@shorten@start@additional=\dimen290
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box69
+\pgf@hbox=\box70
+\pgf@layerbox@main=\box71
+\pgf@picture@serial@count=\count330
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen291
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen292
+\pgf@pt@y=\dimen293
+\pgf@pt@temp=\dimen294
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen295
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen296
+\pgf@sys@shading@range@num=\count331
+\pgf@shadingcount=\count332
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box72
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box73
+)
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen297
+\pgf@nodesepend=\dimen298
+)
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen299
+\pgffor@skip=\dimen300
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count333
+\pgfplotmarksize=\dimen301
+)
+\tikz@lastx=\dimen302
+\tikz@lasty=\dimen303
+\tikz@lastxsaved=\dimen304
+\tikz@lastysaved=\dimen305
+\tikz@lastmovetox=\dimen306
+\tikz@lastmovetoy=\dimen307
+\tikzleveldistance=\dimen308
+\tikzsiblingdistance=\dimen309
+\tikz@figbox=\box74
+\tikz@figbox@bg=\box75
+\tikz@tempbox=\box76
+\tikz@tempbox@bg=\box77
+\tikztreelevel=\count334
+\tikznumberofchildren=\count335
+\tikznumberofcurrentchild=\count336
+\tikz@fig@count=\count337
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count338
+\pgfmatrixcurrentcolumn=\count339
+\pgf@matrix@numberofcolumns=\count340
+)
+\tikz@expandcount=\count341
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarysvg.path.code.tex
+File: tikzlibrarysvg.path.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarysvg.path.code.t
+ex
+File: pgflibrarysvg.path.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleparser.code.tex
+File: pgfmoduleparser.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfparserdef@arg@count=\count342
+)
+\pgf@lib@svg@last@x=\dimen310
+\pgf@lib@svg@last@y=\dimen311
+\pgf@lib@svg@last@c@x=\dimen312
+\pgf@lib@svg@last@c@y=\dimen313
+\pgf@lib@svg@count=\count343
+\pgf@lib@svg@max@num=\count344
+))
+\@curXheight=\skip76
+) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count345
+\float@exts=\toks43
+\float@box=\box78
+\@float@everytoks=\toks44
+\@floatcapt=\box79
+)
+(c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen314
+\captionmargin=\dimen315
+\caption@leftmargin=\dimen316
+\caption@rightmargin=\dimen317
+\caption@width=\dimen318
+\caption@indent=\dimen319
+\caption@parindent=\dimen320
+\caption@hangindent=\dimen321
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count346
+\c@continuedfloat=\count347
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+\@float@every@codelisting=\toks45
+\c@codelisting=\count348
+
+(c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count349
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count350
+)
+(c:/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(c:/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count351
+))
+(c:/texlive/2025/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 201.
+ (./paper_0_verify.aux)
+\openout1 = `paper_0_verify.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 241.
+LaTeX Font Info:    ... okay on input line 241.
+
+-- Lines per column: 58 (exact).
+LaTeX Info: Redefining \microtypecontext on input line 241.
+Package microtype Info: Applying patch `item' on input line 241.
+Package microtype Info: Applying patch `toc' on input line 241.
+Package microtype Info: Applying patch `eqnum' on input line 241.
+Package microtype Info: Applying patch `footnote' on input line 241.
+Package microtype Info: Applying patch `verbatim' on input line 241.
+LaTeX Info: Redefining \microtypesetup on input line 241.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 241.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count352
+\scratchdimen=\dimen322
+\scratchbox=\box80
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen323
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks47
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+
+Package chemgreek Info: Activating mapping `default' on line 241.
+
+Package hyperref Info: Link coloring ON on input line 241.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 25
+1.
+
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 251
+.
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 251
+.
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
+51.
+
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+[][][]\T1/ptm/m/n/8 (+20) Template cre-ated June 23, 2023; re-vised \T1/pcr/m/n
+/8 r
+ []
+
+
+
+
+
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/202
+5/texmf-dist/fonts/enc/dvips/base/8r.enc}
+
+
+]
+<assets/figures/fig-grace-ecosystem.png, id=37, 677.53125pt x 316.18124pt>
+File: assets/figures/fig-grace-ecosystem.png Graphic file (type png)
+<use assets/figures/fig-grace-ecosystem.png>
+Package pdftex.def Info: assets/figures/fig-grace-ecosystem.png  used on input 
+line 439.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+
+
+Overfull \hbox (84.00021pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Domain & Description & Wellbeing Functions & Example System Sup
+ports\\[] 
+ []
+
+
+Overfull \hbox (832.80069pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Spiritual Self & Inner life, values, faith, reflection, existen
+tial orientation & peace, meaning, hope, acceptance, moral continuity & reflect
+ion prompts, prayer/meditation support, ritual reminders, grief-sensitive dialo
+gue\\[] 
+ []
+
+
+Overfull \hbox (770.40065pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Family and Friends & Intimate and enduring personal relationshi
+ps & belonging, affection, care continuity, emotional security, shared memory &
+ family coordination, message prompts, memory sharing, visit planning\\[] 
+ []
+
+
+Overfull \hbox (847.2007pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Working Colleagues & Ongoing or legacy vocational and professio
+nal ties & role continuity, usefulness, recognition, mentoring, productive iden
+tity & mentoring matching, advisory opportunities, skill-sharing, encore work p
+rompts\\[] 
+ []
+
+
+Overfull \hbox (919.20074pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Communities & Local groups, associations, faith communities, ne
+ighborhoods, civic groups & participation, recognition, mutual aid, collective 
+belonging & event discovery, volunteering prompts, group participation support,
+ community connectors\\[] 
+ []
+
+
+Overfull \hbox (957.60077pt too wide) in paragraph at lines 488--488
+[]\T1/pcr/m/n/8 Wider World & Markets, institutions, services, transport, civic
+ systems, public services & inclusion, access, autonomy, service reach, economi
+c and civic participation & service navigation, benefits support, transport coo
+rdination, marketplace access\\[] 
+ []
+
+
+Overfull \hbox (516.00049pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Life Chapters & Major periods or phases of life & childhood, ca
+reer phase, retirement, caregiving years & supports contextual interpretation o
+f current events\\[] 
+ []
+
+
+Overfull \hbox (612.00055pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Major Transitions & Turning points and disruptions & bereavemen
+t, migration, illness onset, retirement & supports sensitivity to recurring vul
+nerabilities and resilience patterns\\[] 
+ []
+
+
+Overfull \hbox (487.20047pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Key Relationships & Important persons and social ties & spouse,
+ children, friends, mentor, colleague & informs relational prompts and support 
+priorities\\[] 
+ []
+
+
+Overfull \hbox (501.60048pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Roles and Identities & Enduring self-definitions & parent, teac
+her, engineer, volunteer, believer & supports role continuity and contribution 
+opportunities\\[] 
+ []
+
+
+Overfull \hbox (554.40051pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Values and Beliefs & Moral, spiritual, and existential commitme
+nts & faith, service, independence, compassion & aligns prompts and interventio
+ns with personal meaning\\[] 
+ []
+
+
+Overfull \hbox (381.6004pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Strengths and Skills & Capabilities and resources & mentoring, 
+storytelling, teaching, organizing & supports contribution matching\\[] 
+ []
+
+
+Overfull \hbox (573.60052pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Meaningful Places & Places of emotional or narrative significan
+ce & family home, workplace, temple, neighborhood park & supports memory prompt
+s and place-based engagement\\[] 
+ []
+
+
+Overfull \hbox (463.20045pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Rituals and Traditions & Recurrent meaningful practices & weekl
+y worship, family dinners, anniversaries & supports temporal and spiritual grou
+nding\\[] 
+ []
+
+
+Overfull \hbox (463.20045pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Significant Memories & Events with autobiographical weight & ma
+rriage, awards, losses, milestones & supports story creation and identity conti
+nuity\\[] 
+ []
+
+
+Overfull \hbox (357.60039pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Present Concerns & Current needs and stresses & loneliness, mob
+ility limits, family conflict & supports adaptive intervention\\[] 
+ []
+
+
+Overfull \hbox (453.60045pt too wide) in paragraph at lines 533--533
+[]\T1/pcr/m/n/8 Future Hopes & Forward-looking aims & legacy project, reconnect
+ing with family, community service & supports future-oriented narrative continu
+ity\\[] 
+ []
+
+
+
+[2 <./assets/figures/fig-grace-ecosystem.png>]
+<assets/figures/fig-grace-index.png, id=60, 677.53125pt x 316.18124pt>
+File: assets/figures/fig-grace-index.png Graphic file (type png)
+<use assets/figures/fig-grace-index.png>
+Package pdftex.def Info: assets/figures/fig-grace-index.png  used on input line
+ 559.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+
+
+Overfull \hbox (40.80019pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Dimension & Description & Indicators & Example Data Sources\\[]
+ 
+ []
+
+
+Overfull \hbox (823.20068pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Narrative Continuity & Sense of remaining connected to one's li
+fe story and selfhood & felt like self, could make sense of the day, role conti
+nuity, future orientation & self-report, voice reflections, story engine output
+s\\[] 
+ []
+
+
+Overfull \hbox (679.20059pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Spiritual Grounding & Degree of inner peace, reflection, faith,
+ or value alignment & prayer/reflection, gratitude, acceptance, values-based ac
+tion & self-report, ritual logs, spiritual prompts\\[] 
+ []
+
+
+Overfull \hbox (660.00058pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Relational Vitality & Quality of meaningful connection and belo
+nging & meaningful contact, warmth of interaction, reciprocity, felt belonging 
+& interaction logs, visit records, self-report\\[] 
+ []
+
+
+Overfull \hbox (626.40056pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Contribution and Usefulness & Sense of helping, guiding, teachi
+ng, or being needed & mentoring, helping, advice-giving, feeling useful & contr
+ibution logs, task records, self-report\\[] 
+ []
+
+
+Overfull \hbox (794.40067pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Community and World Engagement & Participation beyond the immed
+iate self or household & event attendance, service access, neighborhood interac
+tion, civic participation & activity logs, appointments, community records\\[] 
+
+ []
+
+
+Overfull \hbox (679.20059pt too wide) in paragraph at lines 610--610
+[]\T1/pcr/m/n/8 Adaptive Resilience & Capacity to remain centered and recover d
+uring stress & coping, help-seeking, recovery after setbacks, staying grounded 
+& self-report, predictor features, behavior trends\\[] 
+ []
+
+
+Overfull \hbox (381.6004pt too wide) in paragraph at lines 680--680
+[]\T1/pcr/m/n/8 Flourishing Zone & 85^^U100 & strong continuity, connection, co
+ntribution, and resilience; reinforce growth and legacy opportunities\\[] 
+ []
+
+
+Overfull \hbox (410.40042pt too wide) in paragraph at lines 680--680
+[]\T1/pcr/m/n/8 Stable Narrative Zone & 70^^U84 & stable selfhood and functioni
+ng despite ordinary challenges; maintain routines and meaningful engagement\\[]
+ 
+ []
+
+
+Overfull \hbox (328.80037pt too wide) in paragraph at lines 680--680
+[]\T1/pcr/m/n/8 Vulnerability Zone & 50^^U69 & early signs of drift, withdrawal
+, or reduced engagement; initiate gentle, targeted support\\[] 
+ []
+
+
+Overfull \hbox (376.8004pt too wide) in paragraph at lines 680--680
+[]\T1/pcr/m/n/8 Disruption Zone & 30^^U49 & significant weakening of narrative 
+continuity or relational vitality; escalate coordinated intervention\\[] 
+ []
+
+
+Overfull \hbox (434.40044pt too wide) in paragraph at lines 680--680
+[]\T1/pcr/m/n/8 Fragmentation Risk Zone & 0^^U29 & severe disconnection, overwh
+elm, or loss of self-authorship; urgent, high-touch support with human oversigh
+t\\[] 
+ []
+
+
+Overfull \hbox (40.80019pt too wide) in paragraph at lines 721--721
+[]\T1/pcr/m/n/8 Innovation & Inputs & Mechanism & Outputs & Intended Effect\\[]
+ 
+ []
+
+
+Overfull \hbox (991.20079pt too wide) in paragraph at lines 721--721
+[]\T1/pcr/m/n/8 Daily Story Creation Engine & daily events, emotional signals, 
+interactions, reflections & converts daily life into hero's-journey narrative s
+tructure & daily story, heroic integration score, narrative tags & improved mea
+ning-making and narrative continuity\\[] 
+ []
+
+
+Overfull \hbox (799.20067pt too wide) in paragraph at lines 721--721
+[]\T1/pcr/m/n/8 Fast State Predictor & GRACE Index history, trends, event conte
+xt, story features & forecasts near-future wellbeing state and risk & predicted
+ score, predicted zone, intervention urgency & earlier detection of decline\\[]
+ 
+ []
+
+
+Overfull \hbox (1005.6008pt too wide) in paragraph at lines 721--721
+[]\T1/pcr/m/n/8 Smart Stimulus Agent & predicted state, preferences, consent ru
+les, intervention history & selects personalized prompt or support action & nar
+rative/relational/spiritual/contribution/community/practical stimulus & reduced
+ time in vulnerable or disrupted states\\[] 
+ []
+
+
+
+[3 <./assets/figures/fig-grace-index.png>]
+<assets/figures/fig-heros-journey.png, id=85, 677.53125pt x 316.18124pt>
+File: assets/figures/fig-heros-journey.png Graphic file (type png)
+<use assets/figures/fig-heros-journey.png>
+Package pdftex.def Info: assets/figures/fig-heros-journey.png  used on input li
+ne 739.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+<assets/figures/fig-predictive-loop.png, id=86, 677.53125pt x 316.18124pt>
+File: assets/figures/fig-predictive-loop.png Graphic file (type png)
+<use assets/figures/fig-predictive-loop.png>
+Package pdftex.def Info: assets/figures/fig-predictive-loop.png  used on input 
+line 764.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+
+<assets/figures/fig-multiagent-architecture.png, id=91, 677.53125pt x 316.18124
+pt>
+File: assets/figures/fig-multiagent-architecture.png Graphic file (type png)
+<use assets/figures/fig-multiagent-architecture.png>
+Package pdftex.def Info: assets/figures/fig-multiagent-architecture.png  used o
+n input line 803.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+Overfull \hbox (511.20049pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Narrative Agent & maintain autobiographical continuity & reflec
+tions, memories, daily events & stories, narrative summaries, continuity signal
+s & all domains\\[] 
+ []
+
+
+Overfull \hbox (588.00053pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Relationship Agent & track and strengthen social ties & interac
+tion logs, visit patterns & tie-strength estimates, reconnection suggestions & 
+family, colleagues, communities\\[] 
+ []
+
+
+Overfull \hbox (391.20041pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Wellbeing Agent & synthesize cross-domain wellbeing & GRACE dim
+ensions, trends, events & state summaries, risk signals & all domains\\[] 
+ []
+
+
+Overfull \hbox (511.20049pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Spiritual Companion Agent & support reflection and spiritual gr
+ounding & rituals, reflections, values & spiritual prompts, grounding support &
+ spiritual self\\[] 
+ []
+
+
+Overfull \hbox (544.8005pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Family Coordination Agent & coordinate communication and care c
+ontinuity & family contacts, calendars, events & visit plans, updates, reminder
+s & family and friends\\[] 
+ []
+
+
+Overfull \hbox (520.80049pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Work and Contribution Agent & identify contribution opportuniti
+es & skills, roles, requests & mentoring matches, contribution prompts & collea
+gues, communities\\[] 
+ []
+
+
+Overfull \hbox (501.60048pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Community Connector Agent & support participation and local bel
+onging & local events, memberships, opportunities & engagement recommendations 
+& communities\\[] 
+ []
+
+
+Overfull \hbox (477.60046pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Service Access Agent & connect to services and institutions & a
+ppointments, transport, benefits needs & service guidance, access support & wid
+er world\\[] 
+ []
+
+
+Overfull \hbox (448.80045pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Memory and Legacy Agent & preserve long-term story and artifact
+s & stories, photos, milestones & archives, legacy packages & family, communiti
+es\\[] 
+ []
+
+
+Overfull \hbox (535.2005pt too wide) in paragraph at lines 840--840
+[]\T1/pcr/m/n/8 Ethics and Safety Agent & enforce safeguards and accountability
+ & consent rules, system actions, risk states & approvals, constraints, audit r
+ecords & all domains\\[] 
+ []
+
+
+Overfull \hbox (328.80037pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Paternalism & system over-directs behavior; erosion of autonomy
+ & adjustable autonomy, opt-out controls, human override\\[] 
+ []
+
+
+Overfull \hbox (482.40047pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Narrative Imposition & system interprets life story too forcefu
+lly; distortion of selfhood & user-editable stories, narrative sovereignty, tra
+nsparency\\[] 
+ []
+
+
+Overfull \hbox (434.40044pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Privacy Breach & sensitive autobiographical data exposed; loss 
+of trust, harm to dignity & access controls, encryption, consent-based sharing\
+\[] 
+ []
+
+
+Overfull \hbox (444.00044pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Over-Intervention & too many prompts or alerts; fatigue, frustr
+ation, disengagement & rate limits, preference learning, intervention threshold
+s\\[] 
+ []
+
+
+Overfull \hbox (348.00038pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Family Misuse & relatives use system to pressure elder; coercio
+n or conflict & granular permissions, elder-first governance\\[] 
+ []
+
+
+Overfull \hbox (290.40034pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Prediction Opacity & unclear reason for risk prediction; mistru
+st, confusion & explainable prediction summaries\\[] 
+ []
+
+
+Overfull \hbox (324.00037pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Bias in Prediction & model underperforms for some groups; inequ
+itable support & fairness auditing, subgroup validation\\[] 
+ []
+
+
+Overfull \hbox (439.20044pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Emotional Harm & prompts surface painful memories badly; distre
+ss or retraumatization & sensitivity rules, contextual timing, human escalation
+\\[] 
+ []
+
+
+Overfull \hbox (420.00043pt too wide) in paragraph at lines 873--873
+[]\T1/pcr/m/n/8 Dependency on System & overreliance on AI mediation; reduced di
+rect human engagement & human-in-the-loop design, connection-first policies\\[]
+ 
+ []
+
+<assets/figures/fig-governance-safeguards.png, id=92, 677.53125pt x 316.18124pt
+>
+File: assets/figures/fig-governance-safeguards.png Graphic file (type png)
+<use assets/figures/fig-governance-safeguards.png>
+Package pdftex.def Info: assets/figures/fig-governance-safeguards.png  used on 
+input line 883.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+LaTeX Warning: Reference `fig-simulation-structure' on page 4 undefined on inpu
+t line 905.
+
+
+LaTeX Warning: Reference `tbl-simulation-conditions' on page 4 undefined on inp
+ut line 906.
+
+
+LaTeX Warning: Reference `tbl-simulation-hypotheses' on page 4 undefined on inp
+ut line 907.
+
+
+LaTeX Warning: Reference `tbl-simulation-variables' on page 4 undefined on inpu
+t line 908.
+
+
+LaTeX Warning: Reference `tbl-simulation-outcomes' on page 4 undefined on input
+ line 909.
+
+
+
+[4 <./assets/figures/fig-heros-journey.png> <./assets/figures/fig-predictive-lo
+op.png> <./assets/figures/fig-multiagent-architecture.png>]
+<assets/figures/fig-simulation-structure.png, id=114, 677.53125pt x 316.18124pt
+>
+File: assets/figures/fig-simulation-structure.png Graphic file (type png)
+<use assets/figures/fig-simulation-structure.png>
+Package pdftex.def Info: assets/figures/fig-simulation-structure.png  used on i
+nput line 920.
+(pdftex.def)             Requested size: 677.52959pt x 316.18047pt.
+
+
+
+Overfull \hbox (19.61633pt too wide) detected at line 938
+\OML/cmm/m/it/10 G[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 22\OM
+L/cmm/m/it/10 N[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 14\OML/c
+mm/m/it/10 S[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 20\OML/cmm/
+m/it/10 R[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 16\OML/cmm/m/i
+t/10 C[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 13\OML/cmm/m/it/1
+0 E[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 15\OML/cmm/m/it/10 A
+[]
+ []
+
+
+Overfull \hbox (21.60017pt too wide) in paragraph at lines 963--963
+[]\T1/pcr/m/n/8 Condition & Story & Prediction & Stimulus & Expectation\\[] 
+ []
+
+
+Overfull \hbox (36.00018pt too wide) in paragraph at lines 963--963
+[]\T1/pcr/m/n/8 Story Only & Yes & No & No & improved narrative continuity\\[] 
+
+ []
+
+
+Overfull \hbox (79.20021pt too wide) in paragraph at lines 963--963
+[]\T1/pcr/m/n/8 Story + Prediction & Yes & Yes & No & improved early risk detec
+tion\\[] 
+ []
+
+
+Overfull \hbox (88.80022pt too wide) in paragraph at lines 963--963
+[]\T1/pcr/m/n/8 Full GRACE & Yes & Yes & Yes & highest stability and fastest re
+covery\\[] 
+ []
+
+
+Overfull \hbox (98.40022pt too wide) in paragraph at lines 991--991
+[]\T1/pcr/m/n/8 H1 & Story creation increases Narrative Continuity relative to 
+baseline\\[] 
+ []
+
+
+Overfull \hbox (26.40018pt too wide) in paragraph at lines 991--991
+[]\T1/pcr/m/n/8 H2 & Fast prediction improves early detection of decline\\[] 
+ []
+
+
+Overfull \hbox (21.60017pt too wide) in paragraph at lines 991--991
+[]\T1/pcr/m/n/8 H3 & Smart stimuli reduce time spent in low GRACE zones\\[] 
+ []
+
+
+Overfull \hbox (36.00018pt too wide) in paragraph at lines 991--991
+[]\T1/pcr/m/n/8 H5 & Full GRACE reduces recovery time after adverse shocks\\[] 
+
+ []
+
+
+Overfull \hbox (98.40022pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 N & Narrative Continuity & state variable & tracks self-story c
+oherence\\[] 
+ []
+
+
+Overfull \hbox (74.4002pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 S & Spiritual Grounding & state variable & tracks inner steadin
+ess\\[] 
+ []
+
+
+Overfull \hbox (84.00021pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 R & Relational Vitality & state variable & tracks connection qu
+ality\\[] 
+ []
+
+
+Overfull \hbox (132.00024pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 C & Contribution and Usefulness & state variable & tracks perce
+ived usefulness\\[] 
+ []
+
+
+Overfull \hbox (156.00026pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 E & Community and World Engagement & state variable & tracks ex
+ternal participation\\[] 
+ []
+
+
+Overfull \hbox (88.80022pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 A & Adaptive Resilience & state variable & tracks coping and re
+covery\\[] 
+ []
+
+
+Overfull \hbox (55.2002pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 G & GRACE Index & composite metric & primary wellbeing outcome\
+\[] 
+ []
+
+
+Overfull \hbox (175.20027pt too wide) in paragraph at lines 1023--1023
+[]\T1/pcr/m/n/8 H & Heroic Integration Score & derived metric & measures succes
+sful narrative reframing\\[] 
+ []
+
+
+Overfull \hbox (223.2003pt too wide) in paragraph at lines 1051--1051
+[]\T1/pcr/m/n/8 Stable-Zone Days & outcome metric & proportion of days with G >
+= 70; assesses sustained wellbeing\\[] 
+ []
+
+
+Overfull \hbox (223.2003pt too wide) in paragraph at lines 1051--1051
+[]\T1/pcr/m/n/8 Vulnerable/Disrupted Days & outcome metric & proportion of days
+ with G < 70; assesses instability\\[] 
+ []
+
+
+Overfull \hbox (213.6003pt too wide) in paragraph at lines 1051--1051
+[]\T1/pcr/m/n/8 Recovery Time & outcome metric & days to return to stable zone 
+after shock; assesses resilience\\[] 
+ []
+
+
+Overfull \hbox (261.60033pt too wide) in paragraph at lines 1051--1051
+[]\T1/pcr/m/n/8 Reframing Success & outcome metric & proportion of adverse days
+ with high H; assesses story engine effect\\[] 
+ []
+
+
+Overfull \hbox (223.2003pt too wide) in paragraph at lines 1051--1051
+[]\T1/pcr/m/n/8 Intervention Efficiency & outcome metric & gain in G per stimul
+us action; assesses stimulus value\\[] 
+ []
+
+
+
+[5 <./assets/figures/fig-governance-safeguards.png> <./assets/figures/fig-simul
+ation-structure.png>]
+
+
+
+[6]
+
+LaTeX Warning: Reference `fig-simulation-structure' on page 7 undefined on inpu
+t line 1171.
+
+
+
+
+
+[7]
+
+
+
+[8]
+<azrl.png, id=163, 161.8848pt x 203.0787pt>
+File: azrl.png Graphic file (type png)
+<use azrl.png>
+Package pdftex.def Info: azrl.png  used on input line 1411.
+(pdftex.def)             Requested size: 161.8844pt x 203.0782pt.
+
+Overfull \hbox (89.61441pt too wide) in paragraph at lines 1411--1411
+ [][] 
+ []
+
+File: azrl.png Graphic file (type png)
+<use azrl.png>
+Package pdftex.def Info: azrl.png  used on input line 1411.
+(pdftex.def)             Requested size: 161.8844pt x 203.0782pt.
+
+Overfull \hbox (89.61441pt too wide) in paragraph at lines 1411--1411
+ [][] 
+ []
+
+
+
+
+
+[9
+
+ <./azrl.png>] (./paper_0_verify.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 28452 strings out of 473189
+ 526679 string characters out of 5719959
+ 988553 words of memory out of 5000000
+ 50894 multiletter control sequences out of 15000+600000
+ 681487 words of font info for 319 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 99i,10n,101p,1004b,824s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8
+a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
+2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on paper_0_verify.pdf (9 pages, 1287635 bytes).
+PDF statistics:
+ 372 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 49557 words of extra memory for PDF output out of 51595 (max. 10000000)
+

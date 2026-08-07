@@ -1,0 +1,40 @@
+Berikut adalah *Extended Abstract* yang disusun berdasarkan format dari sumber "Template Extended Abstract.docx" dan mengacu pada laporan kemajuan riset Program RKI EQUITY 2025-2026:
+
+**Template Extended Abstract Ringkasan Laporan Kegiatan Program Equity**
+
+**Judul Kegiatan**
+Pengembangan dan Validasi Model Pembelajaran VALORIZE: Kerangka Pedagogis Berbasis AI untuk Membentuk Identitas Profesional Rekayasawan di Era Digital.
+
+**Penanggungjawab Kegiatan**
+**Ketua Peneliti:** Prof. Ir. Armein Z. R. Langi, M.Sc., Ph.D. (Institut Teknologi Bandung).
+**Anggota (Co-Peneliti):**
+1. Prof. Dr. Parulian Sinaga (Universitas Pendidikan Indonesia).
+2. Dr. I G Baskara Nugraha, S.T., M.Sc. (Institut Teknologi Bandung).
+3. Meliana Christianti Johan, S.T., M.T. (Universitas Kristen Maranatha).
+
+**Latar Belakang dan Tujuan Kegiatan**
+Di era Kecerdasan Buatan (AI) yang mulai mengotomatisasi aktivitas kognitif rutin dan keterampilan teknis dasar, pendekatan pendidikan keteknikan yang hanya berfokus pada transfer pengetahuan dan "penguasaan materi" telah menjadi usang. Lulusan teknik saat ini seringkali kesulitan dalam penalaran kolaboratif, penilaian etis, dan pemecahan masalah kreatif. Oleh karena itu, kegiatan riset ini memiliki urgensi untuk menciptakan transformasi filosofis dalam pendidikan: bergeser dari sekadar mengajarkan mahasiswa untuk 'Mengetahui', menjadi 'Menjadi' seorang profesional. Tujuannya adalah mengemulasikan lingkungan profesional di dalam ruang kelas melalui kerangka pedagogis VALORIZE, yang mendorong mahasiswa bertransformasi dari konsumen pengetahuan pasif menjadi agen metakognitif dan *co-creator* nilai (produsen aset intelektual), dengan dukungan AI sebagai mitra kognitif (*Socratic Coaching*).
+
+**Waktu dan Tempat Pelaksanaan**
+Kegiatan ini dilaksanakan selama periode Program RKI EQUITY 2025-2026, dengan pengujian eksperimental diterapkan pada 142 mahasiswa sarjana teknik selama 12 minggu pembelajaran.
+
+**Hasil Kegiatan**
+Penerapan kerangka kerja VALORIZE (yang mengintegrasikan Mesin Kognitif PUDAL dan Mesin Penciptaan Nilai PSKVE) telah melampaui target awal dalam memvalidasi ekosistem pembelajaran masa depan. Hasil empiris membuktikan bahwa:
+*   **Pemerataan Pemahaman:** Pendekatan VALORIZE secara radikal mengurangi ketimpangan kognitif antar mahasiswa. Variansi/dispersi nilai turun drastis dari 335,78 pada kelas tradisional menjadi 52,01 pada kelas VALORIZE.
+*   **Penciptaan Nilai Bersama (*Value Co-Creation*):** Mahasiswa berhasil memproduksi 427 artefak pengetahuan otentik yang divalidasi oleh rekan sejawat (*peer-reviewed*) dalam waktu 12 minggu.
+*   **Keberlanjutan Komunitas:** Artefak pengetahuan yang dihasilkan mencatat tingkat penggunaan kembali (*reuse*) sebesar 16% oleh generasi mahasiswa berikutnya, yang secara nyata membuktikan terciptanya nilai komunitas (*Community Value*). 
+*   Selain itu, mahasiswa juga mengalami peningkatan drastis dalam motivasi intrinsik, penguatan identitas profesional, dan lonjakan kemampuan memecahkan masalah baru (*Transfer Learning*).
+
+**Luaran**
+Target luaran publikasi wajib program ini berhasil dicapai lebih awal. Dua draf artikel jurnal utama telah berstatus **ACCEPTED**, yakni:
+1. Luaran Host di Jurnal Top-Tier **'Frontiers in Education'** (Q1 Scopus) dengan judul artikel *"Orchestrating Value Co-Creation in Digital Education Using the TISE-VALORIZE Framework: From Knowing to Becoming"*.
+2. Luaran Mitra di jurnal **'International JOIV : International Journal on Informatics Visualization'** (Q2 Scopus) dengan fokus pada eksplorasi infrastruktur teknis dan visualisasi sistem manajemen pengetahuan cerdas.
+
+**Tindak Lanjut (Follow-up Plan)**
+Rencana kelanjutan riset menuju implementasi penuh (hingga Juli 2026) akan dibagi menjadi tiga fase:
+*   **Fase 1:** Mengoptimasi Sistem AI (*Socratic Coaching*) dengan menyempurnakan algoritma berdasarkan *log data* dari 142 pengguna awal agar umpan balik menjadi lebih personal.
+*   **Fase 2:** Memperluas skalabilitas infrastruktur teknis (CKMS-SE) dengan mengembangkan kerangka evaluasi metrik untuk menilai dinamika kolaborasi secara lebih granular.
+*   **Fase 3 (Juli 2026):** Penyelesaian dan pemasukan Laporan Akhir 100%, serta perumusan panduan implementasi rekayasa pendidikan berbasis AI agar dapat direplikasi secara luas di institusi PTNBH lainnya.
+
+**Kata Kunci**
+VALORIZE, Kecerdasan Buatan (AI), *Value Co-Creation*, Identitas Profesional, Teori Beban Kognitif.

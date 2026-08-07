@@ -1,0 +1,29 @@
+
+
+# Prakata {.unnumbered}
+
+Deoxyribonucleic acid (DNA) adalah molekul yang menyimpan informasi genetik yang menentukan karakteristik setiap makhluk hidup. Istilah DNA sudah dikenal secara luas sebagai konsep sentral dalam biologi molekuler, dan memiliki fungsi vital dalam pewarisan sifat dari satu generasi ke generasi berikutnya. Dalam terminologi yang dikembangkan dalam buku ini, DNA mengalami eskalasi makna dan fungsi, menjadi lebih dari sekadar molekul biologis. 
+
+DNA dalam monograf ini adalah deskripsi nilai artefak yang secara lengkap memuat mengenai visi ideal tentang apa yang ingin diwujudkan sebagai tatanan kemanusiaan terbaik, serta bagaimana para stakeholder dan agents bekerja sama untuk mewujudkannya. Artefak dalam monograf ini disusun oleh para stakeholder dan agents, dan akan terus berkembang seiring dengan perkembangan pemikiran dan pengalaman para stakeholder dan agents. Maka DNA dapat dipandang sebagai sebuah sistem informasi yang hidup, di mana para stakeholder dan agents berperan sebagai operator dan evolver dari sistem tersebut.
+
+Monograf ini disusun sebagai **Buku DNA** bagi TISE level 5. Artinya, buku ini bukan hanya menjelaskan teori, tetapi juga dimaksudkan menjadi rujukan kerja bersama bagi rekayasawan, stakeholder, dan agents yang ingin mewujudkan konfigurasi solusi kemanusiaan secara nyata. Dalam kerangka ini, TISE level 5 dipahami sebagai level rekayasa di mana persoalan kemanusiaan dihadapi melalui pembentukan, penguatan, dan pengoperasian konfigurasi stakeholder bermisi.
+
+Agar efektif, Buku DNA ini harus menjalankan dua fungsi sekaligus. Pertama, ia harus menjadi **rujukan konseptual** yang menjelaskan bagaimana evolusi rekayasa bergerak dari TISE level 0 sampai TISE level 5. Kedua, ia harus menjadi **alat peningkatan readiness**, karena dalam kenyataan inovasi TISE level 5 hanya dapat diwujudkan bila para stakeholder bertumbuh dalam kesadaran identitas naratif, kejelasan misi, kompetensi, motivasi, komitmen, dan kemampuan membaca peluang kontribusi.
+
+Karena itu, monograf ini direstruktur sebagai template bertingkat. Setelah pendahuluan yang memberi tinjauan umum atas keseluruhan konsep, pembahasan utama disusun dari **Part 1 yang berfokus pada rekayasa TISE level 5**, kemudian turun bertahap ke **Part 2 untuk TISE level 4**, **Part 3 untuk TISE level 3**, **Part 4 untuk TISE level 2**, **Part 5 untuk TISE level 1**, dan **Part 6 untuk TISE level 0**. Di bagian akhir, monograf ini memberikan rangkuman keseluruhan, arah pengembangan berikutnya, serta lampiran teknis berupa daftar pertanyaan per level yang perlu dijawab oleh para stakeholder. Kumpulan jawaban itu kemudian dapat diolah oleh agents untuk menghasilkan **Dokumen DNA** yang, bila dijalankan oleh para stakeholder, akan membantu mewujudkan visi konfigurasi terbaik.
+
+Bandung, 1 Mei 2026
+
+Armein Z. R. Langi
+
+# Abstrak {.unnumbered}
+
+Monograf ini merumuskan **TISE level 5** sebagai level tertinggi dalam hirarki rekayasa TISE, yaitu level di mana rekayasa berfokus pada pembentukan konfigurasi stakeholder bermisi untuk memecahkan persoalan kemanusiaan. Argumen utama monograf ini adalah bahwa persoalan manusia abad ke-21 tidak cukup dipahami hanya sebagai persoalan energi, material, dan informasi, tetapi perlu dipandang sebagai persoalan mobilisasi potensi manusia, readiness stakeholder, distribusi benefit, legitimasi regulatif, operasi solusi, dan pengorganisasian misi secara kolektif.
+
+Untuk itu, monograf ini disusun sebagai **Buku DNA**. Setelah memberikan tinjauan umum tentang keseluruhan konsep, buku ini membahas rekayasa secara bertingkat dari **TISE level 5** sampai **TISE level 0**. Pada TISE level 5, mesin utamanya adalah **Matrix of Mission** dan siklus operasionalnya adalah **MOS-7**. Pada level-level di bawahnya, solusi diturunkan secara bertahap menjadi rekayasa DNA desain, rekayasa identitas naratif, rekayasa agentik PUDAL, rekayasa smart engine PSKVE, dan akhirnya rekayasa tradisional berbasis core engine.
+
+Monograf ini juga menegaskan bahwa keberhasilan inovasi TISE level 5 bergantung pada **peningkatan readiness stakeholder**. Karena itu, edukasi, training, coaching, dan pembelajaran berkelanjutan diposisikan sebagai bagian inheren dari rekayasa. Sebagai keluaran operasional, buku ini dilengkapi dengan lampiran teknis berupa daftar pertanyaan per level. Jawaban para stakeholder atas pertanyaan-pertanyaan ini diproses oleh agents untuk menghasilkan **Dokumen DNA** yang memuat daftar tujuan pada berbagai level dan cara para stakeholder mencapainya.
+
+Dengan demikian, monograf ini berfungsi sekaligus sebagai fondasi konseptual, template rekayasa, alat peningkatan readiness, dan kerangka pembentukan pusat keunggulan TISE level 5.
+
+**Kata kunci:** TISE level 5, Buku DNA, Matrix of Mission, MOS-7, readiness stakeholder, rekayasa kemanusiaan, PSKVE, PUDAL.

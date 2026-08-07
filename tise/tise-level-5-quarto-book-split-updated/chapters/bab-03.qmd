@@ -1,0 +1,41 @@
+# Matrix of Mission, MOS-7, dan Stakeholder Readiness
+
+## Matrix of Mission
+
+**Matrix of Mission** adalah mesin utama TISE level 5. Pada diagonal utama, tiap stakeholder memuat misi yang perlu dijalankan dan benefit yang diharapkan. Pada sel non-diagonal, dimuat kontribusi yang diberikan satu stakeholder kepada stakeholder lain demi menopang terpenuhinya misi masing-masing.
+
+|   | A / USER | B / SOURCE | C / REGULATOR | D / PROVIDER |
+|---|---|---|---|---|
+| 1 / USER | Misi USER; Benefit USER | Kontribusi USER ke SOURCE | Kontribusi USER ke REGULATOR | Kontribusi USER ke PROVIDER |
+| 2 / SOURCE | Kontribusi SOURCE ke USER | Misi SOURCE; Benefit SOURCE | Kontribusi SOURCE ke REGULATOR | Kontribusi SOURCE ke PROVIDER |
+| 3 / REGULATOR | Kontribusi REGULATOR ke USER | Kontribusi REGULATOR ke SOURCE | Misi REGULATOR; Benefit REGULATOR | Kontribusi REGULATOR ke PROVIDER |
+| 4 / PROVIDER | Kontribusi PROVIDER ke USER | Kontribusi PROVIDER ke SOURCE | Kontribusi PROVIDER ke REGULATOR | Misi PROVIDER; Benefit PROVIDER |
+
+: Bentuk generik Matrix of Mission
+
+## Tipologi Stakeholder
+
+TISE level 5 mengelompokkan stakeholder ke dalam empat tipe utama: **USER**, **SOURCE**, **REGULATOR**, dan **PROVIDER**.
+
+## Stakeholder Readiness Framework
+
+Sebagai pelengkap Matrix of Mission, monograf ini mengusulkan **Stakeholder Readiness Framework**. Framework ini memeriksa kesiapan stakeholder pada enam dimensi:
+
+1. **Narrative readiness**;
+2. **Mission readiness**;
+3. **Competency readiness**;
+4. **Motivational readiness**;
+5. **Commitment readiness**;
+6. **Opportunity readiness**.
+
+## MOS-7 sebagai Siklus Operasional
+
+MOS-7 adalah siklus rekayasa stakeholder bermisi yang terdiri dari tujuh langkah:
+
+1. Hear / Identify;
+2. Model / Discern;
+3. Design / Formulate;
+4. Commit / Seek;
+5. Build / Co-Create;
+6. Operate / Delivery;
+7. Evaluate-Audit / Protect.

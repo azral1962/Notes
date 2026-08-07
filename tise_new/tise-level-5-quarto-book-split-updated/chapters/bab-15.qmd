@@ -1,0 +1,15 @@
+# Bab 15. Summary dan What Next
+
+## Ringkasan Lintas Level TISE
+
+Seluruh hirarki TISE membentuk satu rantai rekayasa yang utuh. TISE level 5 memberi visi, konfigurasi, dan arah misi. TISE level 4 memberi pola pewarisan dan reproduksi desain. TISE level 3 memberi makna dan energon naratif. TISE level 2 memberi kecerdasan agentik dan adaptasi. TISE level 1 memberi kapasitas kerja multidisiplin. TISE level 0 memberi fondasi teknologi, struktur, dan keandalan.
+
+## What Next
+
+1. memilih domain persoalan kemanusiaan;
+2. membentuk visi konfigurasi terbaik;
+3. mengidentifikasi stakeholder dan readiness-nya;
+4. menjalankan paket pertanyaan teknis per level;
+5. mengolah jawaban dengan bantuan agents;
+6. menghasilkan Dokumen DNA operasional;
+7. menjalankan Dokumen DNA itu bersama para stakeholder.

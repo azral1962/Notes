@@ -1,0 +1,27 @@
+# Bagian 2: Metodologi Multi-Domain (PICOC)
+
+Dalam kerangka *Smart Engineering*, penyelesaian masalah teknik modern yang sangat kompleks dan lintas disiplin didekonstruksi ke dalam empat domain utama, yakni domain Aplikasi, Sistem, Teknologi, dan Riset Fundamental. Untuk meneliti, mengevaluasi, dan melaporkan solusi pada keempat lapisan domain ini secara sistematis, kerangka kerja ini memanfaatkan **Metodologi PICOC**.
+
+Secara mendasar, metodologi PICOC berfungsi sebagai struktur pelaporan yang mengevaluasi sebuah perlakuan (solusi) baru terhadap solusi lama untuk mengukur peningkatan yang dihasilkan dalam memahami atau memecahkan suatu masalah. Komponen metodologi ini terdiri dari:
+
+-   **P (****Population****):** Kelompok target, entitas, atau kumpulan data yang diteliti.
+
+-   **I (****Intervention****):** Perlakuan inovatif berupa solusi, sistem, teknologi, atau proses baru yang diusulkan.
+
+-   **C (****Control****):** Solusi, sistem, atau teknologi lama yang sudah ada dan digunakan sebagai garis dasar (*baseline*) pembanding.
+
+-   **O (****Outcome****):** Efek yang dapat diukur, seperti peningkatan performa, nilai-nilai baru yang dihasilkan, atau temuan pengetahuan baru.
+
+-   **Cx (****Context****):** Masalah spesifik, batasan kebutuhan, atau kesenjangan pengetahuan yang menjadi latar belakang perancangan.
+
+Keunikan metodologi lintas-domain ini dalam ekosistem *Smart Engineering* adalah **penerapan struktur PICOC yang diiterasi secara spesifik pada keempat lapisan (domain) rekayasa**:
+
+-   **Pada Domain Aplikasi (PICOC-A):** Fokus evaluasi berada pada penyelesaian masalah pemangku kepentingan (*stakeholders*). Sistem membandingkan solusi baru yang ditawarkan dengan praktik yang digunakan masyarakat saat ini, lalu mengukur hasil akhirnya dalam bentuk peningkatan efisiensi, pengurangan biaya, kepuasan pengguna, atau manfaat nyata (*Value Energy*).
+
+-   **Pada Domain Sistem (PICOC-S):** Berfokus pada pengujian rancangan sistem terintegrasi (contohnya perancangan kendaraan cerdas secara utuh) yang akan mewujudkan solusi pada lapisan aplikasi. Di sini, sistem baru dievaluasi performanya (seperti akurasi, kecepatan, pemanfaatan sumber daya, atau keandalan) melawan arsitektur sistem yang sudah ada sebelumnya.
+
+-   **Pada Domain Teknologi (PICOC-T):** Berfokus pada evaluasi mesin penggerak (*Smart Engine*) atau modul teknologi inti di dalam sistem. Metodologi ini mengukur seberapa efisien teknologi baru tersebut dalam melakukan tugas konversi spesifik (seperti konversi *Product Energy* menjadi *Service Energy*) jika dibandingkan dengan metode atau instrumen lama.
+
+-   **Pada Domain Riset Fundamental (PICOC-F):** Berada di lapisan terdalam untuk memvalidasi prinsip-prinsip saintifik, entitas ontologis, atau teori konversi energi PSKVE yang menjadi landasan inovasi. Metodologi membandingkan kerangka teori baru dengan model lama untuk mengukur penemuan prinsip pengetahuan baru (*Knowledge Energy*) yang tervalidasi secara logika.
+
+Penerapan struktural metodologi PICOC lintas domain ini sangat krusial karena **memastikan adanya koherensi logis antar-lapisan desain**. Dengan pendekatan ini, para insinyur dapat dengan jelas mendemonstrasikan bagaimana keberhasilan penemuan teori di lapisan Fundamental akan menyokong efisiensi konversi pada lapisan Teknologi, yang kemudian menghidupkan kecerdasan operasional di lapisan Sistem, dan bermuara pada penyelesaian masalah yang berdampak langsung bagi manusia di lapisan Aplikasi.

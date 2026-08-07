@@ -1,0 +1,10 @@
+# Smart Artefact
+
+## Ringkasan
+
+## Core Engine (Kekuatan Fisik/Komputasi)
+
+## PUDAL Engine (Jantung Kognisi)
+
+## PSKVE Engine (Konverter Nilai)
+

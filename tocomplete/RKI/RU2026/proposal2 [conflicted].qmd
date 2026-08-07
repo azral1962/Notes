@@ -1,0 +1,105 @@
+---
+title: "Untitled"
+format: docx
+---
+
+
+# PROPOSAL RISET UNGGULAN
+
+**Judul Proposal:**
+**Rekayasa Humanis Berbasis Narasi: Pengembangan Metoda Triune-Intelligence Smart-Engineering (TISE) untuk Pemberdayaan Identitas Naratif Pengguna**
+
+### 1. Ringkasan Eksekutif
+Era *Artificial Intelligence* (AI) telah membawa pergeseran fundamental dalam rekayasa sistem, dari produksi massal menuju personalisasi massal. Namun, narasi dominan saat ini sering membingkai teknologi sebagai pengganti manusia. Proposal ini mengajukan paradigma baru, **Triune-Intelligence Smart-Engineering (TISE)**, sebagai rekayasa humanis yang bertujuan memberdayakan manusia (stakeholder) untuk menyelesaikan masalah mereka sendiri. TISE mengintegrasikan tiga kecerdasan: *Human/Natural Intelligence* (NI), *Artificial Intelligence* (AI), dan *Crowd/Cultural Intelligence* (CI).
+
+Kebaruan (novelty) utama dari riset ini adalah penambahan lapisan **Narasi** ke dalam arsitektur rekayasa tradisional (Aplikasi, Sistem, Teknologi, Fundamental). Riset ini bertujuan mengembangkan metoda rekayasa di mana artefak TISE tidak hanya berfungsi secara teknis, tetapi bertindak sebagai "Juru Tulis Cerdas" yang membantu pengguna menemukan dan mengekspresikan **Identitas Naratif** mereka. Target luaran adalah prototipe sistem TISE yang memvalidasi peningkatan *Agensi* dan *Penebusan* dalam narasi hidup pengguna, serta publikasi pada jurnal bereputasi mengenai arsitektur TISE 2.0.
+
+### 2. Latar Belakang dan Perumusan Masalah
+
+**2.1 Konteks: Krisis Model Mekanistik dan Era Evolusi Artifisial**
+Secara historis, rekayasa berperan besar dalam peradaban melalui penciptaan artefak berskala besar. Namun, model mekanistik lama yang memandang sistem sebagai mesin kaku gagal menghadapi hiper-kompleksitas lingkungan modern. Kita kini berada di era "Evolusi Artifisial", di mana sistem harus beradaptasi secara sengaja dan etis. *Smart engineering* dituntut menghasilkan artefak yang mampu membaca situasi dan beradaptasi (adaptronik).
+
+**2.2 Masalah: Kesenjangan Naratif dalam Rekayasa**
+Sistem cerdas saat ini sering kali hanya berfokus pada efisiensi tugas (orkestrasi), mengabaikan lapisan kepribadian manusia yang paling dalam, yaitu "Identitas Naratif". Manusia adalah "organisme pencerita" yang memaknai hidup melalui cerita tentang masa lalu, masa kini, dan masa depan. Tanpa lapisan narasi, teknologi berisiko mengasingkan manusia dari makna hidupnya sendiri.
+
+**2.3 Solusi: Paradigma TISE dan Lapisan Narasi**
+TISE menawarkan solusi dengan mengintegrasikan tiga kecerdasan:
+1.  **TISE-N (Natural):** Integrasi Human (HI) dan Natural Intelligence (NI) dengan AI untuk memastikan keselarasan biologis dan kognitif.
+2.  **TISE-C (Cultural):** Integrasi HI, Crowd/Cultural Intelligence (CI) dengan AI untuk validasi sosial dan etika.
+
+Riset ini secara spesifik akan mengembangkan **TISE 2.0**, yang mentransformasi "Naskah" (tujuan teknis) menjadi "Identitas Naratif" yang hidup.
+
+### 3. Tinjauan Pustaka dan Landasan Teori
+
+**3.1 Arsitektur Triune Intelligence (TI)**
+Inti pemrosesan TISE bukanlah algoritma tunggal, melainkan gabungan tiga kecerdasan yang berkoordinasi lewat *prompts* dan API berbasis *Natural Language*:
+*   **Kernel/Primal (NI):** Menetapkan niat (*intent*) dan batasan keselamatan.
+*   **Rasional (AI):** Menangani logika dimensi tinggi, simulasi, dan sintesis.
+*   **Sosial/Limbik (CI):** Memberikan validasi etis dan umpan balik pasar.
+
+**3.2 Mesin PUDAL dan PSKVE**
+Adaptabilitas sistem TISE didorong oleh siklus **PUDAL** (*Perceive, Understand, Decide, Act, Learn*). Siklus ini memastikan sistem terus belajar dari interaksi. Sementara itu, nilai yang dihasilkan diukur melalui mesin **PSKVE** (*Product, Service, Knowledge, Value, Environment*), yang memastikan artefak memberikan manfaat holistik, bukan hanya fungsi teknis.
+
+**3.3 Identitas Naratif dan Rekayasa Humanis**
+Teori psikologi naratif menegaskan bahwa kesejahteraan manusia terkait erat dengan kemampuan membingkai ulang pengalaman negatif menjadi positif (tema *Penebusan*) dan rasa kendali atas hidup (tema *Agensi*). Dalam TISE, artefak direkayasa untuk memicu "Penalaran Otobiografis" pengguna, mengubah peran sistem dari "komandan" menjadi "fasilitator makna".
+
+### 4. Metodologi Penelitian
+
+Penelitian ini menggunakan kerangka kerja **W-Model** yang diperluas untuk sistem sosio-teknis, yang menjamin validasi berkelanjutan di setiap lapisan.
+
+**4.1 Arsitektur 5 Layer TISE**
+Penelitian akan dilakukan secara sistematis pada lima lapisan berikut:
+
+1.  **Lapisan Narasi (Baru):**
+    *   *Fokus:* Merancang ontologi untuk Identitas Naratif (tema, nilai, *plot twist*).
+    *   *Metode:* Mengadopsi teknik terapi naratif (eksternalisasi masalah, identifikasi *sparkling moments*) ke dalam struktur data sistem.
+2.  **Lapisan Aplikasi (A):**
+    *   *Fokus:* Mendefinisikan "Working Environment" lima dimensi (Naturalisme hingga Teisme) di mana pengguna beroperasi.
+    *   *Metode:* *Human-Centered Design* (HCD) untuk memetakan kesenjangan posisi pengguna.
+3.  **Lapisan Sistem (S):**
+    *   *Fokus:* Merancang interaksi TISE-N dan TISE-C.
+    *   *Metode:* *Multi-Agent System* (MAS) di mana agen AI (Arsitek, Kritikus) berkolaborasi dengan NI dan CI.
+4.  **Lapisan Teknologi (T):**
+    *   *Fokus:* Pengembangan Mesin PUDAL dan Mesin Inti (Core Engine).
+    *   *Metode:* Penggunaan *Large Language Models* (LLM) untuk memproses *prompts* naratif dan API.
+5.  **Lapisan Riset Fundamental (F):**
+    *   *Fokus:* Prinsip konversi "energi naratif" menjadi instruksi teknis.
+    *   *Metode:* *Algorithmic Information Theory* untuk kompresi nilai ($V=U/C$).
+
+**4.2 Strategi Validasi: PICOC**
+Setiap lapisan akan divalidasi menggunakan kerangka PICOC (*Population, Intervention, Control, Outcome, Context*) untuk memastikan ketigunaan dan keberhasilan.
+
+### 5. Rencana Kerja dan Luaran
+
+**Fase 1: Kompresi Semantik dan Ontologi Naratif**
+*   *Kegiatan:* Mengonversi teori psikologi naratif menjadi skema *Knowledge Graph* dan *Prompts* sistematis.
+*   *Luaran:* Dokumen spesifikasi Arsitektur TISE 2.0.
+
+**Fase 2: Pengembangan Mesin PUDAL Naratif**
+*   *Kegiatan:* Melatih agen AI untuk melakukan siklus PUDAL yang tidak hanya memproses tugas, tetapi menafsirkan makna naratif (misal: mendeteksi *kontaminasi* dalam cerita pengguna).
+*   *Luaran:* Prototipe Agen Ko-Kreasi Naratif.
+
+**Fase 3: Integrasi Sistem dan Validasi**
+*   *Kegiatan:* Uji coba artefak pada populasi terbatas untuk mengukur peningkatan *Agensi* dan *Koherensi Naratif*.
+*   *Luaran:* Laporan validasi menggunakan metrik *Value Compression* ($V=U/C$) dan parameter PSKVE.
+
+### 6. Kriteria Keberhasilan (Sesuai Syarat Penilaian)
+
+Proposal ini menetapkan indikator keberhasilan yang terukur untuk mendemonstrasikan kelayakan riset:
+
+1.  **Value Compression (Efisiensi):** Artefak harus mampu mengurangi "biaya" kognitif pengguna dalam menemukan makna hidup (mengurangi entropi psikologis) sambil meningkatkan utilitas naratif.
+    *   *Metrik:* Peningkatan rasio $V = U/C$.
+2.  **Ephemerization (Skalabilitas):** Sistem menunjukkan kemampuan melakukan "lebih banyak dengan lebih sedikit" (pergeseran dari intervensi fisik/manusia yang mahal ke intervensi komputasional cerdas).
+3.  **Peningkatan Agensi (Humanis):** Pengujian PICOC harus menunjukkan peningkatan skor *Self-Authorship* pada pengguna, membuktikan bahwa sistem memberdayakan (bukan menggantikan) manusia.
+4.  **Adaptabilitas (Smart):** Mesin PUDAL terbukti mampu belajar (*Learn*) dari umpan balik naratif pengguna dan menyesuaikan *Partitur* (lingkungan) secara otomatis.
+
+### 7. Penutup
+
+TISE adalah manifestasi dari rekayasa yang tidak hanya cerdas tetapi juga bijaksana. Dengan menambahkan lapisan Narasi, kita tidak hanya membangun mesin yang bekerja untuk manusia, tetapi membangun "Teater Kehidupan" yang megah di mana manusia dapat menjadi penulis utama dari kisah mereka sendiri. Riset ini strategis untuk memastikan kedaulatan manusia tetap terjaga di tengah tsunami kecerdasan buatan.
+
+---
+**Referensi Utama:**
+*   *Cognitive Enterprise Architecture*
+*   *Meta-TISE: Value Compression Engineering*
+*   *TISE 2.0: Paradigma Ko-Kreasi Naratif*
+*   *Triune-Intelligence Smart-Engineering: A Socio-Technical Paradigm*

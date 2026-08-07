@@ -1,0 +1,59 @@
+
+# IV. The GRACE Index
+
+The GRACE Index model is summarized visually in @fig-grace-index, with dimensions and data sources in @tbl-grace-index and scoring interpretation in @tbl-grace-index-zones.
+
+![Placeholder for the GRACE Index model.](assets/figures/fig-grace-index.png){#fig-grace-index}
+
+## A. Purpose
+
+The GRACE Index is a daily composite indicator designed to assess whether a person remains “in the zone” of narrative selfhood. This means the person still experiences life as meaningfully their own, even when facing difficulty, grief, illness, or uncertainty. The index is intended to measure narrative integrity, not merely mood or symptom burden.
+
+## B. Dimensions
+The GRACE Index is a daily composite indicator designed to assess whether a person remains “in the zone” of narrative selfhood. This means the person still experiences life as meaningfully their own, even when facing difficulty, grief, illness, or uncertainty. The index is intended to measure narrative integrity, not merely mood or symptom burden. The six dimensions, their indicators, and example data sources are summarized in @tbl-grace-index.
+
+| Dimension | Description | Indicators | Example Data Sources |
+|---|---|---|---|
+| Narrative Continuity | Sense of remaining connected to one’s life story and selfhood | felt like self, could make sense of the day, role continuity, future orientation | self-report, voice reflections, story engine outputs |
+| Spiritual Grounding | Degree of inner peace, reflection, faith, or value alignment | prayer/reflection, gratitude, acceptance, values-based action | self-report, ritual logs, spiritual prompts |
+| Relational Vitality | Quality of meaningful connection and belonging | meaningful contact, warmth of interaction, reciprocity, felt belonging | interaction logs, visit records, self-report |
+| Contribution and Usefulness | Sense of helping, guiding, teaching, or being needed | mentoring, helping, advice-giving, feeling useful | contribution logs, task records, self-report |
+| Community and World Engagement | Participation beyond the immediate self or household | event attendance, service access, neighborhood interaction, civic participation | activity logs, appointments, community records |
+| Adaptive Resilience | Capacity to remain centered and recover during stress | coping, help-seeking, recovery after setbacks, staying grounded | self-report, predictor features, behavior trends |
+
+: GRACE Index dimensions, indicators, and example data sources. {#tbl-grace-index}
+
+## C. Scoring Model
+
+Let N = Narrative Continuity; S = Spiritual Grounding; R = Relational Vitality; C = Contribution and Usefulness; E = Community and World Engagement; A = Adaptive Resilience.
+
+$$G_t = 0.22N_t + 0.14S_t + 0.20R_t + 0.16C_t + 0.13E_t + 0.15A_t$$
+
+with scores normalized to 0–100. The component weights in @tbl-grace-index-weights reflect the relative importance of each dimension to narrative selfhood.
+
+
+| Component | Weight  |
+|---|---|
+| Narrative Continuity N | 0.22 |
+| Spiritual Grounding S | 0.14 |
+| Relational Vitality R | 0.20 |
+| Contribution and Usefulness C | 0.16 |
+| Community and World Engagement E | 0.13 |
+| Adaptive Resilience A | 0.15 |
+
+: Weights used to calculate the GRACE Index. {#tbl-grace-index-weights}
+
+|  Zone |  Range | Interpretation |
+|---|-|---|
+| Flourishing Zone | 85–100 | strong continuity, connection, contribution, and resilience; reinforce growth and legacy opportunities |
+| Stable Narrative Zone | 70–84 | stable selfhood and functioning despite ordinary challenges; maintain routines and meaningful engagement |
+| Vulnerability Zone | 50–69 | early signs of drift, withdrawal, or reduced engagement; initiate gentle, targeted support |
+| Disruption Zone | 30–49 | significant weakening of narrative continuity or relational vitality; escalate coordinated intervention |
+| Fragmentation Risk Zone | 0–29 | severe disconnection, overwhelm, or loss of self-authorship; urgent, high-touch support with human oversight |
+
+: GRACE Index score zones and interpretations. {#tbl-grace-index-zones}
+
+
+## D. Zone Interpretation
+
+A person may remain in a stable narrative zone even during distress if selfhood, belonging, and meaning remain intact. As shown in @tbl-grace-index-zones, the zones distinguish flourishing and stable narrative continuity from vulnerability, disruption, and fragmentation risk.
